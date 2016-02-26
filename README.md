@@ -1,2 +1,1 @@
-# ITB2015
-ITB2015 Assignments Repository
+# EL5226 - Information and Social Networking
