@@ -5,14 +5,14 @@ import socket, threading, sys, select
 recv_buffer = 4096
 
 def prompt():
-    sys.stdout.write('[Me]\t\t\t: '); 
+    sys.stdout.write('[Selection]\t: '); 
     sys.stdout.flush()
 
 if __name__ == "__main__":
     # Use argument to define port
     args = sys.argv
     if not len(args) == 3:
-        print 'Usage : python chat_client.py <host> <port>'
+        print 'Usage : python file_client.py <host> <port>'
         exit()
     else:
         # Define addr where socket server is listening
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         socket_list = [sys.stdin, sock]
         # Get the list sockets which are readable
         read_sockets, write_sockets, error_sockets = select.select(socket_list , [], [])
-         
+        
         for s in read_sockets:             
             if s == sock:
                 # incoming message from remote server, s
@@ -51,5 +51,6 @@ if __name__ == "__main__":
                 # user entered a message
                 msg = sys.stdin.readline()
                 sock.send(msg)
+                sys.stdout.write('\n')
                 prompt()
-                
+        
