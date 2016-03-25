@@ -1,7 +1,6 @@
 #import sys, glob
 #sys.path.insert(0, glob.glob('opencv/python/2.7/x64')[0])
 
-import numpy as np
 import cv2
 
 # local modules
@@ -9,6 +8,7 @@ from video import create_capture
 from common import clock, draw_str
 
 
+# Detect cascade (pattern) from image
 def detect(img, cascade):
     rects = cascade.detectMultiScale(img, scaleFactor=1.3, minNeighbors=4, minSize=(30, 30),
                                      flags=cv2.CASCADE_SCALE_IMAGE)
@@ -17,6 +17,7 @@ def detect(img, cascade):
     rects[:,2:] += rects[:,:2]
     return rects
 
+# Draw rectangle from detected object
 def draw_rects(img, rects, color):
     for x1, y1, x2, y2 in rects:
         cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)
@@ -24,26 +25,31 @@ def draw_rects(img, rects, color):
 if __name__ == '__main__':
     import sys, getopt
     print(__doc__)
-
+    
+    # Try to get 1st argument as a source for video-file
     args, video_src = getopt.getopt(sys.argv[1:], '', ['cascade=', 'nested-cascade='])
     try:
         video_src = video_src[0]
     except:
-        video_src = 0
+        # If no video-file provide, then use webcam as video source
+        video_src = 0    
     args = dict(args)
+    
+    # Default : use haarcascade algoritm to detect face and eyes
     face_fn = args.get('--cascade', "data/haarcascades/haarcascade_frontalface_alt.xml")
     left_eye_fn  = args.get('--nested-cascade', "data/haarcascades/haarcascade_lefteye_2splits.xml")
     right_eye_fn  = args.get('--nested-cascade', "data/haarcascades/haarcascade_righteye_2splits.xml")
 
+    # Define the classifier for each algorithm
     face = cv2.CascadeClassifier(face_fn)
     left_eye = cv2.CascadeClassifier(left_eye_fn)
     right_eye = cv2.CascadeClassifier(right_eye_fn)
 
-    # Use camera as source
+    # Capture video from source (either webcam or video-file)
     cam = create_capture(video_src)
 
     while True:
-        # Capture camera as image
+        # Capture each frame as image
         ret, vis = cam.read()
         # Convert image to gray
         gray = cv2.cvtColor(vis, cv2.COLOR_BGR2GRAY)
