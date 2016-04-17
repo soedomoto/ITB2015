@@ -1,0 +1,111 @@
+\begin{thebibliography}{10}
+
+\bibitem{_gsbpm_????}
+``{GSBPM} v5.0 - {Generic} {Statistical} {Business} {Process} {Model} - {UNECE}
+  {Statistics} {Wikis}.''
+
+\bibitem{_redesigning_????}
+``Redesigning a {Questionnaire} for {Computer} {Assisted} {Data} {Collect} -
+  cp940020.pdf.''
+
+\bibitem{klein_bias_1996}
+G.~Klein and M.~G. Sobol, ``Bias in computer-assisted surveys,'' {\em IEEE
+  Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans},
+  vol.~26, pp.~566--571, Sept. 1996.
+
+\bibitem{tergujeff_mobile_2007}
+R.~Tergujeff, J.~Haajanen, J.~Leppanen, and S.~Toivonen, ``Mobile {SOA}:
+  {Service} {Orientation} on {Lightweight} {Mobile} {Devices},'' in {\em {IEEE}
+  {International} {Conference} on {Web} {Services}, 2007. {ICWS} 2007},
+  pp.~1224--1225, July 2007.
+
+\bibitem{derenzi_reliable_2007}
+B.~DeRenzi, Y.~Anokwa, T.~Parikh, and G.~Borriello, ``Reliable {Data}
+  {Collection} in {Highly} {Disconnected} {Environments} {Using} {Mobile}
+  {Phones},'' in {\em Proceedings of the 2007 {Workshop} on {Networked}
+  {Systems} for {Developing} {Regions}}, {NSDR} '07, (New York, NY, USA),
+  pp.~4:1--4:5, ACM, 2007.
+
+\bibitem{parikh_designing_2006}
+T.~S. Parikh and E.~D. Lazowska, ``Designing an {Architecture} for {Delivering}
+  {Mobile} {Information} {Services} to the {Rural} {Developing} {World},'' in
+  {\em Proceedings of the 15th {International} {Conference} on {World} {Wide}
+  {Web}}, {WWW} '06, (New York, NY, USA), pp.~791--800, ACM, 2006.
+
+\bibitem{takdir_multi-layer_2014}
+{Takdir} and A.~I. Kistijantoro, ``Multi-layer {SOA} implementation pattern
+  with service and data proxies for distributed data-intensive application
+  system,'' in {\em 2014 {International} {Conference} on {ICT} {For} {Smart}
+  {Society} ({ICISS})}, pp.~37--41, Sept. 2014.
+
+\bibitem{_gsim_????}
+``{GSIM} {Specification} - {Generic} {Statistical} {Information} {Model} -
+  {UNECE} {Statistics} {Wikis}.''
+
+\bibitem{_cspa_????}
+``{CSPA} v1.5 - {Common} {Statistical} {Production} {Architecture} - {UNECE}
+  {Statistics} {Wikis}.''
+
+\bibitem{_primer_????}
+``A primer on distributed computing..''
+
+\bibitem{andrews_foundations_1999}
+G.~R. Andrews, {\em Foundations of {Multithreaded}, {Parallel}, and
+  {Distributed}}.
+\newblock Addison Wesley, Oct. 1999.
+
+\bibitem{baker_grids_2002}
+M.~Baker, R.~Buyya, and D.~Laforenza, ``Grids and {Grid} technologies for
+  wide-area distributed computing,'' {\em Software: Practice and Experience},
+  vol.~32, pp.~1437--1466, Dec. 2002.
+
+\bibitem{sathyan_job_2009}
+J.~Sathyan and M.~Rijas, ``Job {Management} in {Mobile} {Grid} {Computing},''
+  in {\em Proceedings of the 7th {International} {Conference} on {Advances} in
+  {Mobile} {Computing} and {Multimedia}}, {MoMM} '09, (New York, NY, USA),
+  pp.~422--426, ACM, 2009.
+
+\bibitem{zottl_three-tier_2008}
+J.~Zottl, G.~Haring, and G.~Kotsis, ``A {Three}-tier {Information} {Management}
+  {Architecture} for {Mobile} {Grid} {Environments},'' in {\em Proceedings of
+  the 6th {International} {Conference} on {Advances} in {Mobile} {Computing}
+  and {Multimedia}}, {MoMM} '08, (New York, NY, USA), pp.~243--247, ACM, 2008.
+
+\bibitem{weatherspoon_erasure_2002}
+H.~Weatherspoon and J.~Kubiatowicz, ``Erasure {Coding} {Vs}. {Replication}: {A}
+  {Quantitative} {Comparison},'' in {\em Revised {Papers} from the {First}
+  {International} {Workshop} on {Peer}-to-{Peer} {Systems}}, {IPTPS} '01,
+  (London, UK, UK), pp.~328--338, Springer-Verlag, 2002.
+
+\bibitem{lv_search_2002}
+Q.~Lv, P.~Cao, E.~Cohen, K.~Li, and S.~Shenker, ``Search and {Replication} in
+  {Unstructured} {Peer}-to-peer {Networks},'' in {\em Proceedings of the 16th
+  {International} {Conference} on {Supercomputing}}, {ICS} '02, (New York, NY,
+  USA), pp.~84--95, ACM, 2002.
+
+\bibitem{gutwin_gone_2010}
+C.~Gutwin, T.~N. Graham, C.~Wolfe, N.~Wong, and B.~de~Alwis, ``Gone but {Not}
+  {Forgotten}: {Designing} for {Disconnection} in {Synchronous} {Groupware},''
+  in {\em Proceedings of the 2010 {ACM} {Conference} on {Computer} {Supported}
+  {Cooperative} {Work}}, {CSCW} '10, (New York, NY, USA), pp.~179--188, ACM,
+  2010.
+
+\bibitem{ho_connectionless_2004}
+Y.~H. Ho, A.~H. Ho, K.~A. Hua, and G.~L. Hamza-Lup, ``A connectionless approach
+  to mobile ad hoc networks,'' in {\em Ninth {International} {Symposium} on
+  {Computers} and {Communications}, 2004. {Proceedings}. {ISCC} 2004}, vol.~1,
+  pp.~188--195 Vol.1, June 2004.
+
+\bibitem{imran_proxy-based_2007}
+N.~Imran, I.~Rao, Y.-K. Lee, and S.~Lee, ``A {Proxy}-based {Uncoordinated}
+  {Checkpointing} {Scheme} with {Pessimistic} {Message} {Logging} for {Mobile}
+  {Grid} {Systems},'' in {\em Proceedings of the 16th {International}
+  {Symposium} on {High} {Performance} {Distributed} {Computing}}, {HPDC} '07,
+  (New York, NY, USA), pp.~237--238, ACM, 2007.
+
+\bibitem{geerts_design_2011}
+G.~L. Geerts, ``A design science research methodology and its application to
+  accounting information systems research,'' {\em International Journal of
+  Accounting Information Systems}, vol.~12, pp.~142--151, June 2011.
+
+\end{thebibliography}

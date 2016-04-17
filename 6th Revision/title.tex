@@ -1,0 +1,352 @@
+% !TeX root = draft-thesis.tex
+\usepackage{setspace}
+\usepackage{titling}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\graphicspath{{images/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+%\usepackage{fontspec}
+%\usepackage{polyglossia,etoolbox}
+\usepackage[indonesian]{babel}
+\usepackage[justification=centering]{caption}
+\usepackage[top=3cm,right=3cm,bottom=3cm,left=4cm]{geometry}
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+
+%\setmainfont[Ligatures=TeX]{Times New Roman}
+ %\setdefaultlanguage{bahasai}
+% Bibliografi to Daftar Pustaka
+\addto\captionsindonesian{%
+ \renewcommand{\bibname}%
+   {Daftar Pustaka}%
+ \renewcommand{\refname}{Daftar Pustaka}%
+}
+
+\usepackage{mathptmx}
+\usepackage[bookmarks=true,hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{bibspacing}
+\setlength{\bibspacing}{1.1\baselineskip}
+
+
+% \gappto\captionsbahasai{\renewcommand{\bibname}{Daftar Pustaka}}
+
+%%titlesec
+\makeatletter
+\def\ttl@mkchap@i#1#2#3#4#5#6#7{%
+  \ttl@assign\@tempskipa#3\relax\beforetitleunit
+  %\vspace*{\@tempskipa}% NEW
+  \global\@afterindenttrue
+  \ifcase#5 \global\@afterindentfalse\fi
+  \ttl@assign\@tempskipb#4\relax\aftertitleunit
+  \ttl@topmode{\@tempskipb}{%
+    \ttl@select{#6}{#1}{#2}{#7}}%
+  \ttl@finmarks  % Outside the box!
+  \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
+\makeatother
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[display]
+    {\large\bfseries\centering}
+    {\large\chaptertitlename\ \thechapter}
+    {0in}
+    {}
+\titlespacing*{\chapter}
+    {0pt} % left
+    {0pt} % before
+    {2\baselineskip} % after
+\titleformat{\chapter}[display]
+    {\large\bfseries\centering}
+    {\large\chaptertitlename\ \thechapter}
+    {0in}
+    {}
+\titlespacing*{\section}
+    {0pt} % left
+    {\baselineskip} % before
+    {0pt} % after
+
+\titleformat{\section}[hang]
+    {\bfseries}
+    {\thesection\ }
+    {0in}
+    {}
+
+\titlespacing*{\subsection}
+    {0pt} % left
+    {\baselineskip} % before
+    {0pt} % after
+
+\titleformat{\subsection}[hang]
+    {\bfseries}
+    {\thesubsection\ }
+    {0in}
+    {}
+    
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+ 
+\titlespacing*{\subsubsubsection}
+  {0pt} % left
+  {\baselineskip} % before
+  {0pt} % after
+
+\titleformat{\subsubsubsection}[hang]
+ {\bfseries}
+ {\thesubsubsubsection\ }
+ {0in}
+ {}
+    
+    \makeatletter
+    \def\toclevel@subsubsubsection{4}
+    \def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+    \setcounter{secnumdepth}{4}
+    \setcounter{tocdepth}{4}
+    \cftsetindents{subsubsection}{0.6in}{0.6in}
+   \makeatother
+
+
+%%%customtitle
+\makeatletter
+\newcommand{\thegelar}{Magister}
+\newcommand{\theenglishtitle}{\thetitle}
+\newcommand{\englishtitle}[1][\thetitle]{
+    \renewcommand{\theenglishtitle}{#1}
+}
+\newcommand{\gelar}[1]{\renewcommand{\thegelar}{#1}}
+\newcommand{\thedoctype}{Tesis}
+\newcommand{\doctype}[1]{%
+    \renewcommand{\thedoctype}{#1}
+   }
+\newcommand{\theprodi}{Magister Informatika}
+\newcommand{\prodi}[1]{\renewcommand{\theprodi}{#1}}
+
+\newcommand{\theenglishprodi}{\theprodi}
+\newcommand{\englishprodi}[1][\theprodi]{\renewcommand{\theprodi}{#1}}
+
+\newcommand{\theopsi}{Teknologi Informasi}
+\newcommand{\opsi}[1]{\renewcommand{\theopsi}{#1}}
+\newcommand{\thefak}{Sekolah Teknik Elektro dan Informatika}
+\newcommand{\fakultas}[1]{\renewcommand{\thefak}{#1}}
+\newcommand{\theuni}{Institut Teknologi Bandung}
+\newcommand{\universitas}[1]{\renewcommand{\theuni}{#1}}
+\newcommand{\thepembsatuname}{John Smith}
+\newcommand{\thepembsatunip}{123123}
+\newcommand{\thepembduaname}{}
+\newcommand{\thepembduanip}{}
+\newcommand{\pembimbingsatu}[2]{
+    \renewcommand{\thepembsatuname}{#1}
+    \renewcommand{\thepembsatunip}{#2}
+    }
+\newcommand{\pembimbingdua}[2]{
+    \renewcommand{\thepembduaname}{#1}
+    \renewcommand{\thepembduanip}{#2}
+    }
+
+\newcommand{\prodistring}{%
+        Program Studi \theprodi\\
+        Opsi \theopsi\\
+        \thefak\\
+        \theuni\\
+}
+\newcommand{\ifempty}[3]{%
+    \sbox0{#1}%
+    \ifdim\wd0=0pt %
+    {#2}% if #1 is empty
+    \else%
+    \ifdim0pt=\dimexpr\ht0+\dp0\relax
+    {#2}% if #1 is empty
+    \else
+    {#3}% if #1 is not empty
+    \fi
+    \fi%
+    }
+\makeatother
+
+\makeatletter
+\newcommand{\makecustomtitle}[1]{%
+    \begin{titlepage}
+        \begin{center}
+            {\large\bfseries  %
+                \expandafter \uppercase \expandafter{\@title}%
+                \\}
+            % ----------------------------------------------------------------
+            % \vspace{2cm}
+            %	{Thesis  submitted to} \\[5pt]
+            %	\emph{{Your University}}\\[2cm]
+            \vspace{2cm}
+            \expandafter\uppercase\expandafter{\thedoctype}\\[1.5cm]
+            Karya tulis sebagai salah satu syarat\\
+            Untuk memperoleh gelar {\thegelar} dari\\
+            \theuni\\[1.5cm]
+            \textsc{\Large{{ }}} \\[5pt]
+            { } \vspace{0.4cm} 
+            % {By}\\[5pt] {\Large \sc {Me}}
+            \vfill
+            % ----------------------------------------------------------------
+            
+            \vspace{6ex}
+            {\small\bfseries{oleh}\\}
+            {\normalsize\bfseries
+                \expandafter\uppercase\expandafter{\@author}%
+                \\	
+            }
+            \vspace{10ex}
+            % ----------------------------------------------------------------
+            \includegraphics[height=3.5cm]{#1}\\[5pt]
+            \vspace{2cm}
+            {\bfseries \large \uppercase
+                {\theuni}\\[5pt]
+                {\@date}
+            }
+            \vfill
+            
+        \end{center}
+    \end{titlepage}
+}
+\makeatother
+
+
+\makeatletter
+\newcommand{\makecustompengesahan}[1][Bandung]{%
+\newpage\addcontentsline{toc}{chapter}{Lembar Pengesahan}
+        \begin{center}
+            {\large\bfseries  %
+                \expandafter \uppercase \expandafter{\@title}%
+                \\}
+            \vspace{2cm}
+            \expandafter\uppercase\expandafter{\thedoctype}\\[1.5cm]
+            {\small\bfseries{oleh}\\}
+            {\normalsize\bfseries
+                \expandafter\uppercase\expandafter{\@author}%
+                \\	
+            }\vspace{1cm}
+            \textbf{\prodistring}
+            \vspace{2cm}
+            \begin{center}
+                Menyetujui\\
+%                #1, \today\\
+                \vspace{3em}
+                \ifempty{\thepembduaname}{%
+                    \begin{tabularx}{0.5\linewidth}{X}
+                        \begin{center}
+                            {Pembimbing I\\
+                             \vspace{2cm}
+                             \hrule\vspace{.5em}
+                             \textbf{(\thepembsatuname)}\\
+                             NIP. \thepembsatunip
+                            }
+                        \end{center}
+                    \end{tabularx}
+                }{%
+                   \begin{tabularx}{\textwidth}{XX}
+                       \centering{
+                                Pembimbing I
+                               \vspace{5em}
+                               \hrule\vspace{.5em}
+                               \textbf{(\thepembsatuname)}\\
+                               NIP. \thepembsatunip}%
+                        &%
+\centering{Pembimbing II\vspace{5em}
+                            \hrule\vspace{.5em}
+                            \textbf{(\thepembduaname)}\\
+                            NIP. \thepembduanip}
+                \end{tabularx}
+                }
+
+            \end{center}
+
+            \vfill
+            
+        \end{center}
+    
+}
+
+\newenvironment{abstrak}[1][english]{%
+    \newcommand{\abstraktitle}{\theenglishtitle}
+    \newcommand{\abstrakprodi}{\theenglishprodi}
+    \newcommand{\abstrakname}{Abstract}
+    \newcommand{\abstrakoleh}{by}
+    \ifthenelse{\equal{#1}{indo}}%
+    {\renewcommand{\abstraktitle}{\thetitle}
+        \renewcommand{\abstrakprodi}{\theprodi}
+        \renewcommand{\abstrakname}{Abstrak}
+        \renewcommand{\abstrakoleh}{oleh}}%
+    {}
+    \newpage\addcontentsline{toc}{chapter}{\abstrakname}
+    \chapter*{\abstrakname}
+    \begin{center}
+        {\large\bfseries  %
+            \expandafter \uppercase \expandafter{\abstraktitle}%
+        }\\\vspace{1em}
+        \abstrakoleh\\\vspace{1em}
+        {\bfseries \theauthor\\
+        (\abstrakprodi)}
+    \end{center}
+    }{\clearpage}
+
+\newenvironment{custompage}[1]{
+    \newpage\addcontentsline{toc}{chapter}{#1}
+    \chapter*{#1}
+    }{\clearpage}
+
+\makeatletter
+\patchcmd{\@chapter}{%
+	\addtocontents{lof}{\protect\addvspace{10\p@}}%
+	\addtocontents{lot}{\protect\addvspace{10\p@}}%
+}{}{\message{Success to patch \string\@chapter}}%
+{\message{Failed to patch \string\@chapter}}
+\makeatother
+
+
+
+%%fancyhdr
+\setlength{\parskip}{2.5ex plus 1ex minus 1ex}
+\setlength{\parindent}{0cm}
+\pagestyle{fancyplain}
+\fancyhf{}
+\fancyfoot[reo]{\thepage}
+  \renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+  
+%% tocloft : toc lot lof modifier
+\setcounter{tocdepth}{4}
+\renewcommand{\cfttoctitlefont}{\bfseries\hfill}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftsecindent}{7.5pt}
+\setlength{\cftsubsecindent}{15pt}
+\setlength{\cftbeforechapskip}{0.1ex}
+\renewcommand{\cftchapfont}{}
+\renewcommand{\cftchappagefont}{}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftchapnumwidth}{4em}
+\renewcommand{\cftchappresnum}{\chaptername\ }
+
+\renewcommand{\cftloftitlefont}{\bfseries\hfill}
+\renewcommand{\cftafterloftitle}{\hfill}
+\setlength{\cftbeforeloftitleskip}{0pt}
+\setlength{\cftfigindent}{0pt}
+\setlength{\cftfignumwidth}{7.5em}
+\renewcommand{\cftfigpresnum}{\figurename\ }
+
+\renewcommand{\cftlottitlefont}{\bfseries\hfill}
+\renewcommand{\cftafterlottitle}{\hfill}
+\setlength{\cftbeforelottitleskip}{0pt}
+\setlength{\cfttabindent}{0pt}
+\setlength{\cfttabnumwidth}{7.5em}
+\renewcommand{\cfttabpresnum}{\tablename\ }
+
+%% no hyph
+%\pretolerance=10000
+%\tolerance=2000
+%\emergencystretch=8pt
+\usepackage{cite}
+\onehalfspacing
