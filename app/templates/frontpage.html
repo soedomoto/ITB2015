@@ -224,7 +224,6 @@
     <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
     <script>
-
      $(document).ready(function() {
 
       /* -------- One page Navigation ----------*/
@@ -277,6 +276,7 @@
     init_gmap();
     });
     </script>
+    {% block tail %}{% endblock %}
 </body>
 </html>
 

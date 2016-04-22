@@ -54,4 +54,19 @@ class Master(Blueprint):
         def api_subdistrict_by_id(prop_id, regency_id, subdistrict_id):
             subdistrict = Kecamatan.query.filter_by(kd_propinsi=prop_id, kd_kabupaten=regency_id, kd_kecamatan=subdistrict_id).first()
             return Response(json.dumps(subdistrict), mimetype='application/json')
+        
+        @self.route('/api/village/list/', methods=['GET'])
+        def api_village_list():
+            villages = Kelurahan.query.all()
+            return Response(json.dumps([i.serialize for i in villages]), mimetype='application/json')
+        
+        @self.route('/api/village/list/prov/<prop_id>/regency/<regency_id>/subdistrict/<subdistrict_id>', methods=['GET'])
+        def api_village_list_by_prov_regency_subdistrict(prop_id, regency_id, subdistrict_id):
+            villages = Kelurahan.query.filter_by(kd_propinsi=prop_id, kd_kabupaten=regency_id, kd_kecamatan=subdistrict_id).all()
+            return Response(json.dumps([i.serialize for i in villages]), mimetype='application/json')
+        
+        @self.route('/api/village/prov/<prop_id>/regency/<regency_id>/subdistrict/<subdistrict_id>/id/<village_id>', methods=['GET'])
+        def api_village_by_id(prop_id, regency_id, subdistrict_id, village_id):
+            village = Kelurahan.query.filter_by(kd_propinsi=prop_id, kd_kabupaten=regency_id, kd_kecamatan=subdistrict_id, kd_kelurahan=village_id).first()
+            return Response(json.dumps(village), mimetype='application/json')
             

@@ -8,7 +8,7 @@ class Propinsi(db.Model):
     kode, nama
     '''
     
-    kd_propinsi         = db.Column(db.Integer, nullable=False, primary_key=True)
+    kd_propinsi         = db.Column(db.String(2), nullable=False, primary_key=True)
     nama_propinsi       = db.Column(db.String(255), nullable=False)
     
     @property
@@ -26,8 +26,8 @@ class Kabupaten(db.Model):
     prop, kode, nama
     '''
     
-    kd_propinsi         = db.Column(db.Integer, ForeignKey("propinsi.kd_propinsi"), nullable=False, primary_key=True)
-    kd_kabupaten        = db.Column(db.Integer, nullable=False, primary_key=True)
+    kd_propinsi         = db.Column(db.String(2), ForeignKey("propinsi.kd_propinsi"), nullable=False, primary_key=True)
+    kd_kabupaten        = db.Column(db.String(2), nullable=False, primary_key=True)
     nama_kabupaten      = db.Column(db.String(255), nullable=False)
     
     @property
@@ -46,9 +46,9 @@ class Kecamatan(db.Model):
     prop, kab, kode, nama
     '''
     
-    kd_propinsi         = db.Column(db.Integer, ForeignKey("kabupaten.kd_propinsi"), nullable=False, primary_key=True)
-    kd_kabupaten        = db.Column(db.Integer, ForeignKey("kabupaten.kd_kabupaten"), nullable=False, primary_key=True)
-    kd_kecamatan        = db.Column(db.Integer, nullable=False, primary_key=True)
+    kd_propinsi         = db.Column(db.String(2), ForeignKey("kabupaten.kd_propinsi"), nullable=False, primary_key=True)
+    kd_kabupaten        = db.Column(db.String(2), ForeignKey("kabupaten.kd_kabupaten"), nullable=False, primary_key=True)
+    kd_kecamatan        = db.Column(db.String(2), nullable=False, primary_key=True)
     nama_kecamatan      = db.Column(db.String(255), nullable=False)
     
     @property
@@ -68,10 +68,10 @@ class Kelurahan(db.Model):
     prop, kab, kec, kode, nama
     '''
     
-    kd_propinsi         = db.Column(db.Integer, ForeignKey("kecamatan.kd_propinsi"), nullable=False, primary_key=True)
-    kd_kabupaten        = db.Column(db.Integer, ForeignKey("kecamatan.kd_kabupaten"), nullable=False, primary_key=True)
-    kd_kecamatan        = db.Column(db.Integer, ForeignKey("kecamatan.kd_kecamatan"), nullable=False, primary_key=True)
-    kd_kelurahan        = db.Column(db.Integer, nullable=False, primary_key=True)
+    kd_propinsi         = db.Column(db.String(2), ForeignKey("kecamatan.kd_propinsi"), nullable=False, primary_key=True)
+    kd_kabupaten        = db.Column(db.String(2), ForeignKey("kecamatan.kd_kabupaten"), nullable=False, primary_key=True)
+    kd_kecamatan        = db.Column(db.String(2), ForeignKey("kecamatan.kd_kecamatan"), nullable=False, primary_key=True)
+    kd_kelurahan        = db.Column(db.String(4), nullable=False, primary_key=True)
     nama_kelurahan      = db.Column(db.String(255), nullable=False)
     
     @property

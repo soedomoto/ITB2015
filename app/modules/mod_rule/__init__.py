@@ -39,9 +39,9 @@ class Rule(Blueprint):
 
                     url = '/' + '/'.join(paths) + '/'
                 
-                rules.append({
-                    'endpoint' : rule.endpoint, 'methods' : methods, 'url' : url
-                })
+                new_rule = {'endpoint' : rule.endpoint, 'methods' : methods, 'url' : url}
+                if new_rule not in rules:
+                    rules.append(new_rule)
             
             # Sort list by endpoint
             rules = sorted(rules, key=lambda k: k['url']) 
