@@ -1,11 +1,8 @@
 from app import app
-
+import os
 # Import logging
 import logging
 from logging.handlers import RotatingFileHandler
-
-from daemonize import Daemonize
-pid = "app.pid"
 
 # Run a Werkzeug server.
 def start_server():
@@ -22,11 +19,8 @@ def start_server():
     app.logger.addHandler(streamHandler)
     app.logger.info("Logging is set up.")
     
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=app.config.get("PORT", 8080), debug=True, threaded=True)
 
 if __name__ == '__main__':
-    # daemon = Daemonize(app="bandung_service_catalog", pid=pid, action=start_server)
-    # daemon.start()
-    
     start_server()
         

@@ -1,5 +1,6 @@
 from app import db
 from sqlalchemy import ForeignKey
+import requests
 
 class Propinsi(db.Model):
     __tablename__   = 'propinsi'
@@ -85,4 +86,57 @@ class Kelurahan(db.Model):
             'nama_kelurahan'    : self.nama_kelurahan
         }
     
+class Agama(db.Model):
+    __tablename__   = 'agama'
     
+    '''
+    kode, nama
+    '''
+    
+    kd_agama    = db.Column(db.Integer, nullable=False, primary_key=True)
+    nama_agama  = db.Column(db.String(100), nullable=False)
+    
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'kd_agama'      : self.kd_agama,
+            'nama_agama'    : self.nama_agama
+        }
+    
+class HubunganKeluarga(db.Model):
+    __tablename__   = 'hubungan_keluarga'
+    
+    '''
+    kode, nama
+    '''
+    
+    kd_hubungan_keluarga    = db.Column(db.Integer, nullable=False, primary_key=True)
+    nama_hubungan_keluarga  = db.Column(db.String(100), nullable=False)
+    
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'kd_hubungan_keluarga'      : self.kd_hubungan_keluarga,
+            'nama_hubungan_keluarga'    : self.nama_hubungan_keluarga
+        }
+    
+class StatusPerkawinan(db.Model):
+    __tablename__   = 'status_perkawinan'
+    
+    '''
+    kode, nama
+    '''
+    
+    kd_status_perkawinan    = db.Column(db.Integer, nullable=False, primary_key=True)
+    nama_status_perkawinan  = db.Column(db.String(100), nullable=False)
+    
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'kd_status_perkawinan'      : self.kd_status_perkawinan,
+            'nama_status_perkawinan'    : self.nama_status_perkawinan
+        }
+

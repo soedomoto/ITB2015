@@ -1,4 +1,4 @@
-import pkgutil, sys, urlparse
+import pkgutil, sys, urlparse, os
 # Import flask and template operators
 from flask import Flask, render_template, request, redirect
 # Import SQLAlchemy
@@ -19,18 +19,14 @@ def not_found(error):
     return render_template('404.html'), 404
 
 # Load all modules
-def load_all_modules_from_dir(dirname):
-    for importer, package_name, _ in pkgutil.iter_modules([dirname]):
-        full_package_name = '%s.%s' % (dirname, package_name)
-        if full_package_name not in sys.modules:
-            module = importer.find_module(package_name).load_module(full_package_name)
-
-load_all_modules_from_dir('app/modules')
+sys.path.append('app/modules')
+for importer, package_name, _ in pkgutil.iter_modules(['app/modules']):
+    importer.find_module(package_name).load_module(package_name) 
 
 # Register modules
 from flask import Blueprint
 for mod_cls in Blueprint.__subclasses__():
-    if mod_cls.__module__.startswith('app/modules'):
+    if str(mod_cls.__module__).startswith('mod'):
         mod = mod_cls()
         app.register_blueprint(mod)
 

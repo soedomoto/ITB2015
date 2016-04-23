@@ -3,7 +3,8 @@ from flask import Blueprint, request, render_template, \
                   jsonify, Response
 import json
 from app import db
-from models import Propinsi, Kabupaten, Kecamatan, Kelurahan
+from models import  Propinsi, Kabupaten, Kecamatan, Kelurahan, \
+                    Agama, HubunganKeluarga, StatusPerkawinan
         
 class Master(Blueprint):
     def __init__(self):
@@ -53,7 +54,7 @@ class Master(Blueprint):
         @self.route('/api/subdistrict/prov/<prop_id>/regency/<regency_id>/id/<subdistrict_id>', methods=['GET'])
         def api_subdistrict_by_id(prop_id, regency_id, subdistrict_id):
             subdistrict = Kecamatan.query.filter_by(kd_propinsi=prop_id, kd_kabupaten=regency_id, kd_kecamatan=subdistrict_id).first()
-            return Response(json.dumps(subdistrict), mimetype='application/json')
+            return Response(json.dumps(subdistrict.serialize), mimetype='application/json')
         
         @self.route('/api/village/list/', methods=['GET'])
         def api_village_list():
@@ -68,5 +69,35 @@ class Master(Blueprint):
         @self.route('/api/village/prov/<prop_id>/regency/<regency_id>/subdistrict/<subdistrict_id>/id/<village_id>', methods=['GET'])
         def api_village_by_id(prop_id, regency_id, subdistrict_id, village_id):
             village = Kelurahan.query.filter_by(kd_propinsi=prop_id, kd_kabupaten=regency_id, kd_kecamatan=subdistrict_id, kd_kelurahan=village_id).first()
-            return Response(json.dumps(village), mimetype='application/json')
+            return Response(json.dumps(village.serialize), mimetype='application/json')
+        
+        @self.route('/api/religion/list/', methods=['GET'])
+        def api_religion_list():
+            religions = Agama.query.all()
+            return Response(json.dumps([i.serialize for i in religions]), mimetype='application/json')
+        
+        @self.route('/api/religion/id/<kd_agama>', methods=['GET'])
+        def api_religion_by_id(kd_agama):
+            religion = Agama.query.filter_by(kd_agama=kd_agama).first()
+            return Response(json.dumps(religion.serialize), mimetype='application/json')
+        
+        @self.route('/api/relationship/list/', methods=['GET'])
+        def api_relationship_list():
+            relationships = HubunganKeluarga.query.all()
+            return Response(json.dumps([i.serialize for i in relationships]), mimetype='application/json')
+        
+        @self.route('/api/relationship/id/<kd_hubungan_art>', methods=['GET'])
+        def api_relationship_by_id(kd_hubungan_art):
+            relationship = HubunganKeluarga.query.filter_by(kd_hubungan_keluarga=kd_hubungan_art).first()
+            return Response(json.dumps(relationship.serialize), mimetype='application/json')
+        
+        @self.route('/api/marital/list/', methods=['GET'])
+        def api_marital_list():
+            maritals = StatusPerkawinan.query.all()
+            return Response(json.dumps([i.serialize for i in maritals]), mimetype='application/json')
+        
+        @self.route('/api/marital/id/<kd_status_kawin>', methods=['GET'])
+        def api_marital_by_id(kd_status_kawin):
+            marital = StatusPerkawinan.query.filter_by(kd_status_perkawinan=kd_status_kawin).first()
+            return Response(json.dumps(marital.serialize), mimetype='application/json')
             

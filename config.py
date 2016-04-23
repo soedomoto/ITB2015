@@ -1,3 +1,9 @@
+# Listen address
+HOST = 'localhost'
+PORT = 8080
+
+BASE_URL = 'http://{}:{}'.format(HOST, PORT)
+
 # Statement for enabling the development environment
 DEBUG = True
 

@@ -9,7 +9,6 @@ class Keluarga(db.Model):
     '''
     
     no_kk               = db.Column(db.String(100), primary_key=True)
-    nik_kk              = db.Column(db.String(255), nullable=False)
     alamat              = db.Column(db.String(255), nullable=False)
     no_rt               = db.Column(db.Integer, nullable=False)
     no_rw               = db.Column(db.Integer, nullable=False)
