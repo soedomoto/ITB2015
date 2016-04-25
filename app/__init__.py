@@ -33,7 +33,10 @@ for mod_cls in Blueprint.__subclasses__():
 # Swap module and api path
 for rule in app.url_map.iter_rules():
     paths = [x for x in rule.rule.split("/") if x]
-    if len(paths) > 0 and paths[1].lower() == 'api':
+    if len(paths) > 1:
+        if paths[1].lower() != 'api':
+            continue
+        
         tmp_path = paths[0]
         paths[0] = paths[1]
         paths[1] = tmp_path

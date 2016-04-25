@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Bandung Citizen Service Catalog</title>
+    <meta name="description" content="{% block description %}{% endblock %}" >
+    <meta name="author" content="{% block author %}{% endblock %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    {% block head %}
+    <!-- Bootstrap  -->
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- icon fonts font Awesome -->
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <!-- Import Magnific Pop Up Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <!-- Import Custom Styles -->
+    <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+    <!-- Import Animate Styles -->
+    <link href="{{ url_for('static', filename='assets/css/animate.min.css') }}" rel="stylesheet">
+    <!-- Import owl.carousel Styles -->
+    <link href="{{ url_for('static', filename='assets/css/owl.carousel.css') }}" rel="stylesheet">
+    <!-- Import Custom Responsive Styles -->
+    <link href="{{ url_for('static', filename='assets/css/responsive.css') }}" rel="stylesheet">
+    
+    <!-- Include jquery.min.js plugin -->
+    <script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js') }}"></script>
+
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    {% endblock %}
+</head>
+<body class="header-fixed-top">
+    <div id="page-top" class="page-top"></div><!-- /.page-top -->
+    <section id="top-contact" class="top-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 pull-left">
+                    <ul class="contact-list">
+                        <li>
+                            <a class="site-name" href="#">
+                                <span class="top-icon"><i class="fa fa-link"></i></span>
+                                www.sitename.com
+                            </a>
+                        </li>
+                        <li>
+                            <a class="info" href="#">
+                                <span class="top-icon"><i class="fa fa-envelope"></i></span>
+                                info@sitename.com
+                            </a>
+                        </li>
+                        <li>
+                            <a class="phone-no" href="#">
+                                <span class="top-icon"><i class="fa fa-phone"></i></span>
+                                8888 888888
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 pull-right">
+                    <div class="top-social">
+                        <ul>
+                            <li>
+                                <a href="#" class="top-icon fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-icon fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="top-icon fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /#top-contact -->
+
+    <section id="site-banner" class="site-banner text-center">
+        <div class="container">
+            <div class="site-logo">
+                <a href="./"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Site Logo"></a>
+            </div><!-- /.site-logo -->
+        </div><!-- /.container -->
+    </section><!-- /#site-banner -->
+
+    <header id="main-menu" class="main-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <div class="menu-logo">
+                            <a href="./"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="menu Logo"></a>
+                        </div><!-- /.menu-logo -->
+                    </div>
+                    <nav id="menu" class="menu collapse navbar-collapse">
+                        <ul id="headernavigation" class="menu-list nav navbar-nav">
+                            <li class="active"><a href="#page-top">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Projects</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#latest-post">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul><!-- /.menu-list -->
+                    </nav><!-- /.menu-list -->
+                </div>
+                
+                <div class="col-sm-5">
+                    <div class="menu-search pull-right">
+                        <form role="search" class="search-form" action="#" method="get">
+                            <input class="search-field" type="text" name="s" id="s" placeholder="Search Here" required>
+                            <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+                        </form><!-- /.search-form -->
+                    </div><!-- /.menu-search -->
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </header><!-- /#main-menu -->
+
+    {% block content %}{% endblock %}
+
+    <section id="contact" class="contact">
+      <div class="contact-area">
+        <!-- Google Map Section -->
+        <div id="google-map" class="google-map">
+          <div class="map-container">
+            <div id="googleMaps" class="google-map-container">
+            </div>
+          </div><!-- /.map-container -->
+        </div><!-- /#google-map-->
+        <!-- Google Map Section End -->
+
+        <div id="message-details" class="message-details">
+          <div class="container">
+            <form action="email.php" method="post" id="myForm" class="message-form">
+              <div class="row">
+                <div class="col-sm-6">
+                  <input id="author" class="form-control" name="author" type="text" value="" size="30" aria-required="true" placeholder="Name*" title="Name" required>
+                  <input id="email" class="form-control" name="email" type="email" value="" size="30" aria-required="true" placeholder="Email*" title="Email"  required>
+                  <input id="subject" class="form-control" name="subject" type="subject" value="" size="30" aria-required="true" placeholder="Subject*" title="Subject"  required>
+                </div>
+                <div class="col-sm-6">
+                  <textarea id="message" class="form-control" name="message" cols="45" rows="3" aria-required="true" placeholder="Message" title="Message"  required></textarea>
+                  <button name="submit" class="btn btn-lg full-width" type="submit" id="submit">Submit</button>
+                </div>
+              </div><!-- /.row -->
+            </form><!-- /#commentform -->
+          </div><!-- /.container -->
+        </div><!-- /.message-details -->
+      </div><!-- /.contact-area -->
+    </section><!-- /#contact -->
+    
+    <footer>
+      <div id="footer-top" class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div id="tweet" class="tweet text-left">
+              <div class="col-xs-4 about-tweet">
+                <span class="tweet-icon"><i class="fa fa-twitter"></i></span>
+                <span class="tweet-author">John Doe</span>
+                <p class="tweet-details">
+                  Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis eupulvinar nuncint
+                </p><!-- /.tweet-details -->
+                <time datetime="PT2H">2 Hours Ago</time>
+              </div>
+              <div class="col-xs-4 about-tweet">
+                <span class="tweet-icon"><i class="fa fa-twitter"></i></span>
+                <span class="tweet-author">John Doe</span>
+                <p class="tweet-details">
+                  Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis eupulvinar nuncint
+                </p><!-- /.tweet-details -->
+                <time datetime="PT2H">2 Hours Ago</time>
+              </div>
+              <div class="col-xs-4 about-tweet">
+                <span class="tweet-icon"><i class="fa fa-twitter"></i></span>
+                <span class="tweet-author">John Doe</span>
+                <p class="tweet-details">
+                  Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis eupulvinar nuncint
+                </p><!-- /.tweet-details -->
+                <time datetime="PT2H">2 Hours Ago</time>
+              </div>
+            </div><!-- /#tweet -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /#footer-top -->
+
+      <div id="footer-bottom" class="footer-bottom text-center">
+        <div class="container">
+          <div id="copyright" class="copyright">
+            &copy; <a href="http://demos.jeweltheme.com/heera">Heera</a>  2015 - Designed &amp; Developed by <a href="http://jeweltheme.com">Jewel Theme</a>
+          </div><!-- /#copyright -->
+        </div>
+      </div><!-- /#footer-bottom -->
+    </footer>
+
+    <div id="scroll-to-top" class="scroll-to-top">
+      <span>
+        <i class="fa fa-chevron-up"></i>    
+      </span>
+    </div><!-- /#scroll-to-top -->
+
+    <!-- Include modernizr-2.8.3.min.js -->
+    <script src="{{ url_for('static', filename='assets/js/modernizr-2.8.3.min.js') }}"></script>
+    <!-- Include magnific-popup.min.js -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <!-- Google Maps Script -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- Gmap3.js For Static Maps -->
+    <script src="{{ url_for('static', filename='assets/js/gmap3.js') }}"></script>
+    <!-- Javascript Plugins  -->
+    <script src="{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+    <!-- Custom Functions  -->
+    <script src="{{ url_for('static', filename='assets/js/functions.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery.ajaxchimp.min.js') }}"></script>
+
+    <script>
+     $(document).ready(function() {
+
+      /* -------- One page Navigation ----------*/
+      $('#main-menu #menu').onePageNav({
+        currentClass: 'active',
+        changeHash: false,
+        scrollSpeed: 1500,
+        scrollThreshold: 0.5,
+        scrollOffset: 95,
+        filter: ':not(.sub-menu a, .not-in-home)',
+        easing: 'swing'
+      }); 
+
+
+      /*----------- Google Map - with support of gmaps.js ----------------*/
+
+      function isMobile() { 
+       return ('ontouchstart' in document.documentElement);
+     }
+
+     function init_gmap() {
+       if ( typeof google == 'undefined' ) return;
+       var options = {
+        center: [-6.91132, 107.610807],
+        zoom: 15,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+         style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+       },
+       navigationControl: true,
+       scrollwheel: false,
+       streetViewControl: true
+     }
+
+     if (isMobile()) {
+      options.draggable = false;
+    }
+
+    $('#googleMaps').gmap3({
+      map: {
+       options: options
+     },
+     marker: {
+       latLng: [-6.91132, 107.610807],
+       options: { icon: "{{ url_for('static', filename='images/mapicon.png') }}" }
+     }
+    });
+    }
+
+    init_gmap();
+    });
+    </script>
+    {% block tail %}{% endblock %}
+</body>
+</html>
+

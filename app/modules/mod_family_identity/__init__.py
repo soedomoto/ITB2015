@@ -1,24 +1,40 @@
 from flask import Blueprint, request, render_template, \
                   flash, g, session, redirect, url_for, \
-                  jsonify
+                  jsonify, Response
 
-from app import db
+import json, requests
+from app import app, db
 from models import Keluarga
         
 class FamilyIdentity(Blueprint):
     def __init__(self):
-        Blueprint.__init__(self, 'family_identity', __name__, url_prefix='/kk', template_folder='views', static_folder='static')
+        Blueprint.__init__(self, 'family_identity', __name__, url_prefix='/family', template_folder='views', static_folder='static')
         self.web()
         self.api()
     
     def web(self):
-        @self.route('/list/', methods=['GET', 'POST'])
+        @self.route('/', methods=['GET'])
         def list():
-            return render_template("list.html")
+            url = '{}/api/family/list/'.format(app.config.get('BASE_URL'))
+            resp = requests.get(url)
+            
+            return render_template("list.html", families=resp.json())
+          
+        @self.route('/view/<kd_kk>', methods=['GET'])
+        def view(kd_kk):
+            return render_template("add.html", use_template=False)
+        
+        @self.route('/edit/<kd_kk>', methods=['GET'])
+        def edit(kd_kk):
+            return render_template("add.html", use_template=False)
             
         @self.route('/add/', methods=['GET'])
         def add():
-            return render_template("add.html")
+            qs = request.args
+            if qs.has_key("no-template"):
+                return render_template("add.html", use_template=False)
+            
+            return render_template("add.html", use_template=True)
         
         @self.route('/add/save', methods=['POST'])
         def add_save():
@@ -45,10 +61,10 @@ class FamilyIdentity(Blueprint):
         @self.route('/api/list/', methods=['GET', 'POST'])
         def api_list():
             keluargas = Keluarga.query.all()
-            return jsonify(keluargas)
+            return Response(json.dumps([i.serialize for i in keluargas]), mimetype='application/json')
         
         @self.route('/api/by-kk/<kk>', methods=['GET', 'POST'])
         def api_list_kk(kk):
             keluargas = Keluarga.query.filter_by(no_kk=kk).all()
-            return jsonify(keluargas)
+            return Response(json.dumps([i.serialize for i in keluargas]), mimetype='application/json')
             
