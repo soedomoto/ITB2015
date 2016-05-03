@@ -1,5 +1,5 @@
-#import sys, glob
-#sys.path.insert(0, glob.glob('opencv/python/2.7/x64')[0])
+import sys, glob
+sys.path.insert(0, glob.glob('D:/SOFTWARE/opencv/build/python/2.7/x64')[0])
 
 import cv2
 

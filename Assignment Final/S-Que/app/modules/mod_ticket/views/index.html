@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a237e">
+
+    <title>Service Ticket</title>
+
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/ripples.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/material-wfont.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/flipper.css') }}" rel="stylesheet">
+    
+    <link href="{{ url_for('ticket.static', filename='assets/remodal/remodal.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/remodal/remodal-default-theme.css') }}" rel="stylesheet">
+
+    <style>
+      .remodal .info {
+        font-size: 30px;
+      }
+
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .remodal .content, .remodal .content * {
+          visibility: visible;
+        }
+        .remodal {
+          vertical-align: top;
+        }
+        .remodal .content {
+          visibility: visible;
+          background-color: white;
+          position: fixed;
+          top: 0;
+          left: 0;
+          margin: 0;
+          padding: 15px;
+          font-size: 14px;
+        }
+        .remodal .content #ticket-callback-title {
+          display: none
+        }
+        .remodal .content #ticket-qr {
+          margin-bottom: 30px;
+        }
+        .remodal .content .info {
+          font-size: 20px;
+        }
+        .remodal .content .info span {
+          font-size: 30px;
+          font-weight: bold;
+        }
+    </style>
+
+    <script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js') }}"></script>
+  </head>
+  <body>
+    <div class="container remodal-bg">
+      <div id="example-row" class="row">
+        <a href="javascript:void(0)" class="btn btn-default btn-lg btn-block withripple">Pilih Layanan yang Ingin Anda Gunakan
+          <div class="ripple-wrapper"></div>
+        </a>
+        
+        {% set idx = 1 %}
+        {% for service in services %}
+        <div class="col-xs-12 col-md-4 full-card">
+          <div class="flip-card active-card">
+            <div class="card label-info" service-id="{{ service.service_id }}">
+              <h6>{{ idx }}</h6>
+            </div>
+            <div class="well">
+              <h1>{{ service.service_name }}</h1>
+            </div>
+          </div>
+        </div>
+        {% set idx = idx + 1 %}
+        {% endfor %}
+        
+      </div>
+    </div>
+    
+    <div class="remodal" data-remodal-id="ticket-callback" role="dialog" aria-labelledby="ticket-callback-title" aria-describedby="ticket-callback-desc">
+      <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <div class="content">
+        <h2 id="ticket-callback-title">Ticket Information</h2>
+        <div id="ticket-qr"></div>
+        <div class="info">Your Need : <span id="service"></span></div>
+        <div class="info">Your Number : <span id="ticket-number"></span></div>
+        <div class="info">Last Serving Number : <span id="last-ticket-number"></span></div>
+        <div class="info">Estimated Service Time : <span id="est-service-time"></span></div>
+        <p id="ticket-callback-desc">
+          
+        </p>
+      </div>
+      <br>
+      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </div>
+    
+    <script src="{{ url_for('ticket.static', filename='assets/remodal/remodal.min.js') }}"></script>
+    <script src="{{ url_for('ticket.static', filename='assets/qrcode/jquery.qrcode.js') }}"></script>
+    <script src="{{ url_for('ticket.static', filename='assets/qrcode/qrcode.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/date.format.js') }}"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        
+        var modal = $('[data-remodal-id=ticket-callback]').remodal();
+        $(document).on('opening', '[data-remodal-id=ticket-callback]', function () {
+          ticket = $(this).data()
+          $(this).find('#ticket-qr').empty().qrcode({
+            text	: "{{ url_for('ticket.index', _external=True) }}api/id/" + ticket.ticket_id
+          });
+          $(this).find('#service').html(ticket.service.service_name)
+          $(this).find('#ticket-number').html(ticket.ticket_order)
+          $(this).find('#last-ticket-number').html(ticket.last_ticket ? ticket.last_ticket : 'None')
+
+          // Get time format from timestamp
+          var date = new Date(ticket.est_service_time * 1000);
+          var formattedDate = date.format('h:i a');
+
+          $(this).find('#est-service-time').html(formattedDate)
+        });
+        
+        $('.card').each(function() {
+          $(this).css('background-color', '#' + Math.random().toString(16).slice(2, 8).toUpperCase())
+            .css('color', 'white')
+        })
+        
+        $('.card').on('click', function() {
+          id = $(this).attr('service-id')
+          $.post("{{ url_for('ticket.index') }}save/", {'service' : id}, function(data) {
+            modal.$modal.data(data)
+            modal.open();
+
+            window.print()
+          })
+        })
+        
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a237e">
+
+    <title>Service Ticket</title>
+
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/ripples.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/material-wfont.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/flipper.css') }}" rel="stylesheet">
+    
+    <link href="{{ url_for('ticket.static', filename='assets/remodal/remodal.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/remodal/remodal-default-theme.css') }}" rel="stylesheet">
+    
+    <script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js') }}"></script>
+  </head>
+  <body>
+    <div class="container remodal-bg">
+      <div id="example-row" class="row">
+        <a href="javascript:void(0)" class="btn btn-default btn-lg btn-block withripple">Pilih Layanan yang Ingin Anda Gunakan
+          <div class="ripple-wrapper"></div>
+        </a>
+        
+        {% set idx = 1 %}
+        {% for service in services %}
+        <div class="col-xs-12 col-md-4 full-card">
+          <div class="flip-card active-card">
+            <div class="card label-info" service-id="{{ service.service_id }}">
+              <h6>{{ idx }}</h6>
+            </div>
+            <div class="well">
+              <h1>{{ service.service_name }}</h1>
+            </div>
+          </div>
+        </div>
+        {% set idx = idx + 1 %}
+        {% endfor %}
+        
+      </div>
+    </div>
+    
+    <div class="remodal" data-remodal-id="ticket-callback" role="dialog" aria-labelledby="ticket-callback-title" aria-describedby="ticket-callback-desc">
+      <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <div>
+        <h2 id="ticket-callback-title">Ticket Information</h2>
+        <div id="ticket-qr"></div>
+        <p id="ticket-callback-desc">
+          
+        </p>
+      </div>
+      <br>
+      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </div>
+    
+    <script src="{{ url_for('ticket.static', filename='assets/remodal/remodal.min.js') }}"></script>
+    <script src="{{ url_for('ticket.static', filename='assets/qrcode/jquery.qrcode.js') }}"></script>
+    <script src="{{ url_for('ticket.static', filename='assets/qrcode/qrcode.js') }}"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+        
+        var modal = $('[data-remodal-id=ticket-callback]').remodal();
+        $(document).on('opening', '[data-remodal-id=ticket-callback]', function () {
+          ticket = $(this).data()
+          $(this).find('#ticket-qr').empty().qrcode({
+            text	: "{{ url_for('ticket.index', _external=True) }}api/qr-check/" + ticket.ticket_id
+          });
+        });
+        
+        $('.card').each(function() {
+          $(this).css('background-color', '#' + Math.random().toString(16).slice(2, 8).toUpperCase())
+            .css('color', 'white')
+        })
+        
+        $('.card').on('click', function() {
+          id = $(this).attr('service-id')
+          $.post("{{ url_for('ticket.index') }}save/", {'service' : id}, function(data) {
+            modal.$modal.data(data)
+            modal.open();
+          })
+        })
+        
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a237e">
+
+    <title>Service Counter</title>
+
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/ripples.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/material-wfont.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('ticket.static', filename='assets/css/flipper.css') }}" rel="stylesheet">
+
+    <style>
+      .card.disabled {
+        background: #dddddd !important;
+      }
+    </style>
+
+    <script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js') }}"></script>
+  </head>
+  <body>
+    <div class="container remodal-bg">
+      <div id="ticket-service" class="row">
+        <a href="javascript:void(0)" class="btn btn-default btn-lg btn-block withripple">
+          Selamat Bertugas {{ counter.officer }}
+          <div class="ripple-wrapper"></div>
+        </a>
+
+        <div class="col-sm-12 col-sm-4  col-sm-offset-2 full-card start">
+          <div class="flip-card active-card">
+            <div class="card label-info">
+              <h6><span class="glyphicon glyphicon-play"></span></h6>
+            </div>
+            <div class="well">
+              <h1>Mulai</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-sm-4 full-card stop">
+          <div class="flip-card active-card">
+            <div class="card label-info disabled">
+              <h6><span class="glyphicon glyphicon-stop"></span></h6>
+            </div>
+            <div class="well">
+              <h1>Selesai</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+        $('.card').each(function() {
+          $(this).css('background-color', '#' + Math.random().toString(16).slice(2, 8).toUpperCase())
+            .css('color', 'white')
+        })
+
+        var start = $('.start .card'),
+            stop = $('.stop .card');
+
+        var startClick = function() {
+          $.get("/api/ticket/next/{{ counter.counter_id }}/", function(data) {
+            if(data) {
+              $('#ticket-service').data('ticket', data)
+
+              start.addClass("disabled").off('click')
+              stop.removeClass("disabled").on('click', stopClick)
+            }
+          })
+        },
+        stopClick = function() {
+          $.get("/api/ticket/stop/" + $('#ticket-service').data('ticket').ticket_id, function(data) {
+            if(data.success) {
+              $('#ticket-service').removeData('ticket')
+
+              stop.addClass("disabled").off('click')
+              start.removeClass("disabled").on('click', startClick)
+            }
+          })
+        }
+
+        start.on('click', startClick)
+
+        $.get("/api/ticket/unresolved/{{ counter.counter_id }}/", function(data) {
+          if(data) {
+            $('#ticket-service').data('ticket', data)
+
+            start.addClass("disabled").off('click')
+            stop.removeClass("disabled").on('click', stopClick)
+          }
+        })
+
+      })
+    </script>
+  </body>
+</html>
