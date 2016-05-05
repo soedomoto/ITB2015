@@ -17,7 +17,7 @@ root = logging.getLogger()
 root.setLevel(logging.DEBUG)
 
 ch = logging.StreamHandler(sys.stdout)
-ch.setLevel(logging.DEBUG)
+ch.setLevel(logging.ERROR)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 ch.setFormatter(formatter)
 root.addHandler(ch)
@@ -94,15 +94,16 @@ def calculate_average_arrival_time():
                     minutes=app.config.get('SERVICE_TIME_PREDICTION_CHECK_INTERVAL'))
 def calculate_service_time_prediction():
     date = datetime.datetime.now().date()
-    # Get service channel
-    resp = requests.get('{}/api/counter/list/'.format(app.config.get('BASE_URL')))
-    counters = resp.json()
-    c = len(counters)
-    # Get service rate
-    resp = requests.get('{}/api/service/list/'.format(app.config.get('BASE_URL')))
-    services = resp.json()
-    for service in services:
+    url = '{}/api/service/list/'.format(app.config.get('BASE_URL'))
+    resp = requests.get(url)
+    for service in resp.json:
+        # Get service channel
+        resp = requests.get('{}/api/counter/list/service/{}'.format(app.config.get('BASE_URL'), \
+                                                                    service['service_id']))
+        counters = resp.json()
+        c = len(counters)
         miu = service['estimated_time']
+
         # Get arrival rate
         arrival = TicketArrival.query.filter(and_( \
                 TicketArrival.ticket_date == date, \
@@ -110,12 +111,19 @@ def calculate_service_time_prediction():
             )).first()
         if arrival:
             lambd = arrival.arrival_rate
-            # Calculate waiting time
             rho = lambd / float(miu)
             # The probability of having zero vehicles in the systems
-            p0 = pow([((pow(rho, n)/math.factorial(n)) + (pow(rho, c)/(math.factorial(c)*1-rho/c))) \
-                  for n in range(c)], -1)
-
+            p0 = pow(sum([((pow(rho, n)/math.factorial(n)) + \
+                           (pow(rho, c)/(math.factorial(c)*1-rho/c))) \
+                    for n in range(c)]), -1)
+            # Expected average queue length
+            em = p0 * (pow(rho, c+1)/(c*math.factorial(c))) * (1/pow((1-rho/c),2))
+            # Expected average number in the systems
+            en = em + rho
+            # Expected average total time
+            ev = en / lambd
+            # Expected average waiting time
+            ew = ev + 1/miu
 
 
 class CTicket(Blueprint):

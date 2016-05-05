@@ -58,12 +58,14 @@ class CService(Blueprint):
         @self.route('/api/list/', methods=['GET'])
         def api_service_list():
             services = Service.query.all()
-            return Response(json.dumps([i.serialize for i in services]), mimetype='application/json')
+            return Response(json.dumps([i.serialize for i in services]), \
+                            mimetype='application/json')
         
         @self.route('/api/id/<id>/', methods=['GET'])
         def api_by_id(id):
             service = Service.query.filter_by(service_id=id).first()
-            return Response(json.dumps(service.serialize), mimetype='application/json')
+            return Response(json.dumps(service.serialize if service else None), \
+                            mimetype='application/json')
 
         @self.route('/api/set-estimated-time/<id>/', methods=['POST'])
         def api_set_estimated_time(id):

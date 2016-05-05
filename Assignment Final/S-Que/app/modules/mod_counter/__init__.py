@@ -62,4 +62,10 @@ class CCounter(Blueprint):
             counter = Counter.query.filter_by(counter_id=id).first()
             return Response(json.dumps(counter.serialize if counter else None), \
                             mimetype='application/json')
+
+        @self.route('/api/list/service/<service_id>', methods=['GET'])
+        def api_list_by_service(service_id):
+            counters = Counter.query.filter_by(service_id=service_id).all()
+            return Response(json.dumps([i.serialize for i in counters]), \
+                            mimetype='application/json')
             
