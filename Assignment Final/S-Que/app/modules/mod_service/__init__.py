@@ -60,6 +60,12 @@ class CService(Blueprint):
             services = Service.query.all()
             return Response(json.dumps([i.serialize for i in services]), \
                             mimetype='application/json')
+
+        @self.route('/api/list/group/<group>/', methods=['GET'])
+        def api_service_list_by_group(group):
+            services = Service.query.filter_by(service_group=group).all()
+            return Response(json.dumps([i.serialize for i in services]), \
+                            mimetype='application/json')
         
         @self.route('/api/id/<id>/', methods=['GET'])
         def api_by_id(id):
@@ -71,6 +77,13 @@ class CService(Blueprint):
         def api_set_estimated_time(id):
             service = Service.query.filter_by(service_id=id).first()
             service.estimated_time = float(request.form['estimated-time'])
+            db.session.commit()
+            return Response(json.dumps(service.serialize), mimetype='application/json')
+
+        @self.route('/api/set-waiting-time/<id>/', methods=['POST'])
+        def api_set_waiting_time(id):
+            service = Service.query.filter_by(service_id=id).first()
+            service.waiting_time = float(request.form['waiting-time'])
             db.session.commit()
             return Response(json.dumps(service.serialize), mimetype='application/json')
 
