@@ -1,0 +1,187 @@
+{% if use_template: %}
+  {% extends 'frontpage.html' %}
+  {% block title %}Pembuatan Akta Lahir{% endblock %}
+{% endif %}
+
+{% block head %}
+  {% if use_template: %}
+    {{ super() }}
+  {% endif %}
+
+  <link href="{{ url_for('static', filename='assets/checkbox-awesome/build.css') }}" rel="stylesheet">
+  <style>
+    .content {
+      padding: 20px 0;
+    }        
+    .stepwizard-step p {
+      margin-top: 10px;
+    }
+    .stepwizard-row {
+      display: table-row;
+    }
+    .stepwizard {
+      display: table;
+      width: 100%;
+      position: relative;
+    }
+    .stepwizard-step button[disabled] {
+      opacity: 1 !important;
+      filter: alpha(opacity=100) !important;
+    }
+    .stepwizard-row:before {
+      top: 14px;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      z-order: 0;
+    }
+    .stepwizard-step {
+      display: table-cell;
+      text-align: center;
+      position: relative;
+    }        
+    .stepwizard-step .btn {
+      opacity: 1 !important;
+    }
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      padding: 6px 0;
+      font-size: 12px;
+      line-height: 1.428571429;
+      border-radius: 15px;
+    }
+    .step-content {
+      text-align: center;
+    }
+    .step-content .choice {
+      text-align: center;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .step-content .choice input[type="radio"], .step-content .choice input[type="checkbox"] {
+      position: absolute;
+      left: -10000px;
+      z-index: -1;
+    }
+    .step-content .choice .icon {
+      text-align: center;
+      vertical-align: middle;
+      height: 116px;
+      width: 116px;
+      border-radius: 50%;
+      background-color: #999999;
+      color: #FFFFFF;
+      margin: 0 auto 20px;
+      border: 4px solid #CCCCCC;
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+    }
+    .step-content .choice i {
+      font-size: 30px;
+      line-height: 111px;
+    }
+    .step-content .choice.active .icon {
+      border-color: #2CA8FF;
+    }
+    .tipe-kk .option {
+      text-align: left;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="container content">
+       <div class="row">
+    <form role="form" method="GET" action="{{ url_for('akta_lahir.add') }}">   
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Komentar</label>
+                <textarea name="komentar" class="form-control" placeholder="Komentar" rows="9" cols="3" aria-invalid="false"></textarea>
+            </div>
+        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-primary btn-next pull-right" type="submit" >Simpan</button>
+        </div>
+      
+    </form>
+  </div>
+{% endblock %}
+
+{% block tail %}
+    {% if use_template: %}
+      {{ super() }}
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='assets/selectize/selectize.min.js') }}"></script>    
+    <script>
+      $('[data-toggle="wizard-radio"]').click(function(){
+      wizard = $(this).closest('.step-content');
+        wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
+        $(this).addClass('active');
+        $(wizard).find('[type="radio"]').removeAttr('checked');
+        $(this).find('[type="radio"]').attr('checked','true').change();
+      });
+      
+      $(".tipe-kk").hide()
+      $('input[name=tipe-kk]').on('change', function() {
+        var tipe = $(this).val();
+        $(".tipe-kk").hide()
+        $("#tipe-kk-" + tipe).show()
+      });
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        //$(document).ready(function () {
+            var navListItems = $('div.step-header div a'),
+                    allWells = $('.step-content'),
+                    allNextBtn = $('.btn-next');
+
+            allWells.hide();
+
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                        $item = $(this);
+
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-primary').addClass('btn-default');
+                    $item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
+            });
+
+            allNextBtn.click(function(){
+              steps = $('.stepwizard-step')
+              steps.css('width', (100/steps.length) + "%")
+              
+                var curStep = $(this).closest(".step-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.step-header div a[href="#' + curStepBtn + '"]').parent().next().children("a");
+                    
+                nextStepWizard.removeAttr('disabled').trigger('click');
+            });
+            
+            
+            
+            var i = 1
+            $("#add_row").click(function(){
+                $('#tabel_anggota tbody').append("<tr><td>"+ (i+1) +"</td><td><input name='nik_anggota[]' type='text' placeholder='NIK' class='form-control input-md'  /> </td><td><input  name='nama_anggota[]' type='text' placeholder='Nama Anggota'  class='form-control input-md'></td><td><input  name='sdhk_anggota[]' type='text' placeholder='SDHK Anggota'  class='form-control input-md'></td></tr>");
+            });
+
+            $('div.step-header div a.btn-primary').trigger('click');
+        //});
+    </script>
+{% endblock %}

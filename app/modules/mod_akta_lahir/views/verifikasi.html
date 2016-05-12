@@ -1,0 +1,179 @@
+{% extends 'frontpage.html' %}
+{% block title %}Verifikasi Permohonan Akta Lahir{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <div id="main" class="container-fluid">
+    <div id="top" class="row">
+      <div class="col-md-3">
+        <h2>Daftar Permohonan</h2>
+      </div>
+
+    </div> <!-- /#top -->
+
+    <hr />
+
+    <div id="list" class="row">
+      <div class="table-responsive col-md-12">
+        <table class="table table-striped" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th>Id Permohonan</th>
+              <th>Nik Pemohon</th>
+              <th>Pemohon</th>
+              <th>Status Permohonan</th>
+              <th class="actions">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for permohonan in permohonans %}
+            <tr>
+              <td>{{ permohonan.id_permohonan }}</td>
+              <td>{{ permohonan.nik_pemohon.nik }}</td>
+              <td>{{ permohonan.nik_pemohon.nama }}</td>
+              <td>{{ permohonan.status_verifikasi.nama_verifikasi_akta }}</td>
+              <td class="actions">
+                <a class="btn btn-success btn-xs" data-toggle="modal" data-target="#view-modal" data-remote="false" href="{{ url_for('akta_lahir.view', id_permohonan=permohonan.id_permohonan) }}">Lihat Detail</a>
+                <a class="btn btn-warning btn-xs" data-toggle="modal" data-target="#edit-modal" data-remote="false" href="#">Verifikasi</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div> <!-- /#list -->
+
+    <div id="bottom" class="row">
+      <div class="col-md-12">
+        <ul class="pagination">
+          <li class="disabled"><a>&lt; Prev</a></li>
+          <li class="disabled"><a>1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li class="next"><a href="#" rel="next">Next &gt;</a></li>
+        </ul><!-- /.pagination -->
+      </div>
+    </div> <!-- /#bottom -->
+  </div>  <!-- /#main -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Hapus"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Detail Permohonan</h4>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="view-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Hapus"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Detail Permohonan</h4>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Hapus"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Daftar Keluarga</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Simpan</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Hapus"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Hapus Keluarga</h4>
+        </div>
+        <div class="modal-body">Apakah yakin akan menghapus keluarga ini?</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Ya</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block tail %}
+  {{ super() }}
+  <script>
+    // Add Keluarga
+    $("#add-modal")
+    .on("show.bs.modal", function(e) {
+      var modal = $(this).find(".modal-body").append(
+        $('<div>').css('text-align','center').append(
+          $('<i>').attr('class', 'fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom')
+        )
+      );
+    })
+    .on("shown.bs.modal", function(e) {
+      var modal = $(this);
+      var link = $(e.relatedTarget);
+      modal.find(".modal-body").load(link.attr("href") + "?no-template", function() {
+        modal.find(".modal-body .container").removeClass("container")
+      });
+    })
+    .on("hidden.bs.modal", function() {
+      $(this).find(".modal-body").empty()
+    })
+    
+    // View Keluarga
+    $("#view-modal")
+    .on("show.bs.modal", function(e) {
+      var modal = $(this).find(".modal-body").append(
+        $('<div>').css('text-align','center').append(
+          $('<i>').attr('class', 'fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom')
+        )
+      );
+    })
+    .on("shown.bs.modal", function(e) {
+      
+    })
+    .on("hidden.bs.modal", function() {
+      $(this).find(".modal-body").empty()
+    })
+    
+    // Edit Keluarga
+    $("#edit-modal")
+    .on("show.bs.modal", function(e) {
+      var modal = $(this).find(".modal-body").append(
+        $('<div>').css('text-align','center').append(
+          $('<i>').attr('class', 'fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom')
+        )
+      );
+    })
+    .on("shown.bs.modal", function(e) {
+      
+    })
+    .on("hidden.bs.modal", function() {
+      $(this).find(".modal-body").empty()
+    })
+    
+    $("#delete-modal").on('show.bs.modal', function () {
+      alert('The modal is about to be shown.');
+    });
+  </script>
+{% endblock %}

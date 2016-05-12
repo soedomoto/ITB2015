@@ -1,0 +1,346 @@
+{% extends 'frontpage.html' %}
+{% block title %}Pengajuan KK{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    
+    <style>
+        .content {
+            padding: 20px 0;
+        }
+        
+        .stepwizard-step p {
+            margin-top: 10px;
+        }
+
+        .stepwizard-row {
+            display: table-row;
+        }
+
+        .stepwizard {
+            display: table;
+            width: 100%;
+            position: relative;
+        }
+
+        .stepwizard-step button[disabled] {
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+        }
+
+        .stepwizard-row:before {
+            top: 14px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            z-order: 0;
+
+        }
+
+        .stepwizard-step {
+            display: table-cell;
+            text-align: center;
+            position: relative;
+        }
+        
+        .stepwizard-step .btn {
+            opacity: 1 !important;
+        }
+
+        .btn-circle {
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          padding: 6px 0;
+          font-size: 12px;
+          line-height: 1.428571429;
+          border-radius: 15px;
+        }
+    </style>
+    
+    <link href="{{ url_for('static', filename='assets/selectize/selectize.bootstrap3.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/selectize/selectize.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container content">
+    <div class="stepwizard">
+        <div class="stepwizard-row step-header">
+            <div class="stepwizard-step">
+                <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                <p>Perhatian</p>
+            </div>
+            <div class="stepwizard-step">
+                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                <p>Jenis Permohonan</p>
+            </div>
+            <div class="stepwizard-step">
+                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                <p>Identitas Pemohon</p>
+            </div>
+            <div class="stepwizard-step">
+                <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                <p>Anggota Keluarga</p>
+            </div>
+        </div>
+    </div>
+    <form role="form" method="POST" action="{{ url_for('family_identity.add') }}save">
+        <div class="row step-content" id="step-1">
+            <div class="col-xs-12">
+                <div class="col-md-12">
+                    <h3>Harap baca baik-baik !!!</h3>
+                    <p>
+                    Lorem impum dorem
+                    </p>
+                    
+                    <button class="btn btn-primary btn-next pull-right" type="button" >Saya Setuju</button>
+                </div>
+            </div>
+        </div>
+        <div class="row step-content" id="step-2">
+            <div class="col-xs-12">
+                <div class="col-md-12">
+                    <h3> Jenis Permohonan</h3>
+                    <p>Jenis Kartu Keluarga yang ingin Anda buat?</p>
+                    
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="tipe-kk" value="baru" />
+                            </span>
+                            <span class="form-control">Kartu Keluarga Baru</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="tipe-kk" value="numpang" />
+                            </span>
+                            <span class="form-control">Menumpang Kartu Keluarga</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tipe-kk" id="tipe-kk-baru">
+                        <p>Alasan Permohonan :</p>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="alasan-baru" value="1" />
+                            </span>
+                            <span class="form-control">Karena Membentuk Rumah Tangga Baru</span>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="alasan-baru" value="2" />
+                            </span>
+                            <span class="form-control">Karena Kartu Keluarga Hilang/Rusak</span>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="alasan-baru" value="3" />
+                            </span>
+                            <span class="form-control"> Lainnya</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tipe-kk" id="tipe-kk-numpang">
+                        <p>Alasan Permohonan :</p>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="alasan-numpang" value="1" />
+                            </span>
+                            <span class="form-control">Karena Kartu Keluarga dibawa Pindah oleh Kepala Keluarga</span>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="alasan-numpang" value="2" />
+                            </span>
+                            <span class="form-control">Karena Pindah Tempat Tinggal namun tidak membawa Kartu Keluarga</span>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="alasan-numpang" value="3" />
+                            </span>
+                            <span class="form-control">Karena Pindah Tempat Tinggal</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-next pull-right" type="button" >Lanjutkan</button>
+                </div>
+            </div>
+        </div>
+        <div class="row step-content" id="step-3">
+            <div class="col-xs-12">
+                <div class="col-md-12">
+                    <h3>Identitas Pemohon</h3>
+                    
+                    <label>NIK Pemohon</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="nik-pemohon" class="form-control" placeholder="NIK Pemohon" aria-describedby="basic-addon1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Check</button>
+                        </span>
+                    </div>
+                    <label>No. KK Semula</label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="kk-pemohon" class="form-control" placeholder="No. KK Semula" aria-describedby="basic-addon1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Check</button>
+                        </span>
+                    </div>
+                    <label>Alamat Pemohon</label>
+                    <div class="control-group">
+                        <label for="select-beast">Beast:</label>
+                        <select id="prop-pemohon" name="prop-pemohon" class="demo-default" placeholder="Propinsi">
+                            <option value="">Select a person...</option>
+                            <option value="4">Thomas Edison</option>
+                            <option value="1">Nikola</option>
+                            <option value="3">Nikola Tesla</option>
+                            <option value="5">Arnold Schwarzenegger</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="kab-pemohon" class="form-control" placeholder="Kabupaten" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="kec-pemohon" class="form-control" placeholder="Kecamatan" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="kel-pemohon" class="form-control" placeholder="Desa/Kelurahan" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="rt-pemohon" class="form-control" placeholder="RT" aria-describedby="basic-addon1">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="rw-pemohon" class="form-control" placeholder="RW" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input type="text" name="alamat-pemohon" class="form-control" placeholder="Jalan dan Nomer Rumah" aria-describedby="basic-addon1">
+                    </div>
+                    
+                    <button class="btn btn-primary btn-next pull-right" type="button">Lanjutkan</button>
+                </div>
+            </div>
+        </div>
+        <div class="row step-content" id="step-4">
+            <div class="col-xs-12">
+                <div class="col-md-12">
+                    <h3>Anggota Keluarga</h3>
+                    
+                    <div class="col-md-12 column">
+                        <table class="table table-bordered table-hover" id="tabel_anggota">
+                            <thead>
+                                <tr >
+                                    <th class="text-center">
+                                        #
+                                    </th>
+                                    <th class="text-center">
+                                        NIK
+                                    </th>
+                                    <th class="text-center">
+                                        Nama Lengkap
+                                    </th>
+                                    <th class="text-center">
+                                        SDHK
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id='addr0'>
+                                    <td>
+                                    1
+                                    </td>
+                                    <td>
+                                    <input type="text" name='nik-anggota[]'  placeholder='NIK' class="form-control"/>
+                                    </td>
+                                    <td>
+                                    <input type="text" name='nama-anggota[]' placeholder='Nama Lengkap' class="form-control"/>
+                                    </td>
+                                    <td>
+                                    <input type="text" name='sdhk-anggota[]' placeholder='SDHK' class="form-control"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a id="add_row" class="btn btn-default pull-left">Add Row</a>
+                    
+                    <button class="btn btn-success pull-right" type="submit">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block tail %}
+    <script src="{{ url_for('static', filename='assets/selectize/selectize.min.js') }}"></script>
+    
+    <script>
+        $(document).ready(function () {
+            var navListItems = $('div.step-header div a'),
+                    allWells = $('.step-content'),
+                    allNextBtn = $('.btn-next');
+
+            allWells.hide();
+
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                        $item = $(this);
+
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-primary').addClass('btn-default');
+                    $item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
+            });
+
+            allNextBtn.click(function(){
+                var curStep = $(this).closest(".step-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.step-header div a[href="#' + curStepBtn + '"]').parent().next().children("a");
+                    
+                nextStepWizard.removeAttr('disabled').trigger('click');
+            });
+            
+            $(".tipe-kk").hide()
+            $('input[name=tipe-kk]').on('change', function() {
+                var tipe = $(this).val();
+                
+                $(".tipe-kk").hide()
+                $("#tipe-kk-" + tipe).show()
+            });
+            
+            var i = 1
+            $("#add_row").click(function(){
+                $('#tabel_anggota tbody').append("<tr><td>"+ (i+1) +"</td><td><input name='nik_anggota[]' type='text' placeholder='NIK' class='form-control input-md'  /> </td><td><input  name='nama_anggota[]' type='text' placeholder='Nama Anggota'  class='form-control input-md'></td><td><input  name='sdhk_anggota[]' type='text' placeholder='SDHK Anggota'  class='form-control input-md'></td></tr>");
+            });
+
+            $('div.step-header div a.btn-primary').trigger('click');
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+            $('#prop-pemohon').selectize({
+                sortField: {
+                    field: 'text',
+                    direction: 'asc'
+                },
+                dropdownParent: 'body'
+            });
+        });
+    </script>
+{% endblock %}

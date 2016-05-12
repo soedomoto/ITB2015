@@ -1,0 +1,138 @@
+{% if use_template: %}
+  {% extends 'frontpage.html' %}
+  {% block title %}Detail Permohonan KK{% endblock %}
+{% endif %}
+
+{% block head %}
+  {% if use_template: %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="container content">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Detail Permohonan</h4>
+      </div>
+
+      <div class="col-sm-10 col-sm-offset-1" style="text-align: left;">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Tanggal Permohonan</label>
+            <input type="text" name="tanggal-permohonan" class="form-control" placeholder="Tanggal Permohonan" autocomplete="off" readonly
+                    value="{{ request.tanggal_entry }}" />
+          </div>
+        </div>
+        {% set numpang = ['Karena Kartu Keluarga dibawa Pindah oleh Kepala Keluarga',
+          'Karena Pindah Tempat Tinggal namun tidak membawa Kartu Keluarga',
+          'Karena Pindah Tempat Tinggal'] %}
+        {% set baru = ['Karena Membentuk Rumah Tangga Baru',
+          'Karena Kartu Keluarga Hilang/Rusak',
+          'Lainnya'] %}
+        {% if 'alasan-baru' in request.data  %}
+          {% set alasan = 'Baru - ' + baru[request.data['alasan-baru']|int - 1] %}
+        {% else %}
+          {% set alasan = 'Numpang - ' + baru[request.data['aalasan-numpang']|int - 1] %}
+        {% endif %}
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Alasan Permohonan</label>
+            <input type="text" name="alasan-permohonan" class="form-control" placeholder="Alasan Permohonan" autocomplete="off" readonly
+                    value="{{ alasan }}" />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Pemohon</label>
+            <input type="text" name="nik-pemohon" class="form-control" placeholder="NIK Pemohon" autocomplete="off" readonly
+                    value="{{ request.data.pemohon.nik }} - {{ request.data.pemohon.nama }}" />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>No. KK Semula</label>
+            <input type="text" name="kk-pemohon" class="form-control" placeholder="No. KK Semula" autocomplete="off" readonly
+                    value="{{ request.data['kk-pemohon'] }}" />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Propinsi</label>
+            <input type="text" name="prop-pemohon" class="form-control" placeholder="Propinsi" autocomplete="off" readonly
+                    value="{{ request.data['prop-pemohon'] }}" />
+          </div>
+          <div class="form-group">
+            <label>Kabupaten/Kota</label>
+            <input type="text" name="kab-pemohon" class="form-control" placeholder="Kabupaten/Kota" autocomplete="off" readonly
+                    value="{{ request.data['kab-pemohon'] }}" />
+          </div>
+          <div class="form-group">
+            <label>Kecamatan</label>
+            <input type="text" name="kec-pemohon" class="form-control" placeholder="Kecamatan" autocomplete="off" readonly
+                    value="{{ request.data.pemohon.kecamatan.kd_kecamatan }} - {{ request.data.pemohon.kecamatan.nama_kecamatan }}" />
+          </div>
+          <div class="form-group">
+            <label>Desa/Kelurahan</label>
+            <input type="text" name="kel-pemohon" class="form-control" placeholder="Desa/Kelurahan" autocomplete="off" readonly
+                    value="{{ request.data.pemohon.kelurahan.kd_kelurahan }} - {{ request.data.pemohon.kelurahan.nama_kelurahan }}"  />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Alamat Pemohon</label>
+            <textarea name="alamat-pemohon" class="form-control valid" placeholder="Alamat" rows="9" cols="3" aria-invalid="false" readonly>{{ request.data['alamat-pemohon'] }}</textarea>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <input type="text" name="rt-pemohon" class="form-control" placeholder="RT" autocomplete="off" readonly
+                      value="{{ request.data['rt-pemohon'] }}" />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <input type="text" name="rw-pemohon" class="form-control" placeholder="RW" autocomplete="off" readonly
+                      value="{{ request.data['rw-pemohon'] }}" />
+            </div>
+          </div>
+        </div>
+        <form role="form" method="POST" action="{{ url_for('family_identity.admin_verify_add_notes', id=request.id_permohonan) }}">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label>Catatan Verifikator</label>
+              <textarea name="catatan" class="form-control valid" placeholder="Catatan" rows="3" aria-invalid="false">{{ request.catatan }}</textarea>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <button class="btn btn-success pull-right" type="submit">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-success" id="add-notes-success-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong>Success! </strong>
+    Catatan telah ditambahkan
+  </div>
+{% endblock %}
+
+{% block tail %}
+  {% if use_template: %}
+    {{ super() }}
+  {% endif %}
+
+  <script>
+    $("form").on('submit', function(e) {
+      var data = $(this).serializeObject()
+      $.post($(this).attr('action'), data, function(resp) {
+        $("#add-notes-success-alert").alert()
+          .delay(1000).slideUp(200);
+      }, 'json');
+
+      e.preventDefault()
+    })
+  </script>
+{% endblock %}

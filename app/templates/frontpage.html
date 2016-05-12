@@ -1,27 +1,46 @@
 <!doctype html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <title>{% block title %}{% endblock %} - Bandung Citizen Service Catalog</title>
-      <meta name="description" content="{% block description %}{% endblock %}" >
-      <meta name="author" content="{% block author %}{% endblock %}">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Bandung Citizen Service Catalog</title>
+    <meta name="description" content="{% block description %}{% endblock %}" >
+    <meta name="author" content="{% block author %}{% endblock %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-      <!-- Mobile Specific Meta -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-      {% block head %}
-      <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
-      <link href="{{ url_for('static', filename='assets/css/font-awesome.min.css') }}" rel="stylesheet">
-      <link href="{{ url_for('static', filename='assets/dashgumfree_v2/style.css') }}" rel="stylesheet">
-      
-      <script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js') }}"></script>
+    {% block head %}
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/dashgumfree_v2/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/bootstrapValidator/formValidation.min.css') }}" rel="stylesheet">
 
-      <!--[if IE]>
-          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-          <![endif]-->
-      {% endblock %}
+    <script src="{{ url_for('static', filename='assets/js/jquery-2.1.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery-ui-1.11.4.js') }}"></script>
+    <script>
+      $.fn.serializeObject = function() {
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function() {
+          if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+              o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+          } else {
+            o[this.name] = this.value || '';
+          }
+        });
+        return o;
+      };
+    </script>
+
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    {% endblock %}
   </head>
   <body>
     <nav class="navbar">
@@ -39,8 +58,27 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Beranda</a></li>
             <li><a href="#">Tentang Kami</a></li>
-            <li><a href="#">Layanan</a></li>
-            <li><a href="#">Bantuan</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Layanan <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Kartu Tanda Penduduk</a></li>
+                <li><a href="/family">Kartu Keluarga</a></li>
+                <li><a href="/aktalahir">Akta Kelahiran</a></li>
+                <li><a href="/death_certificate">Akta Kematian</a></li>
+                <li><a href="#">Akta Perkawinan</a></li>
+                <li><a href="#">Akta Perceraian</a></li>
+                <li><a href="#">Akta Pengangkatan Anak</a></li>
+                <li><a href="#">Pindah Datang dan Keluar</a></li>
+                <li><a href="#">Sekolah</a></li>
+                <li><a href="/lapor">LAPOR!</a></li>
+                <li><a href="#">Kartu Kuning</a></li>
+                <li><a href="#">Rumah Sakit</a></li>
+                <li><a href="/puskesmas">Puskesmas</a></li>
+              </ul>
+            </li>
+            <li><a href="/api">API</a></li>
           </ul>
         </div>
       </div>
@@ -50,6 +88,8 @@
     
     {% block tail %}
     <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrapValidator/formValidation.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrapValidator/bootstrap.min.js') }}"></script>
     {% endblock %}
   </body>
 </html>

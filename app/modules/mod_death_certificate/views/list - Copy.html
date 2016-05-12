@@ -1,0 +1,16 @@
+{% extends 'frontpage.html' %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Index</h1>
+  <p class="important">
+    Welcome on my awesome homepage.
+    
+    <a href="{{ url_for('death_certificate.static', filename='formulir-permohonan-kk-form-f-1-06.pdf') }}">asdf</a>
+</p>
+{% endblock %}

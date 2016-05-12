@@ -1,0 +1,199 @@
+{% extends 'frontpage.html' %}
+{% block title %}Pengajuan Akta Kematian{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    
+    <style>
+        .content {
+            padding: 20px 0;
+        }
+        
+        .stepwizard-step p {
+            margin-top: 10px;
+        }
+
+        .stepwizard-row {
+            display: table-row;
+        }
+
+        .stepwizard {
+            display: table;
+            width: 100%;
+            position: relative;
+        }
+
+        .stepwizard-step button[disabled] {
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+        }
+
+        .stepwizard-row:before {
+            top: 14px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            z-order: 0;
+
+        }
+
+        .stepwizard-step {
+            display: table-cell;
+            text-align: center;
+            position: relative;
+        }
+        
+        .stepwizard-step .btn {
+            opacity: 1 !important;
+        }
+
+        .btn-circle {
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          padding: 6px 0;
+          font-size: 12px;
+          line-height: 1.428571429;
+          border-radius: 15px;
+        }
+    </style>
+    
+    <script>
+        $(document).ready(function () {
+            var navListItems = $('div.step-header div a'),
+                    allWells = $('.step-content'),
+                    allNextBtn = $('.btn-next');
+
+            allWells.hide();
+
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                        $item = $(this);
+
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-primary').addClass('btn-default');
+                    $item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
+            });
+
+            allNextBtn.click(function(){
+                var curStep = $(this).closest(".step-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.step-header div a[href="#' + curStepBtn + '"]').parent().next().children("a");
+                    
+                nextStepWizard.removeAttr('disabled').trigger('click');
+            });
+            
+            $(".tipe-aktamati").hide()
+            $('input[name=tipe-aktamati]').on('change', function() {
+                var tipe = $(this).val();
+                
+                $(".tipe-aktamati").hide()
+                $("#tipe-aktamati-" + tipe).show()
+            });
+            
+            var i = 1
+            $("#add_row").click(function(){
+                $('#tabel_anggota tbody').append("<tr><td>"+ (i+1) +"</td><td><input name='nik_anggota[]' type='text' placeholder='NIK' class='form-control input-md'  /> </td><td><input  name='nama_anggota[]' type='text' placeholder='Nama Anggota'  class='form-control input-md'></td><td><input  name='sdhk_anggota[]' type='text' placeholder='SDHK Anggota'  class='form-control input-md'></td></tr>");
+            });
+
+            $('div.step-header div a.btn-primary').trigger('click');
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+<div class="container content">
+    <h3>Daftar Permohonan Belum Terverifikasi Kabid</h3>
+    
+    <table class="table table-striped" cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
+          <th>idPermohonan</th>
+          <th>KTP Pemohon</th>
+          <th>KTP saksi1</th>
+          <th>KTP saksi2</th>
+          <th>nama Terlapor</th>
+          <th>Pekerjaan</th>
+          <th>KTP terlapor</th>
+          <th>KK</th>
+          <th>Akta Lahir</th>
+          <th>Akta Nikah</th>
+          <th>Waktu meninggal</th>
+          <th>Tempat Meninggal</th>
+          <th>Sebab Meninggal</th>
+          <th>Status</th>
+          <th>Surat Lurah</th>
+          <th>Surat Medis</th>
+          <th class="actions">Verifikasi</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for permohonan in permohonanList %}
+        <tr>
+         <td>{{ permohonan.idPermohonan }}</td>
+          <td>{{ permohonan.idKtpPemohon }}
+            {% if permohonan.idKtpPemohon != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+           </td>
+          <td>{{ permohonan.idKtpSaksi1 }}
+            {% if permohonan.idKtpSaksi1 != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+            </td>
+          <td>{{ permohonan.idKtpSaksi2 }}
+            {% if permohonan.idKtpSaksi2 != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+          </td>
+          <td>{{ permohonan.namaTerlapor }}</td>
+          <td>{{ permohonan.pekerjaan }}</td>
+          <td>{{ permohonan.idKtpTerlapor }}
+            {% if permohonan.idKtpTerlapor != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}</td>
+          <td>{{ permohonan.idKK }}
+            {% if permohonan.idKK != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+          </td>
+          <td>{{ permohonan.idAktaLahir }}
+            {% if permohonan.idAktaLahir != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+          </td>
+          <td>{{ permohonan.idAktaNikah }}
+            {% if permohonan.idAktaNikah != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+          </td>
+          <td>{{ permohonan.waktuMeninggal }}</td>
+          <td>{{ permohonan.tempatMeninggal }}</td>
+          <td>{{ permohonan.sebabMeninggal }}</td>
+          <td>{{ permohonan.status }}</td>
+          <td>{{ permohonan.suratLurah }}
+            {% if permohonan.suratLurah != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+          </td>
+          <td>{{ permohonan.suratMedis }}
+            {% if permohonan.suratMedis != None %}
+                <button class="btn btn-primary btn-next pull-right" type="button" >Lihat</button>
+            {% endif %}
+          </td>
+          <td><button class="btn btn-primary btn-next pull-right" type="button" >Verifikasi</button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+                    
+</div>
+{% endblock %}

@@ -1,0 +1,436 @@
+{% if use_template: %}
+  {% extends 'frontpage.html' %}
+  {% block title %}Detail Akta Lahir{% endblock %}
+{% endif %}
+
+{% block head %}
+  {% if use_template: %}
+    {{ super() }}
+  {% endif %}
+
+  <link href="{{ url_for('static', filename='assets/checkbox-awesome/build.css') }}" rel="stylesheet">
+  <style>
+    .content {
+      padding: 20px 0;
+    }        
+    .stepwizard-step p {
+      margin-top: 10px;
+    }
+    .stepwizard-row {
+      display: table-row;
+    }
+    .stepwizard {
+      display: table;
+      width: 100%;
+      position: relative;
+    }
+    .stepwizard-step button[disabled] {
+      opacity: 1 !important;
+      filter: alpha(opacity=100) !important;
+    }
+    .stepwizard-row:before {
+      top: 14px;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      z-order: 0;
+    }
+    .stepwizard-step {
+      display: table-cell;
+      text-align: center;
+      position: relative;
+    }        
+    .stepwizard-step .btn {
+      opacity: 1 !important;
+    }
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      padding: 6px 0;
+      font-size: 12px;
+      line-height: 1.428571429;
+      border-radius: 15px;
+    }
+    .step-content {
+      text-align: center;
+    }
+    .step-content .choice {
+      text-align: center;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .step-content .choice input[type="radio"], .step-content .choice input[type="checkbox"] {
+      position: absolute;
+      left: -10000px;
+      z-index: -1;
+    }
+    .step-content .choice .icon {
+      text-align: center;
+      vertical-align: middle;
+      height: 116px;
+      width: 116px;
+      border-radius: 50%;
+      background-color: #999999;
+      color: #FFFFFF;
+      margin: 0 auto 20px;
+      border: 4px solid #CCCCCC;
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+    }
+    .step-content .choice i {
+      font-size: 30px;
+      line-height: 111px;
+    }
+    .step-content .choice.active .icon {
+      border-color: #2CA8FF;
+    }
+    .tipe-kk .option {
+      text-align: left;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="container content">
+    <div class="stepwizard">
+      <div class="stepwizard-row step-header">
+        <div class="stepwizard-step">
+          <a href="#step-1" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
+          <p>Persyaratan Umum</p>
+        </div>
+        <div class="stepwizard-step">
+          <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+          <p>Identitas Pemohon</p>
+        </div>
+        <div class="stepwizard-step">
+          <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+          <p>Identitas Bayi</p>
+        </div>
+		<div class="stepwizard-step">
+          <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+          <p>Identitas Orang Tua</p>
+        </div>
+		<div class="stepwizard-step">
+          <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+          <p>Identitas Saksi</p>
+        </div>
+      </div>
+    </div>
+    
+    <form role="form" method="GET" action="{{ url_for('akta_lahir.add') }}">
+      
+      <div class="row step-content" id="step-1">
+        <div class="col-sm-12">
+          <h4>Persyaratan Umum</h4>
+        </div>
+        
+		<div class="col-sm-10 col-sm-offset-1" style="text-align: left;">
+		  <div class="col-sm-6">
+            <div class="form-group">
+              <label><b>No Kartu Keluarga</b></label>
+              <input type="text" name="no_kk" class="form-control" placeholder="No Kartu Keluarga" />
+			  <br />
+			  <label><b>No Akta Nikah</b></label>
+              <input type="text" name="no_nikah" class="form-control" placeholder="No Akta Nikah" />
+			  <br />
+              <label><b>Lahir Di</b></label>
+			  <div class="radio">
+				<input type="radio" name="lahir-di" id="radio21" value="1" checked="">
+				<label for="radio21">Rumah Sakit</label>
+			  </div>
+			  <div class="radio">
+				<input type="radio" name="lahir-di" id="radio22" value="2">
+				<label for="radio22">Puskesmas</label>
+			  </div>
+			  <br />
+              <label><b>Surat Keterangan Lahir</b></label>
+			  <input type="text" name="ket_lahir" class="form-control" placeholder="Surat Keterangan Lahir" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <button class="btn btn-primary btn-next pull-right" type="button" >Lanjutkan</button>
+        </div>
+		</div>
+    
+      <div class="row step-content" id="step-2">
+        <div class="col-sm-12">
+          <h4>Identitas Pemohon</h4>
+        </div>
+        
+        <div class="col-sm-10 col-sm-offset-1" style="text-align: left;">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label><b>NIK Pemohon</b></label>
+              <input type="text" name="nik_pemohon" class="form-control" placeholder="NIK Pemohon" />
+			  <br />
+			  <label><b>Nama</b></label>
+              <input type="text" name="nama" class="form-control" placeholder="Nama" />
+			  <br />
+			  <label><b>Alamat</b></label>
+              <input type="text" name="alamat" class="form-control" placeholder="Alamat" />
+			  <br />
+			  <label><b>Umur</b></label>
+              <input type="text" name="umur" class="form-control" placeholder="Umur" />
+			  <br />
+			  <label><b>Pekerjaan</b></label>
+              <input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan" />
+			  <br />
+			  <label><b>Hubungan dengan si Bayi</b></label>
+              <input type="text" name="hubungan_bayi" class="form-control" placeholder="Hubungan dengan si Bayi" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-10">
+          <button class="btn btn-primary btn-next pull-right" type="button" >Lanjutkan</button>
+        </div>
+      </div>
+	  
+	  <div class="row step-content" id="step-3">
+        <div class="col-sm-12">
+          <h3>Identitas Bayi</h3>
+		  <h4>Bahwa Telah Lahir :</h4>
+        </div>
+        
+        <div class="col-sm-10 col-sm-offset-1" style="text-align: left;">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label><b>Pada Tanggal</b></label>
+              <input type="text" name="tanggal" class="form-control" placeholder="DD-MM-YYYY" />
+			  <br />
+			  <label><b>Pukul</b></label>
+              <input type="text" name="pukul" class="form-control" placeholder="HH:MM" />
+			  <br />
+			  <label><b>Bertempat Di</b></label>
+              <input type="text" name="tempat" class="form-control" placeholder="Kota" />
+			  <br />
+			  <label><b>Jenis Kelahiran</b></label>
+              <div class="radio">
+				<input type="radio" name="jns_kelahiran" id="radio41" value="1" checked="">
+				<label for="radio41">Tunggal</label>
+			  </div>
+			  <div class="radio">
+				<input type="radio" name="jns-kelahiran" id="radio42" value="2">
+				<label for="radio42">Kembar</label>
+			  </div>
+			  <br />
+			  <label><b>Nama Bayi</b></label>
+              <input type="text" name="nama_bayi" class="form-control" placeholder="Nama Bayi" />
+			  <br />
+			  <label><b>Jenis Kelamin</b></label>
+              <div class="radio">
+				<input type="radio" name="jk_bayi" id="radio43" value="1" checked="">
+				<label for="radio43">Laki-Laki</label>
+			  </div>
+			  <div class="radio">
+				<input type="radio" name="jk_bayi" id="radio44" value="2">
+				<label for="radio44">Perempuan</label>
+			  </div>
+			  <label><b>Anak Ke</b></label>
+              <input type="text" name="anak_ke" class="form-control" placeholder="Anak ke" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-10">
+          <button class="btn btn-primary btn-next pull-right" type="button" >Lanjutkan</button>
+        </div>
+      </div>
+	  
+	  	<div class="row step-content" id="step-4">
+        <div class="col-sm-12">
+          <h4>Identitas Orang Tua</h4>
+        </div>
+        
+        <div class="col-sm-10 col-sm-offset-1" style="text-align: left;">
+          <div class="col-sm-6">
+            <div class="form-group">
+			  <h3><b>Ibu</b></h3>
+              <label><b>NIK</b></label>
+              <input type="text" name="nik_ibu" class="form-control" placeholder="NIK" />
+			  <br />
+			  <label><b>Nama</b></label>
+              <input type="text" name="nama_ibu" class="form-control" placeholder="Nama" />
+			  <br />
+			  <label><b>Tanggal Lahir</b></label>
+              <input type="text" name="ttl_ibu" class="form-control" placeholder="Tanggal Lahir" />
+			  <br />
+			  <label><b>Kewarganegaraan</b></label>
+              <input type="text" name="kewarganegaraan_ibu" class="form-control" placeholder="Kewarganegaraan" />
+			  <br />
+			  <label><b>Pekerjaan</b></label>
+              <input type="text" name="pekerjaan_ibu" class="form-control" placeholder="Pekerjaan" />
+			  <br />
+			  <label><b>Alamat</b></label>
+              <input type="text" name="alamat_ibu" class="form-control" placeholder="Alamat" />
+            </div>
+			</div>
+			<div class="col-sm-6">
+			<div class="form-group">
+			  <h3><b>Ayah</b></h3>
+              <label><b>NIK</b></label>
+              <input type="text" name="nik_ayah" class="form-control" placeholder="NIK" />
+			  <br />
+			  <label><b>Nama</b></label>
+              <input type="text" name="nama_ayah" class="form-control" placeholder="Nama" />
+			  <br />
+			  <label><b>Tanggal Lahir</b></label>
+              <input type="text" name="ttl_ayah" class="form-control" placeholder="Tanggal Lahir" />
+			  <br />
+			  <label><b>Kewarganegaraan</b></label>
+              <input type="text" name="kewarganegaraan_ayah" class="form-control" placeholder="Kewarganegaraan" />
+			  <br />
+			  <label><b>Pekerjaan</b></label>
+              <input type="text" name="pekerjaan_ayah" class="form-control" placeholder="Pekerjaan" />
+			  <br />
+			  <label><b>Alamat</b></label>
+              <input type="text" name="alamat_ayah" class="form-control" placeholder="Alamat" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-10">
+          <button class="btn btn-primary btn-next pull-right" type="button" >Lanjutkan</button>
+        </div>
+      </div>
+      
+	  
+	  <div class="row step-content" id="step-5">
+        <div class="col-sm-12">
+          <h4>Keterangan Saksi</h4>
+        </div>
+        
+        <div class="col-sm-10 col-sm-offset-1" style="text-align: left;">
+          <div class="col-sm-6">
+            <div class="form-group">
+			  <h3><b>Saksi 1</b></h3>
+              <label><b>NIK</b></label>
+              <input type="text" name="nik_saksi1" class="form-control" placeholder="NIK" />
+			  <br />
+			  <label><b>Nama</b></label>
+              <input type="text" name="nama_saksi1" class="form-control" placeholder="Nama" />
+			  <br />
+			  <label><b>Tanggal Lahir</b></label>
+              <input type="text" name="ttl_saksi1" class="form-control" placeholder="Tanggal Lahir" />
+			  <br />
+			  <label><b>Kewarganegaraan</b></label>
+              <input type="text" name="kewarganegaraan_saksi1" class="form-control" placeholder="Kewarganegaraan" />
+			  <br />
+			  <label><b>Pekerjaan</b></label>
+              <input type="text" name="pekerjaan_saksi1" class="form-control" placeholder="Pekerjaan" />
+			  <br />
+			  <label><b>Alamat</b></label>
+              <input type="text" name="alamat_saksi1" class="form-control" placeholder="Alamat" />
+            </div>
+			</div>
+			<div class="col-sm-6">
+			<div class="form-group">
+			  <h3><b>Saksi 2</b></h3>
+              <label><b>NIK</b></label>
+              <input type="text" name="nik_saksi2" class="form-control" placeholder="NIK" />
+			  <br />
+			  <label><b>Nama</b></label>
+              <input type="text" name="nama_saksi2" class="form-control" placeholder="Nama" />
+			  <br />
+			  <label><b>Tanggal Lahir</b></label>
+              <input type="text" name="ttl" class="form-control" placeholder="Tanggal Lahir" />
+			  <br />
+			  <label><b>Kewarganegaraan</b></label>
+              <input type="text" name="kewarganegaraan_saksi2" class="form-control" placeholder="Kewarganegaraan" />
+			  <br />
+			  <label><b>Pekerjaan</b></label>
+              <input type="text" name="pekerjaan_saksi2" class="form-control" placeholder="Pekerjaan" />
+			  <br />
+			  <label><b>Alamat</b></label>
+              <input type="text" name="alamat_saksi2" class="form-control" placeholder="Alamat" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-10">
+          <button class="btn btn-primary btn-next pull-right" type="submit" >Simpan</button>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+{% endblock %}
+
+{% block tail %}
+    {% if use_template: %}
+      {{ super() }}
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='assets/selectize/selectize.min.js') }}"></script>    
+    <script>
+      $('[data-toggle="wizard-radio"]').click(function(){
+      wizard = $(this).closest('.step-content');
+        wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
+        $(this).addClass('active');
+        $(wizard).find('[type="radio"]').removeAttr('checked');
+        $(this).find('[type="radio"]').attr('checked','true').change();
+      });
+      
+      $(".tipe-kk").hide()
+      $('input[name=tipe-kk]').on('change', function() {
+        var tipe = $(this).val();
+        $(".tipe-kk").hide()
+        $("#tipe-kk-" + tipe).show()
+      });
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        //$(document).ready(function () {
+            var navListItems = $('div.step-header div a'),
+                    allWells = $('.step-content'),
+                    allNextBtn = $('.btn-next');
+
+            allWells.hide();
+
+            navListItems.click(function (e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                        $item = $(this);
+
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-primary').addClass('btn-default');
+                    $item.addClass('btn-primary');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
+            });
+
+            allNextBtn.click(function(){
+              steps = $('.stepwizard-step')
+              steps.css('width', (100/steps.length) + "%")
+              
+                var curStep = $(this).closest(".step-content"),
+                    curStepBtn = curStep.attr("id"),
+                    nextStepWizard = $('div.step-header div a[href="#' + curStepBtn + '"]').parent().next().children("a");
+                    
+                nextStepWizard.removeAttr('disabled').trigger('click');
+            });
+            
+            
+            
+            var i = 1
+            $("#add_row").click(function(){
+                $('#tabel_anggota tbody').append("<tr><td>"+ (i+1) +"</td><td><input name='nik_anggota[]' type='text' placeholder='NIK' class='form-control input-md'  /> </td><td><input  name='nama_anggota[]' type='text' placeholder='Nama Anggota'  class='form-control input-md'></td><td><input  name='sdhk_anggota[]' type='text' placeholder='SDHK Anggota'  class='form-control input-md'></td></tr>");
+            });
+
+            $('div.step-header div a.btn-primary').trigger('click');
+        //});
+    </script>
+{% endblock %}

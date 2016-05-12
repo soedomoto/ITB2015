@@ -91,6 +91,7 @@
     .tipe-kk .option {
       text-align: left;
     }
+    .modal-body{overflow-y: inherit;}
   </style>
 {% endblock %}
 
@@ -117,7 +118,7 @@
       </div>
     </div>
     
-    <form role="form" method="GET" action="{{ url_for('family_identity.add') }}save">
+    <form role="form" method="POST" action="{{ url_for('family_identity.add') }}save">
       <div class="row step-content" id="step-1">
         <div class="col-sm-12">
           <h4>Harap baca baik-baik !!!</h4>
@@ -150,7 +151,7 @@
               <div class="icon">
                 <i class="fa fa-male"></i>
               </div>
-              <h5>Menungpang KK</h5>
+              <h5>Menumpang KK</h5>
             </div>
           </div>
         </div>
@@ -209,33 +210,49 @@
           <div class="col-sm-6">
             <div class="form-group">
               <label>NIK Pemohon</label>
-              <input type="text" name="nik-pemohon" class="form-control" placeholder="NIK Pemohon" />
+              <input type="text" name="nik-pemohon" class="form-control" placeholder="NIK Pemohon" autocomplete="off" data-provide="typeahead" />
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
               <label>No. KK Semula</label>
-              <input type="text" name="kk-pemohon" class="form-control" placeholder="No. KK Semula" />
+              <input type="text" name="kk-pemohon" class="form-control" placeholder="No. KK Semula" autocomplete="off" data-provide="typeahead" readonly />
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
+              <label>Propinsi</label>
+              <input type="text" name="prop-pemohon" class="form-control" placeholder="Propinsi" autocomplete="off" data-provide="typeahead" />
+            </div>
+            <div class="form-group">
               <label>Kabupaten/Kota</label>
-              <input type="text" name="kab-pemohon" class="form-control" placeholder="Kabupaten/Kota" />
+              <input type="text" name="kab-pemohon" class="form-control" placeholder="Kabupaten/Kota" autocomplete="off" data-provide="typeahead" />
+            </div>
+            <div class="form-group">
               <label>Kecamatan</label>
-              <input type="text" name="kec-pemohon" class="form-control" placeholder="Kecamatan" />
+              <input type="text" name="kec-pemohon" class="form-control" placeholder="Kecamatan" autocomplete="off" data-provide="typeahead" />
+            </div>
+            <div class="form-group">
               <label>Desa/Kelurahan</label>
-              <input type="text" name="kel-pemohon" class="form-control" placeholder="Desa/Kelurahan" />
-              <label>RT</label>
-              <input type="text" name="rt-pemohon" class="form-control" placeholder="Desa/Kelurahan" />
-              <label>RW</label>
-              <input type="text" name="rw-pemohon" class="form-control" placeholder="Desa/Kelurahan" />
+              <input type="text" name="kel-pemohon" class="form-control" placeholder="Desa/Kelurahan" autocomplete="off" data-provide="typeahead" />
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
               <label>Alamat Pemohon</label>
               <textarea name="alamat-pemohon" class="form-control valid" placeholder="Alamat" rows="9" cols="3" aria-invalid="false"></textarea>
+            </div>
+          </div>
+          <div class="col-sm-6">            
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" name="rt-pemohon" class="form-control" placeholder="RT" autocomplete="off" />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" name="rw-pemohon" class="form-control" placeholder="RW" autocomplete="off" />
+              </div>
             </div>
           </div>
         </div>
@@ -251,7 +268,7 @@
         </div>
         
         <div class="table-responsive col-sm-12">
-          <table class="table table-striped" cellspacing="0" cellpadding="0">
+          <table class="table table-striped art-list" cellspacing="0" cellpadding="0">
             <thead>
               <tr>
                 <th>#</th>
@@ -261,17 +278,21 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td><input type="text" name='nik-anggota[]'  placeholder='NIK' class="form-control"/></td>
-                <td><input type="text" name='nama-anggota[]' placeholder='Nama Lengkap' class="form-control"/></td>
+              <tr class="art" id="row-1">
+                <td class="idx" id="col-idx-1">1</td>
+                <td id="col-nik-1">
+                  <input type="text" name="nik-anggota[]"  placeholder="NIK" class="form-control" autocomplete="off" data-provide="typeahead" readonly />
+                </td>
+                <td id="col-nama-1">
+                  <input type="text" name="nama-anggota[]" placeholder="Nama Lengkap" class="form-control" autocomplete="off" data-provide="typeahead" />
+                </td>
                 <td class="actions">
-                  <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Hapus</a>
+                  <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-art-modal">Hapus</a>
                 </td>
               </tr>
             </tbody>
           </table>
-          <a id="add_row" class="btn btn-default pull-left">Add Row</a>
+          <a id="add-row" class="btn btn-default pull-left">Add Row</a>
         </div>
         
         <div class="col-sm-10">
@@ -287,8 +308,40 @@
       {{ super() }}
     {% endif %}
 
-    <script src="{{ url_for('static', filename='assets/selectize/selectize.min.js') }}"></script>    
+    <script src="{{ url_for('static', filename='assets/typeahead.js/bootstrap-typeahead.js') }}"></script>
     <script>
+      // Wizard control
+      var navListItems = $('div.step-header div a'),
+          allWells = $('.step-content'),
+          allNextBtn = $('.btn-next');
+      
+      allWells.hide();
+      navListItems.click(function (e) {
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+        $item = $(this);
+
+        if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-primary').addClass('btn-default');
+          $item.addClass('btn-primary');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+        }
+      });
+      
+      allNextBtn.click(function(){
+        steps = $('.stepwizard-step')
+        steps.css('width', (100/steps.length) + "%")
+
+        var curStep = $(this).closest(".step-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.step-header div a[href="#' + curStepBtn + '"]').parent().next().children("a");
+
+        nextStepWizard.removeAttr('disabled').trigger('click');
+      });
+
+      // Radio control
       $('[data-toggle="wizard-radio"]').click(function(){
       wizard = $(this).closest('.step-content');
         wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
@@ -297,6 +350,7 @@
         $(this).find('[type="radio"]').attr('checked','true').change();
       });
       
+      // Tipe KK control
       $(".tipe-kk").hide()
       $('input[name=tipe-kk]').on('change', function() {
         var tipe = $(this).val();
@@ -304,54 +358,146 @@
         $("#tipe-kk-" + tipe).show()
       });
       
+      // Submit control
+      $("form").formValidation({
+        formSuccess: 'success.form.fv',
+        message: 'This value is not valid',
+        fields: {
+          'nik-pemohon': {
+            validators: {
+              notEmpty: {
+                message: 'The username is required and can\'t be empty'
+              }
+            }
+          }
+        }
+      }).on('success.form.fv', function(e) {
+        var data = $(this).serializeObject()  
+        $(this).find("input[data-provide=typeahead]").each(function(idx) {
+          if(typeof data[$(this).attr("name")] === 'string') {
+            data[$(this).attr("name")] = $(this).attr("data-value");
+          } else {
+            var inp = $(this)
+            var arrData = data[$(this).attr("name")]
+            arrData.forEach(function(d, i) {
+              if(d==inp.val()) {
+                arrData[i] = inp.attr("data-value")
+              }
+            })
+            data[$(this).attr("name")] = arrData
+          }
+        })
+        
+        $.post($(this).attr('action'), data, function(resp) {
+          alert("success")
+        }, 'json');
+        
+        e.preventDefault();
+      })
       
+      // Autocomplete control
+      // Population
+      pddk = $("input[name=nik-pemohon]").typeahead({
+        ajax: { 
+          url: '/api/population/query/', 
+          valueField: "nik", 
+          displayField: "nama",
+        }, onSelect: function(item) {
+          $(pddk).attr('data-value', item.value)
+          $.get('/population/api/id/'+ item.value +'/', function(pop) {
+            $("input[name=kk-pemohon]")
+              .val(pop.no_kk)
+              .attr('data-value', pop.no_kk)
+          })
+        },
+      });
       
-      
-      
-      
-      
-      
-      
-        //$(document).ready(function () {
-            var navListItems = $('div.step-header div a'),
-                    allWells = $('.step-content'),
-                    allNextBtn = $('.btn-next');
-
-            allWells.hide();
-
-            navListItems.click(function (e) {
-                e.preventDefault();
-                var $target = $($(this).attr('href')),
-                        $item = $(this);
-
-                if (!$item.hasClass('disabled')) {
-                    navListItems.removeClass('btn-primary').addClass('btn-default');
-                    $item.addClass('btn-primary');
-                    allWells.hide();
-                    $target.show();
-                    $target.find('input:eq(0)').focus();
-                }
-            });
-
-            allNextBtn.click(function(){
-              steps = $('.stepwizard-step')
-              steps.css('width', (100/steps.length) + "%")
+      // Propinsi
+      var kel, kec, kab, prop = $("input[name=prop-pemohon]").typeahead({
+        ajax: { 
+          url: '/master/api/province/list/', 
+          valueField: "kd_propinsi", 
+          displayField: "nama_propinsi",
+        }, onSelect: function(item) {
+          $(prop).attr('data-value', item.value)
+          
+          // Kabupaten
+          kab = $("input[name=kab-pemohon]").typeahead({
+            ajax: { 
+              url: '/master/api/regency/list/prov/' + prop.attr('data-value'), 
+              valueField: "kd_kabupaten", 
+              displayField: "nama_kabupaten",
+            }, onSelect: function(item) {
+              $(kab).attr('data-value', item.value)
               
-                var curStep = $(this).closest(".step-content"),
-                    curStepBtn = curStep.attr("id"),
-                    nextStepWizard = $('div.step-header div a[href="#' + curStepBtn + '"]').parent().next().children("a");
-                    
-                nextStepWizard.removeAttr('disabled').trigger('click');
-            });
-            
-            
-            
-            var i = 1
-            $("#add_row").click(function(){
-                $('#tabel_anggota tbody').append("<tr><td>"+ (i+1) +"</td><td><input name='nik_anggota[]' type='text' placeholder='NIK' class='form-control input-md'  /> </td><td><input  name='nama_anggota[]' type='text' placeholder='Nama Anggota'  class='form-control input-md'></td><td><input  name='sdhk_anggota[]' type='text' placeholder='SDHK Anggota'  class='form-control input-md'></td></tr>");
-            });
-
-            $('div.step-header div a.btn-primary').trigger('click');
-        //});
+              // Kecamatan
+              kec = $("input[name=kec-pemohon]").typeahead({
+                ajax: { 
+                  url: '/master/api/subdistrict/list/prov/'+ $(prop).attr('data-value') +'/regency/'+ $(kab).attr('data-value'), 
+                  valueField: "kd_kecamatan", 
+                  displayField: "nama_kecamatan",
+                }, onSelect: function(item) {
+                  $(kec).attr('data-value', item.value)
+                  
+                  // Kelurahan
+                  kel = $("input[name=kel-pemohon]").typeahead({
+                    ajax: { 
+                      url: '/master/api/village/list/prov/'+ $(prop).attr('data-value') +'/regency/'+ $(kab).attr('data-value') +'/subdistrict/'+ $(kec).attr('data-value'), 
+                      valueField: "kd_kelurahan", 
+                      displayField: "nama_kelurahan",
+                    }, onSelect: function(item) {
+                      $(kel).attr('data-value', item.value)
+                    },
+                  });
+                },
+              });
+            },
+          });
+        },
+      });
+      
+      
+      // Add ART control      
+      function autocompleteART(inpNama) {
+        var inpNik = $(inpNama).parent().parent().find("input[name='nik-anggota[]']")
+        
+        $(inpNama).removeData('typeahead')
+        $(inpNama).typeahead({
+          ajax: { 
+            url: '/api/population/query/', 
+            valueField: "nik", 
+            displayField: "nama",
+          }, onSelect: function(item) {
+            $(inpNama).attr('data-value', item.value)
+            $(inpNik).val(item.value)
+              .attr('data-value', item.value)
+          },
+        });
+      }
+      
+      $(".art input[name='nama-anggota[]']").on('focus', function() {
+        autocompleteART($(this))
+      })
+      
+      $("#add-row").on('click', function(){
+        lastIdx = $($('.art')[$('.art').length-1]).find('.idx').html()
+        $('<tr class="art" id="row-'+ (parseInt(lastIdx)+1) +'">\
+          <td class="idx" id="col-idx-'+ (parseInt(lastIdx)+1) +'">'+ (parseInt(lastIdx)+1) +'</td>\
+          <td id="col-nik-'+ (parseInt(lastIdx)+1) +'">\
+            <input type="text" name="nik-anggota[]"  placeholder="NIK" class="form-control" autocomplete="off" data-provide="typeahead" readonly />\
+          </td>\
+          <td id="col-nama-'+ (parseInt(lastIdx)+1) +'">\
+            <input type="text" name="nama-anggota[]" placeholder="Nama Lengkap" class="form-control" autocomplete="off" data-provide="typeahead" />\
+          </td>\
+          <td class="actions">\
+            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-art-modal">Hapus</a>\
+          </td>\
+        </tr>').appendTo($('.art-list tbody'))
+        
+        $(".art input[name='nama-anggota[]']").off("focus").on('focus', function() {
+          autocompleteART($(this))
+        })
+      });
+      $('div.step-header div a.btn-primary').trigger('click');
     </script>
 {% endblock %}

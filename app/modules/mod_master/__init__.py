@@ -4,7 +4,9 @@ from flask import Blueprint, request, render_template, \
 import json
 from app import db
 from models import  Propinsi, Kabupaten, Kecamatan, Kelurahan, \
-                    Agama, HubunganKeluarga, StatusPerkawinan
+                    Agama, HubunganKeluarga, StatusPerkawinan, \
+                    HubunganBayi, StatusVerifikasiAktaLahir, \
+                    JenisKelamin, JenisKelahiran, LevelOtorisasi
         
 class Master(Blueprint):
     def __init__(self):
@@ -100,4 +102,53 @@ class Master(Blueprint):
         def api_marital_by_id(kd_status_kawin):
             marital = StatusPerkawinan.query.filter_by(kd_status_perkawinan=kd_status_kawin).first()
             return Response(json.dumps(marital.serialize), mimetype='application/json')
-            
+        
+        @self.route('/api/babyrelation/list/', methods=['GET'])
+        def api_baby_relation_list():
+            baby_relations = HubunganBayi.query.all()
+            return Response(json.dumps([i.serialize for i in baby_relations]), mimetype='application/json')
+        
+        @self.route('/api/babyrelation/id/<kd_hubungan_bayi>', methods=['GET'])
+        def api_baby_relation_by_id(kd_hubungan_bayi):
+            baby_relation = HubunganBayi.query.filter_by(kd_hubungan_bayi=kd_hubungan_bayi).first()
+            return Response(json.dumps(baby_relation.serialize), mimetype='application/json')
+        
+        @self.route('/api/verifikasi/list/', methods=['GET'])
+        def api_verifikasi_akta_list():
+            verifikasi_aktas = StatusVerifikasiAktaLahir.query.all()
+            return Response(json.dumps([i.serialize for i in verifikasi_aktas]), mimetype='application/json')
+        
+        @self.route('/api/verifikasi/id/<kd_verifikasi_akta>', methods=['GET'])
+        def api_verifikasi_akta_by_id(kd_verifikasi_akta):
+            verifikasi_akta = StatusVerifikasiAktaLahir.query.filter_by(kd_verifikasi_akta=kd_verifikasi_akta).first()
+            return Response(json.dumps(verifikasi_akta.serialize), mimetype='application/json')
+        
+        @self.route('/api/jeniskelamin/list/', methods=['GET'])
+        def api_jns_kelamin_list():
+            jns_kelamins = JenisKelamin.query.all()
+            return Response(json.dumps([i.serialize for i in jns_kelamins]), mimetype='application/json')
+        
+        @self.route('/api/jeniskelamin/id/<kd_jns_kelamin>', methods=['GET'])
+        def api_jns_kelamin_by_id(kd_jns_kelamin):
+            jns_kelamin = JenisKelamin.query.filter_by(kd_jns_kelamin=kd_jns_kelamin).first()
+            return Response(json.dumps(jns_kelamin.serialize), mimetype='application/json')
+        
+        @self.route('/api/jeniskelahiran/list/', methods=['GET'])
+        def api_jns_kelahiran_list():
+            jns_kelahirans = JenisKelahiran.query.all()
+            return Response(json.dumps([i.serialize for i in jns_kelahirans]), mimetype='application/json')
+        
+        @self.route('/api/jeniskelahiran/id/<kd_jns_kelahiran>', methods=['GET'])
+        def api_jns_kelahiran_by_id(kd_jns_kelahiran):
+            jns_kelahiran = JenisKelahiran.query.filter_by(kd_jns_kelahiran=kd_jns_kelahiran).first()
+            return Response(json.dumps(jns_kelahiran.serialize), mimetype='application/json')
+
+        @self.route('/api/levelotorisasi/list/', methods=['GET'])
+        def api_level_otorisasi_list():
+            level_otorisasis = LevelOtorisasi.query.all()
+            return Response(json.dumps([i.serialize for i in level_otorisasis]), mimetype='application/json')
+
+        @self.route('/api/levelotorisasi/id/<kd_level_otorisasi>/', methods=['GET'])
+        def api_level_otorisasi_by_id(kd_level_otorisasi):
+            level_otorisasi = LevelOtorisasi.query.filter_by(kd_level_otorisasi=kd_level_otorisasi).first()
+            return Response(json.dumps(level_otorisasi.serialize), mimetype='application/json')

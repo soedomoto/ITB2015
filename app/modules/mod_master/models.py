@@ -140,3 +140,92 @@ class StatusPerkawinan(db.Model):
             'nama_status_perkawinan'    : self.nama_status_perkawinan
         }
 
+class HubunganBayi(db.Model):
+    __tablename__ = 'bayi_pemohon'
+    
+    '''
+    kode, nama
+    '''
+    
+    kd_hubungan_bayi = db.Column(db.Integer, primary_key=True)
+    nama_hubungan_bayi = db.Column(db.String(100), nullable=False)
+    
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'kd_hubungan_bayi'      : self.kd_hubungan_bayi,
+            'nama_hubungan_bayi'    : self.nama_hubungan_bayi
+        }
+        
+class StatusVerifikasiAktaLahir(db.Model):
+    __tablename__ = 'verifikasi_akta_lahir'
+
+    '''
+    kode, nama
+    '''
+
+    kd_verifikasi_akta = db.Column(db.Integer, primary_key=True)
+    nama_verifikasi_akta = db.Column(db.String(100), nullable=False)
+    
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'kd_verifikasi_akta'    : self.kd_verifikasi_akta,
+            'nama_verifikasi_akta'  : self.nama_verifikasi_akta
+        }
+    
+class JenisKelamin(db.Model):
+    __tablename__ = 'jenis_kelamin'
+    
+    '''
+    kode, nama
+    '''
+    
+    kd_jns_kelamin = db.Column(db.Integer, primary_key=True)
+    nama_jns_kelamin = db.Column(db.String(100), nullable=False)
+    
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return{
+            'kd_jns_kelamin'    : self.kd_jns_kelamin,
+            'nama_jns_kelamin'  : self.nama_jns_kelamin
+        }
+
+class JenisKelahiran(db.Model):
+    __tablename__ = 'jenis_kelahiran'
+    
+    '''
+    kode, nama
+    '''
+    
+    kd_jns_kelahiran = db.Column(db.Integer, primary_key=True)
+    nama_jns_kelahiran = db.Column(db.String(100), nullable=False)
+    
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return{
+            'kd_jns_kelahiran'    : self.kd_jns_kelahiran,
+            'nama_jns_kelahiran'  : self.kd_jns_kelahiran
+        }
+
+class LevelOtorisasi(db.Model):
+	__tablename__ = 'level_otorisasi'
+	
+	'''
+	kode, nama
+	'''
+	
+	kd_level_otorisasi = db.Column(db.Integer, primary_key=True)
+	nama_level_otorisasi = db.Column(db.String(255), nullable=False)
+	
+	@property
+	def serialize(self):
+		"""Return object data in easily serializeable format"""
+		return{
+			'kd_level_otorisasi'	: self.kd_level_otorisasi,
+			'nama_level_otorisasi'	: self.nama_level_otorisasi
+		}

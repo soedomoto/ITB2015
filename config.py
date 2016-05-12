@@ -1,6 +1,6 @@
 # Listen address
-HOST = 'localhost'
-PORT = 8080
+HOST = 'wsgi.bandung-city.tk'
+PORT = 80
 
 BASE_URL = 'http://{}:{}'.format(HOST, PORT)
 
@@ -16,7 +16,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'app', 'templates')
 
 # Define the database - we are working with
 # SQLite for this example
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
+#SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
+SQLALCHEMY_DATABASE_URI = 'mysql://bandung-city:bandung-city@localhost/bandung-city'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 DATABASE_CONNECT_OPTIONS = {}
 

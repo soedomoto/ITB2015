@@ -24,7 +24,7 @@ class Population(Blueprint):
         
         @self.route('/api/id/<nik>', methods=['GET'])
         def api_pop_by_nik(nik):
-            population = Penduduk.query.filter_by(nik=nik).all()
+            population = Penduduk.query.filter_by(nik=nik).first()
             return Response(json.dumps(population.serialize), mimetype='application/json')
         
         @self.route('/api/list/kk/<kk>', methods=['GET'])

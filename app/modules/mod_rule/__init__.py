@@ -31,13 +31,14 @@ class Rule(Blueprint):
                     continue
                 
                 # Swap module and api path
-                paths = [x for x in url.split("/") if x]
-                if len(paths) > 0 and paths[1].lower() == 'api':
-                    tmp_path = paths[0]
-                    paths[0] = paths[1]
-                    paths[1] = tmp_path
+                paths = [x for x in rule.rule.split("/") if x]
+                if len(paths) > 1:
+                    if paths[1].lower() == 'api' or paths[1].lower() == 'admin':
+                        tmp_path = paths[0]
+                        paths[0] = paths[1]
+                        paths[1] = tmp_path
 
-                    url = '/' + '/'.join(paths) + '/'
+                        url = '/' + '/'.join(paths) + '/'
                 
                 new_rule = {'endpoint' : rule.endpoint, 'methods' : methods, 'url' : url}
                 if new_rule not in rules:

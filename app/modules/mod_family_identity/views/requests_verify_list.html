@@ -1,0 +1,130 @@
+{% if use_template: %}
+  {% extends 'frontpage.html' %}
+  {% block title %}Verifikasi KK{% endblock %}
+{% endif %}
+
+{% block head %}
+  {% if use_template: %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div id="main" class="container-fluid">
+    <div id="top" class="row">
+      <div class="col-md-3">
+        <h2>Verifikasi Permohonan Kartu Keluarga</h2>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group h2">
+          <input name="data[search]" class="form-control" id="search" type="text" placeholder="Cari Kepala Keluarga">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <a data-toggle="modal" data-target="#add-modal" data-remote="false" href="{{ url_for('family_identity.add') }}" class="btn btn-primary pull-right h2">Daftar</a>
+      </div>
+    </div> <!-- /#top -->
+
+    <hr />
+
+    <div id="list" class="row">
+      <div class="table-responsive col-md-12">
+        <table class="table table-striped" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th>No. Permohonan</th>
+              <th>Pemohon</th>
+              <th>Alamat</th>
+              <th class="actions">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for request in requests %}
+            {% if request.data.pemohon %}
+            <tr request-id="{{ request.id_permohonan }}">
+              <td>{{ request.id_permohonan }}</td>
+              <td>[{{ request.data.pemohon.nik }}] {{ request.data.pemohon.nama }}</td>
+              <td>{{ request.data.pemohon.alamat }}, RT.{{ request.data.pemohon.no_rt }}/{{ request.data.pemohon.no_rw }}, Kel. {{ request.data.pemohon.kelurahan.nama_kelurahan }}, Kec. {{ request.data.pemohon.kecamatan.nama_kecamatan }}</td>
+              <td class="actions">
+                <a class="btn btn-success btn-xs" data-toggle="modal" data-target="#view-request-modal" data-remote="false" href="{{ url_for('family_identity.request_detail', id=request.id_permohonan) }}">Lihat</a>
+                <a class="btn btn-warning btn-xs ajaxify verification" request-id="{{ request.id_permohonan }}" href="{{ url_for('family_identity.api_requests_set_verified', id=request.id_permohonan) }}">Verifikasi</a>
+              </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div> <!-- /#list -->
+
+    <div id="bottom" class="row">
+      <div class="col-md-12">
+        <ul class="pagination">
+          <li class="disabled"><a>&lt; Prev</a></li>
+          <li class="disabled"><a>1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li class="next"><a href="#" rel="next">Next &gt;</a></li>
+        </ul><!-- /.pagination -->
+      </div>
+    </div> <!-- /#bottom -->
+  </div>  <!-- /#main -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="view-request-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Hapus"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Detail Permohonan</h4>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block tail %}
+  {% if use_template: %}
+    {{ super() }}
+  {% endif %}
+
+  <script>
+    $("#view-request-modal")
+    .on("show.bs.modal", function(e) {
+      var modal = $(this).find(".modal-body").append(
+        $('<div>').css('text-align','center').append(
+          $('<i>').attr('class', 'fa fa-circle-o-notch fa-spin fa-3x fa-fw margin-bottom')
+        )
+      );
+    })
+    .on("shown.bs.modal", function(e) {
+      var modal = $(this);
+      var link = $(e.relatedTarget);
+      modal.find(".modal-body").load(link.attr("href") + "?no-template", function() {
+        modal.find(".modal-body .container").removeClass("container")
+      });
+    })
+    .on("hidden.bs.modal", function() {
+      $(this).find(".modal-body").empty()
+    })
+
+    $('a.verification').on('click', function(e) {
+      $.get($(this).attr('href'), function(data) {
+        if(data.verified) {
+          link = $('a.verification[request-id='+ data.id_permohonan +']')
+          link.after('<span class="label label-success">Terverifikasi</span>')
+          link.remove()
+        }
+      })
+      e.preventDefault()
+    })
+  </script>
+{% endblock %}
