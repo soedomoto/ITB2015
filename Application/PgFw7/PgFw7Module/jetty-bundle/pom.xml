@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>jetty-bundle</artifactId>
+  
+  <parent>
+  	<groupId>com.soedomoto</groupId>
+  	<artifactId>parent</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <!-- 
+  Execution : clean compile bundle:bundle exec:exec@dx package exec:exec@aapt install
+  -->
+  
+  <properties>
+    <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
+    <bundle.namespace>${project.groupId}.bundle.jetty</bundle.namespace>
+  </properties>
+  
+  <dependencies>
+	<dependency>
+	    <groupId>org.eclipse.jetty</groupId>
+	    <artifactId>jetty-server</artifactId>
+	    <version>8.1.19.v20160209</version>
+	    <scope>provided</scope>
+	    <optional>true</optional>
+	</dependency>
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+	    <artifactId>jetty-handler-service-bundle</artifactId>
+	    <version>${project.version}</version>
+		<scope>system</scope>
+		<systemPath>${basedir}/../jetty-handler-service/target/jetty-handler-service-bundle-0.0.1-SNAPSHOT.jar</systemPath>
+	</dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <excludeDependencies>META-INF/ECLIPSEF.RSA</excludeDependencies>
+          <instructions>
+            <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
+            <Bundle-Version>${project.version}</Bundle-Version>
+            <Bundle-Activator>${bundle.namespace}.Activator</Bundle-Activator>
+            <Embed-Dependency>
+              javax.servlet.*
+            </Embed-Dependency>
+            <Import-Package>
+              org.osgi.*, 
+              com.soedomoto.bundle.jetty.handler,
+            </Import-Package>
+            <Export-Package>
+				${bundle.namespace}.*; -split-package:=merge-first, 
+				org.eclipse.jetty.*; -split-package:=merge-first, 
+				javax.servlet.*; -split-package:=merge-first
+            </Export-Package>
+            <Embed-Dependency>*; scope=compile; type=!pom; inline=**/*.class|**/*.ico|**/*.dtd|**/*.xml|**/*.properties|**/*.map|**/*.default|**/*.providers</Embed-Dependency>
+            <Embed-Transitive>true</Embed-Transitive>
+            <_removeheaders>
+              Include-Resource,
+              Private-Package,
+              Embed-Dependency,
+              Embed-Transitive
+            </_removeheaders>
+            <_noee>true</_noee>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.5.0</version>
+        <executions>
+          <execution>
+          	<id>dx</id>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+	          <executable>dx</executable>
+	          <!-- optional -->
+	          <workingDirectory>${project.build.directory}</workingDirectory>
+	          <arguments>
+	            <argument>--dex</argument>
+	            <argument>--output</argument>
+	            <argument>classes.dex</argument>
+	            <argument>${project.artifactId}-${project.version}.jar</argument>
+	          </arguments>
+	        </configuration>
+          </execution>
+          <execution>
+          	<id>aapt</id>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+	          <executable>aapt</executable>
+	          <!-- optional -->
+	          <workingDirectory>${project.build.directory}</workingDirectory>
+	          <arguments>
+	            <argument>add</argument>
+	            <argument>${project.artifactId}-${project.version}-dex.jar</argument>
+	            <argument>classes.dex</argument>
+	          </arguments>
+	        </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <excludes>
+          	<exclude>**</exclude>
+          </excludes>
+          <archive>
+            <manifestFile>${project.build.directory}/classes/META-INF/MANIFEST.MF</manifestFile>
+          </archive>
+          <finalName>${project.artifactId}-${project.version}-dex</finalName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <repositories>
+  	<repository>
+	  <id>knopflerfish</id>
+	  <name>Knopflerfish Maven Repo</name>
+	  <layout>default</layout>
+	  <url>http://www.knopflerfish.org/maven2/</url>
+	  <snapshots>
+		<enabled>false</enabled>
+	  </snapshots>
+	</repository>
+  </repositories>
+</project>

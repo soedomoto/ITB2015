@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.soedomoto</groupId>
+  <artifactId>sp2010-jetty-bundle</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+    <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
+    <bundle.namespace>${project.groupId}.bundle.sp2010</bundle.namespace>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+	    <groupId>org.osgi</groupId>
+	    <artifactId>org.osgi.core</artifactId>
+	    <version>4.2.0</version>
+	    <scope>provided</scope>
+    </dependency>
+    <dependency>
+	    <groupId>org.osgi</groupId>
+	    <artifactId>org.osgi.compendium</artifactId>
+	    <version>4.2.0</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+	    <groupId>org.eclipse.jetty</groupId>
+	    <artifactId>jetty-servlet</artifactId>
+	    <version>8.1.19.v20160209</version>
+	    <scope>provided</scope>
+	    <optional>true</optional>
+	</dependency>
+	<dependency>
+		<groupId>com.soedomoto</groupId>
+		<artifactId>jetty-bundle</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <excludeDependencies>META-INF/ECLIPSEF.RSA</excludeDependencies>
+          <instructions>
+            <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
+            <Bundle-Version>${project.version}</Bundle-Version>
+            <Bundle-Activator>${bundle.namespace}.Activator</Bundle-Activator>
+            <Embed-Dependency>
+              org.osgi.*
+            </Embed-Dependency>
+            <Import-Package>
+              com.soedomoto.*,
+              org.osgi.*, 
+              javax.servlet.*
+            </Import-Package>
+            <Export-Package>
+				${bundle.namespace}.*; -split-package:=merge-first, 
+				org.eclipse.jetty.*; -split-package:=merge-first, 
+				javax.servlet.*; -split-package:=merge-first
+            </Export-Package>
+            <Embed-Dependency>*; scope=compile; type=!pom; inline=**/*.class|**/*.ico|**/*.dtd|**/*.xml|**/*.properties|**/*.map|**/*.default|**/*.providers</Embed-Dependency>
+            <Embed-Transitive>true</Embed-Transitive>
+            <_removeheaders>
+              Include-Resource,
+              Private-Package,
+              Embed-Dependency,
+              Embed-Transitive
+            </_removeheaders>
+            <_noee>true</_noee>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <repositories>
+  	<repository>
+	  <id>knopflerfish</id>
+	  <name>Knopflerfish Maven Repo</name>
+	  <layout>default</layout>
+	  <url>http://www.knopflerfish.org/maven2/</url>
+	  <snapshots>
+		<enabled>false</enabled>
+	  </snapshots>
+	</repository>
+  </repositories>
+</project>
