@@ -8,12 +8,25 @@ import com.soedomoto.pgfw7.ProxyApplication;
 import org.apache.cordova.LOG;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * Created by soedomoto on 5/20/16.
  */
 public class StorageUtil {
     private static String TAG = StorageUtil.class.getSimpleName();
+
+    public static void delete(File f) {
+        if (f.isDirectory()) {
+            for (File c : f.listFiles())
+                delete(c);
+        }
+        if (!f.delete())
+            LOG.e(TAG, "Failed to delete " + f.getAbsolutePath());
+        else
+            LOG.e(TAG, "Successfully delete " + f.getAbsolutePath());
+    }
 
     public static File getExternalFilesDir(String... paths) {
         String appFilesPath = ProxyApplication.getAppContext().getExternalFilesDir(null)

@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1469031434545
+Build-Jdk: 1.8.0_91
+Built-By: soedomoto
+Bundle-Activator: com.soedomoto.bundle.sp2010.Activator
+Bundle-Description: Provides SP2010 Bundle
+Bundle-ManifestVersion: 2
+Bundle-Name: Soedomoto :: SP2010 Bundle
+Bundle-SymbolicName: com.soedomoto.sp2010-bundle
+Bundle-Version: 0.1.0.SNAPSHOT
+Context-Path: /sp2010
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.soedomoto.bundle.sp2010;uses:="org.eclipse.jetty.ser
+ vlet,org.osgi.framework";version="0.1.0",com.soedomoto.bundle.sp2010.co
+ ntroller;uses:="javax.servlet,javax.servlet.http";version="0.1.0",org.a
+ pache.commons.io;version="2.2";uses:="org.apache.commons.io.filefilter"
+ ,org.apache.commons.io.comparator;version="2.2";uses:="org.apache.commo
+ ns.io",org.apache.commons.io.filefilter;version="2.2";uses:="org.apache
+ .commons.io",org.apache.commons.io.input;version="2.2";uses:="org.apach
+ e.commons.io",org.apache.commons.io.monitor;version="2.2";uses:="org.ap
+ ache.commons.io",org.apache.commons.io.output;version="2.2"
+Import-Package: com.soedomoto.bundle.jetty.service;version="[8.1,9)",com
+ .soedomoto.bundle.sp2010.controller,javax.servlet;version="[2.6,3)",jav
+ ax.servlet.http;version="[2.6,3)",org.apache.commons.io;version="[2.2,3
+ )",org.apache.commons.io.comparator;version="[2.2,3)",org.apache.common
+ s.io.filefilter;version="[2.2,3)",org.apache.commons.io.input;version="
+ [2.2,3)",org.apache.commons.io.output;version="[2.2,3)",org.eclipse.jet
+ ty.server;version="[8.1,9)",org.eclipse.jetty.servlet;version="[8.1,9)"
+ ,org.osgi.framework;version="[1.5,2)"
+Tool: Bnd-3.0.0.201509101326

@@ -136,6 +136,75 @@ $$(document).on('pageInit', '.page[data-page="server"]', function (e) {
     else if(page.query['action'] == 'status') { serverStatus() }
 })
 
+$$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
+    var list = $$(this).find('.list-bundle ul');
+    var apps = $$('.list-application ul');
+
+    function listBundles() {
+        var bundles = window.server.listBundles();
+        bundles = JSON.parse(bundles);
+
+        list.children().remove();
+        apps.children().remove();
+
+        bundles.forEach(function(bundle) {
+            $$('<li class="accordion-item">' +
+                '<a href="#" class="item-content item-link"><div class="item-inner">'+
+                    '<div class="item-title">'+ bundle['name'] + '</div>' +
+                    '<div class="item-after">'+ bundle['state'][1] + '</div>' +
+                '</div></a>' +
+                '<div class="accordion-item-content"><div class="content-block">' +
+                    '<div class="row">' +
+                      '<div class="col-33"><a href="#" bundle-id="'+ bundle['id'] +'" class="button start">Start</a></div>' +
+                      '<div class="col-33"><a href="#" bundle-id="'+ bundle['id'] +'" class="button stop">Stop</a></div>' +
+                      '<div class="col-33"><a href="#" bundle-id="'+ bundle['id'] +'" class="button uninstall">Uninstall</a></div>' +
+                    '</div>' +
+                '</div></div>'+
+            '</li>').appendTo(list);
+
+            if(bundle['state'][0] == 0x00000020 && bundle['context'] != null) {
+                $$('<li class="item-content"><div class="item-inner">'+
+                    '<a href="http://localhost:8080'+ bundle['context'] +'" class="close-panel">' +
+                        '<div class="item-title">'+ bundle['name'] + '</div>'+
+                    '</a>' +
+                  '</div></li>').appendTo(apps);
+            }
+        });
+    }
+
+    $$(document).on('click', '.page[data-page="bundle"] .start', function() {
+        var id = parseInt($$(this).attr('bundle-id'));
+
+        setTimeout(function () {
+            myApp.showPreloader('Bundle is starting...')
+            setTimeout(function () {
+                status = window.server.startBundle(id);
+                myApp.hidePreloader()
+
+                if(status == 'true') {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: 'Bundle is started'
+                    });
+
+                    listBundles();
+                } else {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: status
+                    });
+                }
+            }, 10);
+        }, 10);
+    });
+
+    listBundles();
+});
+
 
 
 

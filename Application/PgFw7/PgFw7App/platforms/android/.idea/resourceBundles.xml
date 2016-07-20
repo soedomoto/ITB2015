@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/res/javax.servlet.LocalStrings.properties" />
+    <file url="file://$PROJECT_DIR$/res/javax.servlet.LocalStrings_en_US.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/res/javax.servlet.LocalStrings.properties" />
+      <file value="file://$PROJECT_DIR$/res/javax.servlet.LocalStrings_en_US.properties" />
+      <base-name>javax.servlet.LocalStrings</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>
