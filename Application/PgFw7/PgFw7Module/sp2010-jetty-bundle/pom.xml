@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.soedomoto</groupId>
   <artifactId>sp2010-jetty-bundle</artifactId>
+  <groupId>com.soedomoto</groupId>
   <version>0.0.1-SNAPSHOT</version>
   
   <properties>
@@ -26,12 +26,17 @@
 	    <groupId>org.eclipse.jetty</groupId>
 	    <artifactId>jetty-servlet</artifactId>
 	    <version>8.1.19.v20160209</version>
-	    <scope>provided</scope>
 	    <optional>true</optional>
 	</dependency>
+	<!-- <dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.0.1</version>
+	    <optional>true</optional>
+	</dependency> -->
 	<dependency>
-		<groupId>com.soedomoto</groupId>
-		<artifactId>jetty-bundle</artifactId>
+		<groupId>com.soedomoto.pgfw7</groupId>
+		<artifactId>jetty-context-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
   </dependencies>
@@ -55,20 +60,17 @@
             <Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
             <Bundle-Activator>${bundle.namespace}.Activator</Bundle-Activator>
-            <Embed-Dependency>
-              org.osgi.*
-            </Embed-Dependency>
+            <Embed-Dependency></Embed-Dependency>
             <Import-Package>
-              com.soedomoto.*,
-              org.osgi.*, 
-              javax.servlet.*
+				org.osgi.*, 
+				org.eclipse.jetty.servlet.*,
+              	javax.servlet.*,
+              	com.soedomoto.*,
             </Import-Package>
             <Export-Package>
 				${bundle.namespace}.*; -split-package:=merge-first, 
-				org.eclipse.jetty.*; -split-package:=merge-first, 
-				javax.servlet.*; -split-package:=merge-first
             </Export-Package>
-            <Embed-Dependency>*; scope=compile; type=!pom; inline=**/*.class|**/*.ico|**/*.dtd|**/*.xml|**/*.properties|**/*.map|**/*.default|**/*.providers</Embed-Dependency>
+            <!-- <Embed-Dependency>*; scope=compile; type=!pom; inline=**/*.class|**/*.ico|**/*.dtd|**/*.xml|**/*.properties|**/*.map|**/*.default|**/*.providers</Embed-Dependency> -->
             <Embed-Transitive>true</Embed-Transitive>
             <_removeheaders>
               Include-Resource,
@@ -78,6 +80,58 @@
             </_removeheaders>
             <_noee>true</_noee>
           </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.5.0</version>
+        <executions>
+          <execution>
+          	<id>dx</id>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+	          <executable>/media/DATA/SOFTWARE/dex2jar-2.0/d2j-jar2dex.sh</executable>
+	          <!-- optional -->
+	          <workingDirectory>${project.build.directory}</workingDirectory>
+	          <arguments>
+	            <argument>--output</argument>
+	            <argument>classes.dex</argument>
+	            <argument>${project.artifactId}-${project.version}.jar</argument>
+	          </arguments>
+	        </configuration>
+          </execution>
+          <execution>
+          	<id>aapt</id>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+	          <executable>/media/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/aapt</executable>
+	          <!-- optional -->
+	          <workingDirectory>${project.build.directory}</workingDirectory>
+	          <arguments>
+	            <argument>add</argument>
+	            <argument>${project.artifactId}-${project.version}-dex.jar</argument>
+	            <argument>classes.dex</argument>
+	          </arguments>
+	        </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <excludes>
+          	<exclude>**</exclude>
+          </excludes>
+          <archive>
+            <manifestFile>${project.build.directory}/classes/META-INF/MANIFEST.MF</manifestFile>
+          </archive>
+          <finalName>${project.artifactId}-${project.version}-dex</finalName>
         </configuration>
       </plugin>
     </plugins>
@@ -91,6 +145,15 @@
 	  <url>http://www.knopflerfish.org/maven2/</url>
 	  <snapshots>
 		<enabled>false</enabled>
+	  </snapshots>
+	</repository>
+	<repository>
+	  <id>local</id>
+	  <name>Local Maven Repo</name>
+	  <layout>default</layout>
+	  <url>file:///media/DATA/SOFTWARE/MAVEN/repository/</url>
+	  <snapshots>
+		<enabled>true</enabled>
 	  </snapshots>
 	</repository>
   </repositories>

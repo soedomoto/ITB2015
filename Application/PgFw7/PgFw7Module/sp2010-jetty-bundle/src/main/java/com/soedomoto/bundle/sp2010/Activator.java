@@ -1,44 +1,31 @@
 package com.soedomoto.bundle.sp2010;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+import com.soedomoto.pgfw7.services.IJettyHandler;
 
 public class Activator implements BundleActivator {
-	private static BundleContext bundleContext;
-	private com.soedomoto.bundle.jetty.Activator jettyActivator;
-	private ServletContextHandler handler;
+
+	private ServletContextHandler servletContext;
 
 	public void start(BundleContext context) throws Exception {
-		Activator.bundleContext = context;
+		ServiceReference reference = context.getServiceReference(IJettyHandler.class.getName());
+		IJettyHandler jettyHandler = (IJettyHandler) context.getService(reference);
 		
-		ServletContextHandler servletContext = new ServletContextHandler(ServletContextHandler.SESSIONS);
-		servletContext.setContextPath("/");
-
-        class Hello extends HttpServlet {
-            @Override
-            protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
-                    ServletException, IOException {
-                response.setContentType("text/html");
-                response.setStatus(HttpServletResponse.SC_OK);
-                response.getWriter().println("<h1>Hellos SimpleServlet</h1>");
-            }
-        }
-        servletContext.addServlet(new ServletHolder(new Hello()), "/");
+		servletContext = new ServletContextHandler(ServletContextHandler.SESSIONS);
+		servletContext.setContextPath("/sp2010");
+		servletContext.addServlet(new ServletHolder(new IndexServlet()), "/");
+		jettyHandler.registerContextHandler(servletContext);
 		
-		jettyActivator.jettyHandlers().addHandler(servletContext);
+		System.out.println("Servlet Context " + servletContext.getContextPath() + " added");
 	}
 
 	public void stop(BundleContext context) throws Exception {
-		jettyActivator.jettyHandlers().removeHandler(handler);
+		System.out.println("Servlet Context " + servletContext.getContextPath() + "removed");
 	}
 
 }

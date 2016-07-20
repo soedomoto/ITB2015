@@ -1,20 +1,26 @@
-package com.soedomoto.bundle.jetty;
+package com.soedomoto.bundle.jetty.server;
 
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.ServiceReference;
-
-import com.soedomoto.bundle.jetty.handler.IJettyHandler;
 
 public class Activator implements BundleActivator {
 	private Server server;
 	
 	public void start(BundleContext context) throws Exception {
+		System.out.println("Registering IJettyHandler service...");
+		
+		IJettyHandler jettyHandler = new JettyHandler();
+		context.registerService(IJettyHandler.class.getName(), jettyHandler, null);
+		
 		System.out.println("Starting jetty...");
 		
-		ServiceReference reference = context.getServiceReference(IJettyHandler.class.getName());
-		IJettyHandler jettyHandler = (IJettyHandler) context.getService(reference);
+		ServletContextHandler servletContext = new ServletContextHandler(ServletContextHandler.SESSIONS);
+		servletContext.setContextPath("/");
+		servletContext.addServlet(new ServletHolder(new IndexServlet()), "/");
+		jettyHandler.addHandler(servletContext);
 		
 		server = new Server(8888);
 		server.setHandler(jettyHandler.getHandlers());

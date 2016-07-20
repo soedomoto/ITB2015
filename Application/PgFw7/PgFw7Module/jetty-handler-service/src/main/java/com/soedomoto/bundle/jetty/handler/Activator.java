@@ -6,8 +6,7 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator {
 
 	public void start(BundleContext context) throws Exception {
-		IJettyHandler handler = new JettyHandler();
-		context.registerService(IJettyHandler.class.getName(), handler, null);
+		context.registerService(IJettyHandler.class.getName(), new JettyHandler(), null);
 		System.out.println("IJettyHandler is registered");
 	}
 
