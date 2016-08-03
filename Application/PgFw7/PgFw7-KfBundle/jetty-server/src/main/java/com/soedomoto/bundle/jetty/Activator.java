@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.jetty;
 
-import com.soedomoto.bundle.jetty.impl.ContextHandlerServiceImpl;
 import com.soedomoto.bundle.jetty.service.ContextHandlerService;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -24,12 +23,6 @@ public class Activator implements BundleActivator {
 
         _server.start();
 
-        /*ServletContextHandler homeContextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        homeContextHandler.setContextPath("/");
-        homeContextHandler.addServlet(new ServletHolder(new HomeServlet()), "*//*");
-        _handlers.addHandler(homeContextHandler);*/
-
-        /*ContextHandlerServiceImpl contextHandlerObj = new ContextHandlerServiceImpl(_handlers);*/
         ContextHandlerService contextHandlerObj = new ContextHandlerService() {
             public void addHandler(Handler handler) throws Exception {
                 _handlers.addHandler(handler);

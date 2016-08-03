@@ -6,7 +6,7 @@
 
     <groupId>com.soedomoto</groupId>
     <artifactId>jetty-server</artifactId>
-    <version>8.1.19.v20160209</version>
+    <version>9.0.7.v20131107</version>
     <packaging>bundle</packaging>
 
     <!--
@@ -44,6 +44,12 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-proxy</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>

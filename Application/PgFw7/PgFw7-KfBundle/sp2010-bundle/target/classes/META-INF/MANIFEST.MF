@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1469031434545
+Bnd-LastModified: 1470193180740
 Build-Jdk: 1.8.0_91
 Built-By: soedomoto
 Bundle-Activator: com.soedomoto.bundle.sp2010.Activator
@@ -19,12 +19,12 @@ Export-Package: com.soedomoto.bundle.sp2010;uses:="org.eclipse.jetty.ser
  .commons.io",org.apache.commons.io.input;version="2.2";uses:="org.apach
  e.commons.io",org.apache.commons.io.monitor;version="2.2";uses:="org.ap
  ache.commons.io",org.apache.commons.io.output;version="2.2"
-Import-Package: com.soedomoto.bundle.jetty.service;version="[8.1,9)",com
- .soedomoto.bundle.sp2010.controller,javax.servlet;version="[2.6,3)",jav
- ax.servlet.http;version="[2.6,3)",org.apache.commons.io;version="[2.2,3
- )",org.apache.commons.io.comparator;version="[2.2,3)",org.apache.common
- s.io.filefilter;version="[2.2,3)",org.apache.commons.io.input;version="
- [2.2,3)",org.apache.commons.io.output;version="[2.2,3)",org.eclipse.jet
- ty.server;version="[8.1,9)",org.eclipse.jetty.servlet;version="[8.1,9)"
- ,org.osgi.framework;version="[1.5,2)"
+Import-Package: com.soedomoto.bundle.jetty.service;version="[9.0,10)",co
+ m.soedomoto.bundle.sp2010.controller,javax.servlet;version="[2.6,3)",ja
+ vax.servlet.http;version="[2.6,3)",org.apache.commons.io;version="[2.2,
+ 3)",org.apache.commons.io.comparator;version="[2.2,3)",org.apache.commo
+ ns.io.filefilter;version="[2.2,3)",org.apache.commons.io.input;version=
+ "[2.2,3)",org.apache.commons.io.output;version="[2.2,3)",org.eclipse.je
+ tty.server;version="[9.0,10)",org.eclipse.jetty.servlet;version="[9.0,1
+ 0)",org.osgi.framework;version="[1.5,2)"
 Tool: Bnd-3.0.0.201509101326

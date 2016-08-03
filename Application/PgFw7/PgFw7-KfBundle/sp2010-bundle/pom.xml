@@ -19,8 +19,7 @@
     <properties>
         <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
         <bundle.namespace>${project.groupId}.bundle.sp2010</bundle.namespace>
-        <jetty.version>8.1.19.v20160209</jetty.version>
-        <jersey.version>2.22.2</jersey.version>
+        <jetty.version>9.0.7.v20131107</jetty.version>
     </properties>
 
     <dependencies>
