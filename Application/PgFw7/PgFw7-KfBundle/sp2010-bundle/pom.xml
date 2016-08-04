@@ -37,7 +37,7 @@
         </dependency>
         <dependency>
             <groupId>com.soedomoto</groupId>
-            <artifactId>jetty-server</artifactId>
+            <artifactId>proxy-server</artifactId>
             <version>${jetty.version}</version>
             <scope>provided</scope>
         </dependency>

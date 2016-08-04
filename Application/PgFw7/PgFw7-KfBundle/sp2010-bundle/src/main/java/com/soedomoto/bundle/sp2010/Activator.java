@@ -1,6 +1,6 @@
 package com.soedomoto.bundle.sp2010;
 
-import com.soedomoto.bundle.jetty.service.ContextHandlerService;
+import com.soedomoto.bundle.proxy.service.ContextHandlerService;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -47,19 +47,20 @@ public class Activator implements BundleActivator {
     }
 
     private String _getResourceBase(BundleContext context) throws IOException {
-        String tmp = context.getBundle().getLocation().replace(".jar", "");
+        String loc = context.getBundle().getLocation().replace("file:", "");
+        String tmp = loc.replace(".jar", "");
         FileUtils.deleteDirectory(new File(tmp));
 
-        JarFile jar = new JarFile(context.getBundle().getLocation());
+        JarFile jar = new JarFile(loc);
         Enumeration enumEntries = jar.entries();
         while (enumEntries.hasMoreElements()) {
-            JarEntry file = (JarEntry) enumEntries.nextElement();
-            if(file.getName().startsWith("webroot")) {
-                File f = new File(tmp + File.separator + file.getName());
-                if(! file.isDirectory()) {
+            JarEntry entry = (JarEntry) enumEntries.nextElement();
+            if(entry.getName().startsWith("webroot")) {
+                File f = new File(tmp + File.separator + entry.getName());
+                if(! entry.isDirectory()) {
                     f.getParentFile().mkdirs();
 
-                    InputStream is = jar.getInputStream(file); // get the input stream
+                    InputStream is = jar.getInputStream(entry); // get the input stream
                     FileOutputStream fos = new FileOutputStream(f);
                     while (is.available() > 0) {  // write contents of 'is' to 'fos'
                         fos.write(is.read());
