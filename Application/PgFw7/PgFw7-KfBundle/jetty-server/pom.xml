@@ -93,7 +93,7 @@
                         <Export-Package>
                             javax.servlet.*;-split-package:=merge-first,
                             org.eclipse.jetty.*;-split-package:=merge-first,
-                            com.soedomoto.bundle.jetty.service.*;-split-package:=merge-first,
+                            com.soedomoto.bundle.proxy.service.*;-split-package:=merge-first,
                         </Export-Package>
                         <Provide-Capability>
 

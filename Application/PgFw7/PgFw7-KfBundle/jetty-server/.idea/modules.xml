@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jetty-server.iml" filepath="$PROJECT_DIR$/jetty-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../sp2010-bundle/sp2010-bundle.iml" filepath="$PROJECT_DIR$/../sp2010-bundle/sp2010-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../proxy-server/proxy-server.iml" filepath="$PROJECT_DIR$/../proxy-server/proxy-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../se2016-bundle/se2016-bundle.iml" filepath="$PROJECT_DIR$/../se2016-bundle/se2016-bundle.iml" />
     </modules>
   </component>
 </project>

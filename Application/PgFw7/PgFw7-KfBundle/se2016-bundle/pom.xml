@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.soedomoto</groupId>
+    <artifactId>se2016-bundle</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <!--
+    Execution : clean compile bundle:bundle exec:exec@dx exec:exec@cp exec:exec@aapt install:install
+    -->
+
+    <name>SE2016 Bundle</name>
+    <description>Provides SE2016 Bundle</description>
+
+    <properties>
+        <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
+        <bundle.namespace>${project.groupId}.bundle.se2016</bundle.namespace>
+        <jetty.version>9.0.7.v20131107</jetty.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>4.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>4.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.soedomoto</groupId>
+            <artifactId>proxy-server</artifactId>
+            <version>${jetty.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+                <configuration>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
+                </configuration>
+                <goals>
+                    <goal>install-file</goal>
+                </goals>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.0.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Context-Path>
+                            /se2016
+                        </Context-Path>
+                        <Bundle-Activator>
+                            ${bundle.namespace}.Activator
+                        </Bundle-Activator>
+                        <Import-Package>
+                            *
+                        </Import-Package>
+                        <Export-Package>
+                            com.soedomoto.bundle.se2016.*;-split-package:=merge-first,
+                            org.apache.commons.*;-split-package:=merge-first,
+                        </Export-Package>
+                        <Provide-Capability>
+
+                        </Provide-Capability>
+                        <Embed-Dependency>
+                            <!--*; scope=compile|runtime; type=!pom; inline=**/*.class|**/*.ico|**/*.dtd|**/*.xml|**/*.properties|**/*.map|**/*.default|**/*.providers,-->
+                        </Embed-Dependency>
+                        <_removeheaders>
+                            Include-Resource,
+                            Private-Package,
+                            Embed-Dependency,
+                            Embed-Transitive
+                        </_removeheaders>
+                        <_noee>true</_noee>
+                    </instructions>
+                    <!-- Skip baselining -->
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <executions>
+                    <execution>
+                        <id>cp</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>cp</executable>
+                            <!-- optional -->
+                            <workingDirectory>${project.build.directory}</workingDirectory>
+                            <arguments>
+                                <argument>${project.artifactId}-${project.version}.jar</argument>
+                                <argument>${project.artifactId}-${project.version}-dex.jar</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>dx</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>/media/DATA/SOFTWARE/dex2jar-2.0/d2j-jar2dex.sh</executable>
+                            <!-- optional -->
+                            <workingDirectory>${project.build.directory}</workingDirectory>
+                            <arguments>
+                                <argument>--force</argument>
+                                <argument>--output</argument>
+                                <argument>classes.dex</argument>
+                                <argument>${project.artifactId}-${project.version}.jar</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>aapt</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>/media/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/aapt</executable>
+                            <!-- optional -->
+                            <workingDirectory>${project.build.directory}</workingDirectory>
+                            <arguments>
+                                <argument>add</argument>
+                                <argument>${project.artifactId}-${project.version}-dex.jar</argument>
+                                <argument>classes.dex</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>internal</id>
+            <name>Local Maven Repo</name>
+            <layout>default</layout>
+            <url>file:///media/DATA/SOFTWARE/MAVEN/repository/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>

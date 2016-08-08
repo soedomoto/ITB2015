@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1470633773614
+Build-Jdk: 1.8.0_91
+Built-By: soedomoto
+Bundle-Activator: com.soedomoto.bundle.se2016.Activator
+Bundle-Description: Provides SE2016 Bundle
+Bundle-ManifestVersion: 2
+Bundle-Name: SE2016 Bundle
+Bundle-SymbolicName: com.soedomoto.se2016-bundle
+Bundle-Version: 0.1.0.SNAPSHOT
+Context-Path: /se2016
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.soedomoto.bundle.se2016;version="0.1.0";uses:="com.j
+ 256.ormlite.support,org.osgi.framework",com.soedomoto.bundle.se2016.con
+ troller;version="0.1.0";uses:="com.j256.ormlite.dao,com.soedomoto.bundl
+ e.se2016.model,javax.servlet,javax.servlet.http",com.soedomoto.bundle.s
+ e2016.model;version="0.1.0";uses:="com.j256.ormlite.table",org.apache.c
+ ommons.io;version="2.2";uses:="org.apache.commons.io.filefilter",org.ap
+ ache.commons.io.comparator;version="2.2";uses:="org.apache.commons.io",
+ org.apache.commons.io.filefilter;version="2.2";uses:="org.apache.common
+ s.io",org.apache.commons.io.input;version="2.2";uses:="org.apache.commo
+ ns.io",org.apache.commons.io.monitor;version="2.2";uses:="org.apache.co
+ mmons.io",org.apache.commons.io.output;version="2.2"
+Import-Package: com.google.gson;version="[2.7,3)",com.j256.ormlite.dao;v
+ ersion="[9.0,10)",com.j256.ormlite.field;version="[9.0,10)",com.j256.or
+ mlite.jdbc;version="[9.0,10)",com.j256.ormlite.support;version="[9.0,10
+ )",com.j256.ormlite.table;version="[9.0,10)",com.soedomoto.bundle.proxy
+ .service;version="[9.0,10)",com.soedomoto.bundle.se2016;version="[0.1,1
+ )",com.soedomoto.bundle.se2016.controller;version="[0.1,1)",com.soedomo
+ to.bundle.se2016.model;version="[0.1,1)",javax.servlet;version="[2.6,3)
+ ",javax.servlet.http;version="[2.6,3)",org.apache.commons.io;version="[
+ 2.2,3)",org.apache.commons.io.comparator;version="[2.2,3)",org.apache.c
+ ommons.io.filefilter;version="[2.2,3)",org.apache.commons.io.input;vers
+ ion="[2.2,3)",org.apache.commons.io.output;version="[2.2,3)",org.eclips
+ e.jetty.server;version="[9.0,10)",org.eclipse.jetty.servlet;version="[9
+ .0,10)",org.osgi.framework;version="[1.5,2)"
+Tool: Bnd-3.0.0.201509101326

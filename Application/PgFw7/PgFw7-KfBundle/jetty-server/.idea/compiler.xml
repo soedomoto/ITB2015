@@ -23,11 +23,15 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="jetty-server" />
+        <module name="proxy-server" />
+        <module name="se2016-bundle" />
         <module name="sp2010-bundle" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jetty-server" target="1.5" />
+      <module name="proxy-server" target="1.5" />
+      <module name="se2016-bundle" target="1.5" />
       <module name="sp2010-bundle" target="1.5" />
     </bytecodeTargetLevel>
   </component>
