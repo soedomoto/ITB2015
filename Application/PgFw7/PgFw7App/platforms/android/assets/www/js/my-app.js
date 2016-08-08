@@ -2,7 +2,7 @@ var appTitle = 'Mobile Survey'
 
 // Initialize your app
 var myApp = new Framework7({
-    precompileTemplates: true,
+    precompileTemplates: true
 });
 
 var mainView = myApp.addView('.view-main')
@@ -38,103 +38,129 @@ function onDeviceReady() {
     }, false );
 }
 
-$$(document).on('pageInit', '.page[data-page="server"]', function (e) {
-    var page = e.detail.page;
+//$$(document).on('pageInit', '.page[data-page="server"]', function (e) {
+//    var page = e.detail.page;
+//
+//    function startServer() {
+//        setTimeout(function () {
+//            myApp.showPreloader('Server is starting...')
+//            setTimeout(function () {
+//                status = window.server.start();
+//                myApp.hidePreloader()
+//                if(status == 'true') {
+//                    myApp.addNotification({
+//                        hold: 3000,
+//                        closeOnClick: true,
+//                        title: 'Proxy Server',
+//                        message: 'Server is started'
+//                    });
+//
+//                    $$('.start').addClass('disabled');
+//                    $$('.stop').removeClass('disabled');
+//                } else {
+//                    myApp.addNotification({
+//                        hold: 3000,
+//                        closeOnClick: true,
+//                        title: 'Proxy Server',
+//                        message: status
+//                    });
+//                }
+//            }, 10);
+//        }, 10);
+//    }
+//
+//    function stopServer() {
+//        setTimeout(function () {
+//            myApp.showPreloader('Server is stopping...')
+//            setTimeout(function () {
+//                status = window.server.stop();
+//                myApp.hidePreloader()
+//
+//                if(status == 'true') {
+//                    myApp.addNotification({
+//                        hold: 3000,
+//                        closeOnClick: true,
+//                        title: 'Proxy Server',
+//                        message: 'Server is stopped'
+//                    });
+//
+//                    $$('.stop').addClass('disabled');
+//                    $$('.start').removeClass('disabled');
+//                } else {
+//                    myApp.addNotification({
+//                        hold: 3000,
+//                        closeOnClick: true,
+//                        title: 'Proxy Server',
+//                        message: status
+//                    });
+//                }
+//            }, 10);
+//        }, 10);
+//    }
+//
+//    function serverStatus() {
+//        isRunning = window.server.status();
+//        if(isRunning) {
+//            myApp.alert('Server is running', 'Proxy Server');
+//        } else {
+//            myApp.alert('Server is stopped', 'Proxy Server');
+//        }
+//    }
+//
+//    if(!window.server.status()) {
+//        $$('.stop').addClass('disabled');
+//        $$('.start').removeClass('disabled');
+//    } else {
+//        $$('.start').addClass('disabled');
+//        $$('.stop').removeClass('disabled');
+//    }
+//
+//    $$('.start').on('click', function() { startServer() });
+//    $$('.stop').on('click', function() { stopServer() });
+//    $$('.status').on('click', function() { serverStatus() });
+//
+//    if(page.query['action'] == 'start') {
+//        if(!window.server.status()) {
+//            startServer()
+//        } else {
+//            myApp.alert('Server is still running', 'Proxy Server');
+//        }
+//    }
+//    else if(page.query['action'] == 'stop') {
+//        if(window.server.status()) {
+//            stopServer()
+//        } else {
+//            myApp.alert('Server has been stopped', 'Proxy Server');
+//        }
+//    }
+//    else if(page.query['action'] == 'status') { serverStatus() }
+//})
 
-    function startServer() {
-        setTimeout(function () {
-            myApp.showPreloader('Server is starting...')
-            setTimeout(function () {
-                status = window.server.start();
-                myApp.hidePreloader()
-                if(status == 'true') {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Proxy Server',
-                        message: 'Server is started'
-                    });
+var proxyURL = 'http://localhost:8080';
+$$(document).on('click', '.list-application a', function (e) {
+    href = proxyURL + $$(this).attr('href');
 
-                    $$('.start').addClass('disabled');
-                    $$('.stop').removeClass('disabled');
-                } else {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Proxy Server',
-                        message: status
-                    });
-                }
-            }, 10);
-        }, 10);
-    }
+    $.ajax({
+        url: href,
+        context: document.body,
+        success: function(page) {
+            div = $('<div/>').html(page);
+            mainView.router.loadContent(div.find('.view').html());
 
-    function stopServer() {
-        setTimeout(function () {
-            myApp.showPreloader('Server is stopping...')
-            setTimeout(function () {
-                status = window.server.stop();
-                myApp.hidePreloader()
-
-                if(status == 'true') {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Proxy Server',
-                        message: 'Server is stopped'
-                    });
-
-                    $$('.stop').addClass('disabled');
-                    $$('.start').removeClass('disabled');
-                } else {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Proxy Server',
-                        message: status
-                    });
-                }
-            }, 10);
-        }, 10);
-    }
-
-    function serverStatus() {
-        isRunning = window.server.status();
-        if(isRunning) {
-            myApp.alert('Server is running', 'Proxy Server');
-        } else {
-            myApp.alert('Server is stopped', 'Proxy Server');
+            div.find('script[ajax-load="true"]').each(function(i) {
+                src = $(this).attr('src');
+                src = href + '/' + src;
+                $.getScript(src).done(function( script, textStatus ) {
+                    console.log( textStatus );
+                }).fail(function( jqxhr, settings, exception ) {
+                    console.log( "Triggered ajaxError handler." );
+                });
+            });
         }
-    }
+    });
 
-    if(!window.server.status()) {
-        $$('.stop').addClass('disabled');
-        $$('.start').removeClass('disabled');
-    } else {
-        $$('.start').addClass('disabled');
-        $$('.stop').removeClass('disabled');
-    }
-
-    $$('.start').on('click', function() { startServer() });
-    $$('.stop').on('click', function() { stopServer() });
-    $$('.status').on('click', function() { serverStatus() });
-
-    if(page.query['action'] == 'start') {
-        if(!window.server.status()) {
-            startServer()
-        } else {
-            myApp.alert('Server is still running', 'Proxy Server');
-        }
-    }
-    else if(page.query['action'] == 'stop') {
-        if(window.server.status()) {
-            stopServer()
-        } else {
-            myApp.alert('Server has been stopped', 'Proxy Server');
-        }
-    }
-    else if(page.query['action'] == 'status') { serverStatus() }
-})
+    e.preventDefault();
+});
 
 $$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
     var list = $$(this).find('.list-bundle ul');
@@ -164,10 +190,10 @@ $$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
 
             if(bundle['state'][0] == 0x00000020 && bundle['context'] != null) {
                 $$('<li class="item-content"><div class="item-inner">'+
-                    '<a href="http://localhost:8080'+ bundle['context'] +'" class="close-panel">' +
+                    '<a href="'+ bundle['context'] +'" class="item-link close-panel">' +
                         '<div class="item-title">'+ bundle['name'] + '</div>'+
                     '</a>' +
-                  '</div></li>').appendTo(apps);
+                '</div></li>').appendTo(apps);
             }
         });
     }
@@ -187,6 +213,66 @@ $$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
                         closeOnClick: true,
                         title: 'Bundle',
                         message: 'Bundle is started'
+                    });
+
+                    listBundles();
+                } else {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: status
+                    });
+                }
+            }, 10);
+        }, 10);
+    });
+
+    $$(document).on('click', '.page[data-page="bundle"] .stop', function() {
+        var id = parseInt($$(this).attr('bundle-id'));
+
+        setTimeout(function () {
+            myApp.showPreloader('Bundle is stopping...')
+            setTimeout(function () {
+                status = window.server.stopBundle(id);
+                myApp.hidePreloader()
+
+                if(status == 'true') {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: 'Bundle is stopped'
+                    });
+
+                    listBundles();
+                } else {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: status
+                    });
+                }
+            }, 10);
+        }, 10);
+    });
+
+    $$(document).on('click', '.page[data-page="bundle"] .uninstall', function() {
+        var id = parseInt($$(this).attr('bundle-id'));
+
+        setTimeout(function () {
+            myApp.showPreloader('Bundle is uninstalling...')
+            setTimeout(function () {
+                status = window.server.uninstallBundle(id);
+                myApp.hidePreloader()
+
+                if(status == 'true') {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: 'Bundle is uninstalled'
                     });
 
                     listBundles();

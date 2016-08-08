@@ -75,95 +75,32 @@ public class IServer {
             LOG.e(TAG, String.format("Start bundle %s failed", bundle.getLocation()), e);
             return e.getLocalizedMessage();
         }
+    }
 
-        /*BundleRevision br = (BundleRevision) bundle.adapt(BundleRevision.class);
-        boolean frag = (br.getTypes() & BundleRevision.TYPE_FRAGMENT) != 0;
-        if (!frag) {
-            try {
-                bundle.start(Bundle.START_ACTIVATION_POLICY);
-                LOG.e(TAG, String.format("Start bundle %s successfully", bundle.getLocation()));
-                return String.valueOf(true);
-            } catch (BundleException e) {
-                LOG.e(TAG, String.format("Start bundle %s failed", bundle.getLocation()), e);
-                return e.getLocalizedMessage();
-            }
+    @JavascriptInterface
+    public String stopBundle(int id) {
+        Bundle bundle = osgi.getBundle(id);
+        try {
+            bundle.stop();
+            LOG.e(TAG, String.format("Stop bundle %s successfully", bundle.getLocation()));
+            return String.valueOf(true);
+        } catch (BundleException e) {
+            LOG.e(TAG, String.format("Stop bundle %s failed", bundle.getLocation()), e);
+            return e.getLocalizedMessage();
         }
+    }
 
-        return String.valueOf(false);*/
+    @JavascriptInterface
+    public String uninstallBundle(int id) {
+        Bundle bundle = osgi.getBundle(id);
+        try {
+            bundle.uninstall();
+            LOG.e(TAG, String.format("Uninstall bundle %s successfully", bundle.getLocation()));
+            return String.valueOf(true);
+        } catch (BundleException e) {
+            LOG.e(TAG, String.format("Uninstall bundle %s failed", bundle.getLocation()), e);
+            return e.getLocalizedMessage();
+        }
     }
 
 }
-
-
-//package com.soedomoto.pgfw7.server;
-//
-//import android.webkit.JavascriptInterface;
-//
-//import org.apache.cordova.LOG;
-//import org.osgi.framework.BundleContext;
-//import org.osgi.framework.BundleException;
-//
-///**
-// * Created by Soedomoto on 6/11/2016.
-// */
-//public class IServer extends IKnopflerfish {
-//    private static String TAG = IKnopflerfish.class.getSimpleName();
-//    private IJetty jetty;
-//
-//    public IServer() {
-//        super();
-//
-//        jetty = new IJetty();
-////        try {
-////            jetty.startHttpServer(8080);
-////        } catch (Exception e) {
-////            LOG.e(TAG, e.getLocalizedMessage(), e);
-////        }
-//    }
-//
-//    @Override
-//    public void registerServices(BundleContext bc) {
-//        super.registerServices(bc);
-//
-////        try {
-////            InputStream is = ProxyApplication.getAppContext().getAssets()
-////                                .open("jetty-bundle-0.0.1-SNAPSHOT-dex.jar");
-////            Bundle jettyBundle = bc.installBundle("jetty-bundle-0.0.1-SNAPSHOT-dex", is);
-////            jettyBundle.start();
-////        } catch (IOException e) {
-////            LOG.e(TAG, e.getLocalizedMessage(), e);
-////        } catch (BundleException e) {
-////            LOG.e(TAG, e.getLocalizedMessage(), e);
-////        }
-////
-////        IJettyHandler jettyHandler = new JettyHandler(jetty);
-////        bc.registerService(IJettyHandler.class.getName(), jettyHandler, null);
-//    }
-//
-//    @JavascriptInterface
-//    public String start() {
-//        try {
-//            this.startFramework();
-//            this.scanBundles();
-//            return String.valueOf(true);
-//        } catch (BundleException e) {
-//            return e.getLocalizedMessage();
-//        }
-//    }
-//
-//    @JavascriptInterface
-//    public String stop() {
-//        try {
-//            this.stopFramework();
-//            return String.valueOf(true);
-//        } catch (Throwable e) {
-//            return e.getLocalizedMessage();
-//        }
-//    }
-//
-//    @JavascriptInterface
-//    public boolean status() {
-//        return this.isRunning();
-//    }
-//
-//}
