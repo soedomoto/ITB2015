@@ -259,6 +259,8 @@ dependencies {
     releaseCompile project(path: 'CordovaLib', configuration: 'release')
     // SUB-PROJECT DEPENDENCIES END
     compile 'org.knopflerfish:framework:7.2.0'
+//    compile 'org.osgi:org.osgi.util.tracker:1.5.1'
+//    compile 'org.osgi:org.osgi.compendium:4.2.0'
 
 //    compile 'org.knopflerfish:framework:7.2.0'
 //    compile 'org.osgi:org.osgi.service.prefs:1.1.1'

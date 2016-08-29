@@ -8,29 +8,42 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleException;
+import org.osgi.framework.launch.Framework;
 
 public class IServer {
     private static String TAG = IServer.class.getSimpleName();
 
-    private final IOsgi osgi;
+    private final COsgi osgi;
 
     public IServer() {
-        this.osgi = new IOsgi();
+        this.osgi = new COsgi();
     }
 
     @JavascriptInterface
-    public String start() {
-        return String.valueOf(true);
+    public String startFramework() {
+        Framework framework = osgi.getFramework();
+        try {
+            framework.init();
+            framework.start();
+            LOG.e(TAG, "Start framework successfully");
+            return String.valueOf(true);
+        } catch (BundleException e) {
+            LOG.e(TAG, "Start framework failed", e);
+            return e.getCause().getMessage();
+        }
     }
 
     @JavascriptInterface
-    public String stop() {
-        return String.valueOf(true);
-    }
-
-    @JavascriptInterface
-    public boolean status() {
-        return false;
+    public String stopFramework() {
+        Framework framework = osgi.getFramework();
+        try {
+            framework.stop();
+            LOG.e(TAG, "Stop framework successfully");
+            return String.valueOf(true);
+        } catch (BundleException e) {
+            LOG.e(TAG, "Stop framework failed", e);
+            return e.getCause().getMessage();
+        }
     }
 
     @JavascriptInterface
@@ -73,7 +86,7 @@ public class IServer {
             return String.valueOf(true);
         } catch (BundleException e) {
             LOG.e(TAG, String.format("Start bundle %s failed", bundle.getLocation()), e);
-            return e.getLocalizedMessage();
+            return e.getCause().getMessage();
         }
     }
 
@@ -86,7 +99,20 @@ public class IServer {
             return String.valueOf(true);
         } catch (BundleException e) {
             LOG.e(TAG, String.format("Stop bundle %s failed", bundle.getLocation()), e);
-            return e.getLocalizedMessage();
+            return e.getCause().getMessage();
+        }
+    }
+
+    @JavascriptInterface
+    public String updateBundle(int id) {
+        Bundle bundle = osgi.getBundle(id);
+        try {
+            bundle.update();
+            LOG.e(TAG, String.format("Update bundle %s successfully", bundle.getLocation()));
+            return String.valueOf(true);
+        } catch (BundleException e) {
+            LOG.e(TAG, String.format("Update bundle %s failed", bundle.getLocation()), e);
+            return e.getCause().getMessage();
         }
     }
 
@@ -99,7 +125,7 @@ public class IServer {
             return String.valueOf(true);
         } catch (BundleException e) {
             LOG.e(TAG, String.format("Uninstall bundle %s failed", bundle.getLocation()), e);
-            return e.getLocalizedMessage();
+            return e.getCause().getMessage();
         }
     }
 

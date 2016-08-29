@@ -15,6 +15,32 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     $$('.app-title').html(appTitle);
 
+    //  Autostart OSGi Framework
+    setTimeout(function () {
+        myApp.showPreloader('OSGi Framework is starting...')
+        setTimeout(function () {
+            status = window.server.startFramework();
+            myApp.hidePreloader()
+
+            if(status == 'true') {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'OSGi Framework',
+                    message: 'OSGi Framework is started'
+                });
+            } else {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'OSGi Framework',
+                    message: status
+                });
+            }
+        }, 10);
+    }, 1000);
+
+    //  Handle back button
     document.addEventListener("backbutton", function (e) {
         e.preventDefault();
 
@@ -26,117 +52,33 @@ function onDeviceReady() {
             } else {
                 myApp.confirm('Are you sure want to exit from App?', appTitle,
                     function() {
-                        window.server.stop();
-                        navigator.app.exitApp();
+                        setTimeout(function () {
+                            myApp.showPreloader('OSGi Framework is stopping...')
+                            setTimeout(function () {
+                                status = window.server.stopFramework();
+                                myApp.hidePreloader()
+
+                                if(status == 'true') {
+                                    navigator.app.exitApp();
+                                } else {
+                                    myApp.addNotification({
+                                        hold: 3000,
+                                        closeOnClick: true,
+                                        title: 'Bundle',
+                                        message: status
+                                    });
+                                }
+                            }, 10);
+                        }, 10);
                     },
-                    function() {
-                        return;
-                    }
+                    function() { return; }
                 );
             }
         }
     }, false );
 }
 
-//$$(document).on('pageInit', '.page[data-page="server"]', function (e) {
-//    var page = e.detail.page;
-//
-//    function startServer() {
-//        setTimeout(function () {
-//            myApp.showPreloader('Server is starting...')
-//            setTimeout(function () {
-//                status = window.server.start();
-//                myApp.hidePreloader()
-//                if(status == 'true') {
-//                    myApp.addNotification({
-//                        hold: 3000,
-//                        closeOnClick: true,
-//                        title: 'Proxy Server',
-//                        message: 'Server is started'
-//                    });
-//
-//                    $$('.start').addClass('disabled');
-//                    $$('.stop').removeClass('disabled');
-//                } else {
-//                    myApp.addNotification({
-//                        hold: 3000,
-//                        closeOnClick: true,
-//                        title: 'Proxy Server',
-//                        message: status
-//                    });
-//                }
-//            }, 10);
-//        }, 10);
-//    }
-//
-//    function stopServer() {
-//        setTimeout(function () {
-//            myApp.showPreloader('Server is stopping...')
-//            setTimeout(function () {
-//                status = window.server.stop();
-//                myApp.hidePreloader()
-//
-//                if(status == 'true') {
-//                    myApp.addNotification({
-//                        hold: 3000,
-//                        closeOnClick: true,
-//                        title: 'Proxy Server',
-//                        message: 'Server is stopped'
-//                    });
-//
-//                    $$('.stop').addClass('disabled');
-//                    $$('.start').removeClass('disabled');
-//                } else {
-//                    myApp.addNotification({
-//                        hold: 3000,
-//                        closeOnClick: true,
-//                        title: 'Proxy Server',
-//                        message: status
-//                    });
-//                }
-//            }, 10);
-//        }, 10);
-//    }
-//
-//    function serverStatus() {
-//        isRunning = window.server.status();
-//        if(isRunning) {
-//            myApp.alert('Server is running', 'Proxy Server');
-//        } else {
-//            myApp.alert('Server is stopped', 'Proxy Server');
-//        }
-//    }
-//
-//    if(!window.server.status()) {
-//        $$('.stop').addClass('disabled');
-//        $$('.start').removeClass('disabled');
-//    } else {
-//        $$('.start').addClass('disabled');
-//        $$('.stop').removeClass('disabled');
-//    }
-//
-//    $$('.start').on('click', function() { startServer() });
-//    $$('.stop').on('click', function() { stopServer() });
-//    $$('.status').on('click', function() { serverStatus() });
-//
-//    if(page.query['action'] == 'start') {
-//        if(!window.server.status()) {
-//            startServer()
-//        } else {
-//            myApp.alert('Server is still running', 'Proxy Server');
-//        }
-//    }
-//    else if(page.query['action'] == 'stop') {
-//        if(window.server.status()) {
-//            stopServer()
-//        } else {
-//            myApp.alert('Server has been stopped', 'Proxy Server');
-//        }
-//    }
-//    else if(page.query['action'] == 'status') { serverStatus() }
-//})
-
-var proxyURL = 'http://localhost:8080';
+var proxyURL = 'http://localhost:5555';
 $$(document).on('click', '.list-application a', function (e) {
     href = proxyURL + $$(this).attr('href');
 
@@ -181,9 +123,12 @@ $$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
                 '</div></a>' +
                 '<div class="accordion-item-content"><div class="content-block">' +
                     '<div class="row">' +
-                      '<div class="col-33"><a href="#" bundle-id="'+ bundle['id'] +'" class="button start">Start</a></div>' +
-                      '<div class="col-33"><a href="#" bundle-id="'+ bundle['id'] +'" class="button stop">Stop</a></div>' +
-                      '<div class="col-33"><a href="#" bundle-id="'+ bundle['id'] +'" class="button uninstall">Uninstall</a></div>' +
+                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button start">Start</a></div>' +
+                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button stop">Stop</a></div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button update">Update</a></div>' +
+                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button uninstall">Uninstall</a></div>' +
                     '</div>' +
                 '</div></div>'+
             '</li>').appendTo(list);
@@ -258,6 +203,36 @@ $$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
         }, 10);
     });
 
+    $$(document).on('click', '.page[data-page="bundle"] .update', function() {
+        var id = parseInt($$(this).attr('bundle-id'));
+
+        setTimeout(function () {
+            myApp.showPreloader('Bundle is updating...')
+            setTimeout(function () {
+                status = window.server.updateBundle(id);
+                myApp.hidePreloader()
+
+                if(status == 'true') {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: 'Bundle is updated'
+                    });
+
+                    listBundles();
+                } else {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: status
+                    });
+                }
+            }, 10);
+        }, 10);
+    });
+
     $$(document).on('click', '.page[data-page="bundle"] .uninstall', function() {
         var id = parseInt($$(this).attr('bundle-id'));
 
@@ -272,7 +247,7 @@ $$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
                         hold: 3000,
                         closeOnClick: true,
                         title: 'Bundle',
-                        message: 'Bundle is uninstalled'
+                        message: 'Bundle is uninstaled'
                     });
 
                     listBundles();
