@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
  * Created by soedomoto on 15/07/16.
  */
 public class Activator implements BundleActivator {
-    private int _port = 8080;
+    private int _port = 5555;
     private ProxyServer _server;
 
     public void start(BundleContext bundleContext) throws Exception {

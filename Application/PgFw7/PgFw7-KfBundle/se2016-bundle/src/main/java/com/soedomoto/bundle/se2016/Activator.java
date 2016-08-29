@@ -3,11 +3,9 @@ package com.soedomoto.bundle.se2016;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.soedomoto.bundle.proxy.service.ContextHandlerService;
-import com.soedomoto.bundle.se2016.controller.CKabupaten;
-import com.soedomoto.bundle.se2016.controller.CKecamatan;
-import com.soedomoto.bundle.se2016.controller.CKelurahan;
-import com.soedomoto.bundle.se2016.controller.CPropinsi;
+import com.soedomoto.bundle.se2016.controller.*;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -19,6 +17,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
@@ -28,75 +28,97 @@ import java.util.jar.JarFile;
  * Created by soedomoto on 16/07/16.
  */
 public class Activator implements BundleActivator {
+    public static String DB_NAME = "se2016.db";
+    public static String REAL_HOST = "http://pgfw7.soedomoto.tk";
+    public static String CONTEXT_PATH = "/se2016";
+
     public static ConnectionSource connectionSource;
-    public static String jarFile;
     public static String dataDir;
 
-    private ServletContextHandler _context;
+    private ServletContextHandler _servletContext;
     private ContextHandlerService _contextHandlerService;
+    private BundleContext _bundleContext;
 
     public void start(BundleContext context) throws Exception {
-        jarFile = context.getBundle().getLocation().replace("file:", "");
-        dataDir = jarFile.replace(".jar", "");
+        _bundleContext = context;
 
-        _configureDatabase(context);
+        String fwDir = context.getProperty("org.osgi.framework.storage");
+        File dataFile = new File(fwDir + File.separator + "data" + File.separator +
+                                 _bundleContext.getBundle().getBundleId());
+        dataFile.mkdirs();
+        dataDir = dataFile.getAbsolutePath();
 
         ServiceReference sr = context.getServiceReference(ContextHandlerService.class.getName());
         _contextHandlerService = (ContextHandlerService) context.getService(sr);
 
-        _context = new ServletContextHandler();
-        _context.setContextPath("/se2016");
+        _servletContext = new ServletContextHandler();
+        _servletContext.setContextPath(CONTEXT_PATH);
 
-        ServletHolder defaultHolder = new ServletHolder("default", new DefaultServlet());
-        defaultHolder.setInitParameter("resourceBase", _getResourceBase(context));
+        _configureDatabase(context);
+        _mapServlet();
 
-        // Servlet Mapping
-        _context.addServlet(defaultHolder, "/*");
-        _context.addServlet(new ServletHolder(new CPropinsi.ListPropinsi()), "/propinsi");
-        _context.addServlet(new ServletHolder(new CKabupaten.KabupatenByPropinsi()), "/kabupaten");
-        _context.addServlet(new ServletHolder(new CKecamatan.KecamatanByKabupaten()), "/kecamatan");
-        _context.addServlet(new ServletHolder(new CKelurahan.KelurahanByKecamatan()), "/kelurahan");
-
-        _contextHandlerService.addHandler(_context);
+        _contextHandlerService.addHandler(_servletContext);
     }
 
     public void stop(BundleContext context) throws Exception {
-        _contextHandlerService.removeHandler(_context);
+        _contextHandlerService.removeHandler(_servletContext);
+        if(connectionSource != null) connectionSource.close();
     }
 
     private void _configureDatabase(BundleContext context) throws SQLException {
-        connectionSource = new JdbcConnectionSource("jdbc:h2:file:"+ dataDir + File.separator +"se2016.db;" +
-                "FILE_LOCK=FS;PAGE_SIZE=1024;CACHE_SIZE=8192");
+        connectionSource = new JdbcConnectionSource("jdbc:h2:file:"+ dataDir + File.separator + DB_NAME +
+                ";FILE_LOCK=FS;PAGE_SIZE=1024;CACHE_SIZE=8192;DB_CLOSE_DELAY=-1");
 
         CPropinsi.createDao();
         CKabupaten.createDao();
         CKecamatan.createDao();
         CKelurahan.createDao();
+        CBlokSensus.createDao();
+        CSubBlokSensus.createDao();
+        CNks.createDao();
+        CSls.createDao();
+        CKriteriaBlokSensus.createDao();
+        CPenggunaanBangunanSensus.createDao();
+        CLokasiTempatUsaha.createDao();
+        CPencacah.createDao();
+        CWilayahCacah.createDao();
+        CFormL1.createDao();
     }
 
-    private String _getResourceBase(BundleContext context) throws IOException {
-        FileUtils.deleteDirectory(new File(dataDir + File.separator + "webroot"));
+    private void _mapServlet() throws IOException {
+        ServletHolder defaultHolder = new ServletHolder("default", new DefaultServlet());
+        defaultHolder.setInitParameter("resourceBase", _getResourceBase());
 
-        JarFile jar = new JarFile(jarFile);
-        Enumeration enumEntries = jar.entries();
-        while (enumEntries.hasMoreElements()) {
-            JarEntry entry = (JarEntry) enumEntries.nextElement();
-            if(entry.getName().startsWith("webroot")) {
-                File f = new File(dataDir + File.separator + entry.getName());
-                if(! entry.isDirectory()) {
-                    f.getParentFile().mkdirs();
+        // Servlet Mapping
+        _servletContext.addServlet(defaultHolder, "/*");
+        CPropinsi.registerServlets(_servletContext);
+        CKabupaten.registerServlets(_servletContext);
+        CKecamatan.registerServlets(_servletContext);
+        CKelurahan.registerServlets(_servletContext);
+        CBlokSensus.registerServlets(_servletContext);
+        CSubBlokSensus.registerServlets(_servletContext);
+        CNks.registerServlets(_servletContext);
+        CSls.registerServlets(_servletContext);
+        CKriteriaBlokSensus.registerServlets(_servletContext);
+        CPenggunaanBangunanSensus.registerServlets(_servletContext);
+        CLokasiTempatUsaha.registerServlets(_servletContext);
+        CPencacah.registerServlets(_servletContext);
+        CWilayahCacah.registerServlets(_servletContext);
+        CFormL1.registerServlets(_servletContext);
+    }
 
-                    InputStream is = jar.getInputStream(entry); // get the input stream
-                    FileOutputStream fos = new FileOutputStream(f);
-                    while (is.available() > 0) {  // write contents of 'is' to 'fos'
-                        fos.write(is.read());
-                    }
-                    fos.close();
-                    is.close();
-                }
-            }
+    private String _getResourceBase() throws IOException {
+        String webroot = "webroot";
+
+        FileUtils.deleteDirectory(new File(dataDir + File.separator + webroot));
+        Enumeration enumEntries = _bundleContext.getBundle().findEntries("/" + webroot, "*.*", true);
+        while(enumEntries.hasMoreElements()) {
+            URL path = (URL) enumEntries.nextElement();
+            File f = new File(dataDir + path.getPath());
+            f.getParentFile().mkdirs();
+            IOUtils.copy(path.openStream(), new FileOutputStream(f));
         }
 
-        return dataDir + File.separator + "webroot";
+        return dataDir + File.separator + webroot;
     }
 }

@@ -14,7 +14,7 @@ public class MBlokSensus {
     private String kode;
     @DatabaseField(useGetSet = true)
     private String nama;
-    @DatabaseField(foreign = true, foreignAutoRefresh = true, useGetSet = true)
+    @DatabaseField(foreign = true, /*foreignAutoRefresh = true, */useGetSet = true)
     private MKelurahan kelurahan;
 
     public MBlokSensus() {}

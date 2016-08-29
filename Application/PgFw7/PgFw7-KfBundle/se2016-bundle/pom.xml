@@ -10,7 +10,7 @@
     <packaging>bundle</packaging>
 
     <!--
-    Execution : clean compile bundle:bundle exec:exec@dx exec:exec@cp exec:exec@aapt install:install
+    Execution : clean compile bundle:bundle exec:exec@dx copy:copy@duplicate exec:exec@aapt install:install
     -->
 
     <name>SE2016 Bundle</name>
@@ -20,6 +20,17 @@
         <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
         <bundle.namespace>${project.groupId}.bundle.se2016</bundle.namespace>
         <jetty.version>9.0.7.v20131107</jetty.version>
+        <sqlite-version>3.8.11.2</sqlite-version>
+
+        <!-- Ubuntu system path -->
+        <android.dx>/media/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/dx</android.dx>
+        <android.aapt>/media/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/aapt</android.aapt>
+        <maven.repo.local>file:///media/DATA/SOFTWARE/MAVEN/repository/</maven.repo.local>
+
+        <!-- Windows system path -->
+        <!--<android.dx>D:\ANDROID-SDK\WINDOWS\build-tools\23.0.3\dx.bat</android.dx>-->
+        <!--<android.aapt>D:\ANDROID-SDK\WINDOWS\build-tools\23.0.3\aapt.exe</android.aapt>-->
+        <!--<maven.repo.local>D:\SOFTWARE\MAVEN\repository</maven.repo.local>-->
     </properties>
 
     <dependencies>
@@ -33,6 +44,12 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
             <version>4.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.soedomoto</groupId>
+            <artifactId>sqlite-bundle</artifactId>
+            <version>${sqlite-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -84,10 +101,14 @@
                             ${bundle.namespace}.Activator
                         </Bundle-Activator>
                         <Import-Package>
-                            *
+                            org.osgi.*,
+                            com.soedomoto.*
                         </Import-Package>
+                        <DynamicImport-Package>
+                            *
+                        </DynamicImport-Package>
                         <Export-Package>
-                            com.soedomoto.bundle.se2016.*;-split-package:=merge-first,
+                            ${bundle.namespace}.*;-split-package:=merge-first,
                             org.apache.commons.*;-split-package:=merge-first,
                         </Export-Package>
                         <Provide-Capability>
@@ -114,31 +135,17 @@
                 <version>1.5.0</version>
                 <executions>
                     <execution>
-                        <id>cp</id>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>cp</executable>
-                            <!-- optional -->
-                            <workingDirectory>${project.build.directory}</workingDirectory>
-                            <arguments>
-                                <argument>${project.artifactId}-${project.version}.jar</argument>
-                                <argument>${project.artifactId}-${project.version}-dex.jar</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>dx</id>
                         <goals>
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>/media/DATA/SOFTWARE/dex2jar-2.0/d2j-jar2dex.sh</executable>
+                            <executable>${android.dx}</executable>
                             <!-- optional -->
                             <workingDirectory>${project.build.directory}</workingDirectory>
                             <arguments>
-                                <argument>--force</argument>
+                                <argument>--dex</argument>
+                                <argument>--incremental</argument>
                                 <argument>--output</argument>
                                 <argument>classes.dex</argument>
                                 <argument>${project.artifactId}-${project.version}.jar</argument>
@@ -151,7 +158,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>/media/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/aapt</executable>
+                            <executable>${android.aapt}</executable>
                             <!-- optional -->
                             <workingDirectory>${project.build.directory}</workingDirectory>
                             <arguments>
@@ -159,6 +166,33 @@
                                 <argument>${project.artifactId}-${project.version}-dex.jar</argument>
                                 <argument>classes.dex</argument>
                             </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>ch.mfrey.maven.plugin</groupId>
+                <artifactId>copy-maven-plugin</artifactId>
+                <version>0.0.2</version>
+                <executions>
+                    <execution>
+                        <id>duplicate</id>
+                        <phase>none</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}</directory>
+                                    <paths>
+                                        <path>
+                                            <from>${project.artifactId}-${project.version}.jar</from>
+                                            <to>${project.artifactId}-${project.version}-dex.jar</to>
+                                        </path>
+                                    </paths>
+                                </resource>
+                            </resources>
                         </configuration>
                     </execution>
                 </executions>
@@ -171,7 +205,7 @@
             <id>internal</id>
             <name>Local Maven Repo</name>
             <layout>default</layout>
-            <url>file:///media/DATA/SOFTWARE/MAVEN/repository/</url>
+            <url>${maven.repo.local}</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
