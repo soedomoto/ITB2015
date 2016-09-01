@@ -16,21 +16,18 @@ import org.osgi.framework.ServiceReference;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Dictionary;
 import java.util.Enumeration;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 
 /**
  * Created by soedomoto on 16/07/16.
  */
 public class Activator implements BundleActivator {
-    public static String DB_NAME = "se2016.db";
-    public static String REAL_HOST = "http://pgfw7.soedomoto.tk";
-    public static String CONTEXT_PATH = "/se2016";
+    public static String DB_NAME;
+    public static String REAL_HOST;
+    public static String CONTEXT_PATH;
 
     public static ConnectionSource connectionSource;
     public static String dataDir;
@@ -41,6 +38,13 @@ public class Activator implements BundleActivator {
 
     public void start(BundleContext context) throws Exception {
         _bundleContext = context;
+
+        Dictionary headers = _bundleContext.getBundle().getHeaders();
+        CONTEXT_PATH = String.valueOf(headers.get("Context-Path"));
+        REAL_HOST = String.valueOf(headers.get("Real-Host"));
+        DB_NAME = String.valueOf(headers.get("Database-Name"));
+
+        System.out.println(String.format("Properties : %s, %s, %s", CONTEXT_PATH, REAL_HOST, DB_NAME));
 
         String fwDir = context.getProperty("org.osgi.framework.storage");
         File dataFile = new File(fwDir + File.separator + "data" + File.separator +
@@ -83,6 +87,7 @@ public class Activator implements BundleActivator {
         CPencacah.createDao();
         CWilayahCacah.createDao();
         CFormL1.createDao();
+        CSync.createDao();
     }
 
     private void _mapServlet() throws IOException {
@@ -105,6 +110,7 @@ public class Activator implements BundleActivator {
         CPencacah.registerServlets(_servletContext);
         CWilayahCacah.registerServlets(_servletContext);
         CFormL1.registerServlets(_servletContext);
+        CSync.registerServlets(_servletContext);
     }
 
     private String _getResourceBase() throws IOException {

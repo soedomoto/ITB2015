@@ -6,7 +6,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../sp2010-bundle/pom.xml" />
         <option value="$PROJECT_DIR$/../proxy-server/pom.xml" />
         <option value="$PROJECT_DIR$/../se2016-bundle/pom.xml" />

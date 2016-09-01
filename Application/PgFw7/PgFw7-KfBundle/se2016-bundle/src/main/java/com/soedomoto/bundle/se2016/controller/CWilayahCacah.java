@@ -20,8 +20,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
+import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
+import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
+import static com.soedomoto.bundle.se2016.controller.CKelurahan.v104Dao;
 import static com.soedomoto.bundle.se2016.controller.CNks.v107Dao;
 import static com.soedomoto.bundle.se2016.controller.CPencacah.pencacahDao;
+import static com.soedomoto.bundle.se2016.controller.CPropinsi.v101Dao;
 import static com.soedomoto.bundle.se2016.controller.CSls.v108Dao;
 
 /**
@@ -45,6 +50,7 @@ public class CWilayahCacah {
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             String kodePencacah = req.getParameter("pencacah");
+            String refresh = req.getParameter("refreshForeign");
 
             try {
                 List<MWilayahCacah> wilayahCacahs;
@@ -61,6 +67,14 @@ public class CWilayahCacah {
                     wilayahCacah.setNks(nkss);
                     List<MSls> slss = v108Dao.queryForMatching(new MSls(wilayahCacah.getBlokSensus()));
                     wilayahCacah.setSls(slss);
+
+                    if(Boolean.valueOf(refresh)) {
+                        v105Dao.refresh(wilayahCacah.getBlokSensus());
+                        v104Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan());
+                        v103Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan());
+                        v102Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
+                        v101Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                    }
                 }
 
                 resp.getWriter().println(new Gson().toJson(wilayahCacahs));

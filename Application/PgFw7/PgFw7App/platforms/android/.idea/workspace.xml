@@ -5,13 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="269732e1-eca8-4050-9fa1-df38bb7646d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/COsgi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__com_google_code_gson_gson_2_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__com_h2database_h2_1_4_192.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__com_j256_ormlite_ormlite_android_4_48.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__com_j256_ormlite_ormlite_core_4_48.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__com_j256_ormlite_ormlite_jdbc_4_48.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__com_soedomoto_sqlite_bundle_3_8_11_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_proxy_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_0_7_v20131107.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_3_0_0_v201112011016.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_osgi_org_osgi_compendium_4_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_osgi_org_osgi_core_4_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_osgi_org_osgi_service_jdbc_1_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_8_11_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSync.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/src/main/java/com/soedomoto/bundle/proxy/servlet/DefaultProxyServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/classes/com/soedomoto/bundle/proxy/servlet/DefaultProxyServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/add-bangunan-usaha.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/add-l1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/se2016.db.mv.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/css/framework7.ios.colors.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/css/framework7.ios.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/css/framework7.ios.rtl.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/css/my-app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/form-b5-add-item.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/form-l1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-f7-ios.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-f7-material.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-calendar-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-calendar-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-comment-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-comment-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-email-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-email-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-gender-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-gender-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-name-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-name-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-password-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-password-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-settings-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-settings-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-tel-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-tel-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-toggle-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-toggle-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-url-ios.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/img/i-form-url-material.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/js/framework7.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/js/jquery-3.1.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/js/my-app.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7-Testing/SE2016/se2016.db.mv.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/IJetty.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/IKnopflerfish.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/IOsgi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/handlers/HomeServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/handlers/JettyHandler.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/classes.dex" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/classes/com/soedomoto/bundle/proxy/Activator.class" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/classes/com/soedomoto/bundle/proxy/Activator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/proxy-server-9.0.7.v20131107-dex.jar" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/proxy-server-9.0.7.v20131107-dex.jar" />
@@ -33,36 +92,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKelurahan.class" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKelurahan.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT-dex.jar" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT-dex.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" afterPath="$PROJECT_DIR$/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../../.gitignore" afterPath="$PROJECT_DIR$/../../../../../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/jetty-server/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/pom.xml" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/src/main/java/com/soedomoto/bundle/proxy/Activator.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/src/main/java/com/soedomoto/bundle/proxy/Activator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/classes/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/proxy-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/pom.xml" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/se2016-bundle.iml" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/se2016-bundle.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKabupaten.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKabupaten.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKecamatan.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKecamatan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKelurahan.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKelurahan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPropinsi.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPropinsi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MBlokSensus.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MBlokSensus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKabupaten.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKabupaten.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKecamatan.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKecamatan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKelurahan.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKelurahan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/form-b5-add-item.html" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/form-b5-add-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/form-l1.html" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/form-l1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/index.html" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/js/my-app.js" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/resources/webroot/js/my-app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CNks.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CNks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSls.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSls.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/form-b5-add-item.html" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/form-b5-add-item.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/form-l1.html" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/form-l1.html" />
@@ -70,16 +112,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/js/my-app.js" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/classes/webroot/js/my-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/../../../PgFw7-KfBundle/se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android.iml" afterPath="$PROJECT_DIR$/android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/my-app.js" afterPath="$PROJECT_DIR$/assets/www/js/my-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/pages/bundle.html" afterPath="$PROJECT_DIR$/assets/www/pages/bundle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/IServer.java" afterPath="$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/IServer.java" />
     </list>
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -149,8 +182,8 @@
       <file leaf-file-name="COsgi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/COsgi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5518395">
-              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.37625417">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2143,6 +2176,13 @@
       <option name="number" value="Default" />
       <updated>1472460248782</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update Android Application">
+      <created>1472485466145</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1472485466146</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2156,14 +2196,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22588235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22588235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19294117" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2188,6 +2228,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update Android Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Android Application" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2336,8 +2380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/soedomoto/pgfw7/server/COsgi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5518395">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.37625417">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>

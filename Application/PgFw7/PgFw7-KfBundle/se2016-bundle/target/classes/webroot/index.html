@@ -94,8 +94,40 @@
     <div class="views">
       <!-- Your main view, should have "view-main" class-->
       <div class="view view-main">
-        <div class="navbar"></div>
-        <div class="pages navbar-through toolbar-through"></div>
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a>
+            </div>
+            <div class="center sliding">SE2016</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Page Content -->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="workspace" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <form id="workspace" class="">
+                <div class="content-block-title">Wilayah Kerja</div>
+                <div class="list-block">
+                  <ul id="l1-list">
+                    <li class="item-content"><div class="item-inner">
+                      <div class="item-after">Blok Sensus</div>
+                      <div class="item-after">NKS</div>
+                      <div class="item-after">SLS</div>
+                    </div></li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -103,6 +135,7 @@
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <!-- Path to jQuery-->
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
     <!-- Path to your app js-->
     <script ajax-load="true" type="text/javascript" src="js/my-app.js"></script>
   </body>

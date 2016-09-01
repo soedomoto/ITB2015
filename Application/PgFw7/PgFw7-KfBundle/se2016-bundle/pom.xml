@@ -94,9 +94,15 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Real-Host>
+                            http://pgfw7.soedomoto.tk
+                        </Real-Host>
                         <Context-Path>
                             /se2016
                         </Context-Path>
+                        <Database-Name>
+                            se2016.db
+                        </Database-Name>
                         <Bundle-Activator>
                             ${bundle.namespace}.Activator
                         </Bundle-Activator>

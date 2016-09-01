@@ -19,6 +19,10 @@ import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
+import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
+import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
+import static com.soedomoto.bundle.se2016.controller.CKelurahan.v104Dao;
+import static com.soedomoto.bundle.se2016.controller.CPropinsi.v101Dao;
 
 /**
  * Created by soedomoto on 8/9/16.
@@ -35,6 +39,7 @@ public class CNks {
 
     public static void registerServlets(ServletContextHandler context) {
         context.addServlet(new ServletHolder(new NKSByBlokSensus()), NKSByBlokSensus.PATH);
+        context.addServlet(new ServletHolder(new NKSByKode()), NKSByKode.PATH);
     }
 
     private static void populateData() {
@@ -64,6 +69,35 @@ public class CNks {
                 List<MNks> nkss = v107Dao.queryForMatching(new MNks(blokSensus));
 
                 resp.getWriter().println(new Gson().toJson(nkss));
+                resp.setContentType("application/json");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            } catch (SQLException e) {
+                resp.getWriter().println("Error in database connection: " + e.getMessage());
+                resp.setContentType("text/plain");
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            }
+        }
+    }
+
+    public static class NKSByKode extends HttpServlet {
+        public static String PATH = "/nks/by-kode";
+
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            String fullKode = req.getParameter("fullKode");
+            String refresh = req.getParameter("refreshForeign");
+
+            try {
+                MNks nks = v107Dao.queryForId(fullKode);
+                if(Boolean.valueOf(refresh)) {
+                    v105Dao.refresh(nks.getBlokSensus());
+                    v104Dao.refresh(nks.getBlokSensus().getKelurahan());
+                    v103Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan());
+                    v102Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
+                    v101Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                }
+
+                resp.getWriter().println(new Gson().toJson(nks));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

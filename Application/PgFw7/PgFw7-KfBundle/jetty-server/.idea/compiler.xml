@@ -22,7 +22,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="jetty-server" />
         <module name="proxy-server" />
         <module name="se2016-bundle" />
         <module name="sp2010-bundle" />
