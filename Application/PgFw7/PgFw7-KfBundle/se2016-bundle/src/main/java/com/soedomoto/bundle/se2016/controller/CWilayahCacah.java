@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -20,6 +19,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
 import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
 import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
@@ -77,7 +77,7 @@ public class CWilayahCacah {
                     }
                 }
 
-                resp.getWriter().println(new Gson().toJson(wilayahCacahs));
+                resp.getWriter().println(gson.toJson(wilayahCacahs));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

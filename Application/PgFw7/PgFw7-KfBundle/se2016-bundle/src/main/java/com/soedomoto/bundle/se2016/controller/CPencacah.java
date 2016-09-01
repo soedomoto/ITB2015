@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -17,6 +16,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 8/18/16.
@@ -43,12 +43,12 @@ public class CPencacah {
             try {
                 if(kodePencacah != null) {
                     MPencacah pencacah = pencacahDao.queryForId(kodePencacah);
-                    resp.getWriter().println(new Gson().toJson(pencacah));
+                    resp.getWriter().println(gson.toJson(pencacah));
                     resp.setContentType("application/json");
                     resp.setStatus(HttpServletResponse.SC_OK);
                 } else {
                     List<MPencacah> pencacahs = pencacahDao.queryForAll();
-                    resp.getWriter().println(new Gson().toJson(pencacahs));
+                    resp.getWriter().println(gson.toJson(pencacahs));
                     resp.setContentType("application/json");
                     resp.setStatus(HttpServletResponse.SC_OK);
                 }

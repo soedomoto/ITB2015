@@ -1,11 +1,9 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MBlokSensus;
-import com.soedomoto.bundle.se2016.model.MNks;
 import com.soedomoto.bundle.se2016.model.MSls;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -16,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
 import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
 import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
@@ -47,9 +47,9 @@ public class CSls {
         try {
             MBlokSensus blokSensus = v105Dao.queryForId("1302090010001");
 
-            v108Dao.create(new MSls("001", "001", blokSensus));
-            v108Dao.create(new MSls("002", "002", blokSensus));
-            v108Dao.create(new MSls("003", "003", blokSensus));
+            v108Dao.create(new MSls("001", "001", new Date(), blokSensus));
+            v108Dao.create(new MSls("002", "002", new Date(), blokSensus));
+            v108Dao.create(new MSls("003", "003", new Date(), blokSensus));
         } catch (SQLException e) {}
     }
 
@@ -69,7 +69,7 @@ public class CSls {
                         kodeKelurahan + kodeBlokSensus);
                 List<MSls> slses = v108Dao.queryForMatching(new MSls(blokSensus));
 
-                resp.getWriter().println(new Gson().toJson(slses));
+                resp.getWriter().println(gson.toJson(slses));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {
@@ -98,7 +98,7 @@ public class CSls {
                     v101Dao.refresh(sls.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
                 }
 
-                resp.getWriter().println(new Gson().toJson(sls));
+                resp.getWriter().println(gson.toJson(sls));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

@@ -3,6 +3,7 @@ package com.soedomoto.bundle.se2016.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +29,8 @@ public class MFormL1B5 {
     private String v506;
     @DatabaseField(useGetSet = true)
     private String v507;
+    @DatabaseField(columnName = "last_update", useGetSet = true)
+    private Date lastUpdate;
 
     // Additional non-persistence field
     private List<MFormL1B5Usaha> usaha;
@@ -35,7 +38,7 @@ public class MFormL1B5 {
     public MFormL1B5() {}
 
     public MFormL1B5(String fullKode, MFormL1 formL1, String v501, String v502, String v503, String v504, String v505,
-                     String v506, String v507) {
+                     String v506, String v507, Date lastUpdate) {
         this.fullKode = fullKode;
         this.formL1 = formL1;
         this.v501 = v501;
@@ -45,10 +48,11 @@ public class MFormL1B5 {
         this.v505 = v505;
         this.v506 = v506;
         this.v507 = v507;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MFormL1B5(MFormL1 formL1, String v501, String v502, String v503, String v504, String v505,
-                     String v506, String v507) {
+                     String v506, String v507, Date lastUpdate) {
         this.fullKode = formL1.getFullKode() + v501;
         this.formL1 = formL1;
         this.v501 = v501;
@@ -58,6 +62,7 @@ public class MFormL1B5 {
         this.v505 = v505;
         this.v506 = v506;
         this.v507 = v507;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MFormL1B5(String fullKode) {
@@ -146,5 +151,13 @@ public class MFormL1B5 {
 
     public void setUsaha(List<MFormL1B5Usaha> usaha) {
         this.usaha = usaha;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 }

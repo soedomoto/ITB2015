@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -15,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CPropinsi.v101Dao;
 
 /**
@@ -42,9 +43,9 @@ public class CKabupaten {
         try {
             MPropinsi propinsi = v101Dao.queryForId("13");
 
-            v102Dao.create(new MKabupaten("01", "Kab. Kepulauan Mentawai", propinsi));
-            v102Dao.create(new MKabupaten("02", "Kab. Pesisir Selatan", propinsi));
-            v102Dao.create(new MKabupaten("03", "Kab. Solok", propinsi));
+            v102Dao.create(new MKabupaten("01", "Kab. Kepulauan Mentawai", new Date(), propinsi));
+            v102Dao.create(new MKabupaten("02", "Kab. Pesisir Selatan", new Date(), propinsi));
+            v102Dao.create(new MKabupaten("03", "Kab. Solok", new Date(), propinsi));
         } catch (SQLException e) {}
     }
 
@@ -59,7 +60,7 @@ public class CKabupaten {
                 MPropinsi propinsi = v101Dao.queryForId(kodePropinsi);
                 List<MKabupaten> kabs = v102Dao.queryForMatching(new MKabupaten(propinsi));
 
-                resp.getWriter().println(new Gson().toJson(kabs));
+                resp.getWriter().println(gson.toJson(kabs));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {
@@ -80,7 +81,7 @@ public class CKabupaten {
             try {
                 MKabupaten kab = v102Dao.queryForId(fullKode);
 
-                resp.getWriter().println(new Gson().toJson(kab));
+                resp.getWriter().println(gson.toJson(kab));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

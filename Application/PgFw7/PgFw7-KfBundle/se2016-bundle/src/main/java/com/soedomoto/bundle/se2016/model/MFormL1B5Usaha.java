@@ -3,6 +3,8 @@ package com.soedomoto.bundle.se2016.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Date;
+
 /**
  * Created by soedomoto on 8/14/16.
  */
@@ -18,23 +20,27 @@ public class MFormL1B5Usaha {
     private String v509;
     @DatabaseField(useGetSet = true)
     private String v510;
+    @DatabaseField(columnName = "last_update", useGetSet = true)
+    private Date lastUpdate;
 
     public MFormL1B5Usaha() {}
 
-    public MFormL1B5Usaha(String fullKode, MFormL1B5 formL1B5, String v508, String v509, String v510) {
+    public MFormL1B5Usaha(String fullKode, MFormL1B5 formL1B5, String v508, String v509, String v510, Date lastUpdate) {
         this.fullKode = fullKode;
         this.formL1B5 = formL1B5;
         this.v508 = v508;
         this.v509 = v509;
         this.v510 = v510;
+        this.setLastUpdate(lastUpdate);
     }
 
-    public MFormL1B5Usaha(MFormL1B5 formL1B5, String v508, String v509, String v510) {
+    public MFormL1B5Usaha(MFormL1B5 formL1B5, String v508, String v509, String v510, Date lastUpdate) {
         this.fullKode = formL1B5.getFullKode() + v508;
         this.formL1B5 = formL1B5;
         this.v508 = v508;
         this.v509 = v509;
         this.v510 = v510;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MFormL1B5Usaha(String fullKode) {
@@ -83,5 +89,13 @@ public class MFormL1B5Usaha {
 
     public void setV510(String v510) {
         this.v510 = v510;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 }

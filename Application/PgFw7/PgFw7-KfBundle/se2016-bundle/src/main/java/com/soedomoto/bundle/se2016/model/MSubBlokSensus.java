@@ -3,6 +3,8 @@ package com.soedomoto.bundle.se2016.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Date;
+
 /**
  * Created by soedomoto on 8/6/16.
  */
@@ -16,21 +18,25 @@ public class MSubBlokSensus {
     private String nama;
     @DatabaseField(foreign = true, foreignAutoRefresh = true, useGetSet = true)
     private MBlokSensus blokSensus;
+    @DatabaseField(columnName = "last_update", useGetSet = true)
+    private Date lastUpdate;
 
     public MSubBlokSensus() {}
 
-    public MSubBlokSensus(String fullKode, String kode, String nama, MBlokSensus blokSensus) {
+    public MSubBlokSensus(String fullKode, String kode, String nama, Date lastUpdate, MBlokSensus blokSensus) {
         this.fullKode = fullKode;
         this.kode = kode;
         this.nama = nama;
         this.blokSensus = blokSensus;
+        this.setLastUpdate(lastUpdate);
     }
 
-    public MSubBlokSensus(String kode, String nama, MBlokSensus blokSensus) {
+    public MSubBlokSensus(String kode, String nama, Date lastUpdate, MBlokSensus blokSensus) {
         this.kode = kode;
         this.nama = nama;
         this.blokSensus = blokSensus;
         this.fullKode = blokSensus.getFullKode() + kode;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MSubBlokSensus(MBlokSensus blokSensus) {
@@ -67,5 +73,13 @@ public class MSubBlokSensus {
 
     public void setBlokSensus(MBlokSensus blokSensus) {
         this.blokSensus = blokSensus;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 }

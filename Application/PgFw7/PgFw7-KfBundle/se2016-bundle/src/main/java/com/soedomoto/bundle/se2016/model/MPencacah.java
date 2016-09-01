@@ -3,6 +3,8 @@ package com.soedomoto.bundle.se2016.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Date;
+
 /**
  * Created by soedomoto on 8/14/16.
  */
@@ -14,13 +16,16 @@ public class MPencacah {
     private String nama;
     @DatabaseField(columnName = "v203", useGetSet = true)
     private String handphone;
+    @DatabaseField(columnName = "last_update", useGetSet = true)
+    private Date lastUpdate;
 
     public MPencacah() {}
 
-    public MPencacah(String id, String nama, String handphone) {
+    public MPencacah(String id, String nama, String handphone, Date lastUpdate) {
         this.id = id;
         this.nama = nama;
         this.handphone = handphone;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MPencacah(String id) {
@@ -49,5 +54,13 @@ public class MPencacah {
 
     public void setHandphone(String handphone) {
         this.handphone = handphone;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 }

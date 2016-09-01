@@ -51,6 +51,8 @@ public class MFormL1 {
     private String v307;
     @DatabaseField(useGetSet = true)
     private String v308;
+    @DatabaseField(columnName = "last_update", useGetSet = true)
+    private Date lastUpdate;
 
     // Additional non-persistence field
     private List<MFormL1B5> b5;
@@ -60,7 +62,7 @@ public class MFormL1 {
     public MFormL1(String fullKode, MPropinsi v101, MKabupaten v102, MKecamatan v103, MKelurahan v104, MBlokSensus v105,
                    MSubBlokSensus v106, MNks v107, MSls v108, MKriteriaBlokSensus v109, MPencacah pencacah, Date v204,
                    String v301, String v302, String v303, String v304, String v305, String v306, String v307,
-                   String v308) {
+                   String v308, Date lastUpdate) {
         this.fullKode = fullKode;
         this.v101 = v101;
         this.v102 = v102;
@@ -81,12 +83,13 @@ public class MFormL1 {
         this.v306 = v306;
         this.v307 = v307;
         this.v308 = v308;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MFormL1(MPropinsi v101, MKabupaten v102, MKecamatan v103, MKelurahan v104, MBlokSensus v105,
                    MSubBlokSensus v106, MNks v107, MSls v108, MKriteriaBlokSensus v109, MPencacah pencacah, Date v204,
                    String v301, String v302, String v303, String v304, String v305, String v306, String v307,
-                   String v308) {
+                   String v308, Date lastUpdate) {
         this.fullKode = v105.getFullKode();
         this.v101 = v101;
         this.v102 = v102;
@@ -107,6 +110,7 @@ public class MFormL1 {
         this.v306 = v306;
         this.v307 = v307;
         this.v308 = v308;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MFormL1(String fullKode) {
@@ -287,5 +291,13 @@ public class MFormL1 {
 
     public void setB5(List<MFormL1B5> b5) {
         this.b5 = b5;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 }

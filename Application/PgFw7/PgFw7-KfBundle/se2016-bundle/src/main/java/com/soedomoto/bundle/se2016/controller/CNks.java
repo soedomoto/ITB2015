@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -15,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
 import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
 import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
@@ -46,9 +47,9 @@ public class CNks {
         try {
             MBlokSensus blokSensus = v105Dao.queryForId("1302090010001");
 
-            v107Dao.create(new MNks("001", "001", blokSensus));
-            v107Dao.create(new MNks("002", "002", blokSensus));
-            v107Dao.create(new MNks("003", "003", blokSensus));
+            v107Dao.create(new MNks("001", "001", new Date(), blokSensus));
+            v107Dao.create(new MNks("002", "002", new Date(), blokSensus));
+            v107Dao.create(new MNks("003", "003", new Date(), blokSensus));
         } catch (SQLException e) {}
     }
 
@@ -68,7 +69,7 @@ public class CNks {
                         kodeKelurahan + kodeBlokSensus);
                 List<MNks> nkss = v107Dao.queryForMatching(new MNks(blokSensus));
 
-                resp.getWriter().println(new Gson().toJson(nkss));
+                resp.getWriter().println(gson.toJson(nkss));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {
@@ -97,7 +98,7 @@ public class CNks {
                     v101Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
                 }
 
-                resp.getWriter().println(new Gson().toJson(nks));
+                resp.getWriter().println(gson.toJson(nks));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -15,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
 
 /**
@@ -42,9 +43,9 @@ public class CKelurahan {
         try {
             MKecamatan kecamatan = v103Dao.queryForId("1302090");
 
-            v104Dao.create(new MKelurahan("001", "Sago Salido", kecamatan));
-            v104Dao.create(new MKelurahan("002", "Salido", kecamatan));
-            v104Dao.create(new MKelurahan("003", "Bunga Pasang Salido", kecamatan));
+            v104Dao.create(new MKelurahan("001", "Sago Salido", new Date(), kecamatan));
+            v104Dao.create(new MKelurahan("002", "Salido", new Date(), kecamatan));
+            v104Dao.create(new MKelurahan("003", "Bunga Pasang Salido", new Date(), kecamatan));
         } catch (SQLException e) {}
     }
 
@@ -61,7 +62,7 @@ public class CKelurahan {
                 MKecamatan kecamatan = v103Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan);
                 List<MKelurahan> kels = v104Dao.queryForMatching(new MKelurahan(kecamatan));
 
-                resp.getWriter().println(new Gson().toJson(kels));
+                resp.getWriter().println(gson.toJson(kels));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {
@@ -82,7 +83,7 @@ public class CKelurahan {
             try {
                 MKelurahan kel = v104Dao.queryForId(fullKode);
 
-                resp.getWriter().println(new Gson().toJson(kel));
+                resp.getWriter().println(gson.toJson(kel));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

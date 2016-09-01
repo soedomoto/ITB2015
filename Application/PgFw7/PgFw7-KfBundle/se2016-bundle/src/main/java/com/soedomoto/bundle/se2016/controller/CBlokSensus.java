@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -15,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
 import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
 import static com.soedomoto.bundle.se2016.controller.CKelurahan.v104Dao;
@@ -45,9 +46,9 @@ public class CBlokSensus {
         try {
             MKelurahan kelurahan = v104Dao.queryForId("1302090010");
 
-            v105Dao.create(new MBlokSensus("001", "001B", kelurahan));
-            v105Dao.create(new MBlokSensus("002", "002B", kelurahan));
-            v105Dao.create(new MBlokSensus("003", "003B", kelurahan));
+            v105Dao.create(new MBlokSensus("001", "001B", new Date(), kelurahan));
+            v105Dao.create(new MBlokSensus("002", "002B", new Date(), kelurahan));
+            v105Dao.create(new MBlokSensus("003", "003B", new Date(), kelurahan));
         } catch (SQLException e) {}
     }
 
@@ -65,7 +66,7 @@ public class CBlokSensus {
                 MKelurahan kelurahan = v104Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan + kodeKelurahan);
                 List<MBlokSensus> bss = v105Dao.queryForMatching(new MBlokSensus(kelurahan));
 
-                resp.getWriter().println(new Gson().toJson(bss));
+                resp.getWriter().println(gson.toJson(bss));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {
@@ -93,7 +94,7 @@ public class CBlokSensus {
                     v101Dao.refresh(bs.getKelurahan().getKecamatan().getKabupaten().getPropinsi());
                 }
 
-                resp.getWriter().println(new Gson().toJson(bs));
+                resp.getWriter().println(gson.toJson(bs));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

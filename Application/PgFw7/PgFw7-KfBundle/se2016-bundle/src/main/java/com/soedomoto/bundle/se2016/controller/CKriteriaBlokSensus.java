@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -14,9 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 8/9/16.
@@ -37,13 +38,13 @@ public class CKriteriaBlokSensus {
 
     private static void populateData() {
         try {
-            v109Dao.create(new MKriteriaBlokSensus(1, "Pasar tradisional"));
-            v109Dao.create(new MKriteriaBlokSensus(2, "Pusat perbelanjaan"));
-            v109Dao.create(new MKriteriaBlokSensus(3, "Pusat perkantoran"));
-            v109Dao.create(new MKriteriaBlokSensus(4, "Kawasan industri"));
-            v109Dao.create(new MKriteriaBlokSensus(5, "Kawasan pariwisata"));
-            v109Dao.create(new MKriteriaBlokSensus(6, "Kawasan pemukiman"));
-            v109Dao.create(new MKriteriaBlokSensus(7, "Lainnya"));
+            v109Dao.create(new MKriteriaBlokSensus(1, "Pasar tradisional", new Date()));
+            v109Dao.create(new MKriteriaBlokSensus(2, "Pusat perbelanjaan", new Date()));
+            v109Dao.create(new MKriteriaBlokSensus(3, "Pusat perkantoran", new Date()));
+            v109Dao.create(new MKriteriaBlokSensus(4, "Kawasan industri", new Date()));
+            v109Dao.create(new MKriteriaBlokSensus(5, "Kawasan pariwisata", new Date()));
+            v109Dao.create(new MKriteriaBlokSensus(6, "Kawasan pemukiman", new Date()));
+            v109Dao.create(new MKriteriaBlokSensus(7, "Lainnya", new Date()));
         } catch (SQLException e) {}
     }
 
@@ -55,7 +56,7 @@ public class CKriteriaBlokSensus {
             try {
                 List<MKriteriaBlokSensus> options = v109Dao.queryForAll();
 
-                resp.getWriter().println(new Gson().toJson(options));
+                resp.getWriter().println(gson.toJson(options));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

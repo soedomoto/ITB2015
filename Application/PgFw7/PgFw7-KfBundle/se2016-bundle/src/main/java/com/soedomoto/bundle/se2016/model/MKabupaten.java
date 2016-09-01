@@ -3,6 +3,8 @@ package com.soedomoto.bundle.se2016.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Date;
+
 /**
  * Created by soedomoto on 8/5/16.
  */
@@ -16,21 +18,25 @@ public class MKabupaten {
     private String nama;
     @DatabaseField(foreign = true, /*foreignAutoRefresh = true, */useGetSet = true)
     private MPropinsi propinsi;
+    @DatabaseField(columnName = "last_update", useGetSet = true)
+    private Date lastUpdate;
 
     public MKabupaten() {}
 
-    public MKabupaten(String kode, String nama, MPropinsi propinsi) {
+    public MKabupaten(String kode, String nama, Date lastUpdate, MPropinsi propinsi) {
         this.kode = kode;
         this.nama = nama;
         this.propinsi = propinsi;
         this.fullKode = propinsi.getFullKode() + kode;
+        this.setLastUpdate(lastUpdate);
     }
 
-    public MKabupaten(String fullKode, String kode, String nama, MPropinsi propinsi) {
+    public MKabupaten(String fullKode, String kode, String nama, Date lastUpdate, MPropinsi propinsi) {
         this.fullKode = fullKode;
         this.kode = kode;
         this.nama = nama;
         this.propinsi = propinsi;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MKabupaten(MPropinsi propinsi) {
@@ -67,5 +73,13 @@ public class MKabupaten {
 
     public void setPropinsi(MPropinsi propinsi) {
         this.propinsi = propinsi;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 }

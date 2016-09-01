@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -15,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
 
 /**
@@ -41,9 +42,9 @@ public class CSubBlokSensus {
         try {
             MBlokSensus blokSensus = v105Dao.queryForId("1302090010001");
 
-            v106Dao.create(new MSubBlokSensus("001", "001B", blokSensus));
-            v106Dao.create(new MSubBlokSensus("002", "002B", blokSensus));
-            v106Dao.create(new MSubBlokSensus("003", "003B", blokSensus));
+            v106Dao.create(new MSubBlokSensus("001", "001B", new Date(), blokSensus));
+            v106Dao.create(new MSubBlokSensus("002", "002B", new Date(), blokSensus));
+            v106Dao.create(new MSubBlokSensus("003", "003B", new Date(), blokSensus));
         } catch (SQLException e) {}
     }
 
@@ -63,7 +64,7 @@ public class CSubBlokSensus {
                         kodeKelurahan + kodeBlokSensus);
                 List<MSubBlokSensus> sbss = v106Dao.queryForMatching(new MSubBlokSensus(blokSensus));
 
-                resp.getWriter().println(new Gson().toJson(sbss));
+                resp.getWriter().println(gson.toJson(sbss));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

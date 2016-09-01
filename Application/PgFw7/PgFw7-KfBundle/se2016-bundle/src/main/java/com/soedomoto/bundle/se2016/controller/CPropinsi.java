@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -18,17 +17,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
-import static com.soedomoto.bundle.se2016.Activator.dataDir;
+import static com.soedomoto.bundle.se2016.Activator.*;
 
 /**
  * Created by soedomoto on 15/07/16.
  */
 public class CPropinsi {
-
     public static Dao<MPropinsi, String> v101Dao;
 
     public static void createDao() throws SQLException {
@@ -52,7 +50,7 @@ public class CPropinsi {
                     String line;
                     while ((line = br.readLine()) != null) {
                         String[] cells = line.split(",");
-                        v101Dao.create(new MPropinsi(cells[0], cells[1]));
+                        v101Dao.create(new MPropinsi(cells[0], cells[1], new Date()));
                     }
 
                     return null;
@@ -72,7 +70,7 @@ public class CPropinsi {
             try {
                 provs = v101Dao.queryForAll();
 
-                resp.getWriter().println(new Gson().toJson(provs));
+                resp.getWriter().println(gson.toJson(provs));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {
@@ -93,7 +91,7 @@ public class CPropinsi {
             try {
                 MPropinsi prop = v101Dao.queryForId(fullKode);
 
-                resp.getWriter().println(new Gson().toJson(prop));
+                resp.getWriter().println(gson.toJson(prop));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

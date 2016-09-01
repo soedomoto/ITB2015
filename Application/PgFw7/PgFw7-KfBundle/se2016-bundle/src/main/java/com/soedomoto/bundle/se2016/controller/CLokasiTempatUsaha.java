@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -14,9 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 8/9/16.
@@ -37,10 +38,10 @@ public class CLokasiTempatUsaha {
 
     private static void populateData() {
         try {
-            v510Dao.create(new MLokasiTempatUsaha(1, "Dalam tempat tinggal rumah tangga"));
-            v510Dao.create(new MLokasiTempatUsaha(2, "Luar tempat tinggal rumah tangga dengan lokasi tetap dan perlengkapan bongkar pasang"));
-            v510Dao.create(new MLokasiTempatUsaha(3, "Usaha keliling dan Konstruksi perorangan"));
-            v510Dao.create(new MLokasiTempatUsaha(4, "Usaha pertambangan dan penggalian perorangan atau Persewaan rumah/kamar"));
+            v510Dao.create(new MLokasiTempatUsaha(1, "Dalam tempat tinggal rumah tangga", new Date()));
+            v510Dao.create(new MLokasiTempatUsaha(2, "Luar tempat tinggal rumah tangga dengan lokasi tetap dan perlengkapan bongkar pasang", new Date()));
+            v510Dao.create(new MLokasiTempatUsaha(3, "Usaha keliling dan Konstruksi perorangan", new Date()));
+            v510Dao.create(new MLokasiTempatUsaha(4, "Usaha pertambangan dan penggalian perorangan atau Persewaan rumah/kamar", new Date()));
         } catch (SQLException e) {}
     }
 
@@ -52,7 +53,7 @@ public class CLokasiTempatUsaha {
             try {
                 List<MLokasiTempatUsaha> options = v510Dao.queryForAll();
 
-                resp.getWriter().println(new Gson().toJson(options));
+                resp.getWriter().println(gson.toJson(options));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

@@ -1,6 +1,5 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
@@ -14,9 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 8/9/16.
@@ -37,11 +38,11 @@ public class CPenggunaanBangunanSensus {
 
     private static void populateData() {
         try {
-            v504Dao.create(new MPenggunaanBangunanSensus(1, "Tempat usaha"));
-            v504Dao.create(new MPenggunaanBangunanSensus(2, "Campuran"));
-            v504Dao.create(new MPenggunaanBangunanSensus(3, "Tempat tinggal"));
-            v504Dao.create(new MPenggunaanBangunanSensus(4, "Tempat ibadah, Kantor organisasi, Panti sosial"));
-            v504Dao.create(new MPenggunaanBangunanSensus(5, "Tempat usaha pertanian, kantor pemerintahan, kedutaan, bangunan kosong"));
+            v504Dao.create(new MPenggunaanBangunanSensus(1, "Tempat usaha", new Date()));
+            v504Dao.create(new MPenggunaanBangunanSensus(2, "Campuran", new Date()));
+            v504Dao.create(new MPenggunaanBangunanSensus(3, "Tempat tinggal", new Date()));
+            v504Dao.create(new MPenggunaanBangunanSensus(4, "Tempat ibadah, Kantor organisasi, Panti sosial", new Date()));
+            v504Dao.create(new MPenggunaanBangunanSensus(5, "Tempat usaha pertanian, kantor pemerintahan, kedutaan, bangunan kosong", new Date()));
         } catch (SQLException e) {}
     }
 
@@ -53,7 +54,7 @@ public class CPenggunaanBangunanSensus {
             try {
                 List<MPenggunaanBangunanSensus> options = v504Dao.queryForAll();
 
-                resp.getWriter().println(new Gson().toJson(options));
+                resp.getWriter().println(gson.toJson(options));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
             } catch (SQLException e) {

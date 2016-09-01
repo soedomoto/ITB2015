@@ -1,5 +1,7 @@
 package com.soedomoto.bundle.se2016;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.soedomoto.bundle.proxy.service.ContextHandlerService;
@@ -25,6 +27,9 @@ import java.util.Enumeration;
  * Created by soedomoto on 16/07/16.
  */
 public class Activator implements BundleActivator {
+    public static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss.SSS").create();
+    public static ThreadGroup threads;
+
     public static String DB_NAME;
     public static String REAL_HOST;
     public static String CONTEXT_PATH;
@@ -38,6 +43,8 @@ public class Activator implements BundleActivator {
 
     public void start(BundleContext context) throws Exception {
         _bundleContext = context;
+        threads = new ThreadGroup(_bundleContext.getBundle().getSymbolicName());
+        threads.setDaemon(true);
 
         Dictionary headers = _bundleContext.getBundle().getHeaders();
         CONTEXT_PATH = String.valueOf(headers.get("Context-Path"));
@@ -67,6 +74,9 @@ public class Activator implements BundleActivator {
     public void stop(BundleContext context) throws Exception {
         _contextHandlerService.removeHandler(_servletContext);
         if(connectionSource != null) connectionSource.close();
+
+        threads.stop();
+        threads = null;
     }
 
     private void _configureDatabase(BundleContext context) throws SQLException {

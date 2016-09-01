@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
+import static com.soedomoto.bundle.se2016.Activator.gson;
 import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
 import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
 import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
@@ -134,7 +135,7 @@ public class CFormL1 {
                     Scanner s = new Scanner(request.getInputStream(), "UTF-8").useDelimiter("\\A");
                     while(s.hasNext()) params += s.next();
 
-                    FormL1 jsonFormL1 = new Gson().fromJson(params, FormL1.class);
+                    FormL1 jsonFormL1 = gson.fromJson(params, FormL1.class);
 
                     try {
                         MPropinsi v101              = v101Dao.queryForId(jsonFormL1.v101);
@@ -158,23 +159,23 @@ public class CFormL1 {
 
                         MFormL1 formL1 = new MFormL1(v101, v102, v103, v104, v105, v106, v107, v108, v109,
                                 pencacah, v204, jsonFormL1.v301, jsonFormL1.v302, jsonFormL1.v303, jsonFormL1.v304,
-                                jsonFormL1.v305, jsonFormL1.v306, jsonFormL1.v307, jsonFormL1.v308);
+                                jsonFormL1.v305, jsonFormL1.v306, jsonFormL1.v307, jsonFormL1.v308, new Date());
                         formL1Dao.createOrUpdate(formL1);
 
                         for(FormL1B5 b5 : jsonFormL1.b5) {
                             MFormL1B5 formL1B5 = new MFormL1B5(formL1, b5.v501, b5.v502, b5.v503, b5.v504, b5.v505,
-                                    b5.v506, b5.v507);
+                                    b5.v506, b5.v507, new Date());
                             formL1B5Dao.createOrUpdate(formL1B5);
 
                             for(FormL1B5Usaha b5Usaha : b5.usaha) {
                                 MFormL1B5Usaha formL1B5Usaha = new MFormL1B5Usaha(formL1B5, b5Usaha.v508, b5Usaha.v509,
-                                        b5Usaha.v510);
+                                        b5Usaha.v510, new Date());
                                 formL1B5UsahaDao.createOrUpdate(formL1B5Usaha);
                             }
                         }
 
                         if (!response.isCommitted()) {
-                            response.getWriter().println(new Gson().toJson(jsonFormL1));
+                            response.getWriter().println(gson.toJson(jsonFormL1));
                             response.setContentType("application/json");
                             response.setStatus(HttpServletResponse.SC_OK);
                         }

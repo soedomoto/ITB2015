@@ -3,6 +3,7 @@ package com.soedomoto.bundle.se2016.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,6 +17,8 @@ public class MWilayahCacah {
     private MBlokSensus blokSensus;
     @DatabaseField(foreign = true, foreignAutoRefresh = true, useGetSet = true)
     private MPencacah pencacah;
+    @DatabaseField(columnName = "last_update", useGetSet = true)
+    private Date lastUpdate;
 
     // Additional Attribute
     private List<MNks> nks;
@@ -23,15 +26,17 @@ public class MWilayahCacah {
 
     public MWilayahCacah() {}
 
-    public MWilayahCacah(String fullKode, MBlokSensus blokSensus, MPencacah pencacah) {
+    public MWilayahCacah(String fullKode, MBlokSensus blokSensus, MPencacah pencacah, Date lastUpdate) {
         this.fullKode = fullKode;
         this.blokSensus = blokSensus;
         this.pencacah = pencacah;
+        this.setLastUpdate(lastUpdate);
     }
 
-    public MWilayahCacah(MBlokSensus blokSensus, MPencacah pencacah) {
+    public MWilayahCacah(MBlokSensus blokSensus, MPencacah pencacah, Date lastUpdate) {
         this.blokSensus = blokSensus;
         this.pencacah = pencacah;
+        this.setLastUpdate(lastUpdate);
     }
 
     public MWilayahCacah(String fullKode) {
@@ -80,5 +85,13 @@ public class MWilayahCacah {
 
     public void setSls(List<MSls> sls) {
         this.sls = sls;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 }
