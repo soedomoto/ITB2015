@@ -1,5 +1,7 @@
 .idea/*
 target/*
+*.pem
+*.ppk
 *.apk
 se2016.db.mv.db
 se2016.db
