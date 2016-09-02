@@ -13,8 +13,8 @@
     Execution : clean compile bundle:bundle exec:exec@dx copy:copy@duplicate exec:exec@aapt install:install
     -->
 
-    <name>SE2016 Bundle</name>
-    <description>Provides SE2016 Bundle</description>
+    <name>SE2016 - Application</name>
+    <description>Provides SE2016 Application Bundle</description>
 
     <properties>
         <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>

@@ -2,10 +2,15 @@ package com.soedomoto.bundle.se2016;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.soedomoto.bundle.proxy.service.ContextHandlerService;
 import com.soedomoto.bundle.se2016.controller.*;
+import com.soedomoto.bundle.se2016.model.*;
+import com.soedomoto.bundle.se2016.service.AccountHandlerService;
+import com.soedomoto.bundle.se2016.service.DaoHandlerService;
+import com.soedomoto.bundle.se2016.service.PropertyHandlerService;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.eclipse.jetty.servlet.DefaultServlet;
@@ -28,7 +33,6 @@ import java.util.Enumeration;
  */
 public class Activator implements BundleActivator {
     public static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss.SSS").create();
-    public static ThreadGroup threads;
 
     public static String DB_NAME;
     public static String REAL_HOST;
@@ -45,40 +49,77 @@ public class Activator implements BundleActivator {
 
     public void start(BundleContext context) throws Exception {
         _bundleContext = context;
-        threads = new ThreadGroup(_bundleContext.getBundle().getSymbolicName());
-        threads.setDaemon(true);
 
+        //  Handle Properties
         Dictionary headers = _bundleContext.getBundle().getHeaders();
         CONTEXT_PATH = String.valueOf(headers.get("Context-Path"));
         REAL_HOST = String.valueOf(headers.get("Real-Host"));
         DB_NAME = String.valueOf(headers.get("Database-Name"));
-
         System.out.println(String.format("Properties : %s, %s, %s", CONTEXT_PATH, REAL_HOST, DB_NAME));
 
+        //  Handle Storage
         String fwDir = context.getProperty("org.osgi.framework.storage");
         File dataFile = new File(fwDir + File.separator + "data" + File.separator +
                                  _bundleContext.getBundle().getBundleId());
         dataFile.mkdirs();
         dataDir = dataFile.getAbsolutePath();
 
+        _configureDatabase(context);
+
+        //  Handle Servlet
         ServiceReference sr = context.getServiceReference(ContextHandlerService.class.getName());
         _contextHandlerService = (ContextHandlerService) context.getService(sr);
 
         _servletContext = new ServletContextHandler();
         _servletContext.setContextPath(CONTEXT_PATH);
-
-        _configureDatabase(context);
         _mapServlet();
 
         _contextHandlerService.addHandler(_servletContext);
+
+        //  Register Service
+        //  Property Handler
+        PropertyHandlerService propertyHandlerObj = new PropertyHandlerService() {
+            public String getDBName() { return DB_NAME; }
+            public String getRealHost() { return REAL_HOST; }
+            public String getContextPath() { return CONTEXT_PATH; }
+            public String getDataDirectory() { return dataDir; }
+        };
+
+        _bundleContext.registerService(PropertyHandlerService.class.getName(), propertyHandlerObj, null);
+
+        //  Dao Handler
+        DaoHandlerService daoHandlerObj = new DaoHandlerService() {
+            public Dao<MPropinsi, String> v101Dao() { return CPropinsi.v101Dao; }
+            public Dao<MKabupaten, String> v102Dao() { return CKabupaten.v102Dao; }
+            public Dao<MKecamatan, String> v103Dao() { return CKecamatan.v103Dao; }
+            public Dao<MKelurahan, String> v104Dao() { return CKelurahan.v104Dao; }
+            public Dao<MBlokSensus, String> v105Dao() { return CBlokSensus.v105Dao; }
+            public Dao<MSubBlokSensus, String> v106Dao() { return CSubBlokSensus.v106Dao; }
+            public Dao<MNks, String> v107Dao() { return CNks.v107Dao; }
+            public Dao<MSls, String> v108Dao() { return CSls.v108Dao; }
+            public Dao<MKriteriaBlokSensus, String> v109Dao() { return CKriteriaBlokSensus.v109Dao; }
+            public Dao<MPenggunaanBangunanSensus, String> v504Dao() { return CPenggunaanBangunanSensus.v504Dao; }
+            public Dao<MLokasiTempatUsaha, String> v510Dao() { return CLokasiTempatUsaha.v510Dao; }
+            public Dao<MPencacah, String> pencacahDao() { return CPencacah.pencacahDao; }
+            public Dao<MWilayahCacah, String> wilayahCacahDao() { return CWilayahCacah.wilayahCacahDao; }
+            public Dao<MFormL1, String> formL1Dao() { return CFormL1.formL1Dao; }
+            public Dao<MFormL1B5, String> formL1B5Dao() { return CFormL1.formL1B5Dao; }
+            public Dao<MFormL1B5Usaha, String> formL1B5UsahaDao() { return CFormL1.formL1B5UsahaDao; }
+        };
+
+        _bundleContext.registerService(DaoHandlerService.class.getName(), daoHandlerObj, null);
+
+        //  Account Handler
+        AccountHandlerService accountHandlerObj = new AccountHandlerService() {
+            public String getPencacahID() { return "198706152009021004"; }
+        };
+
+        _bundleContext.registerService(AccountHandlerService.class.getName(), accountHandlerObj, null);
     }
 
     public void stop(BundleContext context) throws Exception {
         _contextHandlerService.removeHandler(_servletContext);
         if(connectionSource != null) connectionSource.close();
-
-        threads.stop();
-        threads = null;
     }
 
     private void _configureDatabase(BundleContext context) throws SQLException {
@@ -99,7 +140,6 @@ public class Activator implements BundleActivator {
         CPencacah.createDao();
         CWilayahCacah.createDao();
         CFormL1.createDao();
-        CSync.createDao();
     }
 
     private void _mapServlet() throws IOException {
@@ -122,7 +162,6 @@ public class Activator implements BundleActivator {
         CPencacah.registerServlets(_servletContext);
         CWilayahCacah.registerServlets(_servletContext);
         CFormL1.registerServlets(_servletContext);
-        CSync.registerServlets(_servletContext);
     }
 
     private String _getResourceBase() throws IOException {
