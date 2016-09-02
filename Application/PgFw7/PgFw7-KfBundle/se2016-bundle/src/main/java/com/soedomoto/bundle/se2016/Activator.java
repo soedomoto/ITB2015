@@ -34,6 +34,8 @@ public class Activator implements BundleActivator {
     public static String REAL_HOST;
     public static String CONTEXT_PATH;
 
+    public static Integer SYNC_INTERVAL = 10000;
+
     public static ConnectionSource connectionSource;
     public static String dataDir;
 

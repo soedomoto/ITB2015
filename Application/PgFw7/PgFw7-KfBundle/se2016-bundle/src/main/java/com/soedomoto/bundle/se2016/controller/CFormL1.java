@@ -22,9 +22,7 @@ import java.net.URI;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
@@ -59,6 +57,7 @@ public class CFormL1 {
     public static void registerServlets(ServletContextHandler context) {
         context.addServlet(new ServletHolder(new DataL1()), DataL1.PATH);
         context.addServlet(new ServletHolder(new Submit()), Submit.PATH);
+        context.addServlet(new ServletHolder(new Sync()), Sync.PATH);
     }
 
     private static class FormL1 {
@@ -114,6 +113,68 @@ public class CFormL1 {
                 resp.getWriter().println(gson.toJson(l1s));
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_OK);
+            } catch (SQLException e) {
+                resp.getWriter().println("Error in database connection: " + e.getMessage());
+                resp.setContentType("text/plain");
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            }
+        }
+    }
+
+    public static class Sync extends HttpServlet {
+        public static String PATH = "/sync";
+
+        @Override
+        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            try {
+                int changes = 0;
+
+                String params = "";
+                Scanner s = new Scanner(req.getInputStream(), "UTF-8").useDelimiter("\\A");
+                while(s.hasNext()) params += s.next();
+
+                MFormL1[] l1s = gson.fromJson(params, MFormL1[].class);
+
+                for(MFormL1 l1 : l1s) {
+                    MFormL1 l1L = formL1Dao.queryForId(l1.getFullKode());
+                    if(l1L != null) {
+                        if(l1.getLastUpdate().after(l1L.getLastUpdate())) {
+                            changes += formL1Dao.update(l1);
+                        }
+                    } else {
+                        changes += formL1Dao.create(l1);
+                    }
+
+                    for(MFormL1B5 b5 : l1.getB5()) {
+                        MFormL1B5 b5L = formL1B5Dao.queryForId(b5.getFullKode());
+                        if(b5L != null) {
+                            if(b5.getLastUpdate().after(b5L.getLastUpdate())) {
+                                changes += formL1B5Dao.update(b5);
+                            }
+                        } else {
+                            changes += formL1B5Dao.create(b5);
+                        }
+
+                        for(MFormL1B5Usaha usaha : b5.getUsaha()) {
+                            MFormL1B5Usaha usahaL = formL1B5UsahaDao.queryForId(usaha.getFullKode());
+                            if(usahaL != null) {
+                                if(usaha.getLastUpdate().after(usahaL.getLastUpdate())) {
+                                    changes += formL1B5UsahaDao.update(usaha);
+                                }
+                            } else {
+                                changes += formL1B5UsahaDao.create(usaha);
+                            }
+                        }
+                    }
+                }
+
+                CSync.SyncFormL1Response l1Resp = new CSync.SyncFormL1Response(Arrays.asList(l1s), changes);
+
+                resp.getWriter().println(gson.toJson(l1Resp));
+                resp.setContentType("application/json");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            } catch (IOException e) {
+                e.printStackTrace();
             } catch (SQLException e) {
                 resp.getWriter().println("Error in database connection: " + e.getMessage());
                 resp.setContentType("text/plain");
