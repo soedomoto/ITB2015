@@ -67,7 +67,7 @@ public class Activator implements BundleActivator {
                 Thread syncData = new Thread(_threads, new SyncData(SYNC_INTERVAL, _properties, _dao, _account,
                         client, gson));
                 syncData.setDaemon(true);
-//                syncData.start();
+                syncData.start();
             }
         } catch (UnknownHostException e) {
             e.printStackTrace();
