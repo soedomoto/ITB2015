@@ -159,7 +159,7 @@
 
 % *** MATH PACKAGES ***
 %
-%\usepackage{amsmath}
+\usepackage{amsmath}
 % A popular package from the American Mathematical Society that provides
 % many useful and powerful commands for dealing with mathematics.
 %
@@ -177,7 +177,7 @@
 
 % *** SPECIALIZED LIST PACKAGES ***
 %
-%\usepackage{algorithmic}
+\usepackage{algorithmic}
 % algorithmic.sty was written by Peter Williams and Rogerio Brito.
 % This package provides an algorithmic environment fo describing algorithms.
 % You can use the algorithmic environment in-text or within a figure
@@ -197,7 +197,7 @@
 
 % *** ALIGNMENT PACKAGES ***
 %
-%\usepackage{array}
+\usepackage{array}
 % Frank Mittelbach's and David Carlisle's array.sty patches and improves
 % the standard LaTeX2e array and tabular environments to provide better
 % appearance and additional user controls. As the default LaTeX2e table
@@ -244,7 +244,7 @@
 
 % *** FLOAT PACKAGES ***
 %
-%\usepackage{fixltx2e}
+\usepackage{fixltx2e}
 % fixltx2e, the successor to the earlier fix2col.sty, was written by
 % Frank Mittelbach and David Carlisle. This package corrects a few problems
 % in the LaTeX2e kernel, the most notable of which is that in current
@@ -260,7 +260,7 @@
 % http://www.ctan.org/pkg/fixltx2e
 
 
-%\usepackage{stfloats}
+\usepackage{stfloats}
 % stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
 % the ability to do double column floats at the bottom of the page as well
 % as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
@@ -301,6 +301,13 @@
 
 
 \usepackage{hyperref}
+
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{minted}{\begin{tcolorbox}}%
+\AfterEndEnvironment{minted}{\end{tcolorbox}}%
+\AtBeginEnvironment{minted}{\fontsize{8}{8}}
 
 
 
@@ -533,7 +540,36 @@ Routing plays important role in distributed system. It manages the network traff
 
 
 \subsection{OSGi Framework}
-Ada beberapa implementasi dari OSGi, atau biasa disebut dengan OSGi Framework, antara lain: Apache Felix, Concierge, Eclipse Equinox, JBoss, Hitachi, Knopflerfish, dan ProSyst. Penelitian ini menggunakan Knopflerfish OSGi Framework, karena Knopflerfish telah mengimplementasikan spesifikasi terbaru dari OSGi, yaitu OSGi R6. Selain itu, Knopflerfish juga terbukti dapat diimplementasikan pada Android OS.
+There are several implementations of OSGi, or commonly referred to OSGi Framework, ie: Apache Felix, Concierge, Equinox Eclipse, JBoss, Hitachi, Knopflerfish, and ProSyst. This study uses the Knopflerfish OSGi Framework, because Knopflerfish OSGi Framework has implemented the latest OSGi specification, the OSGi R6. In addition, the Knopflerfish OSGi Framework is also proven to be implemented in Android application.
+
+
+
+
+\subsection{Android Application} \label{ssec:android-application}
+By default, Knopflerfish provides an implementation of the OSGi Framework that can be run on any operating system that supports Java SE. However, because the Android OS uses a different JVM implementations, the Dalvik VM, so it needs to be made Knopflerfish OSGi Framework implementations that can run on the Android OS.
+
+Android application that is made must support the principle of OSGi, which is modular. The case studies used in this study is a case study for field data collection, so that the user interface is a questionnaire form. To accelerate the creation and simplify the loading of the page, so it is used Cordova. Cordova is a webview-based, so the control used is an HTML form element. \figurename{\ref{fig:android-app}} shows screenshots of Android application.
+
+\begin{figure}
+	\centering
+	\subfloat[Home Page]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-app-1}
+		\label{fig:android-app-1}
+	}
+	\hfil
+	\subfloat[Autostart OSGi Framework]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-app-2}
+		\label{fig:android-app-2}}
+	\hfil
+	\subfloat[Bundle Page]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-app-3}
+		\label{fig:android-app-3}}
+	\caption{Android Application}
+	\label{fig:android-app}
+\end{figure}
 
 
 
@@ -541,19 +577,94 @@ Ada beberapa implementasi dari OSGi, atau biasa disebut dengan OSGi Framework, a
 \subsection{OSGi Bundles}
 
 \subsubsection{Proxy Server}
-Proxy server merupakan sebuah OSGi bundle yang mengimplementasikan embedded web server. Web server yang digunakan dalam penelitian ini adalah Jetty 9 yang merupakan versi tertinggi pada saat ini. Pada Proxy Server Bundle ter-register sebuah service (API) ContextHandlerService yang berfungsi untuk meregister ServletContext yang diinisiasi pada Application Bundle.
+Proxy server is an OSGi bundle that implements an embedded web server. Web server used in this study is Jetty 9 which is the highest major version available today. In the Proxy Server Bundle registered a service (API) ContextHandlerService, which is used to register the ServletContext initiated on Application Bundle.
 
 \subsubsection{Composite Application}
-Composite Application merupakan sebuah OSGi bundle yang mengimplementasikan Web services dan client dalam sebuah bundle. Web services diimplementasikan dalam bentuk Servlets yang terkumpul dalam sebuah context. Sementara client diimplementasikan dalam bentuk web-based application, yang ditulis dengan HTML, Javascript, dan CSS. Selain itu, Composite Application juga menyediakan API yang dapat diimport secara dynamic oleh bundle yang lain, antara lain : AccountHandlerService, DaoHandlerService, dan PropertyHandlerService.
+Composite Application is an OSGi bundle that implements web services and clients in a same bundle. Web services are implemented in the form of Servlets collected in a single context. While the client is implemented in the form of a web-based application, written in HTML, Javascript, and CSS. In addition, the Composite Application also provides an API that can be imported dynamically by another bundle, ie: AccountHandlerService, DaoHandlerService, and PropertyHandlerService.
 
 \subsubsection{Synchronizer}
-Synchronizer merupakan sebuah OSGi bundle yang digunakan untuk melakukan sinkronisasi data secara dua arah: Remote to Local dan Local to Remote. Synchronizer bundle memerlukan beberapa service yang disediakan oleh Composite Application, antara lain: AccountHandlerService untuk mengakses session yang akan disinkronisasi serta DaoHandlerService untuk mengakses local storage.
+Synchronizer is an OSGi bundle that is used to synchronize data in two directions: Remote to Local and Local to Remote. Synchronizer bundle requires some service provided by Composite Application, ie: AccountHandlerService to access the session to be synchronized and DaoHandlerService to access local storage.
+
+\figurename{\ref{fig:android-bundle}} shows screenshots of OSGi bundles installed and started in Android environment.
+
+\begin{figure}
+	\centering
+	\subfloat[Install bundle]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-bundle-1}
+		\label{fig:android-bundle-1}}
+	\hfil
+	\subfloat[Bundle is installing]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-bundle-2}
+		\label{fig:android-bundle-2}}
+	\hfil
+	\subfloat[Bundles are installed]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-bundle-3}
+		\label{fig:android-bundle-3}}
+	\vfil
+	\subfloat[Bundle is starting]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-bundle-4}
+		\label{fig:android-bundle-4}}
+	\hfil
+	\subfloat[Bundles are active]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-bundle-5}
+		\label{fig:android-bundle-5}}
+	\hfil
+	\subfloat[Composite application is loaded]{
+		\centering
+		\includegraphics[width=2.5cm]{../Images/android-bundle-6}
+		\label{fig:android-bundle-6}}
+	\caption{Android Bundles}
+	\label{fig:android-bundle}
+\end{figure}
 
 
 
 
-\subsection{Android Application}
-Secara default, Knopflerfish telah menyediakan implementasi dari OSGi Framework yang dapat dijalankan pada semua sistem operasi yang mendukung Java SE. Tetapi, dikarenakan Android OS menggunakan implementasi JVM yang berbeda, yaitu Dalvik VM, maka perlu dibuat implementasi Knopflerfish yang dapat berjalan di Android OS. Implementasi dibuat 
+\subsection{Remote Server}
+As described in \ref{ssec:android-application}, Knopflerfish by default already provides an implementation of the OSGi Framework that can be run on any operating system that supports Java SE. Remote server running Knopflerfish using minimal bundle, and installed the same module with the composite application. Listing.\ref{lst:start-framework-remote} and Listing.\ref{lst:start-bundle-remote} shows screenshots of OSGi bundles are active in remote server.
+
+\begin{listing}
+    \caption{Knopflerfish with minimal bundles}
+    \begin{minted}[showspaces=false,breaklines=true]{java}
+java -jar framework.jar -xargs minimal.xargs
+Knopflerfish OSGi framework launcher, version <unknown>
+Copyright 2003-2015 Knopflerfish. All Rights Reserved.
+See http://www.knopflerfish.org for more information.
+
+Created Framework: org.knopflerfish.framework, version=7.2.0.
+> Framework launched
+	\end{minted}
+    \label{lst:start-framework-remote}
+\end{listing}
+
+\begin{listing}
+    \caption{Install and start required bundles}
+    \begin{minted}[showspaces=false,breaklines=true]{java}
+> install http://knopflerfish.soedomoto.tk/jars/pgfw7/proxy-server-9.0.7.v20131107-dex.jar
+Installed: Proxy Server (#10)
+> start 10
+2016-09-05 21:57:02.294:INFO:oejs.Server:BundleStart #10: jetty-9.0.z-SNAPSHOT
+2016-09-05 21:57:02.455:INFO:oejs.ServerConnector:BundleStart #10: Started ServerConnector@698b6705{HTTP/1.1}{0.0.0.0:5555}
+Started: Proxy Server (#10)
+> install http://knopflerfish.soedomoto.tk/jars/pgfw7/se2016-bundle-0.1-SNAPSHOT-dex.jar
+Installed: SE2016 - Application (#11)
+> start 11
+...
+2016-09-05 21:57:33.147:INFO:oejsh.ContextHandler:BundleStart #11: Started o.e.j.s.ServletContextHandler@390161c7{/se2016,null,AVAILABLE}
+Started: SE2016 - Application (#11)
+> install http://knopflerfish.soedomoto.tk/jars/pgfw7/se2016-sync-bundle-0.1-SNAPSHOT-dex.jar
+Installed: SE2016 - Sync Module (#12)
+> start 12
+Started: SE2016 - Sync Module (#12)
+...
+	\end{minted}
+    \label{lst:start-bundle-remote}
+\end{listing}
 
 
 
@@ -656,9 +767,11 @@ Secara default, Knopflerfish telah menyediakan implementasi dari OSGi Framework 
 
 
 \section{Conclusion and Future Work}
-We proposed a mobile proxy design that allows the distribution web service dynamically as a bundle. It is intended to be suitable for current SOA-related standards technologies. It provides transparent resources (i.e. data and web service logics) access using combination of synchronization, replication, and routing mechanisms. Data integration is performed automatically, thus data can be viewed as a unity and does not need to be manually checked to ensure its integrity.
+We propose a mobile proxy design that is dynamic, which can be distributed separately with composite applications and its synchronization. Distribution of proxy server, composite applications, and synchronization is done in the form of OSGi bundle. By adopting the principles of OSGi, synchronization workflows in the form of web services proved to be more effective, because each bundle can be updated independently, either manually or automatically.
 
-Our proposed design presented in this paper is preliminary result of our research. Our proposed design needs further research, especially in replication mechanism in mobile device, especially android environment, followed by realization for evaluation purpose. Well-designed mechanism will result easy configuration, increase availability, and improve system performance.
+By adopting the synchronization in a separate module also proven to be able to synchronize with better and more controlled because it can be start-stop and in every moment. Synchronization modules can also be updated, either manually or automatically, without affecting the other modules.
+
+Our proposed design also makes it possible to install more than one composite applications and synchronization in an application with just a single proxy server.
 
 
 
@@ -667,10 +780,8 @@ Our proposed design presented in this paper is preliminary result of our researc
 
 
 % use section* for acknowledgment
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
+% \section*{Acknowledgment}
+% The authors would like to thank...
 
 
 
