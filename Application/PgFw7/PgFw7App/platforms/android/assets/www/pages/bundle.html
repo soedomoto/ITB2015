@@ -5,21 +5,23 @@
             <a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a>
         </div>
         <div class="center sliding">Bundles</div>
-        <!--<div class="right">-->
-            <!--&lt;!&ndash; Right link contains only icon - additional "icon-only" class&ndash;&gt;-->
-            <!--<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>-->
-        <!--</div>-->
+        <div class="right">
+            <a href="#" class="refresh-bundle link">
+                <i class="icon fa fa-refresh"></i>
+            </a>
+        </div>
     </div>
 </div>
 
 <div class="pages navbar-through toolbar-through">
-    <!-- Page, data-page contains page name-->
-    <div data-page="bundle" class="page">
-        <!-- Scrollable page content-->
+    <div data-page="bundle" class="page no-tabbar no-toolbar">
         <div class="page-content">
-            <div class="content-block-title">Installed OSGi Bundles</div>
-            <div class="list-block accordion-list list-bundle">
+            <div class="list-block accordion-list list-page list-bundle">
                 <ul></ul>
+                <div class="row" style="margin: 10px">
+                    <div class="col-50"></div>
+                    <div class="col-50"><a href="#" class="button install">Install Bundle</a></div>
+                </div>
             </div>
         </div>
     </div>

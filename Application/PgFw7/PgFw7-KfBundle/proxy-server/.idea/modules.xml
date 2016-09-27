@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/proxy-server.iml" filepath="$PROJECT_DIR$/proxy-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/../se2016-bundle/se2016-bundle.iml" filepath="$PROJECT_DIR$/../se2016-bundle/se2016-bundle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../sqlite-bundle/sqlite-bundle.iml" filepath="$PROJECT_DIR$/../sqlite-bundle/sqlite-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../se2016-sync-bundle/se2016-sync-bundle.iml" filepath="$PROJECT_DIR$/../se2016-sync-bundle/se2016-sync-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../se2016-test-bundle/se2016-test-bundle.iml" filepath="$PROJECT_DIR$/../se2016-test-bundle/se2016-test-bundle.iml" />
     </modules>
   </component>
 </project>

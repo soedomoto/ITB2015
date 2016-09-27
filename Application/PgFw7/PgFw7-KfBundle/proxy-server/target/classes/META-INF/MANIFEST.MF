@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1472509883988
+Bnd-LastModified: 1472809029773
 Build-Jdk: 1.8.0_91
 Built-By: soedomoto
 Bundle-Activator: com.soedomoto.bundle.proxy.Activator

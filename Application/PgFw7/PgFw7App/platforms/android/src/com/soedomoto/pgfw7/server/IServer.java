@@ -7,8 +7,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.osgi.framework.Bundle;
+import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
 import org.osgi.framework.launch.Framework;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class IServer {
     private static String TAG = IServer.class.getSimpleName();
@@ -75,6 +81,28 @@ public class IServer {
         }
 
         return lstBundles.toString();
+    }
+
+    @JavascriptInterface
+    public String installBundle(String uri) {
+        try {
+            BundleContext context = osgi.getFramework().getBundleContext();
+            Bundle bundle = context.installBundle(uri, new URL(uri).openStream());
+            LOG.e(TAG, String.format("Install bundle %s successfully", uri));
+            return String.valueOf(true);
+        } catch (BundleException e) {
+            LOG.e(TAG, String.format("Install bundle %s failed", uri), e);
+            return e.getCause().getMessage();
+        } catch (FileNotFoundException e) {
+            LOG.e(TAG, String.format("Install bundle %s failed", uri), e);
+            return e.getCause().getMessage();
+        } catch (MalformedURLException e) {
+            LOG.e(TAG, String.format("Install bundle %s failed", uri), e);
+            return e.getCause().getMessage();
+        } catch (IOException e) {
+            LOG.e(TAG, String.format("Install bundle %s failed", uri), e);
+            return e.getCause().getMessage();
+        }
     }
 
     @JavascriptInterface

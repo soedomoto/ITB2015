@@ -23,9 +23,9 @@
         <sqlite-version>3.8.11.2</sqlite-version>
 
         <!-- Ubuntu system path -->
-        <android.dx>/media/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/dx</android.dx>
-        <android.aapt>/media/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/aapt</android.aapt>
-        <maven.repo.local>file:///media/DATA/SOFTWARE/MAVEN/repository/</maven.repo.local>
+        <android.dx>/media/soedomoto/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/dx</android.dx>
+        <android.aapt>/media/soedomoto/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/aapt</android.aapt>
+        <maven.repo.local>file:///media/soedomoto/DATA/SOFTWARE/MAVEN/repository/</maven.repo.local>
 
         <!-- Windows system path -->
         <!--<android.dx>D:\ANDROID-SDK\WINDOWS\build-tools\23.0.3\dx.bat</android.dx>-->

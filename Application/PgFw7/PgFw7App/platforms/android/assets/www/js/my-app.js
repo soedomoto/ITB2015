@@ -1,21 +1,24 @@
 var appTitle = 'Mobile Survey'
+var proxyURL = 'http://localhost:5555';
 
 // Initialize your app
 var myApp = new Framework7({
     precompileTemplates: true
 });
 
-var mainView = myApp.addView('.view-main')
-mainView.router.loadPage('pages/home.html')
+// Add view
+var appView = myApp.addView('#app-view', { dynamicNavbar: true });
+var settingView = myApp.addView('#setting-view', { dynamicNavbar: true });
+
+var mainView = appView;
 
 // Export selectors engine
 var $$ = Dom7;
 
 document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    $$('.app-title').html(appTitle);
 
-    //  Autostart OSGi Framework
+function onDeviceReady() {
+    //    Autostart OSGi Framework
     setTimeout(function () {
         myApp.showPreloader('OSGi Framework is starting...')
         setTimeout(function () {
@@ -29,6 +32,8 @@ function onDeviceReady() {
                     title: 'OSGi Framework',
                     message: 'OSGi Framework is started'
                 });
+
+                osgiStarted();
             } else {
                 myApp.addNotification({
                     hold: 3000,
@@ -40,7 +45,7 @@ function onDeviceReady() {
         }, 10);
     }, 1000);
 
-    //  Handle back button
+    //    Handle back button
     document.addEventListener("backbutton", function (e) {
         e.preventDefault();
 
@@ -78,8 +83,77 @@ function onDeviceReady() {
     }, false );
 }
 
-var proxyURL = 'http://localhost:5555';
-$$(document).on('click', '.list-application a', function (e) {
+function osgiStarted() {
+    var list = $$('.page[data-page="apps"]').find('.list-apps ul');
+    listApplications(list);
+}
+
+function listApplications(list) {
+    var bundles = window.server.listBundles();
+    bundles = JSON.parse(bundles);
+
+    list.children().remove();
+
+    bundles.forEach(function(bundle) {
+        if(bundle['state'][0] == 0x00000020 && bundle['context'] != null) {
+            $$('<li>' +
+                '<a href="'+ bundle['context'] +'" class="item-content item-link"><div class="item-inner">'+
+                    '<div class="item-title">'+ bundle['name'] + '</div>' +
+                '</div></a>' +
+            '</li>').appendTo(list);
+        }
+    });
+}
+
+function listBundles(list) {
+    var bundles = window.server.listBundles();
+    bundles = JSON.parse(bundles);
+
+    list.children().remove();
+
+    bundles.forEach(function(bundle) {
+        $$('<li class="accordion-item">' +
+            '<a href="#" class="item-content item-link"><div class="item-inner">'+
+                '<div class="item-title">'+ bundle['name'] + '</div>' +
+                '<div class="item-after">'+ bundle['state'][1] + '</div>' +
+            '</div></a>' +
+            '<div class="accordion-item-content"><div class="content-block">' +
+                '<div class="row">' +
+                    '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button start">Start</a></div>' +
+                    '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button stop">Stop</a></div>' +
+                '</div>' +
+                '<div class="row">' +
+                    '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button update">Update</a></div>' +
+                    '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button uninstall">Uninstall</a></div>' +
+                '</div>' +
+            '</div></div>'+
+        '</li>').appendTo(list);
+    });
+}
+
+
+/*Bundle*/
+
+$$(document).on('click', '#app-view .refresh-app', function (e) {
+    var list = $$('.page[data-page="apps"]').find('.list-apps ul');
+
+    setTimeout(function () {
+        myApp.showPreloader('App List is being refreshed...')
+        setTimeout(function () {
+            listApplications(list);
+            myApp.hidePreloader()
+
+            myApp.addNotification({
+                hold: 3000,
+                closeOnClick: true,
+                title: 'App List',
+                message: 'App List is refreshed'
+            });
+        }, 100);
+    }, 10);
+});
+
+$$(document).on('click', '.list-apps a', function (e) {
     href = proxyURL + $$(this).attr('href');
 
     $.ajax({
@@ -87,13 +161,13 @@ $$(document).on('click', '.list-application a', function (e) {
         context: document.body,
         success: function(page) {
             div = $('<div/>').html(page);
-            mainView.router.loadContent(div.find('.view').html());
+            appView.router.loadContent(div.find('.view').html());
 
             div.find('script[ajax-load="true"]').each(function(i) {
                 src = $(this).attr('src');
                 src = href + '/' + src;
                 $.getScript(src).done(function( script, textStatus ) {
-                    console.log( textStatus );
+                    console.log('Script "' + script + '" is loaded.');
                 }).fail(function( jqxhr, settings, exception ) {
                     console.log( "Triggered ajaxError handler." );
                 });
@@ -105,220 +179,179 @@ $$(document).on('click', '.list-application a', function (e) {
 });
 
 $$(document).on('pageInit', '.page[data-page="bundle"]', function (e) {
-    var list = $$(this).find('.list-bundle ul');
-    var apps = $$('.list-application ul');
+    var list = $$('.page[data-page="bundle"]').find('.list-bundle ul');
+    listBundles(list);
 
-    function listBundles() {
-        var bundles = window.server.listBundles();
-        bundles = JSON.parse(bundles);
+    $$(document).on('click', '.refresh-bundle', function (e) {
+        setTimeout(function () {
+            myApp.showPreloader('Bundle List is being refreshed...')
+            setTimeout(function () {
+                listBundles(list);
+                myApp.hidePreloader()
 
-        list.children().remove();
-        apps.children().remove();
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle List',
+                    message: 'Bundle List is refreshed'
+                });
+            }, 100);
+        }, 10);
+    });
+});
 
-        bundles.forEach(function(bundle) {
-            $$('<li class="accordion-item">' +
-                '<a href="#" class="item-content item-link"><div class="item-inner">'+
-                    '<div class="item-title">'+ bundle['name'] + '</div>' +
-                    '<div class="item-after">'+ bundle['state'][1] + '</div>' +
-                '</div></a>' +
-                '<div class="accordion-item-content"><div class="content-block">' +
-                    '<div class="row">' +
-                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button start">Start</a></div>' +
-                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button stop">Stop</a></div>' +
-                    '</div>' +
-                    '<div class="row">' +
-                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button update">Update</a></div>' +
-                        '<div class="col-50"><a href="#" bundle-id="'+ bundle['id'] +'" class="button uninstall">Uninstall</a></div>' +
-                    '</div>' +
-                '</div></div>'+
-            '</li>').appendTo(list);
+$$(document).on('click', '.page[data-page="bundle"] .install', function() {
+    var list = $$('.page[data-page="bundle"]').find('.list-bundle ul');
 
-            if(bundle['state'][0] == 0x00000020 && bundle['context'] != null) {
-                $$('<li class="item-content"><div class="item-inner">'+
-                    '<a href="'+ bundle['context'] +'" class="item-link close-panel">' +
-                        '<div class="item-title">'+ bundle['name'] + '</div>'+
-                    '</a>' +
-                '</div></li>').appendTo(apps);
+    myApp.prompt('Enter bundle URI', 'Install Bundle', function (uri) {
+        setTimeout(function () {
+            myApp.showPreloader('Bundle is installing...')
+            setTimeout(function () {
+                status = window.server.installBundle(uri);
+                myApp.hidePreloader()
+
+                if(status == 'true') {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: 'Bundle is installed'
+                    });
+
+                    listBundles(list);
+                } else {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Bundle',
+                        message: status
+                    });
+                }
+            }, 200);
+        }, 100);
+    });
+});
+
+$$(document).on('click', '.page[data-page="bundle"] .start', function() {
+    var list = $$('.page[data-page="bundle"]').find('.list-bundle ul');
+    var id = parseInt($$(this).attr('bundle-id'));
+
+    setTimeout(function () {
+        myApp.showPreloader('Bundle is starting...')
+        setTimeout(function () {
+            status = window.server.startBundle(id);
+            myApp.hidePreloader()
+
+            if(status == 'true') {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: 'Bundle is started'
+                });
+
+                listBundles(list);
+            } else {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: status
+                });
             }
-        });
-    }
-
-    $$(document).on('click', '.page[data-page="bundle"] .start', function() {
-        var id = parseInt($$(this).attr('bundle-id'));
-
-        setTimeout(function () {
-            myApp.showPreloader('Bundle is starting...')
-            setTimeout(function () {
-                status = window.server.startBundle(id);
-                myApp.hidePreloader()
-
-                if(status == 'true') {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: 'Bundle is started'
-                    });
-
-                    listBundles();
-                } else {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: status
-                    });
-                }
-            }, 10);
         }, 10);
-    });
-
-    $$(document).on('click', '.page[data-page="bundle"] .stop', function() {
-        var id = parseInt($$(this).attr('bundle-id'));
-
-        setTimeout(function () {
-            myApp.showPreloader('Bundle is stopping...')
-            setTimeout(function () {
-                status = window.server.stopBundle(id);
-                myApp.hidePreloader()
-
-                if(status == 'true') {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: 'Bundle is stopped'
-                    });
-
-                    listBundles();
-                } else {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: status
-                    });
-                }
-            }, 10);
-        }, 10);
-    });
-
-    $$(document).on('click', '.page[data-page="bundle"] .update', function() {
-        var id = parseInt($$(this).attr('bundle-id'));
-
-        setTimeout(function () {
-            myApp.showPreloader('Bundle is updating...')
-            setTimeout(function () {
-                status = window.server.updateBundle(id);
-                myApp.hidePreloader()
-
-                if(status == 'true') {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: 'Bundle is updated'
-                    });
-
-                    listBundles();
-                } else {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: status
-                    });
-                }
-            }, 10);
-        }, 10);
-    });
-
-    $$(document).on('click', '.page[data-page="bundle"] .uninstall', function() {
-        var id = parseInt($$(this).attr('bundle-id'));
-
-        setTimeout(function () {
-            myApp.showPreloader('Bundle is uninstalling...')
-            setTimeout(function () {
-                status = window.server.uninstallBundle(id);
-                myApp.hidePreloader()
-
-                if(status == 'true') {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: 'Bundle is uninstaled'
-                    });
-
-                    listBundles();
-                } else {
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Bundle',
-                        message: status
-                    });
-                }
-            }, 10);
-        }, 10);
-    });
-
-    listBundles();
+    }, 10);
 });
 
+$$(document).on('click', '.page[data-page="bundle"] .stop', function() {
+    var list = $$('.page[data-page="bundle"]').find('.list-bundle ul');
+    var id = parseInt($$(this).attr('bundle-id'));
 
+    setTimeout(function () {
+        myApp.showPreloader('Bundle is stopping...')
+        setTimeout(function () {
+            status = window.server.stopBundle(id);
+            myApp.hidePreloader()
 
+            if(status == 'true') {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: 'Bundle is stopped'
+                });
 
-
-
-
-
-
-
-
-
-
-
-
-// Add view
-var mainView = myApp.addView('.view-main', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
+                listBundles(list);
+            } else {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: status
+                });
+            }
+        }, 10);
+    }, 10);
 });
 
-// Callbacks to run specific code for specific pages, for example for About page:
-myApp.onPageInit('about', function (page) {
-    // run createContentPage func after link was clicked
-    $$('.create-page').on('click', function () {
-        createContentPage();
-    });
+$$(document).on('click', '.page[data-page="bundle"] .update', function() {
+    var list = $$('.page[data-page="bundle"]').find('.list-bundle ul');
+    var id = parseInt($$(this).attr('bundle-id'));
+
+    setTimeout(function () {
+        myApp.showPreloader('Bundle is updating...')
+        setTimeout(function () {
+            status = window.server.updateBundle(id);
+            myApp.hidePreloader()
+
+            if(status == 'true') {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: 'Bundle is updated'
+                });
+
+                listBundles(list);
+            } else {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: status
+                });
+            }
+        }, 10);
+    }, 10);
 });
 
-// Generate dynamic page
-var dynamicPageIndex = 0;
-function createContentPage() {
-	mainView.router.loadContent(
-        '<!-- Top Navbar-->' +
-        '<div class="navbar">' +
-        '  <div class="navbar-inner">' +
-        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="center sliding">Dynamic Page ' + (++dynamicPageIndex) + '</div>' +
-        '  </div>' +
-        '</div>' +
-        '<div class="pages">' +
-        '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="dynamic-pages" class="page">' +
-        '    <!-- Scrollable page content-->' +
-        '    <div class="page-content">' +
-        '      <div class="content-block">' +
-        '        <div class="content-block-inner">' +
-        '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
-        '          <p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
-        '        </div>' +
-        '      </div>' +
-        '    </div>' +
-        '  </div>' +
-        '</div>'
-    );
-	return;
-}
+$$(document).on('click', '.page[data-page="bundle"] .uninstall', function() {
+    var list = $$('.page[data-page="bundle"]').find('.list-bundle ul');
+    var id = parseInt($$(this).attr('bundle-id'));
+
+    setTimeout(function () {
+        myApp.showPreloader('Bundle is uninstalling...')
+        setTimeout(function () {
+            status = window.server.uninstallBundle(id);
+            myApp.hidePreloader()
+
+            if(status == 'true') {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: 'Bundle is uninstaled'
+                });
+
+                listBundles(list);
+            } else {
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Bundle',
+                    message: status
+                });
+            }
+        }, 10);
+    }, 10);
+});
