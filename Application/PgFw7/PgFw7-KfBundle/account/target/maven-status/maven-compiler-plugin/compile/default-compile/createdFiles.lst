@@ -1,0 +1,5 @@
+com/soedomoto/bundle/account/controller/CAccount.class
+com/soedomoto/bundle/account/model/MAccount.class
+com/soedomoto/bundle/account/controller/CAccount$Login.class
+com/soedomoto/bundle/account/Activator.class
+com/soedomoto/bundle/account/controller/CAccount$Register.class

@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1475369059853
+Build-Jdk: 1.8.0_91
+Built-By: soedomoto
+Bundle-Activator: com.soedomoto.bundle.account.Activator
+Bundle-Description: Provides SE2016 Application Bundle
+Bundle-ManifestVersion: 2
+Bundle-Name: BPS - Enumerator Account
+Bundle-SymbolicName: com.soedomoto.account
+Bundle-Version: 0.1.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: com.soedomoto.bundle.account;uses:="org.osgi.framework,o
+ rg.osgi.service.cm";version="0.1.0",com.soedomoto.bundle.account.contro
+ ller;uses:="com.soedomoto.bundle.account.model";version="0.1.0",com.soe
+ domoto.bundle.account.model;version="0.1.0",org.apache.commons.io;versi
+ on="2.2";uses:="org.apache.commons.io.filefilter",org.apache.commons.io
+ .comparator;version="2.2";uses:="org.apache.commons.io",org.apache.comm
+ ons.io.filefilter;version="2.2";uses:="org.apache.commons.io",org.apach
+ e.commons.io.input;version="2.2";uses:="org.apache.commons.io",org.apac
+ he.commons.io.monitor;version="2.2";uses:="org.apache.commons.io",org.a
+ pache.commons.io.output;version="2.2"
+Import-Package: org.osgi.framework;version="[1.5,2)",org.osgi.service.cm
+ ;version="[1.3,2)",com.soedomoto.bundle.account,com.soedomoto.bundle.ac
+ count.controller,com.soedomoto.bundle.account.model,com.soedomoto.bundl
+ e.proxy.service;version="[9.0,10)"
+Tool: Bnd-3.0.0.201509101326
