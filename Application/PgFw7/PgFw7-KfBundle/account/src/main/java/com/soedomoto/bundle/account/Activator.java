@@ -13,21 +13,18 @@ import org.h2.util.IOUtils;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
-import org.osgi.service.cm.ConfigurationException;
-import org.osgi.service.cm.ManagedService;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.Dictionary;
 import java.util.Enumeration;
 
 /**
  * Created by soedomoto on 10/1/16.
  */
-public class Activator implements BundleActivator, ManagedService {
+public class Activator implements BundleActivator {
     public static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss.SSS").create();
 
     public String JDBC_URL;
@@ -52,6 +49,13 @@ public class Activator implements BundleActivator, ManagedService {
         JDBC_URL = context.getProperty("org.osgi.bundle.account.jdbc.url");
         JDBC_USERNAME = context.getProperty("org.osgi.bundle.account.jdbc.username");
         JDBC_PASSWORD = context.getProperty("org.osgi.bundle.account.jdbc.password");
+
+        if(CONTEXT_PATH == null) CONTEXT_PATH = "/account";
+        if(REAL_HOST == null) REAL_HOST = "http://pgfw7.soedomoto.tk";
+        if(JDBC_URL == null) JDBC_URL = "jdbc:h2:tcp://knopflerfish.soedomoto.tk/account";
+        if(JDBC_USERNAME == null) JDBC_USERNAME = "bps";
+        if(JDBC_PASSWORD == null) JDBC_PASSWORD = "bps";
+
         System.out.println(String.format("\n" +
                 "=== Properties === \n" +
                 "+ Servlet Context : %s \n" +
@@ -111,9 +115,5 @@ public class Activator implements BundleActivator, ManagedService {
         }
 
         return dataDir + File.separator + webroot;
-    }
-
-    public void updated(Dictionary properties) throws ConfigurationException {
-
     }
 }
