@@ -8,13 +8,13 @@ import com.soedomoto.bundle.se2016.model.MSls;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
@@ -34,49 +34,53 @@ public class CSls {
     public static void createDao() throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MSls.class);
         v108Dao = DaoManager.createDao(connectionSource, MSls.class);
-
-        //populateData();
     }
 
     public static void registerServlets(ServletContextHandler context) {
-        context.addServlet(new ServletHolder(new SLSByBlokSensus()), SLSByBlokSensus.PATH);
-        context.addServlet(new ServletHolder(new SLSByKode()), SLSByKode.PATH);
-    }
+        ServletHolder slsByBs = new ServletHolder(new SLSByBlokSensus());
+        slsByBs.setAsyncSupported(true);
+        context.addServlet(slsByBs, SLSByBlokSensus.PATH);
 
-    private static void populateData() {
-        try {
-            MBlokSensus blokSensus = v105Dao.queryForId("1302090010001");
-
-            v108Dao.create(new MSls("001", "001", new Date(), blokSensus));
-            v108Dao.create(new MSls("002", "002", new Date(), blokSensus));
-            v108Dao.create(new MSls("003", "003", new Date(), blokSensus));
-        } catch (SQLException e) {}
+        ServletHolder slsByKode = new ServletHolder(new SLSByKode());
+        slsByKode.setAsyncSupported(true);
+        context.addServlet(slsByKode, SLSByKode.PATH);
     }
 
     public static class SLSByBlokSensus extends HttpServlet {
         public static String PATH = "/sls";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String kodePropinsi = req.getParameter("propinsi");
-            String kodeKabupaten = req.getParameter("kabupaten");
-            String kodeKecamatan = req.getParameter("kecamatan");
-            String kodeKelurahan = req.getParameter("kelurahan");
-            String kodeBlokSensus = req.getParameter("bloksensus");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String kodePropinsi = req.getParameter("propinsi");
+            final String kodeKabupaten = req.getParameter("kabupaten");
+            final String kodeKecamatan = req.getParameter("kecamatan");
+            final String kodeKelurahan = req.getParameter("kelurahan");
+            final String kodeBlokSensus = req.getParameter("bloksensus");
 
-            try {
-                MBlokSensus blokSensus = v105Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
-                        kodeKelurahan + kodeBlokSensus);
-                List<MSls> slses = v108Dao.queryForMatching(new MSls(blokSensus));
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MBlokSensus blokSensus = v105Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
+                                    kodeKelurahan + kodeBlokSensus);
+                            List<MSls> slses = v108Dao.queryForMatching(new MSls(blokSensus));
 
-                resp.getWriter().println(gson.toJson(slses));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(slses));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 
@@ -84,28 +88,39 @@ public class CSls {
         public static String PATH = "/sls/by-kode";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String fullKode = req.getParameter("fullKode");
-            String refresh = req.getParameter("refreshForeign");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String fullKode = req.getParameter("fullKode");
+            final String refresh = req.getParameter("refreshForeign");
 
-            try {
-                MSls sls = v108Dao.queryForId(fullKode);
-                if(Boolean.valueOf(refresh)) {
-                    v105Dao.refresh(sls.getBlokSensus());
-                    v104Dao.refresh(sls.getBlokSensus().getKelurahan());
-                    v103Dao.refresh(sls.getBlokSensus().getKelurahan().getKecamatan());
-                    v102Dao.refresh(sls.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
-                    v101Dao.refresh(sls.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MSls sls = v108Dao.queryForId(fullKode);
+                            if(Boolean.valueOf(refresh)) {
+                                v105Dao.refresh(sls.getBlokSensus());
+                                v104Dao.refresh(sls.getBlokSensus().getKelurahan());
+                                v103Dao.refresh(sls.getBlokSensus().getKelurahan().getKecamatan());
+                                v102Dao.refresh(sls.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
+                                v101Dao.refresh(sls.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                            }
+
+                            resp.getWriter().println(gson.toJson(sls));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
                 }
-
-                resp.getWriter().println(gson.toJson(sls));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+            });
         }
     }
 }

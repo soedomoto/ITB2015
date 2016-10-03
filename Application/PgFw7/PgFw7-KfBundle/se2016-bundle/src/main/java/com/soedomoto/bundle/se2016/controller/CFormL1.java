@@ -7,25 +7,31 @@ import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.Activator;
 import com.soedomoto.bundle.se2016.model.*;
+import org.eclipse.jetty.client.HttpClient;
+import org.eclipse.jetty.client.api.Request;
 import org.eclipse.jetty.client.api.Response;
-import org.eclipse.jetty.proxy.ProxyServlet;
+import org.eclipse.jetty.client.api.Result;
+import org.eclipse.jetty.client.util.BufferingResponseListener;
+import org.eclipse.jetty.client.util.StringContentProvider;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
-import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.URI;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
-import static com.soedomoto.bundle.se2016.Activator.gson;
+import static com.soedomoto.bundle.se2016.Activator.*;
 import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
 import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
 import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
@@ -183,84 +189,218 @@ public class CFormL1 {
         }
     }
 
-    public static class Submit extends ProxyServlet {
+    public static class Submit extends HttpServlet {
         public static String PATH = "/submit";
 
         @Override
-        protected void onResponseFailure(HttpServletRequest request, final HttpServletResponse response, Response proxyResponse, Throwable failure) {
-            System.err.println(String.format("Submit to remote URI %s failed. Message: %s", request.getRequestURI(), failure.getMessage()));
+        protected void doPost(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            try {
+                // Parse parameter
+                String params = "";
+                Scanner s = new Scanner(req.getInputStream(), "UTF-8").useDelimiter("\\A");
+                while(s.hasNext()) params += s.next();
 
-            if(request.getMethod().equalsIgnoreCase("POST")) {
+                //  Initiate Http Client
+                HttpClient client = new HttpClient();
                 try {
-                    String params = "";
-                    Scanner s = new Scanner(request.getInputStream(), "UTF-8").useDelimiter("\\A");
-                    while(s.hasNext()) params += s.next();
+                    client.start();
+                } catch (Exception e) {
+                    _sendException("HttpClient cannot be started", e, resp);
+                }
 
-                    FormL1 jsonFormL1 = gson.fromJson(params, FormL1.class);
+                System.out.println(String.format("This IP : %s, Real Host IP : %s", THIS_IP, REAL_HOST_IP));
+
+                // Send to remote if THIS_IP <> REAL_HOST_IP
+                if(! THIS_IP.equalsIgnoreCase(REAL_HOST_IP)) {
+                    final String finalParams = params;
 
                     try {
-                        MPropinsi v101              = v101Dao.queryForId(jsonFormL1.v101);
-                        MKabupaten v102             = v102Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102);
-                        MKecamatan v103             = v103Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
-                                                    jsonFormL1.v103);
-                        MKelurahan v104             = v104Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
-                                                    jsonFormL1.v103 + jsonFormL1.v104);
-                        MBlokSensus v105            = v105Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
-                                                    jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v105);
-                        MSubBlokSensus v106         = v106Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
-                                                    jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v105 +
-                                                    jsonFormL1.v106);
-                        MNks v107                   = v107Dao.queryForId(jsonFormL1.v107);
-                        MSls v108                   = v108Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
-                                                    jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v108);
-                        MKriteriaBlokSensus v109    = v109Dao.queryForId(jsonFormL1.v109);
+                        System.out.println(String.format("Sending data, params : %s", finalParams));
 
-                        MPencacah pencacah = pencacahDao.queryForId(jsonFormL1.v202);
-                        Date v204 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").parse(jsonFormL1.v204);
+                        client.POST(Activator.REAL_HOST + Activator.CONTEXT_PATH + PATH)
+                            .content(new StringContentProvider(params))
+                            .onRequestFailure(new Request.FailureListener() {
+                                public void onFailure(Request request, Throwable failure) {
+                                    System.out.println(String.format("Sending data failed, cause: %s", failure.getCause()));
+                                }
+                            })
+                            .onResponseFailure(new Response.FailureListener() {
+                                public void onFailure(Response response, Throwable failure) {
+                                    System.out.println(String.format("Sending data failed, cause: %s", failure.getCause()));
 
-                        MFormL1 formL1 = new MFormL1(v101, v102, v103, v104, v105, v106, v107, v108, v109,
-                                pencacah, v204, jsonFormL1.v301, jsonFormL1.v302, jsonFormL1.v303, jsonFormL1.v304,
-                                jsonFormL1.v305, jsonFormL1.v306, jsonFormL1.v307, jsonFormL1.v308, new Date());
-                        formL1Dao.createOrUpdate(formL1);
+                                    FormL1 jsonFormL1 = gson.fromJson(finalParams, FormL1.class);
 
-                        for(FormL1B5 b5 : jsonFormL1.b5) {
-                            MFormL1B5 formL1B5 = new MFormL1B5(formL1, b5.v501, b5.v502, b5.v503, b5.v504, b5.v505,
-                                    b5.v506, b5.v507, new Date());
-                            formL1B5Dao.createOrUpdate(formL1B5);
+                                    try {
+                                        _saveRecord(jsonFormL1, resp);
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            })
+                            .onResponseSuccess(new BufferingResponseListener() {
+                                @Override
+                                public void onComplete(Result result) {
+                                    System.out.println(String.format("Sending data success, message: %s", getContentAsString()));
 
-                            for(FormL1B5Usaha b5Usaha : b5.usaha) {
-                                MFormL1B5Usaha formL1B5Usaha = new MFormL1B5Usaha(formL1B5, b5Usaha.v508, b5Usaha.v509,
-                                        b5Usaha.v510, new Date());
-                                formL1B5UsahaDao.createOrUpdate(formL1B5Usaha);
-                            }
-                        }
+                                    FormL1 jsonFormL1 = gson.fromJson(getContentAsString(), FormL1.class);
 
-                        if (!response.isCommitted()) {
-                            response.getWriter().println(gson.toJson(jsonFormL1));
-                            response.setContentType("application/json");
-                            response.setStatus(HttpServletResponse.SC_OK);
-                        }
-                    } catch (SQLException e) {
-                        response.getWriter().println("Error in database connection: " + e.getMessage());
-                        response.setContentType("text/plain");
-                        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    } catch (ParseException e) {
-                        response.getWriter().println("Error in date format: " + e.getMessage());
-                        response.setContentType("text/plain");
-                        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                                    try {
+                                        _saveRecord(jsonFormL1, resp);
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            })
+                            .send();
+                    } catch (InterruptedException e) {
+                        _sendException("HttpClient interrupted", e, resp);
+                    } catch (TimeoutException e) {
+                        _sendException("HttpClient timeout", e, resp);
+                    } catch (ExecutionException e) {
+                        _sendException("HttpClient execution failed", e, resp);
                     }
-
-                    AsyncContext asyncContext = (AsyncContext)request.getAttribute(ASYNC_CONTEXT);
-                    asyncContext.complete();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                } else {
+                    FormL1 jsonFormL1 = gson.fromJson(params, FormL1.class);
+                    _saveRecord(jsonFormL1, resp);
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
 
-        @Override
-        protected URI rewriteURI(HttpServletRequest request) {
-            return URI.create(Activator.REAL_HOST + Activator.CONTEXT_PATH + PATH);
+        private void _saveRecord(FormL1 jsonFormL1, HttpServletResponse resp) throws IOException {
+            try {
+                MPropinsi v101              = v101Dao.queryForId(jsonFormL1.v101);
+                MKabupaten v102             = v102Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102);
+                MKecamatan v103             = v103Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+                        jsonFormL1.v103);
+                MKelurahan v104             = v104Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+                        jsonFormL1.v103 + jsonFormL1.v104);
+                MBlokSensus v105            = v105Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+                        jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v105);
+                MSubBlokSensus v106         = v106Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+                        jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v105 +
+                        jsonFormL1.v106);
+                MNks v107                   = v107Dao.queryForId(jsonFormL1.v107);
+                MSls v108                   = v108Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+                        jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v108);
+                MKriteriaBlokSensus v109    = v109Dao.queryForId(jsonFormL1.v109);
+
+                MPencacah pencacah = pencacahDao.queryForId(jsonFormL1.v202);
+                Date v204 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").parse(jsonFormL1.v204);
+
+                MFormL1 formL1 = new MFormL1(v101, v102, v103, v104, v105, v106, v107, v108, v109,
+                        pencacah, v204, jsonFormL1.v301, jsonFormL1.v302, jsonFormL1.v303, jsonFormL1.v304,
+                        jsonFormL1.v305, jsonFormL1.v306, jsonFormL1.v307, jsonFormL1.v308, new Date());
+                formL1Dao.createOrUpdate(formL1);
+
+                for(FormL1B5 b5 : jsonFormL1.b5) {
+                    MFormL1B5 formL1B5 = new MFormL1B5(formL1, b5.v501, b5.v502, b5.v503, b5.v504, b5.v505,
+                            b5.v506, b5.v507, new Date());
+                    formL1B5Dao.createOrUpdate(formL1B5);
+
+                    for(FormL1B5Usaha b5Usaha : b5.usaha) {
+                        MFormL1B5Usaha formL1B5Usaha = new MFormL1B5Usaha(formL1B5, b5Usaha.v508, b5Usaha.v509,
+                                b5Usaha.v510, new Date());
+                        formL1B5UsahaDao.createOrUpdate(formL1B5Usaha);
+                    }
+                }
+
+                resp.getWriter().println(gson.toJson(jsonFormL1));
+                resp.setContentType("application/json");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            } catch (SQLException e) {
+                _sendException("Error in database connection", e, resp);
+            } catch (ParseException e) {
+                _sendException("Error in date format", e, resp);
+            }
+        }
+
+        private void _sendException(String prefix, Exception e, HttpServletResponse resp) throws IOException {
+            resp.getWriter().println(prefix + ": " + e.getMessage());
+            resp.setContentType("text/plain");
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
+
+//    public static class Submit2 extends ProxyServlet {
+//        public static String PATH = "/submit";
+//
+//        @Override
+//        protected void onResponseFailure(HttpServletRequest request, final HttpServletResponse response, Response proxyResponse, Throwable failure) {
+//            System.err.println(String.format("Submit to remote URI %s failed. Message: %s", request.getRequestURI(), failure.getMessage()));
+//
+//            if(request.getMethod().equalsIgnoreCase("POST")) {
+//                try {
+//                    String params = "";
+//                    Scanner s = new Scanner(request.getInputStream(), "UTF-8").useDelimiter("\\A");
+//                    while(s.hasNext()) params += s.next();
+//
+//                    FormL1 jsonFormL1 = gson.fromJson(params, FormL1.class);
+//
+//                    try {
+//                        MPropinsi v101              = v101Dao.queryForId(jsonFormL1.v101);
+//                        MKabupaten v102             = v102Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102);
+//                        MKecamatan v103             = v103Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+//                                                    jsonFormL1.v103);
+//                        MKelurahan v104             = v104Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+//                                                    jsonFormL1.v103 + jsonFormL1.v104);
+//                        MBlokSensus v105            = v105Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+//                                                    jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v105);
+//                        MSubBlokSensus v106         = v106Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+//                                                    jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v105 +
+//                                                    jsonFormL1.v106);
+//                        MNks v107                   = v107Dao.queryForId(jsonFormL1.v107);
+//                        MSls v108                   = v108Dao.queryForId(jsonFormL1.v101 + jsonFormL1.v102 +
+//                                                    jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v108);
+//                        MKriteriaBlokSensus v109    = v109Dao.queryForId(jsonFormL1.v109);
+//
+//                        MPencacah pencacah = pencacahDao.queryForId(jsonFormL1.v202);
+//                        Date v204 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").parse(jsonFormL1.v204);
+//
+//                        MFormL1 formL1 = new MFormL1(v101, v102, v103, v104, v105, v106, v107, v108, v109,
+//                                pencacah, v204, jsonFormL1.v301, jsonFormL1.v302, jsonFormL1.v303, jsonFormL1.v304,
+//                                jsonFormL1.v305, jsonFormL1.v306, jsonFormL1.v307, jsonFormL1.v308, new Date());
+//                        formL1Dao.createOrUpdate(formL1);
+//
+//                        for(FormL1B5 b5 : jsonFormL1.b5) {
+//                            MFormL1B5 formL1B5 = new MFormL1B5(formL1, b5.v501, b5.v502, b5.v503, b5.v504, b5.v505,
+//                                    b5.v506, b5.v507, new Date());
+//                            formL1B5Dao.createOrUpdate(formL1B5);
+//
+//                            for(FormL1B5Usaha b5Usaha : b5.usaha) {
+//                                MFormL1B5Usaha formL1B5Usaha = new MFormL1B5Usaha(formL1B5, b5Usaha.v508, b5Usaha.v509,
+//                                        b5Usaha.v510, new Date());
+//                                formL1B5UsahaDao.createOrUpdate(formL1B5Usaha);
+//                            }
+//                        }
+//
+//                        if (!response.isCommitted()) {
+//                            response.getWriter().println(gson.toJson(jsonFormL1));
+//                            response.setContentType("application/json");
+//                            response.setStatus(HttpServletResponse.SC_OK);
+//                        }
+//                    } catch (SQLException e) {
+//                        response.getWriter().println("Error in database connection: " + e.getMessage());
+//                        response.setContentType("text/plain");
+//                        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+//                    } catch (ParseException e) {
+//                        response.getWriter().println("Error in date format: " + e.getMessage());
+//                        response.setContentType("text/plain");
+//                        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+//                    }
+//
+//                    AsyncContext asyncContext = (AsyncContext)request.getAttribute(ASYNC_CONTEXT);
+//                    asyncContext.complete();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//
+//        @Override
+//        protected URI rewriteURI(HttpServletRequest request) {
+//            return URI.create(Activator.REAL_HOST + Activator.CONTEXT_PATH + PATH);
+//        }
+//    }
 }

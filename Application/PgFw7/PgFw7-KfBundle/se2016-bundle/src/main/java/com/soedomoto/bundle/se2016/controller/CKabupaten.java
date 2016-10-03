@@ -8,13 +8,13 @@ import com.soedomoto.bundle.se2016.model.MPropinsi;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
@@ -30,44 +30,48 @@ public class CKabupaten {
     public static void createDao() throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MKabupaten.class);
         v102Dao = DaoManager.createDao(connectionSource, MKabupaten.class);
-
-        //populateData();
     }
 
     public static void registerServlets(ServletContextHandler context) {
-        context.addServlet(new ServletHolder(new KabupatenByPropinsi()), KabupatenByPropinsi.PATH);
-        context.addServlet(new ServletHolder(new KabupatenByKode()), KabupatenByKode.PATH);
-    }
+        ServletHolder kabByProv = new ServletHolder(new KabupatenByPropinsi());
+        kabByProv.setAsyncSupported(true);
+        context.addServlet(kabByProv, KabupatenByPropinsi.PATH);
 
-    private static void populateData() {
-        try {
-            MPropinsi propinsi = v101Dao.queryForId("13");
-
-            v102Dao.create(new MKabupaten("01", "Kab. Kepulauan Mentawai", new Date(), propinsi));
-            v102Dao.create(new MKabupaten("02", "Kab. Pesisir Selatan", new Date(), propinsi));
-            v102Dao.create(new MKabupaten("03", "Kab. Solok", new Date(), propinsi));
-        } catch (SQLException e) {}
+        ServletHolder kabByKode = new ServletHolder(new KabupatenByKode());
+        kabByKode.setAsyncSupported(true);
+        context.addServlet(kabByKode, KabupatenByKode.PATH);
     }
 
     public static class KabupatenByPropinsi extends HttpServlet {
         public static String PATH = "/kabupaten";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String kodePropinsi = req.getParameter("propinsi");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String kodePropinsi = req.getParameter("propinsi");
 
-            try {
-                MPropinsi propinsi = v101Dao.queryForId(kodePropinsi);
-                List<MKabupaten> kabs = v102Dao.queryForMatching(new MKabupaten(propinsi));
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MPropinsi propinsi = v101Dao.queryForId(kodePropinsi);
+                            List<MKabupaten> kabs = v102Dao.queryForMatching(new MKabupaten(propinsi));
 
-                resp.getWriter().println(gson.toJson(kabs));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(kabs));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 
@@ -75,20 +79,31 @@ public class CKabupaten {
         public static String PATH = "/kabupaten/by-kode";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String fullKode = req.getParameter("fullKode");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String fullKode = req.getParameter("fullKode");
 
-            try {
-                MKabupaten kab = v102Dao.queryForId(fullKode);
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MKabupaten kab = v102Dao.queryForId(fullKode);
 
-                resp.getWriter().println(gson.toJson(kab));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(kab));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 }

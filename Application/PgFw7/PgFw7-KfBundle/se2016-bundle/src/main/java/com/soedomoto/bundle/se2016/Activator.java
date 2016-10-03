@@ -11,6 +11,7 @@ import com.soedomoto.bundle.se2016.model.*;
 import com.soedomoto.bundle.se2016.service.AccountHandlerService;
 import com.soedomoto.bundle.se2016.service.DaoHandlerService;
 import com.soedomoto.bundle.se2016.service.PropertyHandlerService;
+import com.soedomoto.bundle.se2016.tools.IpChecker;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.eclipse.jetty.servlet.DefaultServlet;
@@ -23,9 +24,10 @@ import org.osgi.framework.ServiceReference;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.URI;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.Dictionary;
 import java.util.Enumeration;
 
 /**
@@ -34,9 +36,14 @@ import java.util.Enumeration;
 public class Activator implements BundleActivator {
     public static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss.SSS").create();
 
-    public static String DB_NAME;
+    public static String JDBC_URL;
+    public static String JDBC_USERNAME;
+    public static String JDBC_PASSWORD;
     public static String REAL_HOST;
     public static String CONTEXT_PATH;
+
+    public static String REAL_HOST_IP;
+    public static String THIS_IP;
 
     public static Integer SYNC_INTERVAL = 10000;
 
@@ -51,11 +58,21 @@ public class Activator implements BundleActivator {
         _bundleContext = context;
 
         //  Handle Properties
-        Dictionary headers = _bundleContext.getBundle().getHeaders();
-        CONTEXT_PATH = String.valueOf(headers.get("Context-Path"));
-        REAL_HOST = String.valueOf(headers.get("Real-Host"));
-        DB_NAME = String.valueOf(headers.get("Database-Name"));
-        System.out.println(String.format("Properties : %s, %s, %s", CONTEXT_PATH, REAL_HOST, DB_NAME));
+        CONTEXT_PATH = context.getProperty("org.osgi.bundle.se2016.servlet.context");
+        REAL_HOST = context.getProperty("org.osgi.bundle.se2016.host");
+        JDBC_URL = context.getProperty("org.osgi.bundle.se2016.jdbc.url");
+        JDBC_USERNAME = context.getProperty("org.osgi.bundle.se2016.jdbc.username");
+        JDBC_PASSWORD = context.getProperty("org.osgi.bundle.se2016.jdbc.password");
+        System.out.println(String.format("\n" +
+                "=== Properties === \n" +
+                "+ Servlet Context : %s \n" +
+                "+ Real Host       : %s \n" +
+                "+ JDBC URL        : %s\n" +
+                "==================\n", CONTEXT_PATH, REAL_HOST, JDBC_URL));
+
+        //  Get Curr IP and Remote IP
+        REAL_HOST_IP = InetAddress.getByName(new URI(REAL_HOST).getHost()).getHostAddress();
+        THIS_IP = IpChecker.getIp();
 
         //  Handle Storage
         String fwDir = context.getProperty("org.osgi.framework.storage");
@@ -79,7 +96,9 @@ public class Activator implements BundleActivator {
         //  Register Service
         //  Property Handler
         PropertyHandlerService propertyHandlerObj = new PropertyHandlerService() {
-            public String getDBName() { return DB_NAME; }
+            public String getJdbcUrl() { return JDBC_URL; }
+            public String getJdbcUsername() { return JDBC_USERNAME; }
+            public String getJdbcPassword() { return JDBC_PASSWORD; }
             public String getRealHost() { return REAL_HOST; }
             public String getContextPath() { return CONTEXT_PATH; }
             public String getDataDirectory() { return dataDir; }
@@ -123,8 +142,9 @@ public class Activator implements BundleActivator {
     }
 
     private void _configureDatabase(BundleContext context) throws SQLException {
-        connectionSource = new JdbcConnectionSource("jdbc:h2:file:"+ dataDir + File.separator + DB_NAME +
-                ";FILE_LOCK=FS;PAGE_SIZE=1024;CACHE_SIZE=8192;DB_CLOSE_DELAY=-1");
+//        connectionSource = new JdbcConnectionSource("jdbc:h2:file:"+ dataDir + File.separator + DB_NAME +
+//                ";FILE_LOCK=FS;PAGE_SIZE=1024;CACHE_SIZE=8192;DB_CLOSE_DELAY=-1");
+        connectionSource = new JdbcConnectionSource(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
 
         CPropinsi.createDao();
         CKabupaten.createDao();

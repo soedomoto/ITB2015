@@ -24,7 +24,7 @@ if($) {
 if(! $$) var $$ = Dom7;
 if(! myApp) {
     var myApp = new Framework7();
-    var mainView = myApp.addView('.view-main');
+    var mainView = myApp.addView('.view-main', { dynamicNavbar: true });
 }
 
 //  ====================================================================================================================
@@ -32,8 +32,11 @@ if(! myApp) {
 //  ====================================================================================================================
 
 //  1. Load default wilayah cacah for this pencacah
-getCurrentPencacah('198706152009021004', function(pencacah) {
+var userID = getUserSession();
+getCurrentPencacah(userID, function(pencacah) {
     listWilayahCacah(pencacah['id'], function(wilCahs) {
+        $('#l1-list').children().remove();
+
         wilCahs.forEach(function(wilcah, idx) {
             nkss = []; wilcah['nks'].forEach(function(nks) { nkss.push(nks['nama']) });
             slss = []; wilcah['sls'].forEach(function(sls) { slss.push(sls['nama']) });
@@ -50,6 +53,44 @@ getCurrentPencacah('198706152009021004', function(pencacah) {
             });
         });
     });
+});
+
+$(document).on('click', '.view[data-page="workspace"] .refresh-workspace', function() {
+    setTimeout(function () {
+        myApp.showPreloader('Wilayah Kerja sedang diperbarui...')
+        setTimeout(function () {
+            var userID = getUserSession();
+            getCurrentPencacah(userID, function(pencacah) {
+                listWilayahCacah(pencacah['id'], function(wilCahs) {
+                    $('#l1-list').children().remove();
+
+                    wilCahs.forEach(function(wilcah, idx) {
+                        nkss = []; wilcah['nks'].forEach(function(nks) { nkss.push(nks['nama']) });
+                        slss = []; wilcah['sls'].forEach(function(sls) { slss.push(sls['nama']) });
+
+                        $('<li id="wilcah-'+ wilcah['fullKode'] +'" class="item-content row" style="cursor: pointer;">' +
+                        '<div class="item-inner">'+
+                            '<div class="item-title"><span>' + wilcah['blokSensus']['fullKode'] + '</span></div>'+
+                            '<div class="item-title"><span>' + nkss.join(', ') + '</span></div>'+
+                            '<div class="item-title"><span>' + slss.join(', ') + '</span></div>'+
+                        '</div></li>').appendTo($('#l1-list'));
+
+                        getDataFormL1(wilcah['blokSensus'], function(bs, dataL1) {
+                            $('#l1-list #wilcah-' + bs['fullKode']).data('bs', bs).data('l1', dataL1);
+                        });
+                    });
+
+                    myApp.hidePreloader();
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'Wilayah Kerja',
+                        message: 'Wilayah Kerja telah diperbarui'
+                    });
+                });
+            });
+        }, 100);
+    }, 10);
 });
 
 //  2. Apply click to each wilayah cacah (p1) --> Open formL1
@@ -168,7 +209,7 @@ $(document).on('click', '#form-b5-add-item .submit-b5-add-item', function() {
 
 //  8. Submit formL1
 //      + Submit to server
-$(document).on('click', '.submit-l1', function() {
+$(document).on('click', '.view[data-page="form-l1"] .submit-l1', function() {
     var dataL1 = $('#form-l1').serializeObject();
 
     dataL1['b5'] = []
@@ -177,22 +218,37 @@ $(document).on('click', '.submit-l1', function() {
         dataL1['b5'].push(dataB5);
     });
 
-    $.ajax({
-        url: ctxHost + '/submit',
-        type: "POST",
-        dataType: "json", // expected format for response
-        contentType: "application/json", // send as JSON
-        data: JSON.stringify(dataL1),
-        complete: function(resp) {
-            console.log(resp);
-        },
-        success: function(resp) {
-            console.log(resp);
-        },
-        error: function(resp) {
-            console.log(resp);
-        },
-    });
+    setTimeout(function () {
+        myApp.showPreloader('Form L1 sedang disubmit...')
+        setTimeout(function () {
+            $.ajax({
+                url: ctxHost + '/submit',
+                type: "POST",
+                dataType: "json", // expected format for response
+                contentType: "application/json", // send as JSON
+                data: JSON.stringify(dataL1),
+                complete: function(xhr, status) {
+                    myApp.hidePreloader();
+                },
+                success: function(data, status, xhr) {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'App List',
+                        message: 'Form L1 berhasil disubmit. ' + data
+                    });
+                },
+                error: function(xhr, status, error) {
+                    myApp.addNotification({
+                        hold: 3000,
+                        closeOnClick: true,
+                        title: 'App List',
+                        message: 'Form L1 gagal disubmit. ' + error
+                    });
+                },
+            });
+        }, 100);
+    }, 100);
 });
 
 //$(document).on('click', '.reset-l1', function() {

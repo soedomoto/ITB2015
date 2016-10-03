@@ -7,6 +7,7 @@ import com.soedomoto.bundle.se2016.model.MPenggunaanBangunanSensus;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,7 +34,9 @@ public class CPenggunaanBangunanSensus {
     }
 
     public static void registerServlets(ServletContextHandler context) {
-        context.addServlet(new ServletHolder(new ListPenggunaanBangunanSensus()), ListPenggunaanBangunanSensus.PATH);
+        ServletHolder lsBangunan = new ServletHolder(new ListPenggunaanBangunanSensus());
+        lsBangunan.setAsyncSupported(true);
+        context.addServlet(lsBangunan, ListPenggunaanBangunanSensus.PATH);
     }
 
     private static void populateData() {
@@ -50,18 +53,29 @@ public class CPenggunaanBangunanSensus {
         public static String PATH = "/v504-options";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            try {
-                List<MPenggunaanBangunanSensus> options = v504Dao.queryForAll();
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            List<MPenggunaanBangunanSensus> options = v504Dao.queryForAll();
 
-                resp.getWriter().println(gson.toJson(options));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(options));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 }

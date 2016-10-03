@@ -8,13 +8,13 @@ import com.soedomoto.bundle.se2016.model.MKelurahan;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
@@ -30,46 +30,50 @@ public class CKelurahan {
     public static void createDao() throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MKelurahan.class);
         v104Dao = DaoManager.createDao(connectionSource, MKelurahan.class);
-
-        //populateData();
     }
 
     public static void registerServlets(ServletContextHandler context) {
-        context.addServlet(new ServletHolder(new KelurahanByKecamatan()), KelurahanByKecamatan.PATH);
-        context.addServlet(new ServletHolder(new KelurahanByKode()), KelurahanByKode.PATH);
-    }
+        ServletHolder kelByKec = new ServletHolder(new KelurahanByKecamatan());
+        kelByKec.setAsyncSupported(true);
+        context.addServlet(kelByKec, KelurahanByKecamatan.PATH);
 
-    private static void populateData() {
-        try {
-            MKecamatan kecamatan = v103Dao.queryForId("1302090");
-
-            v104Dao.create(new MKelurahan("001", "Sago Salido", new Date(), kecamatan));
-            v104Dao.create(new MKelurahan("002", "Salido", new Date(), kecamatan));
-            v104Dao.create(new MKelurahan("003", "Bunga Pasang Salido", new Date(), kecamatan));
-        } catch (SQLException e) {}
+        ServletHolder kelByKode = new ServletHolder(new KelurahanByKode());
+        kelByKode.setAsyncSupported(true);
+        context.addServlet(kelByKode, KelurahanByKode.PATH);
     }
 
     public static class KelurahanByKecamatan extends HttpServlet {
         public static String PATH = "/kelurahan";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String kodePropinsi = req.getParameter("propinsi");
-            String kodeKabupaten = req.getParameter("kabupaten");
-            String kodeKecamatan = req.getParameter("kecamatan");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String kodePropinsi = req.getParameter("propinsi");
+            final String kodeKabupaten = req.getParameter("kabupaten");
+            final String kodeKecamatan = req.getParameter("kecamatan");
 
-            try {
-                MKecamatan kecamatan = v103Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan);
-                List<MKelurahan> kels = v104Dao.queryForMatching(new MKelurahan(kecamatan));
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MKecamatan kecamatan = v103Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan);
+                            List<MKelurahan> kels = v104Dao.queryForMatching(new MKelurahan(kecamatan));
 
-                resp.getWriter().println(gson.toJson(kels));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(kels));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 
@@ -77,20 +81,31 @@ public class CKelurahan {
         public static String PATH = "/kelurahan/by-kode";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String fullKode = req.getParameter("fullKode");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String fullKode = req.getParameter("fullKode");
 
-            try {
-                MKelurahan kel = v104Dao.queryForId(fullKode);
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MKelurahan kel = v104Dao.queryForId(fullKode);
 
-                resp.getWriter().println(gson.toJson(kel));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(kel));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 }

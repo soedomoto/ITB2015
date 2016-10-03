@@ -7,6 +7,7 @@ import com.soedomoto.bundle.se2016.model.MLokasiTempatUsaha;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,7 +34,9 @@ public class CLokasiTempatUsaha {
     }
 
     public static void registerServlets(ServletContextHandler context) {
-        context.addServlet(new ServletHolder(new ListLokasiUsahaRuta()), ListLokasiUsahaRuta.PATH);
+        ServletHolder lsLokasi = new ServletHolder(new ListLokasiUsahaRuta());
+        lsLokasi.setAsyncSupported(true);
+        context.addServlet(lsLokasi, ListLokasiUsahaRuta.PATH);
     }
 
     private static void populateData() {
@@ -49,18 +52,29 @@ public class CLokasiTempatUsaha {
         public static String PATH = "/v510-options";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            try {
-                List<MLokasiTempatUsaha> options = v510Dao.queryForAll();
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            List<MLokasiTempatUsaha> options = v510Dao.queryForAll();
 
-                resp.getWriter().println(gson.toJson(options));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(options));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 }

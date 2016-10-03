@@ -8,13 +8,13 @@ import com.soedomoto.bundle.se2016.model.MNks;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 
 import static com.soedomoto.bundle.se2016.Activator.connectionSource;
@@ -34,49 +34,53 @@ public class CNks {
     public static void createDao() throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MNks.class);
         v107Dao = DaoManager.createDao(connectionSource, MNks.class);
-
-        //populateData();
     }
 
     public static void registerServlets(ServletContextHandler context) {
-        context.addServlet(new ServletHolder(new NKSByBlokSensus()), NKSByBlokSensus.PATH);
-        context.addServlet(new ServletHolder(new NKSByKode()), NKSByKode.PATH);
-    }
+        ServletHolder nksByBs = new ServletHolder(new NKSByBlokSensus());
+        nksByBs.setAsyncSupported(true);
+        context.addServlet(nksByBs, NKSByBlokSensus.PATH);
 
-    private static void populateData() {
-        try {
-            MBlokSensus blokSensus = v105Dao.queryForId("1302090010001");
-
-            v107Dao.create(new MNks("001", "001", new Date(), blokSensus));
-            v107Dao.create(new MNks("002", "002", new Date(), blokSensus));
-            v107Dao.create(new MNks("003", "003", new Date(), blokSensus));
-        } catch (SQLException e) {}
+        ServletHolder nksByKode = new ServletHolder(new NKSByKode());
+        nksByKode.setAsyncSupported(true);
+        context.addServlet(nksByKode, NKSByKode.PATH);
     }
 
     public static class NKSByBlokSensus extends HttpServlet {
         public static String PATH = "/nks";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String kodePropinsi = req.getParameter("propinsi");
-            String kodeKabupaten = req.getParameter("kabupaten");
-            String kodeKecamatan = req.getParameter("kecamatan");
-            String kodeKelurahan = req.getParameter("kelurahan");
-            String kodeBlokSensus = req.getParameter("bloksensus");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String kodePropinsi = req.getParameter("propinsi");
+            final String kodeKabupaten = req.getParameter("kabupaten");
+            final String kodeKecamatan = req.getParameter("kecamatan");
+            final String kodeKelurahan = req.getParameter("kelurahan");
+            final String kodeBlokSensus = req.getParameter("bloksensus");
 
-            try {
-                MBlokSensus blokSensus = v105Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
-                        kodeKelurahan + kodeBlokSensus);
-                List<MNks> nkss = v107Dao.queryForMatching(new MNks(blokSensus));
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MBlokSensus blokSensus = v105Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
+                                    kodeKelurahan + kodeBlokSensus);
+                            List<MNks> nkss = v107Dao.queryForMatching(new MNks(blokSensus));
 
-                resp.getWriter().println(gson.toJson(nkss));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                            resp.getWriter().println(gson.toJson(nkss));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
+                }
+            });
         }
     }
 
@@ -84,28 +88,39 @@ public class CNks {
         public static String PATH = "/nks/by-kode";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String fullKode = req.getParameter("fullKode");
-            String refresh = req.getParameter("refreshForeign");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String fullKode = req.getParameter("fullKode");
+            final String refresh = req.getParameter("refreshForeign");
 
-            try {
-                MNks nks = v107Dao.queryForId(fullKode);
-                if(Boolean.valueOf(refresh)) {
-                    v105Dao.refresh(nks.getBlokSensus());
-                    v104Dao.refresh(nks.getBlokSensus().getKelurahan());
-                    v103Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan());
-                    v102Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
-                    v101Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            MNks nks = v107Dao.queryForId(fullKode);
+                            if(Boolean.valueOf(refresh)) {
+                                v105Dao.refresh(nks.getBlokSensus());
+                                v104Dao.refresh(nks.getBlokSensus().getKelurahan());
+                                v103Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan());
+                                v102Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
+                                v101Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                            }
+
+                            resp.getWriter().println(gson.toJson(nks));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    actx.complete();
                 }
-
-                resp.getWriter().println(gson.toJson(nks));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+            });
         }
     }
 }

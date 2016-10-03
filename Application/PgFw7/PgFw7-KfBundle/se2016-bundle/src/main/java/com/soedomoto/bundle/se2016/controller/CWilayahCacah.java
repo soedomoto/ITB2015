@@ -10,6 +10,7 @@ import com.soedomoto.bundle.se2016.model.MWilayahCacah;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,50 +42,63 @@ public class CWilayahCacah {
     }
 
     public static void registerServlets(ServletContextHandler context) {
-        context.addServlet(new ServletHolder(new WilayahCacah()), WilayahCacah.PATH);
+        ServletHolder wilcah = new ServletHolder(new WilayahCacah());
+        wilcah.setAsyncSupported(true);
+        context.addServlet(wilcah, WilayahCacah.PATH);
     }
 
     public static class WilayahCacah extends HttpServlet {
         public static String PATH = "/wilcah";
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String kodePencacah = req.getParameter("pencacah");
-            String refresh = req.getParameter("refreshForeign");
+        protected void doGet(HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+            final String kodePencacah = req.getParameter("pencacah");
+            final String refresh = req.getParameter("refreshForeign");
 
-            try {
-                List<MWilayahCacah> wilayahCacahs;
+            final AsyncContext actx = req.startAsync();
+            actx.start(new Runnable() {
+                public void run() {
+                    try {
+                        try {
+                            List<MWilayahCacah> wilayahCacahs;
 
-                if(kodePencacah != null) {
-                    MPencacah pencacah = pencacahDao.queryForId(kodePencacah);
-                    wilayahCacahs = wilayahCacahDao.queryForMatching(new MWilayahCacah(pencacah));
-                } else {
-                    wilayahCacahs = wilayahCacahDao.queryForAll();
-                }
+                            if(kodePencacah != null) {
+                                MPencacah pencacah = pencacahDao.queryForId(kodePencacah);
+                                wilayahCacahs = wilayahCacahDao.queryForMatching(new MWilayahCacah(pencacah));
+                            } else {
+                                wilayahCacahs = wilayahCacahDao.queryForAll();
+                            }
 
-                for(MWilayahCacah wilayahCacah : wilayahCacahs) {
-                    List<MNks> nkss = v107Dao.queryForMatching(new MNks(wilayahCacah.getBlokSensus()));
-                    wilayahCacah.setNks(nkss);
-                    List<MSls> slss = v108Dao.queryForMatching(new MSls(wilayahCacah.getBlokSensus()));
-                    wilayahCacah.setSls(slss);
+                            for(MWilayahCacah wilayahCacah : wilayahCacahs) {
+                                List<MNks> nkss = v107Dao.queryForMatching(new MNks(wilayahCacah.getBlokSensus()));
+                                wilayahCacah.setNks(nkss);
+                                List<MSls> slss = v108Dao.queryForMatching(new MSls(wilayahCacah.getBlokSensus()));
+                                wilayahCacah.setSls(slss);
 
-                    if(Boolean.valueOf(refresh)) {
-                        v105Dao.refresh(wilayahCacah.getBlokSensus());
-                        v104Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan());
-                        v103Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan());
-                        v102Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
-                        v101Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                                if(Boolean.valueOf(refresh)) {
+                                    v105Dao.refresh(wilayahCacah.getBlokSensus());
+                                    v104Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan());
+                                    v103Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan());
+                                    v102Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
+                                    v101Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                                }
+                            }
+
+                            resp.getWriter().println(gson.toJson(wilayahCacahs));
+                            resp.setContentType("application/json");
+                            resp.setStatus(HttpServletResponse.SC_OK);
+                        } catch (SQLException e) {
+                            resp.getWriter().println("Error in database connection: " + e.getMessage());
+                            resp.setContentType("text/plain");
+                            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                }
 
-                resp.getWriter().println(gson.toJson(wilayahCacahs));
-                resp.setContentType("application/json");
-                resp.setStatus(HttpServletResponse.SC_OK);
-            } catch (SQLException e) {
-                resp.getWriter().println("Error in database connection: " + e.getMessage());
-                resp.setContentType("text/plain");
-                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            }
+                    actx.complete();
+                }
+            });
         }
     }
 }
