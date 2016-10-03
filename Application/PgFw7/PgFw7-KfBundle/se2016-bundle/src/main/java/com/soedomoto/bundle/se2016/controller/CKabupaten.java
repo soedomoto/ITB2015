@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MKabupaten;
 import com.soedomoto.bundle.se2016.model.MPropinsi;
@@ -17,22 +18,26 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
-import static com.soedomoto.bundle.se2016.controller.CPropinsi.v101Dao;
 
 /**
  * Created by soedomoto on 8/5/16.
  */
 public class CKabupaten {
-    public static Dao<MKabupaten, String> v102Dao;
+    private static CKabupaten cKabupaten;
+    public static CKabupaten instance() {
+        if(cKabupaten == null) cKabupaten = new CKabupaten();
+        return cKabupaten;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MKabupaten, String> v102Dao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MKabupaten.class);
         v102Dao = DaoManager.createDao(connectionSource, MKabupaten.class);
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder kabByProv = new ServletHolder(new KabupatenByPropinsi());
         kabByProv.setAsyncSupported(true);
         context.addServlet(kabByProv, KabupatenByPropinsi.PATH);
@@ -40,6 +45,10 @@ public class CKabupaten {
         ServletHolder kabByKode = new ServletHolder(new KabupatenByKode());
         kabByKode.setAsyncSupported(true);
         context.addServlet(kabByKode, KabupatenByKode.PATH);
+    }
+
+    public Dao<MKabupaten, String> getV102Dao() {
+        return v102Dao;
     }
 
     public static class KabupatenByPropinsi extends HttpServlet {
@@ -54,8 +63,8 @@ public class CKabupaten {
                 public void run() {
                     try {
                         try {
-                            MPropinsi propinsi = v101Dao.queryForId(kodePropinsi);
-                            List<MKabupaten> kabs = v102Dao.queryForMatching(new MKabupaten(propinsi));
+                            MPropinsi propinsi = CPropinsi.instance().getV101Dao().queryForId(kodePropinsi);
+                            List<MKabupaten> kabs = CKabupaten.instance().getV102Dao().queryForMatching(new MKabupaten(propinsi));
 
                             resp.getWriter().println(gson.toJson(kabs));
                             resp.setContentType("application/json");
@@ -87,7 +96,7 @@ public class CKabupaten {
                 public void run() {
                     try {
                         try {
-                            MKabupaten kab = v102Dao.queryForId(fullKode);
+                            MKabupaten kab = CKabupaten.instance().getV102Dao().queryForId(fullKode);
 
                             resp.getWriter().println(gson.toJson(kab));
                             resp.setContentType("application/json");

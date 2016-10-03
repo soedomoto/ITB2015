@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MKriteriaBlokSensus;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -17,29 +18,34 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 8/9/16.
  */
 public class CKriteriaBlokSensus {
-    public static Dao<MKriteriaBlokSensus, String> v109Dao;
+    private static CKriteriaBlokSensus cKriteriaBlokSensus;
+    public static CKriteriaBlokSensus instance() {
+        if(cKriteriaBlokSensus == null) cKriteriaBlokSensus = new CKriteriaBlokSensus();
+        return cKriteriaBlokSensus;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MKriteriaBlokSensus, String> v109Dao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MKriteriaBlokSensus.class);
         v109Dao = DaoManager.createDao(connectionSource, MKriteriaBlokSensus.class);
 
         populateData();
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder lsKriteria = new ServletHolder(new ListKriteriaBlokSensus());
         lsKriteria.setAsyncSupported(true);
         context.addServlet(lsKriteria, ListKriteriaBlokSensus.PATH);
     }
 
-    private static void populateData() {
+    private void populateData() {
         try {
             v109Dao.create(new MKriteriaBlokSensus(1, "Pasar tradisional", new Date()));
             v109Dao.create(new MKriteriaBlokSensus(2, "Pusat perbelanjaan", new Date()));
@@ -49,6 +55,10 @@ public class CKriteriaBlokSensus {
             v109Dao.create(new MKriteriaBlokSensus(6, "Kawasan pemukiman", new Date()));
             v109Dao.create(new MKriteriaBlokSensus(7, "Lainnya", new Date()));
         } catch (SQLException e) {}
+    }
+
+    public Dao<MKriteriaBlokSensus, String> getV109Dao() {
+        return v109Dao;
     }
 
     public static class ListKriteriaBlokSensus extends HttpServlet {
@@ -61,7 +71,7 @@ public class CKriteriaBlokSensus {
                 public void run() {
                     try {
                         try {
-                            List<MKriteriaBlokSensus> options = v109Dao.queryForAll();
+                            List<MKriteriaBlokSensus> options = CKriteriaBlokSensus.instance().getV109Dao().queryForAll();
 
                             resp.getWriter().println(gson.toJson(options));
                             resp.setContentType("application/json");

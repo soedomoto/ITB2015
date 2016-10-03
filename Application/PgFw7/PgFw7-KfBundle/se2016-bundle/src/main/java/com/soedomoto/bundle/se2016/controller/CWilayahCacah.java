@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MNks;
 import com.soedomoto.bundle.se2016.model.MPencacah;
@@ -19,32 +20,33 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
-import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
-import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
-import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
-import static com.soedomoto.bundle.se2016.controller.CKelurahan.v104Dao;
-import static com.soedomoto.bundle.se2016.controller.CNks.v107Dao;
-import static com.soedomoto.bundle.se2016.controller.CPencacah.pencacahDao;
-import static com.soedomoto.bundle.se2016.controller.CPropinsi.v101Dao;
-import static com.soedomoto.bundle.se2016.controller.CSls.v108Dao;
 
 /**
  * Created by soedomoto on 8/18/16.
  */
 public class CWilayahCacah {
-    public static Dao<MWilayahCacah, String> wilayahCacahDao;
+    private static CWilayahCacah cWilayahCacah;
+    public static CWilayahCacah instance() {
+        if(cWilayahCacah == null) cWilayahCacah = new CWilayahCacah();
+        return cWilayahCacah;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MWilayahCacah, String> wilayahCacahDao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MWilayahCacah.class);
         wilayahCacahDao = DaoManager.createDao(connectionSource, MWilayahCacah.class);
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder wilcah = new ServletHolder(new WilayahCacah());
         wilcah.setAsyncSupported(true);
         context.addServlet(wilcah, WilayahCacah.PATH);
+    }
+
+    public Dao<MWilayahCacah, String> getWilayahCacahDao() {
+        return wilayahCacahDao;
     }
 
     public static class WilayahCacah extends HttpServlet {
@@ -63,24 +65,24 @@ public class CWilayahCacah {
                             List<MWilayahCacah> wilayahCacahs;
 
                             if(kodePencacah != null) {
-                                MPencacah pencacah = pencacahDao.queryForId(kodePencacah);
-                                wilayahCacahs = wilayahCacahDao.queryForMatching(new MWilayahCacah(pencacah));
+                                MPencacah pencacah = CPencacah.instance().getPencacahDao().queryForId(kodePencacah);
+                                wilayahCacahs = CWilayahCacah.instance().getWilayahCacahDao().queryForMatching(new MWilayahCacah(pencacah));
                             } else {
-                                wilayahCacahs = wilayahCacahDao.queryForAll();
+                                wilayahCacahs = CWilayahCacah.instance().getWilayahCacahDao().queryForAll();
                             }
 
                             for(MWilayahCacah wilayahCacah : wilayahCacahs) {
-                                List<MNks> nkss = v107Dao.queryForMatching(new MNks(wilayahCacah.getBlokSensus()));
+                                List<MNks> nkss = CNks.instance().getV107Dao().queryForMatching(new MNks(wilayahCacah.getBlokSensus()));
                                 wilayahCacah.setNks(nkss);
-                                List<MSls> slss = v108Dao.queryForMatching(new MSls(wilayahCacah.getBlokSensus()));
+                                List<MSls> slss = CSls.instance().getV108Dao().queryForMatching(new MSls(wilayahCacah.getBlokSensus()));
                                 wilayahCacah.setSls(slss);
 
                                 if(Boolean.valueOf(refresh)) {
-                                    v105Dao.refresh(wilayahCacah.getBlokSensus());
-                                    v104Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan());
-                                    v103Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan());
-                                    v102Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
-                                    v101Dao.refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                                    CBlokSensus.instance().getV105Dao().refresh(wilayahCacah.getBlokSensus());
+                                    CKelurahan.instance().getV104Dao().refresh(wilayahCacah.getBlokSensus().getKelurahan());
+                                    CKecamatan.instance().getV103Dao().refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan());
+                                    CKabupaten.instance().getV102Dao().refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
+                                    CPropinsi.instance().getV101Dao().refresh(wilayahCacah.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
                                 }
                             }
 

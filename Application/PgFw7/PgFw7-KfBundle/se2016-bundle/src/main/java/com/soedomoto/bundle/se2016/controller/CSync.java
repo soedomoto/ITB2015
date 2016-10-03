@@ -1,32 +1,8 @@
 package com.soedomoto.bundle.se2016.controller;
 
-import com.soedomoto.bundle.se2016.model.*;
-import com.soedomoto.bundle.se2016.tools.IpChecker;
-import org.eclipse.jetty.client.HttpClient;
-import org.eclipse.jetty.client.api.ContentResponse;
-import org.eclipse.jetty.client.util.StringContentProvider;
-import org.eclipse.jetty.servlet.ServletContextHandler;
+import com.soedomoto.bundle.se2016.model.MFormL1;
 
-import java.net.InetAddress;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.UnknownHostException;
-import java.sql.SQLException;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
-
-import static com.soedomoto.bundle.se2016.Activator.*;
-import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
-import static com.soedomoto.bundle.se2016.controller.CFormL1.*;
-import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
-import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
-import static com.soedomoto.bundle.se2016.controller.CKelurahan.v104Dao;
-import static com.soedomoto.bundle.se2016.controller.CNks.v107Dao;
-import static com.soedomoto.bundle.se2016.controller.CPencacah.pencacahDao;
-import static com.soedomoto.bundle.se2016.controller.CPropinsi.v101Dao;
-import static com.soedomoto.bundle.se2016.controller.CSls.v108Dao;
-import static com.soedomoto.bundle.se2016.controller.CWilayahCacah.wilayahCacahDao;
 
 /**
  * Created by soedomoto on 30/08/16.

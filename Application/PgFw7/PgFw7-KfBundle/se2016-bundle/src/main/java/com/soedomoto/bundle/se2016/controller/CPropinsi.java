@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MPropinsi;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -16,21 +17,26 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 15/07/16.
  */
 public class CPropinsi {
-    public static Dao<MPropinsi, String> v101Dao;
+    private static CPropinsi cPropinsi;
+    public static CPropinsi instance() {
+        if(cPropinsi == null) cPropinsi = new CPropinsi();
+        return cPropinsi;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MPropinsi, String> v101Dao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MPropinsi.class);
         v101Dao = DaoManager.createDao(connectionSource, MPropinsi.class);
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder lsProp = new ServletHolder(new ListPropinsi());
         lsProp.setAsyncSupported(true);
         context.addServlet(lsProp, ListPropinsi.PATH);
@@ -38,6 +44,10 @@ public class CPropinsi {
         ServletHolder propByKode = new ServletHolder(new PropinsiByKode());
         propByKode.setAsyncSupported(true);
         context.addServlet(propByKode, PropinsiByKode.PATH);
+    }
+
+    public Dao<MPropinsi, String> getV101Dao() {
+        return v101Dao;
     }
 
     public static class ListPropinsi extends HttpServlet {
@@ -50,7 +60,7 @@ public class CPropinsi {
                 public void run() {
                     try {
                         try {
-                            List<MPropinsi> provs = v101Dao.queryForAll();
+                            List<MPropinsi> provs = CPropinsi.instance().getV101Dao().queryForAll();
 
                             resp.getWriter().println(gson.toJson(provs));
                             resp.setContentType("application/json");
@@ -82,7 +92,7 @@ public class CPropinsi {
                 public void run() {
                     try {
                         try {
-                            MPropinsi prop = v101Dao.queryForId(fullKode);
+                            MPropinsi prop = CPropinsi.instance().getV101Dao().queryForId(fullKode);
 
                             resp.getWriter().println(gson.toJson(prop));
                             resp.setContentType("application/json");

@@ -1,7 +1,6 @@
 package com.soedomoto.bundle.se2016.service;
 
 import com.j256.ormlite.dao.Dao;
-import com.soedomoto.bundle.se2016.controller.*;
 import com.soedomoto.bundle.se2016.model.*;
 
 /**

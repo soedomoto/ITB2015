@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MPencacah;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -16,24 +17,33 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 8/18/16.
  */
 public class CPencacah {
-    public static Dao<MPencacah, String> pencacahDao;
+    private static CPencacah cPencacah;
+    public static CPencacah instance() {
+        if(cPencacah == null) cPencacah = new CPencacah();
+        return cPencacah;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MPencacah, String> pencacahDao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MPencacah.class);
         pencacahDao = DaoManager.createDao(connectionSource, MPencacah.class);
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder pch = new ServletHolder(new Pencacah());
         pch.setAsyncSupported(true);
         context.addServlet(pch, Pencacah.PATH);
+    }
+
+    public Dao<MPencacah, String> getPencacahDao() {
+        return pencacahDao;
     }
 
     public static class Pencacah extends HttpServlet {
@@ -49,12 +59,12 @@ public class CPencacah {
                     try {
                         try {
                             if(kodePencacah != null) {
-                                MPencacah pencacah = pencacahDao.queryForId(kodePencacah);
+                                MPencacah pencacah = CPencacah.instance().getPencacahDao().queryForId(kodePencacah);
                                 resp.getWriter().println(gson.toJson(pencacah));
                                 resp.setContentType("application/json");
                                 resp.setStatus(HttpServletResponse.SC_OK);
                             } else {
-                                List<MPencacah> pencacahs = pencacahDao.queryForAll();
+                                List<MPencacah> pencacahs = CPencacah.instance().getPencacahDao().queryForAll();
                                 resp.getWriter().println(gson.toJson(pencacahs));
                                 resp.setContentType("application/json");
                                 resp.setStatus(HttpServletResponse.SC_OK);

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1475510682219
+Bnd-LastModified: 1475538534720
 Build-Jdk: 1.8.0_91
 Built-By: soedomoto
 Bundle-Activator: com.soedomoto.bundle.se2016.Activator
@@ -10,7 +10,6 @@ Bundle-SymbolicName: com.soedomoto.se2016-bundle
 Bundle-Version: 0.1.0.SNAPSHOT
 Context-Path: /se2016
 Created-By: Apache Maven Bundle Plugin
-Database-Name: se2016.db
 DynamicImport-Package: *
 Export-Package: com.soedomoto.bundle.se2016;uses:="org.osgi.framework";v
  ersion="0.1.0",com.soedomoto.bundle.se2016.controller;uses:="com.soedom
@@ -28,5 +27,8 @@ Import-Package: org.osgi.framework;version="[1.5,2)",com.soedomoto.bundl
  e.proxy.service;version="[9.0,10)",com.soedomoto.bundle.se2016,com.soed
  omoto.bundle.se2016.controller,com.soedomoto.bundle.se2016.model,com.so
  edomoto.bundle.se2016.service,com.soedomoto.bundle.se2016.tools
+Jdbc-Password: bps
+Jdbc-Url: jdbc:h2:tcp://knopflerfish.soedomoto.tk/se2016
+Jdbc-Username: bps
 Real-Host: http://pgfw7.soedomoto.tk
 Tool: Bnd-3.0.0.201509101326

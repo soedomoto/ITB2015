@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MBlokSensus;
 import com.soedomoto.bundle.se2016.model.MSubBlokSensus;
@@ -17,25 +18,33 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
-import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
 
 /**
  * Created by soedomoto on 8/9/16.
  */
 public class CSubBlokSensus {
-    public static Dao<MSubBlokSensus, String> v106Dao;
+    private static CSubBlokSensus cSubBlokSensus;
+    public static CSubBlokSensus instance() {
+        if(cSubBlokSensus == null) cSubBlokSensus = new CSubBlokSensus();
+        return cSubBlokSensus;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MSubBlokSensus, String> v106Dao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MSubBlokSensus.class);
         v106Dao = DaoManager.createDao(connectionSource, MSubBlokSensus.class);
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder sbByBs = new ServletHolder(new SubBlokSensusByBlokSensus());
         sbByBs.setAsyncSupported(true);
         context.addServlet(sbByBs, SubBlokSensusByBlokSensus.PATH);
+    }
+
+    public Dao<MSubBlokSensus, String> getV106Dao() {
+        return v106Dao;
     }
 
     public static class SubBlokSensusByBlokSensus extends HttpServlet {
@@ -54,9 +63,9 @@ public class CSubBlokSensus {
                 public void run() {
                     try {
                         try {
-                            MBlokSensus blokSensus = v105Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
+                            MBlokSensus blokSensus = CBlokSensus.instance().getV105Dao().queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
                                     kodeKelurahan + kodeBlokSensus);
-                            List<MSubBlokSensus> sbss = v106Dao.queryForMatching(new MSubBlokSensus(blokSensus));
+                            List<MSubBlokSensus> sbss = CSubBlokSensus.instance().getV106Dao().queryForMatching(new MSubBlokSensus(blokSensus));
 
                             resp.getWriter().println(gson.toJson(sbss));
                             resp.setContentType("application/json");

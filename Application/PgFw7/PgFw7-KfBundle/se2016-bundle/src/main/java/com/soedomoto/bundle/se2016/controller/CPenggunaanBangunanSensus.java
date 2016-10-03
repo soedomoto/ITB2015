@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MPenggunaanBangunanSensus;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -17,29 +18,34 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
 
 /**
  * Created by soedomoto on 8/9/16.
  */
 public class CPenggunaanBangunanSensus {
-    public static Dao<MPenggunaanBangunanSensus, String> v504Dao;
+    private static CPenggunaanBangunanSensus cPenggunaanBangunanSensus;
+    public static CPenggunaanBangunanSensus instance() {
+        if(cPenggunaanBangunanSensus == null) cPenggunaanBangunanSensus = new CPenggunaanBangunanSensus();
+        return cPenggunaanBangunanSensus;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MPenggunaanBangunanSensus, String> v504Dao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MPenggunaanBangunanSensus.class);
         v504Dao = DaoManager.createDao(connectionSource, MPenggunaanBangunanSensus.class);
 
         populateData();
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder lsBangunan = new ServletHolder(new ListPenggunaanBangunanSensus());
         lsBangunan.setAsyncSupported(true);
         context.addServlet(lsBangunan, ListPenggunaanBangunanSensus.PATH);
     }
 
-    private static void populateData() {
+    private void populateData() {
         try {
             v504Dao.create(new MPenggunaanBangunanSensus(1, "Tempat usaha", new Date()));
             v504Dao.create(new MPenggunaanBangunanSensus(2, "Campuran", new Date()));
@@ -47,6 +53,10 @@ public class CPenggunaanBangunanSensus {
             v504Dao.create(new MPenggunaanBangunanSensus(4, "Tempat ibadah, Kantor organisasi, Panti sosial", new Date()));
             v504Dao.create(new MPenggunaanBangunanSensus(5, "Tempat usaha pertanian, kantor pemerintahan, kedutaan, bangunan kosong", new Date()));
         } catch (SQLException e) {}
+    }
+
+    public Dao<MPenggunaanBangunanSensus, String> getV504Dao() {
+        return v504Dao;
     }
 
     public static class ListPenggunaanBangunanSensus extends HttpServlet {
@@ -59,7 +69,7 @@ public class CPenggunaanBangunanSensus {
                 public void run() {
                     try {
                         try {
-                            List<MPenggunaanBangunanSensus> options = v504Dao.queryForAll();
+                            List<MPenggunaanBangunanSensus> options = CPenggunaanBangunanSensus.instance().getV504Dao().queryForAll();
 
                             resp.getWriter().println(gson.toJson(options));
                             resp.setContentType("application/json");

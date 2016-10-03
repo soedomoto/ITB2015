@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MKecamatan;
 import com.soedomoto.bundle.se2016.model.MKelurahan;
@@ -17,22 +18,26 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
-import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
 
 /**
  * Created by soedomoto on 8/6/16.
  */
 public class CKelurahan {
-    public static Dao<MKelurahan, String> v104Dao;
+    private static CKelurahan cKelurahan;
+    public static CKelurahan instance() {
+        if(cKelurahan == null) cKelurahan = new CKelurahan();
+        return cKelurahan;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MKelurahan, String> v104Dao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MKelurahan.class);
         v104Dao = DaoManager.createDao(connectionSource, MKelurahan.class);
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder kelByKec = new ServletHolder(new KelurahanByKecamatan());
         kelByKec.setAsyncSupported(true);
         context.addServlet(kelByKec, KelurahanByKecamatan.PATH);
@@ -40,6 +45,10 @@ public class CKelurahan {
         ServletHolder kelByKode = new ServletHolder(new KelurahanByKode());
         kelByKode.setAsyncSupported(true);
         context.addServlet(kelByKode, KelurahanByKode.PATH);
+    }
+
+    public Dao<MKelurahan, String> getV104Dao() {
+        return v104Dao;
     }
 
     public static class KelurahanByKecamatan extends HttpServlet {
@@ -56,8 +65,8 @@ public class CKelurahan {
                 public void run() {
                     try {
                         try {
-                            MKecamatan kecamatan = v103Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan);
-                            List<MKelurahan> kels = v104Dao.queryForMatching(new MKelurahan(kecamatan));
+                            MKecamatan kecamatan = CKecamatan.instance().getV103Dao().queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan);
+                            List<MKelurahan> kels = CKelurahan.instance().getV104Dao().queryForMatching(new MKelurahan(kecamatan));
 
                             resp.getWriter().println(gson.toJson(kels));
                             resp.setContentType("application/json");
@@ -89,7 +98,7 @@ public class CKelurahan {
                 public void run() {
                     try {
                         try {
-                            MKelurahan kel = v104Dao.queryForId(fullKode);
+                            MKelurahan kel = CKelurahan.instance().getV104Dao().queryForId(fullKode);
 
                             resp.getWriter().println(gson.toJson(kel));
                             resp.setContentType("application/json");

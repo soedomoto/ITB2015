@@ -28,6 +28,7 @@ import java.net.InetAddress;
 import java.net.URI;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Dictionary;
 import java.util.Enumeration;
 
 /**
@@ -45,11 +46,8 @@ public class Activator implements BundleActivator {
     public static String REAL_HOST_IP;
     public static String THIS_IP;
 
-    public static Integer SYNC_INTERVAL = 10000;
-
-    public static ConnectionSource connectionSource;
-    public static String dataDir;
-
+    private String _dataDir;
+    private ConnectionSource _connectionSource;
     private ServletContextHandler _servletContext;
     private ContextHandlerService _contextHandlerService;
     private BundleContext _bundleContext;
@@ -63,6 +61,14 @@ public class Activator implements BundleActivator {
         JDBC_URL = context.getProperty("org.osgi.bundle.se2016.jdbc.url");
         JDBC_USERNAME = context.getProperty("org.osgi.bundle.se2016.jdbc.username");
         JDBC_PASSWORD = context.getProperty("org.osgi.bundle.se2016.jdbc.password");
+
+        Dictionary mftHeaders = context.getBundle().getHeaders();
+        if(CONTEXT_PATH == null) CONTEXT_PATH = String.valueOf( mftHeaders.get("Context-Path"));
+        if(REAL_HOST == null) REAL_HOST = String.valueOf( mftHeaders.get("Real-Host"));
+        if(JDBC_URL == null) JDBC_URL = String.valueOf( mftHeaders.get("Jdbc-Url"));
+        if(JDBC_USERNAME == null) JDBC_USERNAME = String.valueOf( mftHeaders.get("Jdbc-Username"));
+        if(JDBC_PASSWORD == null) JDBC_PASSWORD = String.valueOf( mftHeaders.get("Jdbc-Password"));
+
         System.out.println(String.format("\n" +
                 "=== Properties === \n" +
                 "+ Servlet Context : %s \n" +
@@ -79,7 +85,7 @@ public class Activator implements BundleActivator {
         File dataFile = new File(fwDir + File.separator + "data" + File.separator +
                                  _bundleContext.getBundle().getBundleId());
         dataFile.mkdirs();
-        dataDir = dataFile.getAbsolutePath();
+        _dataDir = dataFile.getAbsolutePath();
 
         _configureDatabase(context);
 
@@ -101,29 +107,29 @@ public class Activator implements BundleActivator {
             public String getJdbcPassword() { return JDBC_PASSWORD; }
             public String getRealHost() { return REAL_HOST; }
             public String getContextPath() { return CONTEXT_PATH; }
-            public String getDataDirectory() { return dataDir; }
+            public String getDataDirectory() { return _dataDir; }
         };
 
         _bundleContext.registerService(PropertyHandlerService.class.getName(), propertyHandlerObj, null);
 
         //  Dao Handler
         DaoHandlerService daoHandlerObj = new DaoHandlerService() {
-            public Dao<MPropinsi, String> v101Dao() { return CPropinsi.v101Dao; }
-            public Dao<MKabupaten, String> v102Dao() { return CKabupaten.v102Dao; }
-            public Dao<MKecamatan, String> v103Dao() { return CKecamatan.v103Dao; }
-            public Dao<MKelurahan, String> v104Dao() { return CKelurahan.v104Dao; }
-            public Dao<MBlokSensus, String> v105Dao() { return CBlokSensus.v105Dao; }
-            public Dao<MSubBlokSensus, String> v106Dao() { return CSubBlokSensus.v106Dao; }
-            public Dao<MNks, String> v107Dao() { return CNks.v107Dao; }
-            public Dao<MSls, String> v108Dao() { return CSls.v108Dao; }
-            public Dao<MKriteriaBlokSensus, String> v109Dao() { return CKriteriaBlokSensus.v109Dao; }
-            public Dao<MPenggunaanBangunanSensus, String> v504Dao() { return CPenggunaanBangunanSensus.v504Dao; }
-            public Dao<MLokasiTempatUsaha, String> v510Dao() { return CLokasiTempatUsaha.v510Dao; }
-            public Dao<MPencacah, String> pencacahDao() { return CPencacah.pencacahDao; }
-            public Dao<MWilayahCacah, String> wilayahCacahDao() { return CWilayahCacah.wilayahCacahDao; }
-            public Dao<MFormL1, String> formL1Dao() { return CFormL1.formL1Dao; }
-            public Dao<MFormL1B5, String> formL1B5Dao() { return CFormL1.formL1B5Dao; }
-            public Dao<MFormL1B5Usaha, String> formL1B5UsahaDao() { return CFormL1.formL1B5UsahaDao; }
+            public Dao<MPropinsi, String> v101Dao() { return CPropinsi.instance().getV101Dao(); }
+            public Dao<MKabupaten, String> v102Dao() { return CKabupaten.instance().getV102Dao(); }
+            public Dao<MKecamatan, String> v103Dao() { return CKecamatan.instance().getV103Dao(); }
+            public Dao<MKelurahan, String> v104Dao() { return CKelurahan.instance().getV104Dao(); }
+            public Dao<MBlokSensus, String> v105Dao() { return CBlokSensus.instance().getV105Dao(); }
+            public Dao<MSubBlokSensus, String> v106Dao() { return CSubBlokSensus.instance().getV106Dao(); }
+            public Dao<MNks, String> v107Dao() { return CNks.instance().getV107Dao(); }
+            public Dao<MSls, String> v108Dao() { return CSls.instance().getV108Dao(); }
+            public Dao<MKriteriaBlokSensus, String> v109Dao() { return CKriteriaBlokSensus.instance().getV109Dao(); }
+            public Dao<MPenggunaanBangunanSensus, String> v504Dao() { return CPenggunaanBangunanSensus.instance().getV504Dao(); }
+            public Dao<MLokasiTempatUsaha, String> v510Dao() { return CLokasiTempatUsaha.instance().getV510Dao(); }
+            public Dao<MPencacah, String> pencacahDao() { return CPencacah.instance().getPencacahDao(); }
+            public Dao<MWilayahCacah, String> wilayahCacahDao() { return CWilayahCacah.instance().getWilayahCacahDao(); }
+            public Dao<MFormL1, String> formL1Dao() { return CFormL1.instance().getFormL1Dao(); }
+            public Dao<MFormL1B5, String> formL1B5Dao() { return CFormL1.instance().getFormL1B5Dao(); }
+            public Dao<MFormL1B5Usaha, String> formL1B5UsahaDao() { return CFormL1.instance().getFormL1B5UsahaDao(); }
         };
 
         _bundleContext.registerService(DaoHandlerService.class.getName(), daoHandlerObj, null);
@@ -138,28 +144,28 @@ public class Activator implements BundleActivator {
 
     public void stop(BundleContext context) throws Exception {
         _contextHandlerService.removeHandler(_servletContext);
-        if(connectionSource != null) connectionSource.close();
+        if(_connectionSource != null) _connectionSource.close();
     }
 
     private void _configureDatabase(BundleContext context) throws SQLException {
-//        connectionSource = new JdbcConnectionSource("jdbc:h2:file:"+ dataDir + File.separator + DB_NAME +
+//        _connectionSource = new JdbcConnectionSource("jdbc:h2:file:"+ _dataDir + File.separator + DB_NAME +
 //                ";FILE_LOCK=FS;PAGE_SIZE=1024;CACHE_SIZE=8192;DB_CLOSE_DELAY=-1");
-        connectionSource = new JdbcConnectionSource(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
+        _connectionSource = new JdbcConnectionSource(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
 
-        CPropinsi.createDao();
-        CKabupaten.createDao();
-        CKecamatan.createDao();
-        CKelurahan.createDao();
-        CBlokSensus.createDao();
-        CSubBlokSensus.createDao();
-        CNks.createDao();
-        CSls.createDao();
-        CKriteriaBlokSensus.createDao();
-        CPenggunaanBangunanSensus.createDao();
-        CLokasiTempatUsaha.createDao();
-        CPencacah.createDao();
-        CWilayahCacah.createDao();
-        CFormL1.createDao();
+        CPropinsi.instance().createDao(_connectionSource);
+        CKabupaten.instance().createDao(_connectionSource);
+        CKecamatan.instance().createDao(_connectionSource);
+        CKelurahan.instance().createDao(_connectionSource);
+        CBlokSensus.instance().createDao(_connectionSource);
+        CSubBlokSensus.instance().createDao(_connectionSource);
+        CNks.instance().createDao(_connectionSource);
+        CSls.instance().createDao(_connectionSource);
+        CKriteriaBlokSensus.instance().createDao(_connectionSource);
+        CPenggunaanBangunanSensus.instance().createDao(_connectionSource);
+        CLokasiTempatUsaha.instance().createDao(_connectionSource);
+        CPencacah.instance().createDao(_connectionSource);
+        CWilayahCacah.instance().createDao(_connectionSource);
+        CFormL1.instance().createDao(_connectionSource);
     }
 
     private void _mapServlet() throws IOException {
@@ -168,34 +174,34 @@ public class Activator implements BundleActivator {
 
         // Servlet Mapping
         _servletContext.addServlet(defaultHolder, "/*");
-        CPropinsi.registerServlets(_servletContext);
-        CKabupaten.registerServlets(_servletContext);
-        CKecamatan.registerServlets(_servletContext);
-        CKelurahan.registerServlets(_servletContext);
-        CBlokSensus.registerServlets(_servletContext);
-        CSubBlokSensus.registerServlets(_servletContext);
-        CNks.registerServlets(_servletContext);
-        CSls.registerServlets(_servletContext);
-        CKriteriaBlokSensus.registerServlets(_servletContext);
-        CPenggunaanBangunanSensus.registerServlets(_servletContext);
-        CLokasiTempatUsaha.registerServlets(_servletContext);
-        CPencacah.registerServlets(_servletContext);
-        CWilayahCacah.registerServlets(_servletContext);
-        CFormL1.registerServlets(_servletContext);
+        CPropinsi.instance().registerServlets(_servletContext);
+        CKabupaten.instance().registerServlets(_servletContext);
+        CKecamatan.instance().registerServlets(_servletContext);
+        CKelurahan.instance().registerServlets(_servletContext);
+        CBlokSensus.instance().registerServlets(_servletContext);
+        CSubBlokSensus.instance().registerServlets(_servletContext);
+        CNks.instance().registerServlets(_servletContext);
+        CSls.instance().registerServlets(_servletContext);
+        CKriteriaBlokSensus.instance().registerServlets(_servletContext);
+        CPenggunaanBangunanSensus.instance().registerServlets(_servletContext);
+        CLokasiTempatUsaha.instance().registerServlets(_servletContext);
+        CPencacah.instance().registerServlets(_servletContext);
+        CWilayahCacah.instance().registerServlets(_servletContext);
+        CFormL1.instance().registerServlets(_servletContext);
     }
 
     private String _getResourceBase() throws IOException {
         String webroot = "webroot";
 
-        FileUtils.deleteDirectory(new File(dataDir + File.separator + webroot));
+        FileUtils.deleteDirectory(new File(_dataDir + File.separator + webroot));
         Enumeration enumEntries = _bundleContext.getBundle().findEntries("/" + webroot, "*.*", true);
         while(enumEntries.hasMoreElements()) {
             URL path = (URL) enumEntries.nextElement();
-            File f = new File(dataDir + path.getPath());
+            File f = new File(_dataDir + path.getPath());
             f.getParentFile().mkdirs();
             IOUtils.copy(path.openStream(), new FileOutputStream(f));
         }
 
-        return dataDir + File.separator + webroot;
+        return _dataDir + File.separator + webroot;
     }
 }

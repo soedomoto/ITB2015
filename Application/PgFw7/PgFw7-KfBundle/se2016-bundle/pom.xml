@@ -100,9 +100,15 @@
                         <Context-Path>
                             /se2016
                         </Context-Path>
-                        <Database-Name>
-                            se2016.db
-                        </Database-Name>
+                        <Jdbc-Url>
+                            jdbc:h2:tcp://knopflerfish.soedomoto.tk/se2016
+                        </Jdbc-Url>
+                        <Jdbc-Username>
+                            bps
+                        </Jdbc-Username>
+                        <Jdbc-Password>
+                            bps
+                        </Jdbc-Password>
                         <Bundle-Activator>
                             ${bundle.namespace}.Activator
                         </Bundle-Activator>

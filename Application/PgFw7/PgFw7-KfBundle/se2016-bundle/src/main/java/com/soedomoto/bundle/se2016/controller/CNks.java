@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.controller;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
+import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MBlokSensus;
 import com.soedomoto.bundle.se2016.model.MNks;
@@ -17,26 +18,26 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import static com.soedomoto.bundle.se2016.Activator.connectionSource;
 import static com.soedomoto.bundle.se2016.Activator.gson;
-import static com.soedomoto.bundle.se2016.controller.CBlokSensus.v105Dao;
-import static com.soedomoto.bundle.se2016.controller.CKabupaten.v102Dao;
-import static com.soedomoto.bundle.se2016.controller.CKecamatan.v103Dao;
-import static com.soedomoto.bundle.se2016.controller.CKelurahan.v104Dao;
-import static com.soedomoto.bundle.se2016.controller.CPropinsi.v101Dao;
 
 /**
  * Created by soedomoto on 8/9/16.
  */
 public class CNks {
-    public static Dao<MNks, String> v107Dao;
+    private static CNks cNks;
+    public static CNks instance() {
+        if(cNks == null) cNks = new CNks();
+        return cNks;
+    }
 
-    public static void createDao() throws SQLException {
+    private Dao<MNks, String> v107Dao;
+
+    public void createDao(ConnectionSource connectionSource) throws SQLException {
         TableUtils.createTableIfNotExists(connectionSource, MNks.class);
         v107Dao = DaoManager.createDao(connectionSource, MNks.class);
     }
 
-    public static void registerServlets(ServletContextHandler context) {
+    public void registerServlets(ServletContextHandler context) {
         ServletHolder nksByBs = new ServletHolder(new NKSByBlokSensus());
         nksByBs.setAsyncSupported(true);
         context.addServlet(nksByBs, NKSByBlokSensus.PATH);
@@ -44,6 +45,10 @@ public class CNks {
         ServletHolder nksByKode = new ServletHolder(new NKSByKode());
         nksByKode.setAsyncSupported(true);
         context.addServlet(nksByKode, NKSByKode.PATH);
+    }
+
+    public Dao<MNks, String> getV107Dao() {
+        return v107Dao;
     }
 
     public static class NKSByBlokSensus extends HttpServlet {
@@ -62,9 +67,9 @@ public class CNks {
                 public void run() {
                     try {
                         try {
-                            MBlokSensus blokSensus = v105Dao.queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
+                            MBlokSensus blokSensus = CBlokSensus.instance().getV105Dao().queryForId(kodePropinsi + kodeKabupaten + kodeKecamatan +
                                     kodeKelurahan + kodeBlokSensus);
-                            List<MNks> nkss = v107Dao.queryForMatching(new MNks(blokSensus));
+                            List<MNks> nkss = CNks.instance().getV107Dao().queryForMatching(new MNks(blokSensus));
 
                             resp.getWriter().println(gson.toJson(nkss));
                             resp.setContentType("application/json");
@@ -97,13 +102,13 @@ public class CNks {
                 public void run() {
                     try {
                         try {
-                            MNks nks = v107Dao.queryForId(fullKode);
+                            MNks nks = CNks.instance().getV107Dao().queryForId(fullKode);
                             if(Boolean.valueOf(refresh)) {
-                                v105Dao.refresh(nks.getBlokSensus());
-                                v104Dao.refresh(nks.getBlokSensus().getKelurahan());
-                                v103Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan());
-                                v102Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
-                                v101Dao.refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
+                                CBlokSensus.instance().getV105Dao().refresh(nks.getBlokSensus());
+                                CKelurahan.instance().getV104Dao().refresh(nks.getBlokSensus().getKelurahan());
+                                CKecamatan.instance().getV103Dao().refresh(nks.getBlokSensus().getKelurahan().getKecamatan());
+                                CKabupaten.instance().getV102Dao().refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten());
+                                CPropinsi.instance().getV101Dao().refresh(nks.getBlokSensus().getKelurahan().getKecamatan().getKabupaten().getPropinsi());
                             }
 
                             resp.getWriter().println(gson.toJson(nks));
