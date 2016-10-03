@@ -19,6 +19,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Dictionary;
 import java.util.Enumeration;
 
 /**
@@ -50,11 +51,12 @@ public class Activator implements BundleActivator {
         JDBC_USERNAME = context.getProperty("org.osgi.bundle.account.jdbc.username");
         JDBC_PASSWORD = context.getProperty("org.osgi.bundle.account.jdbc.password");
 
-        if(CONTEXT_PATH == null) CONTEXT_PATH = "/account";
-        if(REAL_HOST == null) REAL_HOST = "http://pgfw7.soedomoto.tk";
-        if(JDBC_URL == null) JDBC_URL = "jdbc:h2:tcp://knopflerfish.soedomoto.tk/account";
-        if(JDBC_USERNAME == null) JDBC_USERNAME = "bps";
-        if(JDBC_PASSWORD == null) JDBC_PASSWORD = "bps";
+        Dictionary mftHeaders = context.getBundle().getHeaders();
+        if(CONTEXT_PATH == null) CONTEXT_PATH = String.valueOf( mftHeaders.get("Context-Path"));
+        if(REAL_HOST == null) REAL_HOST = String.valueOf( mftHeaders.get("Real-Host"));
+        if(JDBC_URL == null) JDBC_URL = String.valueOf( mftHeaders.get("Jdbc-Url"));
+        if(JDBC_USERNAME == null) JDBC_USERNAME = String.valueOf( mftHeaders.get("Jdbc-Username"));
+        if(JDBC_PASSWORD == null) JDBC_PASSWORD = String.valueOf( mftHeaders.get("Jdbc-Password"));
 
         System.out.println(String.format("\n" +
                 "=== Properties === \n" +
