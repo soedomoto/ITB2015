@@ -65,7 +65,8 @@ public class Activator implements BundleActivator {
         Dictionary mftHeaders = context.getBundle().getHeaders();
         if(CONTEXT_PATH == null) CONTEXT_PATH = String.valueOf( mftHeaders.get("Context-Path"));
         if(REAL_HOST == null) REAL_HOST = String.valueOf( mftHeaders.get("Real-Host"));
-        if(JDBC_URL == null) JDBC_URL = String.valueOf( mftHeaders.get("Jdbc-Url"));
+        if(JDBC_URL == null) JDBC_URL = "jdbc:h2:file:"+ _dataDir + File.separator + "se2016.db;" +
+                                        "FILE_LOCK=FS;PAGE_SIZE=1024;CACHE_SIZE=8192;DB_CLOSE_DELAY=-1";
         if(JDBC_USERNAME == null) JDBC_USERNAME = String.valueOf( mftHeaders.get("Jdbc-Username"));
         if(JDBC_PASSWORD == null) JDBC_PASSWORD = String.valueOf( mftHeaders.get("Jdbc-Password"));
 
