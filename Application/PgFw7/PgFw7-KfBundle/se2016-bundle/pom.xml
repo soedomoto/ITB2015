@@ -59,6 +59,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.soedomoto</groupId>
+            <artifactId>account</artifactId>
+            <version>0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.2</version>
@@ -100,9 +106,7 @@
                         <Context-Path>
                             /se2016
                         </Context-Path>
-                        <Jdbc-Url>
-                            jdbc:h2:tcp://knopflerfish.soedomoto.tk/se2016
-                        </Jdbc-Url>
+                        <Jdbc-Url></Jdbc-Url>
                         <Jdbc-Username>
                             bps
                         </Jdbc-Username>

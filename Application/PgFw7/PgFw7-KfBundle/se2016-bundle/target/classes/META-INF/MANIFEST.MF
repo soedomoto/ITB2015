@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1475538534720
-Build-Jdk: 1.8.0_91
+Bnd-LastModified: 1476614714778
+Build-Jdk: 1.8.0_101
 Built-By: soedomoto
 Bundle-Activator: com.soedomoto.bundle.se2016.Activator
 Bundle-Description: Provides SE2016 Application Bundle
@@ -13,22 +13,24 @@ Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
 Export-Package: com.soedomoto.bundle.se2016;uses:="org.osgi.framework";v
  ersion="0.1.0",com.soedomoto.bundle.se2016.controller;uses:="com.soedom
- oto.bundle.se2016.model";version="0.1.0",com.soedomoto.bundle.se2016.mo
- del;version="0.1.0",com.soedomoto.bundle.se2016.service;uses:="com.soed
- omoto.bundle.se2016.model";version="0.1.0",com.soedomoto.bundle.se2016.
- tools;version="0.1.0",org.apache.commons.io;version="2.2";uses:="org.ap
- ache.commons.io.filefilter",org.apache.commons.io.comparator;version="2
- .2";uses:="org.apache.commons.io",org.apache.commons.io.filefilter;vers
- ion="2.2";uses:="org.apache.commons.io",org.apache.commons.io.input;ver
- sion="2.2";uses:="org.apache.commons.io",org.apache.commons.io.monitor;
- version="2.2";uses:="org.apache.commons.io",org.apache.commons.io.outpu
- t;version="2.2"
+ oto.bundle.account.model,com.soedomoto.bundle.se2016.model";version="0.
+ 1.0",com.soedomoto.bundle.se2016.model;uses:="com.soedomoto.bundle.acco
+ unt.model";version="0.1.0",com.soedomoto.bundle.se2016.service;uses:="c
+ om.soedomoto.bundle.account.model,com.soedomoto.bundle.se2016.model";ve
+ rsion="0.1.0",org.apache.commons.io;version="2.2";uses:="org.apache.com
+ mons.io.filefilter",org.apache.commons.io.comparator;version="2.2";uses
+ :="org.apache.commons.io",org.apache.commons.io.filefilter;version="2.2
+ ";uses:="org.apache.commons.io",org.apache.commons.io.input;version="2.
+ 2";uses:="org.apache.commons.io",org.apache.commons.io.monitor;version=
+ "2.2";uses:="org.apache.commons.io",org.apache.commons.io.output;versio
+ n="2.2"
 Import-Package: org.osgi.framework;version="[1.5,2)",com.soedomoto.bundl
- e.proxy.service;version="[9.0,10)",com.soedomoto.bundle.se2016,com.soed
- omoto.bundle.se2016.controller,com.soedomoto.bundle.se2016.model,com.so
- edomoto.bundle.se2016.service,com.soedomoto.bundle.se2016.tools
+ e.account.model;version="[0.1,1)",com.soedomoto.bundle.account.service;
+ version="[0.1,1)",com.soedomoto.bundle.proxy.service;version="[9.0,10)"
+ ,com.soedomoto.bundle.proxy.tools;version="[9.0,10)",com.soedomoto.bund
+ le.se2016,com.soedomoto.bundle.se2016.controller,com.soedomoto.bundle.s
+ e2016.model,com.soedomoto.bundle.se2016.service
 Jdbc-Password: bps
-Jdbc-Url: jdbc:h2:tcp://knopflerfish.soedomoto.tk/se2016
 Jdbc-Username: bps
 Real-Host: http://pgfw7.soedomoto.tk
 Tool: Bnd-3.0.0.201509101326

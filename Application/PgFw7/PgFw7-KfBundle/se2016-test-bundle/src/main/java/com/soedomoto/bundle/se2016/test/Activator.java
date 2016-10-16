@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * Created by soedomoto on 9/6/2016.
@@ -217,6 +218,18 @@ public class Activator implements BundleActivator {
         _writeCSV(filename, new Date().toGMTString(), result.getRequest().getURI().toString(),
                 String.valueOf(result.getResponse().getStatus()),
                 result.getResponse().getHeaders().get("Content-Length"), String.valueOf(responseTime));
+    }
+
+    private int getPoissonRandom(double mean) {
+        Random r = new Random();
+        double L = Math.exp(-mean);
+        int k = 0;
+        double p = 1.0;
+        do {
+            p = p * r.nextDouble();
+            k++;
+        } while (p > L);
+        return k - 1;
     }
 
     private void _writeCSV(String filename, String... cells) {

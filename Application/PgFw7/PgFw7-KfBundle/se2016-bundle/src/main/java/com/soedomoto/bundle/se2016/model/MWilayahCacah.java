@@ -15,8 +15,8 @@ public class MWilayahCacah {
     private String fullKode;
     @DatabaseField(foreign = true, foreignAutoRefresh = true, useGetSet = true)
     private MBlokSensus blokSensus;
-    @DatabaseField(foreign = true, foreignAutoRefresh = true, useGetSet = true)
-    private MPencacah pencacah;
+    @DatabaseField(columnName = "pencacah_id", useGetSet = true)
+    private String pencacah;
     @DatabaseField(columnName = "last_update", useGetSet = true)
     private Date lastUpdate;
 
@@ -26,14 +26,14 @@ public class MWilayahCacah {
 
     public MWilayahCacah() {}
 
-    public MWilayahCacah(String fullKode, MBlokSensus blokSensus, MPencacah pencacah, Date lastUpdate) {
+    public MWilayahCacah(String fullKode, MBlokSensus blokSensus, String pencacah, Date lastUpdate) {
         this.fullKode = fullKode;
         this.blokSensus = blokSensus;
         this.pencacah = pencacah;
         this.setLastUpdate(lastUpdate);
     }
 
-    public MWilayahCacah(MBlokSensus blokSensus, MPencacah pencacah, Date lastUpdate) {
+    public MWilayahCacah(MBlokSensus blokSensus, String pencacah, Date lastUpdate) {
         this.blokSensus = blokSensus;
         this.pencacah = pencacah;
         this.setLastUpdate(lastUpdate);
@@ -41,10 +41,6 @@ public class MWilayahCacah {
 
     public MWilayahCacah(String fullKode) {
         this.fullKode = fullKode;
-    }
-
-    public MWilayahCacah(MPencacah pencacah) {
-        this.pencacah = pencacah;
     }
 
     public String getFullKode() {
@@ -63,11 +59,11 @@ public class MWilayahCacah {
         this.blokSensus = blokSensus;
     }
 
-    public MPencacah getPencacah() {
+    public String getPencacah() {
         return pencacah;
     }
 
-    public void setPencacah(MPencacah pencacah) {
+    public void setPencacah(String pencacah) {
         this.pencacah = pencacah;
     }
 

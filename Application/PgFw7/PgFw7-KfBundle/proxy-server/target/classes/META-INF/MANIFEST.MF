@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1472809029773
+Bnd-LastModified: 1476280766686
 Build-Jdk: 1.8.0_91
 Built-By: soedomoto
 Bundle-Activator: com.soedomoto.bundle.proxy.Activator
@@ -169,7 +169,8 @@ Export-Package: org.osgi.service.jdbc;version="1.3",com.google.gson;vers
  eclipse.jetty.util.statistic;version="9.0.7",org.eclipse.jetty.util.thr
  ead;version="9.0.7";uses:="org.eclipse.jetty.util.annotation,org.eclips
  e.jetty.util.component",com.soedomoto.bundle.proxy.service;uses:="org.e
- clipse.jetty.server";version="9.0.7"
+ clipse.jetty.server";version="9.0.7",com.soedomoto.bundle.proxy.tools;v
+ ersion="9.0.7"
 Import-Package: org.osgi.framework;version="1.3",org.osgi.service.jdbc;v
  ersion="1.3"
 Tool: Bnd-3.0.0.201509101326

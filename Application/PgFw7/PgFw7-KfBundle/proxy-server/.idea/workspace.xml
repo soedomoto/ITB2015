@@ -1,200 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1ca6792-f17a-48f1-bf0c-51d19bfbcb95" name="Default" comment="Update Bundles">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se2016-test-bundle/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se2016-test-bundle/se2016-test-bundle.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../se2016-test-bundle/src/main/java/com/soedomoto/bundle/se2016/test/Activator.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSync$Sync.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/modules/CordovaLib/CordovaLib.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/modules/android.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/resourceBundles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/generated/source/buildConfig/androidTest/debug/org/apache/cordova/test/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/bundles/debug/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/AuthenticationToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CallbackContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/Config.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/ConfigXmlParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaActivity$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaArgs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaBridge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaClientCertRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper$Result.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaDialogsHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaHttpAuthHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaInterfaceImpl$ActivityResultHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaInterfaceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaPlugin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaPreferences.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaResourceApi$OpenForReadResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaResourceApi.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewEngine$Client.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewEngine$EngineView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewEngine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewImpl$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewImpl$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewImpl$EngineClient$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewImpl$EngineClient$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewImpl$EngineClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CordovaWebViewImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CoreAndroid$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CoreAndroid$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CoreAndroid$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CoreAndroid$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CoreAndroid$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/CoreAndroid.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/ExposedJsApi.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/ICordovaClientCertRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/ICordovaCookieManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/ICordovaHttpAuthHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/LOG.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$BridgeMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$JsMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$LoadUrlBridgeMode$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$LoadUrlBridgeMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$NoOpBridgeMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode$OnlineEventsBridgeModeDelegate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/NativeToJsMessageQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/PluginEntry.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/PluginManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/PluginResult$Status.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/PluginResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/ResumeCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/Whitelist$URLPattern.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/Whitelist.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemCookieManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemExposedJsApi.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebChromeClient$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebChromeClient$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebChromeClient$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebChromeClient$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebChromeClient$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebChromeClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebViewClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebViewEngine$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebViewEngine$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/classes/debug/org/apache/cordova/engine/SystemWebViewEngine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/compileDebugAndroidTestAidl/dependency.store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/_minted-Paper/076160ECA10F5A117ED9A010EB30F065F81A12A790DCE4787F5EAFE09B742377.pygtex" afterPath="" />
+    <list default="true" id="b1ca6792-f17a-48f1-bf0c-51d19bfbcb95" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/target.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../account/src/main/resources/webroot/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MPencacah.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/tools/IpChecker.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MPencacah.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/bundles/debug/aapt/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/javax.servlet.LocalStrings.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/javax.servlet.LocalStrings_en_US.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/plugins/cordova-plugin-dialogs/www/android/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/plugins/cordova-plugin-dialogs/www/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/platform_www/plugins/cordova-plugin-dialogs/www/android/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/platform_www/plugins/cordova-plugin-dialogs/www/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/src/org/apache/cordova/dialogs/Notification.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/NOTICE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/RELEASENOTES.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/de/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/de/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/es/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/es/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/fr/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/fr/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/it/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/it/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/ja/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/ja/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/ko/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/ko/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/pl/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/pl/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/ru/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/zh/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/doc/zh/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/android/Notification.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/blackberry10/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/firefoxos/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/ios/CDVNotification.bundle/beep.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/ios/CDVNotification.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/ios/CDVNotification.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/ubuntu/notification.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/ubuntu/notification.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/ubuntu/notification.qml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/windows/NotificationProxy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/wp/Notification.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/wp/NotificationBox.xaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/wp/NotificationBox.xaml.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/src/wp/notification-beep.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/tests/plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/tests/tests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/android/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/blackberry10/beep.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/blackberry10/notification-beep.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/browser/notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/firefoxos/danger-press.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/firefoxos/danger.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/firefoxos/default.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/firefoxos/gradient.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/firefoxos/notification.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/firefoxos/pattern.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/firefoxos/recommend.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/cordova-plugin-dialogs/www/notification.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../account/target/classes.dex" afterPath="$PROJECT_DIR$/../account/target/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes.dex" afterPath="$PROJECT_DIR$/target/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/proxy-server-9.0.7.v20131107-dex.jar" afterPath="$PROJECT_DIR$/target/proxy-server-9.0.7.v20131107-dex.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/proxy-server-9.0.7.v20131107.jar" afterPath="$PROJECT_DIR$/target/proxy-server-9.0.7.v20131107.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes.dex" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/Activator.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/Activator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CBlokSensus$BlokSensusByKelurahan.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CBlokSensus$BlokSensusByKelurahan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CBlokSensus$BlokSensusByKode.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CBlokSensus$BlokSensusByKode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CBlokSensus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$DataL1.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$DataL1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$FormL1.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$FormL1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$FormL1B5.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$FormL1B5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$FormL1B5Usaha.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$FormL1B5Usaha.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$Submit.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1$Submit.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CFormL1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKabupaten$KabupatenByKode.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKabupaten$KabupatenByKode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKabupaten$KabupatenByPropinsi.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKabupaten$KabupatenByPropinsi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKabupaten.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKabupaten.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKecamatan$KecamatanByKabupaten.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKecamatan$KecamatanByKabupaten.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKecamatan$KecamatanByKode.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKecamatan$KecamatanByKode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKecamatan.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKecamatan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKelurahan$KelurahanByKecamatan.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKelurahan$KelurahanByKecamatan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKelurahan$KelurahanByKode.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKelurahan$KelurahanByKode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKelurahan.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKelurahan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKriteriaBlokSensus$ListKriteriaBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKriteriaBlokSensus$ListKriteriaBlokSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKriteriaBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CKriteriaBlokSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha$ListLokasiUsahaRuta.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha$ListLokasiUsahaRuta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CNks$NKSByBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CNks$NKSByBlokSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CNks$NKSByKode.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CNks$NKSByKode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CNks.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CNks.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPencacah$Pencacah.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPencacah$Pencacah.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPenggunaanBangunanSensus$ListPenggunaanBangunanSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPenggunaanBangunanSensus$ListPenggunaanBangunanSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPenggunaanBangunanSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPenggunaanBangunanSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi$1.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi$ListPropinsi.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi$ListPropinsi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi$PropinsiByKode.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi$PropinsiByKode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPropinsi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSls$SLSByBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSls$SLSByBlokSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSls$SLSByKode.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSls$SLSByKode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSls.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSls.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSubBlokSensus$SubBlokSensusByBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSubBlokSensus$SubBlokSensusByBlokSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSubBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSubBlokSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSync.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CSync.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPencacah.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CPencacah.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CWilayahCacah$WilayahCacah.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/controller/CWilayahCacah$WilayahCacah.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MBlokSensus.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MFormL1.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MFormL1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MFormL1B5.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MFormL1B5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MFormL1B5Usaha.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MFormL1B5Usaha.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKabupaten.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKabupaten.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKecamatan.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKecamatan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKelurahan.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKelurahan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKriteriaBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MKriteriaBlokSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MLokasiTempatUsaha.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MLokasiTempatUsaha.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MNks.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MNks.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MPencacah.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MPencacah.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MPenggunaanBangunanSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MPenggunaanBangunanSensus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MPropinsi.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MPropinsi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MSls.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MSls.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MSubBlokSensus.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MSubBlokSensus.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MWilayahCacah.class" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/com/soedomoto/bundle/se2016/model/MWilayahCacah.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT-dex.jar" afterPath="$PROJECT_DIR$/../se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT-dex.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/bundles/debug/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.pdf" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.synctex.gz" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.synctex.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../account/pom.xml" afterPath="$PROJECT_DIR$/../account/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/Activator.java" afterPath="$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/Activator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/controller/CAccount.java" afterPath="$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/controller/CAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../account/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/../account/target/classes/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../account/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/../account/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../account/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/../account/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/pom.xml" afterPath="$PROJECT_DIR$/../se2016-bundle/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/index.html" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/se2016-bundle.iml" afterPath="$PROJECT_DIR$/../se2016-bundle/se2016-bundle.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPencacah.java" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPencacah.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1.java" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MWilayahCacah.java" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MWilayahCacah.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/DaoHandlerService.java" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/DaoHandlerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/js/my-app.js" afterPath="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/js/my-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/webroot/index.html" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/webroot/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/classes/webroot/js/my-app.js" afterPath="$PROJECT_DIR$/../se2016-bundle/target/classes/webroot/js/my-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/../se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/../se2016-bundle/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-sync-bundle/pom.xml" afterPath="$PROJECT_DIR$/../se2016-sync-bundle/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-sync-bundle/se2016-sync-bundle.iml" afterPath="$PROJECT_DIR$/../se2016-sync-bundle/se2016-sync-bundle.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/Activator.java" afterPath="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/Activator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncData.java" afterPath="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncMaster.java" afterPath="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncMaster.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../se2016-test-bundle/src/main/java/com/soedomoto/bundle/se2016/test/Activator.java" afterPath="$PROJECT_DIR$/../se2016-test-bundle/src/main/java/com/soedomoto/bundle/se2016/test/Activator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/CordovaLib.iml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/CordovaLib.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build.gradle" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/android.iml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/android.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/android.json" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/css/my-app.css" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/css/my-app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/js/my-app.js" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/js/my-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/pages/bundle.html" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/assets/www/pages/bundle.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/build.gradle" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/platform_www/cordova_plugins.js" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/platform_www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/res/xml/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/platforms/android/src/com/soedomoto/pgfw7/server/IServer.java" afterPath="$PROJECT_DIR$/../../PgFw7App/platforms/android/src/com/soedomoto/pgfw7/server/IServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.aux" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/android.json" afterPath="$PROJECT_DIR$/../../PgFw7App/plugins/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PgFw7App/plugins/fetch.json" afterPath="$PROJECT_DIR$/../../PgFw7App/plugins/fetch.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.bbl" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.bbl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.blg" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.blg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.log" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.out" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.tex" afterPath="$PROJECT_DIR$/../../../../Paper/23215131-Aris Prawisudatama-Paper Thesis-3rd Rev/Paper.tex" />
     </list>
     <list id="427a3522-302a-4de4-abfb-4e1a627305c2" name="Unactive List" comment="Unactive List" />
@@ -207,6 +160,8 @@
     <ignored path="$PROJECT_DIR$/../sqldroid/target/" />
     <ignored path="$PROJECT_DIR$/../se2016-sync-bundle/target/" />
     <ignored path="$PROJECT_DIR$/../se2016-test-bundle/target/" />
+    <ignored path="$PROJECT_DIR$/../enumerator-account/target/" />
+    <ignored path="$PROJECT_DIR$/../account/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,26 +179,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/index.html">
+      <file leaf-file-name="Activator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/Activator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="50" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="50" />
+            <state relative-caret-position="409">
+              <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/js/my-app.js">
+      <file leaf-file-name="SyncData.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="192" column="23" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="23" />
+            <state relative-caret-position="-715">
+              <caret line="70" column="71" selection-start-line="70" selection-start-column="71" selection-end-line="70" selection-end-column="71" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SyncMaster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncMaster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="48" column="68" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="68" />
+              <folding>
+                <marker date="1476661987817" expanded="false" signature="50:625" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -255,6 +220,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -269,57 +235,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../se2016-bundle/target/se2016-bundle-0.1-SNAPSHOT/webroot/js/my-app.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/bundle/proxy/Activator.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/js/my-app.js" />
-        <option value="D:/SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107.jar!/org/eclipse/jetty/client/HttpClient.class" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/tools/IpChecker.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MBlokSensus.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1B5.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1B5Usaha.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKabupaten.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKecamatan.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKelurahan.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MKriteriaBlokSensus.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MLokasiTempatUsaha.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MNks.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MPencacah.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MPenggunaanBangunanSensus.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MPropinsi.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MSls.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MSubBlokSensus.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MWilayahCacah.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPropinsi.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/DatabaseHandlerService.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/AccountHandlerService.java" />
+        <option value="$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/apache/httpcomponents/httpasyncclient/4.1.1/httpasyncclient-4.1.1.jar!/org/apache/http/impl/nio/client/CloseableHttpAsyncClient.class" />
+        <option value="$PROJECT_DIR$/../se2016-test-bundle/pom.xml" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/index.html" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/form-l1.html" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/form-b5-add-item.html" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/form-b5-add-usaha.html" />
+        <option value="$PROJECT_DIR$/../enumerator-account/pom.xml" />
+        <option value="$PROJECT_DIR$/../enumerator-account/src/main/java/com/soedomoto/bundle/account/enumerator/model/MEnumerator.java" />
+        <option value="$PROJECT_DIR$/../enumerator-account/src/main/java/com/soedomoto/bundle/account/enumerator/model/MAccount.java" />
+        <option value="$PROJECT_DIR$/../enumerator-account/src/main/java/com/soedomoto/bundle/account/enumerator/Activator.java" />
+        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java" />
+        <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/lang/StringCoding.java" />
+        <option value="$PROJECT_DIR$/../enumerator-account/src/main/java/com/soedomoto/bundle/account/enumerator/controller/CAccount.java" />
+        <option value="$PROJECT_DIR$/../account/src/main/resources/webroot/index.html" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/props.xargs" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/PropertyHandlerService.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSync.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CNks.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CBlokSensus.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKabupaten.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKecamatan.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKelurahan.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKriteriaBlokSensus.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CNks.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPencacah.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPenggunaanBangunanSensus.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPropinsi.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSls.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSubBlokSensus.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/DatabaseHandlerService.java" />
+        <option value="$PROJECT_DIR$/../se2016-test-bundle/src/main/java/com/soedomoto/bundle/se2016/test/Activator.java" />
+        <option value="$PROJECT_DIR$/../account/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/Activator.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/pom.xml" />
+        <option value="$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/controller/CAccount.java" />
+        <option value="$PROJECT_DIR$/../account/src/main/resources/webroot/temp.html" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/js/my-app.js" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPencacah.java" />
         <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/DaoHandlerService.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/PropertyHandlerService.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/AccountHandlerService.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java" />
+        <option value="$PROJECT_DIR$/../se2016-sync-bundle/pom.xml" />
+        <option value="$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/model/MAccount.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MWilayahCacah.java" />
+        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java" />
+        <option value="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/Activator.java" />
         <option value="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncMaster.java" />
         <option value="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncData.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSync.java" />
-        <option value="$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/Activator.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java" />
-        <option value="$PROJECT_DIR$/../se2016-sync-bundle/pom.xml" />
-        <option value="$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/apache/httpcomponents/httpasyncclient/4.1.1/httpasyncclient-4.1.1.jar!/org/apache/http/impl/nio/client/CloseableHttpAsyncClient.class" />
-        <option value="$PROJECT_DIR$/../se2016-test-bundle/pom.xml" />
-        <option value="$PROJECT_DIR$/../se2016-test-bundle/src/main/java/com/soedomoto/bundle/se2016/test/Activator.java" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/index.html" />
-        <option value="$PROJECT_DIR$/../se2016-bundle/pom.xml" />
       </list>
     </option>
   </component>
@@ -366,7 +332,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -375,114 +340,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proxy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se2016-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proxy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se2016-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proxy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se2016-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proxy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se2016-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proxy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se2016-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane />
@@ -490,21 +350,29 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/../h2-bundle/src/main/java" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../account/src/main/resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.soedomoto.bundle.account.service" />
       <recent name="com.soedomoto.bundle.sqldroid" />
       <recent name="h2" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../se2016-bundle/src/main/resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="Maven.se2016-bundle">
+  <component name="RunManager" selected="Maven.se2016-sync">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -802,6 +670,7 @@
             </option>
             <option name="goals">
               <list>
+                <option value="clean" />
                 <option value="compile" />
                 <option value="bundle:bundle" />
                 <option value="exec:exec@dx" />
@@ -815,6 +684,36 @@
             </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$/../se2016-bundle" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="account" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="bundle:bundle" />
+                <option value="exec:exec@dx" />
+                <option value="copy:copy@duplicate" />
+                <option value="exec:exec@aapt" />
+                <option value="install:install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../account" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
@@ -880,11 +779,12 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Maven.proxy-server" />
       <item index="1" class="java.lang.String" itemvalue="Maven.se2016-bundle" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.se2016-sync" />
-      <item index="3" class="java.lang.String" itemvalue="Maven.se2016-test" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.account" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.se2016-sync" />
+      <item index="4" class="java.lang.String" itemvalue="Maven.se2016-test" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -965,12 +865,54 @@
       <option name="project" value="LOCAL" />
       <updated>1472861116751</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Create account bundle">
+      <created>1475369571721</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1475369571721</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Use Async Servlet">
+      <created>1475495538653</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1475495538653</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Make SE2016 Async">
+      <created>1475510755832</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1475510755832</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Use controller instance instead of static method">
+      <created>1475538687299</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1475538687299</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Put default configuration in Manifest">
+      <created>1475538733928</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1475538733928</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Change default JDBC_URL">
+      <created>1475539726826</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1475539726827</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -978,12 +920,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3502455" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31877023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3171521" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25378788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2621212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -994,7 +937,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1016,12 +958,20 @@
     <MESSAGE value="Create Sync Bundles" />
     <MESSAGE value="Remove Sync, Use Sync Bundle" />
     <MESSAGE value="Start Data Sync" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start Data Sync" />
+    <MESSAGE value="Create account bundle" />
+    <MESSAGE value="Use Async Servlet" />
+    <MESSAGE value="Make SE2016 Async" />
+    <MESSAGE value="Use controller instance instead of static method" />
+    <MESSAGE value="Put default configuration in Manifest" />
+    <MESSAGE value="Change default JDBC_URL" />
+    <MESSAGE value="Use global account" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use global account" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1030,353 +980,462 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../account/src/main/resources/props.xargs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="56" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016-sources.jar!/javax/servlet/http/HttpServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-http/9.0.7.v20131107/jetty-http-9.0.7.v20131107.jar!/org/eclipse/jetty/http/encoding.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016-sources.jar!/javax/servlet/AsyncContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="357" column="16" selection-start-line="357" selection-start-column="16" selection-end-line="357" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKabupaten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKecamatan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKelurahan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+        <state relative-caret-position="191">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CKriteriaBlokSensus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        <state relative-caret-position="5">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        <state relative-caret-position="111">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CNks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPencacah.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+        <state relative-caret-position="86">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPenggunaanBangunanSensus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSubBlokSensus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1B5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MPropinsi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/target/classes/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="109" column="17" selection-start-line="101" selection-start-column="16" selection-end-line="109" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soedomoto/bundle/proxy/Activator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="102" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="102" />
+        <state relative-caret-position="35">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPropinsi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        <state relative-caret-position="152">
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/DaoHandlerService.java">
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        <state relative-caret-position="197">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/PropertyHandlerService.java">
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSubBlokSensus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="95">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/AccountHandlerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Thread.java" />
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CSync.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="121" column="73" selection-start-line="121" selection-start-column="73" selection-end-line="121" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soedomoto/bundle/proxy/service/ContextHandlerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/HttpClient.java" />
-    <entry file="jar://D:/SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/api/ContentResponse.java" />
-    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="32" column="15" selection-start-line="30" selection-start-column="13" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="64" column="45" selection-start-line="59" selection-start-column="8" selection-end-line="64" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2663">
-          <caret line="822" column="14" selection-start-line="822" selection-start-column="14" selection-end-line="822" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15525">
-          <caret line="1113" column="43" selection-start-line="1113" selection-start-column="25" selection-end-line="1113" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/HttpDestination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-util/9.0.7.v20131107/jetty-util-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/util/component/AbstractLifeCycle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1808">
-          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/apache/httpcomponents/httpasyncclient/4.1.1/httpasyncclient-4.1.1.jar!/org/apache/http/impl/nio/client/CloseableHttpAsyncClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/apache/httpcomponents/httpclient/4.5.1/httpclient-4.5.1.jar!/org/apache/http/client/methods/HttpUriRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/apache/httpcomponents/httpasyncclient/4.1.1/httpasyncclient-4.1.1-sources.jar!/org/apache/http/impl/nio/client/CloseableHttpAsyncClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/api/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="377" column="20" selection-start-line="377" selection-start-column="20" selection-end-line="377" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4920">
-          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/HttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="383" column="27" selection-start-line="383" selection-start-column="27" selection-end-line="383" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-test-bundle/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="82" selection-start-line="107" selection-start-column="82" selection-end-line="107" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/api/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1998">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/api/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/util/BufferingResponseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/Activator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncMaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="84" column="93" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="93" />
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-test-bundle/src/main/java/com/soedomoto/bundle/se2016/test/Activator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+        <state relative-caret-position="510">
+          <caret line="187" column="44" selection-start-line="187" selection-start-column="44" selection-end-line="187" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/osgi/org.osgi.core/4.2.0/org.osgi.core-4.2.0-sources.jar!/org/osgi/framework/BundleContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="90" column="18" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/form-l1.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soedomoto/bundle/proxy/tools/IpChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/js/moment.min.js">
+    <entry file="file://$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="186">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="133" column="75" selection-start-line="133" selection-start-column="75" selection-end-line="133" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="633" column="19" selection-start-line="633" selection-start-column="19" selection-end-line="633" selection-end-column="19" />
+          <folding>
+            <element signature="e#23072#23073#0" expanded="false" />
+            <element signature="e#23112#23113#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016-sources.jar!/javax/servlet/ServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="237" column="18" selection-start-line="237" selection-start-column="18" selection-end-line="237" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/form-b5-add-usaha.html">
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/nio/charset/Charset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="3904">
+          <caret line="454" column="27" selection-start-line="454" selection-start-column="27" selection-end-line="454" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/jetty-client/9.0.7.v20131107/jetty-client-9.0.7.v20131107-sources.jar!/org/eclipse/jetty/client/util/StringContentProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding>
+            <element signature="e#1391#1392#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="828" column="23" selection-start-line="828" selection-start-column="23" selection-end-line="828" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016-sources.jar!/javax/servlet/http/HttpServletResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1811">
+          <caret line="615" column="28" selection-start-line="615" selection-start-column="28" selection-end-line="615" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/PropertyHandlerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/service/SessionHandlerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../account/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+          <folding>
+            <element signature="e#3553#3554#0" expanded="false" />
+            <element signature="e#3619#3620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../account/src/main/resources/webroot/index.html" />
+    <entry file="file://$PROJECT_DIR$/../account/src/main/resources/webroot/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/Activator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="129" column="26" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="120" column="43" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/AccountHandlerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MFormL1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="62" column="88" selection-start-line="62" selection-start-column="88" selection-end-line="62" selection-end-column="88" />
+          <folding>
+            <element signature="e#4272#4273#0" expanded="false" />
+            <element signature="e#4312#4313#0" expanded="false" />
+            <element signature="e#4353#4354#0" expanded="false" />
+            <element signature="e#4393#4394#0" expanded="false" />
+            <element signature="e#4439#4440#0" expanded="false" />
+            <element signature="e#4477#4478#0" expanded="false" />
+            <element signature="e#4512#4513#0" expanded="false" />
+            <element signature="e#4543#4544#0" expanded="false" />
+            <element signature="e#4591#4592#0" expanded="false" />
+            <element signature="e#4631#4632#0" expanded="false" />
+            <element signature="e#4665#4666#0" expanded="false" />
+            <element signature="e#4692#4693#0" expanded="false" />
+            <element signature="e#4735#4736#0" expanded="false" />
+            <element signature="e#4767#4768#0" expanded="false" />
+            <element signature="e#4802#4803#0" expanded="false" />
+            <element signature="e#4829#4830#0" expanded="false" />
+            <element signature="e#4873#4874#0" expanded="false" />
+            <element signature="e#4905#4906#0" expanded="false" />
+            <element signature="e#4940#4941#0" expanded="false" />
+            <element signature="e#4967#4968#0" expanded="false" />
+            <element signature="e#5011#5012#0" expanded="false" />
+            <element signature="e#5043#5044#0" expanded="false" />
+            <element signature="e#5078#5079#0" expanded="false" />
+            <element signature="e#5105#5106#0" expanded="false" />
+            <element signature="e#5149#5150#0" expanded="false" />
+            <element signature="e#5181#5182#0" expanded="false" />
+            <element signature="e#5217#5218#0" expanded="false" />
+            <element signature="e#5244#5245#0" expanded="false" />
+            <element signature="e#5289#5290#0" expanded="false" />
+            <element signature="e#5321#5322#0" expanded="false" />
+            <element signature="e#5360#5361#0" expanded="false" />
+            <element signature="e#5387#5388#0" expanded="false" />
+            <element signature="e#5435#5436#0" expanded="false" />
+            <element signature="e#5467#5468#0" expanded="false" />
+            <element signature="e#5496#5497#0" expanded="false" />
+            <element signature="e#5523#5524#0" expanded="false" />
+            <element signature="e#5561#5562#0" expanded="false" />
+            <element signature="e#5593#5594#0" expanded="false" />
+            <element signature="e#5622#5623#0" expanded="false" />
+            <element signature="e#5649#5650#0" expanded="false" />
+            <element signature="e#5687#5688#0" expanded="false" />
+            <element signature="e#5719#5720#0" expanded="false" />
+            <element signature="e#5763#5764#0" expanded="false" />
+            <element signature="e#5790#5791#0" expanded="false" />
+            <element signature="e#5843#5844#0" expanded="false" />
+            <element signature="e#5875#5876#0" expanded="false" />
+            <element signature="e#5912#5913#0" expanded="false" />
+            <element signature="e#5943#5944#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/service/DaoHandlerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CFormL1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="331" column="0" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
+          <folding>
+            <element signature="e#4112#6388#0" expanded="false" />
+            <element signature="e#6387#6388#0" expanded="false" />
+            <element signature="e#6733#10155#0" expanded="false" />
+            <element signature="e#10154#10155#0" expanded="false" />
+            <element signature="e#10504#14930#0" expanded="false" />
+            <element signature="e#11884#12244#0" expanded="false" />
+            <element signature="e#12243#12244#0" expanded="false" />
+            <element signature="e#12305#13114#0" expanded="false" />
+            <element signature="e#13113#13114#0" expanded="false" />
+            <element signature="e#13175#14031#0" expanded="false" />
+            <element signature="e#14030#14031#0" expanded="false" />
+            <element signature="e#14929#14930#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        <state relative-caret-position="180">
+          <caret line="65" column="21" selection-start-line="60" selection-start-column="8" selection-end-line="65" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/controller/CAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CPencacah.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/js/my-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="192" column="23" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="23" />
+        <state relative-caret-position="1455">
+          <caret line="130" column="43" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/resources/webroot/index.html">
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CBlokSensus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="50" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="184">
+          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2473#3606#0" expanded="false" />
+            <element signature="e#3605#3606#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../account/src/main/java/com/soedomoto/bundle/account/model/MAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/Activator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/model/MWilayahCacah.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/Activator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-bundle/src/main/java/com/soedomoto/bundle/se2016/controller/CWilayahCacah.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+          <folding>
+            <element signature="e#2214#4890#0" expanded="true" />
+            <element signature="e#4889#4890#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncMaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="48" column="68" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="68" />
+          <folding>
+            <marker date="1476661987817" expanded="false" signature="50:625" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../se2016-sync-bundle/src/main/java/com/soedomoto/bundle/se2016/sync/SyncData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-715">
+          <caret line="70" column="71" selection-start-line="70" selection-start-column="71" selection-end-line="70" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,7 +1491,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>se2016-test-bundle</last-edited>
+          <last-edited>account</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

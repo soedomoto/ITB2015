@@ -94,9 +94,7 @@
                         <Context-Path>
                             /account
                         </Context-Path>
-                        <Jdbc-Url>
-                            jdbc:h2:tcp://knopflerfish.soedomoto.tk/account
-                        </Jdbc-Url>
+                        <Jdbc-Url></Jdbc-Url>
                         <Jdbc-Username>
                             bps
                         </Jdbc-Username>

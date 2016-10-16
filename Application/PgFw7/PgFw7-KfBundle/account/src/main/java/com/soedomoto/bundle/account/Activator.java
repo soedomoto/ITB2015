@@ -4,7 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.soedomoto.bundle.account.controller.CAccount;
+import com.soedomoto.bundle.account.service.SessionHandlerService;
 import com.soedomoto.bundle.proxy.service.ContextHandlerService;
+import com.soedomoto.bundle.proxy.tools.IpChecker;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -17,6 +19,8 @@ import org.osgi.framework.ServiceReference;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.URI;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.Dictionary;
@@ -28,11 +32,16 @@ import java.util.Enumeration;
 public class Activator implements BundleActivator {
     public static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss.SSS").create();
 
-    public String JDBC_URL;
-    public String JDBC_USERNAME;
-    public String JDBC_PASSWORD;
-    public String REAL_HOST;
-    public String CONTEXT_PATH;
+    public static String JDBC_URL;
+    public static String JDBC_USERNAME;
+    public static String JDBC_PASSWORD;
+    public static String REAL_HOST;
+    public static String CONTEXT_PATH;
+
+    public static String REAL_HOST_IP;
+    public static String THIS_IP;
+
+    public static String SESSION_USER_ID;
 
     private String dataDir;
     private JdbcConnectionSource _connectionSource;
@@ -65,6 +74,10 @@ public class Activator implements BundleActivator {
                 "+ JDBC URL        : %s\n" +
                 "==================\n", CONTEXT_PATH, REAL_HOST, JDBC_URL));
 
+        //  Get Curr IP and Remote IP
+        REAL_HOST_IP = InetAddress.getByName(new URI(REAL_HOST).getHost()).getHostAddress();
+        THIS_IP = IpChecker.getIp();
+
         //  Handle Storage
         String fwDir = context.getProperty("org.osgi.framework.storage");
         File dataFile = new File(fwDir + File.separator + "data" + File.separator +
@@ -72,7 +85,9 @@ public class Activator implements BundleActivator {
         dataFile.mkdirs();
         dataDir = dataFile.getAbsolutePath();
 
-        _configureDatabase(context);
+        if(! (JDBC_URL == null || JDBC_URL.equalsIgnoreCase("null") || JDBC_URL.length() == 0)) {
+            _configureDatabase(context);
+        }
 
         //  Handle Servlet
         ServiceReference sr = context.getServiceReference(ContextHandlerService.class.getName());
@@ -83,6 +98,14 @@ public class Activator implements BundleActivator {
         _mapServlet();
 
         _contextHandlerService.addHandler(_servletContext);
+
+        // Register services
+        //  Account Handler
+        SessionHandlerService accountHandlerObj = new SessionHandlerService() {
+            public String getUserID() { return SESSION_USER_ID; }
+        };
+
+        _bundleContext.registerService(SessionHandlerService.class.getName(), accountHandlerObj, null);
     }
 
     public void stop(BundleContext context) throws Exception {

@@ -1,4 +1,3 @@
-com/soedomoto/bundle/se2016/model/MPencacah.class
 com/soedomoto/bundle/se2016/controller/CFormL1$Submit$1$2.class
 com/soedomoto/bundle/se2016/controller/CFormL1$Submit.class
 com/soedomoto/bundle/se2016/controller/CKelurahan$KelurahanByKecamatan$1.class
@@ -8,7 +7,6 @@ com/soedomoto/bundle/se2016/controller/CKabupaten.class
 com/soedomoto/bundle/se2016/controller/CFormL1$Sync$1.class
 com/soedomoto/bundle/se2016/controller/CLokasiTempatUsaha.class
 com/soedomoto/bundle/se2016/controller/CSls$SLSByKode$1.class
-com/soedomoto/bundle/se2016/tools/IpChecker.class
 com/soedomoto/bundle/se2016/controller/CKelurahan$KelurahanByKode$1.class
 com/soedomoto/bundle/se2016/controller/CKecamatan.class
 com/soedomoto/bundle/se2016/controller/CKelurahan.class
@@ -43,14 +41,15 @@ com/soedomoto/bundle/se2016/controller/CKelurahan$KelurahanByKode.class
 com/soedomoto/bundle/se2016/controller/CKecamatan$KecamatanByKode$1.class
 com/soedomoto/bundle/se2016/controller/CKecamatan$KecamatanByKode.class
 com/soedomoto/bundle/se2016/model/MWilayahCacah.class
+com/soedomoto/bundle/se2016/controller/CWilayahCacah$WilayahCacah$1$1.class
 com/soedomoto/bundle/se2016/model/MKecamatan.class
 com/soedomoto/bundle/se2016/Activator$1.class
 com/soedomoto/bundle/se2016/controller/CFormL1$Submit$1.class
 com/soedomoto/bundle/se2016/controller/CPropinsi$ListPropinsi$1.class
 com/soedomoto/bundle/se2016/controller/CPropinsi$ListPropinsi.class
 com/soedomoto/bundle/se2016/controller/CSls$SLSByKode.class
-com/soedomoto/bundle/se2016/controller/CWilayahCacah.class
 com/soedomoto/bundle/se2016/controller/CKecamatan$KecamatanByKabupaten.class
+com/soedomoto/bundle/se2016/controller/CWilayahCacah.class
 com/soedomoto/bundle/se2016/model/MKabupaten.class
 com/soedomoto/bundle/se2016/controller/CPenggunaanBangunanSensus.class
 com/soedomoto/bundle/se2016/controller/CBlokSensus$BlokSensusByKode.class

@@ -5,7 +5,6 @@ import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.soedomoto.bundle.se2016.model.MNks;
-import com.soedomoto.bundle.se2016.model.MPencacah;
 import com.soedomoto.bundle.se2016.model.MSls;
 import com.soedomoto.bundle.se2016.model.MWilayahCacah;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -65,8 +64,9 @@ public class CWilayahCacah {
                             List<MWilayahCacah> wilayahCacahs;
 
                             if(kodePencacah != null) {
-                                MPencacah pencacah = CPencacah.instance().getPencacahDao().queryForId(kodePencacah);
-                                wilayahCacahs = CWilayahCacah.instance().getWilayahCacahDao().queryForMatching(new MWilayahCacah(pencacah));
+                                wilayahCacahs = CWilayahCacah.instance().getWilayahCacahDao().queryForMatching(new MWilayahCacah() {{
+                                    setPencacah(kodePencacah);
+                                }});
                             } else {
                                 wilayahCacahs = CWilayahCacah.instance().getWilayahCacahDao().queryForAll();
                             }

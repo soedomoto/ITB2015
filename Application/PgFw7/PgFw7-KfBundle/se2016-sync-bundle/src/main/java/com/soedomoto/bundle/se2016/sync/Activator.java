@@ -2,11 +2,10 @@ package com.soedomoto.bundle.se2016.sync;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.soedomoto.bundle.se2016.controller.CSync;
+import com.soedomoto.bundle.proxy.tools.IpChecker;
 import com.soedomoto.bundle.se2016.service.AccountHandlerService;
 import com.soedomoto.bundle.se2016.service.DaoHandlerService;
 import com.soedomoto.bundle.se2016.service.PropertyHandlerService;
-import com.soedomoto.bundle.se2016.tools.IpChecker;
 import org.eclipse.jetty.client.HttpClient;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

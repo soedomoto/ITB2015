@@ -5,13 +5,15 @@ import com.google.gson.GsonBuilder;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
+import com.soedomoto.bundle.account.model.MAccount;
+import com.soedomoto.bundle.account.service.SessionHandlerService;
 import com.soedomoto.bundle.proxy.service.ContextHandlerService;
+import com.soedomoto.bundle.proxy.tools.IpChecker;
 import com.soedomoto.bundle.se2016.controller.*;
 import com.soedomoto.bundle.se2016.model.*;
 import com.soedomoto.bundle.se2016.service.AccountHandlerService;
 import com.soedomoto.bundle.se2016.service.DaoHandlerService;
 import com.soedomoto.bundle.se2016.service.PropertyHandlerService;
-import com.soedomoto.bundle.se2016.tools.IpChecker;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.eclipse.jetty.servlet.DefaultServlet;
@@ -55,6 +57,13 @@ public class Activator implements BundleActivator {
     public void start(BundleContext context) throws Exception {
         _bundleContext = context;
 
+        //  Handle Storage
+        String fwDir = context.getProperty("org.osgi.framework.storage");
+        File dataFile = new File(fwDir + File.separator + "data" + File.separator +
+                _bundleContext.getBundle().getBundleId());
+        dataFile.mkdirs();
+        _dataDir = dataFile.getAbsolutePath();
+
         //  Handle Properties
         CONTEXT_PATH = context.getProperty("org.osgi.bundle.se2016.servlet.context");
         REAL_HOST = context.getProperty("org.osgi.bundle.se2016.host");
@@ -81,24 +90,21 @@ public class Activator implements BundleActivator {
         REAL_HOST_IP = InetAddress.getByName(new URI(REAL_HOST).getHost()).getHostAddress();
         THIS_IP = IpChecker.getIp();
 
-        //  Handle Storage
-        String fwDir = context.getProperty("org.osgi.framework.storage");
-        File dataFile = new File(fwDir + File.separator + "data" + File.separator +
-                                 _bundleContext.getBundle().getBundleId());
-        dataFile.mkdirs();
-        _dataDir = dataFile.getAbsolutePath();
-
         _configureDatabase(context);
 
         //  Handle Servlet
-        ServiceReference sr = context.getServiceReference(ContextHandlerService.class.getName());
-        _contextHandlerService = (ContextHandlerService) context.getService(sr);
+        ServiceReference ctxSr = context.getServiceReference(ContextHandlerService.class.getName());
+        _contextHandlerService = (ContextHandlerService) context.getService(ctxSr);
 
         _servletContext = new ServletContextHandler();
         _servletContext.setContextPath(CONTEXT_PATH);
         _mapServlet();
 
         _contextHandlerService.addHandler(_servletContext);
+
+        // Handle Account
+        ServiceReference sesSr = context.getServiceReference(SessionHandlerService.class.getName());
+        final SessionHandlerService sessionHandlerService = (SessionHandlerService) context.getService(sesSr);
 
         //  Register Service
         //  Property Handler
@@ -126,7 +132,7 @@ public class Activator implements BundleActivator {
             public Dao<MKriteriaBlokSensus, String> v109Dao() { return CKriteriaBlokSensus.instance().getV109Dao(); }
             public Dao<MPenggunaanBangunanSensus, String> v504Dao() { return CPenggunaanBangunanSensus.instance().getV504Dao(); }
             public Dao<MLokasiTempatUsaha, String> v510Dao() { return CLokasiTempatUsaha.instance().getV510Dao(); }
-            public Dao<MPencacah, String> pencacahDao() { return CPencacah.instance().getPencacahDao(); }
+            public Dao<MAccount, String> pencacahDao() { return CPencacah.instance().getPencacahDao(); }
             public Dao<MWilayahCacah, String> wilayahCacahDao() { return CWilayahCacah.instance().getWilayahCacahDao(); }
             public Dao<MFormL1, String> formL1Dao() { return CFormL1.instance().getFormL1Dao(); }
             public Dao<MFormL1B5, String> formL1B5Dao() { return CFormL1.instance().getFormL1B5Dao(); }
@@ -137,7 +143,7 @@ public class Activator implements BundleActivator {
 
         //  Account Handler
         AccountHandlerService accountHandlerObj = new AccountHandlerService() {
-            public String getPencacahID() { return "198706152009021004"; }
+            public String getPencacahID() { return sessionHandlerService.getUserID(); }
         };
 
         _bundleContext.registerService(AccountHandlerService.class.getName(), accountHandlerObj, null);

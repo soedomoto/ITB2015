@@ -6,6 +6,7 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
+import com.soedomoto.bundle.account.model.MAccount;
 import com.soedomoto.bundle.se2016.Activator;
 import com.soedomoto.bundle.se2016.model.*;
 import org.eclipse.jetty.client.HttpClient;
@@ -116,7 +117,7 @@ public class CFormL1 {
                             List<MFormL1> l1s;
 
                             if(kodePencacah != null) {
-                                MPencacah pencacah = CPencacah.instance().getPencacahDao().queryForId(kodePencacah);
+                                MAccount pencacah = CPencacah.instance().getPencacahDao().queryForId(kodePencacah);
                                 l1s = CFormL1.instance().getFormL1Dao().queryForMatching(new MFormL1(pencacah));
                             } else if(kodeBlokSensus != null) {
                                 MBlokSensus bs = CBlokSensus.instance().getV105Dao().queryForId(kodeBlokSensus);
@@ -329,7 +330,7 @@ public class CFormL1 {
                         jsonFormL1.v103 + jsonFormL1.v104 + jsonFormL1.v108);
                 MKriteriaBlokSensus v109    = CKriteriaBlokSensus.instance().getV109Dao().queryForId(jsonFormL1.v109);
 
-                MPencacah pencacah = CPencacah.instance().getPencacahDao().queryForId(jsonFormL1.v202);
+                MAccount pencacah = CPencacah.instance().getPencacahDao().queryForId(jsonFormL1.v202);
                 Date v204 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").parse(jsonFormL1.v204);
 
                 MFormL1 formL1 = new MFormL1(v101, v102, v103, v104, v105, v106, v107, v108, v109,

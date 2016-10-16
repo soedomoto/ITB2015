@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
         <option value="$PROJECT_DIR$/../se2016-sync-bundle/pom.xml" />
         <option value="$PROJECT_DIR$/../se2016-test-bundle/pom.xml" />
+        <option value="$PROJECT_DIR$/../enumerator-account/pom.xml" />
+        <option value="$PROJECT_DIR$/../account/pom.xml" />
       </list>
     </option>
   </component>

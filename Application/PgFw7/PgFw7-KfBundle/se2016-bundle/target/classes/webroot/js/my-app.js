@@ -32,11 +32,32 @@ if(! myApp) {
 //  ====================================================================================================================
 
 //  1. Load default wilayah cacah for this pencacah
-var userID = getUserSession();
-getCurrentPencacah(userID, function(pencacah) {
-    listWilayahCacah(pencacah['id'], function(wilCahs) {
-        $('#l1-list').children().remove();
+loadWilayahCacah();
 
+$(document).on('click', '.view[data-page="workspace"] .refresh-workspace', function() {
+    setTimeout(function () {
+        myApp.showPreloader('Wilayah Kerja sedang diperbarui...')
+        setTimeout(function () {
+            loadWilayahCacah(function() {
+                myApp.hidePreloader();
+                myApp.addNotification({
+                    hold: 3000,
+                    closeOnClick: true,
+                    title: 'Wilayah Kerja',
+                    message: 'Wilayah Kerja telah diperbarui'
+                });
+            });
+        }, 100);
+    }, 10);
+});
+
+function loadWilayahCacah(callbackFn) {
+    var userID = getUserSession().username;
+
+    listWilayahCacah(userID, function(wilCahs) {
+        $('#l1-list li.row').remove();
+
+        var numL1Retrieved = 0;
         wilCahs.forEach(function(wilcah, idx) {
             nkss = []; wilcah['nks'].forEach(function(nks) { nkss.push(nks['nama']) });
             slss = []; wilcah['sls'].forEach(function(sls) { slss.push(sls['nama']) });
@@ -49,49 +70,23 @@ getCurrentPencacah(userID, function(pencacah) {
             '</div></li>').appendTo($('#l1-list'));
 
             getDataFormL1(wilcah['blokSensus'], function(bs, dataL1) {
-                $('#l1-list #wilcah-' + bs['fullKode']).data('bs', bs).data('l1', dataL1);
+                $('#l1-list #wilcah-' + bs['fullKode'])
+                    .data('bs', bs)
+                    .data('l1', dataL1);
+
+                numL1Retrieved += 1;
             });
         });
+
+        if(callbackFn) {
+            function check() {
+                if(numL1Retrieved >= wilCahs.length) setTimeout(callbackFn, 0);
+                else setTimeout(check, 500);
+            }
+            setTimeout(check, 500);
+        }
     });
-});
-
-$(document).on('click', '.view[data-page="workspace"] .refresh-workspace', function() {
-    setTimeout(function () {
-        myApp.showPreloader('Wilayah Kerja sedang diperbarui...')
-        setTimeout(function () {
-            var userID = getUserSession();
-            getCurrentPencacah(userID, function(pencacah) {
-                listWilayahCacah(pencacah['id'], function(wilCahs) {
-                    $('#l1-list').children().remove();
-
-                    wilCahs.forEach(function(wilcah, idx) {
-                        nkss = []; wilcah['nks'].forEach(function(nks) { nkss.push(nks['nama']) });
-                        slss = []; wilcah['sls'].forEach(function(sls) { slss.push(sls['nama']) });
-
-                        $('<li id="wilcah-'+ wilcah['fullKode'] +'" class="item-content row" style="cursor: pointer;">' +
-                        '<div class="item-inner">'+
-                            '<div class="item-title"><span>' + wilcah['blokSensus']['fullKode'] + '</span></div>'+
-                            '<div class="item-title"><span>' + nkss.join(', ') + '</span></div>'+
-                            '<div class="item-title"><span>' + slss.join(', ') + '</span></div>'+
-                        '</div></li>').appendTo($('#l1-list'));
-
-                        getDataFormL1(wilcah['blokSensus'], function(bs, dataL1) {
-                            $('#l1-list #wilcah-' + bs['fullKode']).data('bs', bs).data('l1', dataL1);
-                        });
-                    });
-
-                    myApp.hidePreloader();
-                    myApp.addNotification({
-                        hold: 3000,
-                        closeOnClick: true,
-                        title: 'Wilayah Kerja',
-                        message: 'Wilayah Kerja telah diperbarui'
-                    });
-                });
-            });
-        }, 100);
-    }, 10);
-});
+}
 
 //  2. Apply click to each wilayah cacah (p1) --> Open formL1
 //      + Load v109 options
@@ -103,18 +98,123 @@ $(document).on('click', '#l1-list li.row', function() {
     var bs = formL1.data('bs');
     var dataL1 = formL1.data('l1');
 
-    $$.get(ctxHost + '/form-l1.html', function(form) {
+    $.get(ctxHost + '/form-l1.html', function(form) {
         mainView.router.loadContent(form);
 
         if(! $.isEmptyObject(dataL1)) {
             preFilledFormL1(bs, dataL1);
         } else {
             getDataFormL1(formL1.attr('id').replace('wilcah-', ''), function(bs, dataL1) {
+               formL1.data('bs', bs).data('l1', dataL1);
                 preFilledFormL1(bs, dataL1);
             });
         }
     });
 });
+
+function preFilledFormL1(bs, dataL1) {
+    var bsFullKode = bs;
+    if($.isPlainObject(bs)) {
+        bsFullKode = bs['fullKode'];
+    }
+
+    //  Blok I
+    getBlokSensusByKode(bsFullKode, true, function(bs) {
+        preFilledPropBS(bs);
+        getSubBlokSensusByBlokSensus(function() {
+            if(dataL1 && dataL1.v106) $('select[name="v106"]').val(dataL1.v106.kode);
+        });
+        getNKSByBlokSensus(function() {
+            if(dataL1 && dataL1.v107) $('select[name="v107"]').val(dataL1.v107.kode);
+        });
+        getSLSByBlokSensus(function() {
+           if(dataL1 && dataL1.v108) $('select[name="v108"]').val(dataL1.v108.kode);
+       });
+    });
+
+    listKriteriaBlokSensus(function() {
+        if(dataL1) $('select[name="v109"]').val(dataL1.v109.kode);
+    });
+
+    //  Blok II
+    if(dataL1) $('input[name="v201"]').val(dataL1.pencacah.nama);
+    if(dataL1) $('input[name="v202"]').val(dataL1.pencacah.id);
+    if(dataL1) $('input[name="v203"]').val(dataL1.pencacah.handphone);
+    setTanggalPencacahan(dataL1 ? dataL1.v204 : null);
+
+    //  Blok III
+    if(dataL1) $('input[name="v301"]').val(dataL1.v301);
+    if(dataL1) $('input[name="v302"]').val(dataL1.v302);
+    if(dataL1) $('input[name="v303"]').val(dataL1.v303);
+    if(dataL1) $('input[name="v304"]').val(dataL1.v304);
+    if(dataL1) $('input[name="v305"]').val(dataL1.v305);
+    if(dataL1) $('input[name="v306"]').val(dataL1.v306);
+    if(dataL1) $('input[name="v307"]').val(dataL1.v307);
+    if(dataL1) $('input[name="v308"]').val(dataL1.v308);
+
+    //  Blok V
+    if(dataL1 && dataL1.b5) {
+        for(var idx in dataL1.b5) {
+            var b5Data = dataL1.b5[idx];
+            var b5ID = b5Data['v501'] + b5Data['v502'] + b5Data['v503'] + b5Data['v505'];
+            $('<li class="item-content row" id="b5-'+ b5ID +'" style="cursor: pointer;"><div class="item-inner">'+
+                '<div class="item-title"><span name="v501">'+ b5Data['v501'] +'</span></div>'+
+                '<div class="item-title"><span name="v502">'+ b5Data['v502'] +'</span></div>'+
+                '<div class="item-title"><span name="v503">'+ b5Data['v503'] +'</span></div>'+
+                '<div class="item-title"><span name="v505">'+ b5Data['v505'] +'</span></div>'+
+                '<div class="item-title"><span name="v506">'+ b5Data['v506'] +'</span></div>'+
+            '</div></li>').appendTo($('#b5-list')).data(b5Data);
+        }
+    }
+}
+
+function preFilledPropBS(bs) {
+    $('select[name="v105"] option').remove();
+    myApp.smartSelectAddOption('select[name="v105"]', '<option value="'+ bs.kode +'">'+ bs.nama +'</option>');
+    $('select[name="v104"] option').remove();
+    myApp.smartSelectAddOption('select[name="v104"]', '<option value="'+ bs.kelurahan.kode +'">'+
+        bs.kelurahan.nama +'</option>');
+    $('select[name="v103"] option').remove();
+    myApp.smartSelectAddOption('select[name="v103"]', '<option value="'+ bs.kelurahan.kecamatan.kode +'">'+
+        bs.kelurahan.kecamatan.nama +'</option>');
+    $('select[name="v102"] option').remove();
+    myApp.smartSelectAddOption('select[name="v102"]', '<option value="'+ bs.kelurahan.kecamatan.kabupaten.kode +'">'+
+        bs.kelurahan.kecamatan.kabupaten.nama +'</option>');
+    $('select[name="v101"] option').remove();
+    myApp.smartSelectAddOption('select[name="v101"]', '<option value="'+ bs.kelurahan.kecamatan.kabupaten.propinsi.kode +
+        '">'+ bs.kelurahan.kecamatan.kabupaten.propinsi.nama +'</option>');
+}
+
+function preFilledFormL1B5(b5Data) {
+    if(b5Data) $('#form-b5-add-item input[name="v501"]').val(b5Data.v501);
+    if(b5Data) $('#form-b5-add-item input[name="v502"]').val(b5Data.v502);
+    if(b5Data) $('#form-b5-add-item input[name="v503"]').val(b5Data.v503);
+    listPenggunaanBangunanSensus(function() {
+        if(b5Data) $('#form-b5-add-item select[name="v504"]').val(b5Data.v504);
+    });
+    if(b5Data) $('#form-b5-add-item input[name="v505"]').val(b5Data.v505);
+    if(b5Data) $('#form-b5-add-item input[name="v506"]').val(b5Data.v506);
+    if(b5Data) $('#form-b5-add-item input[name="v507"]').val(b5Data.v507);
+
+    //  Table b5-usaha-list
+    if(b5Data && b5Data.usaha) {
+        b5Data.usaha.forEach(function(usaha) {
+            $('<li class="item-content row" style="cursor: pointer;"><div class="item-inner">'+
+                '<div class="item-title"><span name="v508">'+ usaha.v508 +'</span></div>'+
+                '<div class="item-title"><span name="v509">'+ usaha.v509 +'</span></div>'+
+                '<div class="item-title"><span name="v510">'+ usaha.v510 +'</span></div>'+
+            '</div></li>').appendTo($('#b5-usaha-list')).data(usaha);
+        });
+    }
+}
+
+function preFilledFormL1B5Usaha(b5Usaha) {
+    if(b5Usaha) $('#form-b5-add-usaha input[name="v508"]').val(b5Usaha['v508']);
+    if(b5Usaha) $('#form-b5-add-usaha input[name="v509"]').val(b5Usaha['v509']);
+    listLokasiUsahaRuta(function() {
+        if(b5Usaha) $('#form-b5-add-usaha select[name="v510"]').val(b5Usaha['v510']);
+    });
+}
 
 //  3. Apply click to each ruta or usaha (Blok V) --> Open formL1B5
 //      + Load v109 options
@@ -298,110 +398,6 @@ function getDataFormL1(bs, callbackFn) {
     $$.getJSON(ctxHost + '/l1?bs=' + fullKode, function (listDataL1) {
         dataL1 = null; if(listDataL1.length > 0) dataL1 = listDataL1[0];
         if(callbackFn) setTimeout(callbackFn, 0, bs, dataL1);
-    });
-}
-
-function preFilledFormL1(bs, dataL1) {
-    var bsFullKode = bs;
-    if($.isPlainObject(bs)) {
-        bsFullKode = bs['fullKode'];
-    }
-
-    //  Blok I
-    getBlokSensusByKode(bsFullKode, true, function(bs) {
-        preFilledPropBS(bs);
-        getSubBlokSensusByBlokSensus(function() {
-            if(dataL1 && dataL1.v106) $('select[name="v106"]').val(dataL1.v106.kode);
-        });
-        getNKSByBlokSensus(function() {
-            if(dataL1 && dataL1.v107) $('select[name="v107"]').val(dataL1.v107.kode);
-        });
-        getSLSByBlokSensus(function() {
-           if(dataL1 && dataL1.v108) $('select[name="v108"]').val(dataL1.v108.kode);
-       });
-    });
-
-    listKriteriaBlokSensus(function() {
-        if(dataL1) $('select[name="v109"]').val(dataL1.v109.kode);
-    });
-
-    //  Blok II
-    if(dataL1) $('input[name="v201"]').val(dataL1.pencacah.nama);
-    if(dataL1) $('input[name="v202"]').val(dataL1.pencacah.id);
-    if(dataL1) $('input[name="v203"]').val(dataL1.pencacah.handphone);
-    setTanggalPencacahan(dataL1 ? dataL1.v204 : null);
-
-    //  Blok III
-    if(dataL1) $('input[name="v301"]').val(dataL1.v301);
-    if(dataL1) $('input[name="v302"]').val(dataL1.v302);
-    if(dataL1) $('input[name="v303"]').val(dataL1.v303);
-    if(dataL1) $('input[name="v304"]').val(dataL1.v304);
-    if(dataL1) $('input[name="v305"]').val(dataL1.v305);
-    if(dataL1) $('input[name="v306"]').val(dataL1.v306);
-    if(dataL1) $('input[name="v307"]').val(dataL1.v307);
-    if(dataL1) $('input[name="v308"]').val(dataL1.v308);
-
-    //  Blok V
-    if(dataL1 && dataL1.b5) {
-        for(var idx in dataL1.b5) {
-            var b5Data = dataL1.b5[idx];
-            var b5ID = b5Data['v501'] + b5Data['v502'] + b5Data['v503'] + b5Data['v505'];
-            $('<li class="item-content row" id="b5-'+ b5ID +'" style="cursor: pointer;"><div class="item-inner">'+
-                '<div class="item-title"><span name="v501">'+ b5Data['v501'] +'</span></div>'+
-                '<div class="item-title"><span name="v502">'+ b5Data['v502'] +'</span></div>'+
-                '<div class="item-title"><span name="v503">'+ b5Data['v503'] +'</span></div>'+
-                '<div class="item-title"><span name="v505">'+ b5Data['v505'] +'</span></div>'+
-                '<div class="item-title"><span name="v506">'+ b5Data['v506'] +'</span></div>'+
-            '</div></li>').appendTo($('#b5-list')).data(b5Data);
-        }
-    }
-}
-
-function preFilledPropBS(bs) {
-    $('select[name="v105"] option').remove();
-    myApp.smartSelectAddOption('select[name="v105"]', '<option value="'+ bs.kode +'">'+ bs.nama +'</option>');
-    $('select[name="v104"] option').remove();
-    myApp.smartSelectAddOption('select[name="v104"]', '<option value="'+ bs.kelurahan.kode +'">'+
-        bs.kelurahan.nama +'</option>');
-    $('select[name="v103"] option').remove();
-    myApp.smartSelectAddOption('select[name="v103"]', '<option value="'+ bs.kelurahan.kecamatan.kode +'">'+
-        bs.kelurahan.kecamatan.nama +'</option>');
-    $('select[name="v102"] option').remove();
-    myApp.smartSelectAddOption('select[name="v102"]', '<option value="'+ bs.kelurahan.kecamatan.kabupaten.kode +'">'+
-        bs.kelurahan.kecamatan.kabupaten.nama +'</option>');
-    $('select[name="v101"] option').remove();
-    myApp.smartSelectAddOption('select[name="v101"]', '<option value="'+ bs.kelurahan.kecamatan.kabupaten.propinsi.kode +
-        '">'+ bs.kelurahan.kecamatan.kabupaten.propinsi.nama +'</option>');
-}
-
-function preFilledFormL1B5(b5Data) {
-    if(b5Data) $('#form-b5-add-item input[name="v501"]').val(b5Data.v501);
-    if(b5Data) $('#form-b5-add-item input[name="v502"]').val(b5Data.v502);
-    if(b5Data) $('#form-b5-add-item input[name="v503"]').val(b5Data.v503);
-    listPenggunaanBangunanSensus(function() {
-        if(b5Data) $('#form-b5-add-item select[name="v504"]').val(b5Data.v504);
-    });
-    if(b5Data) $('#form-b5-add-item input[name="v505"]').val(b5Data.v505);
-    if(b5Data) $('#form-b5-add-item input[name="v506"]').val(b5Data.v506);
-    if(b5Data) $('#form-b5-add-item input[name="v507"]').val(b5Data.v507);
-
-    //  Table b5-usaha-list
-    if(b5Data && b5Data.usaha) {
-        b5Data.usaha.forEach(function(usaha) {
-            $('<li class="item-content row" style="cursor: pointer;"><div class="item-inner">'+
-                '<div class="item-title"><span name="v508">'+ usaha.v508 +'</span></div>'+
-                '<div class="item-title"><span name="v509">'+ usaha.v509 +'</span></div>'+
-                '<div class="item-title"><span name="v510">'+ usaha.v510 +'</span></div>'+
-            '</div></li>').appendTo($('#b5-usaha-list')).data(usaha);
-        });
-    }
-}
-
-function preFilledFormL1B5Usaha(b5Usaha) {
-    if(b5Usaha) $('#form-b5-add-usaha input[name="v508"]').val(b5Usaha['v508']);
-    if(b5Usaha) $('#form-b5-add-usaha input[name="v509"]').val(b5Usaha['v509']);
-    listLokasiUsahaRuta(function() {
-        if(b5Usaha) $('#form-b5-add-usaha select[name="v510"]').val(b5Usaha['v510']);
     });
 }
 

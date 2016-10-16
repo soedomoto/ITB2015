@@ -1,6 +1,7 @@
 package com.soedomoto.bundle.se2016.service;
 
 import com.j256.ormlite.dao.Dao;
+import com.soedomoto.bundle.account.model.MAccount;
 import com.soedomoto.bundle.se2016.model.*;
 
 /**
@@ -18,7 +19,7 @@ public interface DaoHandlerService {
     public Dao<MKriteriaBlokSensus, String> v109Dao();
     public Dao<MPenggunaanBangunanSensus, String> v504Dao();
     public Dao<MLokasiTempatUsaha, String> v510Dao();
-    public Dao<MPencacah, String> pencacahDao();
+    public Dao<MAccount, String> pencacahDao();
     public Dao<MWilayahCacah, String> wilayahCacahDao();
     public Dao<MFormL1, String> formL1Dao();
     public Dao<MFormL1B5, String> formL1B5Dao();

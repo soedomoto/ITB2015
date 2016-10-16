@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1475490489093
-Build-Jdk: 1.8.0_91
+Bnd-LastModified: 1476603436547
+Build-Jdk: 1.8.0_101
 Built-By: soedomoto
 Bundle-Activator: com.soedomoto.bundle.account.Activator
 Bundle-Description: Provides SE2016 Application Bundle
@@ -8,19 +8,25 @@ Bundle-ManifestVersion: 2
 Bundle-Name: BPS - Enumerator Account
 Bundle-SymbolicName: com.soedomoto.account
 Bundle-Version: 0.1.0.SNAPSHOT
+Context-Path: /account
 Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
 Export-Package: com.soedomoto.bundle.account;uses:="org.osgi.framework";
  version="0.1.0",com.soedomoto.bundle.account.controller;uses:="com.soed
  omoto.bundle.account.model";version="0.1.0",com.soedomoto.bundle.accoun
- t.model;version="0.1.0",org.apache.commons.io;version="2.2";uses:="org.
- apache.commons.io.filefilter",org.apache.commons.io.comparator;version=
- "2.2";uses:="org.apache.commons.io",org.apache.commons.io.filefilter;ve
- rsion="2.2";uses:="org.apache.commons.io",org.apache.commons.io.input;v
- ersion="2.2";uses:="org.apache.commons.io",org.apache.commons.io.monito
- r;version="2.2";uses:="org.apache.commons.io",org.apache.commons.io.out
- put;version="2.2"
+ t.model;version="0.1.0",com.soedomoto.bundle.account.service;version="0
+ .1.0",org.apache.commons.io;version="2.2";uses:="org.apache.commons.io.
+ filefilter",org.apache.commons.io.comparator;version="2.2";uses:="org.a
+ pache.commons.io",org.apache.commons.io.filefilter;version="2.2";uses:=
+ "org.apache.commons.io",org.apache.commons.io.input;version="2.2";uses:
+ ="org.apache.commons.io",org.apache.commons.io.monitor;version="2.2";us
+ es:="org.apache.commons.io",org.apache.commons.io.output;version="2.2"
 Import-Package: org.osgi.framework;version="[1.5,2)",com.soedomoto.bundl
  e.account,com.soedomoto.bundle.account.controller,com.soedomoto.bundle.
- account.model,com.soedomoto.bundle.proxy.service;version="[9.0,10)"
+ account.model,com.soedomoto.bundle.account.service,com.soedomoto.bundle
+ .proxy.service;version="[9.0,10)",com.soedomoto.bundle.proxy.tools;vers
+ ion="[9.0,10)"
+Jdbc-Password: bps
+Jdbc-Username: bps
+Real-Host: http://pgfw7.soedomoto.tk
 Tool: Bnd-3.0.0.201509101326

@@ -2,6 +2,7 @@ package com.soedomoto.bundle.se2016.model;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import com.soedomoto.bundle.account.model.MAccount;
 
 import java.util.Date;
 import java.util.List;
@@ -32,7 +33,7 @@ public class MFormL1 {
     @DatabaseField(foreign = true, foreignAutoRefresh = true, useGetSet = true)
     private MKriteriaBlokSensus v109;
     @DatabaseField(foreign = true, foreignAutoRefresh = true, useGetSet = true)
-    private MPencacah pencacah;
+    private MAccount pencacah;
     @DatabaseField(useGetSet = true)
     private Date v204;
     @DatabaseField(useGetSet = true)
@@ -60,7 +61,7 @@ public class MFormL1 {
     public MFormL1() {}
 
     public MFormL1(String fullKode, MPropinsi v101, MKabupaten v102, MKecamatan v103, MKelurahan v104, MBlokSensus v105,
-                   MSubBlokSensus v106, MNks v107, MSls v108, MKriteriaBlokSensus v109, MPencacah pencacah, Date v204,
+                   MSubBlokSensus v106, MNks v107, MSls v108, MKriteriaBlokSensus v109, MAccount pencacah, Date v204,
                    String v301, String v302, String v303, String v304, String v305, String v306, String v307,
                    String v308, Date lastUpdate) {
         this.fullKode = fullKode;
@@ -87,7 +88,7 @@ public class MFormL1 {
     }
 
     public MFormL1(MPropinsi v101, MKabupaten v102, MKecamatan v103, MKelurahan v104, MBlokSensus v105,
-                   MSubBlokSensus v106, MNks v107, MSls v108, MKriteriaBlokSensus v109, MPencacah pencacah, Date v204,
+                   MSubBlokSensus v106, MNks v107, MSls v108, MKriteriaBlokSensus v109, MAccount pencacah, Date v204,
                    String v301, String v302, String v303, String v304, String v305, String v306, String v307,
                    String v308, Date lastUpdate) {
         this.fullKode = v105.getFullKode();
@@ -117,7 +118,7 @@ public class MFormL1 {
         this.fullKode = fullKode;
     }
 
-    public MFormL1(MPencacah pencacah) {
+    public MFormL1(MAccount pencacah) {
         this.pencacah = pencacah;
     }
 
@@ -205,11 +206,11 @@ public class MFormL1 {
         this.v109 = v109;
     }
 
-    public MPencacah getPencacah() {
+    public MAccount getPencacah() {
         return pencacah;
     }
 
-    public void setPencacah(MPencacah pencacah) {
+    public void setPencacah(MAccount pencacah) {
         this.pencacah = pencacah;
     }
 
