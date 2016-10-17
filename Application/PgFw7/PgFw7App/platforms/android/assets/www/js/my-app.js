@@ -15,6 +15,7 @@ var mainView = appView;
 // Export selectors engine
 var $$ = Dom7;
 
+// On device ready
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
@@ -33,7 +34,7 @@ function onDeviceReady() {
                     message: 'OSGi Framework is started'
                 });
 
-                osgiStarted();
+                $(document).trigger('frameworkReady');
             } else {
                 myApp.addNotification({
                     hold: 3000,
@@ -83,9 +84,107 @@ function onDeviceReady() {
     }, false );
 }
 
-function osgiStarted() {
+$(document).on('frameworkReady', function() {
+    // handle login
+    if(! getUserSession()) {
+        showLoginDialog();
+        $(document).trigger('loggedOut');
+    } else {
+        var account = getUserSession();
+        doLogin(account.username, account.password, true);
+        $(document).trigger('loggedIn');
+    }
+});
+
+$(document).on('click', '.login-button', function (e) {
+    showLoginDialog();
+});
+
+$(document).on('click', '.logout-button', function (e) {
+    $.ajax({
+        url: proxyURL + '/account/logout',
+        type: 'get',
+        success: function(user) {
+            clearUserSession();
+            showLoginDialog();
+            $(document).trigger('loggedOut');
+        },
+        error: function(xhr, textStatus, resp){
+            if(xhr.status == 404) {
+                myApp.alert('Bundle account seems not installed or started. Please install or start it first.', appTitle);
+                settingView.router.loadPage('pages/bundle.html');
+            } else {
+                myApp.alert(resp, appTitle);
+            }
+        }
+    });
+});
+
+$(document).on('loggedIn', function() {
+    $('.login-button').hide();
+    $('.logout-button').show();
+
+    // list applications
     var list = $$('.page[data-page="apps"]').find('.list-apps ul');
     listApplications(list);
+});
+
+$(document).on('loggedOut', function() {
+    $('.logout-button').hide();
+    $('.login-button').show();
+});
+
+
+function getUserSession() {
+    if (typeof(Storage) !== "undefined") {
+        return JSON.parse(localStorage.getItem("user")) || false;
+    } else {
+        return false;
+    }
+}
+
+function setUserSession(user) {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("user", JSON.stringify(user));
+    }
+
+    return getUserSession();
+}
+
+function clearUserSession() {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.removeItem("user");
+    }
+}
+
+function showLoginDialog() {
+    myApp.modalLogin('Authentication required', appTitle, function (username, password) {
+        doLogin(username, password);
+    });
+}
+
+function doLogin(username, password, local) {
+    local = typeof local !== 'undefined' ? local : false;
+
+    $.ajax({
+        url: proxyURL + '/account/login',
+        type: 'post',
+        contentType: 'application/x-www-form-urlencoded',
+        data: { 'username': username, 'password': password, 'local': local },
+        success: function(user) {
+            myApp.alert('Welcome ' + user.username, appTitle);
+            setUserSession(user);
+            $(document).trigger('loggedIn');
+        },
+        error: function(xhr, textStatus, resp){
+            if(xhr.status == 404 || xhr.status == 0) {
+                myApp.alert('Bundle account seems not installed or started. Please install or start it first.', appTitle);
+                settingView.router.loadPage('pages/bundle.html');
+            } else {
+                myApp.alert(textStatus + ' (' + xhr.status + ') : ' + resp, appTitle);
+            }
+        }
+    });
 }
 
 function listApplications(list) {
@@ -96,11 +195,17 @@ function listApplications(list) {
 
     bundles.forEach(function(bundle) {
         if(bundle['state'][0] == 0x00000020 && bundle['context'] != null) {
-            $$('<li>' +
-                '<a href="'+ bundle['context'] +'" class="item-content item-link"><div class="item-inner">'+
-                    '<div class="item-title">'+ bundle['name'] + '</div>' +
-                '</div></a>' +
-            '</li>').appendTo(list);
+            $.ajax({
+                url: proxyURL + bundle['context'] + '/index.html',
+                type: 'get',
+                success: function(content) {
+                    $$('<li>' +
+                        '<a href="'+ bundle['context'] +'" class="item-content item-link"><div class="item-inner">'+
+                            '<div class="item-title">'+ bundle['name'] + '</div>' +
+                        '</div></a>' +
+                    '</li>').appendTo(list);
+                }
+            });
         }
     });
 }

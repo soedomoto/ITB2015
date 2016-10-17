@@ -20,6 +20,7 @@ public class IServer {
     private static String TAG = IServer.class.getSimpleName();
 
     private final COsgi osgi;
+    private boolean isFrameworkRunning = false;
 
     public IServer() {
         this.osgi = new COsgi();
@@ -32,6 +33,7 @@ public class IServer {
             framework.init();
             framework.start();
             LOG.e(TAG, "Start framework successfully");
+            isFrameworkRunning = true;
             return String.valueOf(true);
         } catch (BundleException e) {
             LOG.e(TAG, "Start framework failed", e);
@@ -45,11 +47,17 @@ public class IServer {
         try {
             framework.stop();
             LOG.e(TAG, "Stop framework successfully");
+            isFrameworkRunning = false;
             return String.valueOf(true);
         } catch (BundleException e) {
             LOG.e(TAG, "Stop framework failed", e);
             return e.getCause().getMessage();
         }
+    }
+
+    @JavascriptInterface
+    public boolean isRunning() {
+        return isFrameworkRunning;
     }
 
     @JavascriptInterface

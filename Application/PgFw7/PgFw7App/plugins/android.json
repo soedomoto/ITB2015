@@ -10,9 +10,16 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.soedomoto.pgfw7"
         },
-        "cordova-plugin-dialogs": {
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.soedomoto.pgfw7"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.soedomoto.pgfw7"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.soedomoto.pgfw7"
+        }
+    }
 }

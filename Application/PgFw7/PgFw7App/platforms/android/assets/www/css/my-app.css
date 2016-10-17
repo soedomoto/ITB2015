@@ -38,6 +38,10 @@
     padding: 0;
 }
 
+.list-settings .logout-button, .list-settings .login-button {
+    margin-top: 15px;
+}
+
 /*Spesific Pages*/
 
 .bundle {
