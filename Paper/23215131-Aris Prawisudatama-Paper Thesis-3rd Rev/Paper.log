@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.3)  8 SEP 2016 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.19)  4 OCT 2016 08:26
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1014,6 +1014,11 @@ LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Overfull \hbox (14.19948pt too wide) in paragraph at lines 781--796
+ [][] 
+ []
+
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
 has been already used, duplicate ignored
 
@@ -1093,8 +1098,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 857.
  ) 
 Here is how much of TeX's memory you used:
  19211 strings out of 493029
- 362348 string characters out of 6136235
- 493119 words of memory out of 5000000
+ 362348 string characters out of 6136234
+ 493110 words of memory out of 5000000
  22326 multiletter control sequences out of 15000+600000
  42287 words of font info for 85 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1110,7 +1115,7 @@ pe1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on Paper.pdf (6 pages, 690229 bytes).
+Output written on Paper.pdf (6 pages, 690338 bytes).
 PDF statistics:
  341 PDF objects out of 1000 (max. 8388607)
  296 compressed objects within 3 object streams
