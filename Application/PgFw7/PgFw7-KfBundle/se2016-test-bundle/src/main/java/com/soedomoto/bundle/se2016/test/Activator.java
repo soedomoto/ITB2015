@@ -33,6 +33,8 @@ public class Activator implements BundleActivator {
     private String dataDir;
     private HttpClient _client;
     private Gson _gson;
+    private Thread _thread;
+    private int _lambda = 2; // seconds
 
     public void start(BundleContext context) throws Exception {
         //  Handle Storage
@@ -60,8 +62,24 @@ public class Activator implements BundleActivator {
         _client.start();
 
         //  Test GET
-        _remoteTest();
-        _localTest();
+        System.out.println("Starting test");
+
+        _thread = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    _remoteTest();
+                    _localTest();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        _thread.setDaemon(true);
+        _thread.start();
+
+        System.out.println("test finished");
+        //context.getBundle().stop();
     }
 
     private void _getWilcah(final String host, final String filename) throws Exception {
@@ -176,19 +194,89 @@ public class Activator implements BundleActivator {
 
     private void _remoteTest() throws Exception {
         final String host = _properties.getRealHost();
-        final String filename = "remote.csv";
 
+        System.out.println("Starting remote_1");
+        _writeCSV("remote_1.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
         for(int i=0; i<1; i++) {
-            _getWilcah(host, filename);
+            _getWilcah(host, "remote_1.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Remote_1 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
+        }
+
+        System.out.println("Starting remote_10");
+        _writeCSV("remote_10.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
+        for(int i=0; i<10; i++) {
+            _getWilcah(host, "remote_10.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Remote_10 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
+        }
+
+        System.out.println("Starting remote_100");
+        _writeCSV("remote_100.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
+        for(int i=0; i<100; i++) {
+            _getWilcah(host, "remote_100.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Remote_100 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
+        }
+
+        System.out.println("Starting remote_500");
+        _writeCSV("remote_500.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
+        for(int i=0; i<500; i++) {
+            _getWilcah(host, "remote_500.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Remote_500 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
         }
     }
 
     private void _localTest() throws Exception {
         final String host = "http://localhost:5555";
-        final String filename = "local.csv";
 
+        System.out.println("Starting local_1");
+        _writeCSV("local_1.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
         for(int i=0; i<1; i++) {
-            _getWilcah(host, filename);
+            _getWilcah(host, "local_1.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Local_1 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
+        }
+
+        System.out.println("Starting local_10");
+        _writeCSV("local_10.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
+        for(int i=0; i<10; i++) {
+            _getWilcah(host, "local_10.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Local_10 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
+        }
+
+        System.out.println("Starting local_100");
+        _writeCSV("local_100.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
+        for(int i=0; i<100; i++) {
+            _getWilcah(host, "local_100.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Local_100 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
+        }
+
+        System.out.println("Starting local_500");
+        _writeCSV("local_500.csv", "Start time", "URL", "Status code", "Content length", "Response time (ms)");
+        for(int i=0; i<500; i++) {
+            _getWilcah(host, "local_500.csv");
+
+            int delay = getPoissonRandom(_lambda);
+            System.out.println(String.format("(Local_500 #%s) Pausing for %s seconds", i, delay));
+            Thread.currentThread().sleep(delay * 1000);
         }
     }
 
@@ -243,6 +331,7 @@ public class Activator implements BundleActivator {
     }
 
     public void stop(BundleContext context) throws Exception {
-
+        _thread.join();
+        _thread.stop();
     }
 }

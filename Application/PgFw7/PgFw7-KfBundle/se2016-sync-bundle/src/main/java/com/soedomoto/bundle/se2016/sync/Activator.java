@@ -15,6 +15,7 @@ import java.net.InetAddress;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.UnknownHostException;
+import java.util.Random;
 
 /**
  * Created by soedomoto on 02/09/16.
@@ -79,5 +80,17 @@ public class Activator implements BundleActivator {
 
     public void stop(BundleContext context) throws Exception {
         _threads.stop();
+    }
+
+    public static int getPoissonRandom(double mean) {
+        Random r = new Random();
+        double L = Math.exp(-mean);
+        int k = 0;
+        double p = 1.0;
+        do {
+            p = p * r.nextDouble();
+            k++;
+        } while (p > L);
+        return k - 1;
     }
 }

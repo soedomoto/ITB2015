@@ -1,0 +1,12 @@
+Start time,URL,Status code,Content length,Response time (ms)
+17 Oct 2016 07:18:26 GMT,http://pgfw7.soedomoto.tk/se2016/wilcah?pencacah=soedomoto,200,1444,509
+17 Oct 2016 07:18:27 GMT,http://pgfw7.soedomoto.tk/se2016/bloksensus/by-kode?fullKode=1302090010003,200,133,378
+17 Oct 2016 07:18:27 GMT,http://pgfw7.soedomoto.tk/se2016/bloksensus/by-kode?fullKode=1302090018033,200,133,555
+17 Oct 2016 07:18:27 GMT,http://pgfw7.soedomoto.tk/se2016/kelurahan/by-kode?fullKode=1302090010,200,142,406
+17 Oct 2016 07:18:27 GMT,http://pgfw7.soedomoto.tk/se2016/kelurahan/by-kode?fullKode=1302090018,200,141,346
+17 Oct 2016 07:18:27 GMT,http://pgfw7.soedomoto.tk/se2016/kecamatan/by-kode?fullKode=1302090,200,125,335
+17 Oct 2016 07:18:28 GMT,http://pgfw7.soedomoto.tk/se2016/kecamatan/by-kode?fullKode=1302090,200,125,333
+17 Oct 2016 07:18:28 GMT,http://pgfw7.soedomoto.tk/se2016/kabupaten/by-kode?fullKode=1302,200,135,346
+17 Oct 2016 07:18:28 GMT,http://pgfw7.soedomoto.tk/se2016/kabupaten/by-kode?fullKode=1302,200,135,337
+17 Oct 2016 07:18:28 GMT,http://pgfw7.soedomoto.tk/se2016/propinsi/by-kode?fullKode=13,200,93,331
+17 Oct 2016 07:18:28 GMT,http://pgfw7.soedomoto.tk/se2016/propinsi/by-kode?fullKode=13,200,93,350

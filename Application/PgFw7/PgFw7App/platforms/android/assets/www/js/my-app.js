@@ -23,7 +23,7 @@ function onDeviceReady() {
     setTimeout(function () {
         myApp.showPreloader('OSGi Framework is starting...')
         setTimeout(function () {
-            status = window.server.startFramework();
+            status = window.osgi.startFramework();
             myApp.hidePreloader()
 
             if(status == 'true') {
@@ -61,7 +61,7 @@ function onDeviceReady() {
                         setTimeout(function () {
                             myApp.showPreloader('OSGi Framework is stopping...')
                             setTimeout(function () {
-                                status = window.server.stopFramework();
+                                status = window.osgi.stopFramework();
                                 myApp.hidePreloader()
 
                                 if(status == 'true') {
@@ -82,6 +82,28 @@ function onDeviceReady() {
             }
         }
     }, false );
+
+    /**
+    document.addEventListener('offline', function() {
+        console.log('OFFLINE...');
+    }, false);
+
+    document.addEventListener('online', function() {
+        var networkState = navigator.connection.type;
+
+        var states = {};
+        states[Connection.UNKNOWN]  = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI]     = 'WiFi connection';
+        states[Connection.CELL_2G]  = 'Cell 2G connection';
+        states[Connection.CELL_3G]  = 'Cell 3G connection';
+        states[Connection.CELL_4G]  = 'Cell 4G connection';
+        states[Connection.CELL]     = 'Cell generic connection';
+        states[Connection.NONE]     = 'No network connection';
+
+        console.log('Connection type: ' + states[networkState]);
+    }, false);
+    */
 }
 
 $(document).on('frameworkReady', function() {
@@ -188,7 +210,7 @@ function doLogin(username, password, local) {
 }
 
 function listApplications(list) {
-    var bundles = window.server.listBundles();
+    var bundles = window.osgi.listBundles();
     bundles = JSON.parse(bundles);
 
     list.children().remove();
@@ -211,7 +233,7 @@ function listApplications(list) {
 }
 
 function listBundles(list) {
-    var bundles = window.server.listBundles();
+    var bundles = window.osgi.listBundles();
     bundles = JSON.parse(bundles);
 
     list.children().remove();
@@ -312,7 +334,7 @@ $$(document).on('click', '.page[data-page="bundle"] .install', function() {
         setTimeout(function () {
             myApp.showPreloader('Bundle is installing...')
             setTimeout(function () {
-                status = window.server.installBundle(uri);
+                status = window.osgi.installBundle(uri);
                 myApp.hidePreloader()
 
                 if(status == 'true') {
@@ -344,7 +366,7 @@ $$(document).on('click', '.page[data-page="bundle"] .start', function() {
     setTimeout(function () {
         myApp.showPreloader('Bundle is starting...')
         setTimeout(function () {
-            status = window.server.startBundle(id);
+            status = window.osgi.startBundle(id);
             myApp.hidePreloader()
 
             if(status == 'true') {
@@ -375,7 +397,7 @@ $$(document).on('click', '.page[data-page="bundle"] .stop', function() {
     setTimeout(function () {
         myApp.showPreloader('Bundle is stopping...')
         setTimeout(function () {
-            status = window.server.stopBundle(id);
+            status = window.osgi.stopBundle(id);
             myApp.hidePreloader()
 
             if(status == 'true') {
@@ -406,7 +428,7 @@ $$(document).on('click', '.page[data-page="bundle"] .update', function() {
     setTimeout(function () {
         myApp.showPreloader('Bundle is updating...')
         setTimeout(function () {
-            status = window.server.updateBundle(id);
+            status = window.osgi.updateBundle(id);
             myApp.hidePreloader()
 
             if(status == 'true') {
@@ -437,7 +459,7 @@ $$(document).on('click', '.page[data-page="bundle"] .uninstall', function() {
     setTimeout(function () {
         myApp.showPreloader('Bundle is uninstalling...')
         setTimeout(function () {
-            status = window.server.uninstallBundle(id);
+            status = window.osgi.uninstallBundle(id);
             myApp.hidePreloader()
 
             if(status == 'true') {

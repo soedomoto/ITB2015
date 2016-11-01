@@ -47,7 +47,7 @@ public class SyncMaster implements Runnable {
             }
 
             System.out.println(String.format("* %s Records changed. Next sync Master Tables will be held in %s seconds!",
-                    changes, _interval/1000));
+                    changes, _interval /1000));
 
             try {
                 Thread.sleep(_interval);

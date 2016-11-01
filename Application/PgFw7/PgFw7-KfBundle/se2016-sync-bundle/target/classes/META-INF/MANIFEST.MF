@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1476704280324
+Build-Jdk: 1.8.0_101
+Built-By: soedomoto
+Bundle-Activator: com.soedomoto.bundle.se2016.sync.Activator
+Bundle-Description: Provides SE2016 Syncronizing Bundle
+Bundle-ManifestVersion: 2
+Bundle-Name: SE2016 - Sync Module
+Bundle-SymbolicName: com.soedomoto.se2016-sync-bundle
+Bundle-Version: 0.1.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: com.soedomoto.bundle.se2016.sync;uses:="com.soedomoto.bu
+ ndle.se2016.service,org.osgi.framework";version="0.1.0"
+Import-Package: org.osgi.framework;version="[1.5,2)",com.soedomoto.bundl
+ e.proxy.tools;version="[9.0,10)",com.soedomoto.bundle.se2016.controller
+ ;version="[0.1,1)",com.soedomoto.bundle.se2016.model;version="[0.1,1)",
+ com.soedomoto.bundle.se2016.service;version="[0.1,1)"
+Tool: Bnd-3.0.0.201509101326

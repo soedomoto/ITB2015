@@ -428,7 +428,7 @@ The proposed alternative scenario is to adopt a proxy approach. Proxy approach b
 
 \begin{figure}
     \centering
-    \includegraphics[width=8.5cm]{../Images/proxy-overview}
+    \includegraphics[width=8.5cm]{../../Resources/Images/proxy-overview}
     \caption{Proxy Overview}
     \label{fig:proxy-overview}
 \end{figure}
@@ -459,7 +459,7 @@ In a workflow-based application, such as the application of data collection, in 
 
 \begin{figure}
     \centering
-    \includegraphics[width=8cm]{../Images/ws-standards-stack}
+    \includegraphics[width=8cm]{../../Resources/Images/ws-standards-stack}
     \caption{Web Service Standards Stack}
     \label{fig:ws-standards-stack}
 \end{figure}
@@ -479,7 +479,7 @@ Similar with the data bus, the service bus handle web service invocation by the 
 
 \begin{figure}
     \centering
-    \includegraphics[width=8cm]{../Images/proxy-design-data-layers}
+    \includegraphics[width=8cm]{../../Resources/Images/proxy-design-data-layers}
     \caption{Data Bus Layers}
     \label{fig:proxy-design-data-layers}
 \end{figure}
@@ -494,13 +494,13 @@ Data and web services bundles are replicated from central storage to local stora
 	\centering
 	\subfloat[Web Services Replication Strategy]{
 		\centering
-		\includegraphics[width=3.5cm]{../Images/bundle-replication-flowchart}
+		\includegraphics[width=3.5cm]{../../Resources/Images/bundle-replication-flowchart}
 		\label{fig:bundle-replication-flowchart}
 	}
 	\hfil\hfil
 	\subfloat[Data Replication Strategy]{
 		\centering
-		\includegraphics[width=3.5cm]{../Images/data-replication-flowchart}
+		\includegraphics[width=3.5cm]{../../Resources/Images/data-replication-flowchart}
 		\label{fig:data-replication-flowchart}}
 	\caption{Replication Strategies}
 	\label{fig:replication-flowchart}
@@ -516,7 +516,7 @@ Data synchronization is very depend on bundle, since each bundle require differe
 
 \begin{figure}
     \centering
-    \includegraphics[width=8cm]{../Images/data-sync-flowchart}
+    \includegraphics[width=8cm]{../../Resources/Images/data-sync-flowchart}
     \caption{Data Syncronization Strategy}
     \label{fig:data-sync-flowchart}
 \end{figure}
@@ -529,7 +529,7 @@ Routing plays important role in distributed system. It manages the network traff
 
 \begin{figure}
     \centering
-    \includegraphics[width=6cm]{../Images/routing-flowchart}
+    \includegraphics[width=6cm]{../../Resources/Images/routing-flowchart}
     \caption{Routing Strategy}
     \label{fig:routing-flowchart}
 \end{figure}
@@ -554,18 +554,18 @@ Android application that is made must support the principle of OSGi, which is mo
 	\centering
 	\subfloat[Home Page]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-app-1}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-app-1}
 		\label{fig:android-app-1}
 	}
 	\hfil
 	\subfloat[Autostart OSGi Framework]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-app-2}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-app-2}
 		\label{fig:android-app-2}}
 	\hfil
 	\subfloat[Bundle Page]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-app-3}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-app-3}
 		\label{fig:android-app-3}}
 	\caption{Android Application}
 	\label{fig:android-app}
@@ -591,32 +591,32 @@ Synchronizer is an OSGi bundle that is used to synchronize data in two direction
 	\centering
 	\subfloat[Install bundle]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-bundle-1}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-bundle-1}
 		\label{fig:android-bundle-1}}
 	\hfil
 	\subfloat[Bundle is installing]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-bundle-2}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-bundle-2}
 		\label{fig:android-bundle-2}}
 	\hfil
 	\subfloat[Bundles are installed]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-bundle-3}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-bundle-3}
 		\label{fig:android-bundle-3}}
 	\vfil
 	\subfloat[Bundle is starting]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-bundle-4}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-bundle-4}
 		\label{fig:android-bundle-4}}
 	\hfil
 	\subfloat[Bundles are active]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-bundle-5}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-bundle-5}
 		\label{fig:android-bundle-5}}
 	\hfil
 	\subfloat[Composite application is loaded]{
 		\centering
-		\includegraphics[width=2.5cm]{../Images/android-bundle-6}
+		\includegraphics[width=2.5cm]{../../Resources/Images/android-bundle-6}
 		\label{fig:android-bundle-6}}
 	\caption{Android Bundles}
 	\label{fig:android-bundle}
@@ -768,29 +768,27 @@ Started: SE2016 - Sync Module (#12)
 
 \section{Testing}
 \subsection{Response Time}
+Pengujian terhadap response time digunakan untuk mengukur latency antara client dan server. Pengujian ini menggunakan dua skenario, yaitu skenario tanpa proxy dan dengan proxy. Dari empat kali pengujian dengan jumlah transaksi yang bervariasi, seperti yang ditunjukkan dalam Table \ref{tbl:response_time}, menunjukkan dengan menggunakan proxy dapat mengurangi response time sebanyak 20 kali lipat dibandingkan dengan tanpa menggunakan proxy.
+
+
 \begin{table}
-% increase table row spacing, adjust to taste
 \renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
 \caption{Response Time Test (ms)}
 \label{tbl:response_time}
 \centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
 \begin{tabular}{|c||c|c|c|c|c|c|}
 \hline
 Transactions & \multicolumn{3}{c|}{Without Proxy} & \multicolumn{3}{c|}{With Proxy}\\
 \hline
 & Total & $\mu$ & $\sigma$ & Total & $\mu$ & $\sigma$\\
 \hline
-11 & 5043 & 458.45 & 252.6 & 121 & 11 & 8.9\\
+11 & 4226 & 384.18 & 77.10 & 862 & 78.36 & 224.09\\
 \hline
-110 & 50439 & 458.54 & 330.2 & 7442 & 67.65 & 82\\
+110 & 41999 & 381.81 & 51.54 & 1376 & 12.51 & 9.41\\
 \hline
-1100 & 668605 & 607.82 & 679.2 & 405408 & 368.55 & 517.4\\
+1100 & 405892 & 368.99 & 59.95 & 15891 & 14.45 & 13.47\\
 \hline
-5500 & 2658179 & 483.3 & 282.2 & 2415957 & 439.26 & 533.2\\
+5500 & 2226949 & 404.90 & 206.73 & 64600 & 11.74 & 9.92\\
 \hline
 \end{tabular}
 \end{table}
@@ -850,7 +848,7 @@ Our proposed design also makes it possible to install more than one composite ap
 % \end{thebibliography}
 
 \bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,../Bibliography/Paper}
+\bibliography{IEEEabrv,../../Resources/Bibliography/Paper.bib}
 
 
 % that's all folks

@@ -22,7 +22,7 @@ package com.soedomoto.pgfw7;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-import com.soedomoto.pgfw7.server.IServer;
+import com.soedomoto.pgfw7.server.JIOsgi;
 
 import org.apache.cordova.*;
 
@@ -36,7 +36,7 @@ public class MainActivity extends CordovaActivity
         init();
 
         WebView wV = (WebView) appView.getEngine().getView();
-        wV.addJavascriptInterface(new IServer(), "server");
+        wV.addJavascriptInterface(new JIOsgi(this), "osgi");
 
         loadUrl(launchUrl);
     }

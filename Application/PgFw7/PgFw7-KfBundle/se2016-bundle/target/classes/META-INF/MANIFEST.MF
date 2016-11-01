@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1476614714778
+Bnd-LastModified: 1476721941725
 Build-Jdk: 1.8.0_101
 Built-By: soedomoto
 Bundle-Activator: com.soedomoto.bundle.se2016.Activator

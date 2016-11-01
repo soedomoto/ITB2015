@@ -185,6 +185,23 @@ function preFilledPropBS(bs) {
         '">'+ bs.kelurahan.kecamatan.kabupaten.propinsi.nama +'</option>');
 }
 
+//  3. Apply click to each ruta or usaha (Blok V) --> Open formL1B5
+//      + Load v109 options
+//      + Prefilled v504 (if exists before)
+//      + Prefilled field v501 - v507
+$(document).on('click', '#form-l1 #b5-list li.row, #form-l1 .b5-add-item', function() {
+    var b5Data = $(this).data();
+
+    $$.get(ctxHost + '/popup-b5-add-item.html', function(form) {
+        myApp.popup(form);
+
+        preFilledFormL1B5(b5Data);
+        $$('.popup-b5-add-item').on('opened', function () {
+          // preFilledFormL1B5(b5Data);
+        });
+    });
+});
+
 function preFilledFormL1B5(b5Data) {
     if(b5Data) $('#form-b5-add-item input[name="v501"]').val(b5Data.v501);
     if(b5Data) $('#form-b5-add-item input[name="v502"]').val(b5Data.v502);
@@ -207,27 +224,6 @@ function preFilledFormL1B5(b5Data) {
         });
     }
 }
-
-function preFilledFormL1B5Usaha(b5Usaha) {
-    if(b5Usaha) $('#form-b5-add-usaha input[name="v508"]').val(b5Usaha['v508']);
-    if(b5Usaha) $('#form-b5-add-usaha input[name="v509"]').val(b5Usaha['v509']);
-    listLokasiUsahaRuta(function() {
-        if(b5Usaha) $('#form-b5-add-usaha select[name="v510"]').val(b5Usaha['v510']);
-    });
-}
-
-//  3. Apply click to each ruta or usaha (Blok V) --> Open formL1B5
-//      + Load v109 options
-//      + Prefilled v504 (if exists before)
-//      + Prefilled field v501 - v507
-$(document).on('click', '#form-l1 #b5-list li.row, #form-l1 .b5-add-item', function() {
-    var b5Data = $(this).data();
-
-    $$.get(ctxHost + '/form-b5-add-item.html', function(form) {
-        mainView.router.loadContent(form);
-        preFilledFormL1B5(b5Data);
-    });
-});
 
 //  4. Change jumlah usaha in v507
 //      + Auto-match row number of form-b5-add-usaha
@@ -275,6 +271,14 @@ $(document).on('click', '#b5-usaha-list li.row', function() {
         row.data(b5Usaha);
     });
 });
+
+function preFilledFormL1B5Usaha(b5Usaha) {
+    if(b5Usaha) $('#form-b5-add-usaha input[name="v508"]').val(b5Usaha['v508']);
+    if(b5Usaha) $('#form-b5-add-usaha input[name="v509"]').val(b5Usaha['v509']);
+    listLokasiUsahaRuta(function() {
+        if(b5Usaha) $('#form-b5-add-usaha select[name="v510"]').val(b5Usaha['v510']);
+    });
+}
 
 //  7. Submit formL1B5
 //      + Override data in #b5-usaha-list li.row

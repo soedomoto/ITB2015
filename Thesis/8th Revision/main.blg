@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: ../../Resources/Bibliography/Paper.bib
+Warning--empty author and editor in _gsbpm_????
+Warning--empty publisher in _gsbpm_????
+Warning--empty year in _gsbpm_????
+Warning--empty author and editor in _redesigning_????
+Warning--empty publisher in _redesigning_????
+Warning--empty year in _redesigning_????
+Warning--empty author and editor in _gsim_????
+Warning--empty publisher in _gsim_????
+Warning--empty year in _gsim_????
+Warning--empty author and editor in _cspa_????
+Warning--empty publisher in _cspa_????
+Warning--empty year in _cspa_????
+Warning--empty author and editor in _primer_????
+Warning--empty publisher in _primer_????
+Warning--empty year in _primer_????
+You've used 22 entries,
+            1876 wiz_defined-function locations,
+            598 strings with 8073 characters,
+and the built_in function-call counts, 6565 in all, are:
+= -- 661
+> -- 193
+< -- 0
++ -- 74
+- -- 52
+* -- 493
+:= -- 833
+add.period$ -- 23
+call.type$ -- 22
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 37
+duplicate$ -- 368
+empty$ -- 669
+format.name$ -- 52
+if$ -- 1617
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 23
+newline$ -- 70
+num.names$ -- 17
+pop$ -- 97
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 250
+stack$ -- 0
+substring$ -- 514
+swap$ -- 146
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 15
+while$ -- 65
+width$ -- 24
+write$ -- 211
+(There were 15 warnings)
