@@ -29,15 +29,15 @@
 \contentsline {subsection}{\numberline {IV.1.1}Penyusunan Model Aplikasi}{27}{subsection.4.1.1}
 \contentsline {subsubsection}{\numberline {IV.1.1.1}Pendekatan \textit {Stand Alone}}{27}{subsubsection.4.1.1.1}
 \contentsline {subsubsection}{\numberline {IV.1.1.2}Pendekatan \textit {Client Server}}{29}{subsubsection.4.1.1.2}
-\contentsline {subsubsection}{\numberline {IV.1.1.3}Pendekatan \textit {Client Server} dengan \textit {Proxy}}{30}{subsubsection.4.1.1.3}
-\contentsline {subsection}{\numberline {IV.1.2}Pengelolaan Data}{32}{subsection.4.1.2}
-\contentsline {section}{\numberline {IV.2}PERANCANGAN}{33}{section.4.2}
-\contentsline {subsection}{\numberline {IV.2.1}Replikasi}{33}{subsection.4.2.1}
-\contentsline {subsubsection}{\numberline {IV.2.1.1}Replikasi \textit {Rule} Validasi}{34}{subsubsection.4.2.1.1}
-\contentsline {subsubsection}{\numberline {IV.2.1.2}Replikasi Data}{34}{subsubsection.4.2.1.2}
-\contentsline {subsection}{\numberline {IV.2.2}Sinkronisasi}{34}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {IV.2.2.1}Sinkronisasi \textit {Rule} Validasi}{35}{subsubsection.4.2.2.1}
-\contentsline {subsubsection}{\numberline {IV.2.2.2}Sinkronisasi Data}{35}{subsubsection.4.2.2.2}
-\contentsline {subsection}{\numberline {IV.2.3}Replikasi}{35}{subsection.4.2.3}
-\contentsline {chapter}{Daftar Pustaka}{36}{subsection.4.2.3}
-\contentsline {chapter}{Lampiran 1}{38}{appendix*.32}
+\contentsline {section}{\numberline {IV.2}PERANCANGAN}{31}{section.4.2}
+\contentsline {subsection}{\numberline {IV.2.1}Perancangan Model Aplikasi}{31}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {IV.2.2}Replikasi}{31}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {IV.2.2.1}Replikasi \textit {Rule} Validasi}{32}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {IV.2.2.2}Replikasi Data}{32}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {IV.2.3}Sinkronisasi}{33}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {IV.2.3.1}Sinkronisasi \textit {Rule} Validasi}{33}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {IV.2.3.2}Sinkronisasi Data}{33}{subsubsection.4.2.3.2}
+\contentsline {subsection}{\numberline {IV.2.4}Routing}{34}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {IV.2.5}Pengelolaan Data}{34}{subsection.4.2.5}
+\contentsline {chapter}{Daftar Pustaka}{37}{Item.29}
+\contentsline {chapter}{Lampiran 1}{40}{appendix*.36}

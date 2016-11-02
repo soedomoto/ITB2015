@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.14)  1 NOV 2016 07:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.14)  2 NOV 2016 21:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -985,7 +985,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 
  [10] (./bab1.tex
 Bab I.
-<../../Resources/Images/gsbpm.png, id=200, 1345.025pt x 842.14626pt>
+<../../Resources/Images/gsbpm.png, id=211, 1345.025pt x 842.14626pt>
 File: ../../Resources/Images/gsbpm.png Graphic file (type png)
 
 <use ../../Resources/Images/gsbpm.png>
@@ -1002,7 +1002,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 
 ] [2 <../../Resources/Images/gsbpm.png>]
-<../../Resources/Images/capi-ilustration.png, id=221, 847.66687pt x 576.65437pt
+<../../Resources/Images/capi-ilustration.png, id=232, 847.66687pt x 576.65437pt
 >
 File: ../../Resources/Images/capi-ilustration.png Graphic file (type png)
  <use ../../Resources/Images/capi-ilustration.png>
@@ -1017,7 +1017,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
  [3 <../../Resources/Images/capi-ilustration.png>]
-<../../Resources/Images/takdir-distributed-soa.png, id=237, 703.12688pt x 280.0
+<../../Resources/Images/takdir-distributed-soa.png, id=248, 703.12688pt x 280.0
 4625pt>
 File: ../../Resources/Images/takdir-distributed-soa.png Graphic file (type png)
 
@@ -1028,7 +1028,7 @@ Package pdftex.def Info: ../../Resources/Images/takdir-distributed-soa.png used
  [4 <../../Resources/Images/takdir-distributed-soa.png>] [5]) (./bab2.tex [6]
 Bab II.
 
-<../../Resources/Images/literature-map.png, id=255, 785.93625pt x 561.09625pt>
+<../../Resources/Images/literature-map.png, id=266, 785.93625pt x 561.09625pt>
 File: ../../Resources/Images/literature-map.png Graphic file (type png)
 
 <use ../../Resources/Images/literature-map.png>
@@ -1044,7 +1044,7 @@ Package pdftex.def Info: ../../Resources/Images/gsbpm.png used on input line 16
 .
 (pdftex.def)             Requested size: 398.3386pt x 249.4076pt.
 
-<../../Resources/Images/gsim.png, id=258, 313.17pt x 313.17pt>
+<../../Resources/Images/gsim.png, id=269, 313.17pt x 313.17pt>
 File: ../../Resources/Images/gsim.png Graphic file (type png)
 
 <use ../../Resources/Images/gsim.png>
@@ -1056,7 +1056,7 @@ Package pdftex.def Info: ../../Resources/Images/gsim.png used on input line 26.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<../../Resources/Images/object-relation-gsim.png, id=259, 913.91437pt x 602.25p
+<../../Resources/Images/object-relation-gsim.png, id=270, 913.91437pt x 602.25p
 t>
 File: ../../Resources/Images/object-relation-gsim.png Graphic file (type png)
  <use ../../Resources/Images/object-relation-gsim.png>
@@ -1070,7 +1070,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [7
 
 ] [8 <../../Resources/Images/literature-map.png>]
-<../../Resources/Images/cspa-layer.png, id=272, 653.44125pt x 391.4625pt>
+<../../Resources/Images/cspa-layer.png, id=283, 653.44125pt x 391.4625pt>
 File: ../../Resources/Images/cspa-layer.png Graphic file (type png)
 
 <use ../../Resources/Images/cspa-layer.png>
@@ -1089,14 +1089,14 @@ Overfull \hbox (3.05655pt too wide) in paragraph at lines 115--116
  []
 
 [13] [14]
-<../../Resources/Images/takdir-design-1.png, id=324, 380.92313pt x 182.93344pt>
+<../../Resources/Images/takdir-design-1.png, id=335, 380.92313pt x 182.93344pt>
 File: ../../Resources/Images/takdir-design-1.png Graphic file (type png)
 <use ../../Resources/Images/takdir-design-1.png>
 Package pdftex.def Info: ../../Resources/Images/takdir-design-1.png used on inp
 ut line 155.
 (pdftex.def)             Requested size: 199.1693pt x 95.6479pt.
 
-<../../Resources/Images/takdir-design-2.png, id=325, 322.95656pt x 234.1247pt>
+<../../Resources/Images/takdir-design-2.png, id=336, 322.95656pt x 234.1247pt>
 File: ../../Resources/Images/takdir-design-2.png Graphic file (type png)
 
 <use ../../Resources/Images/takdir-design-2.png>
@@ -1104,7 +1104,7 @@ Package pdftex.def Info: ../../Resources/Images/takdir-design-2.png used on inp
 ut line 161.
 (pdftex.def)             Requested size: 199.1693pt x 144.38416pt.
 
-<../../Resources/Images/takdir-design-3.png, id=326, 346.29375pt x 234.1247pt>
+<../../Resources/Images/takdir-design-3.png, id=337, 346.29375pt x 234.1247pt>
 File: ../../Resources/Images/takdir-design-3.png Graphic file (type png)
 
 <use ../../Resources/Images/takdir-design-3.png>
@@ -1112,7 +1112,7 @@ Package pdftex.def Info: ../../Resources/Images/takdir-design-3.png used on inp
 ut line 167.
 (pdftex.def)             Requested size: 199.1693pt x 134.65994pt.
 
-<../../Resources/Images/takdir-design-4.png, id=327, 424.58624pt x 163.3603pt>
+<../../Resources/Images/takdir-design-4.png, id=338, 424.58624pt x 163.3603pt>
 File: ../../Resources/Images/takdir-design-4.png Graphic file (type png)
 
 <use ../../Resources/Images/takdir-design-4.png>
@@ -1124,7 +1124,7 @@ ut line 173.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15]
-<../../Resources/Images/takdir-synchronize.png, id=336, 372.64218pt x 319.1925p
+<../../Resources/Images/takdir-synchronize.png, id=347, 372.64218pt x 319.1925p
 t>
 File: ../../Resources/Images/takdir-synchronize.png Graphic file (type png)
  <use ../../Resources/Images/takdir-synchronize.png>
@@ -1136,7 +1136,7 @@ input line 185.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<../../Resources/Images/takdir-replication.png, id=337, 344.03531pt x 486.31688
+<../../Resources/Images/takdir-replication.png, id=348, 344.03531pt x 486.31688
 pt>
 File: ../../Resources/Images/takdir-replication.png Graphic file (type png)
  <use ../../Resources/Images/takdir-replication.png>
@@ -1148,7 +1148,7 @@ input line 194.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<../../Resources/Images/takdir-deployment-1.png, id=339, 807.7678pt x 377.91188
+<../../Resources/Images/takdir-deployment-1.png, id=350, 807.7678pt x 377.91188
 pt>
 File: ../../Resources/Images/takdir-deployment-1.png Graphic file (type png)
  <use ../../Resources/Images/takdir-deployment-1.png>
@@ -1162,7 +1162,7 @@ mages/takdir-design-4.png>]
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<../../Resources/Images/takdir-deployment-2.png, id=349, 807.7678pt x 329.73187
+<../../Resources/Images/takdir-deployment-2.png, id=360, 807.7678pt x 329.73187
 pt>
 File: ../../Resources/Images/takdir-deployment-2.png Graphic file (type png)
  <use ../../Resources/Images/takdir-deployment-2.png>
@@ -1174,7 +1174,7 @@ Package pdftex.def Info: ../../Resources/Images/takdir-deployment-2.png used on
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17 <../../Resources/Images/takdir-synchronize.png>]
-<../../Resources/Images/takdir-deployment-3a.png, id=358, 721.94719pt x 332.743
+<../../Resources/Images/takdir-deployment-3a.png, id=369, 721.94719pt x 332.743
 12pt>
 File: ../../Resources/Images/takdir-deployment-3a.png Graphic file (type png)
  <use ../../Resources/Images/takdir-deployment-3a.png>
@@ -1186,7 +1186,7 @@ n input line 229.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<../../Resources/Images/takdir-deployment-3b.png, id=359, 849.1725pt x 332.7431
+<../../Resources/Images/takdir-deployment-3b.png, id=370, 849.1725pt x 332.7431
 2pt>
 File: ../../Resources/Images/takdir-deployment-3b.png Graphic file (type png)
  <use ../../Resources/Images/takdir-deployment-3b.png>
@@ -1200,7 +1200,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [18 <../../Resources/Images/takdir-replication.png>] [19 <../../Resources/Image
 s/takdir-deployment-1.png> <../../Resources/Images/takdir-deployment-2.png>]
 [20]
-<../../Resources/Images/takdir-testing-3-network.png, id=379, 765.86125pt x 273
+<../../Resources/Images/takdir-testing-3-network.png, id=390, 765.86125pt x 273
 .02pt>
 File: ../../Resources/Images/takdir-testing-3-network.png Graphic file (type pn
 g)
@@ -1213,7 +1213,7 @@ ed on input line 334.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<../../Resources/Images/takdir-testing-3-cpu.png, id=381, 447.17062pt x 278.540
+<../../Resources/Images/takdir-testing-3-cpu.png, id=392, 447.17062pt x 278.540
 62pt>
 File: ../../Resources/Images/takdir-testing-3-cpu.png Graphic file (type png)
  <use ../../Resources/Images/takdir-testing-3-cpu.png>
@@ -1228,7 +1228,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 urces/Images/takdir-deployment-3b.png>] [22 <../../Resources/Images/takdir-test
 ing-3-network.png> <../../Resources/Images/takdir-testing-3-cpu.png>]
 Bab III.
-<../../Resources/Images/dsrm.png, id=399, 1046.91125pt x 271.0125pt>
+<../../Resources/Images/dsrm.png, id=410, 1046.91125pt x 271.0125pt>
 File: ../../Resources/Images/dsrm.png Graphic file (type png)
 
 <use ../../Resources/Images/dsrm.png>
@@ -1237,7 +1237,7 @@ Package pdftex.def Info: ../../Resources/Images/dsrm.png used on input line 9.
  [23
 
  <../../Resources/Images/dsrm.png>]
-<../../Resources/Images/dsrm-artifact.png, id=410, 405.515pt x 284.06125pt>
+<../../Resources/Images/dsrm-artifact.png, id=421, 405.515pt x 284.06125pt>
 File: ../../Resources/Images/dsrm-artifact.png Graphic file (type png)
 
 <use ../../Resources/Images/dsrm-artifact.png>
@@ -1245,7 +1245,7 @@ Package pdftex.def Info: ../../Resources/Images/dsrm-artifact.png used on input
  line 37.
 (pdftex.def)             Requested size: 199.16928pt x 139.52063pt.
  [24 <../../Resources/Images/dsrm-artifact.png>]
-<../../Resources/Images/dsrm-implementation.png, id=420, 977.6525pt x 125.46875
+<../../Resources/Images/dsrm-implementation.png, id=431, 977.6525pt x 125.46875
 pt>
 File: ../../Resources/Images/dsrm-implementation.png Graphic file (type png)
  <use ../../Resources/Images/dsrm-implementation.png>
@@ -1254,18 +1254,18 @@ Package pdftex.def Info: ../../Resources/Images/dsrm-implementation.png used on
 (pdftex.def)             Requested size: 398.3386pt x 51.12088pt.
  [25 <../../Resources/Images/dsrm-implementation.png>]) (./bab4.tex [26]
 Bab IV.
-[27
 
-]
-<../../Resources/Images/design-stand-alone.png, id=445, 524.96124pt x 364.36125
+<../../Resources/Images/design-stand-alone.png, id=448, 524.96124pt x 364.36125
 pt>
 File: ../../Resources/Images/design-stand-alone.png Graphic file (type png)
  <use ../../Resources/Images/design-stand-alone.png>
 Package pdftex.def Info: ../../Resources/Images/design-stand-alone.png used on 
 input line 29.
 (pdftex.def)             Requested size: 278.83578pt x 193.53864pt.
+ [27
 
-<../../Resources/Images/design-stand-alone-flowchart.png, id=446, 405.515pt x 3
+]
+<../../Resources/Images/design-stand-alone-flowchart.png, id=456, 405.515pt x 3
 65.365pt>
 File: ../../Resources/Images/design-stand-alone-flowchart.png Graphic file (typ
 e png)
@@ -1276,74 +1276,100 @@ g used on input line 36.
 
 [28 <../../Resources/Images/design-stand-alone.png> <../../Resources/Images/des
 ign-stand-alone-flowchart.png>]
-Overfull \hbox (3.22476pt too wide) in paragraph at lines 43--44
-[]\T1/ptm/m/n/12 Sinkronisasi meng-gu-nak-an \T1/ptm/m/it/12 sche-du-ler \T1/pt
-m/m/n/12 yang ak-an di-\T1/ptm/m/it/12 trigger \T1/ptm/m/n/12 se-ti-ap per-i-o-
-de wak-
- []
-
-
-<../../Resources/Images/design-client-server.png, id=457, 524.96124pt x 364.361
+<../../Resources/Images/design-client-server-rpc.png, id=468, 585.18625pt x 243
+.91125pt>
+File: ../../Resources/Images/design-client-server-rpc.png Graphic file (type pn
+g)
+ <use ../../Resources/Images/design-client-server-rpc.png>
+Package pdftex.def Info: ../../Resources/Images/design-client-server-rpc.png us
+ed on input line 57.
+(pdftex.def)             Requested size: 278.83578pt x 116.22377pt.
+ [29 <../../Resources/Images/design-client-server-rpc.png>]
+<../../Resources/Images/design-client-server.png, id=480, 524.96124pt x 364.361
 25pt>
 File: ../../Resources/Images/design-client-server.png Graphic file (type png)
  <use ../../Resources/Images/design-client-server.png>
 Package pdftex.def Info: ../../Resources/Images/design-client-server.png used o
-n input line 62.
+n input line 70.
 (pdftex.def)             Requested size: 278.83578pt x 193.53864pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-<../../Resources/Images/design-client-server-flowchart.png, id=458, 405.515pt x
+<../../Resources/Images/design-client-server-flowchart.png, id=481, 405.515pt x
  275.0275pt>
 File: ../../Resources/Images/design-client-server-flowchart.png Graphic file (t
 ype png)
  <use ../../Resources/Images/design-client-server-flowchart.png>
 Package pdftex.def Info: ../../Resources/Images/design-client-server-flowchart.
-png used on input line 69.
+png used on input line 77.
 (pdftex.def)             Requested size: 278.83578pt x 189.1145pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[29]
-<../../Resources/Images/design-client-server-proxy.png, id=466, 605.26125pt x 3
-74.39874pt>
-File: ../../Resources/Images/design-client-server-proxy.png Graphic file (type 
-png)
- <use ../../Resources/Images/design-client-server-proxy.png>
-Package pdftex.def Info: ../../Resources/Images/design-client-server-proxy.png 
-used on input line 84.
-(pdftex.def)             Requested size: 318.67209pt x 197.12215pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [30 <../../Resources/Images/design-client-server.png> <../../Resources/Images/d
-esign-client-server-flowchart.png>] [31 <../../Resources/Images/design-client-s
-erver-proxy.png>] [32]
-<../../Resources/Images/architecture-solution.png, id=498, 605.26125pt x 364.36
+esign-client-server-flowchart.png>]
+<../../Resources/Images/architecture-solution.png, id=489, 605.26125pt x 364.36
 125pt>
 File: ../../Resources/Images/architecture-solution.png Graphic file (type png)
  <use ../../Resources/Images/architecture-solution.png>
 Package pdftex.def Info: ../../Resources/Images/architecture-solution.png used 
-on input line 142.
+on input line 105.
 (pdftex.def)             Requested size: 346.55263pt x 208.62209pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[33] [34 <../../Resources/Images/architecture-solution.png>]) [35] (./main.bbl
+[31]
+<../../Resources/Images/architecture-rule-replication.png, id=497, 609.27625pt 
+x 274.02374pt>
+File: ../../Resources/Images/architecture-rule-replication.png Graphic file (ty
+pe png)
+ <use ../../Resources/Images/architecture-rule-replication.png>
+Package pdftex.def Info: ../../Resources/Images/architecture-rule-replication.p
+ng used on input line 122.
+(pdftex.def)             Requested size: 370.45197pt x 166.61485pt.
+
+[32 <../../Resources/Images/architecture-solution.png> <../../Resources/Images/
+architecture-rule-replication.png>]
+<../../Resources/Images/architecture-data-replication.png, id=506, 651.43375pt 
+x 295.1025pt>
+File: ../../Resources/Images/architecture-data-replication.png Graphic file (ty
+pe png)
+ <use ../../Resources/Images/architecture-data-replication.png>
+Package pdftex.def Info: ../../Resources/Images/architecture-data-replication.p
+ng used on input line 134.
+(pdftex.def)             Requested size: 370.45197pt x 167.8229pt.
+
+<../../Resources/Images/architecture-rule-synchronization.png, id=508, 609.2762
+5pt x 294.09875pt>
+File: ../../Resources/Images/architecture-rule-synchronization.png Graphic file
+ (type png)
+
+<use ../../Resources/Images/architecture-rule-synchronization.png>
+Package pdftex.def Info: ../../Resources/Images/architecture-rule-synchronizati
+on.png used on input line 151.
+(pdftex.def)             Requested size: 370.45197pt x 178.82106pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33 <../../Resources/Images/architecture-data-replication.png>]
+<../../Resources/Images/architecture-data-synchronization.png, id=515, 651.4337
+5pt x 295.1025pt>
+File: ../../Resources/Images/architecture-data-synchronization.png Graphic file
+ (type png)
+
+<use ../../Resources/Images/architecture-data-synchronization.png>
+Package pdftex.def Info: ../../Resources/Images/architecture-data-synchronizati
+on.png used on input line 163.
+(pdftex.def)             Requested size: 370.45197pt x 167.8229pt.
+ [34 <../../Resources/Images/architecture-rule-synchronization.png> <../../Reso
+urces/Images/architecture-data-synchronization.png>] [35]) [36] (./main.bbl
 Underfull \hbox (badness 4416) in paragraph at lines 8--10
 []\T1/ptm/m/it/12 Redesigning a Qu-es-tion-nai-re for Com-pu-ter As-sis-ted Da-
 ta Co-lle-ct -
  []
 
-[36
+[37
 
 
-]) (./appendix1.tex [37]) [38
+] [38]) (./appendix1.tex [39]) [40
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
@@ -1353,23 +1379,26 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 20422 strings out of 493029
- 361697 string characters out of 6136233
- 547872 words of memory out of 5000000
- 23338 multiletter control sequences out of 15000+600000
+ 20455 strings out of 493029
+ 363196 string characters out of 6136233
+ 548208 words of memory out of 5000000
+ 23360 multiletter control sequences out of 15000+600000
  78011 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,12n,73p,1311b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (49 pages, 2865207 bytes).
+pdfTeX warning (dest): name{Item.31} has been referenced but does not exist, 
+replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (51 pages, 3040645 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 603 compressed objects within 7 object streams
- 176 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 756 PDF objects out of 1000 (max. 8388607)
+ 624 compressed objects within 7 object streams
+ 183 named destinations out of 1000 (max. 500000)
+ 514 words of extra memory for PDF output out of 10000 (max. 10000000)
 

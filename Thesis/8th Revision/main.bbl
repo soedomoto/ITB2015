@@ -119,4 +119,21 @@ K.~Peffers, T.~Tuunanen, M.~A. Rothenberger, and S.~Chatterjee, ``A {Design}
 S.~Purao, ``Design research in the technology of information systems: {Truth}
   or dare,'' {\em GSU Department of CIS Working Paper}, pp.~45--77, 2002.
 
+\bibitem{schuster_client/server_1994}
+H.~Schuster, S.~Jablonski, T.~Kirsche, and C.~Bussler, ``A client/server
+  architecture for distributed workflow management systems,'' in {\em Parallel
+  and {Distributed} {Information} {Systems}, 1994., {Proceedings} of the
+  {Third} {International} {Conference} on}, pp.~253--256, IEEE, 1994.
+
+\bibitem{bertocco_client-server_1998}
+M.~Bertocco, F.~Ferraris, C.~Offelli, and M.~Parvis, ``A client-server
+  architecture for distributed measurement systems,'' {\em IEEE transactions on
+  instrumentation and measurement}, vol.~47, no.~5, pp.~1143--1148, 1998.
+
+\bibitem{callaghan_clientserver_2007}
+M.~J. Callaghan, J.~Harkin, E.~McColgan, T.~M. McGinnity, and L.~P. Maguire,
+  ``Client–server architecture for collaborative remote experimentation,''
+  {\em Journal of Network and Computer Applications}, vol.~30, no.~4,
+  pp.~1295--1308, 2007.
+
 \end{thebibliography}

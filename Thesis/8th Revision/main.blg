@@ -18,45 +18,45 @@ Warning--empty year in _cspa_????
 Warning--empty author and editor in _primer_????
 Warning--empty publisher in _primer_????
 Warning--empty year in _primer_????
-You've used 22 entries,
+You've used 25 entries,
             1876 wiz_defined-function locations,
-            598 strings with 8073 characters,
-and the built_in function-call counts, 6565 in all, are:
-= -- 661
-> -- 193
+            618 strings with 8871 characters,
+and the built_in function-call counts, 7746 in all, are:
+= -- 784
+> -- 238
 < -- 0
-+ -- 74
-- -- 52
-* -- 493
-:= -- 833
-add.period$ -- 23
-call.type$ -- 22
-change.case$ -- 16
++ -- 90
+- -- 65
+* -- 581
+:= -- 988
+add.period$ -- 26
+call.type$ -- 25
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 368
-empty$ -- 669
-format.name$ -- 52
-if$ -- 1617
+cite$ -- 40
+duplicate$ -- 427
+empty$ -- 772
+format.name$ -- 65
+if$ -- 1906
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 23
-newline$ -- 70
-num.names$ -- 17
-pop$ -- 97
+int.to.str$ -- 25
+missing$ -- 26
+newline$ -- 79
+num.names$ -- 20
+pop$ -- 105
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 250
+skip$ -- 299
 stack$ -- 0
-substring$ -- 514
-swap$ -- 146
+substring$ -- 626
+swap$ -- 177
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 15
-while$ -- 65
-width$ -- 24
-write$ -- 211
+while$ -- 77
+width$ -- 27
+write$ -- 243
 (There were 15 warnings)

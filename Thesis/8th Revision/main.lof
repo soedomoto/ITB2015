@@ -25,8 +25,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {IV.1}{\ignorespaces Pendekatan \textit {Stand Alone}\relax }}{28}{figure.caption.25}
 \contentsline {figure}{\numberline {IV.2}{\ignorespaces \textit {Flowchart} Pendekatan \textit {Stand Alone}\relax }}{28}{figure.caption.26}
-\contentsline {figure}{\numberline {IV.3}{\ignorespaces Pendekatan \textit {Client Server}\relax }}{30}{figure.caption.27}
-\contentsline {figure}{\numberline {IV.4}{\ignorespaces \textit {Flowchart} Pendekatan \textit {Client Server}\relax }}{30}{figure.caption.28}
-\contentsline {figure}{\numberline {IV.5}{\ignorespaces Mekanisme \textit {Client Server} dengan \textit {Proxy}\relax }}{31}{figure.caption.29}
-\contentsline {figure}{\numberline {IV.6}{\ignorespaces Arsitektur Solusi\relax }}{34}{figure.caption.30}
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces \textit {Client Server} dengan RPC \cite {schuster_client/server_1994}\relax }}{29}{figure.caption.27}
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces Pendekatan \textit {Client Server}\relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces \textit {Flowchart} Pendekatan \textit {Client Server}\relax }}{30}{figure.caption.29}
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces Arsitektur Solusi\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces Skema Replikasi \textit {Rule} Validasi\relax }}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces Skema Replikasi Data\relax }}{33}{figure.caption.32}
+\contentsline {figure}{\numberline {IV.9}{\ignorespaces Skema Sinkronisasi \textit {Rule} Validasi\relax }}{34}{figure.caption.33}
+\contentsline {figure}{\numberline {IV.10}{\ignorespaces Skema Sinkronisasi Data\relax }}{34}{figure.caption.34}
 \addvspace {10\p@ }
