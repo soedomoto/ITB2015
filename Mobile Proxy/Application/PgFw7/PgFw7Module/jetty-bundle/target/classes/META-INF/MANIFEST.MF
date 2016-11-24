@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1465979443843
+Build-Jdk: 1.8.0_60
+Built-By: soedomoto
+Bundle-Activator: com.soedomoto.bundle.jetty.server.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: jetty-server-bundle
+Bundle-SymbolicName: com.soedomoto.jetty-server-bundle
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.soedomoto.bundle.jetty.server;uses:="javax.servlet.h
+ ttp,org.eclipse.jetty.server.handler,org.eclipse.jetty.servlet,org.osgi
+ .framework";version="0.0.1.SNAPSHOT"
+Import-Package: org.osgi.framework;version="[1.5,2)",org.eclipse.jetty.s
+ erver,org.eclipse.jetty.server.handler,org.eclipse.jetty.servlet,javax.
+ servlet.http
+Tool: Bnd-3.0.0.201509101326

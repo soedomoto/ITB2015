@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <style name="QuestionaireNumber" parent="android:Widget.TextView">
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="QuestionaireQuestion" parent="android:Widget.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="QuestionaireQuestionC2" parent="QuestionaireQuestion">
+        <item name="android:paddingRight">30dp</item>
+    </style>
+
+    <style name="QuestionaireQuestionC3" parent="QuestionaireQuestion">
+        <item name="android:paddingRight">50dp</item>
+    </style>
+
+    <style name="QuestionaireQuestionC4" parent="QuestionaireQuestion">
+        <item name="android:paddingRight">70dp</item>
+    </style>
+
+    <style name="QuestionaireTableHeader" parent="android:Widget.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:layout_gravity">center_horizontal|fill_vertical</item>
+    </style>
+
+</resources>

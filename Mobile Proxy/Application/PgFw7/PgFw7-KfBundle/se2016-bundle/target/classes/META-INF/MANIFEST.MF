@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1476721941725
+Build-Jdk: 1.8.0_101
+Built-By: soedomoto
+Bundle-Activator: com.soedomoto.bundle.se2016.Activator
+Bundle-Description: Provides SE2016 Application Bundle
+Bundle-ManifestVersion: 2
+Bundle-Name: SE2016 - Application
+Bundle-SymbolicName: com.soedomoto.se2016-bundle
+Bundle-Version: 0.1.0.SNAPSHOT
+Context-Path: /se2016
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: com.soedomoto.bundle.se2016;uses:="org.osgi.framework";v
+ ersion="0.1.0",com.soedomoto.bundle.se2016.controller;uses:="com.soedom
+ oto.bundle.account.model,com.soedomoto.bundle.se2016.model";version="0.
+ 1.0",com.soedomoto.bundle.se2016.model;uses:="com.soedomoto.bundle.acco
+ unt.model";version="0.1.0",com.soedomoto.bundle.se2016.service;uses:="c
+ om.soedomoto.bundle.account.model,com.soedomoto.bundle.se2016.model";ve
+ rsion="0.1.0",org.apache.commons.io;version="2.2";uses:="org.apache.com
+ mons.io.filefilter",org.apache.commons.io.comparator;version="2.2";uses
+ :="org.apache.commons.io",org.apache.commons.io.filefilter;version="2.2
+ ";uses:="org.apache.commons.io",org.apache.commons.io.input;version="2.
+ 2";uses:="org.apache.commons.io",org.apache.commons.io.monitor;version=
+ "2.2";uses:="org.apache.commons.io",org.apache.commons.io.output;versio
+ n="2.2"
+Import-Package: org.osgi.framework;version="[1.5,2)",com.soedomoto.bundl
+ e.account.model;version="[0.1,1)",com.soedomoto.bundle.account.service;
+ version="[0.1,1)",com.soedomoto.bundle.proxy.service;version="[9.0,10)"
+ ,com.soedomoto.bundle.proxy.tools;version="[9.0,10)",com.soedomoto.bund
+ le.se2016,com.soedomoto.bundle.se2016.controller,com.soedomoto.bundle.s
+ e2016.model,com.soedomoto.bundle.se2016.service
+Jdbc-Password: bps
+Jdbc-Username: bps
+Real-Host: http://pgfw7.soedomoto.tk
+Tool: Bnd-3.0.0.201509101326

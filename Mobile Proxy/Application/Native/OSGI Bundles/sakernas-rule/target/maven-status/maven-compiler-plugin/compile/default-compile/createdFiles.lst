@@ -1,0 +1,4 @@
+com/soedomoto/sakernas/rule/Activator.class
+com/soedomoto/sakernas/rule/Main.class
+com/soedomoto/sakernas/rule/JettyServer.class
+com/soedomoto/sakernas/rule/servlet/Validate.class

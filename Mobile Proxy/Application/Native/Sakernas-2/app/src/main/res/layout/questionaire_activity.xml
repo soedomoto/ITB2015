@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/questionaire_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.soedomoto.sakernas.activity.QuestionaireActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/application_toolbar_ruta"
+                layout="@layout/application_toolbar" />
+
+            <it.neokree.materialtabs.MaterialTabHost
+                android:id="@+id/tab_questionaire_ruta"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/application_toolbar_ruta"
+                style="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                app:accentColor="@color/colorAccent"
+                app:iconColor="@android:color/white"
+                app:primaryColor="@color/colorPrimary" />
+        </LinearLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tab_questionaire_ruta_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tab_questionaire_ruta"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/qdrawer"
+        android:name="com.soedomoto.sakernas.widget.QDrawer"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/questionaire_drawer"
+        tools:layout="@layout/questionaire_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

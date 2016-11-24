@@ -1,0 +1,44 @@
+\select@language {indonesian}
+\contentsline {chapter}{Lembar Pengesahan}{i}{Doc-Start}
+\contentsline {chapter}{Abstrak}{ii}{Doc-Start}
+\contentsline {chapter}{Abstract}{iii}{chapter*.1}
+\contentsline {chapter}{Pedoman Penggunaan Tesis}{v}{chapter*.2}
+\contentsline {chapter}{Kata Pengantar}{vi}{chapter*.3}
+\contentsline {chapter}{Daftar Isi}{vii}{chapter*.4}
+\contentsline {chapter}{Daftar Tabel}{ix}{chapter*.4}
+\contentsline {chapter}{Daftar Gambar}{x}{chapter*.4}
+\contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}
+\contentsline {section}{\numberline {I.1}Latar Belakang}{1}{section.1.1}
+\contentsline {section}{\numberline {I.2}Rumusan Masalah}{5}{section.1.2}
+\contentsline {section}{\numberline {I.3}Tujuan Penelitian}{5}{section.1.3}
+\contentsline {section}{\numberline {I.4}Batasan Masalah}{5}{section.1.4}
+\contentsline {section}{\numberline {I.5}Batasan Masalah}{6}{section.1.5}
+\contentsline {chapter}{\numberline {II}STUDI LITERATUR}{7}{chapter.2}
+\contentsline {section}{\numberline {II.1}\textit {Generic Statistical Business Process Model (GSBPM)}}{7}{section.2.1}
+\contentsline {section}{\numberline {II.2}\textit {Generic Statistical Information Model (GSIM)}}{7}{section.2.2}
+\contentsline {section}{\numberline {II.3}\textit {Common Statistical Production Architecture (CSPA)}}{7}{section.2.3}
+\contentsline {section}{\numberline {II.4}Sistem Terdistribusi}{9}{section.2.4}
+\contentsline {section}{\numberline {II.5}\textit {Grid Computing}}{10}{section.2.5}
+\contentsline {section}{\numberline {II.6}\textit {Mobile Grid Computing}}{11}{section.2.6}
+\contentsline {section}{\numberline {II.7}\textit {Connectionless Grid Computing}}{12}{section.2.7}
+\contentsline {section}{\numberline {II.8}Pola Implementasi SOA untuk Sistem Data-Intensif Terdistribusi}{13}{section.2.8}
+\contentsline {chapter}{\numberline {III}METODOLOGI}{23}{chapter.3}
+\contentsline {section}{\numberline {III.1}Metodologi}{23}{section.3.1}
+\contentsline {section}{\numberline {III.2}Implementasi Metodologi}{25}{section.3.2}
+\contentsline {chapter}{\numberline {IV}ANALISIS DAN PERANCANGAN}{27}{chapter.4}
+\contentsline {section}{\numberline {IV.1}ANALISIS}{27}{section.4.1}
+\contentsline {subsection}{\numberline {IV.1.1}Penyusunan Model Aplikasi}{27}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {IV.1.1.1}Pendekatan \textit {Stand Alone}}{27}{subsubsection.4.1.1.1}
+\contentsline {subsubsection}{\numberline {IV.1.1.2}Pendekatan \textit {Client Server}}{29}{subsubsection.4.1.1.2}
+\contentsline {section}{\numberline {IV.2}PERANCANGAN}{31}{section.4.2}
+\contentsline {subsection}{\numberline {IV.2.1}Perancangan Model Aplikasi}{31}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {IV.2.2}Replikasi}{31}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {IV.2.2.1}Replikasi \textit {Rule} Validasi}{32}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {IV.2.2.2}Replikasi Data}{32}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {IV.2.3}Sinkronisasi}{33}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {IV.2.3.1}Sinkronisasi \textit {Rule} Validasi}{33}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {IV.2.3.2}Sinkronisasi Data}{33}{subsubsection.4.2.3.2}
+\contentsline {subsection}{\numberline {IV.2.4}Routing}{34}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {IV.2.5}Pengelolaan Data}{34}{subsection.4.2.5}
+\contentsline {chapter}{Daftar Pustaka}{37}{Item.29}
+\contentsline {chapter}{Lampiran 1}{41}{appendix*.36}

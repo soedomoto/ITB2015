@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a658cb88-bea6-414a-b30f-20e5d21f4bc5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/assets/proxy-server-2016.1-dex.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/assets/sakernas-rule-2016.1.1-dex.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVH.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/widget/QRadioButton.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/widget/QEditText.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5h.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5g.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/res/layout/wilcah_activity.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5e.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5f.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVG.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/res/layout/app_bar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/values/attrs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/activity/WilcahActivity.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/classes/com/soedomoto/validation/sakernas/SakernasValidation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/sakernas-validation-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/libraries/Maven__org_osgi_org_osgi_compendium_4_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/classes/com/soedomoto/validation/core/Activator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/classes/com/soedomoto/validation/core/service/IValidation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/validation-core.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/src/main/java/com/soedomoto/validation/core/Activator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/dialog_b5a_r1a.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/sakernas-validation.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/src/main/java/com/soedomoto/validation/core/service/IValidation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7/PgFw7-Testing/Sakernas 2015/Questionaire/2015_3359_ques_SAK15.AK.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/classes/com/soedomoto/validation/sakernas/Activator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/validation-core-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/classes/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/validation-core-1.0-SNAPSHOT-dex.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/src/main/java/com/soedomoto/validation/sakernas/SakernasValidation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/src/main/java/com/soedomoto/validation/sakernas/Activator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Sakernas/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/classes/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/assets/sakernas-validation.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/.idea/libraries/Maven__org_osgi_org_osgi_core_4_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/assets/validation-core.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../validation-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../sakernas-validation/target/sakernas-validation-1.0-SNAPSHOT-dex.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../PgFw7/PgFw7-Testing/Sakernas 2015/Questionaire/2015_3359_ques_SAK15.AK.pdf:xdg.origin.url" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5c.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5c.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.blg" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.blg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/build.gradle" afterPath="$PROJECT_DIR$/../../Sakernas/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.tex" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.toc" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5d.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5d.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/bab1.tex" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/bab1.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.aux" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.bbl" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.bbl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ErrorHandler.java" afterPath="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ErrorHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5a.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5a.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5b.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_5b.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/servlet/Validate.java" afterPath="$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/servlet/Validate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVF.java" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/bab4.tex" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/bab4.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/Ruta.java" afterPath="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/Ruta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.log" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_activity.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_activity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/androidTest/java/com/soedomoto/sakernas/ExampleInstrumentedTest.java" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/androidTest/java/com/soedomoto/sakernas/ExampleInstrumentedTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/res/values/drawables.xml" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/res/values/drawables.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockIV.java" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockIV.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/ProxyApplication.java" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/ProxyApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Resources/Bibliography/Paper.bib" afterPath="$PROJECT_DIR$/../../../../Resources/Bibliography/Paper.bib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_art_activity.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_art_activity.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/osgi/KfOsgi.java" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/osgi/Knopflerfish.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVE.java" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVE.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/test/java/com/soedomoto/sakernas/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/test/java/com/soedomoto/sakernas/ExampleUnitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.pdf" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/component/QDrawer.java" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/widget/QDrawer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ART.java" afterPath="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ART.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/activity/QuestionaireActivity.java" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/activity/QuestionaireActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_4.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_block_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.synctex.gz" afterPath="$PROJECT_DIR$/../../../../Thesis/8th Revision/main.synctex.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/activity/QuestionaireARTActivity.java" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/activity/QuestionaireARTActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/activity/SettingActivity.java" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/activity/SettingActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_drawer.xml" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/res/layout/questionaire_drawer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVA.java" afterPath="$PROJECT_DIR$/../../Sakernas-2/app/src/main/java/com/soedomoto/sakernas/questionaire/QBlockVA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/activity/MainActivity.java" afterPath="$PROJECT_DIR$/../../Sakernas/app/src/main/java/com/soedomoto/sakernas/activity/MainActivity.java" />
+    </list>
+    <ignored path="sakernas-rule.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../sakernas-rule/target/" />
+    <ignored path="$PROJECT_DIR$/../sakernas-model/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="sakernas-rule" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Validate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/servlet/Validate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ART.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ART.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3105">
+              <caret line="211" column="26" selection-start-line="211" selection-start-column="20" selection-end-line="211" selection-end-column="26" />
+              <folding>
+                <element signature="e#14613#14614#0" expanded="true" />
+                <element signature="e#14647#14648#0" expanded="true" />
+                <element signature="e#23198#23199#0" expanded="true" />
+                <element signature="e#23233#23234#0" expanded="true" />
+                <element signature="e#23289#23290#0" expanded="true" />
+                <element signature="e#23337#23338#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/sakernas/rule/servlet/ValidationProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/sakernas/rule/validation/ValidationProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/sakernas/rule/validation/Validation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/sakernas/rule/validation/Validate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/sakernas/rule/Activator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/sakernas/rule/proxy/ValidationProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/proxy/ProxyServer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/JettyServer.java" />
+        <option value="$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/Main.java" />
+        <option value="$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/Activator.java" />
+        <option value="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/Activator.java" />
+        <option value="$PROJECT_DIR$/../sakernas-rule/pom.xml" />
+        <option value="$PROJECT_DIR$/../sakernas-model/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/proxy/JettyServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/proxy/Activator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/proxy/ValidationProxy.java" />
+        <option value="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/FormAK.java" />
+        <option value="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/FormAKART.java" />
+        <option value="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/Error.java" />
+        <option value="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ErrorHandler.java" />
+        <option value="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/Ruta.java" />
+        <option value="$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/servlet/Validate.java" />
+        <option value="$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ART.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../../../../../../SOFTWARE/MAVEN/repository/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="30" />
+    <option name="width" value="1366" />
+    <option name="height" value="738" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sakernas-rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sakernas-rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sakernas-rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sakernas-rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proxy-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sakernas-rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sakernas-rule" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Maven.sakernas-model">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="sakernas-rule" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compiler:compile" />
+                <option value="exec:java" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../sakernas-rule" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="sakernas-rule" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="bundle:bundle" />
+                <option value="exec:exec@dx" />
+                <option value="copy:copy@duplicate" />
+                <option value="exec:exec@aapt" />
+                <option value="install:install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../sakernas-rule" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="sakernas-model" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="bundle:bundle" />
+                <option value="exec:exec@dx" />
+                <option value="copy:copy@duplicate" />
+                <option value="exec:exec@aapt" />
+                <option value="install:install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../sakernas-model" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="proxy-server" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="bundle:bundle" />
+                <option value="exec:exec@dx" />
+                <option value="copy:copy@duplicate" />
+                <option value="exec:exec@aapt" />
+                <option value="install:install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Maven.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.sakernas-rule" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.sakernas-model" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.proxy-server" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a658cb88-bea6-414a-b30f-20e5d21f4bc5" name="Default" comment="" />
+      <created>1478413171260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1478413171260</updated>
+    </task>
+    <task id="LOCAL-00001" summary="OSGI Modules for Native">
+      <created>1478590633058</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1478590633058</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="30" width="1366" height="738" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="OSGI Modules for Native" />
+    <option name="LAST_COMMIT_MESSAGE" value="OSGI Modules for Native" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../sakernas-rule/src/main/java/com/soedomoto/sakernas/rule/servlet/Validate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sakernas-model/src/main/java/com/soedomoto/sakernas/model/ART.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3105">
+          <caret line="211" column="26" selection-start-line="211" selection-start-column="20" selection-end-line="211" selection-end-column="26" />
+          <folding>
+            <element signature="e#14613#14614#0" expanded="true" />
+            <element signature="e#14647#14648#0" expanded="true" />
+            <element signature="e#23198#23199#0" expanded="true" />
+            <element signature="e#23233#23234#0" expanded="true" />
+            <element signature="e#23289#23290#0" expanded="true" />
+            <element signature="e#23337#23338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>sakernas-model</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.code.gson:gson:2.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

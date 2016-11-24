@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="QRadioButton">
+        <attr name="qRadioButton_value" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="QEditText">
+        <attr name="qEditText_value" format="string" />
+    </declare-styleable>
+</resources>

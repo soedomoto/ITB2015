@@ -1,0 +1,3820 @@
+[
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/X4W6KUG4",
+		"type": "paper-conference",
+		"title": "Erasure Coding Vs. Replication: A Quantitative Comparison",
+		"container-title": "Revised Papers from the First International Workshop on Peer-to-Peer Systems",
+		"collection-title": "IPTPS '01",
+		"publisher": "Springer-Verlag",
+		"publisher-place": "London, UK, UK",
+		"page": "328–338",
+		"event-place": "London, UK, UK",
+		"abstract": "Peer-to-peer systems are positioned to take advantage of gains in network bandwidth, storage capacity, and computational resources to provide long-term durable storage infrastructures. In this paper, we quantitatively compare building a distributed storage infrastructure that is self-repairing and resilient to faults using either a replicated system or an erasure-resilient system. We show that systems employing erasure codes have mean time to failures many orders of magnitude higher than replicated systems with similar storage and bandwidth requirements. More importantly, erasure-resilient systems use an order of magnitude less bandwidth and storage to provide similar system durability as replicated systems.",
+		"URL": "http://dl.acm.org/citation.cfm?id=646334.687814",
+		"ISBN": "978-3-540-44179-3",
+		"shortTitle": "Erasure Coding Vs. Replication",
+		"author": [
+			{
+				"family": "Weatherspoon",
+				"given": "Hakim"
+			},
+			{
+				"family": "Kubiatowicz",
+				"given": "John"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					16
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/IWNS5GSD",
+		"type": "paper-conference",
+		"title": "Mobile SOA: Service Orientation on Lightweight Mobile Devices",
+		"container-title": "IEEE International Conference on Web Services, 2007. ICWS 2007",
+		"page": "1224–1225",
+		"abstract": "Recent developments in daily business life indicate demand for facilitating process execution on various environments, including mobile devices with limited capabilities. This paper summarizes our current research on extending service oriented architecture to lightweight mobile devices. Status of necessary enabling technologies, programming interfaces, and the supporting device base was surveyed. Availability of both mobile consumption and provision of services are reviewed. Based on our research and concept demonstration, we conclude that full-fledged mobile participation in SOA is not far in the future, and that partial implementations can already be built.",
+		"DOI": "10.1109/ICWS.2007.121",
+		"shortTitle": "Mobile SOA",
+		"author": [
+			{
+				"family": "Tergujeff",
+				"given": "R."
+			},
+			{
+				"family": "Haajanen",
+				"given": "J."
+			},
+			{
+				"family": "Leppanen",
+				"given": "J."
+			},
+			{
+				"family": "Toivonen",
+				"given": "S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/HJXV2CXF",
+		"type": "paper-conference",
+		"title": "Multi-layer SOA implementation pattern with service and data proxies for distributed data-intensive application system",
+		"container-title": "2014 International Conference on ICT For Smart Society (ICISS)",
+		"page": "37–41",
+		"abstract": "Web service is becoming a widely solution used to realize Service Oriented Architecture (SOA). It enables application's business logics interoperable with each other by extending XML flexibility. Current early standardized web service technologies show significant progress in functional aspects interaction, but they are lack of data aspect considerations, such as transferring and integrating large amount of data that are distributed throughout different locations. In this research, we propose a SOA implementation pattern improving coordination of both functional and data aspects to be used across distributed environment by combining several advances in SOA and distributed systems. We define synchronization, replication, and routing mechanism to support distributed systems. This paper introduces the design as preliminary result of our research. It is designed by analyzing previous approach to avoid semantic contradictions of SOA principles and its existing standards and technologies. Next, we need to realize and evaluate them in order to be used in the real application.",
+		"DOI": "10.1109/ICTSS.2014.7013149",
+		"author": [
+			{
+				"literal": "Takdir"
+			},
+			{
+				"family": "Kistijantoro",
+				"given": "A. I."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/EDCRINFJ",
+		"type": "paper-conference",
+		"title": "A Proxy-based Uncoordinated Checkpointing Scheme with Pessimistic Message Logging for Mobile Grid Systems",
+		"container-title": "Proceedings of the 16th International Symposium on High Performance Distributed Computing",
+		"collection-title": "HPDC '07",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "237–238",
+		"event-place": "New York, NY, USA",
+		"abstract": "Due to mobility, energy limitations, and unreliable wireless channels, applications running on mobile devices suffer from faults such as temporary disconnection and data loss. We, therefore, need a fault tolerance mechanism to guarantee their smooth working and performance. In this paper, we present a novel proxy-based uncoordinated checkpointing scheme with pessimistic message logging for efficient fault recovery in mobile Grid system. Simulation results show that this scheme is reliable, efficient and, at the sametime, consumes less network traffic.",
+		"URL": "http://doi.acm.org/10.1145/1272366.1272408",
+		"DOI": "10.1145/1272366.1272408",
+		"ISBN": "978-1-59593-673-8",
+		"author": [
+			{
+				"family": "Imran",
+				"given": "Nomica"
+			},
+			{
+				"family": "Rao",
+				"given": "Imran"
+			},
+			{
+				"family": "Lee",
+				"given": "Young-Koo"
+			},
+			{
+				"family": "Lee",
+				"given": "Sungyoung"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					16
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/7N72JZR9",
+		"type": "book",
+		"title": "Foundations of Multithreaded, Parallel, and Distributed",
+		"publisher": "Addison Wesley",
+		"ISBN": "978-0-201-35752-3",
+		"author": [
+			{
+				"family": "Andrews",
+				"given": "Gregory R."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/SX78DSA2",
+		"type": "book",
+		"title": "GSBPM v5.0 - Generic Statistical Business Process Model - UNECE Statistics Wikis",
+		"URL": "http://www1.unece.org/stat/platform/display/GSBPM/GSBPM+v5.0",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/UZVS8ZJ3",
+		"type": "article-journal",
+		"title": "Bias in computer-assisted surveys",
+		"container-title": "IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans",
+		"page": "566–571",
+		"volume": "26",
+		"issue": "5",
+		"abstract": "The emergence of new technology has enabled rapid data collection via mechanical interviews. Improved speed of data collection enables researchers to collect a larger volume of data with lower interview cost. Computers allow editing during data collection to prevent errors and they direct respondents to relevant questions. They may also facilitate immediate data tabulation and analysis. In spite of these advantages, a concern for bias introduction arises. The reported study finds that direct computer data collection via keyboard provides data as accurate as personal interviews and self-administered forms but may lower response rates on certain questions. This result implies that computers are valid data collection devices in certain situations",
+		"DOI": "10.1109/3468.531904",
+		"ISSN": "1083-4427",
+		"author": [
+			{
+				"family": "Klein",
+				"given": "G."
+			},
+			{
+				"family": "Sobol",
+				"given": "M. G."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1996",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/5A8DDJR7",
+		"type": "book",
+		"title": "Redesigning a Questionnaire for Computer Assisted Data Collect - cp940020.pdf",
+		"URL": "http://www.bls.gov/ore/pdf/cp940020.pdf",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/THTHJ8NC",
+		"type": "paper-conference",
+		"title": "Search and Replication in Unstructured Peer-to-peer Networks",
+		"container-title": "Proceedings of the 16th International Conference on Supercomputing",
+		"collection-title": "ICS '02",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "84–95",
+		"event-place": "New York, NY, USA",
+		"abstract": "Decentralized and unstructured peer-to-peer networks such as Gnutella are attractive for certain applications because they require no centralized directories and no precise control over network topology or data placement. However, the flooding-based query algorithm used in Gnutella does not scale; each query generates a large amount of traffic and large systems quickly become overwhelmed by the query-induced load. This paper explores, through simulation, various alternatives to Gnutella's query algorithm, data replication strategy, and network topology. We propose a query algorithm based on multiple random walks that resolves queries almost as quickly as Gnutella's flooding method while reducing the network traffic by two orders of magnitude in many cases. We also present simulation results on a distributed replication strategy proposed in [8]. Finally, we find that among the various network topologies we consider, uniform random graphs yield the best performance.",
+		"URL": "http://doi.acm.org/10.1145/514191.514206",
+		"DOI": "10.1145/514191.514206",
+		"ISBN": "978-1-58113-483-4",
+		"author": [
+			{
+				"family": "Lv",
+				"given": "Qin"
+			},
+			{
+				"family": "Cao",
+				"given": "Pei"
+			},
+			{
+				"family": "Cohen",
+				"given": "Edith"
+			},
+			{
+				"family": "Li",
+				"given": "Kai"
+			},
+			{
+				"family": "Shenker",
+				"given": "Scott"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					16
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/BICM2S8S",
+		"type": "paper-conference",
+		"title": "Job Management in Mobile Grid Computing",
+		"container-title": "Proceedings of the 7th International Conference on Advances in Mobile Computing and Multimedia",
+		"collection-title": "MoMM '09",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "422–426",
+		"event-place": "New York, NY, USA",
+		"abstract": "Grid is already being successfully used in many scientific applications where huge amounts of data have to be processed. The popularity of grid has almost increased exponentially with wide spread adoption of cloud computing. However mobile grid still is in its infancy and considerable research is going towards developing a framework that can reap the full benefits of a mobile grid. One of the biggest challenges impeding growth of mobile grid computing is the lack of techniques to effective manage jobs in a mobile grid. Job management includes identify the right resources, scheduling the job, monitoring the jobs and perform maintenance activities when required. This paper provides a guideline on the techniques that can be used to address the challenges in job management.",
+		"URL": "http://doi.acm.org/10.1145/1821748.1821829",
+		"DOI": "10.1145/1821748.1821829",
+		"ISBN": "978-1-60558-659-5",
+		"author": [
+			{
+				"family": "Sathyan",
+				"given": "Jithesh"
+			},
+			{
+				"family": "Rijas",
+				"given": "Mohammed"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2009"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/MPM77NJI",
+		"type": "paper-conference",
+		"title": "Designing an Architecture for Delivering Mobile Information Services to the Rural Developing World",
+		"container-title": "Proceedings of the 15th International Conference on World Wide Web",
+		"collection-title": "WWW '06",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "791–800",
+		"event-place": "New York, NY, USA",
+		"abstract": "Implementing successful rural computing applications requires addressing a number of significant challenges. Recent advances in mobile phone computing capabilities make this device a likely candidate to address the client hardware constraints. Long battery life, wireless connectivity, solid-state memory, low price and immediate utility all make it better suited to rural conditions than a PC. However, current mobile software platforms are not as appropriate. Web-based mobile applications are hard to use, do not take advantage of the mobile phone's media capabilities and require an online connection. Custom mobile applications are difficult to develop and distribute. To address these limitations we present CAM - a new framework for developing and deploying mobile computing applications in the rural developing world. CAM applications are accessed by capturing barcodes using the mobile phone camera, or entering numeric strings with the keypad. Supporting minimal navigation, direct linkage to paper practices and offline multi-media interaction, CAM is uniquely adapted to rural device, user and infrastructure constraints. To illustrate the breadth of the framework, we list a number of CAM-based applications that we have implemented or are planning. These include processing microfinance loans, facilitating rural supply chains, documenting grassroots innovation and accessing electronic medical histories.",
+		"URL": "http://doi.acm.org/10.1145/1135777.1135897",
+		"DOI": "10.1145/1135777.1135897",
+		"ISBN": "978-1-59593-323-2",
+		"author": [
+			{
+				"family": "Parikh",
+				"given": "Tapan S."
+			},
+			{
+				"family": "Lazowska",
+				"given": "Edward D."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2006"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/BDGVFJ4I",
+		"type": "paper-conference",
+		"title": "Gone but Not Forgotten: Designing for Disconnection in Synchronous Groupware",
+		"container-title": "Proceedings of the 2010 ACM Conference on Computer Supported Cooperative Work",
+		"collection-title": "CSCW '10",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "179–188",
+		"event-place": "New York, NY, USA",
+		"abstract": "Synchronous groupware depends on the assumption that people are fully connected to the others in the group, but there are many situations (network delay, network outage, or explicit departure) where users are disconnected for various periods. There is little research dealing with disconnection in synchronous groupware from a user and application perspective; as a result, most current groupware systems do not handle disconnection events well, and several user-level problems occur. To address this limitation, we developed the Disco framework, a model for handling several types of disconnection in synchronous groupware. The framework considers how disconnections are identified, what senders and receivers should do during an absence, and what should be done with accumulated data upon reconnection. We have implemented the framework in three applications that show the feasibility, generality, and functionality of our ideas. Our framework is the first to deal with a full range of disconnection issues for synchronous groupware, and shows how groupware can better support the realities of distributed collaboration.",
+		"URL": "http://doi.acm.org/10.1145/1718918.1718951",
+		"DOI": "10.1145/1718918.1718951",
+		"ISBN": "978-1-60558-795-0",
+		"shortTitle": "Gone but Not Forgotten",
+		"author": [
+			{
+				"family": "Gutwin",
+				"given": "Carl"
+			},
+			{
+				"family": "Graham",
+				"given": "T.C. Nicholas"
+			},
+			{
+				"family": "Wolfe",
+				"given": "Chris"
+			},
+			{
+				"family": "Wong",
+				"given": "Nelson"
+			},
+			{
+				"family": "Alwis",
+				"given": "Brian",
+				"non-dropping-particle": "de"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					16
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/FWN9BU69",
+		"type": "book",
+		"title": "A primer on distributed computing.",
+		"URL": "http://www.bacchae.co.uk/docs/dist.html",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					16
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/G85TEV78",
+		"type": "book",
+		"title": "GSIM Specification - Generic Statistical Information Model - UNECE Statistics Wikis",
+		"URL": "http://www1.unece.org/stat/platform/display/gsim/GSIM+Specification",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/97WE2BS6",
+		"type": "paper-conference",
+		"title": "A connectionless approach to mobile ad hoc networks",
+		"container-title": "Ninth International Symposium on Computers and Communications, 2004. Proceedings. ISCC 2004",
+		"page": "188–195 Vol.1",
+		"volume": "1",
+		"abstract": "Today's communication techniques for mobile ad hoc networks take a connection-oriented approach. Mobile nodes need to discover routes and establish a connection before they can communicate. This strategy is not robust as it cannot adapt to frequent unpredictable topology changes due to high mobility. Constant reconnections incur significant overhead making these schemes unsuitable for applications such as voice and video. To address these issues, we explore a connectionless paradigm in this paper. We leverage technology such as GPS (global positioning system) to allow a source node to discover a grid path to the destination node. Data packets are relayed along this path toward the destination using different intermediate nodes at different times without having to first establish connections between them. The performance of this new solution is essentially unaffected by node mobility. As a result, it is suitable for a wide range of mobile applications.",
+		"DOI": "10.1109/ISCC.2004.1358403",
+		"author": [
+			{
+				"family": "Ho",
+				"given": "Y. H."
+			},
+			{
+				"family": "Ho",
+				"given": "A. H."
+			},
+			{
+				"family": "Hua",
+				"given": "K. A."
+			},
+			{
+				"family": "Hamza-Lup",
+				"given": "G. L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/EH5FJ2NN",
+		"type": "article-journal",
+		"title": "Grids and Grid technologies for wide-area distributed computing",
+		"container-title": "Software: Practice and Experience",
+		"page": "1437–1466",
+		"volume": "32",
+		"issue": "15",
+		"abstract": "The last decade has seen a substantial increase in commodity computer and network performance, mainly as a result of faster hardware and more sophisticated software. Nevertheless, there are still problems, in the fields of science, engineering, and business, which cannot be effectively dealt with using the current generation of supercomputers. In fact, due to their size and complexity, these problems are often very numerically and/or data intensive and consequently require a variety ofheterogeneous resources that are not available on a single machine. A number of teams have conducted experimental studies on the cooperative use of geographically distributed resources unified to act as a single powerful computer. This new approach is known by several names, such as metacomputing, scalable computing, global computing, Internet computing, and more recently peer-to-peer or Grid computing. The early efforts in Grid computing started as a project to link supercomputing sites, but have now grown far beyond their original intent. In fact, many applications can benefit from the Grid infrastructure, including collaborative engineering, data exploration, high-throughput computing, and of course distributed supercomputing. Moreover, due to the rapid growth of the Internet and Web, there has been a rising interest in Web-based distributed computing, and many projects have been started and aim to exploit the Web as an infrastructure for running coarse-grained distributed and parallel applications. In this context, the Web has the capability to be a platform for parallel and collaborative work as well as a key technology to create a pervasive and ubiquitous Grid-based infrastructure. This paper aims to present the state-of-the-art of Grid computing and attempts to survey the major international efforts in developing this emerging technology. Copyright © 2002 John Wiley & Sons, Ltd.",
+		"URL": "http://onlinelibrary.wiley.com/doi/10.1002/spe.488/abstract",
+		"DOI": "10.1002/spe.488",
+		"ISSN": "1097-024X",
+		"language": "en",
+		"author": [
+			{
+				"family": "Baker",
+				"given": "Mark"
+			},
+			{
+				"family": "Buyya",
+				"given": "Rajkumar"
+			},
+			{
+				"family": "Laforenza",
+				"given": "Domenico"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002",
+					12
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					16
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/ZSTW53G9",
+		"type": "article-journal",
+		"title": "A design science research methodology and its application to accounting information systems research",
+		"container-title": "International Journal of Accounting Information Systems",
+		"collection-title": "Special Issue on Methodologies in AIS Research",
+		"page": "142–151",
+		"volume": "12",
+		"issue": "2",
+		"abstract": "Natural science research follows a stereotypical pattern and such uniformity makes it easier to recognize and evaluate the results of such research. A similar format has been lacking for design science research. This issue was addressed by Peffers et al. (2008) who defined such a template for design science research for information systems: the design science research methodology (DSRM). In this paper, we first discuss design science research and the DSRM. Then, we illustrate the application of the DSRM to AIS research through retroactive analysis. Finally, we integrate the DSRM into the operational specification of artifact networks and use the REA literature for illustration purposes.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S1467089511000200",
+		"DOI": "10.1016/j.accinf.2011.02.004",
+		"ISSN": "1467-0895",
+		"author": [
+			{
+				"family": "Geerts",
+				"given": "Guido L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011",
+					6
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/STCNUH9S",
+		"type": "paper-conference",
+		"title": "Reliable Data Collection in Highly Disconnected Environments Using Mobile Phones",
+		"container-title": "Proceedings of the 2007 Workshop on Networked Systems for Developing Regions",
+		"collection-title": "NSDR '07",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "4:1–4:5",
+		"event-place": "New York, NY, USA",
+		"abstract": "Over four and a half billion people live in the developing world and require access to services in the financial, agricultural, business, government and healthcare sectors. Due to constraints of the existing infrastructure (power, communications, etc), it is often difficult to deliver these services to remote areas in a timely and efficient manner. The CAM framework has found success as a flexible platform for quickly developing and deploying high-impact applications for these environments. Many of the applications built with CAM have relied on a model where a field worker with a mobile phone regularly returns from a disconnected environment to one with connectivity. In this connected state, the phone and a centralized server can exchange information and get the collected data backed up on reliable media. We propose extending CAM's networking model to enable continual operation in disconnected environments. Using a set of heterogeneous paths made available through social and geographic relationships naturally present among workers, we describe a system for asynchronously routing data in a best-effort manner.",
+		"URL": "http://doi.acm.org/10.1145/1326571.1326577",
+		"DOI": "10.1145/1326571.1326577",
+		"ISBN": "978-1-59593-787-2",
+		"author": [
+			{
+				"family": "DeRenzi",
+				"given": "Brian"
+			},
+			{
+				"family": "Anokwa",
+				"given": "Yaw"
+			},
+			{
+				"family": "Parikh",
+				"given": "Tapan"
+			},
+			{
+				"family": "Borriello",
+				"given": "Gaetano"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/EK5W7EZU",
+		"type": "paper-conference",
+		"title": "A Three-tier Information Management Architecture for Mobile Grid Environments",
+		"container-title": "Proceedings of the 6th International Conference on Advances in Mobile Computing and Multimedia",
+		"collection-title": "MoMM '08",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "243–247",
+		"event-place": "New York, NY, USA",
+		"abstract": "A three-tier information management architecture for mobile grid environments and ad-hoc networks is presented in this paper. We address a key challenge in such highly dynamic environments with a high degree of fluctuation in the hardware infrastructure: how to store information consistently, persistently, and at the same time efficiently. Most currently available approaches are based on replication strategies. These strategies achieve persistency even in highly dynamic environments, but have to pay a high price in terms of redundancy. Our proposed architecture is based on the adaptation of fault-tolerant data distribution strategies utilizing erasure codes, such as RAID or Reed-Solomon, and thus combines consistency and persistency with high storage efficiency.",
+		"URL": "http://doi.acm.org/10.1145/1497185.1497236",
+		"DOI": "10.1145/1497185.1497236",
+		"ISBN": "978-1-60558-269-6",
+		"author": [
+			{
+				"family": "Zottl",
+				"given": "Joachim"
+			},
+			{
+				"family": "Haring",
+				"given": "Günter"
+			},
+			{
+				"family": "Kotsis",
+				"given": "Gabriele"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2008"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/D5BEUQTI",
+		"type": "book",
+		"title": "CSPA v1.5 - Common Statistical Production Architecture - UNECE Statistics Wikis",
+		"URL": "http://www1.unece.org/stat/platform/display/CSPA/CSPA+v1.5",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					3,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/F5ADRAU5",
+		"type": "paper-conference",
+		"title": "Mobile web service provisioning",
+		"container-title": "null",
+		"publisher": "IEEE",
+		"page": "120",
+		"source": "Google Scholar",
+		"URL": "http://www.computer.org/csdl/proceedings/aict-iciw/2006/2522/00/25220120-abs.html",
+		"author": [
+			{
+				"family": "Srirama",
+				"given": "Satish Narayana"
+			},
+			{
+				"family": "Jarke",
+				"given": "Matthias"
+			},
+			{
+				"family": "Prinz",
+				"given": "Wolfgang"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2006"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/J8TIPJNR",
+		"type": "book",
+		"title": "Encyclopedia of Mobile Computing and Commerce",
+		"publisher": "IGI Global",
+		"number-of-pages": "1115",
+		"source": "Google Books",
+		"abstract": "The Encyclopedia of Mobile Computing and Commerce is the leading reference source for innovative research on mobile applications and commerce. This two-volume encyclopedia set presents current trends in mobile computing and their potential use in business and commerce. Hundreds of internationally renowned scholars and practitioners have written comprehensive articles exploring the latest concepts, technologies, and innovations in this rapidly expanding field. Thousands of definitions and references to additional literature have been included to stimulate further research. The Encyclopedia of Mobile Computing and Commerce is an indispensable reference work for every academic, public, and private library.",
+		"ISBN": "978-1-59904-003-5",
+		"language": "en",
+		"author": [
+			{
+				"family": "David",
+				"given": "Taniar"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007",
+					4,
+					30
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/JPTJS9CQ",
+		"type": "article-journal",
+		"title": "Web Service Provisioning on Android Mobile Host",
+		"container-title": "International Journal of Computer Applications",
+		"page": "5-11",
+		"volume": "81",
+		"issue": "14",
+		"source": "CrossRef",
+		"URL": "http://research.ijcaonline.org/volume81/number14/pxc3892338.pdf",
+		"DOI": "10.5120/14182-2338",
+		"ISSN": "09758887",
+		"author": [
+			{
+				"family": "S.Wagh",
+				"given": "Kishor"
+			},
+			{
+				"family": "C. Thool",
+				"given": "R."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013",
+					11,
+					15
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/NKZNM82T",
+		"type": "paper-conference",
+		"title": "Highlight: A System for Creating and Deploying Mobile Web Applications",
+		"container-title": "Proceedings of the 21st Annual ACM Symposium on User Interface Software and Technology",
+		"collection-title": "UIST '08",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "249–258",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "We present a new server-side architecture that enables rapid prototyping and deployment of mobile web applications created from existing web sites. Key to this architecture is a remote control metaphor in which the mobile device controls a fully functional browser that is embedded within a proxy server. Content is clipped from the proxy browser, transformed if necessary, and then sent to the mobile device as a typical web page. Users' interactions with that content on the mobile device control the next steps of the proxy browser. We have found this approach to work well for creating mobile sites from a variety of existing sites, including those that use dynamic HTML and AJAX technologies. We have conducted a small user study to evaluate our model and API with experienced web programmers.",
+		"URL": "http://doi.acm.org/10.1145/1449715.1449757",
+		"DOI": "10.1145/1449715.1449757",
+		"ISBN": "978-1-59593-975-3",
+		"shortTitle": "Highlight",
+		"author": [
+			{
+				"family": "Nichols",
+				"given": "Jeffrey"
+			},
+			{
+				"family": "Hua",
+				"given": "Zhigang"
+			},
+			{
+				"family": "Barton",
+				"given": "John"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2008"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/WMXDX6XM",
+		"type": "article-journal",
+		"title": "Joint K-coverage and Data Gathering in Sparsely Deployed Sensor Networks – Impact of Purposeful Mobility and Heterogeneity",
+		"container-title": "ACM Trans. Sen. Netw.",
+		"page": "8:1–8:33",
+		"volume": "10",
+		"issue": "1",
+		"source": "ACM Digital Library",
+		"abstract": "Coverage is one of the fundamental concepts in the design of wireless sensor networks (WSNs) in the sense that the monitoring quality of a phenomenon depends on the quality of service provided by the sensors in terms of how well a field of interest is covered. It enables the sensors to detect any event that may occur in the field, thus, meeting the application-specific requirements. Several applications require k-coverage, where each point in the field is covered by at least k sensors, which helps increase data availability to ensure better data reliability. Achieving k-coverage of a field of interest becomes a more challenging issue in sparsely deployed WSNs. Though the problem of coverage in WSNs has been well studied in the literature, only little research efforts have been devoted to the case of sparsely deployed WSNs. Thus, in this article, we investigate the problem of k-coverage in sparse WSNs using static and mobile sensors, which do not necessarily have the same communication range, sensing range, and energy supply. Precisely, we propose an optimized, generalized framework for k-coverage in sparsely deployed WSNs, called k-SCHEMES, which exploits sensor heterogeneity and mobility. First, we characterize k-coverage using heterogeneous sensors based on Helly's Theorem. Second, we introduce our energy-efficient four-tier architecture to achieve mobile k-coverage of a region of interest in a field. Third, on top of this architecture, we suggest two data-gathering protocols, called direct data-gathering and forwarding chain-based data-gathering, using the concept of mobile proxy sink. We found that the second data-gathering protocol outperforms the first one. For energy-efficient forwarding, we compute the minimum transmission distance between any pair of consecutive mobile proxy sinks forming the forwarding chain as well as the corresponding optimum number of mobile proxy sinks in this chain. We corroborate our analysis with several simulation results.",
+		"URL": "http://doi.acm.org/10.1145/2529978",
+		"DOI": "10.1145/2529978",
+		"ISSN": "1550-4859",
+		"author": [
+			{
+				"family": "Ammari",
+				"given": "Habib M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013",
+					12
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/AR3D6K7N",
+		"type": "paper-conference",
+		"title": "Throughput improvement of TCP proxies in network environment with wireless LANs",
+		"container-title": "2014 IEEE Region 10 Symposium",
+		"page": "82-87",
+		"source": "IEEE Xplore",
+		"event": "2014 IEEE Region 10 Symposium",
+		"abstract": "Split-connection type proxies have been proposed to improve TCP (Transmission Control Protocol) throughput in network environment with wireless LANs. A proxy is placed at the boundary of a wireless LAN (WLAN) and a wired network and it splits a TCP connection into two virtual TCP connections. We proposed a split-connection type proxy called MDA-Proxy (Modified Decreasing-ACK Proxy), which increases throughput of upflows (flows from wireless hosts to wired hosts) by decreasing the number of ACKs in a WLAN. MDA-Proxy uses two parameters, ack_stock and delay_timer, for each connection. The former controls the number of ACKs sent to a WLAN and the latter is used to recover from losses and delays of ACKs in a wired network. However, it is assumed that MDA-Proxy uses fixed values of the two parameters and their automatic tuning in response to network situation remains to be future work. In this paper, we propose a new type of proxy called ASA-Proxy (Ack_Stock Autotunning Proxy), which automatically tunes the two parameters in MDA-Proxy. Ack_stock is tuned comparing throughputs before and after its changing so that throughput of the connection becomes large, and delay_timer is replaced by the normal TCP retransmission timer because it is better than a fixed value of delay_timer for the inference of losses and delays of ACKs in a wired network. Extensive simulation runs show that ASA-Proxy is superior to MDA-Proxy.",
+		"DOI": "10.1109/TENCONSpring.2014.6863002",
+		"author": [
+			{
+				"family": "Hui",
+				"given": "W."
+			},
+			{
+				"family": "Fukushima",
+				"given": "Y."
+			},
+			{
+				"family": "Yokohira",
+				"given": "T."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014",
+					4
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/F8RUF2G6",
+		"type": "paper-conference",
+		"title": "Designs of high quality streaming proxy systems",
+		"container-title": "INFOCOM 2004. Twenty-third AnnualJoint Conference of the IEEE Computer and Communications Societies",
+		"page": "1512-1521 vol.3",
+		"volume": "3",
+		"source": "IEEE Xplore",
+		"event": "INFOCOM 2004. Twenty-third AnnualJoint Conference of the IEEE Computer and Communications Societies",
+		"abstract": "Researchers often use segment-based proxy caching strategies to deliver streaming media by partially caching media objects. The existing strategies mainly consider increasing the byte hit ratio and/or reducing the client perceived startup latency (denoted by the metric delayed startup ratio). However, these efforts do not guarantee continuous media delivery because the to-be-viewed object segments may not be cached in the proxy when they are demanded. The potential consequence is playback jitter at the client side due to proxy delay in fetching the uncached segments, which we call proxy jitter. Thus, for the best interests of clients, a correct model for streaming proxy system design should aim to minimize proxy jitter subject to reducing the delayed startup ratio and increasing the byte hit ratio. However, we have observed two major pairs of conflicting interests inherent in this model: (1) one between improving the byte hit ratio and reducing proxy jitter, and (2) the other between improving the byte hit ratio and reducing the delayed startup ratio. In this study, we first propose an active prefetching method for in-time prefetching of uncached segments, which provides insights into the first pair of conflicting interests. Second, we further improve our lazy-segmentation scheme which effectively addresses the second pair of the conflicting interests. Finally, considering our main objective of minimizing proxy jitter and optimizing the two trade-offs, we propose a new streaming proxy system called Hyper Proxy by effectively coordinating both prefetching and segmentation techniques. Synthetic and real workloads are used to systematically evaluate our system. The performance results show that the hyper proxy system generates minimum proxy jitter with a low delayed startup ratio and a small decrease of byte hit ratio compared with existing schemes",
+		"DOI": "10.1109/INFCOM.2004.1354565",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Songqing"
+			},
+			{
+				"family": "Shen",
+				"given": "Bo"
+			},
+			{
+				"family": "Wee",
+				"given": "S."
+			},
+			{
+				"family": "Zhang",
+				"given": "Xiaodong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004",
+					3
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/IJ4K59ZF",
+		"type": "webpage",
+		"title": "hjp: doc: RFC 5213: Proxy Mobile IPv6",
+		"URL": "http://www.hjp.at/doc/rfc/rfc5213.html",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/G3SJX2J6",
+		"type": "chapter",
+		"title": "Dynamic Proxy-Cache Multiplication Inside LANs",
+		"container-title": "Euro-Par 2005 Parallel Processing",
+		"collection-title": "Lecture Notes in Computer Science",
+		"collection-number": "3648",
+		"publisher": "Springer Berlin Heidelberg",
+		"page": "890-900",
+		"source": "link.springer.com",
+		"abstract": "Proxy-cache deployment in LANs has become a current practice with well known benefits. For situations when a proxy-cache comes under constraints, due to increased load, and has to drop requests or perform cache replacement, we propose the alternative solution of cache-splitting. This means to dynamically deploy additional proxy-caches inside the LAN, and divert towards them some of the requests addressed to the original proxy-cache(s). By doing this, better response time, load balancing, higher availability and robustness of the service can be achieved than when using a single proxy-cache.",
+		"URL": "http://link.springer.com/chapter/10.1007/11549468_97",
+		"ISBN": "978-3-540-28700-1",
+		"note": "DOI: 10.1007/11549468_97",
+		"language": "en",
+		"author": [
+			{
+				"family": "Cobârzan",
+				"given": "Claudiu"
+			}
+		],
+		"editor": [
+			{
+				"family": "Cunha",
+				"given": "José C."
+			},
+			{
+				"family": "Medeiros",
+				"given": "Pedro D."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005",
+					8,
+					30
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/PGB6JGAB",
+		"type": "paper-conference",
+		"title": "RSVP mobility support: a signaling protocol for integrated services Internet with mobile hosts",
+		"container-title": "INFOCOM 2000. Nineteenth Annual Joint Conference of the IEEE Computer and Communications Societies. Proceedings. IEEE",
+		"publisher": "IEEE",
+		"page": "1283–1292",
+		"volume": "3",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=832519",
+		"shortTitle": "RSVP mobility support",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "Wen-Tsuen"
+			},
+			{
+				"family": "Huang",
+				"given": "Li-Chi"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/I65HMB59",
+		"type": "paper-conference",
+		"title": "Proxy-based Acceleration of Dynamically Generated Content on the World Wide Web: An Approach and Implementation",
+		"container-title": "Proceedings of the 2002 ACM SIGMOD International Conference on Management of Data",
+		"collection-title": "SIGMOD '02",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "97–108",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "As Internet traffic continues to grow and web sites become increasingly complex, performance and scalability are major issues for web sites. Web sites are increasingly relying on dynamic content generation applications to provide web site visitors with dynamic, interactive, and personalized experiences. However, dynamic content generation comes at a cost --- each request requires computation as well as communication across multiple components.To address these issues, various dynamic content caching approaches have been proposed. Proxy-based caching approaches store content at various locations outside the site infrastructure and can improve Web site performance by reducing content generation delays, firewall processing delays, and bandwidth requirements. However, existing proxy-based caching approaches either (a) cache at the page level, which does not guarantee that correct pages are served and provides very limited reusability, or (b) cache at the fragment level, which requires the use of pre-defined page layouts. To address these issues, several back end caching approaches have been proposed, including query result caching and fragment level caching. While back end approaches guarantee the correctness of results and offer the advantages of fine-grained caching, they neither address firewall delays nor reduce bandwidth requirements.In this paper, we present an approach and an implementation of a dynamic proxy caching technique which combines the benefits of both proxy-based and back end caching approaches, yet does not suffer from their above-mentioned limitations. Our dynamic proxy caching technique allows granular, proxy-based caching where both the content and layout can be dynamic. Our analysis of the performance of our approach indicates that it is capable of providing significant reductions in bandwidth. We have also deployed our proposed dynamic proxy caching technique at a major financial institution. The results of this implementation indicate that our technique is capable of providing order-of-magnitude reductions in bandwidth and response times in real-world dynamic Web applications.",
+		"URL": "http://doi.acm.org/10.1145/564691.564703",
+		"DOI": "10.1145/564691.564703",
+		"ISBN": "978-1-58113-497-1",
+		"shortTitle": "Proxy-based Acceleration of Dynamically Generated Content on the World Wide Web",
+		"author": [
+			{
+				"family": "Datta",
+				"given": "Anindya"
+			},
+			{
+				"family": "Dutta",
+				"given": "Kaushik"
+			},
+			{
+				"family": "Thomas",
+				"given": "Helen"
+			},
+			{
+				"family": "VanderMeer",
+				"given": "Debra"
+			},
+			{
+				"literal": "Suresha"
+			},
+			{
+				"family": "Ramamritham",
+				"given": "Krithi"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/MQXSVXJT",
+		"type": "chapter",
+		"title": "A Dynamic Proxy Based Architecture to Support Distributed Java Objects in a Mobile Environment",
+		"container-title": "On the Move to Meaningful Internet Systems 2002: CoopIS, DOA, and ODBASE",
+		"collection-title": "Lecture Notes in Computer Science",
+		"collection-number": "2519",
+		"publisher": "Springer Berlin Heidelberg",
+		"page": "809-826",
+		"source": "link.springer.com",
+		"abstract": "Java Remote Method Invocation (RMI), as a distributed object technology, has poor existing support for operation in wireless mobile computing environments. The use of RMI in a mobile environment poses a number of problems related to hardware mobility and the characteristics of wireless networks.This paper describes an implementation of an architecture supporting RMI client and server applications in a wireless mobile environment. Mobility support is provided for in two major components. Connectivity management manages wireless connections and hides the inherent unreliability of wireless media from higher layers. Location management addresses the difficulty of correctly locating and invoking RMI server objects hosted by mobile devices. The implementation is evaluated in terms of transparency and the associated cost of introducing mobility support for RMI applications.",
+		"URL": "http://link.springer.com/chapter/10.1007/3-540-36124-3_54",
+		"ISBN": "978-3-540-00106-5",
+		"note": "DOI: 10.1007/3-540-36124-3_54",
+		"language": "en",
+		"author": [
+			{
+				"family": "Biegel",
+				"given": "G."
+			},
+			{
+				"family": "Cahill",
+				"given": "V."
+			},
+			{
+				"family": "Haahr",
+				"given": "M."
+			}
+		],
+		"editor": [
+			{
+				"family": "Meersman",
+				"given": "Robert"
+			},
+			{
+				"family": "Tari",
+				"given": "Zahir"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002",
+					10,
+					30
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/KAVBSCAP",
+		"type": "paper-conference",
+		"title": "Structure and Encapsulation in Distributed Systems: the Proxy Principle",
+		"page": "198--204",
+		"source": "hal.inria.fr",
+		"event": "Int. Conf. on Distr. Comp. Sys. (ICDCS)",
+		"abstract": "We present a novel view of the structuring of distributed systems, and a few examples of its utilization in an object-oriented context. In a distributed system, the structure of a service or subsystem may be complex, being implemented as a set of communicating server objects; however, this complexity of structure should not be apparent to the client. In our proposal, a client must rst acquire a local object, called a proxy, in order to use such a service. The proxy represents the whole set of servers. The client directs all its communication to the proxy. The proxy, and all the objects it represents, collectively form one distributed object, which is not decomposable by the client. Any higher-level communication protocols are internal to this distributed object. Such a view provides a powerful structuring framework for distributed systems; it can be implemented cheaply without sacricing much exibility. It subsumes may previous proposals, but encourages better information-hiding and encapsulation",
+		"URL": "https://hal.inria.fr/inria-00444651/document",
+		"shortTitle": "Structure and Encapsulation in Distributed Systems",
+		"language": "en",
+		"author": [
+			{
+				"family": "Shapiro",
+				"given": "Marc"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1986"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/KA3UPHKJ",
+		"type": "webpage",
+		"title": "Remote procedure call",
+		"container-title": "CERN Document Server",
+		"abstract": "Nelson, B J",
+		"URL": "http://cds.cern.ch/record/132187",
+		"author": [
+			{
+				"family": "Nelson",
+				"given": "B. J."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1981"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/5KM8E94I",
+		"type": "webpage",
+		"title": "Types of Proxy Servers, Transparent and Anonymous Proxies",
+		"container-title": "WebToolHub",
+		"abstract": "A proxy server is a computer that offers a computer network service to allow clients to make indirect network connections to other network services.",
+		"URL": "http://info.webtoolhub.com/kb-a14-types-of-proxy-servers-transparent-and-anonymous-proxies.aspx",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/77AHZ78N",
+		"type": "paper-conference",
+		"title": "A survey of proxy cache evaluation techniques",
+		"container-title": "Proceedings of the Fourth International Web Caching Workshop (WCW99)",
+		"publisher": "Citeseer",
+		"page": "67–77",
+		"source": "Google Scholar",
+		"URL": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.8087&rep=rep1&type=pdf",
+		"author": [
+			{
+				"family": "Davison",
+				"given": "Brian D."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/VCAAWKKX",
+		"type": "book",
+		"title": "Digital systems: hardware organization and design",
+		"publisher": "John Wiley & Sons, Inc.",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=578598",
+		"shortTitle": "Digital systems",
+		"author": [
+			{
+				"family": "Hill",
+				"given": "Frederick J."
+			},
+			{
+				"family": "Peterson",
+				"given": "Gerald R."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1978"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/3PJW9689",
+		"type": "chapter",
+		"title": "Active query caching for database web servers",
+		"container-title": "The World Wide Web and Databases",
+		"publisher": "Springer",
+		"page": "92–104",
+		"source": "Google Scholar",
+		"URL": "http://link.springer.com/chapter/10.1007/3-540-45271-0_6",
+		"author": [
+			{
+				"family": "Luo",
+				"given": "Qiong"
+			},
+			{
+				"family": "Naughton",
+				"given": "Jeffrey F."
+			},
+			{
+				"family": "Krishnamurthy",
+				"given": "Rajasekar"
+			},
+			{
+				"family": "Cao",
+				"given": "Pei"
+			},
+			{
+				"family": "Li",
+				"given": "Yunrui"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/4VAPK5VW",
+		"type": "article-journal",
+		"title": "Proxy cache algorithms: Design, implementation, and performance",
+		"container-title": "Knowledge and Data Engineering, IEEE Transactions on",
+		"page": "549–562",
+		"volume": "11",
+		"issue": "4",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=790804",
+		"shortTitle": "Proxy cache algorithms",
+		"author": [
+			{
+				"family": "Shim",
+				"given": "Junho"
+			},
+			{
+				"family": "Scheuermann",
+				"given": "Peter"
+			},
+			{
+				"family": "Vingralek",
+				"given": "Radek"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/Z6SEHB8E",
+		"type": "paper-conference",
+		"title": "Adaptability in corba: The mobile proxy approach",
+		"container-title": "Distributed Objects and Applications, 2000. Proceedings. DOA'00. International Symposium on",
+		"publisher": "IEEE",
+		"page": "295–304",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=874201",
+		"shortTitle": "Adaptability in corba",
+		"author": [
+			{
+				"family": "Aziz",
+				"given": "Benjamin"
+			},
+			{
+				"family": "Jensen",
+				"given": "Christian"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/T8A2XXRD",
+		"type": "paper-conference",
+		"title": "Extending the representational state transfer (rest) architectural style for decentralized systems",
+		"container-title": "Proceedings of the 26th International Conference on Software Engineering",
+		"publisher": "IEEE Computer Society",
+		"page": "428–437",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=999447",
+		"author": [
+			{
+				"family": "Khare",
+				"given": "Rohit"
+			},
+			{
+				"family": "Taylor",
+				"given": "Richard N."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/M6AACKNK",
+		"type": "book",
+		"title": "Inside Network Perimeter Security",
+		"publisher": "Sams",
+		"source": "Library Genesis",
+		"URL": "http://gen.lib.rus.ec/book/index.php?md5=9E3EE8F77841184A595AD21CBF54CFDF",
+		"ISBN": "978-0-672-32737-7",
+		"author": [
+			{
+				"family": "Northcutt",
+				"given": "Stephen"
+			},
+			{
+				"family": "Frederick",
+				"given": "Karen"
+			},
+			{
+				"family": "Winters",
+				"given": "Scott"
+			},
+			{
+				"family": "Zeltser",
+				"given": "Lenny"
+			},
+			{
+				"family": "Ritc",
+				"given": "Ronald W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/24HXCI8P",
+		"type": "paper-conference",
+		"title": "An extended distributed OSGi architecture for implementation of SOA",
+		"container-title": "2010 International Conference on Advanced Intelligence and Awarenss Internet (AIAI 2010)",
+		"page": "416-419",
+		"source": "IEEE Xplore",
+		"event": "2010 International Conference on Advanced Intelligence and Awarenss Internet (AIAI 2010)",
+		"abstract": "With the development of modern network technology, the distributed construction is considered to represent the trend of SOA. Since it is more likely to be a theoretic framework for a macroscopic system rather than practical software architecture to implement it, the urgent problem is that there is no standard development pattern for implementation of SOA. On the other hand, OSGi, which is integrated with service as the smallest unit, shares common goal with SOA, may make contributions to the implementation of SOA by providing practical software architecture. However OSGi has the shortage that the operation is limited in one JVM and communications of OSGi services can not be extended to different hosts. OSGi should be extended to distributed architecture in order to support distributed SOA implementation. Attempts are made in this article to design an extended distributed OSGi architecture for the purpose of developing a practical development pattern for SOA implementation. In this article, three new independent OSGi services are designed to implement distribution without modifying the existed OSGi code. They are basic service, registry service and proxy service. In the new distributed OSGi runtime environment, services in different JVM could call each other and the whole processes are transparent.",
+		"DOI": "10.1049/cp.2010.0801",
+		"author": [
+			{
+				"family": "Wang",
+				"given": "Yajin"
+			},
+			{
+				"family": "Song",
+				"given": "Meina"
+			},
+			{
+				"family": "Song",
+				"given": "Junde"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/A2K2TVDW",
+		"type": "webpage",
+		"title": "Architecture – OSGi™ Alliance",
+		"URL": "https://www.osgi.org/developer/architecture/",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/6MWMTDIJ",
+		"type": "article-journal",
+		"title": "Composable proxy services to support collaboration on the mobile Internet",
+		"container-title": "IEEE Transactions on Computers",
+		"page": "713-726",
+		"volume": "52",
+		"issue": "6",
+		"source": "IEEE Xplore",
+		"abstract": "Describes the design and operation of a composable proxy infrastructure that enables mobile Internet users to collaborate via heterogeneous devices and network connections. The approach is based on detachable Java I/O streams, which enable proxy filters and transcoders to be dynamically inserted, removed, and reordered on a given data stream. Unlike conventional Java I/O streams, detachable streams can be stopped, disconnected, reconnected, and restarted. As such, they provide a convenient method by which to support the dynamic composition of proxy services. Moreover, use of the I/O stream abstraction enables network distribution and stream adaptability to be implemented transparently with respect to application components. The operation and implementation of detachable streams are described. To evaluate the composable proxy infrastructure, it is used to enhance interactive audio communication among users of a Web-based collaborative computing framework. Two forward error correction (FEC) proxylets are developed, one using block erasure codes and the other using the GSM 06.10 encoding algorithm. Separately, each type of FEC improves the ability of the audio stream to tolerate errors in a wireless LAN environment. When composed in a single proxy, however, they cooperate to correct additional types of burst errors. Results are presented from a performance study conducted on a mobile computing testbed.",
+		"DOI": "10.1109/TC.2003.1204828",
+		"ISSN": "0018-9340",
+		"author": [
+			{
+				"family": "McKinley",
+				"given": "P. K."
+			},
+			{
+				"family": "Padmanabhan",
+				"given": "U. I."
+			},
+			{
+				"family": "Ancha",
+				"given": "N."
+			},
+			{
+				"family": "Sadjadi",
+				"given": "S. M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2003",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/SBG2C5IF",
+		"type": "paper-conference",
+		"title": "Cache cooperation for clustered disconnected computers",
+		"container-title": "Ninth International Conference on Parallel and Distributed Systems, 2002. Proceedings",
+		"page": "457-464",
+		"source": "IEEE Xplore",
+		"event": "Ninth International Conference on Parallel and Distributed Systems, 2002. Proceedings",
+		"abstract": "The problem of disconnection from network is one that mobile users always have to face in mobile computing environment. Disconnected operation is one approach to ease this problem by allowing client computers to work solely on cached files in the local disks. However, a cache miss in disconnected operation is often critical, and usually causes the user to stop work on the current task until reconnecting to the server. To avoid such situations, we propose an approach called cache cooperation, which resolves cache misses in a coordinated manner among the clients. Cache cooperation allows each client to retrieve the missing data from the other remote clients when the client is disconnected from the server but not isolated from others. We describe the design of our prototype implementation, its performance measurement, and the results of vast numbers of simulations that we conducted with system-call traces recorded over 3-month period. The measured performance shows that the overhead of our approach is almost comparable to that of the normal client-server file operations. Moreover, the simulation results confirm that our approach can effectively decrease cache misses when multiple client caches can be utilized. Especially, in ideal cases where major files are shared by multiple clients, our approach saves almost all of cache misses for over 70 percent of simulation runs.",
+		"DOI": "10.1109/ICPADS.2002.1183439",
+		"author": [
+			{
+				"family": "Yasuda",
+				"given": "K."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002",
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/JG4ZS4KE",
+		"type": "book",
+		"title": "Disconnected operation in the Coda file system",
+		"collection-number": "5",
+		"publisher": "ACM",
+		"volume": "25",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=121166",
+		"author": [
+			{
+				"family": "Kistler",
+				"given": "James J."
+			},
+			{
+				"family": "Satyanarayanan",
+				"given": "Mahadev"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1991"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					24
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/5VUF6ZFK",
+		"type": "paper-conference",
+		"title": "Implementation of the Ficus Replicated File System.",
+		"container-title": "USENIX Summer",
+		"page": "63–72",
+		"source": "Google Scholar",
+		"author": [
+			{
+				"family": "Guy",
+				"given": "Richard G."
+			},
+			{
+				"family": "Heidemann",
+				"given": "John S."
+			},
+			{
+				"family": "Mak",
+				"given": "Wai-Kei"
+			},
+			{
+				"family": "Page Jr",
+				"given": "Thomas W."
+			},
+			{
+				"family": "Popek",
+				"given": "Gerald J."
+			},
+			{
+				"family": "Rothmeier",
+				"given": "Dieter"
+			},
+			{
+				"literal": "others"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1990"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/VVIVSX8H",
+		"type": "book",
+		"title": "Managing update conflicts in Bayou, a weakly connected replicated storage system",
+		"collection-number": "5",
+		"publisher": "ACM",
+		"volume": "29",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=224070",
+		"author": [
+			{
+				"family": "Terry",
+				"given": "Douglas B."
+			},
+			{
+				"family": "Theimer",
+				"given": "Marvin M."
+			},
+			{
+				"family": "Petersen",
+				"given": "Karin"
+			},
+			{
+				"family": "Demers",
+				"given": "Alan J."
+			},
+			{
+				"family": "Spreitzer",
+				"given": "Mike J."
+			},
+			{
+				"family": "Hauser",
+				"given": "Carl H."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1995"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					5,
+					24
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/IQSIUTGS",
+		"type": "paper-conference",
+		"title": "Improving the Transparency of Proxy Injection in Java",
+		"container-title": "Proceedings of the Thirty-Second Australasian Conference on Computer Science - Volume 91",
+		"collection-title": "ACSC '09",
+		"publisher": "Australian Computer Society, Inc.",
+		"publisher-place": "Darlinghurst, Australia, Australia",
+		"page": "55–64",
+		"source": "ACM Digital Library",
+		"event-place": "Darlinghurst, Australia, Australia",
+		"abstract": "Due to their flexibility, proxies have been used for various purposes in standalone and distributed applications. More specifically, object-level proxies support fine grained capabilities and offer the potential to transparently (i.e. with minimal human intervention) inject proxy-based functionality into an ordinary application. Consequently, several solutions based upon code transformation for addressing various limitations of transparency in existing approaches are considered and evaluated. Furthermore, the automation of the majority of the required code transformation has been implemented, which along with the deployment of various (proxy-based) adaptive and test applications, demonstrates the transparency, correctness, flexibility, and practicality of the solution. As the solution was presented in terms of Java, the discussion involves Java-specific characteristics; however some of the more general concepts should be useful for addressing similar issues in other object-oriented languages.",
+		"URL": "http://dl.acm.org/citation.cfm?id=1862659.1862669",
+		"ISBN": "978-1-920682-72-9",
+		"author": [
+			{
+				"family": "Gani",
+				"given": "Hendrik"
+			},
+			{
+				"family": "Ryan",
+				"given": "Caspar"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2009"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/9MNU44F2",
+		"type": "paper-conference",
+		"title": "A Data Cache with Multiple Caching Strategies Tuned to Different Types of Locality",
+		"container-title": "Proceedings of the 9th International Conference on Supercomputing",
+		"collection-title": "ICS '95",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "338–347",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"URL": "http://doi.acm.org/10.1145/224538.224622",
+		"DOI": "10.1145/224538.224622",
+		"ISBN": "978-0-89791-728-5",
+		"author": [
+			{
+				"family": "González",
+				"given": "Antonio"
+			},
+			{
+				"family": "Aliagas",
+				"given": "Carlos"
+			},
+			{
+				"family": "Valero",
+				"given": "Mateo"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1995"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/FXKZ864P",
+		"type": "paper-conference",
+		"title": "Androsgi: Bringing the Power of OSGi to Android",
+		"container-title": "Proceedings of the on Eclipse Technology eXchange",
+		"collection-title": "ETX 2015",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "1–6",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "Nowadays, Android is by far the most popular operating system on a myriad of mobile devices. Although based on the Java programming language, Android does not offer the same benefits as a dynamic software module system such as OSGi. Nevertheless OSGi would have many advantages on mobile environments. Software modularity allows you to only deploy the required pieces of software at runtime. Moreover, many of the enterprise OSGi specifications facilitate the development of distributed applications connecting to the Cloud. In order to exploit these advantages on Android, we present Androsgi, an Eclipse IDE plugin that allows you to easily run OSGi on top of Android. The Androsgi plugin facilitates deploying OSGi bundles, and calling both local and remote OSGi services from within your Android application.",
+		"URL": "http://doi.acm.org/10.1145/2846650.2846652",
+		"DOI": "10.1145/2846650.2846652",
+		"ISBN": "978-1-4503-3904-9",
+		"shortTitle": "Androsgi",
+		"author": [
+			{
+				"family": "Bohez",
+				"given": "Steven"
+			},
+			{
+				"family": "De Coninck",
+				"given": "Elias"
+			},
+			{
+				"family": "Verbelen",
+				"given": "Tim"
+			},
+			{
+				"family": "Dhoedt",
+				"given": "Bart"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/KBZRUPCZ",
+		"type": "webpage",
+		"title": "Forward Proxy vs Reverse Proxy",
+		"abstract": "A simplified comparison between a reverse proxy and a forward proxy.",
+		"URL": "http://www.jscape.com/blog/bid/87783/Forward-Proxy-vs-Reverse-Proxy",
+		"author": [
+			{
+				"family": "V",
+				"given": "John"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/4HTWUPWX",
+		"type": "book",
+		"title": "Design patterns: elements of reusable object-oriented software",
+		"publisher": "Pearson Education India",
+		"source": "Google Scholar",
+		"shortTitle": "Design patterns",
+		"author": [
+			{
+				"family": "Gamma",
+				"given": "Erich"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1995"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/VG97HGFI",
+		"type": "webpage",
+		"title": "Get smart with proxies and RMI",
+		"container-title": "JavaWorld",
+		"abstract": "RMI enables developers to either get a remote reference to a\ndistributed object, in which all method calls are forwarded to the\nserver object, or get a copy of the remote object and invoke on it\nlocally. Sometimes, however, it is desirable to combine those\napproaches, so that some method calls execute locally, while others\nexecute on the remote object. This article describes a method to\naccomplish that in a way that is transparent to the client code.",
+		"URL": "http://www.javaworld.com/article/2076234/soa/get-smart-with-proxies-and-rmi.html",
+		"author": [
+			{
+				"family": "Wilson",
+				"given": "M. Jeff"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000",
+					11,
+					10
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/GJZEKXPP",
+		"type": "paper-conference",
+		"title": "Transparent Proxies for Java Futures",
+		"container-title": "Proceedings of the 19th Annual ACM SIGPLAN Conference on Object-oriented Programming, Systems, Languages, and Applications",
+		"collection-title": "OOPSLA '04",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "206–223",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "A <i>proxy</i> object is a surrogate or placeholder that controls access to another target object. Proxies can be used to support distributed programming, lazy or parallel evaluation, access control, and other simple forms of behavioral reflection. However, <i>wrapper proxies</i> (like <i>futures</i> or <i>suspensions</i> for yet-to-be-computed results) can require significant code changes to be used in statically-typed languages, while proxies more generally can inadvertently violate assumptions of transparency, resulting in subtle bugs. To solve these problems, we have designed and implemented a simple framework for proxy programming that employs a static analysis based on qualifier inference, but with additional novelties. Code for using wrapper proxies is automatically introduced via a classfile-to-classfile transformation, and potential violations of transparency are signaled to the programmer. We have formalized our analysis and proven it sound. Our framework has a variety of applications, including support for asynchronous method calls returning futures. Experimental results demonstrate the benefits of our framework: programmers are relieved of managing and/or checking proxy usage, analysis times are reasonably fast, overheads introduced by added dynamic checks are negligible, and performance improvements can be significant. For example, changing two lines in a simple RMI-based peer-to-peer application and then using our framework resulted in a large performance gain.",
+		"URL": "http://doi.acm.org/10.1145/1028976.1028994",
+		"DOI": "10.1145/1028976.1028994",
+		"ISBN": "978-1-58113-831-3",
+		"author": [
+			{
+				"family": "Pratikakis",
+				"given": "Polyvios"
+			},
+			{
+				"family": "Spacco",
+				"given": "Jaime"
+			},
+			{
+				"family": "Hicks",
+				"given": "Michael"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/S94RE4E2",
+		"type": "webpage",
+		"title": "Fusion Middleware Understanding Oracle WebLogic Server",
+		"abstract": "This chapter introduces Enterprise JavaBeans.",
+		"URL": "https://docs.oracle.com/cd/E24329_01/web.1211/e24446/ejbs.htm#INTRO255",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/AK2CEUIV",
+		"type": "paper-conference",
+		"title": "System support for dynamic layout of distributed applications",
+		"container-title": "Distributed Computing Systems, 1999. Proceedings. 19th IEEE International Conference on",
+		"publisher": "IEEE",
+		"page": "403–411",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=776542",
+		"author": [
+			{
+				"family": "Holder",
+				"given": "Ophir"
+			},
+			{
+				"family": "Ben-Shaul",
+				"given": "Israel"
+			},
+			{
+				"family": "Gazit",
+				"given": "Hovav"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/5Z83WVSW",
+		"type": "article-journal",
+		"title": "JavaParty - Transparent Remote Objects in Java",
+		"container-title": "Concurrency Practice and Experience",
+		"page": "1225–1242",
+		"volume": "9",
+		"issue": "11",
+		"source": "Google Scholar",
+		"URL": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.68.6874&rep=rep1&type=pdf",
+		"author": [
+			{
+				"family": "Philippsen",
+				"given": "Michael"
+			},
+			{
+				"family": "Zenger",
+				"given": "Matthias"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1997"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/FJXB37EG",
+		"type": "chapter",
+		"title": "A framework for building customized adaptation proxies",
+		"container-title": "Intelligence in Communication Systems",
+		"publisher": "Springer",
+		"page": "1–11",
+		"source": "Google Scholar",
+		"URL": "http://link.springer.com/chapter/10.1007/0-387-32015-6_1",
+		"author": [
+			{
+				"family": "Rubinsztejn",
+				"given": "Hana KS"
+			},
+			{
+				"family": "Endler",
+				"given": "Markus"
+			},
+			{
+				"family": "Rodriguez",
+				"given": "Noemi"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/SE8ADTT5",
+		"type": "book",
+		"title": "A Framework for Building Customized Adaptation Proxies for Mobile Computing",
+		"publisher": "Citeseer",
+		"source": "Google Scholar",
+		"URL": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.498.9713&rep=rep1&type=pdf",
+		"author": [
+			{
+				"family": "Rubinsztejn",
+				"given": "Hana Karina Salles"
+			},
+			{
+				"family": "Endler",
+				"given": "Markus"
+			},
+			{
+				"family": "Rodriguez",
+				"given": "Noemi de La Rocque"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/FX4NKKVF",
+		"type": "chapter",
+		"title": "Application adaptation through transparent and portable object mobility in java",
+		"container-title": "On the Move to Meaningful Internet Systems 2004: CoopIS, DOA, and ODBASE",
+		"publisher": "Springer",
+		"page": "1262–1284",
+		"source": "Google Scholar",
+		"URL": "http://link.springer.com/chapter/10.1007/978-3-540-30469-2_29",
+		"author": [
+			{
+				"family": "Ryan",
+				"given": "Caspar"
+			},
+			{
+				"family": "Westhorpe",
+				"given": "Christopher"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/RB3FVRZ5",
+		"type": "paper-conference",
+		"title": "A Bytecode Translator for Distributed Execution of “Legacy” Java Software",
+		"container-title": "Proceedings of the 15th European Conference on Object-Oriented Programming",
+		"collection-title": "ECOOP '01",
+		"publisher": "Springer-Verlag",
+		"publisher-place": "London, UK, UK",
+		"page": "236–255",
+		"source": "ACM Digital Library",
+		"event-place": "London, UK, UK",
+		"abstract": "This paper proposes a system named Addistant, which enables the distributed execution of \"legacy\" Java bytecode. Here \"legacy\" means the software originally developed to be executed on a single Java virtual machine (JVM). For adapting legacy software to distributed execution on multiple JVM, developers using Addistant have only to specify the host where instances of each class are allocated and how remote references are implemented. According to that specification, Addistant automatically transforms the bytecode at load time. A technical contribution by Addistant is that it covers a number of issues for implementing distributed execution in the real world. In fact, Addistant can adapt a legacy program written with the Swing library so that Swing objects are executed on a local JVM while the rest of objects are on a remote JVM.",
+		"URL": "http://dl.acm.org/citation.cfm?id=646158.680014",
+		"ISBN": "978-3-540-42206-8",
+		"author": [
+			{
+				"family": "Tatsubori",
+				"given": "Michiaki"
+			},
+			{
+				"family": "Sasaki",
+				"given": "Toshiyuki"
+			},
+			{
+				"family": "Chiba",
+				"given": "Shigeru"
+			},
+			{
+				"family": "Itano",
+				"given": "Kozo"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/Z2ZQ2VVF",
+		"type": "paper-conference",
+		"title": "J-Orchestra: Automatic Java Application Partitioning",
+		"container-title": "Proceedings of the 16th European Conference on Object-Oriented Programming",
+		"collection-title": "ECOOP '02",
+		"publisher": "Springer-Verlag",
+		"publisher-place": "London, UK, UK",
+		"page": "178–204",
+		"source": "ACM Digital Library",
+		"event-place": "London, UK, UK",
+		"abstract": "J-Orchestra is an automatic partitioning system for Java programs. J-Orchestra takes as input Java applications in bytecode format and transforms them into distributed applications, running on distinct Java Virtual Machines. To accomplish such automatic partitioning, J-Orchestra uses bytecode rewriting to substitute method calls with remote method calls, direct object references with proxy references, etc. Using J-Orchestra does not require great sophistication in distributed system methodology--the user only has to specify the network location of various hardware and software resources and their corresponding application classes. J-Orchestra has significant generality, flexibility, and degree of automation advantages compared to previous work on automatic partitioning. For instance, J-Orchestra can correctly partition almost any pure Java program, allowing any application object to be placed on any machine, regardless of how application objects access each other and Java system objects. This power is due to the novel way that J-Orchestra deals with unmodifiable code (e.g., native code in the Java system classes). Additionally, J-Orchestra offers support for object migration and run-time optimizations, like the lazy creation of distributed objects.We have used J-Orchestra to successfully partition several realistic applications including a command line shell, a ray tracer, and several applications with native dependencies (sound, graphics).",
+		"URL": "http://dl.acm.org/citation.cfm?id=646159.680022",
+		"ISBN": "978-3-540-43759-8",
+		"shortTitle": "J-Orchestra",
+		"author": [
+			{
+				"family": "Tilevich",
+				"given": "Eli"
+			},
+			{
+				"family": "Smaragdakis",
+				"given": "Yannis"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/T5F8M37X",
+		"type": "article-journal",
+		"title": "Intermediaries: An approach to manipulating information streams",
+		"container-title": "IBM Systems Journal",
+		"page": "629-641",
+		"volume": "38",
+		"issue": "4",
+		"source": "IEEE Xplore",
+		"abstract": "Information flows all around us all the time. Whether on computer networks, on telephone lines, or within the wiring of everyday devices such as coffeemakers or gas pumps, data are constantly being transmitted from one place to another. Much of the time, such data flow directly between information producers and information consumers. Sometimes, however, intermediary processes stand in the way of a simple data flow, for instance, to monitor traffic, to bridge between incompatible communication streams, or to customize or extend the functions that are natively available on a stream. Intermediaries can turn ordinary information streams into smart streams that enhance the quality of communication. Because information flows are now everywhere, there is a new opportunity for taking advantage of intermediary computation, but general principles and approaches have not yet been developed. This paper provides an introduction to the intermediary approach, describes an implemented Web intermediary framework and applications, and proposes extending intermediaries to other information streams.",
+		"DOI": "10.1147/sj.384.0629",
+		"ISSN": "0018-8670",
+		"shortTitle": "Intermediaries",
+		"author": [
+			{
+				"family": "Barrett",
+				"given": "R."
+			},
+			{
+				"family": "Maglio",
+				"given": "P. P."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/GT68J2DB",
+		"type": "article-journal",
+		"title": "A network architecture for heterogeneous mobile computing",
+		"container-title": "IEEE Personal Communications",
+		"page": "8-24",
+		"volume": "5",
+		"issue": "5",
+		"source": "IEEE Xplore",
+		"abstract": "This article summarizes the results of the BARWAN project, which focused on enabling truly useful mobile networking across an extremely wide variety of real-world networks and mobile devices. We present the overall architecture, summarize key results, and discuss four broad lessons learned along the way. The architecture enables seamless roaming in a single logical overlay network composed of many heterogeneous (mostly wireless) physical networks, and provides significantly better TCP performance for these networks. It also provides complex scalable and highly available services to enable powerful capabilities across a very wide range of mobile devices, and mechanisms for automated discovery and configuration of localized services. Four broad themes arose from the project: (1) the power of dynamic adaptation as a generic solution to heterogeneity, (2) the importance of cross-layer information, such as the exploitation of TCP semantics in the link layer, (3) the use of agents in the infrastructure to enable new abilities and to hide new problems from legacy servers and protocol stacks, and (4) the importance of soft state for such agents for simplicity, ease of fault recovery, and scalability",
+		"DOI": "10.1109/98.729719",
+		"ISSN": "1070-9916",
+		"author": [
+			{
+				"family": "Brewer",
+				"given": "E. A."
+			},
+			{
+				"family": "Katz",
+				"given": "R. H."
+			},
+			{
+				"family": "Chawathe",
+				"given": "Y."
+			},
+			{
+				"family": "Gribble",
+				"given": "S. D."
+			},
+			{
+				"family": "Hodes",
+				"given": "T."
+			},
+			{
+				"family": "Nguyen",
+				"given": "Giao"
+			},
+			{
+				"family": "Stemm",
+				"given": "M."
+			},
+			{
+				"family": "Henderson",
+				"given": "T."
+			},
+			{
+				"family": "Amir",
+				"given": "E."
+			},
+			{
+				"family": "Balakrishnan",
+				"given": "H."
+			},
+			{
+				"family": "Fox",
+				"given": "A."
+			},
+			{
+				"family": "Padmanabhan",
+				"given": "V. N."
+			},
+			{
+				"family": "Seshan",
+				"given": "S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1998",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/EUF6RXKE",
+		"type": "paper-conference",
+		"title": "Proxy-server architectures for OLAP",
+		"container-title": "ACM SIGMOD Record",
+		"publisher": "ACM",
+		"page": "367–378",
+		"volume": "30",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=375712",
+		"author": [
+			{
+				"family": "Kalnis",
+				"given": "Panos"
+			},
+			{
+				"family": "Papadias",
+				"given": "Dimitris"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/VC9PBKED",
+		"type": "paper-conference",
+		"title": "Nache: Design and Implementation of a Caching Proxy for NFSv4.",
+		"container-title": "FAST",
+		"page": "27–27",
+		"volume": "7",
+		"source": "Google Scholar",
+		"URL": "https://www.usenix.org/legacy/event/fast07/tech/full_papers/gulati/gulati_html/",
+		"shortTitle": "Nache",
+		"author": [
+			{
+				"family": "Gulati",
+				"given": "Ajay"
+			},
+			{
+				"family": "Naik",
+				"given": "Manoj"
+			},
+			{
+				"family": "Tewari",
+				"given": "Renu"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2007"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/IMF3AM7D",
+		"type": "paper-conference",
+		"title": "OLTP and OLAP data integration: a review of feasible implementation methods and architectures for real time data analysis",
+		"container-title": "Proceedings. IEEE SoutheastCon, 2005.",
+		"publisher": "IEEE",
+		"page": "515–520",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1423297",
+		"shortTitle": "OLTP and OLAP data integration",
+		"author": [
+			{
+				"family": "Conn",
+				"given": "Samuel S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/IZQM5A5F",
+		"type": "article-journal",
+		"title": "Replacement policies for a proxy cache",
+		"container-title": "IEEE/ACM Transactions on Networking (ToN)",
+		"page": "158–170",
+		"volume": "8",
+		"issue": "2",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=336116",
+		"author": [
+			{
+				"family": "Rizzo",
+				"given": "Luigi"
+			},
+			{
+				"family": "Vicisano",
+				"given": "Lorenzo"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/P8R6FBEB",
+		"type": "article-journal",
+		"title": "Temporal locality and its impact on Web proxy cache performance",
+		"container-title": "Performance Evaluation",
+		"page": "187–203",
+		"volume": "42",
+		"issue": "2",
+		"source": "Google Scholar",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0166531600000328",
+		"author": [
+			{
+				"family": "Mahanti",
+				"given": "Anirban"
+			},
+			{
+				"family": "Eager",
+				"given": "Derek"
+			},
+			{
+				"family": "Williamson",
+				"given": "Carey"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/3DZCCUR4",
+		"type": "article-journal",
+		"title": "Proxy cache algorithms: Design, implementation, and performance",
+		"container-title": "IEEE Transactions on Knowledge and Data Engineering",
+		"page": "549–562",
+		"volume": "11",
+		"issue": "4",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=790804",
+		"shortTitle": "Proxy cache algorithms",
+		"author": [
+			{
+				"family": "Shim",
+				"given": "Junho"
+			},
+			{
+				"family": "Scheuermann",
+				"given": "Peter"
+			},
+			{
+				"family": "Vingralek",
+				"given": "Radek"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/WW4SF6PH",
+		"type": "paper-conference",
+		"title": "On the sensitivity of web proxy cache performance to workload characteristics",
+		"container-title": "INFOCOM 2001. Twentieth Annual Joint Conference of the IEEE Computer and Communications Societies. Proceedings. IEEE",
+		"publisher": "IEEE",
+		"page": "1225–1234",
+		"volume": "3",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=916617",
+		"author": [
+			{
+				"family": "Busari",
+				"given": "Mudashiru"
+			},
+			{
+				"family": "Williamson",
+				"given": "Carey"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/FIVQGQ6Z",
+		"type": "paper-conference",
+		"title": "Application-level document caching in the internet",
+		"container-title": "Services in Distributed and Networked Environments, 1995., Second International Workshop on",
+		"publisher": "IEEE",
+		"page": "166–173",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=470449",
+		"author": [
+			{
+				"family": "Bestavros",
+				"given": "Azer"
+			},
+			{
+				"family": "Carter",
+				"given": "Robert L."
+			},
+			{
+				"family": "Crovella",
+				"given": "Mark E."
+			},
+			{
+				"family": "Cunha",
+				"given": "Carlos R."
+			},
+			{
+				"family": "Heddaya",
+				"given": "Abdelsalam"
+			},
+			{
+				"family": "Mirdad",
+				"given": "Sulaiman A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1995"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/7MEMBJIP",
+		"type": "paper-conference",
+		"title": "Cost-Aware WWW Proxy Caching Algorithms.",
+		"container-title": "Usenix symposium on internet technologies and systems",
+		"page": "193–206",
+		"volume": "12",
+		"source": "Google Scholar",
+		"URL": "http://static.usenix.org/publications/library/proceedings/usits97/full_papers/cao/cao.pdf",
+		"author": [
+			{
+				"family": "Cao",
+				"given": "Pei"
+			},
+			{
+				"family": "Irani",
+				"given": "Sandy"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1997"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/3785CUB4",
+		"type": "article-journal",
+		"title": "Trace-driven simulation of document caching strategies for internet web servers",
+		"container-title": "Simulation",
+		"page": "23–33",
+		"volume": "68",
+		"issue": "1",
+		"source": "Google Scholar",
+		"URL": "http://sim.sagepub.com/content/68/1/23.short",
+		"author": [
+			{
+				"family": "Arlitt",
+				"given": "Martin F."
+			},
+			{
+				"family": "Williamson",
+				"given": "Carey L."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1997"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/F2VCVUXW",
+		"type": "article-journal",
+		"title": "Caching proxies: Limitations and potentials",
+		"source": "Google Scholar",
+		"URL": "http://eprints.cs.vt.edu/archive/00000427/",
+		"shortTitle": "Caching proxies",
+		"author": [
+			{
+				"family": "Abrams",
+				"given": "Marc"
+			},
+			{
+				"family": "Standridge",
+				"given": "Charles R."
+			},
+			{
+				"family": "Abdulla",
+				"given": "Ghaleb"
+			},
+			{
+				"family": "Williams",
+				"given": "Stephen"
+			},
+			{
+				"family": "Fox",
+				"given": "Edward A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1995"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/DQRPCE8S",
+		"type": "article-journal",
+		"title": "An approach toward web caching and prefetching for database management system",
+		"container-title": "SIGMOD. Citeseer",
+		"source": "Google Scholar",
+		"URL": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.202.7932&rep=rep1&type=pdf",
+		"author": [
+			{
+				"family": "Wang",
+				"given": "Dazhi"
+			},
+			{
+				"family": "Xie",
+				"given": "Junyi"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/GSMPFFH3",
+		"type": "article-journal",
+		"title": "Using service-oriented architecture and component-based development to build web service applications",
+		"container-title": "Rational Software Corporation",
+		"volume": "6",
+		"source": "Google Scholar",
+		"URL": "http://dit.isuct.ru/Publish_RUP/soa.rup_soma/guidances/whitepapers/resources/using_soa_and_cbd_to_build_ws_applications.pdf",
+		"author": [
+			{
+				"family": "Brown",
+				"given": "Alan"
+			},
+			{
+				"family": "Johnston",
+				"given": "Simon"
+			},
+			{
+				"family": "Kelly",
+				"given": "Kevin"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/INQNZADQ",
+		"type": "paper-conference",
+		"title": "Towards reference passing in web service and workflow-based applications",
+		"container-title": "Enterprise Distributed Object Computing Conference, 2009. EDOC'09. IEEE International",
+		"publisher": "IEEE",
+		"page": "109–118",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5277706",
+		"author": [
+			{
+				"family": "Wieland",
+				"given": "Matthias"
+			},
+			{
+				"family": "Gorlach",
+				"given": "Katharina"
+			},
+			{
+				"family": "Schumm",
+				"given": "David"
+			},
+			{
+				"family": "Leymann",
+				"given": "Frank"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2009"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/U3JFMXHT",
+		"type": "book",
+		"title": "The Design of Cloud Workflow Systems",
+		"collection-title": "SpringerBriefs in Computer Science",
+		"publisher": "Springer",
+		"publisher-place": "Dordrecht",
+		"number-of-pages": "1",
+		"source": "iii.lib.odu.edu Library Catalog",
+		"event-place": "Dordrecht",
+		"abstract": "Cloud computing is the latest market-oriented computing paradigm which brings software design and development intoa new era characterized by \"XaaS\", i.e. everything as a service. Cloud workflows, as typical software applicationsin the cloud, are composed of a set of partially ordered cloud software services to achieve specific goals. However,due to the low QoS (quality of service) nature of the cloud environment, the design of workflow systems in the cloud becomes a challenging issue for the delivery of highquality cloud workflow applications. To address such an issue, this book presents a",
+		"ISBN": "978-1-4614-1933-4",
+		"call-number": "QA76.585eb",
+		"author": [
+			{
+				"family": "Liu",
+				"given": "Xiao"
+			},
+			{
+				"family": "Yuan",
+				"given": "Dong"
+			},
+			{
+				"family": "Zhang",
+				"given": "Gaofeng"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2012"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/RC8EXQJR",
+		"type": "article-journal",
+		"title": "RESTful Web service composition with BPEL for REST",
+		"container-title": "Data & Knowledge Engineering",
+		"page": "851–866",
+		"volume": "68",
+		"issue": "9",
+		"source": "Google Scholar",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0169023X09000366",
+		"author": [
+			{
+				"family": "Pautasso",
+				"given": "Cesare"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2009"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/K8NFFKPK",
+		"type": "article-journal",
+		"title": "Application-layer anycasting: a server selection architecture and use in a replicated Web service",
+		"container-title": "IEEE/ACM Transactions on Networking",
+		"page": "455–466",
+		"volume": "8",
+		"issue": "4",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=865074",
+		"shortTitle": "Application-layer anycasting",
+		"author": [
+			{
+				"family": "Zegura",
+				"given": "Ellen W."
+			},
+			{
+				"family": "Ammar",
+				"given": "Mostafa H."
+			},
+			{
+				"family": "Fei",
+				"given": "Zongming"
+			},
+			{
+				"family": "Bhattacharjee",
+				"given": "Samrat"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					22
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/SFZRTCQC",
+		"type": "article-journal",
+		"title": "Caching XML Web Services for Mobility.",
+		"container-title": "ACM Queue",
+		"page": "70–78",
+		"volume": "1",
+		"issue": "1",
+		"source": "Google Scholar",
+		"URL": "http://queue.acm.org/detail.cfm?id=864024",
+		"author": [
+			{
+				"family": "Terry",
+				"given": "Douglas B."
+			},
+			{
+				"family": "Ramasubramanian",
+				"given": "Venugopalan"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2003"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					22
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/5PZ7E8MT",
+		"type": "book",
+		"title": "Web services platform architecture: SOAP, WSDL, WS-policy, WS-addressing, WS-BPEL, WS-reliable messaging and more",
+		"publisher": "Prentice Hall PTR",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=1051879",
+		"shortTitle": "Web services platform architecture",
+		"author": [
+			{
+				"family": "Weerawarana",
+				"given": "Sanjiva"
+			},
+			{
+				"family": "Curbera",
+				"given": "Francisco"
+			},
+			{
+				"family": "Leymann",
+				"given": "Frank"
+			},
+			{
+				"family": "Storey",
+				"given": "Tony"
+			},
+			{
+				"family": "Ferguson",
+				"given": "Donald F."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					22
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/BRCRIRQ6",
+		"type": "article-journal",
+		"title": "How BPEL and SOA Are Changing Web Services Development",
+		"container-title": "IEEE Internet Computing",
+		"page": "60-67",
+		"volume": "9",
+		"issue": "3",
+		"source": "ProQuest",
+		"abstract": "As the use of Web services grows, organizations are increasingly choosing the Business Process Execution Language for modeling business processes within the Web services architecture. In addition to orchestrating organizations' Web services, BPEL's strengths include asynchronous message handling, reliability, and recovery. By developing Web services with BPEL in mind, organizations can implement aspects of the service-oriented architecture that might previously have been difficult to achieve.",
+		"URL": "http://search.proquest.com.proxy.lib.odu.edu/docview/197334619/abstract/5DFF699B3135476BPQ/1",
+		"DOI": "http://dx.doi.org.proxy.lib.odu.edu/10.1109/MIC.2005.56",
+		"ISSN": "10897801",
+		"language": "English",
+		"author": [
+			{
+				"family": "Pasley",
+				"given": "James"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005",
+					5
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					6,
+					22
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/VA3T7D6X",
+		"type": "paper-conference",
+		"title": "A proxy-based approach for mobility support in the DDS system",
+		"container-title": "2008 6th IEEE International Conference on Industrial Informatics",
+		"page": "1200-1205",
+		"source": "IEEE Xplore",
+		"event": "2008 6th IEEE International Conference on Industrial Informatics",
+		"abstract": "The DDS (data distribution service for real time systems) is the data-centric publish-subscribe communication paradigm. The DDS has naturally distinguishing features such as asynchronous interaction, quality of service (QoS), and a dynamic discovery to support the mobile computing. We propose a mobile adaptation of DDS based on a proxy that acts as a gateway between the mobile DDS client and the DDS fixed network. It aims at supporting seamless hand-off service for mobile DDS applications in the mobile and ubiquitous environment.",
+		"DOI": "10.1109/INDIN.2008.4618285",
+		"author": [
+			{
+				"family": "Kwon",
+				"given": "Ki-Jeong"
+			},
+			{
+				"family": "Park",
+				"given": "Choong-Bum"
+			},
+			{
+				"family": "Choi",
+				"given": "Hoon"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2008",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/C8E8S69X",
+		"type": "paper-conference",
+		"title": "Proxy-based recovery for applications on wireless hand-held devices",
+		"container-title": "Proceedings The 19th IEEE Symposium on Reliable Distributed Systems, 2000. SRDS-2000",
+		"page": "2-10",
+		"source": "IEEE Xplore",
+		"event": "Proceedings The 19th IEEE Symposium on Reliable Distributed Systems, 2000. SRDS-2000",
+		"abstract": "The low communication bandwidth, slow processor and limited memory of hand-held devices make it undesirable for them to store their own checkpoints or send process state information over a wireless network. The paper describes an approach to failure recovery for three-tier client and server application environments where the client applications execute on wireless handheld devices. The key idea is to have the middle-tier proxy transparently monitor the client's interaction with the back-end server and continuously maintain a copy of the client's state based on messages exchanged between the client and the server. The proxy also sustains the client's connection to the back-end server when a client unexpectedly disconnects. The client does not participate in checkpointing nor message logging, thereby saving power, processor cycles and bandwidth. The proxy is scalable and enhances backend server performance. Experimental results are provided for recovery time and runtime overhead",
+		"DOI": "10.1109/RELDI.2000.885387",
+		"author": [
+			{
+				"family": "Yao",
+				"given": "Bin"
+			},
+			{
+				"family": "Fuchs",
+				"given": "W. K."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/SN8ZXXFR",
+		"type": "paper-conference",
+		"title": "A dynamic proxy based architecture to support distributed java objects in a mobile environment",
+		"container-title": "OTM Confederated International Conferences\" On the Move to Meaningful Internet Systems\"",
+		"publisher": "Springer",
+		"page": "809–826",
+		"source": "Google Scholar",
+		"URL": "http://link.springer.com/chapter/10.1007/3-540-36124-3_54",
+		"author": [
+			{
+				"family": "Biegel",
+				"given": "Gregory"
+			},
+			{
+				"family": "Cahill",
+				"given": "Vinny"
+			},
+			{
+				"family": "Haahr",
+				"given": "Mads"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/58KDP2J4",
+		"type": "paper-conference",
+		"title": "Measurement architectures for network experiments with disconnected mobile nodes",
+		"container-title": "International Conference on Testbeds and Research Infrastructures",
+		"publisher": "Springer",
+		"page": "315–330",
+		"source": "Google Scholar",
+		"URL": "http://link.springer.com/chapter/10.1007/978-3-642-17851-1_26",
+		"author": [
+			{
+				"family": "White",
+				"given": "Jolyon"
+			},
+			{
+				"family": "Jourjon",
+				"given": "Guillaume"
+			},
+			{
+				"family": "Rakatoarivelo",
+				"given": "Thierry"
+			},
+			{
+				"family": "Ott",
+				"given": "Maximilian"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/TAD8Z9XM",
+		"type": "paper-conference",
+		"title": "A Network Connection Proxy to Enable Hosts to Sleep and Save Energy",
+		"container-title": "2008 IEEE International Performance, Computing and Communications Conference",
+		"page": "101-110",
+		"source": "IEEE Xplore",
+		"event": "2008 IEEE International Performance, Computing and Communications Conference",
+		"abstract": "Billions of dollars of electricity are being used to keep idle or unused network hosts fully powered-on only to maintain their network presence. We investigate how a network connectivity proxy (NCP) could enable significant energy savings by allowing idle hosts to enter a low-power sleep state and still maintain full network presence. An NCP must handle ARP, ICMP, DHCP, and other low-level network presence tasks for a network host. An NCP must also be able to maintain TCP connections and UDP data flows and to respond to application messages. The focus of this paper is on how TCP connections can be kept alive during periods of host sleep by using a SOCKS-based approach called green SOCKS (gSOCKS) as part of an NCP. The gSOCKS includes awareness of the power state of a host. A prototype implementation of gSOCKS in a Linksys router shows that TCP connections can be preserved.",
+		"DOI": "10.1109/PCCC.2008.4745133",
+		"author": [
+			{
+				"family": "Jimeno",
+				"given": "M."
+			},
+			{
+				"family": "Christensen",
+				"given": "K."
+			},
+			{
+				"family": "Nordman",
+				"given": "B."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2008",
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/VG2PSRWZ",
+		"type": "paper-conference",
+		"title": "Smart proxying for reducing network energy consumption",
+		"container-title": "2012 International Symposium on Performance Evaluation of Computer and Telecommunication Systems (SPECTS)",
+		"page": "1-8",
+		"source": "IEEE Xplore",
+		"event": "2012 International Symposium on Performance Evaluation of Computer and Telecommunication Systems (SPECTS)",
+		"abstract": "Many network-based applications require full time connectivity of the hosts for fate sharing and responding to routine applications/protocols heart-beat messages. Past studies revealed that network hosts are most of the time unused or idle but still kept powered on just to maintain network connectivity. Thus, significant energy savings are possible if the network hosts can sleep when idle. Unfortunately, present low-power sleep modes cannot maintain network connectivity and results in applications state loss, thus preventing users from enabling power management features. A proxy-based solution was recently proposed in the literature that allows network hosts to sleep and still maintain their network standings over Internet while requiring minor changes to applications/protocols. The Network Connectivity Proxy (NCP) can handle some basic network presence and management protocols like ICMP, DHCP, ARP etc on behalf of sleeping hosts and wake them up only when it is truly necessary. This paper addresses NCP generic architecture and its requirements, main NCP responsibilities, different NCP types and their characteristics and some possible solutions to preserve open TCP connections for the sleeping hosts. It also describes key challenges in the design and implementation of NCP and proposes possible solutions. NCP can result in significant network energy savings up to 70% depending on the hosts time usage model.",
+		"author": [
+			{
+				"family": "Khan",
+				"given": "R."
+			},
+			{
+				"family": "Bolla",
+				"given": "R."
+			},
+			{
+				"family": "Repetto",
+				"given": "M."
+			},
+			{
+				"family": "Bruschi",
+				"given": "R."
+			},
+			{
+				"family": "Giribaldi",
+				"given": "M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2012",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/VXC6V39Q",
+		"type": "article-journal",
+		"title": "Opportunistic networking: data forwarding in disconnected mobile ad hoc networks",
+		"container-title": "IEEE Communications Magazine",
+		"page": "134-141",
+		"volume": "44",
+		"issue": "11",
+		"source": "IEEE Xplore",
+		"abstract": "Opportunistic networks are one of the most interesting evolutions of MANETs. In opportunistic networks, mobile nodes are enabled to communicate with each other even if a route connecting them never exists. Furthermore, nodes are not supposed to possess or acquire any knowledge about the network topology, which (instead) is necessary in traditional MANET routing protocols. Routes are built dynamically, while messages are en route between the sender and the destination(s), and any possible node can opportunistically be used as next hop, provided it is likely to bring the message closer to the final destination. These requirements make opportunistic networks a challenging and promising research field. In this article we survey the most interesting case studies related to opportunistic networking and discuss and organize a taxonomy for the main routing and forwarding approaches in this challenging environment. We finally envision further possible scenarios to make opportunistic networks part of the next-generation Internet",
+		"DOI": "10.1109/MCOM.2006.248176",
+		"ISSN": "0163-6804",
+		"shortTitle": "Opportunistic networking",
+		"author": [
+			{
+				"family": "Pelusi",
+				"given": "L."
+			},
+			{
+				"family": "Passarella",
+				"given": "A."
+			},
+			{
+				"family": "Conti",
+				"given": "M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2006",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/N3KGXA5X",
+		"type": "paper-conference",
+		"title": "Hybrid routing in lossy link mobile ad hoc networks",
+		"container-title": "Communications and Signal Processing (ICICS) 2013 9th International Conference on Information",
+		"page": "1-6",
+		"source": "IEEE Xplore",
+		"event": "Communications and Signal Processing (ICICS) 2013 9th International Conference on Information",
+		"abstract": "Routing protocols in mobile ad hoc network (MANET) are designed to provide data delivery in frequently changing network topology. Existing MANET routing protocols set up an end-to-end path between source and destination prior to data forwarding. Maintaining a connected path before data delivery may not work well when the network is partially disconnected or disrupted. This paper discusses Opportunistic Multi-link Delay Tolerant Routing (OMDTR) which is designed to provide data delivery in the network where fully connected network topology is not guaranteed. OMDTR learns the local network connectivity and deliver the data if there is connectivity within two-hop. OMDTR exploits the robustness of flooding-based routing when there is no local network connectivity. Performance measurements of OMDTR protocol show that OMDTR increases the data delivery compared to pure flooding-based routing and pure end-to-end routing in mobile multi-hop wireless network with relatively high and low network density.",
+		"DOI": "10.1109/ICICS.2013.6782952",
+		"author": [
+			{
+				"family": "Aung",
+				"given": "C. Ye"
+			},
+			{
+				"family": "Chong",
+				"given": "P. H. J."
+			},
+			{
+				"family": "Xinxing",
+				"given": "Zhao"
+			},
+			{
+				"family": "Pheng",
+				"given": "A. Chua Yong"
+			},
+			{
+				"family": "Khoon",
+				"given": "Ng Tiah"
+			},
+			{
+				"family": "Xinyou",
+				"given": "See"
+			},
+			{
+				"family": "Lai",
+				"given": "Kok Siong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013",
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/R523T2QZ",
+		"type": "book",
+		"title": "Web Caching and Replication",
+		"publisher": "Addison-Wesley Professional",
+		"number-of-pages": "400",
+		"source": "Safari Books Online",
+		"abstract": "\"Rabinovich and Spatscheck report a wealth of detailed information about how to implement Web caching and replication mechanisms, but more importantly, they teach me how to think about the general problem of content distribution. I'm pleased that there is finally a comprehensive book on this important subject.\" --Larry Peterson, Professor of Computer Science, Princeton University \"This book is a remarkable piece of work, well-organized and clearly articulated. The authors have masterfully presented advanced topics in Internet Web infrastructure and content delivery networks in a way that is suitable for both novices and experts.\" --Steve McCanne, Chief Technology Officer, Inktomi As the Internet grows, evolving from a research tool into a staple of daily life, it is essential that the Web's scalability and performance keep up with increased demand and expectations. Every day, more and more users turn to the Internet to use resource-hungry applications like video and audio on-demand and distributed games. At the same time, more and more computer applications are built to rely on the Web, but with much higher sensitivity to delays of even a few milliseconds. The key to satisfying these growing demands and expectations lies in the practices of caching and replication and in the increased scalability solutions they represent. Web Caching and Replication provides essential material based on the extensive real-world experience of two experts from AT&T Labs. This comprehensive examination of caching, replication, and load-balancing practices for the Web brings together information from and for the commercial world, including real-life products; technical standards communities, such as IETF and W3C; and academic research. By focusing on the underlying, fundamental ideas that are behind the varied technologies currently used in caching and replication, this book will remain a relevant, much-needed resource as the multi-billion dollar industries that rely on the Web continue to grow and evolve. The book approaches its two central topics in two distinct parts. The part on caching includes coverage of: Proxy caching, including latency reduction and TCP connection cachingTransparent and nontransparent proxy deploymentCooperative cachingCache consistencyReplacement policiesPrefetching\"Caching the uncacheable\" The part on replication includes coverage of: Basic mechanisms for request distribution, including content-blind and content-aware request distributionCDNs, including DNS request distribution, streaming content delivery, and secure content accessServer selection Examples and illustrations are included throughout the book. Extensive cross-referencing also enables readers to identify the corresponding parts of each section. Web Caching and Replication concludes with a thorough look into the future. It not only considers how new services can be implemented on caching and replication platforms, but also outlines emerging technologies that will allow for cooperation between different caching and replication enterprises in order to improve the overall performance of the Web. 0201615703B11262001",
+		"URL": "http://proquest.safaribooksonline.com.proxy.lib.odu.edu/0201615703",
+		"ISBN": "978-0-201-61570-8",
+		"language": "en",
+		"author": [
+			{
+				"family": "Rabinovich",
+				"given": "Michael"
+			},
+			{
+				"family": "Spatscheck",
+				"given": "Oliver"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001",
+					12,
+					21
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					24
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/XXBJUH4A",
+		"type": "chapter",
+		"title": "Transparent Proxy Deployment",
+		"container-title": "Web Caching and Replication",
+		"publisher": "Addison-Wesley Professional",
+		"source": "Safari Books Online",
+		"abstract": "\"Rabinovich and Spatscheck report a wealth of detailed information about how to implement Web caching and replication mechanisms, but more importantly, they teach me how to think about the general problem of content distribution. I'm pleased that there is finally a comprehensive book on this important subject.\" --Larry Peterson, Professor of Computer Science, Princeton University \"This book is a remarkable piece of work, well-organized and clearly articulated. The authors have masterfully presented advanced topics in Internet Web infrastructure and content delivery networks in a way that is suitable for both novices and experts.\" --Steve McCanne, Chief Technology Officer, Inktomi As the Internet grows, evolving from a research tool into a staple of daily life, it is essential that the Web's scalability and performance keep up with increased demand and expectations. Every day, more and more users turn to the Internet to use resource-hungry applications like video and audio on-demand and distributed games. At the same time, more and more computer applications are built to rely on the Web, but with much higher sensitivity to delays of even a few milliseconds. The key to satisfying these growing demands and expectations lies in the practices of caching and replication and in the increased scalability solutions they represent. Web Caching and Replication provides essential material based on the extensive real-world experience of two experts from AT&T Labs. This comprehensive examination of caching, replication, and load-balancing practices for the Web brings together information from and for the commercial world, including real-life products; technical standards communities, such as IETF and W3C; and academic research. By focusing on the underlying, fundamental ideas that are behind the varied technologies currently used in caching and replication, this book will remain a relevant, much-needed resource as the multi-billion dollar industries that rely on the Web continue to grow and evolve. The book approaches its two central topics in two distinct parts. The part on caching includes coverage of: Proxy caching, including latency reduction and TCP connection cachingTransparent and nontransparent proxy deploymentCooperative cachingCache consistencyReplacement policiesPrefetching\"Caching the uncacheable\" The part on replication includes coverage of: Basic mechanisms for request distribution, including content-blind and content-aware request distributionCDNs, including DNS request distribution, streaming content delivery, and secure content accessServer selection Examples and illustrations are included throughout the book. Extensive cross-referencing also enables readers to identify the corresponding parts of each section. Web Caching and Replication concludes with a thorough look into the future. It not only considers how new services can be implemented on caching and replication platforms, but also outlines emerging technologies that will allow for cooperation between different caching and replication enterprises in order to improve the overall performance of the Web. 0201615703B11262001",
+		"URL": "http://proquest.safaribooksonline.com.proxy.lib.odu.edu/book/web-development/caching/0201615703/proxy-deployment/ch08lev1sec3",
+		"ISBN": "978-0-201-61570-8",
+		"language": "en",
+		"author": [
+			{
+				"family": "Rabinovich",
+				"given": "Michael"
+			},
+			{
+				"family": "Spatscheck",
+				"given": "Oliver"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2001",
+					12,
+					21
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					24
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/QIGE7NRN",
+		"type": "article-journal",
+		"title": "Interference-based topology control algorithm for delay-constrained mobile ad hoc networks",
+		"container-title": "IEEE Transactions on Mobile Computing",
+		"page": "742–754",
+		"volume": "14",
+		"issue": "4",
+		"source": "Google Scholar",
+		"URL": "http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6840366",
+		"author": [
+			{
+				"family": "Zhang",
+				"given": "Xin Ming"
+			},
+			{
+				"family": "Zhang",
+				"given": "Yue"
+			},
+			{
+				"family": "Yan",
+				"given": "Fan"
+			},
+			{
+				"family": "Vasilakos",
+				"given": "Athanasios V."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					24
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/ATTHSIXX",
+		"type": "paper-conference",
+		"title": "Riskroute: a framework for mitigating network outage threats",
+		"container-title": "Proceedings of the ninth ACM conference on Emerging networking experiments and technologies",
+		"publisher": "ACM",
+		"page": "405–416",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=2535385",
+		"shortTitle": "Riskroute",
+		"author": [
+			{
+				"family": "Eriksson",
+				"given": "Brian"
+			},
+			{
+				"family": "Durairajan",
+				"given": "Ramakrishnan"
+			},
+			{
+				"family": "Barford",
+				"given": "Paul"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					24
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/B5BKSUCU",
+		"type": "article-journal",
+		"title": "Client-server computing in mobile environments",
+		"container-title": "ACM computing surveys (CSUR)",
+		"page": "117–157",
+		"volume": "31",
+		"issue": "2",
+		"source": "Google Scholar",
+		"URL": "http://dl.acm.org/citation.cfm?id=319814",
+		"author": [
+			{
+				"family": "Jing",
+				"given": "Jin"
+			},
+			{
+				"family": "Helal",
+				"given": "Abdelsalam Sumi"
+			},
+			{
+				"family": "Elmagarmid",
+				"given": "Ahmed"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1999"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/CE9HCVVA",
+		"type": "article-journal",
+		"title": "Researching Internet-Based Populations: Advantages and Disadvantages of Online Survey Research, Online Questionnaire Authoring Software Packages, and Web Survey Services",
+		"container-title": "Journal of Computer-Mediated Communication",
+		"page": "00-00",
+		"volume": "10",
+		"issue": "3",
+		"source": "Wiley Online Library",
+		"abstract": "This article examines some advantages and disadvantages of conducting online survey research. It explores current features, issues, pricing, and limitations associated with products and services, such as online questionnaire features and services to facilitate the online survey process, such as those offered by web survey businesses. The review shows that current online survey products and services can vary considerably in terms of available features, consumer costs, and limitations. It is concluded that online survey researchers should conduct a careful assessment of their research goals, research timeline, and financial situation before choosing a specific product or service.",
+		"URL": "http://onlinelibrary.wiley.com/doi/10.1111/j.1083-6101.2005.tb00259.x/abstract",
+		"DOI": "10.1111/j.1083-6101.2005.tb00259.x",
+		"ISSN": "1083-6101",
+		"shortTitle": "Researching Internet-Based Populations",
+		"language": "en",
+		"author": [
+			{
+				"family": "Wright",
+				"given": "Kevin B."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005",
+					4,
+					1
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					14
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/local/4ScGRCh4/items/N48IU6WS",
+		"type": "article-journal",
+		"title": "Collaborative computer-aided design—research and development status",
+		"container-title": "Computer-Aided Design",
+		"collection-title": "CAD' 04 Special Issue: Product Design, Integration and Manufacturing",
+		"page": "931-940",
+		"volume": "37",
+		"issue": "9",
+		"source": "ScienceDirect",
+		"abstract": "In order to facilitate product design and realization processes, presently, research is actively carried out for developing methodologies and technologies of collaborative computer-aided design systems to support design teams geographically dispersed based on the quickly evolving information technologies. In this paper, the developed collaborative systems, methodologies and technologies, which are organized as a horizontal or a hierarchical manner, are reviewed. Meanwhile, a 3D streaming technology, which can effectively transmit visualization information across networks for Web applications, is highlighted and the algorithms behind it are disclosed.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S001044850400260X",
+		"DOI": "10.1016/j.cad.2004.09.020",
+		"ISSN": "0010-4485",
+		"journalAbbreviation": "Computer-Aided Design",
+		"author": [
+			{
+				"family": "Li",
+				"given": "W. D."
+			},
+			{
+				"family": "Lu",
+				"given": "W. F."
+			},
+			{
+				"family": "Fuh",
+				"given": "J. Y. H."
+			},
+			{
+				"family": "Wong",
+				"given": "Y. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2005",
+					8
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					14
+				]
+			]
+		}
+	}
+]

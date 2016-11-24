@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/proxy-server.iml" filepath="$PROJECT_DIR$/proxy-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sakernas-model/sakernas-model.iml" filepath="$PROJECT_DIR$/../sakernas-model/sakernas-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sakernas-rule/sakernas-rule.iml" filepath="$PROJECT_DIR$/../sakernas-rule/sakernas-rule.iml" />
+    </modules>
+  </component>
+</project>
