@@ -1,0 +1,11 @@
+Maximize
+    xAB+xBC+xCE+xDE+xEF+xAF+xBF
+Subject to
+    c1: xAB + xAF <= 1
+    c2: xAB + xBC + xBF <= 1
+    c3: xBC + xCE <= 1
+    c4: xDE <= 1
+    c5: xCE + xEF + xDE <= 1
+    c6: xBF + xEF + xAF <= 1
+Binary:
+    xAB, xBC, xCE, xDE, xEF, xAF, xBF

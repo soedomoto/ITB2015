@@ -28,6 +28,18 @@
 
 \usepackage[round, authoryear]{natbib}
 
+\usepackage{array, longtable}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{minted}{\begin{tcolorbox}}%
+\AfterEndEnvironment{minted}{\end{tcolorbox}}%
+\AtBeginEnvironment{minted}{\fontsize{10}{10}}
+
+
 
 \title{Alokasi Petugas Pengumpulan Data Lapangan Secara Dinamis Berbasis \textit{Context}}
 \author{Aris Prawisudatama\\23215131}
@@ -112,10 +124,10 @@ Aris Prawisudatama
 \input{bab1}
 %\input{bab2}
 %\input{bab3}
-%\input{bab4}
+\input{bab4}
 
 \backmatter
-\bibliographystyle{plainnat}
+\bibliographystyle{unsrtnat}
 \addcontentsline{toc}{chapter}{\bibname}
 \bibliography{../../Resources/Bib/Reference}
 \appendix

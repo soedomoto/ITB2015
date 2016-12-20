@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jsprit-analysis" />
+        <module name="jsprit-core" />
+        <module name="jsprit-examples" />
+        <module name="jsprit-instances" />
+        <module name="jsprit-io" />
+        <module name="VRP" />
+        <module name="VRP - No Time Window" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="jsprit" target="1.7" />
+      <module name="jsprit-analysis" target="1.7" />
+      <module name="jsprit-core" target="1.7" />
+      <module name="jsprit-examples" target="1.7" />
+      <module name="jsprit-instances" target="1.7" />
+      <module name="jsprit-io" target="1.7" />
+      <module name="VRP" target="1.8" />
+      <module name="VRP - No Time Window" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

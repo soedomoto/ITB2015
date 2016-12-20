@@ -1,0 +1,27 @@
+{
+  "name": "vrp-tabu-search",
+  "version": "1.0.2",
+  "description": "Tabu Search Algorithm for Vehicle Routing Problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vehicle",
+    "routing",
+    "problem",
+    "tabu",
+    "search",
+    "algorithm"
+  ],
+  "author": "Lam Tran <tranngoclam288@gmail.com> (http://github.com/tranngoclam)",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.5",
+    "node-uuid": "^1.4.3",
+    "nodeunit": "^0.9.1",
+    "simple-cls": "0.0.8",
+    "sylvester": "0.0.21",
+    "xml2js": "^0.4.8"
+  }
+}

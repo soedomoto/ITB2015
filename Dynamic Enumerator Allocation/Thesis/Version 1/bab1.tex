@@ -1,4 +1,4 @@
-\chapter{PENDAHULUAN} \label{ch:chapter_1}
+\chapter{Pendahuluan} \label{ch:chapter_1}
 
 \section{Latar Belakang}
 
@@ -17,17 +17,6 @@ Pada pengumpulan data primer oleh BPS, selanjutnya disebut dengan pencacahan, su
 
 
 Pengalokasian pencacah terhadap blok sensus terkadang menjadi sesuatu yang sulit, karena terkait dengan waktu dan biaya. \textit{Subject matter} yang menangani kegiatan harus mempertimbangkan beberapa hal, salah satunya adalah jarak antar blok sensus yang menjadi wilayah kerja seorang pencacah. Kesalahan dalam pengalokasian blok sensus menyebabkan waktu pencacahan menjadi lama, yang dapat mempengaruhi kegiatan pencacahan secara keseluruhan.
-
-
-Jarak antar blok sensus merupakan suatu indikator yang belum pernah dihitung oleh BPS. Indikator yang paling mendekati adalah Indeks Kesulitan Geografis (IKG) yang dihitung pada tahun 2015 untuk setiap desa/kelurahan. IKG merupakan sebuah indeks komposit tertimbang dengan skala 0 - 100 yang dihitung untuk setiap desa. Semakin besar indeks menunjukkan tingkat kesulitan geografis yang semakin tinggi \citep{bps_badan_2015}.
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{../../Resources/Images/podes_2014_jalan}
-    \caption{Kondisi Jalan, Podes 2014}
-    \label{fig:capi-ilustration}
-\end{figure}
 
 
 Selain jarak antar blok sensus, faktor yang juga perlu diperhatikan adalah lamanya pencacahan dalam sebuah blok sensus. Lama pencacahan dalam blok sensus secara umum dipengaruhi oleh 2 (dua) faktor, jarak antar rumah tangga dalam suatu blok sensus dan lama wawancara dalam rumah tangga. \citep{sudman_time_1965}, dalam penelitiannya menyatakan bahwa mengunjungi sebuah segmen dapat menghabiskan 21 persen dari keseluruhan waktu, 15 persen untuk mengunjungi rumah tangga dalam sebuah segmen, 37 persen untuk wawancara, dan sisanya untuk kegiatan lain, seperti \textit{editing}, \textit{study}, dan \textit{clerical}.
@@ -53,10 +42,24 @@ Dalam sistem komputer tidak terdapat definisi \textit{context} yang tunggal. Mes
 Pada aplikasi yang bersifat \textit{mobile}, \textit{context} biasanya diperoleh dengan menggunakan sensor yang tersemat dalam \textit{mobile device} tersebut. Sekarang ini, telah banyak ditemui \textit{mobile device}, terutama \textit{programmable smartphone}, yang telah dilengkapi dengan berbagai sensor \citep{cao_mobile_2015}. \citep{do_groupus:_2011}, misalnya mem-\textit{propose} GroupUs, framework yang mengelompokkan pengguna berdasarkan aktifitas sehari-hari yang dikumpulkan dengan menggunakan \textit{proximity sensor}. \citep{dai_mobile_2010} menciptakan \textit{drunk driving detection} dengan memanfaatkan sensor \textit{accelerometer} yang tersemat dalam \textit{smartphone}. Sementara \citep{zou_context-aware_2016}, memanfaatkan sensor \textit{Global Posisioning System} (GPS) dan \textit{Micro-Electro-Mechanical System} (MEMS) untuk membuat rekomendasi transportasi. Begitu pula sensor-sensor yang lain juga telah dimanfaatkan dalam berbagai penelitian \citep{dai_perfalld:_2010, lu_soundsense:_2009, bao_movi:_2010, rubel_toward_2005, atzmueller_towards_2013}.
 
 
-Di sisi yang lain, \textit{location recommendation} merupakan sebuah bahasan yang juga banyak diteliti. Metode yang paling banyak digunakan untuk menentukan rekomendasi lokasi adalah \textit{Location-based Social Network} (LBSN). Cara kerja LBSN pada dasarnya adalah dengan memanfaatkan lokasi dan \textit{point of interest} yang dibagikan oleh pengguna \citep{yuan_location_2016}. Beberapa peneliti juga mencoba meningkatkan akurasi prediksi dengan menggabungkannya dengan berbagai metode. Misalnya \citep{koren_collaborative_2010}, menggunakan \textit{temporal factorization model} yang memberikan hasil lebih baik dibanding dengan \textit{non-temporal factorization model}. Sementara  \citep{pragarauskas_temporal_2010} mengadopsi \textit{bayesian probabilistic tensor factorization} untuk mewujudkan \textit{temporal collaborative filtering}.
+Di sisi yang lain, \textit{location recommendation} merupakan sebuah bahasan yang juga banyak diteliti. Metode yang banyak digunakan untuk menentukan rekomendasi lokasi adalah \textit{Location-based Social Network} (LBSN). Cara kerja LBSN pada dasarnya adalah dengan memanfaatkan lokasi dan \textit{point of interest} yang dibagikan oleh pengguna \citep{yuan_location_2016}. Beberapa peneliti juga mencoba meningkatkan akurasi prediksi dengan menggabungkannya dengan berbagai metode. Misalnya \citep{koren_collaborative_2010}, menggunakan \textit{temporal factorization model} yang memberikan hasil lebih baik dibanding dengan \textit{non-temporal factorization model}. Sementara  \citep{pragarauskas_temporal_2010} mengadopsi \textit{bayesian probabilistic tensor factorization} untuk mewujudkan \textit{temporal collaborative filtering}. Akan tetapi, metode LBSN tidak sesuai digunakan untuk membuat rekomendasi lokasi pencacahan. Hal ini dikarenakan metode LBSN menggunakan \textit{logs} yang telah dikumpulkan sebelumnya, baik \textit{location logs} maupun \textit{user preference logs}, untuk menentukan rekomendasi, sementara lokasi pencacahan bukan merupakan \textit{point of interest} yang dikunjungi oleh banyak orang.
 
 
-Metode LBSN tidak sesuai digunakan untuk membuat rekomendasi lokasi pencacahan. Hal ini dikarenakan metode LBSN menggunakan \textit{logs} yang telah dikumpulkan sebelumnya, baik \textit{location logs} maupun \textit{user preference logs}, untuk menentukan rekomendasi, sementara lokasi pencacahan bukan merupakan \textit{point of interest} yang dikunjungi oleh banyak orang. Beberapa peneliti mengusulkan metode \textit{publish-subscribe} \citep{chen_efficient_2003, frey_context-aware_2007, costa_socially-aware_2008, bader_context-aware_2012}, karena dapat meminimalisir \textit{coupling} antar \textit{nodes}, sehingga lebih bersifat \textit{delay tolerant} \citep{costa_socially-aware_2008}.
+Metode lain yang juga banyak digunakan adalah \textit{Travelling Salesman Problem} (TSP). TSP adalah sebuah algoritma klasik \citep{biggs_graph_1976} yang telah banyak diadopsi dan dimodifikasi. Masalah yang umumnya mejadi dasar modifikasi adalah penggunaan \textit{multiple salesman}, yang disebut dengan \textit{Multiple Travelling Salesman Problem} (MTSP) \citep{bektas_multiple_2006}. Variasi dari MTSP juga telah banyak diteliti, yang umumnya mencakup: \textit{single or multiple depots} (\textit{start and stop point}), jumlah \textit{salesman}, \textit{fixed charges} (jika jumlah \textit{salesman} tidak tetap), lama kunjungan (\textit{time window}), dan \textit{special restrictions} \citep{bektas_multiple_2006}. Berbagai aplikasi untuk menyelesaikan permasalahan nyata (\textit{real-life problem}) juga telah dikembangkan dengan menggunakan MTSP. Misalnya, \textit{print press scheduling} oleh \citep{gorenstein_printing_1970}, \textit{crew scheduling} oleh \citep{svestka_computational_1973}, \textit{school bus routing problem} oleh \citep{angel_computer-assisted_1972}, \textit{interview scheduling} oleh \citep{gilbert_new_1992}, \textit{mission planning} oleh \citep{brumitt_dynamic_1996}, \textit{hot rolling scheduling} oleh \citep{tang_multiple_2000}, dan \textit{global navigation satellite system surveying networks} oleh \citep{saleh_design_2004}.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{../../Resources/Images/mtsp}
+    \caption{Ilustrasi \textit{Multiple Travelling Salesman Problem}}
+    \label{fig:mtsp-ilustration}
+\end{figure}
+
+
+Asumsi yang digunakan dalam pendekatan MTSP adalah semua informasi telah tersedia pada saat perancangan. Sementara dalam pencacahan informasi tidak selalu tersedia. Misalnya, \textit{time windows}, yang tersusun atas jarak antar rumah tangga dan lama wawancara, merupakan variabel yang bersifat dinamis. Jarak antar rumah tangga sangat tergantung dari sampel yang terpilih, sementara lama wawancara sangat tergantung dari kemampuan pencacah dalam bertanya dan menggali jawaban, tingkat pendidikan responden, dan banyaknya anggota rumah tangga yang harus didata. Untuk itu, diperlukan suatu cara agar metode MTSP dapat mengakomodir \textit{time windows} secara dinamis.
+
+
+Solusi yang ditawarkan adalah dengan mengabaikan \textit{time windows}, kemudian meng-\textit{generate} rekomendasi baru setiap kali pencacah telah menyelesaikan pencacahan pada suatu blok sensus. Untuk mencegah blok sensus yang telah dicacah diikutsertakan dalam rekomendasi, maka akan digunakan \textit{tabu search}. \textit{Tabu search} dirancang oleh \citep{glover_tabu_1989, glover_tabu_1990} untuk menyelesaikan masalah optimasi kombinasi, yang aplikasinya berkisar dari \textit{graph theory} dan \textit{matroid settings} untuk masalah pemrograman integer. \textit{Tabu search} menggunakan \textit{tabu list}, yaitu suatu struktur data yang menyimpan semua solusi yang telah dikunjungi sebelumnya \citep{orourke_dynamic_1999}. Untuk menyusun \textit{tabu list}, maka dalam kasus ini akan digunakan metode \textit{publish-subscribe}, atau biasa disingkat dengan pub-sub. Metode pub-sub yang akan digunakan adalah pub-sub \textit{tracking service}, sebagaimana diusulkan oleh \citep{chen_efficient_2003}.
 
 
 \section{Rumusan Masalah}
@@ -68,7 +71,7 @@ Adapun detail dari permasalahan yang akan dikaji adalah sebagai berikut:
 
 \begin{itemize}
 \item Bagaimana menentukan \textit{context} apa saja yang dapat digunakan dalam kasus ini.
-\item Bagaimana membuat prediksi lokasi pencacahan pada saat \textit{mobile device} terhubung maupun tidak terhubung dengan jaringan komunikasi.
+\item Bagaimana membuat rekomendasi lokasi pencacahan pada kondisi \textit{time windows} sangat berpengaruh, tetapi data tidak tersedia.
 \item Bagaimana membuat \textit{conflict resolution}, agar dua atau lebih \textit{smartphone} tidak merekomendasikan lokasi yang sama.
 \end{itemize}
 
@@ -81,8 +84,7 @@ Adapun tujuan khusus dari penelitian ini adalah:
 
 \begin{itemize}
 \item Mengidentifikasi \textit{context} yang terkait dengan penentuan lokasi pencacahan.
-\item Menyusun algoritma rekomendasi pada saat \textit{device} dapat berkomunikasi dengan device yang lain.
-\item Menyusun algoritma rekomendasi pada saat \textit{device} tidak dapat berkomunikasi dengan device yang lain.
+\item Menyusun algoritma rekomendasi.
 \item Menyusun algoritma \textit{location conflict}.
 \item Mengimplementasikan algoritma usulan dalam \textit{mobile application}.
 \item Melakukan ujicoba algoritma dan aplikasi usulan.
@@ -96,6 +98,7 @@ Masalah dalam penelitian ini memiliki batasan sebagai berikut:
 \begin{itemize}
 \item Lokasi pencacahan yang menjadi rujukan adalah Blok Sensus (BS) yang dikeluarkan oleh Badan Pusat Statistik (BPS).
 \item \textit{Device} yang digunakan adalah \textit{smartphone} berbasis Android yang umum dijual dipasaran.
+\item Tidak mempertimbangkan lingkungan yang tidak terkoneksi dengan jaringan komunikasi.
 \end{itemize}
 
 

@@ -1,0 +1,657 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   '--proxy',
+1 verbose cli   'http://soedomoto:abiummialif@cache.itb.ac.id:8080',
+1 verbose cli   'install',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData d3
+20 silly mapToRegistry name d3
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry http://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'd3',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'd3',
+23 silly mapToRegistry   name: 'd3',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri http://registry.npmjs.org/d3
+25 silly fetchNamedPackageData node-uuid
+26 silly mapToRegistry name node-uuid
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry http://registry.npmjs.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'node-uuid',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   escapedName: 'node-uuid',
+29 silly mapToRegistry   name: 'node-uuid',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri http://registry.npmjs.org/node-uuid
+31 silly fetchNamedPackageData nodeunit
+32 silly mapToRegistry name nodeunit
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry http://registry.npmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'nodeunit',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   escapedName: 'nodeunit',
+35 silly mapToRegistry   name: 'nodeunit',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri http://registry.npmjs.org/nodeunit
+37 silly fetchNamedPackageData simple-cls
+38 silly mapToRegistry name simple-cls
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry http://registry.npmjs.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: 'simple-cls',
+41 silly mapToRegistry   scope: null,
+41 silly mapToRegistry   escapedName: 'simple-cls',
+41 silly mapToRegistry   name: 'simple-cls',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri http://registry.npmjs.org/simple-cls
+43 silly fetchNamedPackageData sylvester
+44 silly mapToRegistry name sylvester
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry http://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'sylvester',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   escapedName: 'sylvester',
+47 silly mapToRegistry   name: 'sylvester',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri http://registry.npmjs.org/sylvester
+49 silly fetchNamedPackageData xml2js
+50 silly mapToRegistry name xml2js
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry http://registry.npmjs.org/
+53 silly mapToRegistry data Result {
+53 silly mapToRegistry   raw: 'xml2js',
+53 silly mapToRegistry   scope: null,
+53 silly mapToRegistry   escapedName: 'xml2js',
+53 silly mapToRegistry   name: 'xml2js',
+53 silly mapToRegistry   rawSpec: '',
+53 silly mapToRegistry   spec: 'latest',
+53 silly mapToRegistry   type: 'tag' }
+54 silly mapToRegistry uri http://registry.npmjs.org/xml2js
+55 verbose request uri http://registry.npmjs.org/d3
+56 verbose request no auth needed
+57 info attempt registry request try #1 at 1:51:49 PM
+58 verbose request id e20ecea566cd6f45
+59 http request GET http://registry.npmjs.org/d3
+60 verbose request uri http://registry.npmjs.org/node-uuid
+61 verbose request no auth needed
+62 info attempt registry request try #1 at 1:51:49 PM
+63 http request GET http://registry.npmjs.org/node-uuid
+64 verbose request uri http://registry.npmjs.org/simple-cls
+65 verbose request no auth needed
+66 info attempt registry request try #1 at 1:51:49 PM
+67 http request GET http://registry.npmjs.org/simple-cls
+68 verbose request uri http://registry.npmjs.org/sylvester
+69 verbose request no auth needed
+70 info attempt registry request try #1 at 1:51:49 PM
+71 verbose etag W/"53308835-47f6"
+72 verbose lastModified Mon, 24 Mar 2014 19:32:05 GMT
+73 http request GET http://registry.npmjs.org/sylvester
+74 verbose request uri http://registry.npmjs.org/xml2js
+75 verbose request no auth needed
+76 info attempt registry request try #1 at 1:51:49 PM
+77 verbose etag W/"5835e429-1e7f7"
+78 verbose lastModified Wed, 23 Nov 2016 18:47:05 GMT
+79 http request GET http://registry.npmjs.org/xml2js
+80 verbose request uri http://registry.npmjs.org/nodeunit
+81 verbose request no auth needed
+82 info attempt registry request try #1 at 1:51:49 PM
+83 verbose etag W/"58186478-15a30"
+84 verbose lastModified Tue, 01 Nov 2016 09:46:32 GMT
+85 http request GET http://registry.npmjs.org/nodeunit
+86 http 304 http://registry.npmjs.org/sylvester
+87 verbose headers { date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+87 verbose headers   'cache-control': 'max-age=300',
+87 verbose headers   etag: 'W/"53308835-47f6"',
+87 verbose headers   age: '53',
+87 verbose headers   'x-served-by': 'cache-sin6925-SIN',
+87 verbose headers   'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+87 verbose headers   'x-cache-hits': '5',
+87 verbose headers   'x-timer': 'S1480488706.111674,VS0,VE0',
+87 verbose headers   vary: 'Accept-Encoding',
+87 verbose headers   'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+87 verbose headers   via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+87 verbose headers   connection: 'keep-alive' }
+88 silly get cb [ 304,
+88 silly get   { date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+88 silly get     'cache-control': 'max-age=300',
+88 silly get     etag: 'W/"53308835-47f6"',
+88 silly get     age: '53',
+88 silly get     'x-served-by': 'cache-sin6925-SIN',
+88 silly get     'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+88 silly get     'x-cache-hits': '5',
+88 silly get     'x-timer': 'S1480488706.111674,VS0,VE0',
+88 silly get     vary: 'Accept-Encoding',
+88 silly get     'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+88 silly get     via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+88 silly get     connection: 'keep-alive' } ]
+89 verbose etag http://registry.npmjs.org/sylvester from cache
+90 verbose get saving sylvester to /home/soedomoto/.npm/registry.npmjs.org/sylvester/.cache.json
+91 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+92 http 200 http://registry.npmjs.org/node-uuid
+93 verbose headers { server: 'nginx/1.10.1',
+93 verbose headers   'content-type': 'application/json',
+93 verbose headers   'last-modified': 'Mon, 28 Nov 2016 21:10:00 GMT',
+93 verbose headers   etag: 'W/"583c9d28-61ab"',
+93 verbose headers   'content-encoding': 'gzip',
+93 verbose headers   'cache-control': 'max-age=300',
+93 verbose headers   'content-length': '6551',
+93 verbose headers   'accept-ranges': 'bytes',
+93 verbose headers   date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+93 verbose headers   age: '164',
+93 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+93 verbose headers   'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+93 verbose headers   'x-cache-hits': '15',
+93 verbose headers   'x-timer': 'S1480488706.110072,VS0,VE0',
+93 verbose headers   vary: 'Accept-Encoding',
+93 verbose headers   'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+93 verbose headers   via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+93 verbose headers   connection: 'keep-alive' }
+94 silly get cb [ 200,
+94 silly get   { server: 'nginx/1.10.1',
+94 silly get     'content-type': 'application/json',
+94 silly get     'last-modified': 'Mon, 28 Nov 2016 21:10:00 GMT',
+94 silly get     etag: 'W/"583c9d28-61ab"',
+94 silly get     'content-encoding': 'gzip',
+94 silly get     'cache-control': 'max-age=300',
+94 silly get     'content-length': '6551',
+94 silly get     'accept-ranges': 'bytes',
+94 silly get     date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+94 silly get     age: '164',
+94 silly get     'x-served-by': 'cache-sin6922-SIN',
+94 silly get     'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+94 silly get     'x-cache-hits': '15',
+94 silly get     'x-timer': 'S1480488706.110072,VS0,VE0',
+94 silly get     vary: 'Accept-Encoding',
+94 silly get     'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+94 silly get     via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+94 silly get     connection: 'keep-alive' } ]
+95 verbose get saving node-uuid to /home/soedomoto/.npm/registry.npmjs.org/node-uuid/.cache.json
+96 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+97 silly resolveWithNewModule sylvester@0.0.21 checking installable status
+98 silly cache add args [ 'sylvester@0.0.21', null ]
+99 verbose cache add spec sylvester@0.0.21
+100 silly cache add parsed spec Result {
+100 silly cache add   raw: 'sylvester@0.0.21',
+100 silly cache add   scope: null,
+100 silly cache add   escapedName: 'sylvester',
+100 silly cache add   name: 'sylvester',
+100 silly cache add   rawSpec: '0.0.21',
+100 silly cache add   spec: '0.0.21',
+100 silly cache add   type: 'version' }
+101 silly addNamed sylvester@0.0.21
+102 verbose addNamed "0.0.21" is a plain semver version for sylvester
+103 silly mapToRegistry name sylvester
+104 silly mapToRegistry using default registry
+105 silly mapToRegistry registry http://registry.npmjs.org/
+106 silly mapToRegistry data Result {
+106 silly mapToRegistry   raw: 'sylvester',
+106 silly mapToRegistry   scope: null,
+106 silly mapToRegistry   escapedName: 'sylvester',
+106 silly mapToRegistry   name: 'sylvester',
+106 silly mapToRegistry   rawSpec: '',
+106 silly mapToRegistry   spec: 'latest',
+106 silly mapToRegistry   type: 'tag' }
+107 silly mapToRegistry uri http://registry.npmjs.org/sylvester
+108 verbose addNameVersion registry:http://registry.npmjs.org/sylvester not in flight; fetching
+109 silly resolveWithNewModule node-uuid@1.4.7 checking installable status
+110 silly cache add args [ 'node-uuid@^1.4.3', null ]
+111 verbose cache add spec node-uuid@^1.4.3
+112 silly cache add parsed spec Result {
+112 silly cache add   raw: 'node-uuid@^1.4.3',
+112 silly cache add   scope: null,
+112 silly cache add   escapedName: 'node-uuid',
+112 silly cache add   name: 'node-uuid',
+112 silly cache add   rawSpec: '^1.4.3',
+112 silly cache add   spec: '>=1.4.3 <2.0.0',
+112 silly cache add   type: 'range' }
+113 silly addNamed node-uuid@>=1.4.3 <2.0.0
+114 verbose addNamed ">=1.4.3 <2.0.0" is a valid semver range for node-uuid
+115 silly addNameRange { name: 'node-uuid', range: '>=1.4.3 <2.0.0', hasData: false }
+116 silly mapToRegistry name node-uuid
+117 silly mapToRegistry using default registry
+118 silly mapToRegistry registry http://registry.npmjs.org/
+119 silly mapToRegistry data Result {
+119 silly mapToRegistry   raw: 'node-uuid',
+119 silly mapToRegistry   scope: null,
+119 silly mapToRegistry   escapedName: 'node-uuid',
+119 silly mapToRegistry   name: 'node-uuid',
+119 silly mapToRegistry   rawSpec: '',
+119 silly mapToRegistry   spec: 'latest',
+119 silly mapToRegistry   type: 'tag' }
+120 silly mapToRegistry uri http://registry.npmjs.org/node-uuid
+121 verbose addNameRange registry:http://registry.npmjs.org/node-uuid not in flight; fetching
+122 verbose get http://registry.npmjs.org/sylvester not expired, no request
+123 verbose get http://registry.npmjs.org/node-uuid not expired, no request
+124 silly addNameRange number 2 { name: 'node-uuid', range: '>=1.4.3 <2.0.0', hasData: true }
+125 silly addNameRange versions [ 'node-uuid',
+125 silly addNameRange   [ '1.2.0',
+125 silly addNameRange     '1.3.0',
+125 silly addNameRange     '1.3.1',
+125 silly addNameRange     '1.3.2',
+125 silly addNameRange     '1.1.0',
+125 silly addNameRange     '1.0.0',
+125 silly addNameRange     '1.3.3',
+125 silly addNameRange     '1.4.0',
+125 silly addNameRange     '1.4.1',
+125 silly addNameRange     '1.4.2',
+125 silly addNameRange     '1.4.3',
+125 silly addNameRange     '1.4.6',
+125 silly addNameRange     '1.4.7' ] ]
+126 silly addNamed node-uuid@1.4.7
+127 verbose addNamed "1.4.7" is a plain semver version for node-uuid
+128 warn deprecated node-uuid@1.4.7: use uuid module instead
+129 silly mapToRegistry name node-uuid
+130 silly mapToRegistry using default registry
+131 silly mapToRegistry registry http://registry.npmjs.org/
+132 silly mapToRegistry data Result {
+132 silly mapToRegistry   raw: 'node-uuid',
+132 silly mapToRegistry   scope: null,
+132 silly mapToRegistry   escapedName: 'node-uuid',
+132 silly mapToRegistry   name: 'node-uuid',
+132 silly mapToRegistry   rawSpec: '',
+132 silly mapToRegistry   spec: 'latest',
+132 silly mapToRegistry   type: 'tag' }
+133 silly mapToRegistry uri http://registry.npmjs.org/node-uuid
+134 verbose addRemoteTarball http://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz not in flight; adding
+135 verbose addRemoteTarball [ 'http://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz',
+135 verbose addRemoteTarball   '6da5a17668c4b3dd59623bda11cf7fa4c1f60a6f' ]
+136 silly cache afterAdd sylvester@0.0.21
+137 verbose afterAdd /home/soedomoto/.npm/sylvester/0.0.21/package/package.json not in flight; writing
+138 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+139 info retry fetch attempt 1 at 1:51:49 PM
+140 info attempt registry request try #1 at 1:51:49 PM
+141 http fetch GET http://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz
+142 http 304 http://registry.npmjs.org/xml2js
+143 verbose headers { date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+143 verbose headers   'cache-control': 'max-age=300',
+143 verbose headers   etag: 'W/"5835e429-1e7f7"',
+143 verbose headers   age: '91',
+143 verbose headers   'x-served-by': 'cache-sin6921-SIN',
+143 verbose headers   'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+143 verbose headers   'x-cache-hits': '45',
+143 verbose headers   'x-timer': 'S1480488706.181502,VS0,VE0',
+143 verbose headers   vary: 'Accept-Encoding',
+143 verbose headers   'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+143 verbose headers   via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+143 verbose headers   connection: 'keep-alive' }
+144 silly get cb [ 304,
+144 silly get   { date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+144 silly get     'cache-control': 'max-age=300',
+144 silly get     etag: 'W/"5835e429-1e7f7"',
+144 silly get     age: '91',
+144 silly get     'x-served-by': 'cache-sin6921-SIN',
+144 silly get     'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+144 silly get     'x-cache-hits': '45',
+144 silly get     'x-timer': 'S1480488706.181502,VS0,VE0',
+144 silly get     vary: 'Accept-Encoding',
+144 silly get     'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+144 silly get     via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+144 silly get     connection: 'keep-alive' } ]
+145 verbose etag http://registry.npmjs.org/xml2js from cache
+146 verbose get saving xml2js to /home/soedomoto/.npm/registry.npmjs.org/xml2js/.cache.json
+147 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+148 http 304 http://registry.npmjs.org/nodeunit
+149 verbose headers { date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+149 verbose headers   'cache-control': 'max-age=300',
+149 verbose headers   etag: 'W/"58186478-15a30"',
+149 verbose headers   age: '195',
+149 verbose headers   'x-served-by': 'cache-sin6921-SIN',
+149 verbose headers   'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+149 verbose headers   'x-cache-hits': '1',
+149 verbose headers   'x-timer': 'S1480488706.182461,VS0,VE1',
+149 verbose headers   vary: 'Accept-Encoding',
+149 verbose headers   'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+149 verbose headers   via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+149 verbose headers   connection: 'keep-alive' }
+150 silly get cb [ 304,
+150 silly get   { date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+150 silly get     'cache-control': 'max-age=300',
+150 silly get     etag: 'W/"58186478-15a30"',
+150 silly get     age: '195',
+150 silly get     'x-served-by': 'cache-sin6921-SIN',
+150 silly get     'x-cache': 'HIT, MISS from cache3.itb.ac.id',
+150 silly get     'x-cache-hits': '1',
+150 silly get     'x-timer': 'S1480488706.182461,VS0,VE1',
+150 silly get     vary: 'Accept-Encoding',
+150 silly get     'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+150 silly get     via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+150 silly get     connection: 'keep-alive' } ]
+151 verbose etag http://registry.npmjs.org/nodeunit from cache
+152 verbose get saving nodeunit to /home/soedomoto/.npm/registry.npmjs.org/nodeunit/.cache.json
+153 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+154 verbose afterAdd /home/soedomoto/.npm/sylvester/0.0.21/package/package.json written
+155 silly resolveWithNewModule nodeunit@0.9.5 checking installable status
+156 silly cache add args [ 'nodeunit@^0.9.1', null ]
+157 verbose cache add spec nodeunit@^0.9.1
+158 silly cache add parsed spec Result {
+158 silly cache add   raw: 'nodeunit@^0.9.1',
+158 silly cache add   scope: null,
+158 silly cache add   escapedName: 'nodeunit',
+158 silly cache add   name: 'nodeunit',
+158 silly cache add   rawSpec: '^0.9.1',
+158 silly cache add   spec: '>=0.9.1 <0.10.0',
+158 silly cache add   type: 'range' }
+159 silly addNamed nodeunit@>=0.9.1 <0.10.0
+160 verbose addNamed ">=0.9.1 <0.10.0" is a valid semver range for nodeunit
+161 silly addNameRange { name: 'nodeunit', range: '>=0.9.1 <0.10.0', hasData: false }
+162 silly mapToRegistry name nodeunit
+163 silly mapToRegistry using default registry
+164 silly mapToRegistry registry http://registry.npmjs.org/
+165 silly mapToRegistry data Result {
+165 silly mapToRegistry   raw: 'nodeunit',
+165 silly mapToRegistry   scope: null,
+165 silly mapToRegistry   escapedName: 'nodeunit',
+165 silly mapToRegistry   name: 'nodeunit',
+165 silly mapToRegistry   rawSpec: '',
+165 silly mapToRegistry   spec: 'latest',
+165 silly mapToRegistry   type: 'tag' }
+166 silly mapToRegistry uri http://registry.npmjs.org/nodeunit
+167 verbose addNameRange registry:http://registry.npmjs.org/nodeunit not in flight; fetching
+168 silly resolveWithNewModule xml2js@0.4.17 checking installable status
+169 silly cache add args [ 'xml2js@^0.4.8', null ]
+170 verbose cache add spec xml2js@^0.4.8
+171 silly cache add parsed spec Result {
+171 silly cache add   raw: 'xml2js@^0.4.8',
+171 silly cache add   scope: null,
+171 silly cache add   escapedName: 'xml2js',
+171 silly cache add   name: 'xml2js',
+171 silly cache add   rawSpec: '^0.4.8',
+171 silly cache add   spec: '>=0.4.8 <0.5.0',
+171 silly cache add   type: 'range' }
+172 silly addNamed xml2js@>=0.4.8 <0.5.0
+173 verbose addNamed ">=0.4.8 <0.5.0" is a valid semver range for xml2js
+174 silly addNameRange { name: 'xml2js', range: '>=0.4.8 <0.5.0', hasData: false }
+175 silly mapToRegistry name xml2js
+176 silly mapToRegistry using default registry
+177 silly mapToRegistry registry http://registry.npmjs.org/
+178 silly mapToRegistry data Result {
+178 silly mapToRegistry   raw: 'xml2js',
+178 silly mapToRegistry   scope: null,
+178 silly mapToRegistry   escapedName: 'xml2js',
+178 silly mapToRegistry   name: 'xml2js',
+178 silly mapToRegistry   rawSpec: '',
+178 silly mapToRegistry   spec: 'latest',
+178 silly mapToRegistry   type: 'tag' }
+179 silly mapToRegistry uri http://registry.npmjs.org/xml2js
+180 verbose addNameRange registry:http://registry.npmjs.org/xml2js not in flight; fetching
+181 verbose get http://registry.npmjs.org/nodeunit not expired, no request
+182 silly addNameRange number 2 { name: 'nodeunit', range: '>=0.9.1 <0.10.0', hasData: true }
+183 silly addNameRange versions [ 'nodeunit',
+183 silly addNameRange   [ '0.1.0',
+183 silly addNameRange     '0.1.1',
+183 silly addNameRange     '0.1.2',
+183 silly addNameRange     '0.2.0',
+183 silly addNameRange     '0.2.1',
+183 silly addNameRange     '0.2.2',
+183 silly addNameRange     '0.2.3',
+183 silly addNameRange     '0.2.4',
+183 silly addNameRange     '0.3.1',
+183 silly addNameRange     '0.4.0',
+183 silly addNameRange     '0.5.0',
+183 silly addNameRange     '0.5.1',
+183 silly addNameRange     '0.5.2',
+183 silly addNameRange     '0.5.3',
+183 silly addNameRange     '0.5.4',
+183 silly addNameRange     '0.5.5',
+183 silly addNameRange     '0.6.0',
+183 silly addNameRange     '0.6.1',
+183 silly addNameRange     '0.6.2',
+183 silly addNameRange     '0.6.3',
+183 silly addNameRange     '0.6.4',
+183 silly addNameRange     '0.7.0',
+183 silly addNameRange     '0.7.1',
+183 silly addNameRange     '0.7.2',
+183 silly addNameRange     '0.7.3',
+183 silly addNameRange     '0.7.4',
+183 silly addNameRange     '0.8.0',
+183 silly addNameRange     '0.8.1',
+183 silly addNameRange     '0.8.2',
+183 silly addNameRange     '0.8.3',
+183 silly addNameRange     '0.8.4',
+183 silly addNameRange     '0.8.5',
+183 silly addNameRange     '0.8.6',
+183 silly addNameRange     '0.8.8',
+183 silly addNameRange     '0.8.7',
+183 silly addNameRange     '0.9.0',
+183 silly addNameRange     '0.9.1',
+183 silly addNameRange     '0.9.2',
+183 silly addNameRange     '0.9.3',
+183 silly addNameRange     '0.10.0',
+183 silly addNameRange     '0.10.1',
+183 silly addNameRange     '0.9.4',
+183 silly addNameRange     '0.9.5',
+183 silly addNameRange     '0.10.2' ] ]
+184 silly addNamed nodeunit@0.9.5
+185 verbose addNamed "0.9.5" is a plain semver version for nodeunit
+186 verbose get http://registry.npmjs.org/xml2js not expired, no request
+187 silly addNameRange number 2 { name: 'xml2js', range: '>=0.4.8 <0.5.0', hasData: true }
+188 silly addNameRange versions [ 'xml2js',
+188 silly addNameRange   [ '0.1.0',
+188 silly addNameRange     '0.1.1',
+188 silly addNameRange     '0.1.2',
+188 silly addNameRange     '0.1.3',
+188 silly addNameRange     '0.1.4',
+188 silly addNameRange     '0.1.5',
+188 silly addNameRange     '0.1.6',
+188 silly addNameRange     '0.1.7',
+188 silly addNameRange     '0.1.8',
+188 silly addNameRange     '0.1.9',
+188 silly addNameRange     '0.1.10',
+188 silly addNameRange     '0.1.11',
+188 silly addNameRange     '0.1.12',
+188 silly addNameRange     '0.1.13',
+188 silly addNameRange     '0.1.14',
+188 silly addNameRange     '0.2.0',
+188 silly addNameRange     '0.2.1',
+188 silly addNameRange     '0.2.2',
+188 silly addNameRange     '0.2.3',
+188 silly addNameRange     '0.2.4',
+188 silly addNameRange     '0.2.5',
+188 silly addNameRange     '0.2.6',
+188 silly addNameRange     '0.2.7',
+188 silly addNameRange     '0.2.8',
+188 silly addNameRange     '0.4.0',
+188 silly addNameRange     '0.4.1',
+188 silly addNameRange     '0.4.2',
+188 silly addNameRange     '0.4.3',
+188 silly addNameRange     '0.4.4',
+188 silly addNameRange     '0.4.5',
+188 silly addNameRange     '0.4.6',
+188 silly addNameRange     '0.4.7',
+188 silly addNameRange     '0.4.8',
+188 silly addNameRange     '0.4.9',
+188 silly addNameRange     '0.4.10',
+188 silly addNameRange     '0.4.11',
+188 silly addNameRange     '0.4.12',
+188 silly addNameRange     '0.4.13',
+188 silly addNameRange     '0.4.1-4.1',
+188 silly addNameRange     '0.4.15',
+188 silly addNameRange     '0.4.16',
+188 silly addNameRange     '0.4.17' ] ]
+189 silly addNamed xml2js@0.4.17
+190 verbose addNamed "0.4.17" is a plain semver version for xml2js
+191 http 200 http://registry.npmjs.org/simple-cls
+192 verbose headers { server: 'nginx/1.10.1',
+192 verbose headers   'content-type': 'application/json',
+192 verbose headers   'last-modified': 'Thu, 01 Aug 2013 05:43:04 GMT',
+192 verbose headers   etag: 'W/"51f9f568-774a"',
+192 verbose headers   'content-encoding': 'gzip',
+192 verbose headers   'cache-control': 'max-age=300',
+192 verbose headers   'content-length': '3289',
+192 verbose headers   'accept-ranges': 'bytes',
+192 verbose headers   date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+192 verbose headers   age: '0',
+192 verbose headers   'x-served-by': 'cache-sin6923-SIN',
+192 verbose headers   'x-cache': 'MISS, MISS from cache3.itb.ac.id',
+192 verbose headers   'x-cache-hits': '0',
+192 verbose headers   'x-timer': 'S1480488706.111856,VS0,VE128',
+192 verbose headers   vary: 'Accept-Encoding',
+192 verbose headers   'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+192 verbose headers   via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+192 verbose headers   connection: 'keep-alive' }
+193 silly get cb [ 200,
+193 silly get   { server: 'nginx/1.10.1',
+193 silly get     'content-type': 'application/json',
+193 silly get     'last-modified': 'Thu, 01 Aug 2013 05:43:04 GMT',
+193 silly get     etag: 'W/"51f9f568-774a"',
+193 silly get     'content-encoding': 'gzip',
+193 silly get     'cache-control': 'max-age=300',
+193 silly get     'content-length': '3289',
+193 silly get     'accept-ranges': 'bytes',
+193 silly get     date: 'Wed, 30 Nov 2016 06:51:46 GMT',
+193 silly get     age: '0',
+193 silly get     'x-served-by': 'cache-sin6923-SIN',
+193 silly get     'x-cache': 'MISS, MISS from cache3.itb.ac.id',
+193 silly get     'x-cache-hits': '0',
+193 silly get     'x-timer': 'S1480488706.111856,VS0,VE128',
+193 silly get     vary: 'Accept-Encoding',
+193 silly get     'x-cache-lookup': 'MISS from cache3.itb.ac.id:8080',
+193 silly get     via: '1.1 varnish, 1.1 cache3.itb.ac.id (squid/3.5.20)',
+193 silly get     connection: 'keep-alive' } ]
+194 verbose get saving simple-cls to /home/soedomoto/.npm/registry.npmjs.org/simple-cls/.cache.json
+195 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+196 silly cache afterAdd xml2js@0.4.17
+197 verbose afterAdd /home/soedomoto/.npm/xml2js/0.4.17/package/package.json not in flight; writing
+198 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+199 silly cache afterAdd nodeunit@0.9.5
+200 verbose afterAdd /home/soedomoto/.npm/nodeunit/0.9.5/package/package.json not in flight; writing
+201 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+202 silly resolveWithNewModule simple-cls@0.0.8 checking installable status
+203 silly cache add args [ 'simple-cls@0.0.8', null ]
+204 verbose cache add spec simple-cls@0.0.8
+205 silly cache add parsed spec Result {
+205 silly cache add   raw: 'simple-cls@0.0.8',
+205 silly cache add   scope: null,
+205 silly cache add   escapedName: 'simple-cls',
+205 silly cache add   name: 'simple-cls',
+205 silly cache add   rawSpec: '0.0.8',
+205 silly cache add   spec: '0.0.8',
+205 silly cache add   type: 'version' }
+206 silly addNamed simple-cls@0.0.8
+207 verbose addNamed "0.0.8" is a plain semver version for simple-cls
+208 silly mapToRegistry name simple-cls
+209 silly mapToRegistry using default registry
+210 silly mapToRegistry registry http://registry.npmjs.org/
+211 silly mapToRegistry data Result {
+211 silly mapToRegistry   raw: 'simple-cls',
+211 silly mapToRegistry   scope: null,
+211 silly mapToRegistry   escapedName: 'simple-cls',
+211 silly mapToRegistry   name: 'simple-cls',
+211 silly mapToRegistry   rawSpec: '',
+211 silly mapToRegistry   spec: 'latest',
+211 silly mapToRegistry   type: 'tag' }
+212 silly mapToRegistry uri http://registry.npmjs.org/simple-cls
+213 verbose addNameVersion registry:http://registry.npmjs.org/simple-cls not in flight; fetching
+214 verbose afterAdd /home/soedomoto/.npm/xml2js/0.4.17/package/package.json written
+215 verbose afterAdd /home/soedomoto/.npm/nodeunit/0.9.5/package/package.json written
+216 verbose get http://registry.npmjs.org/simple-cls not expired, no request
+217 silly mapToRegistry name simple-cls
+218 silly mapToRegistry using default registry
+219 silly mapToRegistry registry http://registry.npmjs.org/
+220 silly mapToRegistry data Result {
+220 silly mapToRegistry   raw: 'simple-cls',
+220 silly mapToRegistry   scope: null,
+220 silly mapToRegistry   escapedName: 'simple-cls',
+220 silly mapToRegistry   name: 'simple-cls',
+220 silly mapToRegistry   rawSpec: '',
+220 silly mapToRegistry   spec: 'latest',
+220 silly mapToRegistry   type: 'tag' }
+221 silly mapToRegistry uri http://registry.npmjs.org/simple-cls
+222 verbose addRemoteTarball http://registry.npmjs.org/simple-cls/-/simple-cls-0.0.8.tgz not in flight; adding
+223 verbose addRemoteTarball [ 'http://registry.npmjs.org/simple-cls/-/simple-cls-0.0.8.tgz',
+223 verbose addRemoteTarball   '138ba1b17d65ae82431e5c23f26a08acde51c11c' ]
+224 info retry fetch attempt 1 at 1:51:49 PM
+225 info attempt registry request try #1 at 1:51:49 PM
+226 http fetch GET http://registry.npmjs.org/simple-cls/-/simple-cls-0.0.8.tgz
+227 http fetch 200 http://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz
+228 silly fetchAndShaCheck shasum 6da5a17668c4b3dd59623bda11cf7fa4c1f60a6f
+229 verbose addTmpTarball /tmp/npm-14654-d5ec4283/registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz not in flight; adding
+230 verbose addTmpTarball already have metadata; skipping unpack for node-uuid@1.4.7
+231 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+232 silly cache afterAdd node-uuid@1.4.7
+233 verbose afterAdd /home/soedomoto/.npm/node-uuid/1.4.7/package/package.json not in flight; writing
+234 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+235 verbose afterAdd /home/soedomoto/.npm/node-uuid/1.4.7/package/package.json written
+236 http fetch 200 http://registry.npmjs.org/simple-cls/-/simple-cls-0.0.8.tgz
+237 silly fetchAndShaCheck shasum 138ba1b17d65ae82431e5c23f26a08acde51c11c
+238 verbose addTmpTarball /tmp/npm-14654-d5ec4283/registry.npmjs.org/simple-cls/-/simple-cls-0.0.8.tgz not in flight; adding
+239 verbose addTmpTarball already have metadata; skipping unpack for simple-cls@0.0.8
+240 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+241 silly cache afterAdd simple-cls@0.0.8
+242 verbose afterAdd /home/soedomoto/.npm/simple-cls/0.0.8/package/package.json not in flight; writing
+243 verbose correctMkdir /home/soedomoto/.npm correctMkdir not in flight; initializing
+244 verbose afterAdd /home/soedomoto/.npm/simple-cls/0.0.8/package/package.json written
+245 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 52.54.177.206:8080
+246 info attempt registry request try #2 at 1:54:06 PM
+247 http request GET http://registry.npmjs.org/d3
+248 info retry will retry, error on last attempt: Error: getaddrinfo EAI_AGAIN cache.itb.ac.id:8080
+249 info attempt registry request try #3 at 1:55:26 PM
+250 http request GET http://registry.npmjs.org/d3
+251 silly fetchPackageMetaData Error: getaddrinfo ENOTFOUND cache.itb.ac.id cache.itb.ac.id:8080
+251 silly fetchPackageMetaData     at errnoException (dns.js:28:10)
+251 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+251 silly fetchPackageMetaData  error for d3@^3.5.5 { Error: getaddrinfo ENOTFOUND cache.itb.ac.id cache.itb.ac.id:8080
+251 silly fetchPackageMetaData     at errnoException (dns.js:28:10)
+251 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+251 silly fetchPackageMetaData   code: 'ENOTFOUND',
+251 silly fetchPackageMetaData   errno: 'ENOTFOUND',
+251 silly fetchPackageMetaData   syscall: 'getaddrinfo',
+251 silly fetchPackageMetaData   hostname: 'cache.itb.ac.id',
+251 silly fetchPackageMetaData   host: 'cache.itb.ac.id',
+251 silly fetchPackageMetaData   port: '8080' }
+252 silly rollbackFailedOptional Starting
+253 silly rollbackFailedOptional Finishing
+254 silly runTopLevelLifecycles Finishing
+255 silly install printInstalled
+256 verbose stack Error: getaddrinfo ENOTFOUND cache.itb.ac.id cache.itb.ac.id:8080
+256 verbose stack     at errnoException (dns.js:28:10)
+256 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+257 verbose cwd /media/soedomoto/DATA/ITB2015/EL5090 - Research Method/Research/Dynamic Enumerator Allocation/Resources/package
+258 error Linux 4.4.0-47-generic
+259 error argv "/usr/bin/nodejs" "/usr/bin/npm" "--proxy" "http://soedomoto:abiummialif@cache.itb.ac.id:8080" "install" "--save"
+260 error node v6.9.1
+261 error npm  v3.10.8
+262 error code ENOTFOUND
+263 error errno ENOTFOUND
+264 error syscall getaddrinfo
+265 error network getaddrinfo ENOTFOUND cache.itb.ac.id cache.itb.ac.id:8080
+266 error network This is most likely not a problem with npm itself
+266 error network and is related to network connectivity.
+266 error network In most cases you are behind a proxy or have bad network settings.
+266 error network
+266 error network If you are behind a proxy, please make sure that the
+266 error network 'proxy' config is set properly.  See: 'npm help config'
+267 verbose exit [ 1, true ]
