@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{java} \PYG{o}{\PYGZhy{}}\PYG{n}{jar} \PYG{n}{framework}\PYG{o}{.}\PYG{n+na}{jar} \PYG{o}{\PYGZhy{}}\PYG{n}{xargs} \PYG{n}{minimal}\PYG{o}{.}\PYG{n+na}{xargs}
+\PYG{n}{Knopflerfish} \PYG{n}{OSGi} \PYG{n}{framework} \PYG{n}{launcher}\PYG{o}{,} \PYG{n}{version} \PYG{o}{\PYGZlt{}}\PYG{n}{unknown}\PYG{o}{\PYGZgt{}}
+\PYG{n}{Copyright} \PYG{l+m+mi}{2003}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2015} \PYG{n}{Knopflerfish}\PYG{o}{.} \PYG{n}{All} \PYG{n}{Rights} \PYG{n}{Reserved}\PYG{o}{.}
+\PYG{n}{See} \PYG{n}{http}\PYG{o}{:}\PYG{c+c1}{//www.knopflerfish.org for more information.}
+
+\PYG{n}{Created} \PYG{n}{Framework}\PYG{o}{:} \PYG{n}{org}\PYG{o}{.}\PYG{n+na}{knopflerfish}\PYG{o}{.}\PYG{n+na}{framework}\PYG{o}{,} \PYG{n}{version}\PYG{o}{=}\PYG{l+m+mf}{7.2.0}\PYG{o}{.}
+\PYG{o}{\PYGZgt{}} \PYG{n}{Framework} \PYG{n}{launched}
+\end{Verbatim}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VRP.iml" filepath="$PROJECT_DIR$/VRP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit.iml" filepath="$PROJECT_DIR$/../../Resources/JSprit/jsprit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-analysis/jsprit-analysis.iml" filepath="$PROJECT_DIR$/../../Resources/JSprit/jsprit-analysis/jsprit-analysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-core/jsprit-core.iml" filepath="$PROJECT_DIR$/../../Resources/JSprit/jsprit-core/jsprit-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-examples/jsprit-examples.iml" filepath="$PROJECT_DIR$/../../Resources/JSprit/jsprit-examples/jsprit-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-instances/jsprit-instances.iml" filepath="$PROJECT_DIR$/../../Resources/JSprit/jsprit-instances/jsprit-instances.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-io/jsprit-io.iml" filepath="$PROJECT_DIR$/../../Resources/JSprit/jsprit-io/jsprit-io.iml" />
+    </modules>
+  </component>
+</project>
