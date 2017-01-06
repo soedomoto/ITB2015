@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: unsrtnat.bst
+A level-1 auxiliary file: sampul.aux
+A level-1 auxiliary file: judul_dalam.aux
+A level-1 auxiliary file: pengesahan.aux
+A level-1 auxiliary file: orisinal.aux
+A level-1 auxiliary file: pengesahan_sidang.aux
+A level-1 auxiliary file: pengantar.aux
+A level-1 auxiliary file: persetujuan_publikasi.aux
+A level-1 auxiliary file: abstrak.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: bab1.aux
+A level-1 auxiliary file: bab2.aux
+A level-1 auxiliary file: bab3.aux
+A level-1 auxiliary file: bab4.aux
+A level-1 auxiliary file: bab5.aux
+A level-1 auxiliary file: kesimpulan.aux
+A level-1 auxiliary file: pustaka.aux
+A level-1 auxiliary file: markLampiran.aux
+A level-1 auxiliary file: lampiran.aux
+Database file #1: ../../Resources/Bib/Reference.bib
+Warning--empty journal in pragarauskas_temporal_2010
+You've used 38 entries,
+            2481 wiz_defined-function locations,
+            828 strings with 14368 characters,
+and the built_in function-call counts, 16913 in all, are:
+= -- 1581
+> -- 754
+< -- 36
++ -- 298
+- -- 220
+* -- 1274
+:= -- 2583
+add.period$ -- 169
+call.type$ -- 38
+change.case$ -- 77
+chr.to.int$ -- 36
+cite$ -- 39
+duplicate$ -- 860
+empty$ -- 1524
+format.name$ -- 278
+if$ -- 3729
+int.to.chr$ -- 3
+int.to.str$ -- 39
+missing$ -- 33
+newline$ -- 241
+num.names$ -- 114
+pop$ -- 314
+preamble$ -- 1
+purify$ -- 38
+quote$ -- 0
+skip$ -- 561
+stack$ -- 0
+substring$ -- 829
+swap$ -- 219
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 263
+warning$ -- 1
+while$ -- 149
+width$ -- 0
+write$ -- 596
+(There was 1 warning)

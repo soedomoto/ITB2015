@@ -1,5 +1,0 @@
--Forg.osgi.bundle.account.jdbc.url=jdbc:h2:tcp://knopflerfish.soedomoto.tk/account
--Forg.osgi.bundle.account.jdbc.username=bps
--Forg.osgi.bundle.account.jdbc.password=bps
--Forg.osgi.bundle.account.host=http://pgfw7.soedomoto.tk
--Forg.osgi.bundle.account.servlet.context=/account

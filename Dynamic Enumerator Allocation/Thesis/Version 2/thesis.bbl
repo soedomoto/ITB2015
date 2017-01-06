@@ -1,0 +1,324 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Kofod-Petersen and Aamodt(2003)]{kofod-petersen_case-based_2003}
+Anders Kofod-Petersen and Agnar Aamodt.
+\newblock Case-based situation assessment in a mobile context-aware system.
+\newblock In \emph{Proceedings of {AIMS}2003, {Workshop} on {Artificial}
+  {Intgelligence} for {Mobil} {Systems}, {Seattle}}. Citeseer, 2003.
+\newblock URL
+  \url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.440.7355&rep=rep1&type=pdf}.
+
+\bibitem[BPS(2016{\natexlab{a}})]{bps_badan_2016}
+BPS BPS.
+\newblock Badan {Pusat} {Statistik} - {Tugas}, {Fungsi}, dan {Kewenangan},
+  2016{\natexlab{a}}.
+\newblock URL
+  \url{https://www.bps.go.id/index.php/masterMenu/view/id/1#masterMenuTab4}.
+
+\bibitem[BPS(2016{\natexlab{b}})]{bps_sistem_2016}
+BPS BPS.
+\newblock Sistem {Rujukan} {Statistik} {BPS} {RI} - {Blok} {Sensus},
+  2016{\natexlab{b}}.
+\newblock URL \url{https://sirusa.bps.go.id/index.php?r=istilah/view&id=43}.
+
+\bibitem[Sudman(1965)]{sudman_time_1965}
+Seymour Sudman.
+\newblock Time {Allocation} in {Survey} {Interviewing} and in {Other} {Field}
+  {Occupations}.
+\newblock \emph{The Public Opinion Quarterly}, 29\penalty0 (4):\penalty0
+  638--648, 1965.
+\newblock ISSN 0033-362X.
+\newblock URL \url{http://www.jstor.org.proxy.lib.odu.edu/stable/2747041}.
+
+\bibitem[Chen et~al.(2000)Chen, Kotz, and {others}]{chen_survey_2000}
+Guanling Chen, David Kotz, and {others}.
+\newblock A survey of context-aware mobile computing research.
+\newblock Technical report, Technical Report TR2000-381, Dept. of Computer
+  Science, Dartmouth College, 2000.
+\newblock URL
+  \url{https://mmlab.snu.ac.kr/courses/2005_advanced_internet/handout/ppt/36%20-%20context_aware.pdf}.
+
+\bibitem[Schilit et~al.(1994)Schilit, Adams, and
+  Want]{schilit_context-aware_1994}
+Bill Schilit, Norman Adams, and Roy Want.
+\newblock Context-aware computing applications.
+\newblock In \emph{Mobile {Computing} {Systems} and {Applications}, 1994.
+  {WMCSA} 1994. {First} {Workshop} on}, pages 85--90. IEEE, 1994.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4624429}.
+
+\bibitem[Schmidt et~al.(1999)Schmidt, Beigl, and Gellersen]{schmidt_there_1999}
+Albrecht Schmidt, Michael Beigl, and Hans-W. Gellersen.
+\newblock There is more to context than location.
+\newblock \emph{Computers \& Graphics}, 23\penalty0 (6):\penalty0 893--901,
+  1999.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S009784939900120X}.
+
+\bibitem[Abowd et~al.(1999)Abowd, Dey, Brown, Davies, Smith, and
+  Steggles]{abowd_towards_1999}
+Gregory~D. Abowd, Anind~K. Dey, Peter~J. Brown, Nigel Davies, Mark Smith, and
+  Pete Steggles.
+\newblock Towards a better understanding of context and context-awareness.
+\newblock In \emph{International {Symposium} on {Handheld} and {Ubiquitous}
+  {Computing}}, pages 304--307. Springer, 1999.
+\newblock URL \url{http://link.springer.com/chapter/10.1007/3-540-48157-5_29}.
+
+\bibitem[Tsai et~al.(2016)Tsai, Wu, Pradhan, Xie, Li, Fu, and
+  Zeng]{tsai_context-aware_2016}
+M.~J. Tsai, C.~L. Wu, S.~K. Pradhan, Y.~Xie, T.~Y. Li, L.~C. Fu, and Y.~C.
+  Zeng.
+\newblock Context-aware activity prediction using human behavior pattern in
+  real smart home environments.
+\newblock In \emph{2016 {IEEE} {International} {Conference} on {Automation}
+  {Science} and {Engineering} ({CASE})}, pages 168--173, August 2016.
+\newblock \doi{10.1109/COASE.2016.7743376}.
+
+\bibitem[Magara et~al.(2016)Magara, Ojo, Ngwira, and Zuva]{magara_mplist:_2016}
+M.~B. Magara, S.~Ojo, S.~Ngwira, and T.~Zuva.
+\newblock {MPlist}: {Context} aware music playlist.
+\newblock In \emph{2016 {IEEE} {International} {Conference} on {Emerging}
+  {Technologies} and {Innovative} {Business} {Practices} for the
+  {Transformation} of {Societies} ({EmergiTech})}, pages 309--316, August 2016.
+\newblock \doi{10.1109/EmergiTech.2016.7737358}.
+
+\bibitem[Said et~al.(2013)Said, Berkovsky, and De~Luca]{said_introduction_2013}
+Alan Said, Shlomo Berkovsky, and Ernesto~W. De~Luca.
+\newblock Introduction to {Special} {Section} on {CAMRa}2010: {Movie}
+  {Recommendation} in {Context}.
+\newblock \emph{ACM Trans. Intell. Syst. Technol.}, 4\penalty0 (1):\penalty0
+  13:1--13:9, February 2013.
+\newblock ISSN 2157-6904.
+\newblock \doi{10.1145/2414425.2414438}.
+\newblock URL \url{http://doi.acm.org/10.1145/2414425.2414438}.
+
+\bibitem[Cao et~al.(2015)Cao, Li, Chen, and Chen]{cao_mobile_2015}
+Paul~Y. Cao, Gang Li, Guoxing Chen, and Biao Chen.
+\newblock Mobile {Data} {Collection} {Frameworks}: {A} {Survey}.
+\newblock In \emph{Proceedings of the 2015 {Workshop} on {Mobile} {Big}
+  {Data}}, Mobidata '15, pages 25--30, New York, NY, USA, 2015. ACM.
+\newblock ISBN 978-1-4503-3524-9.
+\newblock \doi{10.1145/2757384.2757396}.
+\newblock URL \url{http://doi.acm.org/10.1145/2757384.2757396}.
+
+\bibitem[Do and Gatica-Perez(2011)]{do_groupus:_2011}
+Trinh Minh~Tri Do and Daniel Gatica-Perez.
+\newblock Groupus: {Smartphone} proximity data and human interaction type
+  mining.
+\newblock In \emph{2011 15th {Annual} {International} {Symposium} on {Wearable}
+  {Computers}}, pages 21--28. IEEE, 2011.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5959586}.
+
+\bibitem[Dai et~al.(2010{\natexlab{a}})Dai, Teng, Bai, Shen, and
+  Xuan]{dai_mobile_2010}
+Jiangpeng Dai, Jin Teng, Xiaole Bai, Zhaohui Shen, and Dong Xuan.
+\newblock Mobile phone based drunk driving detection.
+\newblock In \emph{2010 4th {International} {Conference} on {Pervasive}
+  {Computing} {Technologies} for {Healthcare}}, pages 1--8. IEEE,
+  2010{\natexlab{a}}.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5482295}.
+
+\bibitem[Zou et~al.(2016)Zou, Gonzales, and Saeedi]{zou_context-aware_2016}
+Xueyang Zou, M.~Gonzales, and S.~Saeedi.
+\newblock A {Context}-aware {Recommendation} {System} using smartphone sensors.
+\newblock In \emph{2016 {IEEE} 7th {Annual} {Information} {Technology},
+  {Electronics} and {Mobile} {Communication} {Conference} ({IEMCON})}, pages
+  1--6, October 2016.
+\newblock \doi{10.1109/IEMCON.2016.7746307}.
+
+\bibitem[Dai et~al.(2010{\natexlab{b}})Dai, Bai, Yang, Shen, and
+  Xuan]{dai_perfalld:_2010}
+Jiangpeng Dai, Xiaole Bai, Zhimin Yang, Zhaohui Shen, and Dong Xuan.
+\newblock {PerFallD}: {A} pervasive fall detection system using mobile phones.
+\newblock In \emph{Pervasive {Computing} and {Communications} {Workshops}
+  ({PERCOM} {Workshops}), 2010 8th {IEEE} {International} {Conference} on},
+  pages 292--297. IEEE, 2010{\natexlab{b}}.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5470652}.
+
+\bibitem[Lu et~al.(2009)Lu, Pan, Lane, Choudhury, and
+  Campbell]{lu_soundsense:_2009}
+Hong Lu, Wei Pan, Nicholas~D. Lane, Tanzeem Choudhury, and Andrew~T. Campbell.
+\newblock {SoundSense}: scalable sound sensing for people-centric applications
+  on mobile phones.
+\newblock In \emph{Proceedings of the 7th international conference on {Mobile}
+  systems, applications, and services}, pages 165--178. ACM, 2009.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=1555834}.
+
+\bibitem[Bao and Roy~Choudhury(2010)]{bao_movi:_2010}
+Xuan Bao and Romit Roy~Choudhury.
+\newblock Movi: mobile phone based video highlights via collaborative sensing.
+\newblock In \emph{Proceedings of the 8th international conference on {Mobile}
+  systems, applications, and services}, pages 357--370. ACM, 2010.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=1814468}.
+
+\bibitem[Rubel et~al.(2005)Rubel, Fayn, Nollo, Assanelli, Li, Restier, Adami,
+  Arod, Atoui, Ohlsson, and {others}]{rubel_toward_2005}
+Paul Rubel, Jocelyne Fayn, Giandomenico Nollo, Deodato Assanelli, Bo~Li, Lioara
+  Restier, Stefano Adami, Sebastien Arod, Hussein Atoui, Mattias Ohlsson, and
+  {others}.
+\newblock Toward personal {eHealth} in cardiology. {Results} from the
+  {EPI}-{MEDICS} telemedicine project.
+\newblock \emph{Journal of electrocardiology}, 38\penalty0 (4):\penalty0
+  100--106, 2005.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0022073605001214}.
+
+\bibitem[Atzmueller and Hilgenberg(2013)]{atzmueller_towards_2013}
+Martin Atzmueller and Katy Hilgenberg.
+\newblock Towards {Capturing} {Social} {Interactions} with {SDCF}: {An}
+  {Extensible} {Framework} for {Mobile} {Sensing} and {Ubiquitous} {Data}
+  {Collection}.
+\newblock In \emph{Proceedings of the 4th {International} {Workshop} on
+  {Modeling} {Social} {Media}}, {MSM} '13, pages 6:1--6:4, New York, NY, USA,
+  2013. ACM.
+\newblock ISBN 978-1-4503-2007-8.
+\newblock \doi{10.1145/2463656.2463662}.
+\newblock URL \url{http://doi.acm.org/10.1145/2463656.2463662}.
+
+\bibitem[Yuan and Li(2016)]{yuan_location_2016}
+Z.~Yuan and H.~Li.
+\newblock Location recommendation algorithm based on temporal and geographical
+  similarity in location-based social networks.
+\newblock In \emph{2016 12th {World} {Congress} on {Intelligent} {Control} and
+  {Automation} ({WCICA})}, pages 1697--1702, June 2016.
+\newblock \doi{10.1109/WCICA.2016.7578804}.
+
+\bibitem[Koren(2010)]{koren_collaborative_2010}
+Yehuda Koren.
+\newblock Collaborative filtering with temporal dynamics.
+\newblock \emph{Communications of the ACM}, 53\penalty0 (4):\penalty0 89--97,
+  2010.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=1721677}.
+
+\bibitem[Pragarauskas and Gross(2010)]{pragarauskas_temporal_2010}
+H.~Pragarauskas and Oliver Gross.
+\newblock Temporal collaborative filtering with bayesian probabilistic tensor
+  factorization.
+\newblock 2010.
+\newblock URL \url{http://epubs.siam.org/doi/abs/10.1137/1.9781611972801.19}.
+
+\bibitem[Biggs et~al.(1976)Biggs, Lloyd, and Wilson]{biggs_graph_1976}
+Norman Biggs, E.~Keith Lloyd, and Robin~J. Wilson.
+\newblock \emph{Graph {Theory}, 1736-1936}.
+\newblock Oxford University Press, 1976.
+\newblock URL
+  \url{https://www.google.com/books?hl=en&lr=&id=XqYTk0sXmpoC&oi=fnd&pg=PR9&dq=Graph+Theory+1736-1936+biggs&ots=BJk_eD4NGR&sig=x1B-VZ38Zw0gfJ-EkJXwfKOL0r4}.
+
+\bibitem[Bektas(2006)]{bektas_multiple_2006}
+Tolga Bektas.
+\newblock The multiple traveling salesman problem: an overview of formulations
+  and solution procedures.
+\newblock \emph{Omega}, 34\penalty0 (3):\penalty0 209--219, June 2006.
+\newblock ISSN 0305-0483.
+\newblock \doi{10.1016/j.omega.2004.10.004}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0305048304001550}.
+
+\bibitem[Gorenstein(1970)]{gorenstein_printing_1970}
+Samuel Gorenstein.
+\newblock Printing press scheduling for multi-edition periodicals.
+\newblock \emph{Management Science}, 16\penalty0 (6):\penalty0 B--373, 1970.
+\newblock URL
+  \url{http://pubsonline.informs.org/doi/abs/10.1287/mnsc.16.6.B373}.
+
+\bibitem[Svestka and Huckfeldt(1973)]{svestka_computational_1973}
+Joseph~A. Svestka and Vaughn~E. Huckfeldt.
+\newblock Computational experience with an m-salesman traveling salesman
+  algorithm.
+\newblock \emph{Management Science}, 19\penalty0 (7):\penalty0 790--799, 1973.
+\newblock URL
+  \url{http://pubsonline.informs.org/doi/abs/10.1287/mnsc.19.7.790}.
+
+\bibitem[Angel et~al.(1972)Angel, Caudle, Noonan, and
+  Whinston]{angel_computer-assisted_1972}
+R.~D. Angel, W.~L. Caudle, R.~Noonan, and ANDA Whinston.
+\newblock Computer-assisted school bus scheduling.
+\newblock \emph{Management Science}, 18\penalty0 (6):\penalty0 B--279, 1972.
+\newblock URL
+  \url{http://pubsonline.informs.org/doi/abs/10.1287/mnsc.18.6.b279}.
+
+\bibitem[Gilbert and Hofstra(1992)]{gilbert_new_1992}
+Kenneth~C. Gilbert and Ruth~B. Hofstra.
+\newblock A new multiperiod multiple traveling salesman problem with heuristic
+  and application to a scheduling problem.
+\newblock \emph{Decision Sciences}, 23\penalty0 (1):\penalty0 250--259, 1992.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com/doi/10.1111/j.1540-5915.1992.tb00387.x/full}.
+
+\bibitem[Brumitt and Stentz(1996)]{brumitt_dynamic_1996}
+Barry~L. Brumitt and Anthony Stentz.
+\newblock Dynamic mission planning for multiple mobile robots.
+\newblock In \emph{Robotics and {Automation}, 1996. {Proceedings}., 1996 {IEEE}
+  {International} {Conference} on}, volume~3, pages 2396--2401. IEEE, 1996.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=506522}.
+
+\bibitem[Tang et~al.(2000)Tang, Liu, Rong, and Yang]{tang_multiple_2000}
+Lixin Tang, Jiyin Liu, Aiying Rong, and Zihou Yang.
+\newblock A multiple traveling salesman problem model for hot rolling
+  scheduling in {Shanghai} {Baoshan} {Iron} \& {Steel} {Complex}.
+\newblock \emph{European Journal of Operational Research}, 124\penalty0
+  (2):\penalty0 267--282, 2000.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S037722179900380X}.
+
+\bibitem[Saleh and Chelouah(2004)]{saleh_design_2004}
+Hussain~Aziz Saleh and Rachid Chelouah.
+\newblock The design of the global navigation satellite system surveying
+  networks using genetic algorithms.
+\newblock \emph{Engineering Applications of Artificial Intelligence},
+  17\penalty0 (1):\penalty0 111--122, 2004.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0952197603001350}.
+
+\bibitem[Glover(1989)]{glover_tabu_1989}
+Fred Glover.
+\newblock Tabu search-part {I}.
+\newblock \emph{ORSA Journal on computing}, 1\penalty0 (3):\penalty0 190--206,
+  1989.
+\newblock URL \url{http://pubsonline.informs.org/doi/abs/10.1287/ijoc.1.3.190}.
+
+\bibitem[Glover(1990)]{glover_tabu_1990}
+Fred Glover.
+\newblock Tabu search—part {II}.
+\newblock \emph{ORSA Journal on computing}, 2\penalty0 (1):\penalty0 4--32,
+  1990.
+\newblock URL \url{http://pubsonline.informs.org/doi/abs/10.1287/ijoc.2.1.4}.
+
+\bibitem[O'Rourke et~al.(1999)O'Rourke, Bailey, Hill, and
+  Carlton]{orourke_dynamic_1999}
+Kevin~P. O'Rourke, T.~Glenn Bailey, Raymond Hill, and William~B. Carlton.
+\newblock Dynamic routing of unmanned aerial vehicles using reactive tabu
+  search.
+\newblock Technical report, DTIC Document, 1999.
+\newblock URL
+  \url{http://oai.dtic.mil/oai/oai?verb=getRecord&metadataPrefix=html&identifier=ADA380543}.
+
+\bibitem[Chen et~al.(2003)Chen, Chen, and Rao]{chen_efficient_2003}
+Xiaoyan Chen, Ying Chen, and Fangyan Rao.
+\newblock An efficient spatial publish/subscribe system for intelligent
+  location-based services.
+\newblock In \emph{Proceedings of the 2nd international workshop on
+  {Distributed} event-based systems}, pages 1--6. ACM, 2003.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=966625}.
+
+\bibitem[Google(2016)]{google_google_2016}
+Google Google.
+\newblock Google {Maps} {Directions} {API}, 2016.
+\newblock URL
+  \url{https://developers.google.com/maps/documentation/directions/}.
+
+\bibitem[jsprit(2014)]{jsprit_jsprit_2014}
+jsprit.
+\newblock jsprit {\textbar} java toolkit for rich {VRPs} and {TSPs}, 2014.
+\newblock URL \url{https://jsprit.github.io/}.
+
+\end{thebibliography}

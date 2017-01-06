@@ -1,0 +1,99 @@
+.spring {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAATjUlEQ…M6A2Zgph/NgjNgRrPdBqZ1BszATD+aBWfAjGa7DUzr/wNxYI/nT2qGnwAAAABJRU5ErkJggg==) no-repeat;
+    background-size: 200%;
+}
+
+.list-page {
+    margin: 0 5px 15px;
+}
+
+.list-page ul {
+    background-color: transparent;
+}
+
+.list-page .item-content {
+    margin: 0;
+    margin-top: 10px;
+    background: #fff;
+    padding: 0;
+    padding-left: 10px;
+    border-bottom: 1px solid #ebe9e9;
+    /*border-width: 0px 1px;*/
+}
+
+.list-page .accordion-item-content {
+    background: #fff;
+}
+
+.list-page .accordion-item-content .row {
+    padding-bottom: 10px;
+}
+
+.list-page .item-media {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    padding: 0;
+}
+
+.list-settings .logout-button, .list-settings .login-button {
+    margin-top: 15px;
+}
+
+/*Spesific Pages*/
+
+.bundle {
+    background-color: #38b57f;
+    background-position: 0 0;
+}
+
+.about {
+    background-color: #5999f3;
+    background-position: -30px 0;
+}
+
+.about-page .content-block {
+    color: #666;
+}
+
+.about-page .logo {
+    width: 90px;
+    height: 90px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAAGXRFW…EPCWjK0i7O9cntyLJgnDbLEkQbecktSJAIJkHW8H8BBgCexKrVRsgSzAAAAABJRU5ErkJggg==) center no-repeat #fff;
+    background-size: 83%;
+    text-indent: -9999px;
+    border-radius: 5px;
+    margin: 0 auto;
+    border: 1px solid #dfdfdf;
+}
+
+.about-page .my-product {
+    text-align: center;
+    margin-top: -20px;
+}
+
+.about-page .my-product .name {
+    font-size: 20px;
+}
+
+.about-page .contact-list {
+    margin: 0 auto;
+    width: 230px;
+}
+
+.about-page .contact-list>p {
+    margin: 8px 0;
+}
+
+.about-page .about-copyright {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 0;
+    font-size: 10px;
+    color: #9c9c9c;
+    width: 100%;
+    padding: 0;
+}

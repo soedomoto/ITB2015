@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="target">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../account/target/account-0.1-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../account/target/account-0.1-SNAPSHOT-dex.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

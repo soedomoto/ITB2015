@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{VehicleRoutingAlgorithm} \PYG{n}{algorithm} \PYG{o}{=} \PYG{n}{Jsprit}\PYG{o}{.}\PYG{n+na}{Builder}\PYG{o}{.}\PYG{n+na}{newInstance}\PYG{o}{(}\PYG{n}{problem}\PYG{o}{)}
+        \PYG{o}{.}\PYG{n+na}{setProperty}\PYG{o}{(}\PYG{n}{Jsprit}\PYG{o}{.}\PYG{n+na}{Parameter}\PYG{o}{.}\PYG{n+na}{THREADS}\PYG{o}{,} \PYG{l+s}{\PYGZdq{}50\PYGZdq{}}\PYG{o}{).}\PYG{n+na}{buildAlgorithm}\PYG{o}{();}
+\PYG{n}{algorithm}\PYG{o}{.}\PYG{n+na}{setMaxIterations}\PYG{o}{(}\PYG{n}{iterations}\PYG{o}{);}
+\end{Verbatim}

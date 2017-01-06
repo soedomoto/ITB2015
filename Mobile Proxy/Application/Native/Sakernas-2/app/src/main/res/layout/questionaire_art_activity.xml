@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.soedomoto.sakernas.activity.QuestionaireARTActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/application_toolbar_art"
+            layout="@layout/application_toolbar" />
+
+        <it.neokree.materialtabs.MaterialTabHost
+            android:id="@+id/tab_questionaire_art"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/application_toolbar_art"
+            style="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+            app:accentColor="@color/colorAccent"
+            app:iconColor="@android:color/white"
+            app:primaryColor="@color/colorPrimary" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tab_questionaire_art_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tab_questionaire_art"
+            android:layout_weight="1" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_save_art"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_save"
+            app:backgroundTint="@color/colorAccent" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

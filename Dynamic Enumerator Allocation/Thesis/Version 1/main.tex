@@ -1,0 +1,136 @@
+\documentclass[12pt,a4paper,oneside]{book}
+\input{title}
+\usepackage{tabularx}
+\usepackage{times}
+\usepackage{array}
+\usepackage{tcolorbox}
+\usepackage{pbox}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{tabu}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{afterpage}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\newcommand{\squeezeup}{\vspace{-7mm}}
+\numberwithin{equation}{chapter} 
+\usepackage{cite}
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\urlstyle{same}
+
+\usepackage[round, authoryear]{natbib}
+
+\usepackage{array, longtable}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{minted}{\begin{tcolorbox}}%
+\AfterEndEnvironment{minted}{\end{tcolorbox}}%
+\AtBeginEnvironment{minted}{\fontsize{10}{10}}
+
+
+
+\title{Alokasi Petugas Pengumpulan Data Lapangan Secara Dinamis Berbasis \textit{Context}}
+\author{Aris Prawisudatama\\23215131}
+\englishtitle[Context-aware Dynamic Enumerator Allocation]
+\englishprodi[Magister Teknik Elektro]
+
+\date{2016}
+
+\begin{document}
+
+\frontmatter
+\makecustomtitle{../../Resources/Images/itb.png}
+\pembimbingsatu{{\footnotesize Dr. I Gusti Bagus Baskara Nugraha}}{197601242010121001}
+%\pembimbingdua{Dr. Pembimbing, S.T., M.T.}{999988771111223333}
+\makecustompengesahan
+
+\begin{abstrak}[indo]
+Abstrak bahasa Indonesia
+
+Kata Kunci: \textit{Pengumpulan, Data, Mobile, Device, Proxy}
+
+\end{abstrak}
+\begin{abstrak}[english]
+English abstract
+  
+Keywords: \textit{Data, Collection, Mobile, Device, Proxy}
+\end{abstrak}
+
+%%%%% Kata-Kata Mutiara %%%%%
+\
+\vspace{5cm}
+
+\begin{center}
+\textbf{Engkau tak dapat meraih ilmu kecuali dengan enam hal yaitu cerdas, selalu ingin tahu, tabah, punya bekal dalam menuntut ilmu, bimbingan dari guru dan dalam waktu yang lama}.
+(Ali bin Abi Thalib)
+\end{center}
+
+%%%%% Persembahan %%%%%
+\
+\vspace{9cm}
+
+\begin{flushright}
+\textbf{\large{$\mathnormal{Untuk \  \ Ibunda, \ \ tercinta \ . \ . \ .}$}}
+\end{flushright}
+
+
+%%%%% Pedoman Penggunaan Tesis %%%%%
+    
+\begin{custompage}{Pedoman Penggunaan Tesis}
+Dengan ini saya menyatakan (dan menjamin) bahwa penulisan tesis ini dilakukan secara mandiri dan disusun tanpa menggunakan bantuan yang tidak dibenarkan, sebagaimana lazimnya pada penyusunan sebuah tesis. Semua kutipan tulisan dan pemikiran orang lain yang digunakan di dalam penyusunan tesis, baik dari sumber yang dipublikasikan ataupun tidak (termasuk dari buku, artikel jurnal, catatan kuliah, tugas mahasiswa lainnya, dan lainnya), telah direferensikan dengan baik dan benar menurut kaidah akademik yang baku dan berlaku. Tesis ini belum pernah diajukan pada pendidikan program pascasarjana di perguruan tinggi lain, dan tindak plagiarisme akan dikenakan sanksi seperti yang tercantum dalam Peraturan Akademik dan Kemahasiswaan ITB.
+
+\begin{flushright}
+Bandung, November 2016\\[2cm]
+Aris Prawisudatama
+\end{flushright} 
+\end{custompage}
+
+%%%%% Kata Pengantar %%%%%
+
+\begin{custompage}{Kata Pengantar}
+ Mea adhuc accusata indoctum eu. At populo meliore eam. Esse eros error ut mea, eos in prodesset liberavisse. Omnes recusabo intellegebat cum te, numquam delectus inciderint ex eam. Ei sed timeam euismod electram, mucius petentium at per, duo graece epicuri facilisis ea. Ad mea putent voluptatibus, vis imperdiet urbanitas ne.
+
+\begin{flushright}
+Bandung, November 2016\\[2cm]
+Aris Prawisudatama
+\end{flushright} 
+\end{custompage}
+
+%%%%% Tesis %%%%%
+    
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents
+\newpage\listoftables\addcontentsline{toc}{chapter}{\listtablename}
+\newpage\listoffigures\addcontentsline{toc}{chapter}{\listfigurename}
+%\begin{custompage}{Daftar Persamaan}
+%   \begin{tabularx}{\linewidth}{p{.2\linewidth} X}
+%        Conference&Something something conference\\
+%    \end{tabularx}
+%\end{custompage}
+
+\mainmatter
+\input{bab1}
+%\input{bab2}
+%\input{bab3}
+\input{bab4}
+
+\backmatter
+\bibliographystyle{unsrtnat}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{../../Resources/Bib/Reference}
+\appendix
+\input{appendix1}
+
+\end{document}

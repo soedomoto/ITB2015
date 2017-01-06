@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.soedomoto</groupId>
+    <artifactId>se2016-bundle</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <!--
+    Execution : clean compile bundle:bundle exec:exec@dx copy:copy@duplicate exec:exec@aapt install:install
+    -->
+
+    <name>SE2016 - Application</name>
+    <description>Provides SE2016 Application Bundle</description>
+
+    <properties>
+        <bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
+        <bundle.namespace>${project.groupId}.bundle.se2016</bundle.namespace>
+        <jetty.version>9.0.7.v20131107</jetty.version>
+        <sqlite-version>3.8.11.2</sqlite-version>
+
+        <!-- Ubuntu system path -->
+        <android.dx>/media/soedomoto/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/dx</android.dx>
+        <android.aapt>/media/soedomoto/DATA/ANDROID-SDK/LINUX/build-tools/23.0.3/aapt</android.aapt>
+        <maven.repo.local>file:///media/soedomoto/DATA/SOFTWARE/MAVEN/repository/</maven.repo.local>
+
+        <!-- Windows system path -->
+        <!--<android.dx>D:\ANDROID-SDK\WINDOWS\build-tools\23.0.3\dx.bat</android.dx>-->
+        <!--<android.aapt>D:\ANDROID-SDK\WINDOWS\build-tools\23.0.3\aapt.exe</android.aapt>-->
+        <!--<maven.repo.local>D:\SOFTWARE\MAVEN\repository</maven.repo.local>-->
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>4.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>4.2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.soedomoto</groupId>
+            <artifactId>sqlite-bundle</artifactId>
+            <version>${sqlite-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.soedomoto</groupId>
+            <artifactId>proxy-server</artifactId>
+            <version>${jetty.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.soedomoto</groupId>
+            <artifactId>account</artifactId>
+            <version>0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+                <configuration>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
+                </configuration>
+                <goals>
+                    <goal>install-file</goal>
+                </goals>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.0.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Real-Host>
+                            http://pgfw7.soedomoto.tk
+                        </Real-Host>
+                        <Context-Path>
+                            /se2016
+                        </Context-Path>
+                        <Jdbc-Url></Jdbc-Url>
+                        <Jdbc-Username>
+                            bps
+                        </Jdbc-Username>
+                        <Jdbc-Password>
+                            bps
+                        </Jdbc-Password>
+                        <Bundle-Activator>
+                            ${bundle.namespace}.Activator
+                        </Bundle-Activator>
+                        <Import-Package>
+                            org.osgi.*,
+                            com.soedomoto.*
+                        </Import-Package>
+                        <DynamicImport-Package>
+                            *
+                        </DynamicImport-Package>
+                        <Export-Package>
+                            ${bundle.namespace}.*;-split-package:=merge-first,
+                            org.apache.commons.*;-split-package:=merge-first,
+                        </Export-Package>
+                        <Provide-Capability>
+
+                        </Provide-Capability>
+                        <Embed-Dependency>
+                            <!--*; scope=compile|runtime; type=!pom; inline=**/*.class|**/*.ico|**/*.dtd|**/*.xml|**/*.properties|**/*.map|**/*.default|**/*.providers,-->
+                        </Embed-Dependency>
+                        <_removeheaders>
+                            Include-Resource,
+                            Private-Package,
+                            Embed-Dependency,
+                            Embed-Transitive
+                        </_removeheaders>
+                        <_noee>true</_noee>
+                    </instructions>
+                    <!-- Skip baselining -->
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <executions>
+                    <execution>
+                        <id>dx</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${android.dx}</executable>
+                            <!-- optional -->
+                            <workingDirectory>${project.build.directory}</workingDirectory>
+                            <arguments>
+                                <argument>--dex</argument>
+                                <argument>--incremental</argument>
+                                <argument>--output</argument>
+                                <argument>classes.dex</argument>
+                                <argument>${project.artifactId}-${project.version}.jar</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>aapt</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${android.aapt}</executable>
+                            <!-- optional -->
+                            <workingDirectory>${project.build.directory}</workingDirectory>
+                            <arguments>
+                                <argument>add</argument>
+                                <argument>${project.artifactId}-${project.version}-dex.jar</argument>
+                                <argument>classes.dex</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>ch.mfrey.maven.plugin</groupId>
+                <artifactId>copy-maven-plugin</artifactId>
+                <version>0.0.2</version>
+                <executions>
+                    <execution>
+                        <id>duplicate</id>
+                        <phase>none</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}</directory>
+                                    <paths>
+                                        <path>
+                                            <from>${project.artifactId}-${project.version}.jar</from>
+                                            <to>${project.artifactId}-${project.version}-dex.jar</to>
+                                        </path>
+                                    </paths>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>internal</id>
+            <name>Local Maven Repo</name>
+            <layout>default</layout>
+            <url>${maven.repo.local}</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>

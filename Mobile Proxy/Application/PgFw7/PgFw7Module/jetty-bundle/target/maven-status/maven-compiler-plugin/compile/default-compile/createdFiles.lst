@@ -1,0 +1,4 @@
+com/soedomoto/bundle/jetty/server/IndexServlet.class
+com/soedomoto/bundle/jetty/server/IJettyHandler.class
+com/soedomoto/bundle/jetty/server/JettyHandler.class
+com/soedomoto/bundle/jetty/server/Activator.class

@@ -1,0 +1,532 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.soedomoto.sakernas.questionaire.QBlockVH">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="0"
+                android:layout_column="0" />
+
+            <TextView
+                android:text="Apakah menyediakan jasa yang hasilnya diutamakan untuk digunakan sendiri selama seminggu yang lalu (seperti membersihkan rumah, mencuci piring, mengasuh anak, dll)?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC2"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="3" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_columnSpan="3"
+                android:id="@+id/b5r46">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="1"
+                    android:text="Ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="2"
+                    android:text="Tidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="2"
+                android:layout_column="0" />
+
+            <TextView
+                android:text="Sebulan yang lalu:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC2"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnSpan="2" />
+
+            <TextView
+                android:text="a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="3"
+                android:layout_column="1" />
+
+            <TextView
+                android:text="Apakah memproduksi barang yang hasilnya diutamakan untuk digunakan sendiri (misalnya petani subsisten, memasak, membuat kandang, membuat meja, kursi, dll)?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC3"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_columnSpan="2" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:id="@+id/b5r47a">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="1"
+                    android:text="Ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="2"
+                    android:text="Tidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="5"
+                android:layout_column="1" />
+
+            <TextView
+                android:text="Apakah sedang magang tanpa memperoleh upah/penghasilan?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC3"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:layout_columnSpan="2" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_row="6"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:id="@+id/b5r47b">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="3"
+                    android:text="Ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="4"
+                    android:text="Tidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="7"
+                android:layout_column="1" />
+
+            <TextView
+                android:text="Apakah melakukan pekerjaan sukarela/relawan?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC3"
+                android:layout_row="7"
+                android:layout_column="2"
+                android:layout_columnSpan="2" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_row="8"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:id="@+id/b5r47c">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="1"
+                    android:text="Ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="2"
+                    android:text="Tidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="9"
+                android:layout_column="1" />
+
+            <TextView
+                android:text="Apakah melakukan kegiatan lainnya (misalnya kerja bakti, ronda, dll)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC3"
+                android:layout_row="9"
+                android:layout_column="2"
+                android:layout_columnSpan="2" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_row="10"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:id="@+id/b5r47d">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="3"
+                    android:text="Ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="4"
+                    android:text="Tidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="11"
+                android:layout_column="0" />
+
+            <TextView
+                android:text="a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="11"
+                android:layout_column="1" />
+
+            <TextView
+                android:text="Apakah bekerja minimal 1 jam kumulatif dalam seminggu yang lalu?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC3"
+                android:layout_row="11"
+                android:layout_column="2"
+                android:layout_columnSpan="2" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_row="12"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:id="@+id/b5r48a">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="1"
+                    android:text="Ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="2"
+                    android:text="Tidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="13"
+                android:layout_column="1" />
+
+            <TextView
+                android:text="Apakah biasanya bekerja minimal 1 jam kumulatif dalam seminggu?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC3"
+                android:layout_row="13"
+                android:layout_column="2"
+                android:layout_columnSpan="2" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_row="14"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:id="@+id/b5r48b">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="1"
+                    android:text="Ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="2"
+                    android:text="Tidak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="15"
+                android:layout_column="0" />
+
+            <TextView
+                android:text="Dari seluruh kegiatan pada R.5.a.1, R.6, R.46, R.47, dan R.48 yang menyatakan 'Ya', kegiatan manakah yang merupakan kegiatan utama?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC2"
+                android:layout_row="15"
+                android:layout_column="1"
+                android:layout_columnSpan="3" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_row="16"
+                android:layout_column="1"
+                android:layout_columnSpan="3"
+                android:id="@+id/b5r49">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="a"
+                    android:text="Bekerja (R.5.a.1/R.6/R.48.a/R.48.b)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="b"
+                    android:text="Menyediakan jasa yang hasilnya diutamakan untuk digunakan sendiri (seperti membersihkan rumah, mencuci piring, mengasuh anak, dll) (R.46)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="c"
+                    android:text="Memproduksi barang yang hasilnya diutamakan untuk digunakan sendiri (misalnya petani subsisten, memasak, membuat kandang, membuat meja, kursi, dll) (R.47.a)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="d"
+                    android:text="Magang tanpa memperoleh upah/penghasilan (R.47.b)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="e"
+                    android:text="Melakukan pekerjaan sukarela/relawan (R.47.c)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="f"
+                    android:text="Lainnya (misalnya kerja bakti, ronda, dll) (R.47.d)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <TextView
+                android:text="50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="17"
+                android:layout_column="0" />
+
+            <TextView
+                android:text="Apakah lapangan usaha/bidang pekerjaan dari tempat bekerja selama seminggu yang lalu?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC2"
+                android:layout_row="17"
+                android:layout_column="1"
+                android:layout_columnSpan="3" />
+
+            <com.soedomoto.sakernas.widget.QEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="18"
+                android:layout_column="1"
+                android:layout_columnSpan="3"
+                android:id="@+id/b5r50" />
+
+            <TextView
+                android:text="51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="19"
+                android:layout_column="0" />
+
+            <TextView
+                android:text="Apakah jenis pekerjaan/jabatan dari pekerjaan selama seminggu yang lalu?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC2"
+                android:layout_row="19"
+                android:layout_column="1"
+                android:layout_columnSpan="3" />
+
+            <com.soedomoto.sakernas.widget.QEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="20"
+                android:layout_column="1"
+                android:layout_columnSpan="3"
+                android:id="@+id/b5r51" />
+
+            <TextView
+                android:text="52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireNumber"
+                android:layout_row="21"
+                android:layout_column="0" />
+
+            <TextView
+                android:text="Apakah status/kedudukan dalam pekerjaan selama seminggu yang lalu?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/QuestionaireQuestionC2"
+                android:layout_row="21"
+                android:layout_column="1"
+                android:layout_columnSpan="3" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_row="22"
+                android:layout_column="1"
+                android:layout_columnSpan="3"
+                android:id="@+id/b5r52">
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="1"
+                    android:text="Berusaha sendiri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="2"
+                    android:text="Berusaha dibantu buruh tidak tetap/pekerja keluarga/tidak dibayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="3"
+                    android:text="Berusaha dibantu buruh tetap/dibayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="4"
+                    android:text="Buruh/karyawan/pegawai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="5"
+                    android:text="Pekerja bebas di pertanian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="6"
+                    android:text="Pekerja bebas di nonpertanian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.soedomoto.sakernas.widget.QRadioButton
+                    app:qRadioButton_value="7"
+                    android:text="Pekerja keluarga/tidak dibayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+        </GridLayout>
+    </ScrollView>
+</FrameLayout>
