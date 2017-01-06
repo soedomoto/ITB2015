@@ -1,0 +1,1270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a90523dd-b616-4b41-9bf2-427671656d33" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/C101_solomon.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/R101.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfigWithSchrimpfAcceptance.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_considerFixedCosts.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_considerFixedCosts_routeLevel.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_fix.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_fix_schrimpf.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_greedyWithRegret.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_noVehicleSwitch.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_open.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/algorithmConfig_solomon.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/bicycle_messenger_demand.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/bicycle_messenger_supply.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/cn_14mix.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/cordeau01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/cordeau_p01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/cordeau_p08.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/deliveries_solomon_c101.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/deliveries_solomon_open_c101.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/deliveries_solomon_specifiedVehicleEndLocations_c101.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/fastAlgo.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/p01" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/p08" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/p08.res" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/p11" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pd_christophides_vrpnc1_vcap50.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_and_deliveries_solomon_c101.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_and_deliveries_solomon_c101_withoutTWs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_and_deliveries_solomon_c101_withoutTWs_and_specifiedVehicleEndLocations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_and_deliveries_solomon_r101.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_and_deliveries_solomon_r101_open.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_and_deliveries_solomon_r101_withoutTWs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_and_deliveries_solomon_r101_withoutTWs_open.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/pickups_solomon_c101.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/refuseCollectionExample_Distances" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/refuseCollectionExample_Quantities" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/vrp_cordeau_01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/vrp_cordeau_08.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/vrpnc1-jsprit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/input/vrpnc1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/WHATS_NEW.md" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/WHATS_NEW.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Heterogeneous-Fleet.md" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Heterogeneous-Fleet.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Read-classical-VRP-instance---with-time-windows.md" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Read-classical-VRP-instance---with-time-windows.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Simple-Example.md" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Simple-Example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Walkthrough---Algorithm.md" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/docs/Walkthrough---Algorithm.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-core/src/test/resources/com/graphhopper/jsprit/core/algorithm/refuseCollectionExample_Distances" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-core/src/test/resources/com/graphhopper/jsprit/core/algorithm/refuseCollectionExample_Distances" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_considerFixedCosts.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_considerFixedCosts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_considerFixedCosts_routeLevel.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_considerFixedCosts_routeLevel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_fix.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_fix.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_fix_schrimpf.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/algorithmConfig_fix_schrimpf.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cn_14mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cn_14mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cordeau01.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cordeau01.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cordeau_p01.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cordeau_p01.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cordeau_p08.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/cordeau_p08.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/deliveries_solomon_c101.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/deliveries_solomon_c101.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/deliveries_solomon_open_c101.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/deliveries_solomon_open_c101.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/deliveries_solomon_specifiedVehicleEndLocations_c101.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/deliveries_solomon_specifiedVehicleEndLocations_c101.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pd_christophides_vrpnc1_vcap50.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pd_christophides_vrpnc1_vcap50.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_c101.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_c101.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_c101_withoutTWs.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_c101_withoutTWs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_c101_withoutTWs_and_specifiedVehicleEndLocations.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_c101_withoutTWs_and_specifiedVehicleEndLocations.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101_open.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101_open.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101_withoutTWs.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101_withoutTWs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101_withoutTWs_open.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_and_deliveries_solomon_r101_withoutTWs_open.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_solomon_c101.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/pickups_solomon_c101.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/refuseCollectionExample_Distances" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/refuseCollectionExample_Distances" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/vrpnc1-jsprit.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/input/vrpnc1-jsprit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/src/main/java/com/graphhopper/jsprit/examples/CostMatrixExample.java" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/src/main/java/com/graphhopper/jsprit/examples/CostMatrixExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_13mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_13mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_14mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_14mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_15mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_15mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_17mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_17mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_18mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_18mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_19mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_19mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_20mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/instances/vrph/cn_20mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/src/test/resources/cn_13mix.txt" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/src/test/resources/cn_13mix.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/main/resources/algorithm_schema.xsd" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/main/resources/algorithm_schema.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/main/resources/vrp_xml_schema.xsd" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/main/resources/vrp_xml_schema.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/algorithm/finiteVrp.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/algorithm/finiteVrp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/biggerProblem.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/biggerProblem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/finiteVrpForReaderTest.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/finiteVrpForReaderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/finiteVrpWithInitialSolutionForReaderTest.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/finiteVrpWithInitialSolutionForReaderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/finiteVrpWithShipmentsAndSolution.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/finiteVrpWithShipmentsAndSolution.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/lui-shen-solution.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/lui-shen-solution.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_inclShipments_iniRoutes.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_inclShipments_iniRoutes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_iniRoutes.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_iniRoutes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_iniRoutes_2.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_iniRoutes_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_iniRoutes_3.xml" afterPath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/src/test/resources/com/graphhopper/jsprit/io/problem/simpleProblem_iniRoutes_3.xml" />
+    </list>
+    <ignored path="VRP - No Time Window.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/JSprit/jsprit-analysis/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/JSprit/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/JSprit/jsprit-core/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/JSprit/jsprit-io/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/JSprit/jsprit-instances/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/JSprit/jsprit-examples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/graphhopper/web/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/graphhopper/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/graphhopper/core/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/graphhopper/reader-json/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/graphhopper/tools/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/graphhopper/android/app/target/" />
+    <ignored path="$PROJECT_DIR$/../../Resources/graphhopper/reader-osm/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-xstream/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-test/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jackson/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-webexamples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jpa/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-examples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-common/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-core/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-benchmark/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jaxb/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/optaplanner-persistence-xstream/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/optaplanner-persistence-common/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-benchmark/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/optaplanner-persistence-jpa/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-webexamples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-examples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-core/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-webexamples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-xstream/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-benchmark/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-common/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-jpa/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/target/" />
+    <ignored path="$PROJECT_DIR$/optaplanner/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/JSprit/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-analysis/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/target/" />
+    <ignored path="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-core/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="VRP - No Time Window" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../Libraries/JSprit" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/output/enumerator_1302040004.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302050005.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302070003.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302070010.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302080006.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302090012.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302090020.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302100009.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302100016.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302110003.log" />
+        <option value="$PROJECT_DIR$/output/enumerator_1302110012.log" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/MTSPNoTimeWindows.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/MTSPWithTimeWindows.java" />
+        <option value="$PROJECT_DIR$/output/mtsp_dynamic_time_windows.csv" />
+        <option value="$PROJECT_DIR$/output/mtsp_with_time_windows.csv" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/dyntw/Enumerator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/tw/MTSPWithTimeWindows.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/dyntw/MTSP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/dyntw/InterLocationWeight.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/dyntw/Broker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soedomoto/mtsp/notw/MTSPNoTimeWindows.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-webexamples/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../../../SOFTWARE/MAVEN/repository/org/kie/kie-parent/7.0.0-SNAPSHOT/kie-parent-7.0.0-SNAPSHOT.pom" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/pom.xml" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/resources/vehicleRoutingSolverConfig.xml" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/solver/LatitudeCustomerDifficultyComparator.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/Customer.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/Standstill.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/Depot.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/Vehicle.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/VehicleRoutingSolution.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/location/DistanceType.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/location/Location.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/solver/DepotAngleCustomerDifficultyWeightFactory.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/solver/DepotDistanceCustomerDifficultyWeightFactory.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/timewindowed/TimeWindowedCustomer.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/timewindowed/TimeWindowedDepot.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/timewindowed/TimeWindowedVehicleRoutingSolution.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/timewindowed/solver/ArrivalTimeUpdatingVariableListener.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/solver/nearby/CustomerNearbyDistanceMeter.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/location/segmented/HubSegmentLocation.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/location/segmented/RoadSegmentLocation.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/persistence/VehicleRoutingImporter.java" />
+        <option value="$PROJECT_DIR$/optaplanner/pom.xml" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/resources/solver-config.xml" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/resources/score-rules.drl" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/config/solver/SolverConfig.java" />
+        <option value="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/SolverManager.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/resources/org/optaplanner/examples/vehiclerouting/solver/vehicleRoutingSolverConfig.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../SOFTWARE/MAVEN/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../../../../SOFTWARE/MAVEN/repository/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="30" />
+    <option name="width" value="1366" />
+    <option name="height" value="738" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Since15</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VRP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Libraries/JSprit" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="vehicleRoutingSolverConfig.xml&#9;FILE&#9;file:///media/soedomoto/DATA/ITB2015/EL5090 - Research Method/Research/Dynamic Enumerator Allocation/Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/resources/org/optaplanner/examples/vehiclerouting/solver/vehicleRoutingSolverConfig.xml&#10;EuclideanDistanceCalculator&#9;PSI&#9;JAVA://com.graphhopper.jsprit.core.util.EuclideanDistanceCalculator" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/output" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.soedomoto.optaplanner.domain" />
+      <recent name="com.soedomoto.mtsp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/optaplanner/src/main/resources" />
+      <recent name="$PROJECT_DIR$/data/vehiclerouting/unsolved" />
+      <recent name="$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.VehicleRoutingApp">
+    <configuration default="false" name="MTSPNoTimeWindows" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.soedomoto.mtsp.notw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.soedomoto.mtsp.notw.MTSPNoTimeWindows" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="VRP" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="VehicleRoutingRestServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.optaplanner.webexamples.vehiclerouting.rest.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="optaplanner-webexamples" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.optaplanner.webexamples.vehiclerouting.rest.service" />
+      <option name="MAIN_CLASS_NAME" value="org.optaplanner.webexamples.vehiclerouting.rest.service.VehicleRoutingRestServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SolverManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.soedomoto.optaplanner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.soedomoto.optaplanner.SolverManager" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="soedomoto-optaplanner" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="VehicleRoutingApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.optaplanner.examples.vehiclerouting.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.optaplanner.examples.vehiclerouting.app.VehicleRoutingApp" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="optaplanner-6.5.0.Final-examples" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TspApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.optaplanner.examples.tsp.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.optaplanner.examples.tsp.app.TspApp" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="optaplanner-6.5.0.Final-examples" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="VRP - No Time Window" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.MTSPNoTimeWindows" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.VehicleRoutingRestServiceTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SolverManager" />
+      <item index="3" class="java.lang.String" itemvalue="Application.VehicleRoutingApp" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TspApp" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.VehicleRoutingApp" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SolverManager" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TspApp" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.VehicleRoutingRestServiceTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.MTSPNoTimeWindows" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a90523dd-b616-4b41-9bf2-427671656d33" name="Default" comment="" />
+      <created>1481123511243</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1481123511243</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="30" width="1366" height="738" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32524273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22121212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967638" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.drl" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-analysis/src/main/java/com/graphhopper/jsprit/analysis/toolbox/Plotter.java</url>
+          <line>293</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/impl/heuristic/selector/common/nearby/NearbyDistanceMeter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/solver/nearby/CustomerNearbyDistanceMeter.java" />
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/location/segmented/RoadSegmentLocation.java" />
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/location/segmented/HubSegmentLocation.java" />
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/Customer.java" />
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/persistence/VehicleRoutingImporter.java" />
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/config/SolverConfigContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/AbstractPersistable.java" />
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/domain/VehicleRoutingSolution.java" />
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/resources/solver-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/resources/score-rules.drl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/api/score/buildin/hardsoftlong/HardSoftLongScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="169" column="18" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
+          <folding>
+            <element signature="e#6488#6489#0" expanded="false" />
+            <element signature="e#6564#6565#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-webexamples/src/main/java/org/optaplanner/webexamples/vehiclerouting/rest/domain/JsonVehicleRoutingSolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-webexamples/src/main/java/org/optaplanner/webexamples/vehiclerouting/rest/cdi/VehicleRoutingSolverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/api/solver/Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="1189" column="11" selection-start-line="1189" selection-start-column="11" selection-end-line="1189" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/api/solver/SolverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/impl/solver/AbstractSolverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/impl/solver/XStreamXmlSolverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="40" column="86" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/impl/phase/Phase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/config/solver/SolverConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="302" column="26" selection-start-line="302" selection-start-column="26" selection-end-line="302" selection-end-column="26" />
+          <folding>
+            <element signature="e#7955#7966#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/impl/solver/DefaultSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="211" column="36" selection-start-line="211" selection-start-column="36" selection-end-line="211" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/resources/belgium-road-time-n50-k10.vrp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/vehiclerouting/unsolved/cvrptw-400customers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30180">
+          <caret line="2012" column="8" selection-start-line="2012" selection-start-column="3" selection-end-line="2012" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/src/main/java/org/optaplanner/core/config/solver/termination/TerminationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-webexamples/src/main/java/org/optaplanner/webexamples/vehiclerouting/rest/service/DefaultVehicleRoutingRestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="73" column="70" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/common/app/LoggingMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/common/persistence/SolutionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-xstream/src/main/java/org/optaplanner/persistence/xstream/impl/domain/solution/XStreamSolutionFileIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tsp/unsolved/lu980.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tsp/unsolved/europe40.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/common/business/SolutionBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2202">
+          <caret line="319" column="12" selection-start-line="319" selection-start-column="12" selection-end-line="319" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/common/persistence/AbstractTxtSolutionImporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/persistence/VehicleRoutingImporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#3060#3061#0" expanded="false" />
+            <element signature="e#3106#3107#0" expanded="false" />
+            <element signature="e#3196#3197#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/common/persistence/AbstractSolutionImporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/solver/score/VehicleRoutingEasyScoreCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/solver/score/VehicleRoutingIncrementalScoreCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2306">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/swingui/VehicleRoutingPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="139" column="66" selection-start-line="139" selection-start-column="66" selection-end-line="139" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/swingui/VehicleRoutingWorldPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/domain/VehicleRoutingSolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-780">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/app/VehicleRoutingBenchmarkApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/data/vehiclerouting/import/belgium/basic/road-time/belgium-road-time-n50-k10.vrp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/solver/solution/initializer/BuoyVehicleRoutingSolutionInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-596">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/common/app/CommonApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+          <folding>
+            <element signature="e#2730#2731#0" expanded="true" />
+            <element signature="e#2762#2763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/optaplanner/src/main/java/com/soedomoto/optaplanner/SolverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/java/org/optaplanner/examples/vehiclerouting/app/VehicleRoutingApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/resources/org/optaplanner/examples/vehiclerouting/solver/vehicleRoutingSolverConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/src/main/resources/org/optaplanner/examples/vehiclerouting/solver/vehicleRoutingScoreRules.drl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/optaplanner/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>jsprit-io</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.code.gson:gson:2.8.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

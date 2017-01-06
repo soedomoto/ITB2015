@@ -1,40 +1,4 @@
-Dec 18, 2016 2:06:55 PM com.soedomoto.mtsp.dyntw.Enumerator run
+Dec 27, 2016 9:55:44 AM com.soedomoto.mtsp.dyntw.Enumerator run
 INFO: 1302011008 Start collecting data at 101.1214,-2.3905
-Dec 18, 2016 2:07:19 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.1214,-2.3905 for 23892.0
-Dec 18, 2016 2:12:39 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.1005,-2.3819
-Dec 18, 2016 2:13:03 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.1005,-2.3819 for 23985.0
-Dec 18, 2016 2:17:19 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.101,-2.4171
-Dec 18, 2016 2:17:43 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.101,-2.4171 for 23967.0
-Dec 18, 2016 2:22:35 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.049,-2.3884
-Dec 18, 2016 2:22:59 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.049,-2.3884 for 24138.0
-Dec 18, 2016 2:25:48 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.0427,-2.3798
-Dec 18, 2016 2:26:12 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.0427,-2.3798 for 23820.0
-Dec 18, 2016 2:27:32 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.0546,-2.3985
-Dec 18, 2016 2:27:56 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.0546,-2.3985 for 23790.0
-Dec 18, 2016 2:29:29 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.0546,-2.3936
-Dec 18, 2016 2:29:53 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.0546,-2.3936 for 23894.0
-Dec 18, 2016 2:30:43 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.1404,-2.3593
-Dec 18, 2016 2:31:07 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.1404,-2.3593 for 23954.0
-Dec 18, 2016 2:31:51 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.0285,-2.4233
-Dec 18, 2016 2:32:15 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.0285,-2.4233 for 24105.0
-Dec 18, 2016 2:33:07 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Start collecting data at 101.1434,-2.3504
-Dec 18, 2016 2:33:31 PM com.soedomoto.mtsp.dyntw.Enumerator run
-INFO: 1302011008 Finish collecting data at 101.1434,-2.3504 for 23911.0
+Dec 27, 2016 9:56:08 AM com.soedomoto.mtsp.dyntw.Enumerator run
+INFO: 1302011008 Finish collecting data at 101.1214,-2.3905 for 23742.0

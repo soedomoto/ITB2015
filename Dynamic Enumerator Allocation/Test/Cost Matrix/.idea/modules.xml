@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Cost Matrix.iml" filepath="$PROJECT_DIR$/.idea/Cost Matrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/tsp-solver/.idea/tsp-solver.iml" filepath="$PROJECT_DIR$/../../Libraries/tsp-solver/.idea/tsp-solver.iml" />
     </modules>
   </component>
 </project>

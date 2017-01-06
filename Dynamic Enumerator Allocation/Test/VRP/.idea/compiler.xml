@@ -22,24 +22,48 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="jsprit" />
         <module name="jsprit-analysis" />
         <module name="jsprit-core" />
         <module name="jsprit-examples" />
         <module name="jsprit-instances" />
         <module name="jsprit-io" />
-        <module name="VRP" />
-        <module name="VRP - No Time Window" />
+        <module name="map-reduce" />
+        <module name="optaplanner" />
+        <module name="optaplanner-benchmark" />
+        <module name="optaplanner-core" />
+        <module name="optaplanner-docs" />
+        <module name="optaplanner-examples" />
+        <module name="optaplanner-persistence-common" />
+        <module name="optaplanner-persistence-jpa" />
+        <module name="optaplanner-persistence-xstream" />
+        <module name="optaplanner-webexamples" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="jsprit" target="1.7" />
+    <bytecodeTargetLevel>
+      <module name="jsprit" target="1.5" />
+      <module name="jsprit (1) (com.graphhopper)" target="1.5" />
+      <module name="jsprit (com.graphhopper)" target="1.7" />
       <module name="jsprit-analysis" target="1.7" />
       <module name="jsprit-core" target="1.7" />
       <module name="jsprit-examples" target="1.7" />
       <module name="jsprit-instances" target="1.7" />
       <module name="jsprit-io" target="1.7" />
-      <module name="VRP" target="1.8" />
-      <module name="VRP - No Time Window" target="1.8" />
+      <module name="map-reduce" target="1.5" />
+      <module name="optaplanner" target="1.5" />
+      <module name="optaplanner (1) (org.optaplanner)" target="1.6" />
+      <module name="optaplanner (org.optaplanner)" target="1.6" />
+      <module name="optaplanner-benchmark" target="1.6" />
+      <module name="optaplanner-core" target="1.6" />
+      <module name="optaplanner-distribution" target="1.6" />
+      <module name="optaplanner-docs" target="1.6" />
+      <module name="optaplanner-examples" target="1.6" />
+      <module name="optaplanner-persistence" target="1.6" />
+      <module name="optaplanner-persistence-common" target="1.6" />
+      <module name="optaplanner-persistence-jpa" target="1.6" />
+      <module name="optaplanner-persistence-xstream" target="1.6" />
+      <module name="optaplanner-webexamples" target="1.6" />
+      <module name="vrp" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

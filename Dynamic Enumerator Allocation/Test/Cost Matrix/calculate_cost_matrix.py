@@ -66,7 +66,7 @@ coords = {}
 for id, lat, lon in list(csv.reader(input_file, encoding='utf-8'))[1:]:
     coords[id] = (lat, lon, )
 
-bi_locs = itertools.combinations(coords.keys(), 2)
+bi_locs = itertools.permutations(coords.keys(), 2)
 bi_locs = list(bi_locs)
 for idx, (loc_a, loc_b) in enumerate(bi_locs):
     lat_a, lon_a = coords[loc_a]

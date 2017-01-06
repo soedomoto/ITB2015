@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VRP.iml" filepath="$PROJECT_DIR$/VRP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit.iml" filepath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit.iml" group="jsprit and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-analysis/jsprit-analysis.iml" filepath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-analysis/jsprit-analysis.iml" group="jsprit and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-core/jsprit-core.iml" filepath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-core/jsprit-core.iml" group="jsprit and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/jsprit-examples.iml" filepath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples/jsprit-examples.iml" group="jsprit and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/jsprit-instances.iml" filepath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances/jsprit-instances.iml" group="jsprit and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/jsprit-io.iml" filepath="$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io/jsprit-io.iml" group="jsprit and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-6.5.0.Final.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-6.5.0.Final.iml" group="optaplanner-6.5.0.Final and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-benchmark/optaplanner-6.5.0.Final-benchmark.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-benchmark/optaplanner-6.5.0.Final-benchmark.iml" group="optaplanner-6.5.0.Final and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/optaplanner-6.5.0.Final-core.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core/optaplanner-6.5.0.Final-core.iml" group="optaplanner-6.5.0.Final and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/optaplanner-6.5.0.Final-examples.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples/optaplanner-6.5.0.Final-examples.iml" group="optaplanner-6.5.0.Final and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-6.5.0.Final-persistence.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-6.5.0.Final-persistence.iml" group="optaplanner-6.5.0.Final and modules/optaplanner-6.5.0.Final-persistence and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-common/optaplanner-6.5.0.Final-persistence-common.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-common/optaplanner-6.5.0.Final-persistence-common.iml" group="optaplanner-6.5.0.Final and modules/optaplanner-6.5.0.Final-persistence and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-jpa/optaplanner-6.5.0.Final-persistence-jpa.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-jpa/optaplanner-6.5.0.Final-persistence-jpa.iml" group="optaplanner-6.5.0.Final and modules/optaplanner-6.5.0.Final-persistence and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-xstream/optaplanner-6.5.0.Final-persistence-xstream.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-xstream/optaplanner-6.5.0.Final-persistence-xstream.iml" group="optaplanner-6.5.0.Final and modules/optaplanner-6.5.0.Final-persistence and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-webexamples/optaplanner-6.5.0.Final-webexamples.iml" filepath="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-webexamples/optaplanner-6.5.0.Final-webexamples.iml" group="optaplanner-6.5.0.Final and modules" />
+      <module fileurl="file://$PROJECT_DIR$/optaplanner/soedomoto-optaplanner.iml" filepath="$PROJECT_DIR$/optaplanner/soedomoto-optaplanner.iml" />
+    </modules>
+  </component>
+</project>

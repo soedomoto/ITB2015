@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="android" url="file://$PROJECT_DIR$/../../Resources/graphhopper/android/app" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Resources/JSprit/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Resources/graphhopper/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/pom.xml" />
+        <option value="$PROJECT_DIR$/optaplanner/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/JSprit/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-benchmark/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-core/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-examples/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/optaplanner-persistence-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/optaplanner-persistence-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/optaplanner-persistence-xstream/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-persistence/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/optaplanner-webexamples/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner-6.5.Final/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-benchmark/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-core/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-examples/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jackson/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jaxb/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-xstream/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-test/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-webexamples/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/optaplanner/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

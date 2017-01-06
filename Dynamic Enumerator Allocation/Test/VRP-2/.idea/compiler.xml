@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jsprit-analysis" />
+        <module name="jsprit-core" />
+        <module name="jsprit-examples" />
+        <module name="jsprit-instances" />
+        <module name="jsprit-io" />
+        <module name="optaplanner-6.5.0.Final-benchmark" />
+        <module name="optaplanner-6.5.0.Final-core" />
+        <module name="optaplanner-6.5.0.Final-examples" />
+        <module name="optaplanner-6.5.0.Final-persistence-common" />
+        <module name="optaplanner-6.5.0.Final-persistence-jpa" />
+        <module name="optaplanner-6.5.0.Final-persistence-xstream" />
+        <module name="optaplanner-6.5.0.Final-webexamples" />
+        <module name="optaplanner-benchmark (1)" />
+        <module name="optaplanner-benchmark (2)" />
+        <module name="optaplanner-core (1)" />
+        <module name="optaplanner-core (2)" />
+        <module name="optaplanner-examples (1)" />
+        <module name="optaplanner-examples (2)" />
+        <module name="optaplanner-persistence-common (1)" />
+        <module name="optaplanner-persistence-common (2)" />
+        <module name="optaplanner-persistence-jpa (1)" />
+        <module name="optaplanner-persistence-jpa (2)" />
+        <module name="optaplanner-persistence-xstream (1)" />
+        <module name="optaplanner-persistence-xstream (2)" />
+        <module name="optaplanner-webexamples (1)" />
+        <module name="optaplanner-webexamples (2)" />
+        <module name="soedomoto-optaplanner" />
+        <module name="VRP" />
+        <module name="VRP - No Time Window" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="jsprit" target="1.7" />
+      <module name="jsprit-analysis" target="1.7" />
+      <module name="jsprit-core" target="1.7" />
+      <module name="jsprit-examples" target="1.7" />
+      <module name="jsprit-instances" target="1.7" />
+      <module name="jsprit-io" target="1.7" />
+      <module name="optaplanner-6.5.0.Final" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-benchmark" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-core" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-examples" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-persistence" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-persistence-common" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-persistence-jpa" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-persistence-xstream" target="1.6" />
+      <module name="optaplanner-6.5.0.Final-webexamples" target="1.6" />
+      <module name="soedomoto-optaplanner" target="1.5" />
+      <module name="VRP" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

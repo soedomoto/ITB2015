@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../../Libraries/JSprit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-analysis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-instances" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/JSprit/jsprit-io" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-benchmark" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-jpa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-persistence/optaplanner-persistence-xstream" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner-6.5.0.Final/optaplanner-webexamples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-benchmark" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jackson" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jaxb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-jpa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-persistence/optaplanner-persistence-xstream" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Libraries/optaplanner/optaplanner-webexamples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/JSprit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-analysis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-instances" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/JSprit/jsprit-io" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/graphhopper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/graphhopper/android/app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/graphhopper/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/graphhopper/reader-json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/graphhopper/reader-osm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/graphhopper/tools" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Resources/graphhopper/web" charset="UTF-8" />
+  </component>
+</project>
