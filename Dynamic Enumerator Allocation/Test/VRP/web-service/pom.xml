@@ -43,17 +43,6 @@
             <version>2.25</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-grizzly2-http</artifactId>
-            <version>2.25</version>
-        </dependency>
-        <dependency>
-            <groupId>io.undertow</groupId>
-            <artifactId>undertow-servlet</artifactId>
-            <version>1.4.7.Final</version>
-        </dependency>
-
         <!--Optaplanner-->
         <dependency>
             <groupId>org.optaplanner</groupId>
@@ -66,6 +55,18 @@
             <version>6.5.0.Final</version>
         </dependency>
 
+        <!--JSprit-->
+        <dependency>
+            <groupId>com.graphhopper</groupId>
+            <artifactId>jsprit-core</artifactId>
+            <version>1.7-RC1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.graphhopper</groupId>
+            <artifactId>jsprit-analysis</artifactId>
+            <version>1.7-RC1</version>
+        </dependency>
+
         <!--Persistence-->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -76,6 +77,18 @@
             <groupId>com.j256.ormlite</groupId>
             <artifactId>ormlite-jdbc</artifactId>
             <version>5.0</version>
+        </dependency>
+
+        <!--Logger-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.0.1</version>
         </dependency>
 
         <!--Misc-->

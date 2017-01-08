@@ -5,17 +5,16 @@ import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
+import com.soedomoto.vrp.ws.broker.AbstractBroker;
+import com.soedomoto.vrp.ws.broker.JSpritBroker;
 import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.DistanceMatrix;
 import com.soedomoto.vrp.ws.model.Enumerator;
-import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import org.eclipse.jetty.util.thread.QueuedThreadPool;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ManagedAsync;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -23,9 +22,6 @@ import org.glassfish.jersey.server.mvc.Viewable;
 import org.glassfish.jersey.server.mvc.freemarker.FreemarkerMvcFeature;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.glassfish.jersey.servlet.ServletProperties;
-import org.optaplanner.core.api.solver.Solver;
-import org.optaplanner.core.api.solver.SolverFactory;
-import org.optaplanner.examples.vehiclerouting.domain.VehicleRoutingSolution;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -84,7 +80,7 @@ public class App {
     public void subscribe(@PathParam("id") final String enumeratorId, @Suspended final AsyncResponse asyncResponse)
             throws SQLException {
 
-        Broker broker = (Broker) context.getAttribute("broker");
+        AbstractBroker broker = (AbstractBroker) context.getAttribute("broker");
         broker.subscribe(enumeratorId, asyncResponse);
     }
 
@@ -150,12 +146,8 @@ public class App {
                     sce.getServletContext().setAttribute("censusBlockDao", censusBlockDao);
                     sce.getServletContext().setAttribute("distanceMatrixDao", distanceMatrixDao);
 
-                    SolverFactory<VehicleRoutingSolution> solverFactory = SolverFactory.createFromXmlResource("solver-config.xml");
-                    Solver<VehicleRoutingSolution> solver = solverFactory.buildSolver();
-                    sce.getServletContext().setAttribute("solver", solver);
-
                     // Add executor to context
-                    Broker broker = new Broker(executor, sce.getServletContext());
+                    AbstractBroker broker = new JSpritBroker(executor, sce.getServletContext());
                     sce.getServletContext().setAttribute("broker", broker);
                 } catch (SQLException e) {
                     e.printStackTrace();
@@ -172,11 +164,7 @@ public class App {
         handlers.addHandler(jerseyContextHandler);
         handlers.addHandler(resourceContextHandler);
 
-        QueuedThreadPool threadPool = new QueuedThreadPool(100, 10);
-        Server server = new Server(threadPool);
-        ServerConnector connector = new ServerConnector(server);
-        connector.setPort(2222);
-        server.setConnectors(new Connector[]{connector});
+        Server server = new Server(2222);
         server.setHandler(handlers);
 
         try {

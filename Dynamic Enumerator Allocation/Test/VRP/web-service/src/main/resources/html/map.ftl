@@ -186,24 +186,24 @@
     function subscribeLocation(eId) {
         $.get('/vrp/subscribe/' + eId, function(location) {
             if('customer' in location) {
-                travelToLocation(eId, location);
+                travelToLocation(location);
             } else {
                 subscribeLocation(eId);
             }
         });
     }
 
-    function travelToLocation(eId, location) {
+    function travelToLocation(location) {
         duration = location['duration'] * 10;
-        console.log(moment().format() + ' : ' + eId + ' is traveling to ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
+        console.log(moment().format() + ' : ' + location['enumerator'] + ' is traveling to ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
 
-        setTimeout(function(eId, location) {
-            console.log(moment().format() + ' : ' + eId + ' is arrived in ' + location['customer']);
+        setTimeout(function(location) {
+            console.log(moment().format() + ' : ' + location['enumerator'] + ' is arrived in ' + location['customer']);
 
             // Move enumerator marker
             latDest = location['customer-coord'][0];
             lonDest = location['customer-coord'][1];
-            enumeratorsCache[eId]['marker'].setLatLng(new L.LatLng(latDest, lonDest));
+            enumeratorsCache[location['enumerator']]['marker'].setLatLng(new L.LatLng(latDest, lonDest));
 
             // Create line between old an new point
             latOri = location['depot-coord'][0];
@@ -215,25 +215,25 @@
                 smoothFactor: 1,
             }).addTo(map);
 
-            collectingData(eId, location);
-        }, duration, eId, location);
+            collectingData(location);
+        }, duration, location);
     }
 
-    function collectingData(eId, location) {
-        publishVisit(eId, location);
+    function collectingData(location) {
+        publishVisit(location);
 
-        duration = location['service-time'];
-        console.log(moment().format() + ' : ' + eId + ' is collecting data in ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
+        duration = location['service-time'] * 10;
+        console.log(moment().format() + ' : ' + location['enumerator'] + ' is collecting data in ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
 
-        setTimeout(function(eId, location) {
-            console.log(moment().format() + ' : ' + eId + ' is finish collecting data in ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
+        setTimeout(function(location) {
+            console.log(moment().format() + ' : ' + location['enumerator'] + ' is finish collecting data in ' + location['customer']);
 
-            subscribeLocation(eId)
-        }, duration, eId, location);
+            subscribeLocation(location['enumerator'])
+        }, duration, location);
     }
 
-    function publishVisit(eId, location) {
-        $.get('/vrp/visit/' + location['customer'] + '/by/' + eId, function(res) {});
+    function publishVisit(location) {
+        $.get('/vrp/visit/' + location['customer'] + '/by/' + location['enumerator'], function(res) {});
     }
 </script>
 </body>

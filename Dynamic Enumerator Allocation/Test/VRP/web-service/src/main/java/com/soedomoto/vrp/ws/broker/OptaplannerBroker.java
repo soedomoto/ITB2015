@@ -1,11 +1,11 @@
-package com.soedomoto.vrp.ws;
+package com.soedomoto.vrp.ws.broker;
 
-import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.QueryBuilder;
 import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.DistanceMatrix;
 import com.soedomoto.vrp.ws.model.Enumerator;
 import org.optaplanner.core.api.solver.Solver;
+import org.optaplanner.core.api.solver.SolverFactory;
 import org.optaplanner.examples.vehiclerouting.domain.Customer;
 import org.optaplanner.examples.vehiclerouting.domain.Depot;
 import org.optaplanner.examples.vehiclerouting.domain.Vehicle;
@@ -24,33 +24,18 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by soedomoto on 07/01/17.
  */
-public class Broker implements Runnable {
-    private final ScheduledExecutorService executor;
-    private final ServletContext context;
-    private final Dao<Enumerator, Long> enumeratorDao;
-    private final Dao<CensusBlock, Long> censusBlockDao;
-    private final Dao<DistanceMatrix, Long> matrixDao;
+public class OptaplannerBroker extends AbstractBroker implements Runnable {
+    private final Solver<VehicleRoutingSolution> solver;
 
-    private Long startTask;
+    public OptaplannerBroker(ScheduledExecutorService executor, ServletContext context) {
+        super(executor, context);
 
-    private List<Long> enumerators = new LinkedList();
-    private List<AsyncResponse> asyncResponses = new LinkedList();
-    private ScheduledFuture<?> currTask;
-    private BrokerListener listener;
-
-    public Broker(ScheduledExecutorService executor, ServletContext context) {
-        this.executor = executor;
-        this.context = context;
-
-        enumeratorDao = (Dao<Enumerator, Long>) context.getAttribute("enumeratorDao");
-        censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
-        matrixDao = (Dao<DistanceMatrix, Long>) context.getAttribute("distanceMatrixDao");
+        SolverFactory<VehicleRoutingSolution> solverFactory = SolverFactory.createFromXmlResource("solver-config.xml");
+        solver = solverFactory.buildSolver();
     }
 
     private void dumpSolution(VehicleRoutingSolution obj, String label) throws IOException {
@@ -61,26 +46,24 @@ public class Broker implements Runnable {
     }
 
     public void run() {
-        LinkedList<Long> runningEnumerators = new LinkedList(enumerators);
+        LinkedList<Long> runningSubscribers = new LinkedList(subscribers);
         LinkedList<AsyncResponse> runningAsyncResponses = new LinkedList(asyncResponses);
 
-        enumerators = new LinkedList();
+        subscribers = new LinkedList();
         asyncResponses = new LinkedList();
-        startTask = null;
 
         try {
-            VehicleRoutingSolution problem = createProblem(runningEnumerators);
-            Solver<VehicleRoutingSolution> solver = (Solver<VehicleRoutingSolution>) context.getAttribute("solver");
+            VehicleRoutingSolution problem = createProblem(runningSubscribers);
             VehicleRoutingSolution solution = solver.solve(problem);
 
             dumpSolution(problem, "problem");
             dumpSolution(solution, "solution");
 
-            for(int e=0; e<runningEnumerators.size(); e++) {
+            for(int e=0; e<runningSubscribers.size(); e++) {
                 Map<String, Object> currPath = new HashMap();
 
                 for (Customer customer : solution.getCustomerList()) {
-                    if (customer.getPreviousStandstill() != null && customer.getVehicle().getId().equals(runningEnumerators.get(e))) {
+                    if (customer.getPreviousStandstill() != null && customer.getVehicle().getId().equals(runningSubscribers.get(e))) {
                         CensusBlock bs = censusBlockDao.queryForId(customer.getLocation().getId());
 
                         currPath.put("depot", customer.getVehicle().getDepot().getLocation().getId());
@@ -201,27 +184,5 @@ public class Broker implements Runnable {
         problem.setVehicleList(vehicles);
 
         return problem;
-    }
-
-    public void subscribe(String enumeratorId, AsyncResponse asyncResponse) {
-        if(! enumerators.contains(Long.valueOf(enumeratorId))) {
-            enumerators.add(Long.valueOf(enumeratorId));
-            asyncResponses.add(asyncResponse);
-        }
-
-        if(enumerators.size() > 0 && (currTask == null || (currTask != null && currTask.isDone()))) {
-            listener = new BrokerListener() {
-                @Override
-                public void finish() {
-                    if(enumerators.size() > 0) currTask = executor.schedule(Broker.this, 15, TimeUnit.SECONDS);
-                }
-            };
-
-            currTask = executor.schedule(this, 15, TimeUnit.SECONDS);
-        }
-    }
-
-    public static abstract interface BrokerListener {
-        public void finish();
     }
 }
