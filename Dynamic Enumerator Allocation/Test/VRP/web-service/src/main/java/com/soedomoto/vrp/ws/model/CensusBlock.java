@@ -17,7 +17,7 @@ public class CensusBlock {
     @DatabaseField
     public double serviceTime;
     @DatabaseField
-    public long visitedBy;
+    public Long visitedBy;
     @DatabaseField
-    public long assignedTo;
+    public Long assignedTo;
 }

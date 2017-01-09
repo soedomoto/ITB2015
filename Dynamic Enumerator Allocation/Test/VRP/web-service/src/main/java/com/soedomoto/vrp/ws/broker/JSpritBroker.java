@@ -1,6 +1,7 @@
 package com.soedomoto.vrp.ws.broker;
 
 import com.graphhopper.jsprit.core.algorithm.VehicleRoutingAlgorithm;
+import com.graphhopper.jsprit.core.algorithm.box.Jsprit;
 import com.graphhopper.jsprit.core.problem.Location;
 import com.graphhopper.jsprit.core.problem.VehicleRoutingProblem;
 import com.graphhopper.jsprit.core.problem.cost.VehicleRoutingTransportCosts;
@@ -20,11 +21,13 @@ import com.soedomoto.vrp.ws.model.Enumerator;
 import com.soedomoto.vrp.ws.model.Subscriber;
 
 import javax.servlet.ServletContext;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.*;
 import java.util.concurrent.ScheduledExecutorService;
-
-import static com.graphhopper.jsprit.core.algorithm.box.Jsprit.createAlgorithm;
 
 /**
  * Created by soedomoto on 08/01/17.
@@ -36,11 +39,38 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
 
     @Override
     public void run() {
+        String serverLogDir = (String) context.getAttribute("serverLogDir");
+
         try {
-            List<Subscriber> workingSubscribers = subscriberDao.queryBuilder().where().eq("is_processed", false).query();
-            List<CensusBlock> unassignedBses = censusBlockDao.queryBuilder().where().isNull("ASSIGNEDTO").query();
+            List<Subscriber> workingSubscribers = new ArrayList();
+            for(Long sId : asyncResponseMap.keySet()) {
+                workingSubscribers.add(subscriberDao.queryForId(sId));
+            }
+
+            //List<Subscriber> workingSubscribers = subscriberDao.queryBuilder().where().eq("is_processed", false).query();
+
+            List<Enumerator> es = enumeratorDao.queryForAll();
+            Map<Long, Enumerator> allEnumerators = new HashMap();
+            for(Enumerator e : es) allEnumerators.put(e.id, e);
+
+            List<CensusBlock> bses = censusBlockDao.queryForAll();
+            Map<Long, CensusBlock> allBses = new HashMap();
             Map<Long, CensusBlock> workingBses = new HashMap();
-            for(CensusBlock bs : unassignedBses) workingBses.put(bs.id, bs);
+            for(CensusBlock bs : bses) {
+                allBses.put(bs.id, bs);
+                if(bs.assignedTo == null) workingBses.put(bs.id, bs);
+            }
+
+            List<DistanceMatrix> dm = matrixDao.queryForAll();
+            Map<Long, Map<Long, Double>> durationMatrix = new HashMap();
+            Map<Long, Map<Long, Double>> distanceMatrix = new HashMap();
+            for(DistanceMatrix m : dm) {
+                if(!durationMatrix.keySet().contains(m.locationA)) durationMatrix.put(m.locationA, new HashMap());
+                durationMatrix.get(m.locationA).put(m.locationB, m.duration);
+
+                if(!distanceMatrix.keySet().contains(m.locationA)) distanceMatrix.put(m.locationA, new HashMap());
+                distanceMatrix.get(m.locationA).put(m.locationB, m.distance);
+            }
 
 
             VehicleRoutingProblem.Builder vrpBuilder = VehicleRoutingProblem.Builder.newInstance().setFleetSize(VehicleRoutingProblem.FleetSize.FINITE);
@@ -64,54 +94,48 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
 
 
             VehicleTypeImpl.Builder vehicleTypeBuilder = VehicleTypeImpl.Builder.newInstance("enumerator");
-            vehicleTypeBuilder.addCapacityDimension(0, workingBses.size() / workingSubscribers.size());
+            vehicleTypeBuilder.addCapacityDimension(0, workingBses.size() / allEnumerators.size());
             //vehicleTypeBuilder.setCostPerDistance(1.0);
             vehicleTypeBuilder.setCostPerDistance(0);
             vehicleTypeBuilder.setCostPerTransportTime(1);
             vehicleTypeBuilder.setCostPerServiceTime(1);
             VehicleType vehicleType = vehicleTypeBuilder.build();
 
-            try {
-                for(Subscriber s : workingSubscribers) {
-                    Enumerator e = enumeratorDao.queryForId(s.subscriber);
-                    VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(String.valueOf(e.id));
+            for(Enumerator e : allEnumerators.values()) {
+                VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(String.valueOf(e.id));
 
-                    CensusBlock bs = workingBses.get(e.depot); //censusBlockDao.queryForId(e.depot);
-                    Location loc = Location.Builder.newInstance()
-                            .setId(String.valueOf(bs.id))
-                            .setCoordinate(Coordinate.newInstance(bs.lon, bs.lat))
-                            .build();
-                    builder.setStartLocation(loc);
+                CensusBlock bs = allBses.get(e.depot); //censusBlockDao.queryForId(e.depot);
+                Location loc = Location.Builder.newInstance()
+                        .setId(String.valueOf(bs.id))
+                        .setCoordinate(Coordinate.newInstance(bs.lon, bs.lat))
+                        .build();
+                builder.setStartLocation(loc);
 
-                    builder.setType(vehicleType);
-                    VehicleImpl vehicle = builder.build();
-                    vrpBuilder.addVehicle(vehicle);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+                builder.setType(vehicleType);
+                VehicleImpl vehicle = builder.build();
+                vrpBuilder.addVehicle(vehicle);
             }
 
 
-            try {
-                VehicleRoutingTransportCostsMatrix.Builder costMatrixBuilder = VehicleRoutingTransportCostsMatrix.Builder
-                        .newInstance(true);
+            VehicleRoutingTransportCostsMatrix.Builder costMatrixBuilder = VehicleRoutingTransportCostsMatrix.Builder
+                    .newInstance(true);
 
-                List<DistanceMatrix> durMatrix = matrixDao.queryForAll();
-                for(DistanceMatrix m : durMatrix) {
-                    costMatrixBuilder.addTransportDistance(String.valueOf(m.locationA), String.valueOf(m.locationB), m.distance);
-                    costMatrixBuilder.addTransportTime(String.valueOf(m.locationA), String.valueOf(m.locationB), m.duration);
+            for(Long a : durationMatrix.keySet()) {
+                for(Long b : durationMatrix.get(a).keySet()) {
+                    costMatrixBuilder.addTransportDistance(String.valueOf(a), String.valueOf(b), distanceMatrix.get(a).get(b));
+                    costMatrixBuilder.addTransportTime(String.valueOf(a), String.valueOf(b), durationMatrix.get(a).get(b));
                 }
-
-                VehicleRoutingTransportCosts costMatrix = costMatrixBuilder.build();
-                vrpBuilder.setRoutingCost(costMatrix);
-            } catch (SQLException e) {
-                e.printStackTrace();
             }
+
+            VehicleRoutingTransportCosts costMatrix = costMatrixBuilder.build();
+            vrpBuilder.setRoutingCost(costMatrix);
 
 
             VehicleRoutingProblem problem = vrpBuilder.build();
 
-            VehicleRoutingAlgorithm algorithm = createAlgorithm(problem);
+            VehicleRoutingAlgorithm algorithm = Jsprit.Builder.newInstance(problem)
+                    .setProperty(Jsprit.Parameter.THREADS, String.valueOf(Runtime.getRuntime().availableProcessors()))
+                    .buildAlgorithm();
             algorithm.setMaxIterations(100);
 
             Collection<VehicleRoutingProblemSolution> solutions = algorithm.searchSolutions();
@@ -139,13 +163,17 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
                         currPath.put("customer-coord", new Double[] {activity.getLocation().getCoordinate().getY(),
                                 activity.getLocation().getCoordinate().getX()});
 
-                        List<DistanceMatrix> mx = matrixDao.queryForMatching(new DistanceMatrix() {{
-                            locationA = Long.parseLong(vehicleLoc.getId());
-                            locationB = Long.parseLong(activity.getLocation().getId());
-                        }});
-                        currPath.put("duration", mx.size() > 0 ? mx.get(0).duration : 0.0);
+                        double duration = 0.0;
+                        long a = Long.parseLong(vehicleLoc.getId());
+                        long b = Long.parseLong(activity.getLocation().getId());
+                        if(durationMatrix.keySet().contains(a)) {
+                            if(durationMatrix.get(a).keySet().contains(b)) {
+                                duration = durationMatrix.get(a).get(b);
+                            }
+                        }
+                        currPath.put("duration", duration);
 
-                        CensusBlock bs = workingBses.get(Long.valueOf(activity.getLocation().getId())); //censusBlockDao.queryForId(Long.valueOf(activity.getLocation().getId()));
+                        CensusBlock bs = allBses.get(Long.valueOf(activity.getLocation().getId())); //censusBlockDao.queryForId(Long.valueOf(activity.getLocation().getId()));
                         currPath.put("service-time", bs.serviceTime);
 
                         bs.assignedTo = s.subscriber;
@@ -156,6 +184,16 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
                     }
 
                     asyncResponseMap.get(s.id).resume(currPath);
+                    asyncResponseMap.remove(s.id);
+
+                    try {
+                        File clientLogFile = new File(serverLogDir + File.separator + currPath.get("enumerator") + ".log");
+                        clientLogFile.getParentFile().mkdirs();
+                        PrintWriter out = new PrintWriter(new FileWriter(clientLogFile, true));
+                        out.println(String.format("%s,%s,%s,%s", currPath.get("depot"), currPath.get("customer"),
+                                currPath.get("duration"), currPath.get("service-time")));
+                        out.flush();
+                    } catch (IOException e) {}
                 }
             }
 
@@ -163,134 +201,5 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-//        LinkedList<Long> runningSubscribers = new LinkedList(subscribers);
-//        LinkedList<AsyncResponse> runningAsyncResponses = new LinkedList(asyncResponses);
-//
-//        subscribers = new LinkedList();
-//        asyncResponses = new LinkedList();
-//
-//
-//        VehicleRoutingProblem.Builder vrpBuilder = VehicleRoutingProblem.Builder.newInstance().setFleetSize(VehicleRoutingProblem.FleetSize.FINITE);
-//
-//
-//        VehicleTypeImpl.Builder vehicleTypeBuilder = VehicleTypeImpl.Builder.newInstance("enumerator");
-//        //vehicleTypeBuilder.addCapacityDimension(0, 100);
-//        //vehicleTypeBuilder.setCostPerDistance(1.0);
-//        vehicleTypeBuilder.setCostPerDistance(0);
-//        vehicleTypeBuilder.setCostPerTransportTime(1);
-//        vehicleTypeBuilder.setCostPerServiceTime(1);
-//        VehicleType vehicleType = vehicleTypeBuilder.build();
-//
-//        try {
-//            for(Long s : runningSubscribers) {
-//                Enumerator e = enumeratorDao.queryForId(s);
-//                VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(String.valueOf(e.id));
-//
-//                CensusBlock bs = censusBlockDao.queryForId(e.depot);
-//                Location loc = Location.Builder.newInstance()
-//                        .setId(String.valueOf(bs.id))
-//                        .setCoordinate(Coordinate.newInstance(bs.lon, bs.lat))
-//                        .build();
-//                builder.setStartLocation(loc);
-//
-//                builder.setType(vehicleType);
-//                VehicleImpl vehicle = builder.build();
-//                vrpBuilder.addVehicle(vehicle);
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//        try {
-//            QueryBuilder<CensusBlock, Long> qb = censusBlockDao.queryBuilder();
-//            List<CensusBlock> bses = qb.where().isNull("ASSIGNEDTO").query();
-//            for(CensusBlock bs : bses) {
-//                Service.Builder builder = Service.Builder.newInstance(String.valueOf(bs.id));
-//                //builder.addSizeDimension(0, 1);
-//                //builder.setTimeWindow(TimeWindow.newInstance(0.0, 0.0));
-//                //builder.setServiceTime(Double.parseDouble(line[3]));
-//
-//                Location loc = Location.Builder.newInstance()
-//                        .setId(String.valueOf(bs.id))
-//                        .setCoordinate(Coordinate.newInstance(bs.lon, bs.lat))
-//                        .build();
-//                builder.setLocation(loc);
-//
-//                Service node = builder.build();
-//                vrpBuilder.addJob(node);
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//        try {
-//            VehicleRoutingTransportCostsMatrix.Builder costMatrixBuilder = VehicleRoutingTransportCostsMatrix.Builder
-//                    .newInstance(true);
-//
-//            List<DistanceMatrix> durMatrix = matrixDao.queryForAll();
-//            for(DistanceMatrix m : durMatrix) {
-//                costMatrixBuilder.addTransportDistance(String.valueOf(m.locationA), String.valueOf(m.locationB), m.distance);
-//                costMatrixBuilder.addTransportTime(String.valueOf(m.locationA), String.valueOf(m.locationB), m.duration);
-//            }
-//
-//            VehicleRoutingTransportCosts costMatrix = costMatrixBuilder.build();
-//            vrpBuilder.setRoutingCost(costMatrix);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//        VehicleRoutingProblem problem = vrpBuilder.build();
-//
-//        VehicleRoutingAlgorithm algorithm = createAlgorithm(problem);
-//        algorithm.setMaxIterations(100);
-//
-//        Collection<VehicleRoutingProblemSolution> solutions = algorithm.searchSolutions();
-//        VehicleRoutingProblemSolution solution = Solutions.bestOf(solutions);
-//
-//
-//        Map<Long, VehicleRoute> routeMap = new HashMap();
-//        for(VehicleRoute route : solution.getRoutes()) {
-//            routeMap.put(Long.valueOf(route.getVehicle().getId()), route);
-//        }
-//
-//        for(int s=0; s<runningSubscribers.size(); s++) {
-//            if(routeMap.keySet().contains(runningSubscribers.get(s))) {
-//                Map<String, Object> currPath = new HashMap();
-//
-//                final Location vehicleLoc = routeMap.get(runningSubscribers.get(s)).getVehicle().getStartLocation();
-//                currPath.put("enumerator", routeMap.get(runningSubscribers.get(s)).getVehicle().getId());
-//                currPath.put("depot", vehicleLoc.getId());
-//                currPath.put("depot-coord", new Double[] {vehicleLoc.getCoordinate().getY(), vehicleLoc.getCoordinate().getX()});
-//
-//                if(routeMap.get(runningSubscribers.get(s)).getActivities().size() > 0) {
-//                    final TourActivity activity = routeMap.get(runningSubscribers.get(s)).getActivities().get(0);
-//                    currPath.put("customer", activity.getLocation().getId());
-//                    currPath.put("customer-coord", new Double[] {activity.getLocation().getCoordinate().getY(),
-//                            activity.getLocation().getCoordinate().getX()});
-//
-//                    try {
-//                        List<DistanceMatrix> mx = matrixDao.queryForMatching(new DistanceMatrix() {{
-//                            locationA = Long.parseLong(vehicleLoc.getId());
-//                            locationB = Long.parseLong(activity.getLocation().getId());
-//                        }});
-//                        currPath.put("duration", mx.size() > 0 ? mx.get(0).duration : 0.0);
-//
-//                        CensusBlock bs = censusBlockDao.queryForId(Long.valueOf(activity.getLocation().getId()));
-//                        currPath.put("service-time", bs.serviceTime);
-//
-//                        bs.assignedTo = Long.parseLong(routeMap.get(runningSubscribers.get(s)).getVehicle().getId());
-//                        censusBlockDao.update(bs);
-//                    } catch (SQLException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//
-//                runningAsyncResponses.get(s).resume(currPath);
-//            }
-//        }
     }
 }

@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @DatabaseTable
 public class Subscriber {
-    @DatabaseField(generatedId = true)
+    @DatabaseField(id = true)
     public Long id;
     @DatabaseField(columnName = "date_added")
     public Date dateAdded;

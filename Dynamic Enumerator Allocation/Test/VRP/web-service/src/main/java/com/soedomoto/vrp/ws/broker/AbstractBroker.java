@@ -11,9 +11,7 @@ import javax.servlet.ServletContext;
 import javax.ws.rs.container.AsyncResponse;
 import java.sql.SQLException;
 import java.util.*;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * Created by soedomoto on 08/01/17.
@@ -27,10 +25,11 @@ public abstract class AbstractBroker implements Runnable {
     protected final Dao<DistanceMatrix, Long> matrixDao;
     protected final Dao<Subscriber, Long> subscriberDao;
 
+    protected long subscriberIndex = -1;
     protected List<Long> subscribers = new LinkedList();
     protected List<AsyncResponse> asyncResponses = new LinkedList();
     protected Map<Long, AsyncResponse> asyncResponseMap = new HashMap();
-    protected ScheduledFuture<?> currTask;
+    protected Future<?> currTask;
     protected BrokerListener listener;
 
     public AbstractBroker(ScheduledExecutorService executor, ServletContext context) {
@@ -41,6 +40,14 @@ public abstract class AbstractBroker implements Runnable {
         censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
         matrixDao = (Dao<DistanceMatrix, Long>) context.getAttribute("distanceMatrixDao");
         subscriberDao = (Dao<Subscriber, Long>) context.getAttribute("subscriberDao");
+
+        String[] maxSubIds = new String[0];
+        try {
+            maxSubIds = subscriberDao.queryBuilder().selectRaw("MAX(id)").queryRawFirst();
+            if(maxSubIds != null && maxSubIds[0] != null) subscriberIndex = Long.parseLong(maxSubIds[0]);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void run() {}
@@ -52,40 +59,39 @@ public abstract class AbstractBroker implements Runnable {
                 .eq("is_processed", false).queryForFirst();
 
         if(s == null) {
+            subscriberIndex++;
+
+            asyncResponseMap.put(subscriberIndex, asyncResponse);
+
             s = new Subscriber();
+            s.id = subscriberIndex;
             s.subscriber = Long.valueOf(enumeratorId);
             s.dateAdded = new Date();
             subscriberDao.create(s);
+        } else {
+            asyncResponseMap.put(s.id, asyncResponse);
         }
 
-        subscriberDao.refresh(s);
-        asyncResponseMap.put(s.id, asyncResponse);
-
-        List<Subscriber> subscribers = subscriberDao.queryBuilder().where().eq("is_processed", false).query();
-        if(subscribers.size() > 0 && (currTask == null || (currTask != null && currTask.isDone()))) {
+        if(asyncResponseMap.size() > 0 && (currTask == null || (currTask != null && currTask.isDone()))) {
             listener = new BrokerListener() {
                 public void finish() throws SQLException {
                     List<Subscriber> ss = subscriberDao.queryBuilder().where().eq("is_processed", false).query();
-                    if(ss.size() > 0) currTask = executor.schedule(AbstractBroker.this, 15, TimeUnit.SECONDS);
+
+                    try {
+                        currTask.get(5, TimeUnit.SECONDS);
+                    } catch (InterruptedException e) {
+                        currTask.cancel(true);
+                    } catch (ExecutionException e) {
+                        currTask.cancel(true);
+                    } catch (TimeoutException e) {
+                        currTask.cancel(true);
+                    }
+
+                    if(ss.size() > 0) currTask = executor.submit(AbstractBroker.this);
                 }
             };
 
             currTask = executor.schedule(this, 15, TimeUnit.SECONDS);
         }
-
-//        if(! subscribers.contains(Long.valueOf(enumeratorId))) {
-//            subscribers.add(Long.valueOf(enumeratorId));
-//            asyncResponses.add(asyncResponse);
-//        }
-//
-//        if(subscribers.size() > 0 && (currTask == null || (currTask != null && currTask.isDone()))) {
-//            listener = new BrokerListener() {
-//                public void finish() {
-//                    if(subscribers.size() > 0) currTask = executor.schedule(AbstractBroker.this, 15, TimeUnit.SECONDS);
-//                }
-//            };
-//
-//            currTask = executor.schedule(this, 15, TimeUnit.SECONDS);
-//        }
     }
 }

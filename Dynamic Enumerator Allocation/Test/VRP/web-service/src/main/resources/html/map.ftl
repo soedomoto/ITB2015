@@ -184,10 +184,14 @@
     });
 
     function subscribeLocation(eId) {
+        log(eId, moment().format() + ' : ' + eId + ' is subscribing new location');
+
         $.get('/vrp/subscribe/' + eId, function(location) {
             if('customer' in location) {
+                log(location['enumerator'], moment().format() + ' : ' + location['enumerator'] + ' got new location');
                 travelToLocation(location);
             } else {
+                log(location['enumerator'], moment().format() + ' : No location for ' + location['enumerator']);
                 subscribeLocation(eId);
             }
         });
@@ -195,10 +199,12 @@
 
     function travelToLocation(location) {
         duration = location['duration'] * 10;
-        console.log(moment().format() + ' : ' + location['enumerator'] + ' is traveling to ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
+        log(location['enumerator'],
+            moment().format() + ' : ' + location['enumerator'] + ' is traveling to ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
 
         setTimeout(function(location) {
-            console.log(moment().format() + ' : ' + location['enumerator'] + ' is arrived in ' + location['customer']);
+            log(location['enumerator'],
+                moment().format() + ' : ' + location['enumerator'] + ' is arrived in ' + location['customer']);
 
             // Move enumerator marker
             latDest = location['customer-coord'][0];
@@ -223,10 +229,12 @@
         publishVisit(location);
 
         duration = location['service-time'] * 10;
-        console.log(moment().format() + ' : ' + location['enumerator'] + ' is collecting data in ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
+        log(location['enumerator'],
+            moment().format() + ' : ' + location['enumerator'] + ' is collecting data in ' + location['customer']);
 
         setTimeout(function(location) {
-            console.log(moment().format() + ' : ' + location['enumerator'] + ' is finish collecting data in ' + location['customer']);
+            log(location['enumerator'],
+                moment().format() + ' : ' + location['enumerator'] + ' is finish collecting data in ' + location['customer'] + ' for ' + (duration/1000) + ' secs');
 
             subscribeLocation(location['enumerator'])
         }, duration, location);
@@ -234,6 +242,20 @@
 
     function publishVisit(location) {
         $.get('/vrp/visit/' + location['customer'] + '/by/' + location['enumerator'], function(res) {});
+    }
+
+    function log(enumerator, message) {
+        console.log(message);
+
+        $.ajax({
+            type: "POST",
+            url: '/vrp/log/' + enumerator,
+            data: message,
+            headers: {
+                'Accept': 'text/plain',
+                'Content-Type': 'text/plain'
+            }
+        });
     }
 </script>
 </body>

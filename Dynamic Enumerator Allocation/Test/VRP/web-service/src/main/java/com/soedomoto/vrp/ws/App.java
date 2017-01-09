@@ -11,6 +11,7 @@ import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.DistanceMatrix;
 import com.soedomoto.vrp.ws.model.Enumerator;
 import com.soedomoto.vrp.ws.model.Subscriber;
+import org.apache.commons.io.FileUtils;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.servlet.DefaultServlet;
@@ -34,10 +35,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.File;
+import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
@@ -52,7 +57,7 @@ public class App {
     ServletContext context;
 
     @GET
-    @Produces("text/html")
+    @Produces(MediaType.TEXT_HTML)
     public Response map() throws SQLException {
         Map<String, Object> model = new HashMap();
         return Response.ok(new Viewable("/map.ftl", model)).build();
@@ -60,7 +65,7 @@ public class App {
 
     @GET
     @Path("/enumerators")
-    @Produces("application/json")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response enumerators() throws SQLException {
         Dao<Enumerator, Long> enumeratorDao = (Dao<Enumerator, Long>) context.getAttribute("enumeratorDao");
         return Response.ok(enumeratorDao.queryForAll()).build();
@@ -68,7 +73,7 @@ public class App {
 
     @GET
     @Path("/locations")
-    @Produces("application/json")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response locations() throws SQLException {
         Dao<CensusBlock, Long> censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
         return Response.ok(censusBlockDao.queryForAll()).build();
@@ -76,8 +81,7 @@ public class App {
 
     @GET
     @Path("/subscribe/{id}")
-    @Produces("application/json")
-    // @ManagedAsync
+    @Produces(MediaType.APPLICATION_JSON)
     public void subscribe(@PathParam("id") final String enumeratorId, @Suspended final AsyncResponse asyncResponse)
             throws SQLException {
         AbstractBroker broker = (AbstractBroker) context.getAttribute("broker");
@@ -86,7 +90,7 @@ public class App {
 
     @GET
     @Path("/visit/{customer}/by/{enumerator}")
-    @Produces("application/json")
+    @Produces(MediaType.APPLICATION_JSON)
     @ManagedAsync
     public void visit(@PathParam("customer") final String customerId, @PathParam("enumerator") final String enumeratorId,
                       @Suspended final AsyncResponse asyncResponse) throws SQLException {
@@ -104,7 +108,14 @@ public class App {
         asyncResponse.resume(status);
     }
 
-    public static void main(String[] args) throws URISyntaxException {
+    public static void main(String[] args) throws URISyntaxException, IOException {
+        final String BASE_DIR = new File(".." + File.separator + "Output" + File.separator +
+                new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX").format(new Date())).getAbsolutePath();
+
+        // Copy database file
+        final String DB_NAME = BASE_DIR + File.separator + "vrp";
+        FileUtils.copyFile(new File(App.class.getResource("/vrp.mv.db").toURI()), new File(DB_NAME + ".mv.db"));
+
         // Static file Handler
         ServletHolder resourceServlet = new ServletHolder("default", DefaultServlet.class);
         resourceServlet.setInitParameter("resourceBase", new File(App.class.getResource("/assets").toURI()).getAbsolutePath());
@@ -127,12 +138,12 @@ public class App {
         jerseyContextHandler.setContextPath("/vrp");
         jerseyContextHandler.addServlet(new ServletHolder(new ServletContainer(config)), "/*");
         jerseyContextHandler.addEventListener(new ServletContextListener() {
-            ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
+            ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
             public void contextInitialized(ServletContextEvent sce) {
                 try {
                     // Add persistence storage to context
-                    ConnectionSource connectionSource = new JdbcConnectionSource("jdbc:h2:./vrp");
+                    ConnectionSource connectionSource = new JdbcConnectionSource(String.format("jdbc:h2:%s;DB_CLOSE_ON_EXIT=FALSE", DB_NAME));
 
                     Dao<Enumerator, Long> enumeratorDao = DaoManager.createDao(connectionSource, Enumerator.class);
                     Dao<CensusBlock, Long> censusBlockDao = DaoManager.createDao(connectionSource, CensusBlock.class);
@@ -148,13 +159,17 @@ public class App {
                     sce.getServletContext().setAttribute("censusBlockDao", censusBlockDao);
                     sce.getServletContext().setAttribute("distanceMatrixDao", distanceMatrixDao);
                     sce.getServletContext().setAttribute("subscriberDao", subscriberDao);
-
-                    // Add executor to context
-                    AbstractBroker broker = new JSpritBroker(executor, sce.getServletContext());
-                    sce.getServletContext().setAttribute("broker", broker);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
+
+                // Add executor to context
+                AbstractBroker broker = new JSpritBroker(executor, sce.getServletContext());
+                sce.getServletContext().setAttribute("broker", broker);
+
+                // Set logger location
+                sce.getServletContext().setAttribute("clientLogDir", BASE_DIR + File.separator + "client_log");
+                sce.getServletContext().setAttribute("serverLogDir", BASE_DIR + File.separator + "server_log");
             }
 
             public void contextDestroyed(ServletContextEvent sce) {
