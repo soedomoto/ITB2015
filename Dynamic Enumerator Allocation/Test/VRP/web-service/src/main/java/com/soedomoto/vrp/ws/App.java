@@ -10,6 +10,7 @@ import com.soedomoto.vrp.ws.broker.JSpritBroker;
 import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.DistanceMatrix;
 import com.soedomoto.vrp.ws.model.Enumerator;
+import com.soedomoto.vrp.ws.model.Subscriber;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.servlet.DefaultServlet;
@@ -76,10 +77,9 @@ public class App {
     @GET
     @Path("/subscribe/{id}")
     @Produces("application/json")
-    @ManagedAsync
+    // @ManagedAsync
     public void subscribe(@PathParam("id") final String enumeratorId, @Suspended final AsyncResponse asyncResponse)
             throws SQLException {
-
         AbstractBroker broker = (AbstractBroker) context.getAttribute("broker");
         broker.subscribe(enumeratorId, asyncResponse);
     }
@@ -137,14 +137,17 @@ public class App {
                     Dao<Enumerator, Long> enumeratorDao = DaoManager.createDao(connectionSource, Enumerator.class);
                     Dao<CensusBlock, Long> censusBlockDao = DaoManager.createDao(connectionSource, CensusBlock.class);
                     Dao<DistanceMatrix, Long> distanceMatrixDao = DaoManager.createDao(connectionSource, DistanceMatrix.class);
+                    Dao<Subscriber, Long> subscriberDao = DaoManager.createDao(connectionSource, Subscriber.class);
 
                     TableUtils.createTableIfNotExists(connectionSource, Enumerator.class);
                     TableUtils.createTableIfNotExists(connectionSource, CensusBlock.class);
                     TableUtils.createTableIfNotExists(connectionSource, DistanceMatrix.class);
+                    TableUtils.createTableIfNotExists(connectionSource, Subscriber.class);
 
                     sce.getServletContext().setAttribute("enumeratorDao", enumeratorDao);
                     sce.getServletContext().setAttribute("censusBlockDao", censusBlockDao);
                     sce.getServletContext().setAttribute("distanceMatrixDao", distanceMatrixDao);
+                    sce.getServletContext().setAttribute("subscriberDao", subscriberDao);
 
                     // Add executor to context
                     AbstractBroker broker = new JSpritBroker(executor, sce.getServletContext());

@@ -94,7 +94,11 @@ public class OptaplannerBroker extends AbstractBroker implements Runnable {
             e.printStackTrace();
         }
 
-        if(listener != null) listener.finish();
+        if(listener != null) try {
+            listener.finish();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private VehicleRoutingSolution createProblem(LinkedList<Long> runningEnumerators) throws SQLException {

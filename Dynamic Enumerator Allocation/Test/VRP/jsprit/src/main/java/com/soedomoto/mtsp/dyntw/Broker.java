@@ -34,12 +34,12 @@ public class Broker implements Runnable {
 
     private boolean running = false;
 
-    private Map<String, Enumerator> enumerators = new HashMap<>();
-    private Map<String, CensusBlock> censusBlocks = new HashMap<>();
-    private Map<String, InterLocationWeight> weightMatrix = new HashMap<>();
+    private Map<String, Enumerator> enumerators = new HashMap();
+    private Map<String, CensusBlock> censusBlocks = new HashMap();
+    private Map<String, InterLocationWeight> weightMatrix = new HashMap();
 
-    private List<Enumerator> subscribes = new ArrayList<>();
-    private Map<String, List<CensusBlock>> visits = new HashMap<>();
+    private List<Enumerator> subscribes = new ArrayList();
+    private Map<String, List<CensusBlock>> visits = new HashMap();
 
 
     public Broker() {
