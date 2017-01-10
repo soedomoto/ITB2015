@@ -194,6 +194,9 @@
                 log(location['enumerator'], moment().format() + ' : No location for ' + location['enumerator']);
                 subscribeLocation(eId);
             }
+        }, function() {
+            log(location['enumerator'], moment().format() + ' : No location for ' + location['enumerator']);
+            subscribeLocation(eId);
         });
     }
 

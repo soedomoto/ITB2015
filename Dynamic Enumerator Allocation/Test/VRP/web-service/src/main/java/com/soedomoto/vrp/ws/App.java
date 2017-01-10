@@ -18,107 +18,37 @@ import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
-import org.glassfish.jersey.server.ManagedAsync;
 import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.server.mvc.Viewable;
 import org.glassfish.jersey.server.mvc.freemarker.FreemarkerMvcFeature;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.glassfish.jersey.servlet.ServletProperties;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.container.AsyncResponse;
-import javax.ws.rs.container.Suspended;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
 /**
- * Created by soedomoto on 07/01/17.
+ * Created by soedomoto on 10/01/17.
  */
-@Path("/")
 public class App {
-    @Context
-    ServletContext context;
-
-    @GET
-    @Produces(MediaType.TEXT_HTML)
-    public Response map() throws SQLException {
-        Map<String, Object> model = new HashMap();
-        return Response.ok(new Viewable("/map.ftl", model)).build();
-    }
-
-    @GET
-    @Path("/enumerators")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response enumerators() throws SQLException {
-        Dao<Enumerator, Long> enumeratorDao = (Dao<Enumerator, Long>) context.getAttribute("enumeratorDao");
-        return Response.ok(enumeratorDao.queryForAll()).build();
-    }
-
-    @GET
-    @Path("/locations")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response locations() throws SQLException {
-        Dao<CensusBlock, Long> censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
-        return Response.ok(censusBlockDao.queryForAll()).build();
-    }
-
-    @GET
-    @Path("/subscribe/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public void subscribe(@PathParam("id") final String enumeratorId, @Suspended final AsyncResponse asyncResponse)
-            throws SQLException {
-        AbstractBroker broker = (AbstractBroker) context.getAttribute("broker");
-        broker.subscribe(enumeratorId, asyncResponse);
-    }
-
-    @GET
-    @Path("/visit/{customer}/by/{enumerator}")
-    @Produces(MediaType.APPLICATION_JSON)
-    @ManagedAsync
-    public void visit(@PathParam("customer") final String customerId, @PathParam("enumerator") final String enumeratorId,
-                      @Suspended final AsyncResponse asyncResponse) throws SQLException {
-
-        Dao<CensusBlock, Long> censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
-        CensusBlock bs = censusBlockDao.queryForId(Long.valueOf(customerId));
-        bs.visitedBy = Long.valueOf(enumeratorId);
-        int status = censusBlockDao.update(bs);
-
-        Dao<Enumerator, Long> enumeratorDao = (Dao<Enumerator, Long>) context.getAttribute("enumeratorDao");
-        Enumerator enumerator = enumeratorDao.queryForId(Long.valueOf(enumeratorId));
-        enumerator.depot = Long.valueOf(customerId);
-        enumeratorDao.update(enumerator);
-
-        asyncResponse.resume(status);
-    }
-
     public static void main(String[] args) throws URISyntaxException, IOException {
         final String BASE_DIR = new File(".." + File.separator + "Output" + File.separator +
                 new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX").format(new Date())).getAbsolutePath();
 
         // Copy database file
         final String DB_NAME = BASE_DIR + File.separator + "vrp";
-        FileUtils.copyFile(new File(App.class.getResource("/vrp.mv.db").toURI()), new File(DB_NAME + ".mv.db"));
+        FileUtils.copyFile(new File(Api.class.getResource("/vrp.mv.db").toURI()), new File(DB_NAME + ".mv.db"));
 
         // Static file Handler
         ServletHolder resourceServlet = new ServletHolder("default", DefaultServlet.class);
-        resourceServlet.setInitParameter("resourceBase", new File(App.class.getResource("/assets").toURI()).getAbsolutePath());
+        resourceServlet.setInitParameter("resourceBase", new File(Api.class.getResource("/assets").toURI()).getAbsolutePath());
         resourceServlet.setInitParameter("dirAllowed", "true");
         resourceServlet.setInitParameter("pathInfoOnly", "true");
 

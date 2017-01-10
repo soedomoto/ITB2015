@@ -59,6 +59,18 @@ public abstract class AbstractBroker implements Runnable {
                 .eq("is_processed", false).queryForFirst();
 
         if(s == null) {
+            s = new Subscriber();
+            s.subscriber = Long.valueOf(enumeratorId);
+            s.dateAdded = new Date();
+            int it = subscriberDao.create(s);
+            if(it >= 1) {
+                asyncResponseMap.put(s.id, asyncResponse);
+            }
+        } else {
+            asyncResponseMap.put(s.id, asyncResponse);
+        }
+
+        /*if(s == null) {
             subscriberIndex++;
 
             asyncResponseMap.put(subscriberIndex, asyncResponse);
@@ -70,7 +82,7 @@ public abstract class AbstractBroker implements Runnable {
             subscriberDao.create(s);
         } else {
             asyncResponseMap.put(s.id, asyncResponse);
-        }
+        }*/
 
         if(asyncResponseMap.size() > 0 && (currTask == null || (currTask != null && currTask.isDone()))) {
             listener = new BrokerListener() {
