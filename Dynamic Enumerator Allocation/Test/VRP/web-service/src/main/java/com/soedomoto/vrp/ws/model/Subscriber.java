@@ -11,11 +11,44 @@ import java.util.Date;
 @DatabaseTable
 public class Subscriber {
     @DatabaseField(generatedId = true, allowGeneratedIdInsert = true)
-    public Long id;
+    private Long id;
     @DatabaseField(columnName = "date_added")
-    public Date dateAdded;
+    private Date dateAdded;
     @DatabaseField
-    public Long subscriber;
+    private Long subscriber;
     @DatabaseField(columnName = "is_processed", defaultValue = "false")
-    public Boolean isProcessed;
+    private Boolean isProcessed;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(Date dateAdded) {
+        this.dateAdded = dateAdded;
+    }
+
+    public Long getSubscriber() {
+        return subscriber;
+    }
+
+    public void setSubscriber(Long subscriber) {
+        this.subscriber = subscriber;
+    }
+
+    public Boolean getProcessed() {
+        return isProcessed;
+    }
+
+    public void setProcessed(Boolean processed) {
+        isProcessed = processed;
+    }
 }

@@ -181,6 +181,8 @@
         enumerators.forEach(function(enumerator) {
             subscribeLocation(enumerator.id);
         });
+
+        subscribeLocation(1302070006);
     });
 
     function subscribeLocation(eId) {
@@ -194,7 +196,8 @@
                 log(location['enumerator'], moment().format() + ' : No location for ' + location['enumerator']);
                 subscribeLocation(eId);
             }
-        }, function() {
+        }).fail(function() {
+            console.log('failed')
             log(location['enumerator'], moment().format() + ' : No location for ' + location['enumerator']);
             subscribeLocation(eId);
         });
@@ -244,7 +247,7 @@
     }
 
     function publishVisit(location) {
-        $.get('/vrp/visit/' + location['customer'] + '/by/' + location['enumerator'], function(res) {});
+        $.get('/vrp/visit/' + location['customer'] + '/by/' + location['enumerator']);
     }
 
     function log(enumerator, message) {

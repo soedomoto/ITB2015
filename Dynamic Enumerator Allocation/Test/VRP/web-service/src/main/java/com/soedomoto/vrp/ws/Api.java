@@ -18,6 +18,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,22 +63,26 @@ public class Api {
     }
 
     @GET
-    @Path("/visit/{customer}/by/{enumerator}")
+    @Path("/visit/{customer}/by/{enumerator}/on/{timestamp}")
     @Produces(MediaType.APPLICATION_JSON)
     @ManagedAsync
     public void visit(@PathParam("customer") final String customerId, @PathParam("enumerator") final String enumeratorId,
-                      @Suspended final AsyncResponse asyncResponse) throws SQLException {
+                      @PathParam("timestamp") final String timestamp, @Suspended final AsyncResponse asyncResponse)
+            throws SQLException {
+
+        Date date = new Date(Long.valueOf(timestamp));
 
         Dao<CensusBlock, Long> censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
         CensusBlock bs = censusBlockDao.queryForId(Long.valueOf(customerId));
-        bs.visitedBy = Long.valueOf(enumeratorId);
+        bs.setVisitedBy(Long.valueOf(enumeratorId));
+        bs.setVisitDate(date);
         int status = censusBlockDao.update(bs);
 
         Dao<Enumerator, Long> enumeratorDao = (Dao<Enumerator, Long>) context.getAttribute("enumeratorDao");
         Enumerator enumerator = enumeratorDao.queryForId(Long.valueOf(enumeratorId));
-        enumerator.depot = Long.valueOf(customerId);
+        enumerator.setDepot(Long.valueOf(customerId));
         enumeratorDao.update(enumerator);
 
-        asyncResponse.resume(status);
+        asyncResponse.resume(bs);
     }
 }

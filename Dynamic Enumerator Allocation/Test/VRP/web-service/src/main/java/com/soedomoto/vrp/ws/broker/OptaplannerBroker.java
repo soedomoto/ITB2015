@@ -73,9 +73,9 @@ public class OptaplannerBroker extends AbstractBroker implements Runnable {
                         Double duration = ((RoadLocation) customer.getVehicle().getDepot().getLocation())
                                 .getTravelDistanceMap().get(customer.getLocation());
                         currPath.put("duration", duration);
-                        currPath.put("service-time", bs.serviceTime);
+                        currPath.put("service-time", bs.getServiceTime());
 
-                        bs.assignedTo = customer.getVehicle().getId();
+                        bs.setAssignedTo(customer.getVehicle().getId());
                         censusBlockDao.update(bs);
 
                         break;
@@ -110,13 +110,13 @@ public class OptaplannerBroker extends AbstractBroker implements Runnable {
         List<Long> enumeratorLocs = new ArrayList();
         for(long eId : runningEnumerators) {
             Enumerator en = enumeratorDao.queryForId(eId);
-            CensusBlock bs = censusBlockDao.queryForId(en.depot);
+            CensusBlock bs = censusBlockDao.queryForId(en.getDepot());
 
             Location loc = new RoadLocation();
-            loc.setId(en.depot);
-            loc.setName(String.valueOf(en.depot));
-            loc.setLatitude(bs != null ? bs.lat : en.lat);
-            loc.setLongitude(bs != null ? bs.lon : en.lon);
+            loc.setId(en.getDepot());
+            loc.setName(String.valueOf(en.getDepot()));
+            loc.setLatitude(bs != null ? bs.getLat() : en.getLat());
+            loc.setLongitude(bs != null ? bs.getLon() : en.getLon());
 
             enumeratorLocs.add(loc.getId());
             locations.put(loc.getId(), loc);
@@ -127,10 +127,10 @@ public class OptaplannerBroker extends AbstractBroker implements Runnable {
         List<CensusBlock> censusBlocks = qb.where().isNull("ASSIGNEDTO").query();
         for(CensusBlock bs: censusBlocks) {
             Location loc = new RoadLocation();
-            loc.setId(bs.id);
-            loc.setName(String.valueOf(bs.id));
-            loc.setLatitude(bs.lat);
-            loc.setLongitude(bs.lon);
+            loc.setId(bs.getId());
+            loc.setName(String.valueOf(bs.getId()));
+            loc.setLatitude(bs.getLat());
+            loc.setLongitude(bs.getLon());
 
             bsLocs.add(loc.getId());
             locations.put(loc.getId(), loc);
@@ -138,8 +138,8 @@ public class OptaplannerBroker extends AbstractBroker implements Runnable {
 
         Map<Long, Map<Long, Double>> dm = new HashMap();
         for(DistanceMatrix d : matrixDao.queryForAll()) {
-            if(! dm.keySet().contains(d.locationA)) dm.put(d.locationA, new HashMap());
-            dm.get(d.locationA).put(d.locationB, d.duration);
+            if(! dm.keySet().contains(d.getLocationA())) dm.put(d.getLocationA(), new HashMap());
+            dm.get(d.getLocationA()).put(d.getLocationB(), d.getDuration());
         }
 
         for(Location locA : locations.values()) {

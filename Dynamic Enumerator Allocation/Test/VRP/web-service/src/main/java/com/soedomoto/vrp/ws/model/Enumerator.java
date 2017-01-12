@@ -9,11 +9,44 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable
 public class Enumerator {
     @DatabaseField(id = true)
-    public long id;
+    private long id;
     @DatabaseField
-    public double lat;
+    private double lat;
     @DatabaseField
-    public double lon;
+    private double lon;
     @DatabaseField
-    public long depot;
+    private long depot;
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLon() {
+        return lon;
+    }
+
+    public void setLon(double lon) {
+        this.lon = lon;
+    }
+
+    public long getDepot() {
+        return depot;
+    }
+
+    public void setDepot(long depot) {
+        this.depot = depot;
+    }
 }

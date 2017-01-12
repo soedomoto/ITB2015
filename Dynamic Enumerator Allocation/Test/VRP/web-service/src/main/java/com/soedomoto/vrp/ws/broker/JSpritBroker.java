@@ -13,7 +13,6 @@ import com.graphhopper.jsprit.core.problem.vehicle.VehicleImpl;
 import com.graphhopper.jsprit.core.problem.vehicle.VehicleType;
 import com.graphhopper.jsprit.core.problem.vehicle.VehicleTypeImpl;
 import com.graphhopper.jsprit.core.util.Coordinate;
-import com.graphhopper.jsprit.core.util.Solutions;
 import com.graphhopper.jsprit.core.util.VehicleRoutingTransportCostsMatrix;
 import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.DistanceMatrix;
@@ -33,6 +32,9 @@ import java.util.concurrent.ScheduledExecutorService;
  * Created by soedomoto on 08/01/17.
  */
 public class JSpritBroker extends AbstractBroker implements Runnable {
+    private Map<Long, Map<Long, Double>> durationMatrix = new HashMap();
+    private Map<Long, Map<Long, Double>> distanceMatrix = new HashMap();
+
     public JSpritBroker(ScheduledExecutorService executor, ServletContext context) {
         super(executor, context);
     }
@@ -47,29 +49,25 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
                 workingSubscribers.add(subscriberDao.queryForId(sId));
             }
 
-            //List<Subscriber> workingSubscribers = subscriberDao.queryBuilder().where().eq("is_processed", false).query();
-
             List<Enumerator> es = enumeratorDao.queryForAll();
             Map<Long, Enumerator> allEnumerators = new HashMap();
-            for(Enumerator e : es) allEnumerators.put(e.id, e);
+            for(Enumerator e : es) allEnumerators.put(e.getId(), e);
 
             List<CensusBlock> bses = censusBlockDao.queryForAll();
             Map<Long, CensusBlock> allBses = new HashMap();
             Map<Long, CensusBlock> workingBses = new HashMap();
             for(CensusBlock bs : bses) {
-                allBses.put(bs.id, bs);
-                if(bs.assignedTo == null) workingBses.put(bs.id, bs);
+                allBses.put(bs.getId(), bs);
+                if(bs.getAssignedTo() == null) workingBses.put(bs.getId(), bs);
             }
 
             List<DistanceMatrix> dm = matrixDao.queryForAll();
-            Map<Long, Map<Long, Double>> durationMatrix = new HashMap();
-            Map<Long, Map<Long, Double>> distanceMatrix = new HashMap();
             for(DistanceMatrix m : dm) {
-                if(!durationMatrix.keySet().contains(m.locationA)) durationMatrix.put(m.locationA, new HashMap());
-                durationMatrix.get(m.locationA).put(m.locationB, m.duration);
+                if(!durationMatrix.keySet().contains(m.getLocationA())) durationMatrix.put(m.getLocationA(), new HashMap());
+                durationMatrix.get(m.getLocationA()).put(m.getLocationB(), m.getDuration());
 
-                if(!distanceMatrix.keySet().contains(m.locationA)) distanceMatrix.put(m.locationA, new HashMap());
-                distanceMatrix.get(m.locationA).put(m.locationB, m.distance);
+                if(!distanceMatrix.keySet().contains(m.getLocationA())) distanceMatrix.put(m.getLocationA(), new HashMap());
+                distanceMatrix.get(m.getLocationA()).put(m.getLocationB(), m.getDistance());
             }
 
 
@@ -77,14 +75,14 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
 
 
             for(CensusBlock bs : workingBses.values()) {
-                Service.Builder builder = Service.Builder.newInstance(String.valueOf(bs.id));
+                Service.Builder builder = Service.Builder.newInstance(String.valueOf(bs.getId()));
                 builder.addSizeDimension(0, 1);
                 //builder.setTimeWindow(TimeWindow.newInstance(0.0, 0.0));
                 //builder.setServiceTime(Double.parseDouble(line[3]));
 
                 Location loc = Location.Builder.newInstance()
-                        .setId(String.valueOf(bs.id))
-                        .setCoordinate(Coordinate.newInstance(bs.lon, bs.lat))
+                        .setId(String.valueOf(bs.getId()))
+                        .setCoordinate(Coordinate.newInstance(bs.getLon(), bs.getLat()))
                         .build();
                 builder.setLocation(loc);
 
@@ -102,12 +100,12 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
             VehicleType vehicleType = vehicleTypeBuilder.build();
 
             for(Enumerator e : allEnumerators.values()) {
-                VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(String.valueOf(e.id));
+                VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(String.valueOf(e.getId()));
 
-                CensusBlock bs = allBses.get(e.depot); //censusBlockDao.queryForId(e.depot);
+                CensusBlock bs = allBses.get(e.getDepot()); //censusBlockDao.queryForId(e.depot);
                 Location loc = Location.Builder.newInstance()
-                        .setId(String.valueOf(bs.id))
-                        .setCoordinate(Coordinate.newInstance(bs.lon, bs.lat))
+                        .setId(String.valueOf(bs.getId()))
+                        .setCoordinate(Coordinate.newInstance(bs.getLon(), bs.getLat()))
                         .build();
                 builder.setStartLocation(loc);
 
@@ -139,7 +137,7 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
             algorithm.setMaxIterations(100);
 
             Collection<VehicleRoutingProblemSolution> solutions = algorithm.searchSolutions();
-            VehicleRoutingProblemSolution solution = Solutions.bestOf(solutions);
+            VehicleRoutingProblemSolution solution = this.findBest(solutions);
 
 
             Map<Long, VehicleRoute> routeMap = new HashMap();
@@ -148,17 +146,17 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
             }
 
             for(Subscriber s : workingSubscribers) {
-                if(routeMap.keySet().contains(s.subscriber)) {
+                if(routeMap.keySet().contains(s.getSubscriber())) {
                     Map<String, Object> currPath = new HashMap();
 
-                    final Location vehicleLoc = routeMap.get(s.subscriber).getVehicle().getStartLocation();
-                    currPath.put("enumerator", routeMap.get(s.subscriber).getVehicle().getId());
+                    final Location vehicleLoc = routeMap.get(s.getSubscriber()).getVehicle().getStartLocation();
+                    currPath.put("enumerator", routeMap.get(s.getSubscriber()).getVehicle().getId());
                     currPath.put("depot", vehicleLoc.getId());
                     currPath.put("depot-coord", new Double[] {vehicleLoc.getCoordinate().getY(),
                             vehicleLoc.getCoordinate().getX()});
 
-                    if(routeMap.get(s.subscriber).getActivities().size() > 0) {
-                        final TourActivity activity = routeMap.get(s.subscriber).getActivities().get(0);
+                    if(routeMap.get(s.getSubscriber()).getActivities().size() > 0) {
+                        final TourActivity activity = routeMap.get(s.getSubscriber()).getActivities().get(0);
                         currPath.put("customer", activity.getLocation().getId());
                         currPath.put("customer-coord", new Double[] {activity.getLocation().getCoordinate().getY(),
                                 activity.getLocation().getCoordinate().getX()});
@@ -174,17 +172,18 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
                         currPath.put("duration", duration);
 
                         CensusBlock bs = allBses.get(Long.valueOf(activity.getLocation().getId())); //censusBlockDao.queryForId(Long.valueOf(activity.getLocation().getId()));
-                        currPath.put("service-time", bs.serviceTime);
+                        currPath.put("service-time", bs.getServiceTime());
 
-                        bs.assignedTo = s.subscriber;
+                        bs.setAssignedTo(s.getSubscriber());
+                        bs.setAssignDate(new Date());
                         censusBlockDao.update(bs);
 
-                        s.isProcessed = true;
+                        s.setProcessed(true);
                         subscriberDao.update(s);
                     }
 
-                    asyncResponseMap.get(s.id).resume(currPath);
-                    asyncResponseMap.remove(s.id);
+                    asyncResponseMap.get(s.getId()).resume(currPath);
+                    asyncResponseMap.remove(s.getId());
 
                     try {
                         File clientLogFile = new File(serverLogDir + File.separator + currPath.get("enumerator") + ".log");
@@ -201,5 +200,35 @@ public class JSpritBroker extends AbstractBroker implements Runnable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private VehicleRoutingProblemSolution findBest(Collection<VehicleRoutingProblemSolution> solutions) {
+        VehicleRoutingProblemSolution bestSolution = null;
+        double leastDuration = Double.MAX_VALUE;
+
+        for (VehicleRoutingProblemSolution s : solutions) {
+            double duration = 0.0;
+
+            for(VehicleRoute r : s.getRoutes()) {
+                Location depot = r.getVehicle().getStartLocation();
+                if(r.getActivities().size() > 0) {
+                    TourActivity firstAct = r.getActivities().get(0);
+
+                    long a = Long.parseLong(depot.getId());
+                    long b = Long.parseLong(firstAct.getLocation().getId());
+                    if(durationMatrix.keySet().contains(a)) {
+                        if(durationMatrix.get(a).keySet().contains(b)) {
+                            duration += durationMatrix.get(a).get(b);
+                        }
+                    }
+                }
+            }
+
+            if(duration < leastDuration) {
+                bestSolution = s;
+                leastDuration = duration;
+            }
+        }
+        return bestSolution;
     }
 }

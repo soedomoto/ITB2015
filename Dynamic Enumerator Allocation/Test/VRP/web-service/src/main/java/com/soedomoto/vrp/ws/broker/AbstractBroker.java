@@ -60,29 +60,15 @@ public abstract class AbstractBroker implements Runnable {
 
         if(s == null) {
             s = new Subscriber();
-            s.subscriber = Long.valueOf(enumeratorId);
-            s.dateAdded = new Date();
+            s.setSubscriber(Long.valueOf(enumeratorId));
+            s.setDateAdded(new Date());
             int it = subscriberDao.create(s);
             if(it >= 1) {
-                asyncResponseMap.put(s.id, asyncResponse);
+                asyncResponseMap.put(s.getId(), asyncResponse);
             }
         } else {
-            asyncResponseMap.put(s.id, asyncResponse);
+            asyncResponseMap.put(s.getId(), asyncResponse);
         }
-
-        /*if(s == null) {
-            subscriberIndex++;
-
-            asyncResponseMap.put(subscriberIndex, asyncResponse);
-
-            s = new Subscriber();
-            s.id = subscriberIndex;
-            s.subscriber = Long.valueOf(enumeratorId);
-            s.dateAdded = new Date();
-            subscriberDao.create(s);
-        } else {
-            asyncResponseMap.put(s.id, asyncResponse);
-        }*/
 
         if(asyncResponseMap.size() > 0 && (currTask == null || (currTask != null && currTask.isDone()))) {
             listener = new BrokerListener() {
@@ -98,6 +84,8 @@ public abstract class AbstractBroker implements Runnable {
                     } catch (TimeoutException e) {
                         currTask.cancel(true);
                     }
+
+                    System.gc();
 
                     if(ss.size() > 0) currTask = executor.submit(AbstractBroker.this);
                 }

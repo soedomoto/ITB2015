@@ -11,6 +11,7 @@ import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.DistanceMatrix;
 import com.soedomoto.vrp.ws.model.Enumerator;
 import com.soedomoto.vrp.ws.model.Subscriber;
+import com.soedomoto.vrp.ws.ws.EventServlet;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerCollection;
@@ -55,6 +56,13 @@ public class App {
         ServletContextHandler resourceContextHandler = new ServletContextHandler();
         resourceContextHandler.setContextPath("/assets");
         resourceContextHandler.addServlet(resourceServlet, "/*");
+
+        // Websocket
+        ServletHolder wsEventServlet = new ServletHolder("ws-events", EventServlet.class);
+
+        ServletContextHandler wsContextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        wsContextHandler.setContextPath("/ws");
+        wsContextHandler.addServlet(wsEventServlet, "/*");
 
         // Jersey Servlet Handler
         ResourceConfig config = new ResourceConfig();
@@ -111,6 +119,7 @@ public class App {
         HandlerCollection handlers = new HandlerCollection();
         handlers.addHandler(jerseyContextHandler);
         handlers.addHandler(resourceContextHandler);
+        handlers.addHandler(wsContextHandler);
 
         Server server = new Server(2222);
         server.setHandler(handlers);
