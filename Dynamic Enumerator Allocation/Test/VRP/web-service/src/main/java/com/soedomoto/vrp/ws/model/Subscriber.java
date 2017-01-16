@@ -18,6 +18,10 @@ public class Subscriber {
     private Long subscriber;
     @DatabaseField(columnName = "is_processed", defaultValue = "false")
     private Boolean isProcessed;
+    @DatabaseField(columnName = "is_committed", defaultValue = "false")
+    private Boolean isCommitted;
+    @DatabaseField
+    private String response;
 
 
     public Long getId() {
@@ -50,5 +54,21 @@ public class Subscriber {
 
     public void setProcessed(Boolean processed) {
         isProcessed = processed;
+    }
+
+    public Boolean getCommitted() {
+        return isCommitted;
+    }
+
+    public void setCommitted(Boolean committed) {
+        isCommitted = committed;
+    }
+
+    public String getResponse() {
+        return response;
+    }
+
+    public void setResponse(String response) {
+        this.response = response;
     }
 }

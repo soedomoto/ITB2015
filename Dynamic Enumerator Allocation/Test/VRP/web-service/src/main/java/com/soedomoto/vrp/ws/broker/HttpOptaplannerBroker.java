@@ -28,10 +28,10 @@ import java.util.concurrent.ScheduledExecutorService;
 /**
  * Created by soedomoto on 07/01/17.
  */
-public class OptaplannerBroker extends AbstractBroker implements Runnable {
+public class HttpOptaplannerBroker extends HttpAbstractBroker implements Runnable {
     private final Solver<VehicleRoutingSolution> solver;
 
-    public OptaplannerBroker(ScheduledExecutorService executor, ServletContext context) {
+    public HttpOptaplannerBroker(ScheduledExecutorService executor, ServletContext context) {
         super(executor, context);
 
         SolverFactory<VehicleRoutingSolution> solverFactory = SolverFactory.createFromXmlResource("solver-config.xml");

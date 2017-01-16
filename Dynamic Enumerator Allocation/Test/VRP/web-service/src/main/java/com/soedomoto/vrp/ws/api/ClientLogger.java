@@ -1,4 +1,4 @@
-package com.soedomoto.vrp.ws;
+package com.soedomoto.vrp.ws.api;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.Consumes;
@@ -14,7 +14,7 @@ import java.io.*;
  * Created by soedomoto on 09/01/17.
  */
 @Path("/log")
-public class Logger {
+public class ClientLogger {
     @Context
     ServletContext context;
 

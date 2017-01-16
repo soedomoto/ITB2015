@@ -1,11 +1,11 @@
-package com.soedomoto.vrp.ws;
+package com.soedomoto.vrp.ws.api;
 
 import com.j256.ormlite.dao.Dao;
-import com.soedomoto.vrp.ws.broker.AbstractBroker;
+import com.j256.ormlite.stmt.QueryBuilder;
+import com.soedomoto.vrp.ws.broker.HttpAbstractBroker;
 import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.Enumerator;
 import org.glassfish.jersey.server.ManagedAsync;
-import org.glassfish.jersey.server.mvc.Viewable;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.GET;
@@ -18,31 +18,31 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.SQLException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by soedomoto on 07/01/17.
  */
 @Path("/")
-public class Api {
+public class HttpPubSub {
     @Context
     ServletContext context;
-
-    @GET
-    @Produces(MediaType.TEXT_HTML)
-    public Response map() throws SQLException {
-        Map<String, Object> model = new HashMap();
-        return Response.ok(new Viewable("/map.ftl", model)).build();
-    }
 
     @GET
     @Path("/enumerators")
     @Produces(MediaType.APPLICATION_JSON)
     public Response enumerators() throws SQLException {
         Dao<Enumerator, Long> enumeratorDao = (Dao<Enumerator, Long>) context.getAttribute("enumeratorDao");
-        return Response.ok(enumeratorDao.queryForAll()).build();
+        Dao<CensusBlock, Long> censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
+        List<Enumerator> enumerators = enumeratorDao.queryForAll();
+
+        for(Enumerator e: enumerators) {
+            CensusBlock currDepot = censusBlockDao.queryForId(e.getDepot());
+            e.setLat(currDepot.getLat());
+            e.setLon(currDepot.getLon());
+        }
+
+        return Response.ok(enumerators).build();
     }
 
     @GET
@@ -54,11 +54,55 @@ public class Api {
     }
 
     @GET
+    @Path("/visits/{enumerator}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response visits(@PathParam("enumerator") String enumeratorId) throws SQLException {
+        Dao<CensusBlock, Long> censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
+
+        List<CensusBlock> visitedLocations = censusBlockDao.queryBuilder().where()
+                .eq("visited_by", Long.valueOf(enumeratorId))
+                .query();
+        return Response.ok(visitedLocations).build();
+    }
+
+    @GET
+    @Path("/routes/{enumerator}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response routes(@PathParam("enumerator") String enumeratorId) throws SQLException {
+        Dao<CensusBlock, Long> censusBlockDao = (Dao<CensusBlock, Long>) context.getAttribute("censusBlockDao");
+        Dao<Enumerator, Long> enumeratorDao = (Dao<Enumerator, Long>) context.getAttribute("enumeratorDao");
+
+        List<Map<String, Object>> allServices = new ArrayList();
+
+        Enumerator e = enumeratorDao.queryForId(Long.valueOf(enumeratorId));
+        Map<String, Object> s = new HashMap();
+        s.put("id", e.getId());
+        s.put("lat", e.getLat());
+        s.put("lon", e.getLon());
+        allServices.add(s);
+
+        QueryBuilder<CensusBlock, Long> qb = censusBlockDao.queryBuilder();
+        qb.where().eq("visited_by", Long.valueOf(enumeratorId));
+        qb.orderBy("visit_date", true);
+        List<CensusBlock> visitedLocations = qb.query();
+
+        for(CensusBlock bs : visitedLocations) {
+            s = new HashMap();
+            s.put("id", bs.getId());
+            s.put("lat", bs.getLat());
+            s.put("lon", bs.getLon());
+            allServices.add(s);
+        }
+
+        return Response.ok(allServices).build();
+    }
+
+    @GET
     @Path("/subscribe/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public void subscribe(@PathParam("id") final String enumeratorId, @Suspended final AsyncResponse asyncResponse)
             throws SQLException {
-        AbstractBroker broker = (AbstractBroker) context.getAttribute("broker");
+        HttpAbstractBroker broker = (HttpAbstractBroker) context.getAttribute("broker");
         broker.subscribe(enumeratorId, asyncResponse);
     }
 

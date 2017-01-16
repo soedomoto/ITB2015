@@ -6,6 +6,7 @@ import com.soedomoto.vrp.ws.model.CensusBlock;
 import com.soedomoto.vrp.ws.model.DistanceMatrix;
 import com.soedomoto.vrp.ws.model.Enumerator;
 import com.soedomoto.vrp.ws.model.Subscriber;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.container.AsyncResponse;
@@ -16,7 +17,9 @@ import java.util.concurrent.*;
 /**
  * Created by soedomoto on 08/01/17.
  */
-public abstract class AbstractBroker implements Runnable {
+public abstract class HttpAbstractBroker implements Runnable {
+    private final static Logger LOG = Logger.getLogger(HttpAbstractBroker.class.getName());
+
     protected final ScheduledExecutorService executor;
     protected final ServletContext context;
 
@@ -25,14 +28,13 @@ public abstract class AbstractBroker implements Runnable {
     protected final Dao<DistanceMatrix, Long> matrixDao;
     protected final Dao<Subscriber, Long> subscriberDao;
 
-    protected long subscriberIndex = -1;
     protected List<Long> subscribers = new LinkedList();
     protected List<AsyncResponse> asyncResponses = new LinkedList();
     protected Map<Long, AsyncResponse> asyncResponseMap = new HashMap();
     protected Future<?> currTask;
     protected BrokerListener listener;
 
-    public AbstractBroker(ScheduledExecutorService executor, ServletContext context) {
+    public HttpAbstractBroker(ScheduledExecutorService executor, ServletContext context) {
         this.executor = executor;
         this.context = context;
 
@@ -41,20 +43,29 @@ public abstract class AbstractBroker implements Runnable {
         matrixDao = (Dao<DistanceMatrix, Long>) context.getAttribute("distanceMatrixDao");
         subscriberDao = (Dao<Subscriber, Long>) context.getAttribute("subscriberDao");
 
-        String[] maxSubIds = new String[0];
-        try {
-            maxSubIds = subscriberDao.queryBuilder().selectRaw("MAX(id)").queryRawFirst();
-            if(maxSubIds != null && maxSubIds[0] != null) subscriberIndex = Long.parseLong(maxSubIds[0]);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        LOG.debug("Broker is initialized");
     }
 
     public void run() {}
 
     public void subscribe(String enumeratorId, AsyncResponse asyncResponse) throws SQLException {
         QueryBuilder<Subscriber, Long> qb = subscriberDao.queryBuilder();
-        Subscriber s = qb.where()
+
+        // Check whether there is uncommitted response to this enumerator
+        Subscriber s = qb.where().eq("subscriber", enumeratorId).and()
+                .eq("is_processed", true).and()
+                .eq("is_committed", false).queryForFirst();
+        if(s != null) {
+            asyncResponse.resume(s.getResponse());
+
+            s.setCommitted(true);
+            subscriberDao.update(s);
+
+            return;
+        }
+
+        // If there is unprocessed subsribe, process it
+        s = qb.where()
                 .eq("subscriber", enumeratorId).and()
                 .eq("is_processed", false).queryForFirst();
 
@@ -70,11 +81,11 @@ public abstract class AbstractBroker implements Runnable {
             asyncResponseMap.put(s.getId(), asyncResponse);
         }
 
+        LOG.debug(String.format("Enumerator %s is subscribing. Assigned with ID %s", enumeratorId, s.getId()));
+
         if(asyncResponseMap.size() > 0 && (currTask == null || (currTask != null && currTask.isDone()))) {
             listener = new BrokerListener() {
                 public void finish() throws SQLException {
-                    List<Subscriber> ss = subscriberDao.queryBuilder().where().eq("is_processed", false).query();
-
                     try {
                         currTask.get(5, TimeUnit.SECONDS);
                     } catch (InterruptedException e) {
@@ -87,11 +98,18 @@ public abstract class AbstractBroker implements Runnable {
 
                     System.gc();
 
-                    if(ss.size() > 0) currTask = executor.submit(AbstractBroker.this);
+                    List<Subscriber> ss = subscriberDao.queryBuilder().where().eq("is_processed", false).query();
+                    for(Subscriber s : ss) {
+                        if(! asyncResponseMap.keySet().contains(s.getId())) {
+                            subscriberDao.delete(s);
+                        }
+                    }
+
+                    if(asyncResponseMap.size() > 0) currTask = executor.submit(HttpAbstractBroker.this);
                 }
             };
 
-            currTask = executor.schedule(this, 15, TimeUnit.SECONDS);
+            currTask = executor.schedule(this, 5, TimeUnit.SECONDS);
         }
     }
 }
