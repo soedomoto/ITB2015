@@ -181,13 +181,29 @@ public class App {
         tsOpt.setRequired(false);
         options.addOption(tsOpt);
 
-        CommandLineParser parser = new DefaultParser();
+        Option helpOpt = new Option("h", "help", false, "Print help");
+        helpOpt.setRequired(false);
+        options.addOption(helpOpt);
+
+        String header = "Run location recommendation server\n\n";
+        String footer = "\nPlease report issues at soedomoto@gmail.com";
+
+        HelpFormatter formatter = new HelpFormatter();
 
         try {
+            CommandLineParser parser = new DefaultParser();
             CommandLine cmd = parser.parse( options, args);
+
+            if(cmd.hasOption("h")) {
+                formatter.printHelp("vrp-web-service", header, options, footer, true);
+                return;
+            }
+
             new App(cmd);
         } catch (ParseException e) {
             LOG.error(e.getMessage());
+
+            formatter.printHelp("vrp-web-service", header, options, footer, true);
         }
     }
 }
