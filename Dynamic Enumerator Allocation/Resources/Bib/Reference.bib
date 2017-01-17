@@ -718,6 +718,41 @@
 	file = {[PDF] oregonstate.edu:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/ZDES3H92/Patterson et al. - 2003 - Challenges in location-aware computing.pdf:application/pdf;Snapshot:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/T5J6Z3EM/1203757.html:text/html}
 }
 
+@inproceedings{fabret_filtering_2001,
+	address = {New York, NY, USA},
+	series = {{SIGMOD} '01},
+	title = {Filtering {Algorithms} and {Implementation} for {Very} {Fast} {Publish}/{Subscribe} {Systems}},
+	isbn = {978-1-58113-332-5},
+	url = {http://doi.acm.org/10.1145/375663.375677},
+	doi = {10.1145/375663.375677},
+	abstract = {Publish/Subscribe is the paradigm in which users express long-term interests (“subscriptions”) and some agent “publishes” events (e.g., offers). The job of Publish/Subscribe software is to send events to the owners of subscriptions satisfied by those events. For example, a user subscription may consist of an interest in an airplane of a certain type, not to exceed a certain price. A published event may consist of an offer of an airplane with certain properties including price. Each subscription consists of a conjunction of (attribute, comparison operator, value) predicates. A subscription closely resembles a trigger in that it is a long-lived conditional query associated with an action (usually, informing the subscriber). However, it is less general than a trigger so novel data structures and implementations may enable the creation of more scalable, high performance publish/subscribe systems. This paper describes an attempt at the construction of such algorithms and its implementation. Using a combination of data structures, application-specific caching policies, and application-specific query processing our system can handle 600 events per second for a typical workload containing 6 million subscriptions.},
+	urldate = {2017-01-10},
+	booktitle = {Proceedings of the 2001 {ACM} {SIGMOD} {International} {Conference} on {Management} of {Data}},
+	publisher = {ACM},
+	author = {Fabret, Françoise and Jacobsen, H. Arno and Llirbat, François and Pereira, Joăo and Ross, Kenneth A. and Shasha, Dennis},
+	year = {2001},
+	pages = {115--126},
+	file = {ACM Full Text PDF:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/ZUVPSBMS/Fabret et al. - 2001 - Filtering Algorithms and Implementation for Very F.pdf:application/pdf}
+}
+
+@inproceedings{chen_efficient_2003-1,
+	address = {New York, NY, USA},
+	series = {{DEBS} '03},
+	title = {An {Efficient} {Spatial} {Publish}/{Subscribe} {System} for {Intelligent} {Location}-based {Services}},
+	isbn = {978-1-58113-843-6},
+	url = {http://doi.acm.org/10.1145/966618.966625},
+	doi = {10.1145/966618.966625},
+	abstract = {The advance in wireless Internet and mobile computing brought the booming of intelligent Location-Based Services(LBS), which can actively push location-dependent information to mobile users according to their predefined interest. The successful development of push-based LBS applications relies on the existence of a publish/subscribe middleware that can handle spatial relationship. This paper presents an efficient spatial publish/subscribe system that can serve as the middleware for intelligent LBS applications. The basic models, including spatial event model, spatial subscription model and notification model, are introduced and the over-all architecture is presented. Two kinds of spatial predicate that can meet most common requirement of intelligent location aware applications are also discussed. Furthermore, we propose a novel spatial event processing approach that dispatches the spatial subscriptions to self-positioning mobile devices. By leveraging client-side computing resource and decreasing the communication times, the server-side workload is relieved and the communication cost is reduced. Experimental results clearly demonstrate the efficiency of our approach.},
+	urldate = {2017-01-10},
+	booktitle = {Proceedings of the 2Nd {International} {Workshop} on {Distributed} {Event}-based {Systems}},
+	publisher = {ACM},
+	author = {Chen, Xiaoyan and Chen, Ying and Rao, Fangyan},
+	year = {2003},
+	keywords = {event-based systems, location-based service, spatial publish/subscribe},
+	pages = {1--6},
+	file = {ACM Full Text PDF:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/IP3J9FMV/Chen et al. - 2003 - An Efficient Spatial PublishSubscribe System for .pdf:application/pdf}
+}
+
 @article{dorigo_ant_1997,
 	title = {Ant colonies for the travelling salesman problem},
 	volume = {43},
@@ -879,4 +914,105 @@
 	author = {jsprit},
 	year = {2014},
 	file = {jsprit | java toolkit for rich VRPs and TSPs:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/V8ISBRSC/jsprit.github.io.html:text/html}
+}
+
+@inproceedings{kondekar_mapreduce_2012,
+	title = {A {MapReduce} based hybrid genetic algorithm using island approach for solving time dependent vehicle routing problem},
+	volume = {1},
+	doi = {10.1109/ICCISci.2012.6297251},
+	abstract = {The vehicle routing problem (VRP) is a well-known combinatorial optimization problem, seeking to service a number of customers with a fleet of vehicles. It is an important problem in field of distribution, transportation and logistics. But the traditional VRP doesn't consider the traffic condition of the road network. In this paper we provide a mapreduce based hybrid genetic solution using island approach for solving large scale vehicle routing problems in dynamic network with fluctuant link travel time. We used a hybrid approach for generating a mélange of both random and locally optimized population using routing construction algorithms (NNC, Savings and Random). Island model is used for parallelization of genetic algorithm as it has been informally argued that having multiple subpopulations helps to preserve genetic diversity, since each island can potentially follow a different search trajectory through the search space. Various local search methods such as 2-opt have been applied for improving the routes. Our algorithm design and implementation of TDVRPTW is deployed on Hadoop, an open source implementation of MapReduce. Computation results of test problems on a distributed platform showed a tremendous improvement, both in terms of computation time and efficiency.},
+	booktitle = {2012 {International} {Conference} on {Computer} {Information} {Science} ({ICCIS})},
+	author = {Kondekar, R. and Gupta, A. and Saluja, G. and Maru, R. and Rokde, A. and Deshpande, P.},
+	month = jun,
+	year = {2012},
+	keywords = {combinatorial optimization problem, Genetic Algorithm, genetic algorithms, Hadoop, hybrid genetic algorithm, island approach, large scale vehicle routing problems, local search method, logistics, Maintenance engineering, MapReduce, MapReduce Framework, road traffic, routing construction algorithm, search problems, search trajectory, Sociology, Statistics, TDVRPTW, time dependent vehicle routing problem, Time Windows, Traffic Situation, Transportation, travelling salesman problems},
+	pages = {263--269},
+	file = {IEEE Xplore Abstract Record:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/X7VGEI2I/6297251.html:text/html;IEEE Xplore Full Text PDF:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/DKQJ5XVJ/Kondekar et al. - 2012 - A MapReduce based hybrid genetic algorithm using i.pdf:application/pdf}
+}
+
+@article{bae_multi-depot_2016,
+	title = {Multi-depot vehicle routing problem with time windows considering delivery and installation vehicles},
+	volume = {40},
+	issn = {0307-904X},
+	url = {http://www.sciencedirect.com/science/article/pii/S0307904X16300555},
+	doi = {10.1016/j.apm.2016.01.059},
+	abstract = {We extend the multi-depot vehicle routing problem with time windows (MDVRPTW), a practical and challenging problem in logistics and supply chain management, to a study of service vehicles used for delivery and installation of electronics. This study shows that MDVRPTW results can be used to minimize fixed costs of the depots and the delivery and installation vehicles as well as expenses related to travel distances and labor. Along with a mixed integer programming model, we develop a heuristic and a genetic algorithm to identify a near-optimal solution. Computational results demonstrate that the proposed algorithms can efficiently be used to solve relatively large problems.},
+	number = {13–14},
+	urldate = {2017-01-02},
+	journal = {Applied Mathematical Modelling},
+	author = {Bae, Heechul and Moon, Ilkyeong},
+	month = jul,
+	year = {2016},
+	keywords = {Delivery and installation vehicles, Genetic Algorithm, Multiple depots, Vehicle routing problem},
+	pages = {6536--6549},
+	file = {ScienceDirect Full Text PDF:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/B8NN37ZT/Bae and Moon - 2016 - Multi-depot vehicle routing problem with time wind.pdf:application/pdf;ScienceDirect Snapshot:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/IE3BCN54/S0307904X16300555.html:text/html}
+}
+
+@article{wang_minmax_2016,
+	title = {The min–max split delivery multi-depot vehicle routing problem with minimum service time requirement},
+	volume = {71},
+	issn = {0305-0548},
+	url = {http://www.sciencedirect.com/science/article/pii/S0305054816000101},
+	doi = {10.1016/j.cor.2016.01.008},
+	abstract = {The min–max Split Delivery Multi-Depot Vehicle Routing Problem with Minimum Service Time Requirement (min–max SDMDVRP-MSTR) is a variant of the Multi-Depot Vehicle Routing Problem. Each customer requires a specified amount of service time. The service time can be split among vehicles as long as each vehicle spends a minimum amount of service time at a customer. The objective is to minimize the duration of the longest route (where duration is the sum of travel and service times).
+
+We develop a heuristic (denoted by MDS) that solves the min–max SDMDVRP-MSTR in three stages: (1) initialize a feasible solution without splits; (2) improve the longest routes by splitting service times; (3) ensure all minimum service time requirements are satisfied. The first stage of MDS is compared to an existing heuristic to solve the min–max Multi-Depot Vehicle Routing Problem on 43 benchmark instances. MDS produces 37 best-known solutions. We also demonstrate the effectiveness of MDS on 21 new instances whose (near) optimal solutions can be estimated based on geometry. Finally, we investigate the savings from split service and the split patterns as we vary the required service times, the average number of customers per route, and the minimum service time requirement.},
+	urldate = {2017-01-02},
+	journal = {Computers \& Operations Research},
+	author = {Wang, Xingyin and Golden, Bruce and Wasil, Edward and Zhang, Rui},
+	month = jul,
+	year = {2016},
+	keywords = {Minimum service time requirement, Min–max, Multi-depot, Service times, Split delivery, Vehicle routing},
+	pages = {110--126},
+	file = {ScienceDirect Full Text PDF:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/U5D4GPXK/Wang et al. - 2016 - The min–max split delivery multi-depot vehicle rou.pdf:application/pdf;ScienceDirect Snapshot:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/T259M3Q6/S0305054816000101.html:text/html}
+}
+
+@article{dondo_cluster-based_2007,
+	title = {A cluster-based optimization approach for the multi-depot heterogeneous fleet vehicle routing problem with time windows},
+	volume = {176},
+	issn = {0377-2217},
+	url = {http://www.sciencedirect.com/science/article/pii/S0377221705008672},
+	doi = {10.1016/j.ejor.2004.07.077},
+	abstract = {This paper presents a novel three-phase heuristic/algorithmic approach for the multi-depot routing problem with time windows and heterogeneous vehicles. It has been derived from embedding a heuristic-based clustering algorithm within a VRPTW optimization framework. To this purpose, a rigorous MILP mathematical model for the VRPTW problem is first introduced. Likewise other optimization approaches, the new formulation can efficiently solve case studies involving at most 25 nodes to optimality. To overcome this limitation, a preprocessing stage clustering nodes together is initially performed to yield a more compact cluster-based MILP problem formulation. In this way, a hierarchical hybrid procedure involving one heuristic and two algorithmic phases was developed. Phase I aims to identifying a set of cost-effective feasible clusters while Phase II assigns clusters to vehicles and sequences them on each tour by using the cluster-based MILP formulation. Ordering nodes within clusters and scheduling vehicle arrival times at customer locations for each tour through solving a small MILP model is finally performed at Phase III. Numerous benchmark problems featuring different sizes, clustered/random customer locations and time window distributions have been solved at acceptable CPU times.},
+	number = {3},
+	urldate = {2017-01-02},
+	journal = {European Journal of Operational Research},
+	author = {Dondo, Rodolfo and Cerdá, Jaime},
+	month = feb,
+	year = {2007},
+	keywords = {logistics, Routing, Scheduling, Transportation},
+	pages = {1478--1507},
+	file = {ScienceDirect Full Text PDF:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/NXIC4S3C/Dondo and Cerdá - 2007 - A cluster-based optimization approach for the mult.pdf:application/pdf;ScienceDirect Snapshot:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/URXSX7FI/S0377221705008672.html:text/html}
+}
+
+@misc{optaplanner_constraint_2016,
+	title = {Constraint satisfaction solver ({Java}™, {Open} {Source})},
+	url = {https://www.optaplanner.org/},
+	abstract = {OptaPlanner optimizes business resource usage. It is a lightweight, embeddable, open source planning engine, written in 100\% Java.},
+	urldate = {2017-01-10},
+	journal = {OptaPlanner},
+	author = {OptaPlanner},
+	year = {2016},
+	file = {Snapshot:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/K8B44RAU/www.optaplanner.org.html:text/html}
+}
+
+@misc{paul_e._black_greedy_2005,
+	title = {greedy algorithm},
+	url = {https://xlinux.nist.gov/dads//HTML/greedyalgo.html},
+	urldate = {2017-01-14},
+	author = {Paul E. Black},
+	month = feb,
+	year = {2005},
+	file = {greedy algorithm:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/JESJEC59/greedyalgo.html:text/html}
+}
+
+@article{antosiewicz_choice_2013,
+	title = {Choice of best possible metaheuristic algorithm for the travelling salesman problem with limited computational time: quality, uncertainty and speed},
+	volume = {7},
+	issn = {2299-2634},
+	number = {1},
+	journal = {Journal of Theoretical and Applied Computer Science},
+	author = {Antosiewicz, M. and Koloch, G. and Kamiński, B.},
+	year = {2013},
+	pages = {46--55}
 }

@@ -8,12 +8,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Dataset}{9}{subsection.4.1.1}}
 \newlabel{ssec:mtsp_dataset}{{4.1.1}{9}{Dataset}{subsection.4.1.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.1}Lokasi Pencacahan}{9}{subsubsection.4.1.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.2}Pencacah}{9}{subsubsection.4.1.1.2}}
 \citation{google_google_2016}
-\citation{jsprit_jsprit_2014}
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Lokasi Pencacahan\relax }}{10}{table.caption.16}}
 \newlabel{tbl:enumeration_locations}{{4.1}{10}{Lokasi Pencacahan\relax }{table.caption.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.2}Pencacah}{10}{subsubsection.4.1.1.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.3}Jarak dan Waktu Tempuh}{10}{subsubsection.4.1.1.3}}
+\citation{jsprit_jsprit_2014}
+\citation{optaplanner_constraint_2016}
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Pencacah\relax }}{11}{table.caption.17}}
 \newlabel{tbl:enumerator}{{4.2}{11}{Pencacah\relax }{table.caption.17}{}}
 \@writefile{lol}{\contentsline {listing}{\numberline {4.1}{\ignorespaces Google Direction API Request\relax }}{11}{listing.4.1}}
@@ -21,29 +22,33 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}\textit  {Library} dan Implementasi}{11}{subsection.4.1.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Google Direction API Response\relax }}{12}{figure.caption.18}}
 \newlabel{fig:google_direction_api_response}{{4.1}{12}{Google Direction API Response\relax }{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.1}Definisi Masalah}{12}{subsubsection.4.1.2.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.2}Definisi Algoritma}{12}{subsubsection.4.1.2.2}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Matriks Jarak dan Waktu Tempuh\relax }}{13}{table.caption.19}}
-\newlabel{tbl:distance_duration_matrix}{{4.3}{13}{Matriks Jarak dan Waktu Tempuh\relax }{table.caption.19}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.3}Pencarian Solusi dan Penentuan Solusi Terbaik}{13}{subsubsection.4.1.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Hasil dan Analisis}{13}{subsection.4.1.3}}
-\@writefile{lol}{\contentsline {listing}{\numberline {4.2}{\ignorespaces Definisi Lokasi Pencacahan dari File .csv\relax }}{14}{listing.4.2}}
-\newlabel{lst:jsprit_define_locations}{{4.2}{14}{Definisi Lokasi Pencacahan dari File .csv\relax }{listing.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Perancangan}{14}{section.4.2}}
-\@writefile{lol}{\contentsline {listing}{\numberline {4.3}{\ignorespaces Definisi Pencacah dari File .csv\relax }}{15}{listing.4.3}}
-\newlabel{lst:jsprit_define_enumerators}{{4.3}{15}{Definisi Pencacah dari File .csv\relax }{listing.4.3}{}}
-\@writefile{lol}{\contentsline {listing}{\numberline {4.4}{\ignorespaces Definisi Penimbang Jarak dan Waktu Tempuh dari File .csv\relax }}{16}{listing.4.4}}
-\newlabel{lst:jsprit_define_route_weights}{{4.4}{16}{Definisi Penimbang Jarak dan Waktu Tempuh dari File .csv\relax }{listing.4.4}{}}
-\@writefile{lol}{\contentsline {listing}{\numberline {4.5}{\ignorespaces Build Problem\relax }}{16}{listing.4.5}}
-\newlabel{lst:jsprit_build_problem}{{4.5}{16}{Build Problem\relax }{listing.4.5}{}}
-\@writefile{lol}{\contentsline {listing}{\numberline {4.6}{\ignorespaces Penentuan Algoritma\relax }}{16}{listing.4.6}}
-\newlabel{lst:jsprit_create_algorithm}{{4.6}{16}{Penentuan Algoritma\relax }{listing.4.6}{}}
-\@writefile{lol}{\contentsline {listing}{\numberline {4.7}{\ignorespaces Pencarian Solusi\relax }}{16}{listing.4.7}}
-\newlabel{lst:jsprit_search_solution}{{4.7}{16}{Pencarian Solusi\relax }{listing.4.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Grafik Rekomendasi dengan MTSP\relax }}{17}{figure.caption.20}}
-\newlabel{fig:analysis_mtsp_recommendation}{{4.2}{17}{Grafik Rekomendasi dengan MTSP\relax }{figure.caption.20}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Total Waktu Setiap Pencacah dengan MTSP\relax }}{17}{table.caption.21}}
-\newlabel{tbl:enumerators_total_time}{{4.4}{17}{Total Waktu Setiap Pencacah dengan MTSP\relax }{table.caption.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Matriks Jarak dan Waktu Tempuh\relax }}{12}{table.caption.19}}
+\newlabel{tbl:distance_duration_matrix}{{4.3}{12}{Matriks Jarak dan Waktu Tempuh\relax }{table.caption.19}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.1}Definisi Masalah}{13}{subsubsection.4.1.2.1}}
+\@writefile{lol}{\contentsline {listing}{\numberline {4.2}{\ignorespaces Definisi Lokasi Pencacahan\relax }}{13}{listing.4.2}}
+\newlabel{lst:jsprit_define_locations}{{4.2}{13}{Definisi Lokasi Pencacahan\relax }{listing.4.2}{}}
+\@writefile{lol}{\contentsline {listing}{\numberline {4.3}{\ignorespaces Definisi Pencacah dari File .csv\relax }}{13}{listing.4.3}}
+\newlabel{lst:jsprit_define_enumerators}{{4.3}{13}{Definisi Pencacah dari File .csv\relax }{listing.4.3}{}}
+\@writefile{lol}{\contentsline {listing}{\numberline {4.4}{\ignorespaces Definisi Penimbang Jarak dan Waktu Tempuh dari File .csv\relax }}{14}{listing.4.4}}
+\newlabel{lst:jsprit_define_route_weights}{{4.4}{14}{Definisi Penimbang Jarak dan Waktu Tempuh dari File .csv\relax }{listing.4.4}{}}
+\@writefile{lol}{\contentsline {listing}{\numberline {4.5}{\ignorespaces Build Problem\relax }}{14}{listing.4.5}}
+\newlabel{lst:jsprit_build_problem}{{4.5}{14}{Build Problem\relax }{listing.4.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.2}Definisi Algoritma}{14}{subsubsection.4.1.2.2}}
+\@writefile{lol}{\contentsline {listing}{\numberline {4.6}{\ignorespaces Penentuan Algoritma\relax }}{14}{listing.4.6}}
+\newlabel{lst:jsprit_create_algorithm}{{4.6}{14}{Penentuan Algoritma\relax }{listing.4.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.3}Pencarian Solusi dan Penentuan Solusi Terbaik}{14}{subsubsection.4.1.2.3}}
+\@writefile{lol}{\contentsline {listing}{\numberline {4.7}{\ignorespaces Pencarian Solusi\relax }}{15}{listing.4.7}}
+\newlabel{lst:jsprit_search_solution}{{4.7}{15}{Pencarian Solusi\relax }{listing.4.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Hasil dan Analisis}{15}{subsection.4.1.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Grafik Rekomendasi dengan MTSP\relax }}{15}{figure.caption.20}}
+\newlabel{fig:analysis_mtsp_recommendation}{{4.2}{15}{Grafik Rekomendasi dengan MTSP\relax }{figure.caption.20}{}}
+\citation{antosiewicz_choice_2013}
+\citation{paul_e._black_greedy_2005}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Total Waktu Setiap Pencacah dengan MTSP\relax }}{16}{table.caption.21}}
+\newlabel{tbl:enumerators_total_time}{{4.4}{16}{Total Waktu Setiap Pencacah dengan MTSP\relax }{table.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Perancangan}{16}{section.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Pencarian Solusi}{16}{subsection.4.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Greedy Strategy}{17}{subsection.4.2.2}}
 \@writefile{lol}{\contentsline {listing}{\numberline {4.8}{\ignorespaces Rekomendasi dengan MTSP\relax }}{18}{listing.4.8}}
 \newlabel{lst:analysis_mtsp_recommendation}{{4.8}{18}{Rekomendasi dengan MTSP\relax }{listing.4.8}{}}
 \@writefile{lol}{\contentsline {listing}{\numberline {4.9}{\ignorespaces Algoritma Solusi Terbaik\relax }}{19}{listing.4.9}}
@@ -64,7 +69,7 @@
 \setcounter{part}{0}
 \setcounter{chapter}{4}
 \setcounter{section}{2}
-\setcounter{subsection}{0}
+\setcounter{subsection}{2}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
@@ -72,7 +77,7 @@
 \setcounter{table}{4}
 \setcounter{Item}{5}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{33}
+\setcounter{bookmark@seq@number}{35}
 \setcounter{ContinuedFloat}{0}
 \setcounter{parentequation}{0}
 \setcounter{AM@survey}{0}
@@ -89,6 +94,6 @@
 \setcounter{tcbbreakpart}{1}
 \setcounter{tcblayer}{0}
 \setcounter{NAT@ctr}{0}
-\setcounter{section@level}{1}
+\setcounter{section@level}{2}
 \setcounter{lstlisting}{0}
 }

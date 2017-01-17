@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  21 DEC 2016 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  14 JAN 2017 21:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -880,7 +880,7 @@ LaTeX Warning: Label `fig:capi-ilustration' multiply defined.
 
 ) (./bab2.aux) (./bab3.aux) (./bab4.aux) (./bab5.aux) (./kesimpulan.aux)
 (./pustaka.aux) (./markLampiran.aux) (./lampiran_1.aux) (./lampiran_2.aux)
-(./lampiran_3.aux))
+(./lampiran_3.aux) (./lampiran_4.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -892,7 +892,8 @@ LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 30.
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 30
 .
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    ... okay on input line 30.
@@ -904,7 +905,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 \AtBeginShipoutBox=\box85
 Package hyperref Info: Link coloring OFF on input line 30.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -999,7 +1001,7 @@ ABD: EveryShipout initializing macros
 \openout2 = `sampul.aux'.
 
  (./sampul.tex
-<../../Resources/Images/itb.png, id=193, 401.5pt x 539.01375pt>
+<../../Resources/Images/itb.png, id=206, 401.5pt x 539.01375pt>
 File: ../../Resources/Images/itb.png Graphic file (type png)
 
 <use ../../Resources/Images/itb.png>
@@ -1117,7 +1119,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 \openout2 = `pengantar.aux'.
 
  (./pengantar.tex
-<pics/creative_common.png, id=222, 759.83875pt x 645.41125pt>
+<pics/creative_common.png, id=234, 759.83875pt x 645.41125pt>
 File: pics/creative_common.png Graphic file (type png)
 
 <use pics/creative_common.png>
@@ -1129,7 +1131,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<pics/mark.png, id=227, 336.25626pt x 66.2475pt>
+<pics/mark.png, id=239, 336.25626pt x 66.2475pt>
 File: pics/mark.png Graphic file (type png)
  <use pics/mark.png>
 Package pdftex.def Info: pics/mark.png used on input line 61.
@@ -1281,7 +1283,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 2.
 
 
-<../../Resources/Images/peta_kelurahan_per_bs.png, id=457, 756.8275pt x 434.623
+<../../Resources/Images/peta_kelurahan_per_bs.png, id=478, 756.8275pt x 434.623
 75pt>
 File: ../../Resources/Images/peta_kelurahan_per_bs.png Graphic file (type png)
  <use ../../Resources/Images/peta_kelurahan_per_bs.png>
@@ -1298,7 +1300,7 @@ l.22
 
 
  <../../Resources/Images/peta_kelurahan_per_bs.png>]
-<../../Resources/Images/context.png, id=477, 796.9775pt x 227.85126pt>
+<../../Resources/Images/context.png, id=498, 796.9775pt x 227.85126pt>
 File: ../../Resources/Images/context.png Graphic file (type png)
 
 <use ../../Resources/Images/context.png>
@@ -1323,7 +1325,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3 <../../Resources/Images/context.png>]
-<../../Resources/Images/mtsp.jpeg, id=563, 435.6275pt x 337.26pt>
+<../../Resources/Images/mtsp.jpeg, id=584, 435.6275pt x 337.26pt>
 File: ../../Resources/Images/mtsp.jpeg Graphic file (type jpg)
 
 <use ../../Resources/Images/mtsp.jpeg>
@@ -1409,9 +1411,6 @@ BAB 4.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 2.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [9
 
 
@@ -1420,25 +1419,28 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 99.
+t line 96.
 \openout3 = `thesis.pyg'.
 
 
 (./_minted-thesis/9D7293F1CB2C6C017F71DC18C9C9ADB12048E4B8FAEE610F4ACDAFDEFBC1B
 252.pygtex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-<../../Resources/Images/google_direction_api_response.png, id=620, 685.56125pt 
-x 623.32875pt>
+<../../Resources/Images/google_direction_api_response.png, id=643, 685.56125pt 
+x 334.24875pt>
 File: ../../Resources/Images/google_direction_api_response.png Graphic file (ty
 pe png)
  <use ../../Resources/Images/google_direction_api_response.png>
 Package pdftex.def Info: ../../Resources/Images/google_direction_api_response.p
-ng used on input line 111.
-(pdftex.def)             Requested size: 398.3386pt x 362.1872pt.
+ng used on input line 108.
+(pdftex.def)             Requested size: 398.3386pt x 194.21631pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1447,14 +1449,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 146.
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10]
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 141.
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1462,33 +1457,35 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <../../Resources/Images/google_direction_api_response.png>]
 \openout3 = `thesis.pyg'.
 
 
-(./_minted-thesis/CE32E391F86849E834A1321E3A1552D71E135294BC5DCAC02D3AE6775D585
+(./_minted-thesis/87F91BBB5FAF734C575FA05B766AF8C91E135294BC5DCAC02D3AE6775D585
 5C8.pygtex
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 4.
 )
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 \openout3 = `thesis.pyg'.
 
 
-(./_minted-thesis/5B7B8464E87C6A0541DFF5B122634E641E135294BC5DCAC02D3AE6775D585
-5C8.pygtex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(./_minted-thesis/FB6E7759B203310093113B4AFC3173191E135294BC5DCAC02D3AE6775D585
+5C8.pygtex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+)
 \openout3 = `thesis.pyg'.
 
 
-(./_minted-thesis/8D17BEEABAF03E05F1A6306882E2F3781E135294BC5DCAC02D3AE6775D585
+(./_minted-thesis/37CBBFB912D58B6F3C5D24E69AF1E47F1E135294BC5DCAC02D3AE6775D585
 5C8.pygtex)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1507,15 +1504,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <../../Resources/Images/google_direction_api_response.png>]
+[13]
 \openout3 = `thesis.pyg'.
 
 
-(./_minted-thesis/39FD358FA1ED48905629226C74FE07EA1E135294BC5DCAC02D3AE6775D585
+(./_minted-thesis/584E3B4B0AF6A1E82221A13BE3211FE71E135294BC5DCAC02D3AE6775D585
 5C8.pygtex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 \openout3 = `thesis.pyg'.
 
 
@@ -1525,18 +1519,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<../../Resources/Images/analysis_mtsp_no_time_windows.png, id=654, 1003.75pt x 
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+<../../Resources/Images/analysis_mtsp_no_time_windows.png, id=683, 1003.75pt x 
 602.25pt>
 File: ../../Resources/Images/analysis_mtsp_no_time_windows.png Graphic file (ty
 pe png)
  <use ../../Resources/Images/analysis_mtsp_no_time_windows.png>
 Package pdftex.def Info: ../../Resources/Images/analysis_mtsp_no_time_windows.p
-ng used on input line 320.
+ng used on input line 281.
 (pdftex.def)             Requested size: 398.3386pt x 239.00267pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 \openout3 = `thesis.pyg'.
 
 
@@ -1554,7 +1550,19 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
+[15 <../../Resources/Images/analysis_mtsp_no_time_windows.png>]
+Underfull \hbox (badness 2744) in paragraph at lines 357--358
+\OT1/ptm/m/n/12 Algoritma \OT1/ptm/m/it/12 greedy \OT1/ptm/m/n/12 adalah su-atu
+ al-go-ritma yang menen-tukan so-lusi op-ti-mal
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
 \openout3 = `thesis.pyg'.
 
 
@@ -1563,13 +1571,6 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14]
 \openout3 = `thesis.pyg'.
 
 
@@ -1593,21 +1594,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <../../Resources/Images/analysis_mtsp_no_time_windows.png>]
+[17]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1657,7 +1644,7 @@ Overfull \hbox (27.94829pt too wide) in paragraph at lines 34--36
 
 
 
-] <include.pdf, id=697, 597.51233pt x 845.0471pt>
+] <include.pdf, id=724, 597.51233pt x 845.0471pt>
 File: include.pdf Graphic file (type pdf)
  <use include.pdf>
 Package pdftex.def Info: include.pdf used on input line 57.
@@ -1667,7 +1654,7 @@ File: include.pdf Graphic file (type pdf)
 <use include.pdf>
 Package pdftex.def Info: include.pdf used on input line 57.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
- <include.pdf, id=700, page=1, 597.51233pt x 845.0471pt>
+ <include.pdf, id=727, page=1, 597.51233pt x 845.0471pt>
 File: include.pdf Graphic file (type pdf)
 
 <use include.pdf, page 1>
@@ -1800,9 +1787,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ” in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ƒ in font ptmr7t!
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1810,7 +1800,13 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]))
+[30]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no „ in font ptmr7t!
+Missing character: There is no ¢ in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
+Missing character: There is no „ in font ptmr7t!
+))
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1903,12 +1899,24 @@ l.114 	\include{lampiran_1}
                             [7]
 \openout2 = `lampiran_2.aux'.
 
- (./lampiran_2.texpdfTeX warning (ext4): destination with the same identifier (
-name{page.8}) has been already used, duplicate ignored
+ (./lampiran_2.tex)pdfTeX warning (ext4): destination with the same identifier 
+(name{page.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 	\include{lampiran_2}
+                            [8
+
+
+
+]
+\openout2 = `lampiran_3.aux'.
+
+ (./lampiran_3.texpdfTeX warning (ext4): destination with the same identifier (
+name{page.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.80 		1
-        302021001 & 1302030014 & 28778 & 2722\\ [8
+        302021001 & 1302030014 & 28778 & 2722\\ [9
 
 
 
@@ -1919,24 +1927,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.120 		1
-         302021001 & 1302080005 & 125015 & 11788\\ [9]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.160 		1
-         302021001 & 1302070011 & 105323 & 10144\\ [10]
+l.120 		1
+         302021001 & 1302080005 & 125015 & 11788\\ [10]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1947,8 +1943,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.180 		1
-         302021001 & 1302050003 & 65613 & 6570\\ [11]
+l.160 		1
+         302021001 & 1302070011 & 105323 & 10144\\ [11]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1959,8 +1955,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.220 		1
-         302021003 & 1302012002 & 25717 & 2311\\ [12]
+l.180 		1
+         302021001 & 1302050003 & 65613 & 6570\\ [12]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1971,8 +1967,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 		1
-         302021003 & 1302030014 & 23712 & 2419\\ [13]
+l.220 		1
+         302021003 & 1302012002 & 25717 & 2311\\ [13]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1983,8 +1979,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.300 		1
-         302021003 & 1302080005 & 119949 & 11484\\ [14]
+l.260 		1
+         302021003 & 1302030014 & 23712 & 2419\\ [14]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1995,8 +1991,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.340 		1
-         302021003 & 1302070011 & 100258 & 9841\\ [15]
+l.300 		1
+         302021003 & 1302080005 & 119949 & 11484\\ [15]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2007,8 +2003,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.360 		1
-         302021003 & 1302050003 & 60547 & 6267\\ [16]
+l.340 		1
+         302021003 & 1302070011 & 100258 & 9841\\ [16]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2019,8 +2015,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.400 		1
-         302021002 & 1302012001 & 20518 & 1718\\ [17]
+l.360 		1
+         302021003 & 1302050003 & 60547 & 6267\\ [17]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2031,8 +2027,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.440 		1
-         302021002 & 1302100010 & 166501 & 16067\\ [18]
+l.400 		1
+         302021002 & 1302012001 & 20518 & 1718\\ [18]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2043,8 +2039,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.480 		1
-         302021002 & 1302080006 & 121151 & 11705\\ [19]
+l.440 		1
+         302021002 & 1302100010 & 166501 & 16067\\ [19]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2055,8 +2051,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.520 		1
-         302021002 & 1302040004 & 50850 & 5520\\ [20]
+l.480 		1
+         302021002 & 1302080006 & 121151 & 11705\\ [20]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2067,8 +2063,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.540 		1
-         302021002 & 1302050002 & 62945 & 6655\\ [21]
+l.520 		1
+         302021002 & 1302040004 & 50850 & 5520\\ [21]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2079,8 +2075,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.580 		1
-         302021005 & 1302012006 & 12890 & 1095\\ [22]
+l.540 		1
+         302021002 & 1302050002 & 62945 & 6655\\ [22]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2091,8 +2087,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.23}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.620 		1
-         302021005 & 1302030010 & 42582 & 4262\\ [23]
+l.580 		1
+         302021005 & 1302012006 & 12890 & 1095\\ [23]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2103,8 +2099,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.24}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.660 		1
-         302021005 & 1302080008 & 132317 & 12849\\ [24]
+l.620 		1
+         302021005 & 1302030010 & 42582 & 4262\\ [24]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2115,8 +2111,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.25}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.700 		1
-         302021005 & 1302040006 & 63145 & 6544\\ [25]
+l.660 		1
+         302021005 & 1302080008 & 132317 & 12849\\ [25]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2127,8 +2123,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.26}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.720 		1
-         302021005 & 1302110009 & 188173 & 17323\\ [26]
+l.700 		1
+         302021005 & 1302040006 & 63145 & 6544\\ [26]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2139,8 +2135,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.27}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.760 		1
-         302021004 & 1302012009 & 40800 & 3846\\ [27]
+l.720 		1
+         302021005 & 1302110009 & 188173 & 17323\\ [27]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2151,8 +2147,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.28}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.800 		1
-         302021004 & 1302101002 & 180317 & 17084\\ [28]
+l.760 		1
+         302021004 & 1302012009 & 40800 & 3846\\ [28]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2163,8 +2159,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.29}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.840 		1
-         302021004 & 1302070009 & 121296 & 12351\\ [29]
+l.800 		1
+         302021004 & 1302101002 & 180317 & 17084\\ [29]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2175,8 +2171,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.30}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.880 		1
-         302021004 & 1302040001 & 58569 & 5900\\ [30]
+l.840 		1
+         302021004 & 1302070009 & 121296 & 12351\\ [30]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -2187,8 +2183,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.31}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.900 		1
-         302021004 & 1302100014 & 189925 & 18351\\ [31]
+l.880 		1
+         302021004 & 1302040001 & 58569 & 5900\\ [31]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -5219,28 +5215,28 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[464])
+[464]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[465]
-\openout2 = `lampiran_3.aux'.
+[465])
 
- (./lampiran_3.tex [466
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[466]
+\openout2 = `lampiran_4.aux'.
+
+ (./lampiran_4.tex [467
 
 
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[467]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -5261,42 +5257,49 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[470])
+[470]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[471]
+[471])
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[472]
 runsystem(rm "thesis.pyg")...executed.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
  (./thesis.aux (./sampul.aux) (./judul_dalam.aux) (./pengesahan.aux)
 (./orisinal.aux) (./pengesahan_sidang.aux) (./pengantar.aux)
 (./persetujuan_publikasi.aux) (./abstrak.aux) (./abstract.aux) (./bab1.aux)
 (./bab2.aux) (./bab3.aux) (./bab4.aux) (./bab5.aux) (./kesimpulan.aux)
 (./pustaka.aux) (./markLampiran.aux) (./lampiran_1.aux) (./lampiran_2.aux)
-(./lampiran_3.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+(./lampiran_3.aux) (./lampiran_4.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3B311850D861D8A364A1464C80EF95B6;3032.
+(rerunfilecheck)             Checksum: B666415DCF55D33E10AE7F48807B3F59;3231.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
- 22926 strings out of 493029
- 411256 string characters out of 6136234
- 582692 words of memory out of 5000000
- 25187 multiletter control sequences out of 15000+600000
+ 22948 strings out of 493029
+ 411709 string characters out of 6136234
+ 547600 words of memory out of 5000000
+ 25196 multiletter control sequences out of 15000+600000
  43334 words of font info for 86 fonts, out of 8000000 for 9000
  1210 hyphenation exceptions out of 8191
- 61i,18n,75p,2035b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,18n,75p,2035b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
@@ -5307,10 +5310,10 @@ rier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
 live/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on thesis.pdf (517 pages, 1303584 bytes).
+Output written on thesis.pdf (518 pages, 1285499 bytes).
 PDF statistics:
- 2939 PDF objects out of 2984 (max. 8388607)
- 2366 compressed objects within 24 object streams
- 598 named destinations out of 1000 (max. 500000)
- 467 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2972 PDF objects out of 2984 (max. 8388607)
+ 2398 compressed objects within 24 object streams
+ 604 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 

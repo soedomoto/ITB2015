@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -279,28 +279,18 @@ Hussain~Aziz Saleh and Rachid Chelouah.
 \newblock URL
   \url{http://www.sciencedirect.com/science/article/pii/S0952197603001350}.
 
-\bibitem[Glover(1989)]{glover_tabu_1989}
-Fred Glover.
-\newblock Tabu search-part {I}.
-\newblock \emph{ORSA Journal on computing}, 1\penalty0 (3):\penalty0 190--206,
-  1989.
-\newblock URL \url{http://pubsonline.informs.org/doi/abs/10.1287/ijoc.1.3.190}.
-
-\bibitem[Glover(1990)]{glover_tabu_1990}
-Fred Glover.
-\newblock Tabu search—part {II}.
-\newblock \emph{ORSA Journal on computing}, 2\penalty0 (1):\penalty0 4--32,
-  1990.
-\newblock URL \url{http://pubsonline.informs.org/doi/abs/10.1287/ijoc.2.1.4}.
-
-\bibitem[O'Rourke et~al.(1999)O'Rourke, Bailey, Hill, and
-  Carlton]{orourke_dynamic_1999}
-Kevin~P. O'Rourke, T.~Glenn Bailey, Raymond Hill, and William~B. Carlton.
-\newblock Dynamic routing of unmanned aerial vehicles using reactive tabu
-  search.
-\newblock Technical report, DTIC Document, 1999.
-\newblock URL
-  \url{http://oai.dtic.mil/oai/oai?verb=getRecord&metadataPrefix=html&identifier=ADA380543}.
+\bibitem[Fabret et~al.(2001)Fabret, Jacobsen, Llirbat, Pereira, Ross, and
+  Shasha]{fabret_filtering_2001}
+Françoise Fabret, H.~Arno Jacobsen, François Llirbat, Joăo Pereira,
+  Kenneth~A. Ross, and Dennis Shasha.
+\newblock Filtering {Algorithms} and {Implementation} for {Very} {Fast}
+  {Publish}/{Subscribe} {Systems}.
+\newblock In \emph{Proceedings of the 2001 {ACM} {SIGMOD} {International}
+  {Conference} on {Management} of {Data}}, {SIGMOD} '01, pages 115--126, New
+  York, NY, USA, 2001. ACM.
+\newblock ISBN 978-1-58113-332-5.
+\newblock \doi{10.1145/375663.375677}.
+\newblock URL \url{http://doi.acm.org/10.1145/375663.375677}.
 
 \bibitem[Chen et~al.(2003)Chen, Chen, and Rao]{chen_efficient_2003}
 Xiaoyan Chen, Ying Chen, and Fangyan Rao.
@@ -320,5 +310,25 @@ Google Google.
 jsprit.
 \newblock jsprit {\textbar} java toolkit for rich {VRPs} and {TSPs}, 2014.
 \newblock URL \url{https://jsprit.github.io/}.
+
+\bibitem[OptaPlanner(2016)]{optaplanner_constraint_2016}
+OptaPlanner.
+\newblock Constraint satisfaction solver ({Java}™, {Open} {Source}), 2016.
+\newblock URL \url{https://www.optaplanner.org/}.
+
+\bibitem[Antosiewicz et~al.(2013)Antosiewicz, Koloch, and
+  Kamiński]{antosiewicz_choice_2013}
+M.~Antosiewicz, G.~Koloch, and B.~Kamiński.
+\newblock Choice of best possible metaheuristic algorithm for the travelling
+  salesman problem with limited computational time: quality, uncertainty and
+  speed.
+\newblock \emph{Journal of Theoretical and Applied Computer Science},
+  7\penalty0 (1):\penalty0 46--55, 2013.
+\newblock ISSN 2299-2634.
+
+\bibitem[Black(2005)]{paul_e._black_greedy_2005}
+Paul~E. Black.
+\newblock greedy algorithm, February 2005.
+\newblock URL \url{https://xlinux.nist.gov/dads//HTML/greedyalgo.html}.
 
 \end{thebibliography}

@@ -19,48 +19,51 @@ A level-1 auxiliary file: bab5.aux
 A level-1 auxiliary file: kesimpulan.aux
 A level-1 auxiliary file: pustaka.aux
 A level-1 auxiliary file: markLampiran.aux
-A level-1 auxiliary file: lampiran.aux
+A level-1 auxiliary file: lampiran_1.aux
+A level-1 auxiliary file: lampiran_2.aux
+A level-1 auxiliary file: lampiran_3.aux
+A level-1 auxiliary file: lampiran_4.aux
 Database file #1: ../../Resources/Bib/Reference.bib
 Warning--empty journal in pragarauskas_temporal_2010
-You've used 38 entries,
+You've used 39 entries,
             2481 wiz_defined-function locations,
-            828 strings with 14368 characters,
-and the built_in function-call counts, 16913 in all, are:
-= -- 1581
-> -- 754
-< -- 36
-+ -- 298
-- -- 220
-* -- 1274
-:= -- 2583
-add.period$ -- 169
-call.type$ -- 38
-change.case$ -- 77
-chr.to.int$ -- 36
-cite$ -- 39
-duplicate$ -- 860
-empty$ -- 1524
-format.name$ -- 278
-if$ -- 3729
+            838 strings with 14842 characters,
+and the built_in function-call counts, 17460 in all, are:
+= -- 1627
+> -- 787
+< -- 37
++ -- 310
+- -- 230
+* -- 1310
+:= -- 2656
+add.period$ -- 174
+call.type$ -- 39
+change.case$ -- 78
+chr.to.int$ -- 37
+cite$ -- 40
+duplicate$ -- 886
+empty$ -- 1575
+format.name$ -- 289
+if$ -- 3861
 int.to.chr$ -- 3
-int.to.str$ -- 39
+int.to.str$ -- 40
 missing$ -- 33
-newline$ -- 241
-num.names$ -- 114
-pop$ -- 314
+newline$ -- 247
+num.names$ -- 117
+pop$ -- 333
 preamble$ -- 1
-purify$ -- 38
+purify$ -- 39
 quote$ -- 0
-skip$ -- 561
+skip$ -- 586
 stack$ -- 0
-substring$ -- 829
-swap$ -- 219
-text.length$ -- 16
+substring$ -- 841
+swap$ -- 232
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 263
+type$ -- 270
 warning$ -- 1
-while$ -- 149
+while$ -- 152
 width$ -- 0
-write$ -- 596
+write$ -- 612
 (There was 1 warning)

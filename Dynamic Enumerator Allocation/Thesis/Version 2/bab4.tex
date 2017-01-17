@@ -7,13 +7,18 @@
 \section{Analisis}
 \label{sec:analysis}
 %-----------------------------------------------------------------------------%
-Pada kondisi saat ini, alokasi petugas pengumpulan data di BPS dilakukan pada saat perancangan. Sebelum proses pengumpulan data dilakukan, dan lokasi pencacahan telah diketahui (berdasarkan metode sampling yang digunakan), petugas kemudian direkrut dan dialokasikan kepada lokasi pencacahan terdekat. Pengalokasian lokasi pencacahan terhadap masing-masing pencacah, seringkali dilakukan secara subyektif, sehingga menyebabkan variasi waktu penyelesaian tinggi. 
+Pada kondisi saat ini, alokasi petugas pengumpulan data di BPS dilakukan pada saat perancangan. Sebelum proses pengumpulan data dilakukan, dan lokasi pencacahan telah diketahui (berdasarkan metode sampling yang digunakan), petugas direkrut dan kemudian dialokasikan kepada lokasi pencacahan terdekat. Pengalokasian lokasi pencacahan terhadap masing-masing pencacah, seringkali dilakukan secara subyektif, akibatnya selain variasi waktu penyelesaian tinggi, juga terkadang menyebabkan ketidakmerataan beban. 
 
 
-Metode MTSP dan berbagai variasinya dapat digunakan untuk mengatasi pengalokasian diatas. Variasi MTSP yang dapat digunakan dalam permasalahan ini antara lain: 1) Menggunakan lebih dari satu pencacah, dimana masing-masing pencacah memulai dari \textit{depot} yang berbeda-beda; 2) Penimbang dari setiap lokasi pencacahan dengan lokasi lainnya direpresentasikan dengan waktu tempuh. Waktu tempuh lebih representatif untuk digunakan sebagai penimbang dibanding jarak, karena jarak tidak memperhitungkan kesulitan akses. 
+Metode MTSP dan VRP serta berbagai variasinya dapat digunakan untuk mengatasi pengalokasian diatas. Variasi MTSP yang dapat digunakan dalam permasalahan ini antara lain: 
+
+\begin{itemize}
+\item Menggunakan lebih dari satu pencacah, dimana masing-masing pencacah memulai dari \textit{depot} yang berbeda-beda;
+\item Penimbang dari setiap lokasi pencacahan dengan lokasi lainnya direpresentasikan dengan waktu tempuh. Waktu tempuh lebih representatif untuk digunakan sebagai penimbang dibanding jarak, karena jarak tidak memperhitungkan kesulitan akses.
+\end{itemize}
 
 
-Untuk menggambarkan bagaimana MTSP dapat digunakan untuk mengatasi masalah ini, maka perlu dilakukan eksperimen. Eksperimen dilakukan dengan langkah-langkah seperti berikut :
+Untuk menggambarkan bagaimana MTSP dapat digunakan untuk mengatasi masalah ini, maka perlu dilakukan eksperimen. Eksperimen ini menggunakan 182 lokasi pencacahan yang merepresentasikan \textit{customer} dalam MTSP, 15 pencacah yang merepresentasikan \textit{salesman}, dan 15 \textit{depot}. Langkah-langkah yang dilakukan dalam eksprerimen adalah sebagai berikut:
 
 
 %-----------------------------------------------------------------------------%
@@ -22,7 +27,7 @@ Untuk menggambarkan bagaimana MTSP dapat digunakan untuk mengatasi masalah ini, 
 %-----------------------------------------------------------------------------%
 \subsubsection{Lokasi Pencacahan}
 %-----------------------------------------------------------------------------%
-Lokasi pencacahan yang digunakan merupakan data \textit{real} (bukan dummy), yang merupakan lokasi nagari/kelurahan di Kab. Pesisir Selatan, Provinsi Sumatera Barat. Data lokasi pencacahan yang digunakan dalam eksperimen ini sebanyak 182 lokasi. Contoh data lokasi pencacahan dapat dilihat pada Tabel \ref{tbl:enumeration_locations}, sementara data lokasi pencacahan secara lengkap dapat dilihat pada Lampiran \ref{tbl:enumeration_locations_full}.
+Data lokasi pencacahan yang digunakan sebanyak 182 lokasi, yang diambil dari lokasi nagari/kelurahan di Kab. Pesisir Selatan, Sumatera Barat. Masing-masing lokasi dilengkapi atribut ID, sumbu lintang dan sumbu bujur, sebagaimana contoh data yang yang terdapat pada Tabel \ref{tbl:enumeration_locations}. Adapun data lokasi secara lengkap terdapat pada Lampiran \ref{tbl:enumeration_locations_full}.
 
 
 \begin{table*}
@@ -55,7 +60,7 @@ Lokasi pencacahan yang digunakan merupakan data \textit{real} (bukan dummy), yan
 %-----------------------------------------------------------------------------%
 \subsubsection{Pencacah}
 %-----------------------------------------------------------------------------%
-Pada konsep MTSP, pencacah berperan sebagai \textit{salesman} yang harus berpindah dari satu lokasi ke lokasi lain secara berurutan. Pencacah juga diidentifikasi dengan \textit{depot}, yaitu lokasi dimana pencacah harus memulai dan mengakhiri. Dalam eksperimen ini digunakan 15 pencacah dengan lokasi \textit{depot} yang bervariasi, sebagaimana tercantum dalam Tabel \ref{tbl:enumerator}.
+Pada konsep MTSP, pencacah berperan sebagai \textit{salesman} yang harus berpindah dari satu lokasi ke lokasi lain secara berurutan. Pencacah, selain dilengkapi dengan ID, juga dilengkapi dengan \textit{depot}, yaitu lokasi dimana pencacah harus memulai dan mengakhiri kunjungan. Dalam eksperimen ini digunakan 15 pencacah dengan lokasi \textit{depot} yang bervariasi, sebagaimana terdapat pada Tabel \ref{tbl:enumerator} dan Lampiran \ref{tbl:enumerator_full} untuk versi lengkapnya.
 
 
 \begin{table*}[h]
@@ -72,15 +77,7 @@ Pada konsep MTSP, pencacah berperan sebagai \textit{salesman} yang harus berpind
 			1302011008 & -2.3905 & 101.1214\\
 			1302012003 & -2.199 & 101.1188\\
 			1302020006 & -2.1225 & 101.0687\\
-			1302021005 & -2.1845 & 101.0959\\
-			1302030005 & -2.0509 & 101.021\\
-			1302031005 & -2.0018 & 100.9542\\
-			1302040002 & -1.8856 & 100.8658\\
-			1302050007 & -1.78067 & 100.842\\
-			1302060005 & -1.7016 & 100.7639\\
-			1302070006 & -1.5707 & 100.6505\\
-			1302080006 & -1.4448 & 100.6285\\
-			1302090004 & -1.31897 & 100.6105\\
+			...\\
 			1302100002 & -1.23265 & 100.54314\\
 			1302101005 & -1.19831 & 100.58078\\
 			1302110003 & -1.2475 & 100.4745\\
@@ -92,7 +89,7 @@ Pada konsep MTSP, pencacah berperan sebagai \textit{salesman} yang harus berpind
 %-----------------------------------------------------------------------------%
 \subsubsection{Jarak dan Waktu Tempuh}
 %-----------------------------------------------------------------------------%
-Jarak dan waktu tempuh antar node digunakan sebagai penimbang dalam penentuan rekomendasi lokasi. Penghitungan jarak dan waktu tempuh, selain dapat dilakukan secara manual (berdasarkan hasil survei atau perkiraan \textit{subject matter}), dapat juga didekati dengan menggunakan Google Directions API \citep{google_google_2016}. Keuntungan dengan menggunakan Google Direction API adalah jarak dan waktu yang dihitung telah memperhitungkan rute tercepat, kondisi geografis, kemacetan lalu-lintas, dan moda yang digunakan. Adapun kekurangan dari Google Direction API adalah jumlah \textit{requests} yang dapat dikirimkah sangat terbatas, hanya 1.000 \textit{requests} per hari per akun, sementara jumlah waktu dan jarak yang harus dihitung sejumlah $ nx(n-1) = 182x187 = 32.942 $. Listing \ref{lst:google_direction_api_request} memuat contoh \textit{requests} dengan Google Direction API, dan Gambar \ref{fig:google_direction_api_response} adalah contoh responnya.
+Jarak dan waktu tempuh antar node digunakan sebagai penimbang dalam penentuan rekomendasi lokasi. Penghitungan jarak dan waktu tempuh, selain dapat dilakukan secara manual (berdasarkan hasil survei atau perkiraan \textit{subject matter}), dapat juga didekati dengan menggunakan Google Directions API \citep{google_google_2016}. Keuntungan dengan menggunakan Google Direction API adalah jarak dan waktu yang dihitung telah memperhitungkan rute tercepat, kondisi geografis, kemacetan lalu-lintas, dan moda yang digunakan. Adapun kekurangan dari Google Direction API adalah jumlah \textit{requests} yang dapat dikirimkah sangat terbatas, hanya 1.000 \textit{requests} per hari per akun, sementara jumlah waktu dan jarak yang harus dihitung sejumlah $ nx(n-1) = 182x187 = 32.942 $. Listing \ref{lst:google_direction_api_request} memuat contoh \textit{requests URL} dengan Google Direction API. \textit{request URL} ini dapat dieksekusi dengan aplikasi eksternal, misalnya \textit{CURL}, atau dapat di-\textit{embed} kedalam aplikasi dan dieksekusi dengan menggunakan \textit{Http Client}. Contoh \textit{response} Google Direction API dapat dilihat pada Gambar \ref{fig:google_direction_api_response}.
 
 
 \begin{listing}
@@ -130,9 +127,7 @@ Contoh matrix jarak dan waktu tempuh dapat dilihat pada Tabel \ref{tbl:distance_
 			1302021001 & 1302021002 & 9373 & 868\\
 			1302021001 & 1302021005 & 490 & 38\\
 			1302021001 & 1302021004 & 22760 & 2044\\
-			1302021001 & 1302021007 & 10228 & 950\\
 			...\\
-			1302040015 & 1302100015 & 99719 & 9682\\
 			1302040015 & 1302012010 & 77889 & 8305\\
 			1302040014 & 1302100015 & 103893 & 9984\\
 			1302040014 & 1302012010 & 73561 & 7546\\
@@ -145,7 +140,9 @@ Contoh matrix jarak dan waktu tempuh dapat dilihat pada Tabel \ref{tbl:distance_
 %-----------------------------------------------------------------------------%
 \subsection{\textit{Library} dan Implementasi}
 %-----------------------------------------------------------------------------%
-Pada eksperimen ini digunakan jsprit \citep{jsprit_jsprit_2014}, sebuah library berbasis java yang dapat digunakan untuk menyelesaikan permasalahan traveling salesman (TSP) dan vehicle routing problems (VRP). Jsprit mencakup berbagai skenario, antara lain : \textit{pickups and deliveries}, \textit{back hauls}, \textit{heterogeneous fleets}, \textit{finite and infinite fleets}, \textit{multiple depots}, \textit{time windows}, \textit{open routes}, \textit{different start and end locations}, \textit{multiple capacity dimensions}, \textit{initial loads}, \textit{skills}, dll. Cara kerja jsprit sangat terstruktur, mulai dari pendefinisan masalah, pemilihan algoritma, pencarian solusi, dan terakhir pemilihan solusi terbaik.
+Terdapat banyak \textit{library} yang dapat digunakan untuk mengatasi permasalahan terkait TSP, mulai dari yang berbayar maupun \textit{open source}. Diantara yang \textit{open source}, terdapat dua library yang cukup lengkap untuk menyelesaikan berbagai variasi dari TSP, yaitu: Jsprit \citep{jsprit_jsprit_2014} dan Optaplanner \citep{optaplanner_constraint_2016}. Pada eksperimen ini digunakan Jsprit, selain dikarenakan lebih mudah dalam implementasi, juga dikarenakan Optaplanner lebih berfokus pada \textit{job scheduling}.
+
+Jsprit merupakan sebuah library berbasis java yang dapat digunakan untuk menyelesaikan permasalahan \textit{traveling salesman problem} (TSP) dan \textit{vehicle routing problems} (VRP). Jsprit mencakup berbagai skenario yang cukup bervariasi, antara lain : \textit{pickups and deliveries}, \textit{back hauls}, \textit{heterogeneous fleets}, \textit{finite and infinite fleets}, \textit{multiple depots}, \textit{time windows}, \textit{open routes}, \textit{different start and end locations}, \textit{multiple capacity dimensions}, \textit{initial loads}, \textit{skills}, dll. Cara kerja Jsprit sangat terstruktur, mulai dari pendefinisan masalah, pemilihan algoritma, pencarian solusi, dan terakhir pemilihan solusi terbaik.
 
 
 %-----------------------------------------------------------------------------%
@@ -155,34 +152,22 @@ Pendefinisian masalah dengan library Jsprit terdiri dari 3 (tiga) tahapan: defin
 
 
 \begin{listing}
-	\caption{Definisi Lokasi Pencacahan dari File .csv}
+	\caption{Definisi Lokasi Pencacahan}
 	\label{lst:jsprit_define_locations}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
+Service.Builder builder = Service.Builder.newInstance(line[0]);
+
 try {
-    CSVReader reader = new CSVReader(new FileReader(csvLocs));
-    reader.readNext();
+    Location loc = Location.Builder.newInstance()
+        .setId(line[0])
+        .setCoordinate(
+            Coordinate.newInstance(Double.parseDouble(line[2]), 
+                Double.parseDouble(line[1]))).build();
+    builder.setLocation(loc);
+} catch (Exception e) {}
 
-    String [] line;
-    while ((line = reader.readNext()) != null) {
-        Service.Builder builder = Service.Builder.newInstance(line[0]);
-
-        try {
-            Location loc = Location.Builder.newInstance()
-                .setId(line[0])
-                .setCoordinate(
-                    Coordinate.newInstance(Double.parseDouble(line[2]), Double.parseDouble(line[1]))).build();
-            builder.setLocation(loc);
-        } catch (Exception e) {}
-
-        Service node = builder.build();
-        vrpBuilder.addJob(node);
-    }
-
-} catch (FileNotFoundException e) {
-    e.printStackTrace();
-} catch (IOException e) {
-    e.printStackTrace();
-}
+Service node = builder.build();
+vrpBuilder.addJob(node);
 	\end{minted}
 \end{listing}
 
@@ -197,34 +182,21 @@ vehicleTypeBuilder.setCostPerTransportTime(1);
 vehicleTypeBuilder.setCostPerServiceTime(1);
 VehicleType vehicleType = vehicleTypeBuilder.build();
 
+VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(line[0]);
+
 try {
-    CSVReader reader = new CSVReader(new FileReader(csvEnum));
-    reader.readNext();
-
-    String [] line;
-    while ((line = reader.readNext()) != null) {
-        VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(line[0]);
-
-        try {
-            Location loc = Location.Builder.newInstance()
-                    .setId(line[0])
-                    .setCoordinate(Coordinate.newInstance(Double.parseDouble(line[2]),
-                            Double.parseDouble(line[1])))
-                    .build();
-            builder.setStartLocation(loc);
-        } catch (Exception e) {}
+    Location loc = Location.Builder.newInstance()
+            .setId(line[0])
+            .setCoordinate(Coordinate.newInstance(Double.parseDouble(line[2]),
+                    Double.parseDouble(line[1])))
+            .build();
+    builder.setStartLocation(loc);
+} catch (Exception e) {}
 
 
-        builder.setType(vehicleType);
-        VehicleImpl vehicle = builder.build();
-        vrpBuilder.addVehicle(vehicle);
-    }
-
-} catch (FileNotFoundException e) {
-    e.printStackTrace();
-} catch (IOException e) {
-    e.printStackTrace();
-}
+builder.setType(vehicleType);
+VehicleImpl vehicle = builder.build();
+vrpBuilder.addVehicle(vehicle);
 	\end{minted}
 \end{listing}
 
@@ -236,25 +208,14 @@ try {
 VehicleRoutingTransportCostsMatrix.Builder costMatrixBuilder = VehicleRoutingTransportCostsMatrix.Builder
         .newInstance(true);
 
-try {
-    CSVReader reader = new CSVReader(new FileReader(csvCost));
-    reader.readNext();
-
-    String [] line;
-    while ((line = reader.readNext()) != null) {
-        try {
-            costMatrixBuilder.addTransportDistance(line[0], line[1], Double.parseDouble(line[2]));
-            costMatrixBuilder.addTransportTime(line[0], line[1], Double.parseDouble(line[3]));
-        } catch (Exception e) {
-            costMatrixBuilder.addTransportDistance(line[0], line[1], 0.0);
-            costMatrixBuilder.addTransportTime(line[0], line[1], 0.0);
-        }
+while ((line = reader.readNext()) != null) {
+    try {
+        costMatrixBuilder.addTransportDistance(line[0], line[1], Double.parseDouble(line[2]));
+        costMatrixBuilder.addTransportTime(line[0], line[1], Double.parseDouble(line[3]));
+    } catch (Exception e) {
+        costMatrixBuilder.addTransportDistance(line[0], line[1], 0.0);
+        costMatrixBuilder.addTransportTime(line[0], line[1], 0.0);
     }
-
-} catch (FileNotFoundException e) {
-    e.printStackTrace();
-} catch (IOException e) {
-    e.printStackTrace();
 }
 
 VehicleRoutingTransportCosts costMatrix = costMatrixBuilder.build();
@@ -285,7 +246,7 @@ Setelah masalah di-\textit{build}, selanjutnya Jsprit akan membuat algoritma dar
 	\label{lst:jsprit_create_algorithm}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
 VehicleRoutingAlgorithm algorithm = Jsprit.Builder.newInstance(problem)
-        .setProperty(Jsprit.Parameter.THREADS, "50").buildAlgorithm();
+        .setProperty(Jsprit.Parameter.THREADS, 5).buildAlgorithm();
 algorithm.setMaxIterations(iterations);
 	\end{minted}
 \end{listing}
@@ -310,7 +271,7 @@ VehicleRoutingProblemSolution bestSolution = Solutions.bestOf(solutions);
 %-----------------------------------------------------------------------------%
 \subsection{Hasil dan Analisis}
 %-----------------------------------------------------------------------------%
-Dari eksperimen diatas, diperoleh rekomendasi seperti Gambar \ref{fig:analysis_mtsp_recommendation}, atau Listing \ref{lst:analysis_mtsp_recommendation} untuk detail dari masing-masing pencacah. Jika \textit{time windows} atau \textit{service time} diketahui mengikuti distribusi poisson, seperti pada Lampiran \ref{tbl:location_service_times}, maka dapat diperoleh rata-rata dan standar deviasi waktu penyelesaian untuk masing-masing pencacah adalah:
+Dari eksperimen diatas, diperoleh rekomendasi seperti Gambar \ref{fig:analysis_mtsp_recommendation}, atau Listing \ref{lst:analysis_mtsp_recommendation} untuk detail dari masing-masing pencacah. Jika \textit{service time} diketahui mengikuti distribusi \textit{poisson}, seperti pada Lampiran \ref{tbl:location_service_times}, maka dapat diperoleh rata-rata dan standar deviasi waktu penyelesaian untuk masing-masing pencacah adalah:
 $$ \mu = 82.24 jam $$
 $$ \sigma = 88.95 jam $$
 
@@ -381,7 +342,28 @@ Dari eksperimen, dapat diketahui metode MTSP tidak cocok digunakan untuk menentu
 %-----------------------------------------------------------------------------%
 \section{Perancangan}
 %-----------------------------------------------------------------------------%
-Setelah dilakukan analisis, sebagaimana pada Poin \ref{sec:analysis}, diperoleh hasil bahwasannya metode MTSP tidak dapat digunakan untuk membuat rekomendasi lokasi pencacahan secara \textit{out-of-the-box}, maka pada Bagian ini akan dilakukan perancangan metode baru yang dapat membuat rekomendasi dengan lebih baik. Pada metode MTSP, diperoleh lebih dari satu solusi, dimana masing-masing solusi diperbandingkan. Perbandingan dilakukan berdasarkan \textit{cost} keseluruhan, dimana solusi dengan \textit{cost} terkecil adalah solusi terbaik.
+Setelah dilakukan analisis, sebagaimana pada Poin \ref{sec:analysis}, diperoleh hasil bahwasannya metode MTSP tidak dapat digunakan untuk membuat rekomendasi lokasi pencacahan secara \textit{out-of-the-box}, maka pada bagian ini akan dilakukan perancangan metode baru yang dapat membuat rekomendasi dengan lebih baik.
+
+
+%-----------------------------------------------------------------------------%
+\subsection{\textit{Publish/Subscribe Paradigm}}
+%-----------------------------------------------------------------------------%
+
+
+
+%-----------------------------------------------------------------------------%
+\subsection{\textit{Search Algorithm}}
+%-----------------------------------------------------------------------------%
+Terdapat berbagai variasi algoritma untuk menyelesaikan permasalah TSP maupun VRP, antara lain: genetic algorithm, simmulated annealing, tabu search, particle swarm optimization, harmony search, quantum annealing, greedy 2-opt, dll. Pada pengujian yang dilakukan dengan kasus single-salesman dengan menggunakan 3 (tiga) kriteria: \textit{mean quality}, \textit{dispersion of quality}, dan \textit{time needed to reach the optimum}, simmulated annealing menghasilkan solusi yang paling berkualitas, sementara tabu search merupakan yang paling baik dari sisi performance \citep{antosiewicz_choice_2013}.
+
+
+%-----------------------------------------------------------------------------%
+\subsection{\textit{Greedy Strategy}}
+%-----------------------------------------------------------------------------%
+Algoritma \textit{greedy} adalah suatu algoritma yang menentukan solusi optimal berdasarkan kondisi saat ini, atau disebut dengan \textit{local optimum}. Algoritma greedy dapat meminimalisir waktu komputasi dalam pencarian solusi global. Pada kasus \textit{travelling salesman problem}, strategi greedy dapat dikatakan dengan "pada setiap tahap, kunjungi kota yang paling dekat dengan lokasi salesman yang belum dikunjungi" \citep{paul_e._black_greedy_2005}. 
+
+
+Pada metode MTSP, diperoleh lebih dari satu solusi, dimana masing-masing solusi diperbandingkan. Perbandingan dilakukan berdasarkan \textit{cost} keseluruhan, dimana solusi dengan \textit{cost} terkecil adalah solusi terbaik.
 
 
 Penentuan solusi terbaik dengan membandingkan \textit{cost} keseluruhan tidaklah tepat. \textit{Cost} ditentukan dengan satuan waktu, sementara salah satu komponen utama yang dominan adalah \textit{service time}. Karena \textit{service time} tidak tersedia, maka membandingkan keseluruhan waktu akan menjadi bias. Hipotesis yang ditawarkan adalah membandingkan setiap solusi dengan total \textit{cost} untuk lokasi pertama dari masing-masing pencacah saja, karena lokasi pertama tidak terpengaruh dengan \textit{service time}, seperti algoritma dalam Kode \ref{lst:proposed_best_solution_algorithm}.
