@@ -1,4 +1,4 @@
-package com.soedomoto.vrp.pubsub.model;
+package com.soedomoto.vrp.model;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;

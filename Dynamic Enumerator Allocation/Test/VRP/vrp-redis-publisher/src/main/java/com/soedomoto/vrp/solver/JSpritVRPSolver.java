@@ -1,4 +1,4 @@
-package com.soedomoto.vrp.pubsub.solver;
+package com.soedomoto.vrp.solver;
 
 import com.graphhopper.jsprit.core.algorithm.VehicleRoutingAlgorithm;
 import com.graphhopper.jsprit.core.algorithm.box.Jsprit;
@@ -16,10 +16,10 @@ import com.graphhopper.jsprit.core.problem.vehicle.VehicleType;
 import com.graphhopper.jsprit.core.problem.vehicle.VehicleTypeImpl;
 import com.graphhopper.jsprit.core.util.Coordinate;
 import com.graphhopper.jsprit.core.util.VehicleRoutingTransportCostsMatrix;
-import com.soedomoto.vrp.pubsub.App;
-import com.soedomoto.vrp.pubsub.model.CensusBlock;
-import com.soedomoto.vrp.pubsub.model.DistanceMatrix;
-import com.soedomoto.vrp.pubsub.model.Enumerator;
+import com.soedomoto.vrp.App;
+import com.soedomoto.vrp.model.CensusBlock;
+import com.soedomoto.vrp.model.DistanceMatrix;
+import com.soedomoto.vrp.model.Enumerator;
 import org.apache.log4j.Logger;
 
 import java.sql.SQLException;
@@ -43,25 +43,21 @@ public abstract class JSpritVRPSolver implements Runnable, VRPSolver {
 
     public void run() {
         try {
-            this.onStarted(this.channel);
-
-            List<Enumerator> es = app.getEnumeratorDao().queryForAll();
+            // Prepare Data
             Map<Long, Enumerator> allEnumerators = new HashMap();
-            for(Enumerator e : es) {
+            for(Enumerator e : app.getEnumeratorDao().queryForAll()) {
                 allEnumerators.put(e.getId(), e);
             }
 
-            List<CensusBlock> bses = app.getCensusBlockDao().queryForAll();
             Map<Long, CensusBlock> allBses = new HashMap();
             Map<Long, CensusBlock> unassignedBses = new HashMap();
-            for(CensusBlock bs : bses) {
+            for(CensusBlock bs : app.getCensusBlockDao().queryForAll()) {
                 allBses.put(bs.getId(), bs);
                 if(bs.getAssignedTo() == null) unassignedBses.put(bs.getId(), bs);
             }
 
             if(DURATION_MATRIX.size() == 0 || DISTANCE_MATRIX.size() == 0) {
-                List<DistanceMatrix> dm = app.getDistanceMatrixDao().queryForAll();
-                for (DistanceMatrix m : dm) {
+                for (DistanceMatrix m : app.getDistanceMatrixDao().queryForAll()) {
                     if (!DURATION_MATRIX.keySet().contains(m.getLocationA()))
                         DURATION_MATRIX.put(m.getLocationA(), new HashMap());
                     DURATION_MATRIX.get(m.getLocationA()).put(m.getLocationB(), m.getDuration());
@@ -72,10 +68,11 @@ public abstract class JSpritVRPSolver implements Runnable, VRPSolver {
                 }
             }
 
-            // Build problem
+
+            // Define problem
             VehicleRoutingProblem.Builder vrpBuilder = VehicleRoutingProblem.Builder.newInstance().setFleetSize(VehicleRoutingProblem.FleetSize.FINITE);
 
-
+            // Define service locations
             for(CensusBlock bs : unassignedBses.values()) {
                 Service.Builder builder = Service.Builder.newInstance(String.valueOf(bs.getId()));
                 builder.addSizeDimension(0, 1);
@@ -92,7 +89,7 @@ public abstract class JSpritVRPSolver implements Runnable, VRPSolver {
                 vrpBuilder.addJob(node);
             }
 
-
+            // Define vehicles
             VehicleTypeImpl.Builder vehicleTypeBuilder = VehicleTypeImpl.Builder.newInstance("enumerator");
             vehicleTypeBuilder.addCapacityDimension(0, (unassignedBses.size() / allEnumerators.size()) + 1);
             //vehicleTypeBuilder.setCostPerDistance(1.0);
@@ -102,20 +99,26 @@ public abstract class JSpritVRPSolver implements Runnable, VRPSolver {
             VehicleType vehicleType = vehicleTypeBuilder.build();
 
 
-            CensusBlock bs = allBses.get(Long.valueOf(channel));
-            VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(String.valueOf(bs.getId()));
+            Collection<Enumerator> enumerators = allEnumerators.values();
+            List<CensusBlock> processingDepots = new ArrayList<CensusBlock>();
+            for(Enumerator e : enumerators) {
+                VehicleImpl.Builder builder = VehicleImpl.Builder.newInstance(String.valueOf(e.getId()));
 
-            Location loc = Location.Builder.newInstance()
-                    .setId(String.valueOf(bs.getId()))
-                    .setCoordinate(Coordinate.newInstance(bs.getLon(), bs.getLat()))
-                    .build();
-            builder.setStartLocation(loc);
+                CensusBlock bs = allBses.get(e.getDepot()); //censusBlockDao.queryForId(e.depot);
+                Location loc = Location.Builder.newInstance()
+                        .setId(String.valueOf(bs.getId()))
+                        .setCoordinate(Coordinate.newInstance(bs.getLon(), bs.getLat()))
+                        .build();
+                builder.setStartLocation(loc);
 
-            builder.setType(vehicleType);
-            VehicleImpl vehicle = builder.build();
-            vrpBuilder.addVehicle(vehicle);
+                builder.setType(vehicleType);
+                VehicleImpl vehicle = builder.build();
+                vrpBuilder.addVehicle(vehicle);
 
+                processingDepots.add(bs);
+            }
 
+            // Define cost matrix
             VehicleRoutingTransportCostsMatrix.Builder costMatrixBuilder = VehicleRoutingTransportCostsMatrix.Builder
                     .newInstance(true);
 
@@ -131,8 +134,12 @@ public abstract class JSpritVRPSolver implements Runnable, VRPSolver {
             LOG.debug(String.format("Using: %s enumerator(s), %s location(s)", 1, unassignedBses.size()));
 
 
+            // Build problem
             VehicleRoutingProblem problem = vrpBuilder.build();
+            this.onStarted(this.channel, processingDepots, unassignedBses.values());
 
+
+            // Define algorithm
             int numProcessors = Runtime.getRuntime().availableProcessors();
             VehicleRoutingAlgorithm algorithm = Jsprit.Builder.newInstance(problem)
                     .setProperty(Jsprit.Parameter.THREADS, String.valueOf(numProcessors))
@@ -140,16 +147,19 @@ public abstract class JSpritVRPSolver implements Runnable, VRPSolver {
             algorithm.setMaxIterations(app.getMaxIteration());
             LOG.debug(String.format("Finding solution using %s thread(s) and %s iteration(s)", numProcessors, app.getMaxIteration()));
 
+
+            // Find solutions
             Collection<VehicleRoutingProblemSolution> solutions = algorithm.searchSolutions();
             LOG.debug(String.format("%s solution(s) found. Finding the best", solutions.size()));
-
             VehicleRoutingProblemSolution solution = this.findBest(solutions);
 
+
+            // Best solution found --> parse routes
             for(VehicleRoute route : solution.getRoutes()) {
                 Vehicle routeVehicle = route.getVehicle();
-                Iterator<Job> jobIt = route.getTourActivities().getJobs().iterator();
-                if(jobIt.hasNext()) {
-                    Job job = jobIt.next();
+                List<Job> jobs = new ArrayList(route.getTourActivities().getJobs());
+                if(jobs.size() > 0) {
+                    Job job = jobs.get(0);
                     if (job instanceof Service) {
                         Service activity = (Service) job;
 
@@ -164,12 +174,14 @@ public abstract class JSpritVRPSolver implements Runnable, VRPSolver {
 
                         CensusBlock currBs = allBses.get(Long.valueOf(activity.getLocation().getId()));
 
-                        onSolution(route.getVehicle().getId(), routeVehicle, activity, duration, currBs.getServiceTime());
+                        onSolution(routeVehicle.getStartLocation().getId(), routeVehicle, activity, duration, currBs.getServiceTime());
                     }
                 }
+
+                LOG.debug(String.format("%s = %s", routeVehicle.getStartLocation().getId(), jobs));
             }
 
-            onFinished(this.channel);
+            onFinished(this.channel, processingDepots, unassignedBses.values());
         } catch (SQLException e) {
             e.printStackTrace();
         }
