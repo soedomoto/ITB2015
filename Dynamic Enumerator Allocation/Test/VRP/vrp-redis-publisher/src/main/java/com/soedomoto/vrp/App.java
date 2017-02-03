@@ -11,7 +11,7 @@ import com.soedomoto.vrp.model.Enumerator;
 import com.soedomoto.vrp.model.Subscriber;
 import com.soedomoto.vrp.pubsub.ChannelSubscriber;
 import com.soedomoto.vrp.pubsub.DataCache;
-import com.soedomoto.vrp.pubsub.DepotWatcher;
+import com.soedomoto.vrp.pubsub.VRPWorker;
 import org.apache.commons.cli.*;
 import org.apache.log4j.Logger;
 
@@ -70,7 +70,8 @@ public class App {
             subs.visit();
 
             // Depot watcher
-            new DepotWatcher(App.this, BROKER_URL).watch("depot.*");
+            // new DepotWatcher(App.this, BROKER_URL).watch("depot.*");
+            new VRPWorker(App.this, BROKER_URL).start();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (URISyntaxException e) {

@@ -32,11 +32,26 @@ public class DataCache implements Runnable {
     }
 
     public void run() {
-        try {
-            this.cacheLocations();
-            this.cacheEnumerators();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        int delay = 0;
+        while(true) {
+            try {
+                Executors.newScheduledThreadPool(1).schedule(new Runnable() {
+                    public void run() {
+                        try {
+                            cacheLocations();
+                            cacheEnumerators();
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, delay, TimeUnit.SECONDS).get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+
+            delay = 30;
         }
     }
 
@@ -57,35 +72,20 @@ public class DataCache implements Runnable {
     }
 
     private void cacheVisits(final List<Enumerator> enumerators) {
-        int delay = 0;
-        while(true) {
+        for(Enumerator en: enumerators) {
             try {
-                Executors.newScheduledThreadPool(1).schedule(new Runnable() {
-                    public void run() {
-                        for(Enumerator en: enumerators) {
-                            try {
-                                QueryBuilder<CensusBlock, Long> qb = app.getCensusBlockDao().queryBuilder();
-                                qb.where().eq("visited_by", Long.valueOf(en.getId()));
-                                qb.orderBy("visit_date", true);
+                QueryBuilder<CensusBlock, Long> qb = app.getCensusBlockDao().queryBuilder();
+                qb.where().eq("visited_by", Long.valueOf(en.getId()));
+                qb.orderBy("visit_date", true);
 
-                                List<CensusBlock> visitedLocations = qb.query();
-                                String strVisitedLocations = new Gson().toJson(visitedLocations);
+                List<CensusBlock> visitedLocations = qb.query();
+                String strVisitedLocations = new Gson().toJson(visitedLocations);
 
-                                cache.del(String.format("enumerator.%s.visits", en.getId()));
-                                cache.set(String.format("enumerator.%s.visits", en.getId()), strVisitedLocations);
-                            } catch (SQLException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }
-                }, delay, TimeUnit.SECONDS).get();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+                cache.del(String.format("enumerator.%s.visits", en.getId()));
+                cache.set(String.format("enumerator.%s.visits", en.getId()), strVisitedLocations);
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
-
-            delay = 10;
         }
     }
 }

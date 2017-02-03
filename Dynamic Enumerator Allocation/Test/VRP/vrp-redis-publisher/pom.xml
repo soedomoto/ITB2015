@@ -135,7 +135,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.soedomoto.vrp.pubsub.App</mainClass>
+                            <mainClass>com.soedomoto.vrp.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

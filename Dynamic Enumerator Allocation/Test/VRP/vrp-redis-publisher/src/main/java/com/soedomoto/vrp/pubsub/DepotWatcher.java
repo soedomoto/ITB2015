@@ -1,8 +1,6 @@
 package com.soedomoto.vrp.pubsub;
 
 import com.google.gson.Gson;
-import com.graphhopper.jsprit.core.problem.job.Service;
-import com.graphhopper.jsprit.core.problem.vehicle.Vehicle;
 import com.soedomoto.vrp.App;
 import com.soedomoto.vrp.model.CensusBlock;
 import com.soedomoto.vrp.solver.JSpritVRPSolver;
@@ -22,86 +20,93 @@ public class DepotWatcher extends ChannelWatcher {
 
     private final App app;
     private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(15);
-    private final List<String> beingProcessedDepots = new ArrayList();
-    private final Map<String, Map<String, Object>> cachedChannelResult = new HashMap();
+    private final List<String> beingProcessedChannels = new ArrayList();
+    private final List<String> assignedLocations = new ArrayList();
+    private final Map<String, Map<String, Object>> cachedChannelResults = new HashMap();
 
     public DepotWatcher(App app, String brokerUrl) throws URISyntaxException {
         super(brokerUrl);
         this.app = app;
+
+        try {
+            List<CensusBlock> assignedBses = app.getCensusBlockDao().queryBuilder()
+                    .where().isNotNull("assigned_to").query();
+            for(CensusBlock bs: assignedBses) assignedLocations.add(String.valueOf(bs.getId()));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void onChannelAdded(String channel) {
-        channel = channel.replace("depot.", "");
-
+    public void onChannelAdded(String depotChannel) {
+        String channel = depotChannel.replace("depot.", "");
         LOG.debug(String.format("%s channel added", channel));
 
-        if(cachedChannelResult.keySet().contains(channel)) {
-            Map<String, Object> result = cachedChannelResult.get(channel);
+        if(cachedChannelResults.keySet().contains(channel)) {
+            Map<String, Object> result = cachedChannelResults.get(channel);
             Long receivers = publish(channel, result);
-            LOG.debug(String.format("Cached result is published to channel %s. Number receivers = %s", channel, receivers));
-
-            return;
+            if(receivers > 0) {
+                LOG.debug(String.format("Cached result is published to channel %s. Number receivers = %s", channel, receivers));
+                return;
+            }
         }
 
-        if(! beingProcessedDepots.contains(channel)) {
+        if(! beingProcessedChannels.contains(channel)) {
             executor.submit(new JSpritVRPSolver(app, channel) {
-                public void onStarted(String channel, List<CensusBlock> depots, Collection<CensusBlock> locations) {
+                public void onStarted(String channel, List<Long> depots, Set<Long> locations) {
                     LOG.debug(String.format("Start solving channel %s", channel));
-                    for(CensusBlock d: depots)
-                        beingProcessedDepots.add(String.valueOf(d.getId()));
+                    for(Long d: depots)
+                        beingProcessedChannels.add(String.valueOf(d));
                 }
 
-                public void onSolution(String channel, Vehicle routeVehicle, Service activity, double duration, double serviceTime) {
+                public void onSolution(String channel, Map<String, Object> routeVehicle, Map<String, Object> activity, double duration, double serviceTime) {
                     Map<String, Object> solutionMap = new HashMap();
-                    solutionMap.put("depot", routeVehicle.getStartLocation().getId());
-                    solutionMap.put("depot-coord", new Double[] {
-                            routeVehicle.getStartLocation().getCoordinate().getY(),
-                            routeVehicle.getStartLocation().getCoordinate().getX()});
-                    solutionMap.put("location", activity.getLocation().getId());
-                    solutionMap.put("location-coord", new Double[] {
-                            activity.getLocation().getCoordinate().getY(),
-                            activity.getLocation().getCoordinate().getX()});
+                    solutionMap.putAll(routeVehicle);
+                    solutionMap.putAll(activity);
                     solutionMap.put("duration", duration);
                     solutionMap.put("service-time", serviceTime);
 
                     Long receivers = publish(channel, solutionMap);
                     LOG.debug(String.format("Result is published to channel %s. Number receivers = %s", channel, receivers));
 
-                    cachedChannelResult.put(channel, solutionMap);
+                    cachedChannelResults.put(channel, solutionMap);
                 }
 
-                public void onFinished(String channel, List<CensusBlock> depots, Collection<CensusBlock> locations) {
+                public void onFinished(String channel, List<Long> depots, Set<Long> locations) {
                     LOG.debug(String.format("Finish solving channel %s", channel));
-                    for(CensusBlock d: depots)
-                        beingProcessedDepots.remove(String.valueOf(d.getId()));
+                    for(Long d: depots)
+                        beingProcessedChannels.remove(String.valueOf(d));
                 }
             });
         }
     }
 
-    public void onChannelRemoved(String channel) {
+    public void onChannelRemoved(String depotChannel) {
+        String channel = depotChannel.replace("depot.", "");
         LOG.debug(String.format("%s channel removed", channel));
     }
 
     private Long publish(String channel, Map<String, Object> solutionMap) {
-        channel = String.format("depot.%s", channel);
+        if(! assignedLocations.contains(solutionMap.get("location"))) {
+            String result = new Gson().toJson(solutionMap);
+            long receivers = jedis.publish(String.format("depot.%s", channel), result);
 
-        String result = new Gson().toJson(solutionMap);
-        long receivers = jedis.publish(channel, result);
+            if (receivers > 0) {
+                try {
+                    CensusBlock bs = app.getCensusBlockDao().queryForId(Long.valueOf(String.valueOf(solutionMap.get("location"))));
+                    bs.setAssignedTo((long) 1000);
+                    bs.setAssignDate(new Date());
+                    app.getCensusBlockDao().update(bs);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
 
-        if(receivers > 0) {
-            try {
-                CensusBlock bs = app.getCensusBlockDao().queryForId(Long.valueOf(String.valueOf(solutionMap.get("location"))));
-                bs.setAssignedTo((long) 1000);
-                bs.setAssignDate(new Date());
-                app.getCensusBlockDao().update(bs);
-            } catch (SQLException e) {
-                e.printStackTrace();
+                cachedChannelResults.remove(channel);
+                assignedLocations.add(channel);
             }
 
-            cachedChannelResult.remove(channel);
+            return receivers;
+        } else {
+            return (long) 0;
         }
-
-        return receivers;
     }
 }
