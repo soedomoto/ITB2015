@@ -51,32 +51,36 @@ public class DepotWatcher extends ChannelWatcher {
         }
 
         if(! beingProcessedChannels.contains(channel)) {
-            executor.submit(new JSpritVRPSolver(app, channel) {
-                public void onStarted(String channel, List<Long> depots, Set<Long> locations) {
-                    LOG.debug(String.format("Start solving channel %s", channel));
-                    for(Long d: depots)
-                        beingProcessedChannels.add(String.valueOf(d));
-                }
+            try {
+                executor.submit(new JSpritVRPSolver(app, channel) {
+                    public void onStarted(String channel, List<Long> depots, Set<Long> locations) {
+                        LOG.debug(String.format("Start solving channel %s", channel));
+                        for(Long d: depots)
+                            beingProcessedChannels.add(String.valueOf(d));
+                    }
 
-                public void onSolution(String channel, Map<String, Object> routeVehicle, Map<String, Object> activity, double duration, double serviceTime) {
-                    Map<String, Object> solutionMap = new HashMap();
-                    solutionMap.putAll(routeVehicle);
-                    solutionMap.putAll(activity);
-                    solutionMap.put("duration", duration);
-                    solutionMap.put("service-time", serviceTime);
+                    public void onSolution(String channel, Map<String, Object> routeVehicle, Map<String, Object> activity, double duration, double serviceTime) {
+                        Map<String, Object> solutionMap = new HashMap();
+                        solutionMap.putAll(routeVehicle);
+                        solutionMap.putAll(activity);
+                        solutionMap.put("duration", duration);
+                        solutionMap.put("service-time", serviceTime);
 
-                    Long receivers = publish(channel, solutionMap);
-                    LOG.debug(String.format("Result is published to channel %s. Number receivers = %s", channel, receivers));
+                        Long receivers = publish(channel, solutionMap);
+                        LOG.debug(String.format("Result is published to channel %s. Number receivers = %s", channel, receivers));
 
-                    cachedChannelResults.put(channel, solutionMap);
-                }
+                        cachedChannelResults.put(channel, solutionMap);
+                    }
 
-                public void onFinished(String channel, List<Long> depots, Set<Long> locations) {
-                    LOG.debug(String.format("Finish solving channel %s", channel));
-                    for(Long d: depots)
-                        beingProcessedChannels.remove(String.valueOf(d));
-                }
-            });
+                    public void onFinished(String channel, List<Long> depots, Set<Long> locations) {
+                        LOG.debug(String.format("Finish solving channel %s", channel));
+                        for(Long d: depots)
+                            beingProcessedChannels.remove(String.valueOf(d));
+                    }
+                });
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
