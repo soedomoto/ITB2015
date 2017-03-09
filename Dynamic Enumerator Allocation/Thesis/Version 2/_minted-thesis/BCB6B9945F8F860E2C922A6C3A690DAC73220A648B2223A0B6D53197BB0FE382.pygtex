@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{Let} \PYG{n}{SS} \PYG{n}{be} \PYG{n}{an} \PYG{n}{empty} \PYG{n+nb}{list}
-\PYG{n}{For} \PYG{n}{each} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n}{enumerators} \PYG{n}{E} \PYG{n}{do}
-	\PYG{n}{If} \PYG{n}{enumerator} \PYG{n}{e} \PYG{n}{has} \PYG{n}{finished} \PYG{n}{enumerating} \PYG{n}{do}
-		\PYG{n}{Exclude} \PYG{n}{location} \PYG{n}{l} \PYG{n}{enumerated} \PYG{n}{by} \PYG{n}{e} \PYG{k+kn}{from} \PYG{n+nn}{locations} \PYG{n+nn}{L}
-		\PYG{n}{Add} \PYG{n}{e} \PYG{o+ow}{in} \PYG{n+nb}{list} \PYG{n}{of} \PYG{n}{subscribers} \PYG{n}{SS}
-\end{Verbatim}

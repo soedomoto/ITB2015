@@ -25,45 +25,48 @@ A level-1 auxiliary file: lampiran_3.aux
 A level-1 auxiliary file: lampiran_4.aux
 Database file #1: ../../Resources/Bib/Reference.bib
 Warning--empty journal in pragarauskas_temporal_2010
-You've used 39 entries,
+Warning--empty journal in rechenberg_cybernetic_1965
+Warning--empty journal in holland_echo:_1990
+Warning--empty publisher in diaz_vrp_2012
+You've used 104 entries,
             2481 wiz_defined-function locations,
-            838 strings with 14842 characters,
-and the built_in function-call counts, 17460 in all, are:
-= -- 1627
-> -- 787
-< -- 37
-+ -- 310
-- -- 230
-* -- 1310
-:= -- 2656
-add.period$ -- 174
-call.type$ -- 39
-change.case$ -- 78
-chr.to.int$ -- 37
-cite$ -- 40
-duplicate$ -- 886
-empty$ -- 1575
-format.name$ -- 289
-if$ -- 3861
-int.to.chr$ -- 3
-int.to.str$ -- 40
-missing$ -- 33
-newline$ -- 247
-num.names$ -- 117
-pop$ -- 333
+            1273 strings with 29769 characters,
+and the built_in function-call counts, 44358 in all, are:
+= -- 4218
+> -- 1848
+< -- 88
++ -- 744
+- -- 531
+* -- 3458
+:= -- 6854
+add.period$ -- 475
+call.type$ -- 104
+change.case$ -- 201
+chr.to.int$ -- 99
+cite$ -- 108
+duplicate$ -- 2215
+empty$ -- 4029
+format.name$ -- 697
+if$ -- 9648
+int.to.chr$ -- 6
+int.to.str$ -- 105
+missing$ -- 101
+newline$ -- 672
+num.names$ -- 314
+pop$ -- 776
 preamble$ -- 1
-purify$ -- 39
+purify$ -- 104
 quote$ -- 0
-skip$ -- 586
+skip$ -- 1365
 stack$ -- 0
-substring$ -- 841
-swap$ -- 232
-text.length$ -- 17
+substring$ -- 2338
+swap$ -- 473
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 270
-warning$ -- 1
-while$ -- 152
+type$ -- 707
+warning$ -- 4
+while$ -- 396
 width$ -- 0
-write$ -- 612
-(There was 1 warning)
+write$ -- 1651
+(There were 4 warnings)

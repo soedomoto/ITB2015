@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{104}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,6 +12,34 @@ Anders Kofod-Petersen and Agnar Aamodt.
   {Intgelligence} for {Mobil} {Systems}, {Seattle}}. Citeseer, 2003.
 \newblock URL
   \url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.440.7355&rep=rep1&type=pdf}.
+
+\bibitem[Weise et~al.(2009)Weise, Podlich, and Gorldt]{weise_solving_2009}
+Thomas Weise, Alexander Podlich, and Christian Gorldt.
+\newblock Solving real-world vehicle routing problems with evolutionary
+  algorithms.
+\newblock In \emph{Natural intelligence for scheduling, planning and packing
+  problems}, pages 29--53. Springer, 2009.
+\newblock URL
+  \url{http://link.springer.com/chapter/10.1007/978-3-642-04039-9_2}.
+
+\bibitem[de~Oliveira et~al.(2016)de~Oliveira, Enayatifar, Sadaei, Guimarães,
+  and Potvin]{de_oliveira_cooperative_2016}
+Fernando~Bernardes de~Oliveira, Rasul Enayatifar, Hossein~Javedani Sadaei,
+  Frederico~Gadelha Guimarães, and Jean-Yves Potvin.
+\newblock A cooperative coevolutionary algorithm for the {Multi}-{Depot}
+  {Vehicle} {Routing} {Problem}.
+\newblock \emph{Expert Systems with Applications}, 43:\penalty0 117--130, 2016.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0957417415005771}.
+
+\bibitem[Eugster et~al.(2003)Eugster, Felber, Guerraoui, and
+  Kermarrec]{eugster_many_2003}
+Patrick~Th Eugster, Pascal~A. Felber, Rachid Guerraoui, and Anne-Marie
+  Kermarrec.
+\newblock The many faces of publish/subscribe.
+\newblock \emph{ACM computing surveys (CSUR)}, 35\penalty0 (2):\penalty0
+  114--131, 2003.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=857078}.
 
 \bibitem[BPS(2016{\natexlab{a}})]{bps_badan_2016}
 BPS BPS.
@@ -292,13 +320,519 @@ Françoise Fabret, H.~Arno Jacobsen, François Llirbat, Joăo Pereira,
 \newblock \doi{10.1145/375663.375677}.
 \newblock URL \url{http://doi.acm.org/10.1145/375663.375677}.
 
-\bibitem[Chen et~al.(2003)Chen, Chen, and Rao]{chen_efficient_2003}
+\bibitem[Chen et~al.(2003{\natexlab{a}})Chen, Chen, and
+  Rao]{chen_efficient_2003}
 Xiaoyan Chen, Ying Chen, and Fangyan Rao.
 \newblock An efficient spatial publish/subscribe system for intelligent
   location-based services.
 \newblock In \emph{Proceedings of the 2nd international workshop on
-  {Distributed} event-based systems}, pages 1--6. ACM, 2003.
+  {Distributed} event-based systems}, pages 1--6. ACM, 2003{\natexlab{a}}.
 \newblock URL \url{http://dl.acm.org/citation.cfm?id=966625}.
+
+\bibitem[Creswell(2013)]{creswell_research_2013}
+John~W. Creswell.
+\newblock \emph{Research design: {Qualitative}, quantitative, and mixed methods
+  approaches}.
+\newblock Sage publications, 2013.
+\newblock URL
+  \url{https://www.google.com/books?hl=en&lr=&id=EbogAQAAQBAJ&oi=fnd&pg=PP1&dq=J.+W.+Creswell,+Research+Design+Qualitative,+Quantitative,+and+Mixed+Methods+Approaches,+3rd+ed.+SAGE+Publications,+Inc,+2008&ots=caiStUSxA3&sig=Nb8n_G4Z_8Fr-UH56kQsUZQQYU8}.
+
+\bibitem[Zimmermann et~al.(2007)Zimmermann, Lorenz, and
+  Oppermann]{zimmermann_operational_2007}
+Andreas Zimmermann, Andreas Lorenz, and Reinhard Oppermann.
+\newblock An operational definition of context.
+\newblock In \emph{International and {Interdisciplinary} {Conference} on
+  {Modeling} and {Using} {Context}}, pages 558--571. Springer, 2007.
+\newblock URL
+  \url{http://link.springer.com/chapter/10.1007/978-3-540-74255-5_42}.
+
+\bibitem[Hull et~al.(1997)Hull, Neaves, and Bedford-Roberts]{hull_towards_1997}
+R.~Hull, P.~Neaves, and J.~Bedford-Roberts.
+\newblock Towards situated computing.
+\newblock In \emph{Digest of {Papers}. {First} {International} {Symposium} on
+  {Wearable} {Computers}}, pages 146--153, October 1997.
+\newblock \doi{10.1109/ISWC.1997.629931}.
+
+\bibitem[Brown(1995)]{brown_stick-e_1995}
+Peter~J. Brown.
+\newblock The stick-e document: a framework for creating context-aware
+  applications.
+\newblock \emph{Electronic Publishing-Chichester-}, 8:\penalty0 259--272, 1995.
+\newblock URL
+  \url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.8.7472&rep=rep1&type=pdf}.
+
+\bibitem[Brown et~al.(1997)Brown, Bovey, and Chen]{brown_context-aware_1997}
+Peter~J. Brown, John~D. Bovey, and Xian Chen.
+\newblock Context-aware applications: from the laboratory to the marketplace.
+\newblock \emph{IEEE personal communications}, 4\penalty0 (5):\penalty0 58--64,
+  1997.
+\newblock URL \url{http://ieeexplore.ieee.org/abstract/document/626984/}.
+
+\bibitem[Gross and Specht(2001)]{gross_awareness_2001}
+Tom Gross and Marcus Specht.
+\newblock Awareness in context-aware information systems.
+\newblock In \emph{Mensch \& {Computer} 2001}, pages 173--182. Springer, 2001.
+\newblock URL
+  \url{http://link.springer.com/chapter/10.1007/978-3-322-80108-1_19}.
+
+\bibitem[Ryan et~al.(1999)Ryan, Pascoe, and Morse]{ryan_enhanced_1999}
+Nick Ryan, Jason Pascoe, and David Morse.
+\newblock Enhanced reality fieldwork: the context aware archaeological
+  assistant.
+\newblock \emph{Bar International Series}, 750:\penalty0 269--274, 1999.
+\newblock URL
+  \url{https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/62097/44_Ryan_et_al_CAA_1997.pdf?sequence=2&isAllowed=y}.
+
+\bibitem[Chen et~al.(2003{\natexlab{b}})Chen, Finin, and
+  Joshi]{chen_intelligent_2003}
+Harry Chen, T.~Finin, and A.~Joshi.
+\newblock An intelligent broker architecture for context-aware systems.
+\newblock \emph{PhD proposal in computer science, University of Maryland,
+  Baltimore, USA}, 2003{\natexlab{b}}.
+\newblock URL \url{http://aisl.umbc.edu/get/softcopy/id/789/789.pdf}.
+
+\bibitem[Dey(2001)]{dey_understanding_2001}
+Anind~K. Dey.
+\newblock Understanding and using context.
+\newblock \emph{Personal and ubiquitous computing}, 5\penalty0 (1):\penalty0
+  4--7, 2001.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=593572}.
+
+\bibitem[Nagy and Salhi(2007)]{nagy_location-routing:_2007}
+Gábor Nagy and Saïd Salhi.
+\newblock Location-routing: {Issues}, models and methods.
+\newblock \emph{European Journal of Operational Research}, 177\penalty0
+  (2):\penalty0 649--672, 2007.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221706002670}.
+
+\bibitem[Bruns(1998)]{bruns_zweistufige_1998}
+A.D. Bruns.
+\newblock \emph{Zweistufige {Standortplanung} unter {Beru}¨cksichtigung von
+  {Tourenplanungsaspekten} – {Primale} {Heuristiken} und {Lokale}
+  {Suchverfahren}}.
+\newblock {PhD} {Thesis}, Sankt Gallen University, 1998.
+
+\bibitem[Balakrishnan et~al.(1987)Balakrishnan, Ward, and
+  Wong]{balakrishnan_integrated_1987}
+Anantaram Balakrishnan, James~E. Ward, and Richard~T. Wong.
+\newblock Integrated {Facility} {Location} and {Vehicle} {Routing} {Models}:
+  {Recent} {Work} and {Future} {Prospects}.
+\newblock \emph{American Journal of Mathematical and Management Sciences},
+  7\penalty0 (1-2):\penalty0 35--61, January 1987.
+\newblock ISSN 0196-6324.
+\newblock \doi{10.1080/01966324.1987.10737207}.
+\newblock URL \url{http://dx.doi.org/10.1080/01966324.1987.10737207}.
+
+\bibitem[Maranzana(1964)]{maranzana_location_1964}
+F.~E. Maranzana.
+\newblock On the {Location} of {Supply} {Points} to {Minimize} {Transport}
+  {Costs}.
+\newblock \emph{OR}, 15\penalty0 (3):\penalty0 261--270, 1964.
+\newblock ISSN 1473-2858.
+\newblock \doi{10.2307/3007214}.
+\newblock URL \url{http://www.jstor.org.proxy.lib.odu.edu/stable/3007214}.
+
+\bibitem[Averbakh and Berman(1994)]{averbakh_technical_1994}
+Igor Averbakh and Oded Berman.
+\newblock Technical {Note}—{Routing} and {Location}-{Routing} p-{Delivery}
+  {Men} {Problems} on a {Path}.
+\newblock \emph{Transportation Science}, 28\penalty0 (2):\penalty0 162--166,
+  1994.
+\newblock URL
+  \url{http://pubsonline.informs.org/doi/abs/10.1287/trsc.28.2.162}.
+
+\bibitem[Averbakh and Berman(1995)]{averbakh_probabilistic_1995}
+Igor Averbakh and Oded Berman.
+\newblock Probabilistic {Sales}-{Delivery} {Man} and {Sales}-{Delivery}
+  {Facility} {Location} {Problems} on a {Tree}.
+\newblock \emph{Transportation Science}, 29\penalty0 (2):\penalty0 184--197,
+  May 1995.
+\newblock ISSN 0041-1655.
+\newblock \doi{10.1287/trsc.29.2.184}.
+\newblock URL
+  \url{http://pubsonline.informs.org.proxy.lib.odu.edu/doi/abs/10.1287/trsc.29.2.184}.
+
+\bibitem[Simchi-Levi(1991)]{simchi-levi_capacitated_1991}
+David Simchi-Levi.
+\newblock The {Capacitated} {Traveling} {Salesman} {Location} {Problem}.
+\newblock \emph{Transportation Science}, 25\penalty0 (1):\penalty0 9--18,
+  February 1991.
+\newblock ISSN 0041-1655.
+\newblock \doi{10.1287/trsc.25.1.9}.
+\newblock URL
+  \url{http://pubsonline.informs.org.proxy.lib.odu.edu/doi/abs/10.1287/trsc.25.1.9}.
+
+\bibitem[Laporte and Nobert(1981)]{laporte_exact_1981}
+Gilbert Laporte and Yves Nobert.
+\newblock An exact algorithm for minimizing routing and operating costs in
+  depot location.
+\newblock \emph{European Journal of Operational Research}, 6\penalty0
+  (2):\penalty0 224--226, February 1981.
+\newblock ISSN 0377-2217.
+\newblock \doi{10.1016/0377-2217(81)90212-5}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0377221781902125}.
+
+\bibitem[Bookbinder and Reece(1988)]{bookbinder_vehicle_1988}
+James~H. Bookbinder and Kathleen~E. Reece.
+\newblock Vehicle routing considerations in distribution system design.
+\newblock \emph{European Journal of Operational Research}, 37\penalty0
+  (2):\penalty0 204--213, 1988.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/037722178890330X}.
+
+\bibitem[Salhi and Fraser(1996)]{salhi_intergrated_1996}
+Said Salhi and M.~Fraser.
+\newblock An {Intergrated} {Heuristic} {Approach} for the {Combined} {Location}
+  {Vehicle} {Fleet} {Mix} {Problem}.
+\newblock \emph{Studies in Locational Analysis}, 8:\penalty0 3--22, March 1996.
+\newblock URL \url{http://kar.kent.ac.uk/5232/}.
+
+\bibitem[Branco and Coelho(1990)]{branco_hamiltonian_1990}
+I.~M. Branco and J.~D. Coelho.
+\newblock The hamiltonian p-median problem.
+\newblock \emph{European Journal of Operational Research}, 47\penalty0
+  (1):\penalty0 86--95, July 1990.
+\newblock ISSN 0377-2217.
+\newblock \doi{10.1016/0377-2217(90)90092-P}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/037722179090092P}.
+
+\bibitem[Dantzig and Ramser(1959)]{dantzig_truck_1959}
+G.~B. Dantzig and J.~H. Ramser.
+\newblock The {Truck} {Dispatching} {Problem}.
+\newblock \emph{Management Science}, 6\penalty0 (1):\penalty0 80--91, October
+  1959.
+\newblock ISSN 0025-1909.
+\newblock \doi{10.1287/mnsc.6.1.80}.
+\newblock URL
+  \url{http://pubsonline.informs.org.proxy.lib.odu.edu/doi/abs/10.1287/mnsc.6.1.80}.
+
+\bibitem[Laporte(1992)]{laporte_vehicle_1992}
+Gilbert Laporte.
+\newblock The vehicle routing problem: {An} overview of exact and approximate
+  algorithms.
+\newblock \emph{European journal of operational research}, 59\penalty0
+  (3):\penalty0 345--358, 1992.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/037722179290192C}.
+
+\bibitem[Garey and Johnson(2002)]{garey_computers_2002}
+Michael~R. Garey and David~S. Johnson.
+\newblock \emph{Computers and intractability}, volume~29.
+\newblock wh freeman New York, 2002.
+\newblock URL
+  \url{https://pdfs.semanticscholar.org/fa33/c3a89a423f0eb00134fd291894949bf9d54e.pdf}.
+
+\bibitem[Baldacci et~al.(2010)Baldacci, Toth, and Vigo]{baldacci_exact_2010}
+Roberto Baldacci, Paolo Toth, and Daniele Vigo.
+\newblock Exact algorithms for routing problems under vehicle capacity
+  constraints.
+\newblock \emph{Annals of Operations Research}, 175\penalty0 (1):\penalty0
+  213--245, March 2010.
+\newblock ISSN 0254-5330, 1572-9338.
+\newblock \doi{10.1007/s10479-009-0650-0}.
+\newblock URL
+  \url{http://link.springer.com.proxy.lib.odu.edu/article/10.1007/s10479-009-0650-0}.
+
+\bibitem[Cordeau et~al.(2007)Cordeau, Laporte, Savelsbergh, and
+  Vigo]{cordeau_chapter_2007}
+Jean-François Cordeau, Gilbert Laporte, Martin W.~P. Savelsbergh, and Daniele
+  Vigo.
+\newblock Chapter 6 {Vehicle} {Routing}.
+\newblock In Cynthia Barnhart {and}~Gilbert Laporte, editor, \emph{Handbooks in
+  {Operations} {Research} and {Management} {Science}}, volume~14 of
+  \emph{Transportation}, pages 367--428. Elsevier, 2007.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0927050706140062}.
+\newblock DOI: 10.1016/S0927-0507(06)14006-2.
+
+\bibitem[Toth and Vigo(2002)]{toth_vehicle_2002}
+Paolo Toth and Daniele Vigo.
+\newblock The vehicle routing problem, volume 9 of {SIAM} {Monographs} on
+  {Discrete} {Mathematics} and {Applications}.
+\newblock \emph{SIAM, Philadelphia, PA}, 2002.
+
+\bibitem[Solomon and Desrosiers(1988)]{solomon_survey_1988}
+Marius~M. Solomon and Jacques Desrosiers.
+\newblock Survey paper—time window constrained routing and scheduling
+  problems.
+\newblock \emph{Transportation science}, 22\penalty0 (1):\penalty0 1--13, 1988.
+\newblock URL \url{http://pubsonline.informs.org/doi/abs/10.1287/trsc.22.1.1}.
+
+\bibitem[Psaraftis(1995)]{psaraftis_dynamic_1995}
+Harilaos~N. Psaraftis.
+\newblock Dynamic vehicle routing: {Status} and prospects.
+\newblock \emph{Annals of operations research}, 61\penalty0 (1):\penalty0
+  143--164, 1995.
+\newblock URL \url{http://link.springer.com/article/10.1007/BF02098286}.
+
+\bibitem[Renaud et~al.(1996{\natexlab{a}})Renaud, Laporte, and
+  Boctor]{renaud_tabu_1996}
+Jacques Renaud, Gilbert Laporte, and Fayez~F. Boctor.
+\newblock A tabu search heuristic for the multi-depot vehicle routing problem.
+\newblock \emph{Computers \& Operations Research}, 23\penalty0 (3):\penalty0
+  229--235, March 1996{\natexlab{a}}.
+\newblock ISSN 0305-0548.
+\newblock \doi{10.1016/0305-0548(95)O0026-P}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0305054895O0026P}.
+
+\bibitem[Kulkarni and Bhave(1985)]{kulkarni_integer_1985}
+R.~V. Kulkarni and P.~R. Bhave.
+\newblock Integer programming formulations of vehicle routing problems.
+\newblock \emph{European Journal of Operational Research}, 20\penalty0
+  (1):\penalty0 58--67, April 1985.
+\newblock ISSN 0377-2217.
+\newblock \doi{10.1016/0377-2217(85)90284-X}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/037722178590284X}.
+
+\bibitem[Laporte et~al.(1984)Laporte, Nobert, and Arpin]{laporte_optimal_1984}
+Gilbert Laporte, Yves Nobert, and Danielle Arpin.
+\newblock \emph{Optimal solutions to capacitated multidepot vehicle routing
+  problems}.
+\newblock Université de Montréal, Centre de recherche sur les transports,
+  1984.
+
+\bibitem[Laporte et~al.(1988)Laporte, Nobert, and
+  Taillefer]{laporte_solving_1988}
+Gilbert Laporte, Yves Nobert, and Serge Taillefer.
+\newblock Solving a {Family} of {Multi}-{Depot} {Vehicle} {Routing} and
+  {Location}-{Routing} {Problems}.
+\newblock \emph{Transportation Science}, 22\penalty0 (3):\penalty0 161--172,
+  August 1988.
+\newblock ISSN 0041-1655.
+\newblock \doi{10.1287/trsc.22.3.161}.
+\newblock URL
+  \url{http://pubsonline.informs.org.proxy.lib.odu.edu/doi/abs/10.1287/trsc.22.3.161}.
+
+\bibitem[Tillman(1969)]{tillman_multiple_1969}
+Frank~A. Tillman.
+\newblock The multiple terminal delivery problem with probabilistic demands.
+\newblock \emph{Transportation Science}, 3\penalty0 (3):\penalty0 192--204,
+  1969.
+\newblock URL \url{http://pubsonline.informs.org/doi/abs/10.1287/trsc.3.3.192}.
+
+\bibitem[Tillman and Cain(1972)]{tillman_upperbound_1972}
+Frank~A. Tillman and Thomas~M. Cain.
+\newblock An upperbound algorithm for the single and multiple terminal delivery
+  problem.
+\newblock \emph{Management Science}, 18\penalty0 (11):\penalty0 664--682, 1972.
+\newblock URL
+  \url{http://pubsonline.informs.org/doi/abs/10.1287/mnsc.18.11.664}.
+
+\bibitem[Tillman and Hering(1971)]{tillman_study_1971}
+Frank~A. Tillman and Robert~W. Hering.
+\newblock A study of a look-ahead procedure for solving the multiterminal
+  delivery problem.
+\newblock \emph{Transportation Research}, 5\penalty0 (3):\penalty0 225--229,
+  1971.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0041164771900232}.
+
+\bibitem[Wren and Holliday(1972)]{wren_computer_1972}
+Anthony Wren and Alan Holliday.
+\newblock Computer scheduling of vehicles from one or more depots to a number
+  of delivery points.
+\newblock \emph{Journal of the Operational Research Society}, 23\penalty0
+  (3):\penalty0 333--344, 1972.
+\newblock URL \url{http://link.springer.com/article/10.1057/jors.1972.53}.
+
+\bibitem[Gillett and Johnson(1976)]{gillett_multi-terminal_1976}
+Billy~E. Gillett and Jerry~G. Johnson.
+\newblock Multi-terminal vehicle-dispatch algorithm.
+\newblock \emph{Omega}, 4\penalty0 (6):\penalty0 711--718, 1976.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0305048376900979}.
+
+\bibitem[Golden et~al.(1977)Golden, Magnanti, and
+  Nguyen]{golden_implementing_1977}
+Bruce~L. Golden, Thomas~L. Magnanti, and Hien~Q. Nguyen.
+\newblock Implementing vehicle routing algorithms.
+\newblock \emph{Networks}, 7\penalty0 (2):\penalty0 113--148, 1977.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com/doi/10.1002/net.3230070203/full}.
+
+\bibitem[Raft(1982)]{raft_modular_1982}
+Ole~M. Raft.
+\newblock A modular algorithm for an extended vehicle scheduling problem.
+\newblock \emph{European Journal of Operational Research}, 11\penalty0
+  (1):\penalty0 67--76, 1982.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221782800118}.
+
+\bibitem[Chao et~al.(1993)Chao, Golden, and Wasil]{chao_new_1993}
+I.-Ming Chao, Bruce~L. Golden, and Edward Wasil.
+\newblock A {New} {Heuristic} for the {Multi}-{Depot} {Vehicle} {Routing}
+  {Problem} that {Improves} upon {Best}-{Known} {Solutions}.
+\newblock \emph{American Journal of Mathematical and Management Sciences},
+  13\penalty0 (3-4):\penalty0 371--406, February 1993.
+\newblock ISSN 0196-6324.
+\newblock \doi{10.1080/01966324.1993.10737363}.
+\newblock URL \url{http://dx.doi.org/10.1080/01966324.1993.10737363}.
+
+\bibitem[Dueck(1993)]{dueck_new_1993}
+Gunter Dueck.
+\newblock New optimization heuristics: {The} great deluge algorithm and the
+  record-to-record travel.
+\newblock \emph{Journal of Computational physics}, 104\penalty0 (1):\penalty0
+  86--92, 1993.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0021999183710107}.
+
+\bibitem[Lin(1965)]{lin_computer_1965}
+S.~Lin.
+\newblock Computer solutions of the traveling salesman problem.
+\newblock \emph{The Bell System Technical Journal}, 44\penalty0 (10):\penalty0
+  2245--2269, December 1965.
+\newblock ISSN 0005-8580.
+\newblock \doi{10.1002/j.1538-7305.1965.tb04146.x}.
+
+\bibitem[Renaud et~al.(1996{\natexlab{b}})Renaud, Boctor, and
+  Laporte]{renaud_improved_1996}
+Jacques Renaud, Fayez~F. Boctor, and Gilbert Laporte.
+\newblock An improved petal heuristic for the vehicle routeing problem.
+\newblock \emph{Journal of the operational Research Society}, 47\penalty0
+  (2):\penalty0 329--336, 1996{\natexlab{b}}.
+\newblock URL \url{http://link.springer.com/article/10.1057/jors.1996.29}.
+
+\bibitem[Cordeau et~al.(1997)Cordeau, Gendreau, and Laporte]{cordeau_tabu_1997}
+Jean-François Cordeau, Michel Gendreau, and Gilbert Laporte.
+\newblock A tabu search heuristic for periodic and multi-depot vehicle routing
+  problems.
+\newblock \emph{Networks}, 30\penalty0 (2):\penalty0 105--119, September 1997.
+\newblock ISSN 1097-0037.
+\newblock \doi{10.1002/(SICI)1097-0037(199709)30:2<105::AID-NET5>3.0.CO;2-G}.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com.proxy.lib.odu.edu/doi/10.1002/(SICI)1097-0037(199709)30:2<105::AID-NET5>3.0.CO;2-G/abstract}.
+
+\bibitem[Gendreau et~al.(1992)Gendreau, Hertz, and Laporte]{gendreau_new_1992}
+Michel Gendreau, Alain Hertz, and Gilbert Laporte.
+\newblock New insertion and postoptimization procedures for the traveling
+  salesman problem.
+\newblock \emph{Operations Research}, 40\penalty0 (6):\penalty0 1086--1094,
+  1992.
+\newblock URL
+  \url{http://pubsonline.informs.org/doi/abs/10.1287/opre.40.6.1086}.
+
+\bibitem[Pisinger and Ropke(2007)]{pisinger_general_2007}
+David Pisinger and Stefan Ropke.
+\newblock A general heuristic for vehicle routing problems.
+\newblock \emph{Computers \& Operations Research}, 34\penalty0 (8):\penalty0
+  2403--2435, August 2007.
+\newblock ISSN 0305-0548.
+\newblock \doi{10.1016/j.cor.2005.09.012}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0305054805003023}.
+
+\bibitem[Lau et~al.(2010)Lau, Chan, Tsui, and Pang]{lau_application_2010}
+H.~C.~W. Lau, T.~M. Chan, W.~T. Tsui, and W.~K. Pang.
+\newblock Application of {Genetic} {Algorithms} to {Solve} the {Multidepot}
+  {Vehicle} {Routing} {Problem}.
+\newblock \emph{IEEE Transactions on Automation Science and Engineering},
+  7\penalty0 (2):\penalty0 383--392, April 2010.
+\newblock ISSN 1545-5955.
+\newblock \doi{10.1109/TASE.2009.2019265}.
+
+\bibitem[Cordeau and Maischberger(2012)]{cordeau_parallel_2012}
+Jean-François Cordeau and Mirko Maischberger.
+\newblock A parallel iterated tabu search heuristic for vehicle routing
+  problems.
+\newblock \emph{Computers \& Operations Research}, 39\penalty0 (9):\penalty0
+  2033--2050, September 2012.
+\newblock ISSN 0305-0548.
+\newblock \doi{10.1016/j.cor.2011.09.021}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0305054811002826}.
+
+\bibitem[Subramanian et~al.(2013)Subramanian, Uchoa, and
+  Ochi]{subramanian_hybrid_2013}
+Anand Subramanian, Eduardo Uchoa, and Luiz~Satoru Ochi.
+\newblock A hybrid algorithm for a class of vehicle routing problems.
+\newblock \emph{Computers \& Operations Research}, 40\penalty0 (10):\penalty0
+  2519--2531, October 2013.
+\newblock ISSN 0305-0548.
+\newblock \doi{10.1016/j.cor.2013.01.013}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S030505481300021X}.
+
+\bibitem[Vidal et~al.(2014)Vidal, Crainic, Gendreau, and
+  Prins]{vidal_implicit_2014}
+Thibaut Vidal, Teodor~Gabriel Crainic, Michel Gendreau, and Christian Prins.
+\newblock Implicit depot assignments and rotations in vehicle routing
+  heuristics.
+\newblock \emph{European Journal of Operational Research}, 237\penalty0
+  (1):\penalty0 15--28, August 2014.
+\newblock ISSN 0377-2217.
+\newblock \doi{10.1016/j.ejor.2013.12.044}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S037722171301028X}.
+
+\bibitem[Escobar et~al.(2014)Escobar, Linfati, Toth, and
+  Baldoquin]{escobar_hybrid_2014}
+John~Willmer Escobar, Rodrigo Linfati, Paolo Toth, and Maria~G. Baldoquin.
+\newblock A hybrid {Granular} {Tabu} {Search} algorithm for the {Multi}-{Depot}
+  {Vehicle} {Routing} {Problem}.
+\newblock \emph{Journal of Heuristics}, 20\penalty0 (5):\penalty0 483--509,
+  October 2014.
+\newblock ISSN 1381-1231, 1572-9397.
+\newblock \doi{10.1007/s10732-014-9247-0}.
+\newblock URL
+  \url{http://link.springer.com.proxy.lib.odu.edu/article/10.1007/s10732-014-9247-0}.
+
+\bibitem[Rechenberg(1965)]{rechenberg_cybernetic_1965}
+Ingo Rechenberg.
+\newblock Cybernetic solution path of an experimental problem.
+\newblock 1965.
+\newblock URL \url{http://www.citeulike.org/group/1662/article/1505176}.
+
+\bibitem[Huning et~al.(1976)Huning, Rechenberg, and
+  Eigen]{huning_evolutionsstrategie._1976}
+Alois Huning, Ingo Rechenberg, and Manfred Eigen.
+\newblock \emph{Evolutionsstrategie. {Optimierung} technischer {Systeme} nach
+  {Prinzipien} der biologischen {Evolution}}.
+\newblock JSTOR, 1976.
+\newblock URL \url{http://www.jstor.org/stable/23679080}.
+
+\bibitem[Schwefel(1975)]{schwefel_evolutionsstrategie_1975}
+H.-P. Schwefel.
+\newblock \emph{Evolutionsstrategie und numerische {Optimierung}}.
+\newblock Technische Universität Berlin, 1975.
+
+\bibitem[Holland and {others}(1990)]{holland_echo:_1990}
+John~H. Holland and {others}.
+\newblock Echo: {Explorations} of evolution in a minature world.
+\newblock 1990.
+\newblock URL \url{http://www.citeulike.org/group/468/article/674061}.
+
+\bibitem[Sengoku and Yoshihara(1998)]{sengoku_fast_1998}
+Hiroaki Sengoku and Ikuo Yoshihara.
+\newblock A fast {TSP} solver using {GA} on {JAVA}.
+\newblock In \emph{Third {International} {Symposium} on {Artificial} {Life},
+  and {Robotics} ({AROB} {III}’98)}, pages 283--288, 1998.
+\newblock URL \url{http://prgmr.gcd.org/sengoku/docs/arob98.pdf}.
+
+\bibitem[Sarmenta et~al.(2002)Sarmenta, Chua, Echevarria, Mendoza, Santos, Tan,
+  and Lozada]{sarmenta_bayanihan_2002}
+Luis~FG Sarmenta, Sandra~JV Chua, Paul Echevarria, Jose~M. Mendoza,
+  Rene-Russelle Santos, Stanley Tan, and Richard Lozada.
+\newblock Bayanihan {Computing}. {NET}: {Grid} {Computing} with {XML} {Web}
+  {Services}.
+\newblock In \emph{ccgrid}, pages 434--435, 2002.
+\newblock URL \url{http://ieeexplore.ieee.org/iel5/7937/21887/01017182.pdf}.
+
+\bibitem[Diaz(2012)]{diaz_vrp_2012}
+Bernabe~Dorronsoro Diaz.
+\newblock \emph{Vrp web}.
+\newblock 2012.
+
+\bibitem[Mühl(2002)]{muhl_large-scale_2002}
+Gero Mühl.
+\newblock \emph{Large-scale content-based publish-subscribe systems}.
+\newblock PhD thesis, TU Darmstadt, 2002.
+\newblock URL \url{http://tuprints.ulb.tu-darmstadt.de/274}.
 
 \bibitem[Google(2016)]{google_google_2016}
 Google Google.
@@ -316,19 +850,43 @@ OptaPlanner.
 \newblock Constraint satisfaction solver ({Java}™, {Open} {Source}), 2016.
 \newblock URL \url{https://www.optaplanner.org/}.
 
-\bibitem[Antosiewicz et~al.(2013)Antosiewicz, Koloch, and
-  Kamiński]{antosiewicz_choice_2013}
-M.~Antosiewicz, G.~Koloch, and B.~Kamiński.
-\newblock Choice of best possible metaheuristic algorithm for the travelling
-  salesman problem with limited computational time: quality, uncertainty and
-  speed.
-\newblock \emph{Journal of Theoretical and Applied Computer Science},
-  7\penalty0 (1):\penalty0 46--55, 2013.
-\newblock ISSN 2299-2634.
+\bibitem[Banavar et~al.(1999)Banavar, Chandra, Mukherjee, Nagarajarao, Strom,
+  and Sturman]{banavar_efficient_1999}
+Guruduth Banavar, Tushar Chandra, Bodhi Mukherjee, Jay Nagarajarao, Robert~E.
+  Strom, and Daniel~C. Sturman.
+\newblock An efficient multicast protocol for content-based publish-subscribe
+  systems.
+\newblock In \emph{Distributed {Computing} {Systems}, 1999. {Proceedings}. 19th
+  {IEEE} {International} {Conference} on}, pages 262--272. IEEE, 1999.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=776528}.
 
-\bibitem[Black(2005)]{paul_e._black_greedy_2005}
-Paul~E. Black.
-\newblock greedy algorithm, February 2005.
-\newblock URL \url{https://xlinux.nist.gov/dads//HTML/greedyalgo.html}.
+\bibitem[Engelbrecht(2007)]{engelbrecht_coevolution_2007}
+Andries~P. Engelbrecht.
+\newblock Coevolution.
+\newblock In \emph{Computational {Intelligence}}, pages 275--283. John Wiley \&
+  Sons, Ltd, 2007.
+\newblock ISBN 978-0-470-51251-7.
+\newblock URL
+  \url{http://onlinelibrary.wiley.com.proxy.lib.odu.edu/doi/10.1002/9780470512517.ch15/summary}.
+\newblock DOI: 10.1002/9780470512517.ch15.
+
+\bibitem[Raff(1983)]{raff_routing_1983}
+Samuel Raff.
+\newblock Routing and scheduling of vehicles and crews: {The} state of the art.
+\newblock \emph{Computers \& Operations Research}, 10\penalty0 (2):\penalty0
+  6369117149195--67115147193211, 1983.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0305054883900308}.
+
+\bibitem[redis(2017{\natexlab{a}})]{redis_introduction_2017}
+redis.
+\newblock Introduction to {Redis} – {Redis}, 2017{\natexlab{a}}.
+\newblock URL \url{https://redis.io/topics/introduction}.
+
+\bibitem[redis(2017{\natexlab{b}})]{redis_clients_2017}
+redis.
+\newblock Clients - {Redis}, 2017{\natexlab{b}}.
+\newblock URL \url{https://redis.io/clients}.
 
 \end{thebibliography}

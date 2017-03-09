@@ -171,12 +171,6 @@
 \usepackage{subfig}
 
 %
-%
-%
-\usepackage{algorithm}
-\usepackage{algorithmic}
-
-%
 % Digunakan untuk membuat daftar pustaka dan citasi
 %
 \usepackage[round, authoryear]{natbib}

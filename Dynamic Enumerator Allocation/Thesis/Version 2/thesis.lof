@@ -5,9 +5,29 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Context Hierarchy \citep {kofod-petersen_case-based_2003}\relax }}{3}{figure.caption.14}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Ilustrasi \textit {Multiple Travelling Salesman Problem}\relax }}{4}{figure.caption.15}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textit {Literature Map} Penelitian\relax }}{7}{figure.caption.16}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Kategori dari \textit {Context}\relax }}{10}{figure.caption.17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ilustrasi \textit {Vehicle Routing Problem (VRP)}\relax }}{15}{figure.caption.18}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Hierarki variasi dari VRP \citep {weise_solving_2009}\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustrasi \textit {Multi Depot} VRP\relax }}{16}{figure.caption.20}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \textit {Lifecycle} pada \textit {Cooperative Coevolution} \citep {de_oliveira_cooperative_2016}\relax }}{22}{figure.caption.21}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Arsitektur dasar pada Pub/Sub \citep {eugster_many_2003}\relax }}{24}{figure.caption.22}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Pemisahan informasi pada Pub/Sub \citep {eugster_many_2003}\relax }}{24}{figure.caption.23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Google Direction API Response\relax }}{12}{figure.caption.18}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Grafik Rekomendasi dengan MTSP\relax }}{15}{figure.caption.20}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Google Direction API Response\relax }}{29}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Grafik Rekomendasi dengan MTSP\relax }}{32}{figure.caption.28}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Garis Besar Sistem\relax }}{34}{figure.caption.30}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Cooperative coevolutionary} algorithm dengan \textit {problem decomposition}\relax }}{35}{figure.caption.31}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \textit {Problem decomposition}: alokasi \textit {customer} ke \textit {depot}\relax }}{36}{figure.caption.32}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Arsitektur \textit {paralel module} di CoES\relax }}{36}{figure.caption.33}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Arsitektur \textit {Population Evolve module} di CoES\relax }}{37}{figure.caption.34}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Arsitektur \textit {Complete Solution Evaluation module} di CoES\relax }}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Arsitektur \textit {Elite Group module} di CoES\relax }}{38}{figure.caption.36}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Arsitektur \textit {Publish-Subscribe} terdistribusi\relax }}{39}{figure.caption.37}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Normal (Cordeau)\relax }}{46}{figure.caption.38}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Normal (Lapangan)\relax }}{47}{figure.caption.39}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi \textit {Unstable Connection}\relax }}{54}{figure.caption.40}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Pencacah Berhenti\relax }}{55}{figure.caption.41}
 \addvspace {10\p@ }
