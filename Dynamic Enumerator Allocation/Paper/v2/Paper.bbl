@@ -147,4 +147,10 @@ G.~Banavar, T.~Chandra, B.~Mukherjee, J.~Nagarajarao, R.~E. Strom, and D.~C.
   \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=776528}
 \BIBentrySTDinterwordspacing
 
+\bibitem{google_google_2016}
+\BIBentryALTinterwordspacing
+G.~Google, ``Google {Maps} {Directions} {API},'' 2016. [Online]. Available:
+  \url{https://developers.google.com/maps/documentation/directions/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

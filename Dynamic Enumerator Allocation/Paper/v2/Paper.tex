@@ -307,8 +307,17 @@
 
 
 
-\usepackage{hyperref}
 
+%
+%
+\usepackage[bookmarks=false]{hyperref}
+\newcommand{\algorithmautorefname}{Algorithm}
+
+
+
+
+%
+%
 \usepackage{minted}
 \usepackage{tcolorbox}
 \usepackage{etoolbox}
@@ -362,7 +371,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Real-Time Location Recommendation for Field Data Collection}
+\title{An Architecture for Real-Time Location Recommendation for Field Data Collection}
 
 
 % author names and affiliations
@@ -419,7 +428,7 @@ Email: baskara@stei.itb.ac.id}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-Field data collection is one of the main activities performed by the statistical agencies of a country. Data collection activities have a similiar workflow with Multi Depot Vehicle Routing Problem (MDVRP). The use of MDVRP to generate pre-calculated routes resulted in a total route costs with high standard deviation. Real-time mechanism by utilizing the publish / subscribe paradigm combined with COEs MDVRP algorithm is proposed to reduce the inequality (large variation) the time of completion. The test results show that the routes produced by publish / subscribe paradigm combined with COEs MDVRP algorithm are more prevalent in total route times among enumerators compared with pre-calculated routes produced by only COEs algorithm.
+Field data collection is one of the main activities performed by the national statistical agencies in every country. Data collection activities have a similiar workflow with Multi Depot Vehicle Routing Problem (MDVRP). The use of MDVRP to generate pre-calculated routes resulted in a total route costs with high standard deviation. Real-time mechanism by utilizing the publish/subscribe paradigm combined with Cooperative Coevolution Algorithms (CoEAs) is proposed to reduce the inequality (large variation) of the completion time. The test results show that the routes produced by publish/subscribe paradigm combined with CoEAs are more prevalent in total route times among enumerators compared with pre-calculated routes produced by only CoEAs.
 \end{abstract}
 
 % no keywords
@@ -444,13 +453,21 @@ Field data collection is one of the main activities performed by the statistical
 \section{Introduction}
 \label{sec:introduction}
 %-----------------------------------------------------------------------------%
-Pengumpulan data lapangan merupakan salah satu tugas dan wewenang dari lembaga statistik suatu negara. Terdapat dua macam metode pengumpulan data yang digunakan, yaitu: pengumpulan data primer dan pengumpulan data sekunder. Pada pengumpulan data primer, petugas pengumpulan data secara langsung melakukan interview dengan responden, sementara pada pengumpulan data sekunder, instansi melakukan kompilasi data yang telah dilakukan oleh pihak lain. Pada proses pengumpulan data (primer), petugas pengumpulan data dialokasikan pada sejumlah lokasi pencacahan yang telah ditentukan. Mekanisme pengalokasian yang biasanya digunakan adalah alokasi dengan jumlah lokasi yang sama antar petugas.
+Data collection is one of the main duties of the statistical agency in every country, including BPS-Statitics Indonesia. There are two data collection methods that are generally used: primary data collection and secondary data collection. In the primary data collection, the enumerators directly meet and interview the respondents, while in the secondary data collection, the statistical institution only compiles the data collected by other agencies. The primary data collection method requires the enumerators to be allocated to several census/survey areas that have been specified before. The allocation is usually made by assigning an equal number of locations on each enumerator.
 
 
-Alur kerja pada proses pengumpulan adalah, setiap petugas pengumpulan data memulai pengumpulan data dari sebuah titik tertentu, baik itu kantor maupun tempat tinggal masing-masing petugas. Kemudian petugas melakukan pengumpulan data pada sebuah lokasi sampai selesai, kemudian dilanjutkan dengan lokasi berikutnya, dan seterusnya sampai seluruh lokasi pencacahan dikunjungi. Alur kerja pengumpulan data ini sangat mirip dengan \textit{Vehicle Routing Problem} (VRP), atau lebih spesifik lagi \textit{Multi Depot Vehicle Routing Problem} (MDVRP).
+The workflow of the data collection performs as follows: 
+\begin{enumerate}
+	\item The enumeration will start on a particular point. It could be the statistical office or the enumerator's house. 
+	\item The enumerator moves to the first census/survey location and visits all respondents in that location. 
+	\item After finishing the first census/survey area, the enumerator moves to the second census/survey location and continue doing so until all locations have been visited successfully.
+\end{enumerate}
 
 
-Akan tetapi, meskipun masalah pengumpulan data memiliki kesamaan alur kerja dengan MDVRP, akan tetapi implementasi algoritma MDVRP secara mentah tidak dapat menjadi solusi atas permasalahan alokasi petugas pengumpulan data, karena salah satu komponen yang penting, yaitu service time, tidak tersedia sampai dengan lokasi dikunjungi. This research aims to propose an integration antara MDVRP dengan mekanisme pub/sub untuk menciptakan sistem rekomendasi lokasi pencacahan secara real-time.
+This workflow is significantly similar to the Vehicle Routing Problem (VRP), or more specifically, the Multi Depot Vehicle Routing Problem (MDVRP).
+
+
+However, although the data collection shares similar workflow with MDVRP, the rough implementation of the MDVRP algorithm is not feasible to solve the allocation problems. This is because one important variables needed in the algorithm, the service time, is not available until after the enumerator finish visiting the census/survey location. Therefore, this research aims to propose an integration of MDVRP with pub/sub mechanism to create a location recommendation system for field data collection that can be used in real time. 
 
 
 %-----------------------------------------------------------------------------%
@@ -461,13 +478,13 @@ Akan tetapi, meskipun masalah pengumpulan data memiliki kesamaan alur kerja deng
 \subsection{Multi-Depot Vehicle Routing Problem}
 \label{ssec:mdvrp}
 %-----------------------------------------------------------------------------%
-\textit{Multi-Depot Vehicle Routing Problem (MDVRP)} merupakan salah satu varian dari VRP klasik dimana terdapat lebih dari satu \textit{depot} yang digunakan \cite{montoya-torres_literature_2015}. Gambar \ref{fig:mdvrp-illustration} menunjukkan contoh solusi dari permasalahan VRP yang menggunakan dua depot dan dua buah rute kendaraan yang berasosiasi dengan masing-masing depot. Basically, a solution to this problem is a set of vehicle routes such that: (i) each vehicle route starts and ends at the same depot, (ii) each customer is served exactly once by one vehicle, (iii) the total demand on each route does not exceed vehicle capacity (iv) the maximum route time is satisfied and (v) the total cost is minimized.
+Multi-Depot Vehicle Routing Problem (MDVRP) is one of classic  Vehicle Routing Problem (VRP) variance, where there are more than one depot that can be used  \cite{montoya-torres_literature_2015}. \autoref{fig:mdvrp-illustration} shows an example of the solution for VRP problem that uses two depot and two vehicle routes which associated with each depot. Basically, a solution to this problem is a set of vehicle routes such that: (i) each vehicle route starts and ends at the same depot, (ii) each customer is served exactly once by one vehicle, (iii) the total demand on each route does not exceed vehicle capacity (iv) the maximum route time is satisfied and (v) the total cost is minimized.
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=6cm]{Resources/Images/mdvrp-illustration}
-	\caption{Ilustrasi \textit{Multi Depot} VRP}
+	\caption{An illustration for \textit{Multi Depot} VRP}
 	\label{fig:mdvrp-illustration}
 \end{figure}
 
@@ -557,39 +574,38 @@ The objective \ref{eq:1} minimizes the total cost. Constraints \ref{eq:2} and \r
 \subsection{Evolution Algorithms}
 \label{ssec:evolution-algorithms}
 %-----------------------------------------------------------------------------%
-\textit{Evolution Algorithms (EAs)} merupakan salah satu \textit{family} dari algoritma optimasi yang terinspirasi dari alam. Pada algoritma evolusi, terdapat proses seleksi dan reproduksi untuk memurnikasi populasi dari kandidat solusi. Menurut Engelbreacht \cite{engelbrecht_coevolution_2007}, cecara umum \textit{lifecycle} dari \textit{Evolution Algorithms} diawali dengan  konfigurasi populasi awal secara random. Kemudian, setiap iterasi dilakukan evaluasi dengan fungsi obyektif atas individu pada populasi. Berdasarkan hasil evaluasi, kemudian \textit{fitness value} disematkan pada setiap kandidat solusi pada populasi. Kandidat solusi tersebut kemudian mengalami reproduksi dan menghasilkan generasi berikutnya. Proses kemudian berulang dengan menggunakan individu generasi yang baru.
+Evolution Algorithms (EAs) is one of the optimization algorithm families that are inspired by nature. In the evolution algorithm, there are selection and reproduction processes to purify the population from the solution candidates. According to Engelbreacht \cite{engelbrecht_coevolution_2007}, in general, the EAs lifecycle begins with randomly configuring the initial population. Afterwards, for each iteration, every individual in the population is evaluated using an objective function. Then, each solution candidate will be labeled with a fitness value based on their evaluation result. These solution candidates will then commit a reproduction and create the next generation. The whole process will be repeated using the new-generation individuals. These iterations will stop once it hits a certain time limit, which is 60 seconds. 
 
 
-Coevolutionary algorithms (CoEAs), merupakan pengembangan dari EAs. In standard EAs, evolution is usually viewed as the population attempts to adapt in a fixed physical environment. In contrast, coevolutionary algorithms (CoEAs) realize that in natural evolution the physical environment is influenced by other independently-acting biological populations \cite{engelbrecht_coevolution_2007}. CoEAs dapat dibagi menjadi dua, tergantung interaksi dari masing-masing spesies: \textit{competitive} dan \textit{cooperative} \cite{engelbrecht_coevolution_2007}. Pada \textit{competitive coevolution} setiap individu berkompetisi dengan satu kelompoknya. Sementara pada \textit{cooperative coevolution}, interaksi antar spesies bersifat saling menguntungkan, atau paling tidak, tidak saling membahayakan.
+Coevolutionary algorithms (CoEAs) is a development of EAs. In standard EAs, evolution is usually viewed as the population attempts to adapt in a fixed physical environment. In contrast, coevolutionary algorithms (CoEAs) realize that in natural evolution the physical environment is influenced by other independently-acting biological populations \cite{engelbrecht_coevolution_2007}. Based on the interaction of each species, CoEAs can be distinguished into two categories: competitive and cooperative \cite{engelbrecht_coevolution_2007}. In the competitive coevolution, each individual competees with other individuals in the same group. Meanwhile, in cooperative coevolution, the interaction between species is mutualistic, or at least, not harming each other. 
 
 
 %-----------------------------------------------------------------------------%
 \subsection{Publish/Subscribe Paradigm}
 \label{ssec:pub-sub}
 %-----------------------------------------------------------------------------%
-\textit{Publish/subscribe interaction} merupakan salah satu metode komunikasi antara \textit{client} dan \textit{server}. Paradigma interaksi pada \textit{publish/subscribe} adalah adanya \textit{subscriber} yang memiliki ketertarikan pada suatu \textit{event} atau \textit{pattern of event}, agar dapat dikirimkan notifikasi tentang sebuah \textit{event} oleh \textit{publisher} yang sesuai dengan \textit{interest}-nya \cite{eugster_many_2003}.
+Publish/subscribe interaction is one of the communication methods between client and server. The interaction paradigm in publish/subscribe is the presence of subscribers that have an interest in a certain event or the pattern of an event. These subscribers will be notified by the publisher about the event they are interested in \cite{eugster_many_2003}. 
 
 
-Model dasar dari sistem \textit{publish/subscribe}, seperti Gambar \ref{fig:pub-sub-general}, bergantung pada \textit{event notification service} yang menyediakan penyimpanan dan \textit{management of subscription}. \textit{Event service} tersebut berperan sebagai mediator antara \textit{publisher} yang berperan sebagai \textit{producer} dari \textit{event} dan \textit{subscriber} yang berperan sebagai \textit{consumer} dari \textit{event}.
-
+The basic model of the publish/subscribe system, as can be seen in \autoref{fig:pub-sub-general}, depends on the event notification service that provides storage and management of subscription. This event service acts as a mediator between the publisher, who acts as the events producer, and the subscriber who acts as the event consumer. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=8cm]{Resources/Images/pub-sub-general}
-	\caption{Arsitektur dasar pada Pub/Sub \cite{eugster_many_2003}}
+	\caption{Basic architecture in Pub/Sub \cite{eugster_many_2003}}
 	\label{fig:pub-sub-general}
 \end{figure}
 
 
-Salah satu keuntungan dari mekanisme publish/subscribe adalah bersifat loose coupling \cite{eugster_many_2003} antara publisher dengan subscriber. Pemisahan informasi (\textit{decoupling}) yang terjadi antara \textit{subscriber} dan \textit{publisher} dapat dipisahkan dalam 3 (tiga) dimensi, yaitu:
+One of the benefits of publish/subscribe mechanism is the loose coupling characteristic \cite{eugster_many_2003} between the publisher and the subscriber. The separation of information (decoupling) between publisher and subscriber can be divided into 3 (three) dimension, which are:
 
 \begin{enumerate}
-\item \textit{Space decoupling.} \\
-Interaksi antara \textit{publisher} dan \textit{subscriber} tidak perlu saling mengetahui satu dengan yang lain. \textit{Publisher} mengirimkan \textit{event}, dan \textit{subscriber} menerima \textit{event} secara tidak langsung melalui \textit{event service}. \textit{Publisher} biasanya tidak memegang referensi terhadap \textit{subscriber}. Begitu juga sebaliknya, \textit{subscriber} biasanya tidak memegang referensi terhadap \textit{publisher}.
-\item \textit{Time decoupling.} \\
-Pihak-pihak yang berinteraksi, tidak harus berinteraksi pada waktu yang bersamaan. \textit{Publisher} dapat mengirimkan \textit{event} pada saat \textit{subscriber} dalam kondisi terputus. Begitu juga sebaliknya, \textit{subscriber} tetap dapat menerima \textit{event}, meskipun \textit{original publisher} dalam kondisi terputus.
-\item \textit{Synchronizing decoupling.} \\
-\textit{Publisher} tidak diblok ketika memproduksi \textit{event}, dan juga \textit{subscriber} tetap dapat memperoleh informasi meskipun sedang mengerjakan tugas yang lain. \textit{Publisher} dan \textit{subscriber} tidak berada dalam \textit{main flow}, sehingga tidak berinteraksi secara \textit{synchronous}.
+	\item Space decoupling. \\
+	In doing the interaction, both publisher and subscriber do not need to know each other. The publisher sends an event and subscriber indirectly receive the event through the event service. The publisher does not hold any reference regarding the subscriber and vice versa. 
+	\item Time decoupling. \\
+	The parties who are involved in the interactions do not have to interact in the same time. The publisher can send the event even though he is in a disconnected state. Similarly, the subscriber can still receive the event, albeit disconnected. 
+	\item Synchronizing decoupling. \\
+	Publisher will not be blocked when producing the event. The subscriber can still obtain information despite, at the same time, working on other tasks. Publisher and subscriber are not in the main flow, hence are not interacting synchronously. 
 \end{enumerate}
 
 
@@ -597,38 +613,38 @@ Pihak-pihak yang berinteraksi, tidak harus berinteraksi pada waktu yang bersamaa
 \section{Proposed Solution}
 \label{sec:proposed-solution}
 %-----------------------------------------------------------------------------%
-Kelemahan MDVRP ketika digunakan dalam rekomendasi lokasi pencacahan adalah ketiadaan data service time, padahal data itu sangat penting dalam kalkulasi rekomendasi. Untuk itu, MDVRP perlu diintegrasikan dengan mekanisme real-time. Terdapat beberapa mekanisme yang dapat diadopsi pada real-time system, diantaranya: Web service, RPC, message passing, dan publish/subscribe \cite{eugster_many_2003}. 
+The drawback of using MDVRP for location recommendation in field data collection is the absence of time service data, which is very important in the recommendation calculation. Thus, MDVRP needs to be integrated with the real-time mechanism. There are several mechanisms that can be adopted in a real-time system such as Web Service, Remote Procedure Call (RPC), message passing, and publish/service \cite{eugster_many_2003}.
 
 
-Mekanisme publish/subscribe digunakan dalam penelitian ini karena memiliki sifat \textit{loose coupling}. Selain itu mekanisme publish/subscribe juga sesuai sesuai digunakan pada sistem yang bersifat information driven \cite{muhl_large-scale_2002}. Karena karakteristiknya ini, maka publish/subscribe dapat bekerja secara asynchronous, dimana \textit{request} dan \textit{reply} tidak harus diproses secara berurutan. Pada saat \textit{subscriber} melakukan subscribe, publisher tidak harus dalam kondisi online, begitu juga sebaliknya, pada saat \textit{publisher} melakukan publish, \textit{subscriber} tidak harus dalam kondisi online.
+The publish/subscribe mechanism is used in this research because it has the \textit{loose coupling} characteristic. Furthermore, publish/subscribe mechanism is also suitable for an information-driven system \cite{muhl_large-scale_2002}. Because of this characteristic, the publish/subscribe mechanism can work asynchronously, where request and reply do not have to be processed in sequence. The publisher and subscriber can conduct an offline publish and offline subscribe, respectively. 
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=8cm]{Resources/Images/system-overview}
-	\caption{Garis Besar Sistem}
+	\caption{The system outline}
 	\label{fig:system-overview}
 \end{figure}
 
 
-Gambar \ref{fig:system-overview} menunjukkan garis besar sistem, dimana sistem tersusun atas 3 (tiga) komponen utama, yaitu: \textit{publisher}, \textit{subscriber}, dan \textit{message broker}. Komunikasi antara \textit{publisher} dan \textit{subscriber} didasari atas satu kesamaan, yaitu \textbf{event} atau \textbf{topic}. Topik yang digunakan sebagai dasar komunikasi antara publisher dan subscriber dalam penelitian ini adalah \textit{current location} dari masing-masing subscriber.
+\autoref{fig:system-overview} shows the system outline that consists of 3 (three) main components: the publisher, the subscriber, and the message broker. The communication between publisher and subscriber is built upon a similarity in either event or topic. In this research, the topic that is used as the basis for the communication between publisher and subscriber is the \textit{current location} of each subscriber. 
 
 
 %-----------------------------------------------------------------------------%
 \subsection{Recommendation Publisher}
 \label{ssec:recommendation-publisher}
 %-----------------------------------------------------------------------------%
-VRP Solver diimplementasikan pada sisi publisher, yang akan melakukan pencarian solusi/rute dan kemudian dipublish kepada \textit{subscriber} melalui \textit{message broker}. Sebagaimana sebelumnya disebutkan, bahwasannya \textit{current location} dari masing-masing \textit{subscriber} digunakan sebagai topik. Sebuah thread disiapkan, yang secara periodik akan melakukan pengecekan apakah terdapat topik yang baru pada message broker.
+VRP solver is implemented on the publisher's side, who will search for solution/route and then publish it to the subscriber via the message broker. The subscriber's current location is used as a topic. Afterward, a thread  (\autoref{alg:topic-watcher}) is prepared that will periodically check if there is any new topic at message broker. 
+
+Each time a new topic emerge, a new thread will be created and that new topic will be used as an ID for that thread. Each thread contains VRP solver procedure (\autoref{alg:vrp-worker}) that will do the solution/route finding. Accordingly, a threadpool is provided to contain all threads from each topic in order of arrival time. Since topic is used as a thread ID, the threadpool size is equal to the number of census/survey location. 
 
 
-Setiap kali terdapat topik yang baru, sebuah thread akan disiapkan, dan topik tersebut digunakan sebagai ID dari thread yang bersangkutan. Pada thread tersebut terdapat procedure VRP solver yang akan melakukan pencarian solusi/rute. Untuk itu, sebuah threadpool disiapkan untuk menampung thread dari masing-masing topik tersebut secara berurutan berdasarkan kedatangan. Karena topik digunakan sebagai thread ID, maka ukuran dari threadpool akan sama dengan jumlah seluruh lokasi pencacahan.
-
-
-Setiap thread dalam threadpool kemudian dijalankan secara berurutan, satu session untuk masing-masing thread. Setiap thread yang dijalankan, yang menggunakan topik sebagai ID, akan melakukan pencarian solusi dengan melibatkan seluruh $M$ vehicles dan $(unassigned) N$ locations. Pencarian solusi dilakukan pada procedure VRP solver pada section \ref{ssec:vrp-solver}.
+Each thread in thread pool will be run in order, one session for each thread. Every running thread, with a topic as an ID, will find the solution by embroiling all $M$ vehicles and $(unassigned) N$ locations. The solution finding is done using VRP solver procedure which is explained in more detail in \autoref{ssec:vrp-solver}.
 
 
 \begin{algorithm}[h]
 	\caption{TopicWatcher}
+	\label{alg:topic-watcher}
 	\begin{algorithmic}[1]
 		\renewcommand{\algorithmicrequire}{\textbf{Input:}}
 		\renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -646,10 +662,10 @@ Setiap thread dalam threadpool kemudian dijalankan secara berurutan, satu sessio
 \end{algorithm}
 
 
-Proses dalam procedure VRP solver pada masing-masing thread akan menghasilkan sejumlah minimal $1$ rute, dan maksimal $M$ rute. Setiap rute $R_i$ yang dihasilkan kemudian akan dipublish dengan topik $C_i$. Setelah rute dipublish, \textit{message broker} akan menginformasikan kepada publisher, jumlah \textit{subscriber} yang menerima pesan. Adapun identitas \textit{subscriber} yang menerima pesan tetap tidak diketahui oleh \textit{publisher}.
+The process in VRP solver procedure in each thread will produce at least $1$ route and at most $M$ routes. Every route $R_i$ that is produced will be published with topic $C_i$. After being published, the message broker will inform the publisher about the number of subscribers that receive the message. The identity of the subscribers that receive the message will remain unknown to the publisher. 
 
 
-Setiap rute $R_i$ yang memiliki jumlah penerima pesan lebih dari satu, maka \textit{thread} yang mempunyai ID $C_{R_i}$ akan dicancel. Pembatalan \textit{thread} ini dimaksudkan agar solusi/rute yang telah diterima oleh \textit{subscriber} tidak dikalkulasi kembali. Terdapat sebuah kondisi, dimana pada saat thread menjalankan VRPSolver dengan ID $C_i$, ternyata rute yang dihasilkan tidak mengandung solusi untuk topik $C_i$. Pada kondisi tersebut, maka topik $C_i$ tersebut akan diantrikan kembali dengan hanya menyertakan dirinya sendiri sebagai pencacah, sehingga diperoleh kepastian topik $C_i$ akan memperoleh solusi/rute.
+If a route $R_i$ has more than one message receiver, the thread with ID $C_{R_i}$ will be cancelled. This annulment is aimed to prevent a solution/route that has been received by subscribers from being recomputed. There is a condition when the running VRP solver with ID $C_i$ does not produce the solution for topic $C_i$. In this kind of situation, the topic $C_i$ will be requeued with only including the subscriber as the enumerator. By doing this, there is a guarantee that the topic $C_i$  will obtain a solution/route. 
 
 
 \begin{algorithm}[h]
@@ -676,10 +692,10 @@ Setiap rute $R_i$ yang memiliki jumlah penerima pesan lebih dari satu, maka \tex
 \end{algorithm}
 
 
-Salah satu keuntungan mekanisme publish/subscribe, yang membuat dia fleksible, adalah karakteristiknya yang loose coupling. Dalam kasus ini, keuntungan dari mekanisme ini sekaligus menjadi kelemahan. Ketidaktahuan \textit{publisher} akan identitas \textit{subscriber} menyebabkan \textit{current location} dari keseluruhan \textit{subscriber} tidak dapat diketahui. Untuk itu diperlukan mekanisme yang dapat mengatasi permasalahan pertukaran identitas, yaitu dengan menggunakan \textit{shared memory}. Pada \textit{shared memory} tersimpan data \textit{current location} dari seluruh \textit{subscriber}, yang mana \textit{publisher} dapat mengetahui \textit{current location} dari seluruh \textit{subscriber} dari data yang tersimpan pada \textit{shared memory}.
+As mentioned before, the advantage of using publish/subscribe mechanism is its loose coupling characteristic that makes it flexible. But this benefit could also be deemed as a shortcoming. The publisher's unawareness towards subscribers' identities has caused the current location of all subscribers cannot be identified. Hence, we need a mechanism that can support information exchanging between publisher and subscribers. The idea is to use a shared memory contains the current location data of all subscribers. By accessing this shared memory, the publisher will be able to determine the subscribers' current locations. 
 
 
-Proses tersebut diatas terus berulang, sampai dengan seluruh lokasi pencacahan semuanya ter-assign. Gambar \ref{fig:publisher-algorithm} menggambarkan workflow dari algoritma yang digunakan pada \textit{recommendation publisher}.
+The process above will keep repeating until all enumeration locations have been assigned to the subscribers (enumerators). \autoref{fig:publisher-algorithm} illustrates the workflow of the algorithm used in recommendation publisher.
 
 
 \begin{figure}[h]
@@ -694,22 +710,23 @@ Proses tersebut diatas terus berulang, sampai dengan seluruh lokasi pencacahan s
 \subsection{VRP Solver}
 \label{ssec:vrp-solver}
 %-----------------------------------------------------------------------------%
-VRP Solver merupakan module yang digunakan untuk melakukan pencarian solusi/rute yang akan dikunjungi. VRP Solver dipanggil pada setiap thread yang terdapat pada threadpool \ref{alg:vrp-worker}. Terdapat beberapa algoritma yang dapat digunakan dalam pencarian solusi pada MDVRP, antara lain: tabu search \cite{cordeau_tabu_1997}, adaptive large neighborhood search  \cite{pisinger_general_2007}, fuzzy logic guided genetic algorithm \cite{lau_application_2010}, paralel iterated tabu search \cite{cordeau_parallel_2012}, hybrid algorithm combining Iterated Local Search and Set Partitioning \cite{subramanian_hybrid_2013}, hybrid genetic algorithm with adaptive diversity control \cite{vidal_implicit_2014}, hybrid Granular Tabu Search \cite{escobar_hybrid_2014}, dan \textit{Evolution Algorithms (EAs)} \cite{de_oliveira_cooperative_2016}. Pada kasus ini akan digunakan coevolutionary algoritma CoEAs, karena CoEAs menghasilkan \textit{mean solution values} yang competitive dengan \textit{CPU time} yang relatif lebih rendah dibandingkan algoritma yang lain \cite{de_oliveira_cooperative_2016}.
+VRP solver is a module used for finding a solution or route that will be visited. VRP solver is called in each thread in the thread pool (\autoref{alg:vrp-worker}). There are several algorithms that can be used in finding a solution in a MDVRP problem such as tabu search \cite{cordeau_tabu_1997}, adaptive large neighborhood search  \cite{pisinger_general_2007}, fuzzy logic guided genetic algorithm \cite{lau_application_2010}, paralel iterated tabu search \cite{cordeau_parallel_2012}, hybrid algorithm combining iterated local search and set partitioning \cite{subramanian_hybrid_2013}, hybrid genetic algorithm with adaptive diversity control \cite{vidal_implicit_2014}, hybrid granular tabu search \cite{escobar_hybrid_2014}, and cooperative coevolution algorithms (CoEAs) \cite{de_oliveira_cooperative_2016}. In this research, we will use coevolutionary algorithms (CoEAs) since CoEAs generates a competitive \textit{mean solution values} with relatively low CPU time compared to other algorithms \cite{de_oliveira_cooperative_2016}. 
 
 
-Langkah-langkah yang dilakukan pada VRP Solver yang mengadopsi algoritma CoEAs adalah sebagai berikut
+The steps that are used in VRP solver that adopts CoEAs algorithm are as follows:
 \begin{enumerate}
-\item Create problem \\
-MDVRP problem yang akan disusun terdiri dari sejumlah vehicle $V$ dan sejumlah edge $E$ yang telah diassign pada masing-masing thread.
-\item Decompose problem. \\
-MDVRP problem didecompose memjadi beberapa subproblem.
-\item Evolve. \\
-Masing-masing individu pada setiap subproblem kemudian berevolusi. Setiap evolusi berakhir, individu baru akan dievaluasi. Jika individu baru yang terbentuk lebih baik, maka solusi diterima, dan individu-individu terbaik diupdate. Evolusi akan terus berlangsung sampai stop kriteria terpenuhi. Stop kriteria yang digunakan adalah waktu. Evolusi akan berhenti ketika total waktu mencapai 60 detik, atau 40 detik tanpa perubahan individu terbaik.
+	\item Create problem \\
+	MDVRP problem that is designed consists of a number of vehicles $V$ and edges $E$ that are assigned to each thread. 
+	\item Decompose problem \\
+	MDVRP problem is decomposed into several subproblems. 
+	\item Evolve. \\
+	Each individual in every subproblem will be evolved. At the end of every evolution, new indivuals will be evaluated. If the new generated individuals are better than the previous ones, the solution is accepted and the best individuals will be updated. The evolution will keep happening until it reach the time limit of 60 seconds, or 40 seconds without any changes on the best individuals. 
 \end{enumerate}
 
 
 \begin{algorithm}[h]
-	\caption{VRPWorker}
+	\caption{VRPSolver}
+	\label{alg:vrp-solver}
 	\begin{algorithmic}[1]
 		\renewcommand{\algorithmicrequire}{\textbf{Input:}}
 		\renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -741,13 +758,13 @@ Masing-masing individu pada setiap subproblem kemudian berevolusi. Setiap evolus
 \subsection{Message Broker}
 \label{ssec:message-broker}
 %-----------------------------------------------------------------------------%
-\textit{Message broker} adalah sebuah komponen yang bertanggung jawab dalam menyalurkan (\textit{routing}) pesan dari \textit{publisher} ke \textit{subscriber} sesuai dengan topik yang di\textit{subscribe} \cite{banavar_efficient_1999}. Suatu sistem \textit{publish/subscribe} dapat memiliki \textit{single broker} maupun \textit{multi broker}. Pada arsitektur \textit{single broker}, seluruh \textit{subscriber} dan \textit{publisher} terkoneksi pada satu \textit{broker}, sementara pada \textit{multi broker}, setiap \textit{subscriber} maupun \textit{publisher} dapat terkoneksi pada broker terdekat. Arsitektur \textit{multi depot} ini juga disebut dengan \textit{distributed pub/sub system} \cite{muhl_large-scale_2002}, seperti ilustrasi pada Gambar \ref{fig:pub_sub_distributed_ilustration}. Adapun rancangan yang diusulkan akan menerapkan arsitektur terdistribusi, dikarenakan lokasi pencacahan secara geografis tersebar.
+A message broker is a component responsible for distributing the message routing from publisher to subscriber based on the topic that is subscribed \cite{banavar_efficient_1999}. A publish/subscribe system can have a single broker or multi-broker. In single broker architecture, all subscribers and publishers are connected to one single broker, while in multi-broker architecture, every subscriber or publisher can connect to the nearest broker. This multi-broker architecture is also called distributed pub/sub system \cite{muhl_large-scale_2002} as depicted in \autoref{fig:pub_sub_distributed_ilustration}. In this research, the proposed design will implement distributed architecture since the census/survey locations are geographically scattered. 
 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=7cm]{Resources/Images/pub_sub_distributed_ilustration}
-	\caption{Arsitektur \textit{Publish-Subscribe} terdistribusi}
+	\caption{The architecture of distributed publish-subscribe}
 	\label{fig:pub_sub_distributed_ilustration}
 \end{figure}
 
@@ -756,16 +773,16 @@ Masing-masing individu pada setiap subproblem kemudian berevolusi. Setiap evolus
 \section{Testing}
 \label{sec:testing}
 %-----------------------------------------------------------------------------%
-The performance of the proposed system was assessed through a number of experiments. Eksperimen ini menggunakan dua macam data: Cordeau and data field. Service time pada kedua macam data tersebut akan digenerate secara random dengan mengikuti distribusi normal.
+The performance of the proposed system was assessed through a number of experiments. This experiment uses 2 (two) types of data: Cordeau and field data. The service time for these two data types will be randomly generated by following the normal distribution. 
 
 
 \begin{enumerate}
-\item Data yang diambil dari Cordeau \cite{cordeau_tabu_1997}, terdiri dari 50 \textit{customers} dan 4 \textit{vehicles}. Adapun jarak antar lokasi dihitung dengan cara euclidean.
-\item Data yang diambil dari kondisi real lapangan, yang terdiri dari 182 \textit{customers} dan 15 \textit{vehicles}. Jarak dan durasi antar lokasi diukur dengan bantuan Google Direction API.
+	\item Data from Cordeau \cite{cordeau_tabu_1997}, consists of 50 customers and 4 vehicles. The distance between locations are computed using euclidean formula. 
+	\item Data from real field condition, which is consists of 182 customers and 15 vehicles. The distance and the time needed to travel between locations are measured using Google Maps Direction API \cite{google_google_2016}. 
 \end{enumerate}
 
 
-Data yang akan digunakan, Cordeau type 2 dan data lapangan, kemudian diujicobakan dengan menggunakan program usulan, berbasis Pub/Sub dan CoEAs. Data kemudian diperbandingkan dengan program pembanding yang mengimplementasi algoritma CoEAs tanpa mekanisme Pub/Sub. Dari kedua program tersebut akan diperoleh output berupa rute untuk masing-masing \textit{vehicle} dengan ilustrasi sebagi berikut:
+These two data are tested using the proposed program, which is based on Pub/Sub and CoEAs. The output from this test is compared with another output from the benchmark program that uses CoEAs algorithms without Pub/Sub mechanism. From both program, we will obtain outputs in the form of the routes for each vehicle that can be illustrated as follows:
 
 \begin{itemize}
 \item \textit{Vehicle} A = Loc1 $\rightarrow$ Loc5 $\rightarrow$ Loc15 $\rightarrow$ Loc6
@@ -775,20 +792,20 @@ Data yang akan digunakan, Cordeau type 2 dan data lapangan, kemudian diujicobaka
 \end{itemize}
 
 
-Masing-masing rute kemudian dihitung \textit{total cost}-nya, yang merupakan penjumlahan dari seluruh \textit{service time} pada masing-masing lokasi dan seluruh waktu tempuh dari masing-masing perpindahan. Metric yang akan dijadikan pembanding adalah standar deviasi dari seluruh rute pada masing-masing program dan program pembanding. Program yang lebih baik akan menghasilkan standar deviasi yang lebih kecil. Standar deviasi dipilih sebagai \textit{metric} karena merepresentasikan kondisi sebenarnya dilapangan, dimana jika variasi waktu dari seluruh pencacah lebih kecil, maka penyelesaian pencacahan akan lebih merata.
+The total cost for each route is calculated by adding up the service time and the travel time from all locations in that route. The standard deviation of all routes in each program (the proposed program and the benchmark program) is used as a metric for comparing the outputs. A better program will result in a smaller standard deviation. Standard deviation is chosen as the metric because it represents the real field condition. If the time variance between each enumerator is smaller, the enumeration completion will be equal and fair. 
 
 
-Pada pengujian kondisi normal dengan menggunakan data Cordeau, diperoleh hasil bahwasannya pre-calculated routes yang dihasilkan algoritma CoEAs menghasilkan total time yang lebih kecil, yaitu 1165513.28 seconds berbanding 1165706.84 seconds untuk Pub/Sub + CoEAs, namun menghasilkan standar deviasi yang jauh lebih besar, yaitu 98268.51 seconds berbading 12997.91 seconds (Table \ref{tbl:test_result_normal_cordeau_comparison}). Sementara pengujian kondisi normal dengan menggunakan data lapangan, diperoleh hasil bahwasannya pre-calculated routes dengan menggunakan algoritma CoEAs menghasilkan total time yang lebih kecil, yaitu 4448989.67 seconds berbanding 4559658.67 seconds untuk Pub/Sub + CoEAs, namun menghasilkan standar deviasi yang jauh lebih besar, yaitu 119720.84 seconds berbading 34472.12 seconds (Table \ref{tbl:test_result_normal_field_comparison}).
+From the test using Cordeau data in normal condition, we obtain a result that the pre-calculated routes generated by CoEAs algorithm yield a smaller total time of 1,165,513.28 seconds compared with the result from Pub/Sub + CoEAs of 1,165,706.84 seconds. However, the standard deviation of the output from the CoEAs algorithm is bigger than that of Pub/Sub + CoEAs algorithm, which are 98,268.51 seconds and 12997.91 seconds (\autoref{tbl:test_result_normal_cordeau_comparison}), respectively. Similarly, the test using real field data in normal condition give the result that pre-calculated routes using CoEAs algorithm yield a smaller total time, yet a higher standard deviation compared with that of Pub/Sub + CoEAs. The CoEAs algorithm yield a total time of 4,448,989.67 seconds and standard deviation of 119720.84 seconds, while the Pub/Sub + CoEAs algorithm gives a total of 4,559,658.67 seconds and standard deviation of 34472.12 seconds (\autoref{tbl:test_result_normal_field_comparison}).
 
 
 \begin{table}
 	\centering
 	\ra{1.3}
-	\caption{Komparasi CoES dan Pub/Sub + CoES pada Data Cordeau}
+	\caption{The comparison between CoES algorithm and Pub/Sub + CoES algorithm for the Cordeau data}
 	\label{tbl:test_result_normal_cordeau_comparison}
 	\begin{tabular}{lrr}
 		\toprule
-			Ukuran & CoES & CoES + Pub/Sub\\ 
+			Units & CoES & CoES + Pub/Sub\\ 
 		\midrule
 			Total time & 1165513.28 & 1165706.84\\
 			Mean of time & 291378.32 & 291426.71\\
@@ -801,15 +818,15 @@ Pada pengujian kondisi normal dengan menggunakan data Cordeau, diperoleh hasil b
 \begin{table}
 	\centering
 	\ra{1.3}
-	\caption{Komparasi CoES dan Pub/Sub + CoES pada Data Lapangan}
+	\caption{The comparison between CoES algorithm and Pub/Sub + CoES algorithm for the real field data}
 	\label{tbl:test_result_normal_field_comparison}
 	\begin{tabular}{lrr}
 		\toprule
-			Ukuran & CoES & CoES + Pub/Sub\\ 
+			Units & CoES & CoES + Pub/Sub\\ 
 		\midrule
-			Total Waktu & 4448989.67 & 4559658.67\\
-			Rata-rata & 296599.31 & 303977.24\\
-			Standar Deviasi & 119720.84 & 34472.12\\
+			Total time & 4448989.67 & 4559658.67\\
+			Mean of time & 296599.31 & 303977.24\\
+			Std. Dev of time & 119720.84 & 34472.12\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -819,9 +836,7 @@ Pada pengujian kondisi normal dengan menggunakan data Cordeau, diperoleh hasil b
 \section{Conclusion and Future Works}
 \label{sec:conclusion-future-works}
 %-----------------------------------------------------------------------------%
-Paper ini mengusulkan penggunaan Cooperative Coevolutionary Algorithm (CoES) yang dikombinasikan dengan mekanisme Publish/Subscribe untuk mengatasi permasalahan rekomendasi lokasi pengumpulan data secara real-time. Dari pengujian diatas, diperoleh kesimpulan, bahwa: 1) Algoritma CoEAs menghasilkan rute yang lebih efisien dari sisi total cost-nya, akan tetapi, 2) Algoritma CoEAs tidak dapat digunakan begitu saja dalam rekomendasi lokasi pencacahan, karena standar deviasi dari total cost antar rute besar, sehingga, 3) Penggunaan mekanisme real-time seperti publish/subscribe paradigm dapat digunakan untuk mengatasi kesenjangan beban antar rute, yang artinya beban yang dialokasikan untuk setiap petugas lebih merata.
-
-
+This paper proposes the use of Cooperative Coevolutionary Algorithm (CoES) that is combined with Publish/Subscribe mechanism to solve the real-time location recommendation problem in field data collection. Based on the test results, it is concluded that: 1) CoEAs algorithm outputs a more efficient route from total cost standpoint, but, 2) the CoEAs algorithm cannot be directly used in census/survey location recommendation because there is a huge standard deviation of the total cost for each route, thus, 3) The use of a real-time mechanism such as Pub/Sub mechanism is feasible to overcome the inequality problem between each route. It means the tasks and locations are more evenly distributed and every enumerator has equal workloads. 
 
 
 % An example of a floating figure using the graphicx package.

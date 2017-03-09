@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  27 FEB 2017 08:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  28 FEB 2017 22:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -356,13 +356,14 @@ File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `bookmarks' set `false' on input line 4319.
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
 Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
+Package hyperref Info: Bookmarks OFF on input line 4694.
 \c@Hy@tempcnt=\count123
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen148
@@ -831,20 +832,20 @@ runsystem(rm "Paper.aex")...executed.
  (./Paper.aux)
 \openout1 = `Paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 357.
-LaTeX Font Info:    ... okay on input line 357.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 366.
+LaTeX Font Info:    ... okay on input line 366.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 366.
+LaTeX Font Info:    ... okay on input line 366.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 366.
+LaTeX Font Info:    ... okay on input line 366.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 366.
+LaTeX Font Info:    ... okay on input line 366.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 366.
+LaTeX Font Info:    ... okay on input line 366.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 366.
+LaTeX Font Info:    ... okay on input line 366.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 366.
+LaTeX Font Info:    ... okay on input line 366.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -878,7 +879,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 357.
+Package hyperref Info: Link coloring OFF on input line 366.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -888,41 +889,37 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 357.
-LaTeX Info: Redefining \pageref on input line 357.
-LaTeX Info: Redefining \nameref on input line 357.
+LaTeX Info: Redefining \ref on input line 366.
+LaTeX Info: Redefining \pageref on input line 366.
+LaTeX Info: Redefining \nameref on input line 366.
 
-(./Paper.out) (./Paper.out)
-\@outlinefile=\write9
-\openout9 = `Paper.out'.
-
- (./_minted-Paper/default-pyg-prefix.pygstyle)
+(./_minted-Paper/default-pyg-prefix.pygstyle)
 ABD: EveryShipout initializing macros
-<Resources/Images/mdvrp-illustration.png, id=57, 587.19376pt x 326.21875pt>
+<Resources/Images/mdvrp-illustration.png, id=9, 587.19376pt x 326.21875pt>
 File: Resources/Images/mdvrp-illustration.png Graphic file (type png)
 
 <use Resources/Images/mdvrp-illustration.png>
 Package pdftex.def Info: Resources/Images/mdvrp-illustration.png used on input 
-line 469.
+line 486.
 (pdftex.def)             Requested size: 170.71652pt x 94.83994pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 475.
+LaTeX Font Info:    Try loading font information for U+msa on input line 492.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 475.
+LaTeX Font Info:    Try loading font information for U+msb on input line 492.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 475.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 492.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 475.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 492.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -931,41 +928,44 @@ s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.479 
+l.496 
        <./Resources/Images/mdvrp-illustration.png>]
-<Resources/Images/pub-sub-general.png, id=94, 925.4575pt x 462.72874pt>
+<Resources/Images/pub-sub-general.png, id=52, 925.4575pt x 462.72874pt>
 File: Resources/Images/pub-sub-general.png Graphic file (type png)
 
 <use Resources/Images/pub-sub-general.png>
 Package pdftex.def Info: Resources/Images/pub-sub-general.png used on input lin
-e 578.
+e 594.
 (pdftex.def)             Requested size: 227.62204pt x 113.81082pt.
  [2pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.585 
+l.601 
        <./Resources/Images/pub-sub-general.png>]
-Underfull \hbox (badness 3907) in paragraph at lines 591--593
-\OT1/ptm/m/n/10 juga \OT1/ptm/m/it/10 sub-scriber \OT1/ptm/m/n/10 tetap da-pat 
-mem-per-oleh in-for-masi
- []
-
-<Resources/Images/system-overview.png, id=121, 615.29875pt x 294.09875pt>
+<Resources/Images/system-overview.png, id=81, 615.29875pt x 294.09875pt>
 File: Resources/Images/system-overview.png Graphic file (type png)
 
 <use Resources/Images/system-overview.png>
 Package pdftex.def Info: Resources/Images/system-overview.png used on input lin
-e 608.
+e 624.
 (pdftex.def)             Requested size: 227.62204pt x 108.79688pt.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 631.
+put line 646.
 
-Overfull \hbox (5.5976pt too wide) in paragraph at lines 640--641
+Overfull \hbox (5.5976pt too wide) in paragraph at lines 656--657
 [] []$\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Thread\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 C[]; V[]:::V[]; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 unassi
 gned\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 E[]:::E[]\OT1/cmr/m/n/10 )$ 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 695--696
+[]\OT1/ptm/m/n/10 As men-tioned be-fore, the ad-van-tage of us-ing pub-
  []
 
 [3pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
@@ -973,18 +973,31 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.653 
+l.696 
        <./Resources/Images/system-overview.png>]
-<Resources/Images/publisher-algorithm.png, id=145, 564.1075pt x 875.27pt>
+<Resources/Images/publisher-algorithm.png, id=111, 564.1075pt x 875.27pt>
 File: Resources/Images/publisher-algorithm.png Graphic file (type png)
 
 <use Resources/Images/publisher-algorithm.png>
 Package pdftex.def Info: Resources/Images/publisher-algorithm.png used on input
- line 687.
+ line 703.
 (pdftex.def)             Requested size: 227.62204pt x 353.17357pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+<Resources/Images/pub_sub_distributed_ilustration.png, id=125, 473.77pt x 286.0
+6876pt>
+File: Resources/Images/pub_sub_distributed_ilustration.png Graphic file (type p
+ng)
+ <use Resources/Images/pub_sub_distributed_ilustration.png>
+Package pdftex.def Info: Resources/Images/pub_sub_distributed_ilustration.png u
+sed on input line 766.
+(pdftex.def)             Requested size: 199.16928pt x 120.26154pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -994,51 +1007,32 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.745 
-       <./Resources/Images/publisher-algorithm.png>]
-<Resources/Images/pub_sub_distributed_ilustration.png, id=191, 473.77pt x 286.0
-6876pt>
-File: Resources/Images/pub_sub_distributed_ilustration.png Graphic file (type p
-ng)
- <use Resources/Images/pub_sub_distributed_ilustration.png>
-Package pdftex.def Info: Resources/Images/pub_sub_distributed_ilustration.png u
-sed on input line 749.
-(pdftex.def)             Requested size: 199.16928pt x 120.26154pt.
-
-Underfull \hbox (badness 1701) in paragraph at lines 778--779
-[]\OT1/ptm/m/n/10 Masing-masing rute ke-mu-dian di-hi-tung \OT1/ptm/m/it/10 to-
-tal cost\OT1/ptm/m/n/10 -nya,
- []
-
-
-Underfull \hbox (badness 2285) in paragraph at lines 781--782
-\OT1/ptm/m/n/10 yang lebih ke-cil, yaitu 1165513.28 sec-onds berband-ing
- []
-
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.823 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.1
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.823 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.823 
-       <./Resources/Images/pub_sub_distributed_ilustration.png>] (./Paper.bbl
+l.781 	\item D
+              ata from real field condition, which is consists of 182 custom...
+ <./Resources/Images/publisher-algorithm.png>] (./Paper.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ³ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.32 
+     pdfTeX warning (ext4): destination with the same identifier (name{table.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.32 
+     pdfTeX warning (ext4): destination with the same identifier (name{table.2}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.32 
+      <./Resources/Images/pub_sub_distributed_ilustration.png>]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
@@ -1084,24 +1078,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 968.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 968.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 983.
+[6
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 983.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 968.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 968.
-Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: DC5E5252D8DE09B5E9E88C82D5FE2DA9;727.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 968.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 983.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 983.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 983.
  ) 
 Here is how much of TeX's memory you used:
- 19830 strings out of 493029
- 367442 string characters out of 6136234
- 483533 words of memory out of 5000000
- 22906 multiletter control sequences out of 15000+600000
+ 19820 strings out of 493029
+ 367352 string characters out of 6136234
+ 484547 words of memory out of 5000000
+ 22896 multiletter control sequences out of 15000+600000
  42496 words of font info for 88 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 54i,10n,73p,1139b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,10n,73p,1083b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -1115,10 +1109,10 @@ y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 live/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Paper.pdf (6 pages, 389029 bytes).
+Output written on Paper.pdf (6 pages, 386325 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 98 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 285 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
