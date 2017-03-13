@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: unsrtnat.bst
+A level-1 auxiliary file: sampul.aux
+A level-1 auxiliary file: judul_dalam.aux
+A level-1 auxiliary file: pengesahan.aux
+A level-1 auxiliary file: orisinal.aux
+A level-1 auxiliary file: pengesahan_sidang.aux
+A level-1 auxiliary file: pengantar.aux
+A level-1 auxiliary file: persetujuan_publikasi.aux
+A level-1 auxiliary file: abstrak.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: bab1.aux
+A level-1 auxiliary file: bab2.aux
+A level-1 auxiliary file: bab3.aux
+A level-1 auxiliary file: bab4.aux
+A level-1 auxiliary file: bab5.aux
+A level-1 auxiliary file: kesimpulan.aux
+A level-1 auxiliary file: pustaka.aux
+A level-1 auxiliary file: markLampiran.aux
+A level-1 auxiliary file: lampiran_1.aux
+A level-1 auxiliary file: lampiran_2.aux
+A level-1 auxiliary file: lampiran_3.aux
+A level-1 auxiliary file: lampiran_4.aux
+Database file #1: ../../Resources/Bib/Reference.bib
+Warning--empty journal in pragarauskas_temporal_2010
+Warning--empty journal in rechenberg_cybernetic_1965
+Warning--empty journal in holland_echo:_1990
+Warning--empty publisher in diaz_vrp_2012
+You've used 102 entries,
+            2481 wiz_defined-function locations,
+            1258 strings with 29318 characters,
+and the built_in function-call counts, 43286 in all, are:
+= -- 4101
+> -- 1834
+< -- 85
++ -- 736
+- -- 527
+* -- 3383
+:= -- 6706
+add.period$ -- 464
+call.type$ -- 102
+change.case$ -- 197
+chr.to.int$ -- 97
+cite$ -- 106
+duplicate$ -- 2164
+empty$ -- 3919
+format.name$ -- 691
+if$ -- 9403
+int.to.chr$ -- 6
+int.to.str$ -- 103
+missing$ -- 99
+newline$ -- 658
+num.names$ -- 308
+pop$ -- 761
+preamble$ -- 1
+purify$ -- 102
+quote$ -- 0
+skip$ -- 1332
+stack$ -- 0
+substring$ -- 2214
+swap$ -- 460
+text.length$ -- 27
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 693
+warning$ -- 4
+while$ -- 387
+width$ -- 0
+write$ -- 1616
+(There were 4 warnings)

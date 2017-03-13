@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  5 MAR 2017 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  11 MAR 2017 10:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -154,9 +154,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 Package hyperref Warning: Option `a4paper' is no longer used.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 57.
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 57.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 57.
+Package hyperref Info: Option `colorlinks' set `false' on input line 58.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 58.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 58.
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen107
 )
@@ -1330,7 +1330,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 2.
 
 
-<../../Resources/Images/peta_kelurahan_per_bs.png, id=744, 756.8275pt x 434.623
+<../../Resources/Images/peta_kelurahan_per_bs.png, id=741, 756.8275pt x 434.623
 75pt>
 File: ../../Resources/Images/peta_kelurahan_per_bs.png Graphic file (type png)
  <use ../../Resources/Images/peta_kelurahan_per_bs.png>
@@ -1347,7 +1347,7 @@ l.22
 
 
  <../../Resources/Images/peta_kelurahan_per_bs.png>]
-<../../Resources/Images/context.png, id=764, 796.9775pt x 227.85126pt>
+<../../Resources/Images/context.png, id=761, 796.9775pt x 227.85126pt>
 File: ../../Resources/Images/context.png Graphic file (type png)
 
 <use ../../Resources/Images/context.png>
@@ -1372,7 +1372,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3 <../../Resources/Images/context.png>]
-<../../Resources/Images/mtsp.jpeg, id=851, 435.6275pt x 337.26pt>
+<../../Resources/Images/mtsp.jpeg, id=848, 435.6275pt x 337.26pt>
 File: ../../Resources/Images/mtsp.jpeg Graphic file (type jpg)
 
 <use ../../Resources/Images/mtsp.jpeg>
@@ -1414,7 +1414,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 7.
-<../../Resources/Images/literature-map.png, id=885, 783.92876pt x 415.5525pt>
+<../../Resources/Images/literature-map.png, id=882, 783.92876pt x 415.5525pt>
 File: ../../Resources/Images/literature-map.png Graphic file (type png)
 
 <use ../../Resources/Images/literature-map.png>
@@ -1433,7 +1433,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-<Resources/Images/context-categories.png, id=926, 518.93875pt x 498.86375pt>
+<Resources/Images/context-categories.png, id=923, 518.93875pt x 498.86375pt>
 File: Resources/Images/context-categories.png Graphic file (type png)
 
 <use Resources/Images/context-categories.png>
@@ -1485,7 +1485,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14] <Resources/Images/vrp-ilustration.png, id=1058, 617.30624pt x 431.6125pt>
+[14] <Resources/Images/vrp-ilustration.png, id=1055, 617.30624pt x 431.6125pt>
 File: Resources/Images/vrp-ilustration.png Graphic file (type png)
 
 <use Resources/Images/vrp-ilustration.png>
@@ -1500,7 +1500,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15 <./Resources/Images/vrp-ilustration.png>]
-<Resources/Images/vrp-variants.png, id=1088, 532.99126pt x 585.18625pt>
+<Resources/Images/vrp-variants.png, id=1085, 532.99126pt x 585.18625pt>
 File: Resources/Images/vrp-variants.png Graphic file (type png)
 
 <use Resources/Images/vrp-variants.png>
@@ -1508,7 +1508,7 @@ Package pdftex.def Info: Resources/Images/vrp-variants.png used on input line 2
 17.
 (pdftex.def)             Requested size: 227.62204pt x 249.91077pt.
 
-<Resources/Images/mdvrp-illustration.png, id=1094, 587.19376pt x 326.21875pt>
+<Resources/Images/mdvrp-illustration.png, id=1091, 587.19376pt x 326.21875pt>
 File: Resources/Images/mdvrp-illustration.png Graphic file (type png)
 
 <use Resources/Images/mdvrp-illustration.png>
@@ -1564,7 +1564,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21] <Resources/Images/coes_overview.png, id=1270, 620.3175pt x 498.86375pt>
+[21] <Resources/Images/coes_overview.png, id=1267, 620.3175pt x 498.86375pt>
 File: Resources/Images/coes_overview.png Graphic file (type png)
 
 <use Resources/Images/coes_overview.png>
@@ -1582,7 +1582,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 
-<Resources/Images/pub-sub-general.png, id=1293, 925.4575pt x 462.72874pt>
+<Resources/Images/pub-sub-general.png, id=1290, 925.4575pt x 462.72874pt>
 File: Resources/Images/pub-sub-general.png Graphic file (type png)
 
 <use Resources/Images/pub-sub-general.png>
@@ -1600,7 +1600,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
-<Resources/Images/space-time-sync-decoupling.png, id=1308, 1027.84pt x 489.83pt
+<Resources/Images/space-time-sync-decoupling.png, id=1305, 1027.84pt x 489.83pt
 >
 File: Resources/Images/space-time-sync-decoupling.png Graphic file (type png)
  <use Resources/Images/space-time-sync-decoupling.png>
@@ -1647,13 +1647,21 @@ BAB 4.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 2.
 
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 33.
+
 [26
 
 
 
 ]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 66.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1662,6 +1670,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [27]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 96.
+
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
 t line 97.
 \openout3 = `thesis.pyg'.
@@ -1669,7 +1681,12 @@ t line 97.
 
 (./_minted-thesis/9D7293F1CB2C6C017F71DC18C9C9ADB12048E4B8FAEE610F4ACDAFDEFBC1B
 252.pygtex)
-<../../Resources/Images/google_direction_api_response.png, id=1343, 685.56125pt
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 107.
+
+
+<../../Resources/Images/google_direction_api_response.png, id=1340, 685.56125pt
  x 334.24875pt>
 File: ../../Resources/Images/google_direction_api_response.png Graphic file (ty
 pe png)
@@ -1679,10 +1696,14 @@ ng used on input line 109.
 (pdftex.def)             Requested size: 398.3386pt x 194.21631pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 118.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1698,6 +1719,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [29 <../../Resources/Images/google_direction_api_response.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 155.
+
 \openout3 = `thesis.pyg'.
 
 
@@ -1706,6 +1731,10 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 4.
 )
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 176.
+
 \openout3 = `thesis.pyg'.
 
 
@@ -1716,13 +1745,21 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 )
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 205.
+
 \openout3 = `thesis.pyg'.
 
 
 (./_minted-thesis/37CBBFB912D58B6F3C5D24E69AF1E47F1E135294BC5DCAC02D3AE6775D585
 5C8.pygtex)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 228.
 
 \openout3 = `thesis.pyg'.
 
@@ -1730,7 +1767,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 (./_minted-thesis/449A9BE0A091D429E808054C341E74021E135294BC5DCAC02D3AE6775D585
 5C8.pygtex)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1739,18 +1776,26 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 245.
+
 \openout3 = `thesis.pyg'.
 
 
 (./_minted-thesis/584E3B4B0AF6A1E82221A13BE3211FE71E135294BC5DCAC02D3AE6775D585
 5C8.pygtex)
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 262.
+
 \openout3 = `thesis.pyg'.
 
 
 (./_minted-thesis/D52A7D434777B67EBFB83E1B5EEC5C441E135294BC5DCAC02D3AE6775D585
 5C8.pygtex)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
@@ -1759,7 +1804,12 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31]
-<../../Resources/Images/analysis_mtsp_no_time_windows.png, id=1382, 1003.75pt x
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 280.
+
+
+<../../Resources/Images/analysis_mtsp_no_time_windows.png, id=1379, 1003.75pt x
  602.25pt>
 File: ../../Resources/Images/analysis_mtsp_no_time_windows.png Graphic file (ty
 pe png)
@@ -1767,16 +1817,25 @@ pe png)
 Package pdftex.def Info: ../../Resources/Images/analysis_mtsp_no_time_windows.p
 ng used on input line 282.
 (pdftex.def)             Requested size: 398.3386pt x 239.00267pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 288.
+
 \openout3 = `thesis.pyg'.
 
 
 (./_minted-thesis/32FBE5F372C59416F977838CD69C801CFF060E9085A31973938A3FD2F0C05
 712.pygtex)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 311.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
@@ -1787,12 +1846,6 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32 <../../Resources/Images/analysis_mtsp_no_time_windows.png>]
-Underfull \hbox (badness 1107) in paragraph at lines 355--356
-\OT1/ptm/m/it/12 scriber\OT1/ptm/m/n/12 , \OT1/ptm/m/it/12 mes-sage bro-ker\OT1
-/ptm/m/n/12 , dan \OT1/ptm/m/it/12 pub-lisher \OT1/ptm/m/n/12 ([]Ba-navar et al
-.[], []1999[]). \OT1/ptm/m/it/12 Sub-scriber
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -1800,7 +1853,22 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
-<../../Resources/Images/system-overview.png, id=1399, 615.29875pt x 294.09875pt
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¼ in font ptmr7t!
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 361.
+
+
+<../../Resources/Images/system-overview.png, id=1400, 615.29875pt x 294.09875pt
 >
 File: ../../Resources/Images/system-overview.png Graphic file (type png)
  <use ../../Resources/Images/system-overview.png>
@@ -1814,136 +1882,184 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34 <../../Resources/Images/system-overview.png>]
-<../../Resources/Images/coes_overview.png, id=1428, 620.3175pt x 498.86375pt>
+[35 <../../Resources/Images/system-overview.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!htbp') on input line 383.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!htbp') on input line 409.
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¼ in font ptmr7t!
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 448.
+
+<Resources/Images/publisher-algorithm.png, id=1430, 564.1075pt x 875.27pt>
+File: Resources/Images/publisher-algorithm.png Graphic file (type png)
+
+<use Resources/Images/publisher-algorithm.png>
+Package pdftex.def Info: Resources/Images/publisher-algorithm.png used on input
+ line 450.
+(pdftex.def)             Requested size: 341.43306pt x 529.77371pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38 <./Resources/Images/publisher-algorithm.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 466.
+
+<../../Resources/Images/coes_overview.png, id=1473, 620.3175pt x 498.86375pt>
 File: ../../Resources/Images/coes_overview.png Graphic file (type png)
 
 <use ../../Resources/Images/coes_overview.png>
 Package pdftex.def Info: ../../Resources/Images/coes_overview.png used on input
- line 380.
+ line 468.
 (pdftex.def)             Requested size: 284.52756pt x 228.81786pt.
 
-<../../Resources/Images/coes_problem_decomposition.png, id=1430, 489.83pt x 493
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39 <../../Resources/Images/coes_overview.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 485.
+
+
+<../../Resources/Images/coes_problem_decomposition.png, id=1484, 489.83pt x 493
 .845pt>
 File: ../../Resources/Images/coes_problem_decomposition.png Graphic file (type 
 png)
  <use ../../Resources/Images/coes_problem_decomposition.png>
 Package pdftex.def Info: ../../Resources/Images/coes_problem_decomposition.png 
-used on input line 399.
+used on input line 487.
 (pdftex.def)             Requested size: 199.16928pt x 200.79735pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 502.
 
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[35 <../../Resources/Images/coes_overview.png>]
-<../../Resources/Images/coes_paralel_modules.png, id=1442, 560.0925pt x 270.008
+<../../Resources/Images/coes_paralel_modules.png, id=1488, 560.0925pt x 270.008
 74pt>
 File: ../../Resources/Images/coes_paralel_modules.png Graphic file (type png)
  <use ../../Resources/Images/coes_paralel_modules.png>
 Package pdftex.def Info: ../../Resources/Images/coes_paralel_modules.png used o
-n input line 416.
+n input line 504.
 (pdftex.def)             Requested size: 199.16928pt x 96.01651pt.
 
-<../../Resources/Images/coes_pe_module.png, id=1444, 436.63126pt x 499.8675pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40 <../../Resources/Images/coes_problem_decomposition.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 516.
+
+
+<../../Resources/Images/coes_pe_module.png, id=1498, 436.63126pt x 499.8675pt>
 File: ../../Resources/Images/coes_pe_module.png Graphic file (type png)
 
 <use ../../Resources/Images/coes_pe_module.png>
 Package pdftex.def Info: ../../Resources/Images/coes_pe_module.png used on inpu
-t line 430.
+t line 518.
 (pdftex.def)             Requested size: 213.39566pt x 244.29651pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 530.
 
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[36 <../../Resources/Images/coes_problem_decomposition.png> <../../Resources/Im
-ages/coes_paralel_modules.png>]
-<../../Resources/Images/coes_cse_module.png, id=1454, 840.13875pt x 397.485pt>
+<../../Resources/Images/coes_cse_module.png, id=1502, 840.13875pt x 397.485pt>
 File: ../../Resources/Images/coes_cse_module.png Graphic file (type png)
 
 <use ../../Resources/Images/coes_cse_module.png>
 Package pdftex.def Info: ../../Resources/Images/coes_cse_module.png used on inp
-ut line 444.
+ut line 532.
 (pdftex.def)             Requested size: 398.3386pt x 188.46162pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../../Resources/Images/coes_eg_module.png, id=1456, 356.33125pt x 252.945pt>
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41 <../../Resources/Images/coes_paralel_modules.png> <../../Resources/Images/c
+oes_pe_module.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 541.
+
+<../../Resources/Images/coes_eg_module.png, id=1510, 356.33125pt x 252.945pt>
 File: ../../Resources/Images/coes_eg_module.png Graphic file (type png)
 
 <use ../../Resources/Images/coes_eg_module.png>
 Package pdftex.def Info: ../../Resources/Images/coes_eg_module.png used on inpu
-t line 455.
+t line 543.
 (pdftex.def)             Requested size: 142.26378pt x 100.98708pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[37 <../../Resources/Images/coes_pe_module.png>]
-\openout3 = `thesis.pyg'.
-
-
-(./_minted-thesis/7CDA0D571FC83A2256DFCBFDD0BA7B38E7D29C00C617E1D1FDA7A2B14E1B4
-071.pygtex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-\openout3 = `thesis.pyg'.
-
-
-(./_minted-thesis/6DBAF6F73DBDFB3369C14A8DBCA32136E7D29C00C617E1D1FDA7A2B14E1B4
-071.pygtex)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[38 <../../Resources/Images/coes_cse_module.png> <../../Resources/Images/coes_e
-g_module.png>]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
-
-Underfull \hbox (badness 3049) in paragraph at lines 513--514
+Underfull \hbox (badness 3049) in paragraph at lines 552--553
 \OT1/ptm/m/it/12 Message bro-ker \OT1/ptm/m/n/12 adalah se-buah kom-po-nen yang
  bertang-gung jawab dalam
  []
 
 
-<../../Resources/Images/pub_sub_distributed_ilustration.png, id=1478, 473.77pt 
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42 <../../Resources/Images/coes_cse_module.png> <../../Resources/Images/coes_e
+g_module.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!h') on input line 555.
+
+
+<../../Resources/Images/pub_sub_distributed_ilustration.png, id=1522, 473.77pt 
 x 286.06876pt>
 File: ../../Resources/Images/pub_sub_distributed_ilustration.png Graphic file (
 type png)
 
 <use ../../Resources/Images/pub_sub_distributed_ilustration.png>
 Package pdftex.def Info: ../../Resources/Images/pub_sub_distributed_ilustration
-.png used on input line 518.
+.png used on input line 557.
 (pdftex.def)             Requested size: 256.0748pt x 154.62323pt.
 )
 
@@ -1952,21 +2068,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39 <../../Resources/Images/pub_sub_distributed_ilustration.png>]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[40]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[41]
+[43 <../../Resources/Images/pub_sub_distributed_ilustration.png>]
 \openout2 = `bab5.aux'.
 
  (./bab5.tex
@@ -1980,7 +2082,15 @@ Missing character: There is no ® in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no „ in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
-[42
+
+LaTeX Warning: Reference `lst:proposed_solver_thread_algorithm' on page 44 unde
+fined on input line 35.
+
+
+LaTeX Warning: Reference `lst:proposed_publisher_algorithm' on page 44 undefine
+d on input line 35.
+
+[44
 
 
 
@@ -2002,14 +2112,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[45]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 108--112
 
  []
@@ -2020,8 +2130,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
-<../../Resources/Images/client-algorithm-nornal-cordeau.png, id=1535, 623.32875
+[47]
+<../../Resources/Images/client-algorithm-nornal-cordeau.png, id=1569, 623.32875
 pt x 420.57124pt>
 File: ../../Resources/Images/client-algorithm-nornal-cordeau.png Graphic file (
 type png)
@@ -2031,7 +2141,7 @@ Package pdftex.def Info: ../../Resources/Images/client-algorithm-nornal-cordeau
 .png used on input line 147.
 (pdftex.def)             Requested size: 398.3386pt x 268.7668pt.
 
-<../../Resources/Images/client-algorithm-nornal-field.png, id=1536, 623.32875pt
+<../../Resources/Images/client-algorithm-nornal-field.png, id=1570, 623.32875pt
  x 420.57124pt>
 File: ../../Resources/Images/client-algorithm-nornal-field.png Graphic file (ty
 pe png)
@@ -2049,7 +2159,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46 <../../Resources/Images/client-algorithm-nornal-cordeau.png>]
+[48 <../../Resources/Images/client-algorithm-nornal-cordeau.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 194--194
 []|\OT1/ptm/m/n/12 52-46-12-47-48-24-43-23-7-26-8-31-28-22-1-
  []
@@ -2060,7 +2170,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47 <../../Resources/Images/client-algorithm-nornal-field.png>]
+[49 <../../Resources/Images/client-algorithm-nornal-field.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 253--253
 []|\OT1/ptm/m/n/12 1302021005-1302021005-1302020010-
  []
@@ -2356,21 +2466,21 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[49]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [50]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 284--284
 []|\OT1/ptm/m/n/12 1302011008-1302011008-1302011010-
  []
@@ -2646,15 +2756,15 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51]
+[53]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52]
-<../../Resources/Images/client-algorithm-unstable-connection-field.png, id=1586
+[54]
+<../../Resources/Images/client-algorithm-unstable-connection-field.png, id=1619
 , 623.32875pt x 420.57124pt>
 File: ../../Resources/Images/client-algorithm-unstable-connection-field.png Gra
 phic file (type png)
@@ -2673,8 +2783,8 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53]
-<../../Resources/Images/client-algorithm-enumerator-quit-field.png, id=1594, 62
+[55]
+<../../Resources/Images/client-algorithm-enumerator-quit-field.png, id=1627, 62
 3.32875pt x 420.57124pt>
 File: ../../Resources/Images/client-algorithm-enumerator-quit-field.png Graphic
  file (type png)
@@ -2693,14 +2803,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54 <../../Resources/Images/client-algorithm-unstable-connection-field.png>]
+[56 <../../Resources/Images/client-algorithm-unstable-connection-field.png>]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55 <../../Resources/Images/client-algorithm-enumerator-quit-field.png>]
+[57 <../../Resources/Images/client-algorithm-enumerator-quit-field.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 396--396
 []|\OT1/ptm/m/n/12 1302011008-1302011008-1302011010-
  []
@@ -2986,21 +3096,21 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56]
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[57])
-
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [58]
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59])
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60]
 \openout2 = `kesimpulan.aux'.
 
  (./kesimpulan.tex
@@ -3019,7 +3129,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-) [59
+) [61
 
 
 
@@ -3029,7 +3139,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  (./pustaka.tex (./thesis.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no £ in font ptmr7t!
- [60
+ [62
 
 
 
@@ -3040,14 +3150,14 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]
+[63]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62]
+[64]
 Underfull \hbox (badness 10000) in paragraph at lines 237--242
 \OT1/ptm/m/n/12 lr = &id = XqYTk0sXmpoC & oi = fnd & pg = PR9 & dq = Graph + Th
 eory + 1736-[]1936 +
@@ -3059,7 +3169,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63]
+[65]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no § in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -3114,7 +3224,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64]
+[66]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -3134,7 +3244,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65]
+[67]
 Underfull \hbox (badness 2035) in paragraph at lines 513--520
 \OT1/ptm/m/n/12 ap-prox-i-mate al-go-rithms.  \OT1/ptm/m/it/12 Eu-ro-pean jour-
 nal of op-er-a-tional re-search\OT1/ptm/m/n/12 , 59
@@ -3152,7 +3262,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66]
+[68]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no § in font ptmr7t!
 
@@ -3180,7 +3290,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67]
+[69]
 Underfull \hbox (badness 1033) in paragraph at lines 627--634
 \OT1/ptm/m/n/12 dure for solv-ing the mul-ti-ter-mi-nal de-liv-ery prob-lem.  \
 OT1/ptm/m/it/12 Trans-porta-tion Re-
@@ -3192,7 +3302,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68]
+[70]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no § in font ptmr7t!
 
@@ -3233,7 +3343,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69]
+[71]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no â in font ptmri7t!
@@ -3248,7 +3358,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[70]
+[72]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no „ in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
@@ -3292,7 +3402,7 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[71]
+[73]
 \openout2 = `markLampiran.aux'.
 
  (./markLampiran.texpdfTeX warning (ext4): destination with the same identifier
@@ -4150,14 +4260,24 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[72]
+pdfTeX warning (ext4): destination with the same identifier (name{page.72}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2340 		1
+          302110014 & 1302101005 & 27367 & 2806\\ [72]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[73]
+pdfTeX warning (ext4): destination with the same identifier (name{page.73}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2380 		1
+          302110014 & 1302080003 & 50057 & 4595\\ [73]
 
 Package Fancyhdr Warning: \headheight is too small (0.0pt): 
  Make it at least 14.49998pt.
@@ -6963,26 +7083,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
 (./lampiran_3.aux) (./lampiran_4.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 4F93EE740044D02CB2723F4ADA348308;5614.
 
 
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: C9958DDB24E664E56C5A5DE566A7B993;5601
-(rerunfilecheck)             After:  71F746473EAFD601C1E54C195C5A34E6;5599.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
- 24051 strings out of 493029
- 433905 string characters out of 6136234
- 572546 words of memory out of 5000000
- 26030 multiletter control sequences out of 15000+600000
- 54838 words of font info for 110 fonts, out of 8000000 for 9000
+ 24049 strings out of 493029
+ 433378 string characters out of 6136234
+ 572482 words of memory out of 5000000
+ 26015 multiletter control sequences out of 15000+600000
+ 48879 words of font info for 97 fonts, out of 8000000 for 9000
  1210 hyphenation exceptions out of 8191
  61i,15n,75p,2035b,835s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -6996,10 +7113,10 @@ share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (559 pages, 2579624 bytes).
+Output written on thesis.pdf (561 pages, 2445781 bytes).
 PDF statistics:
- 3979 PDF objects out of 4296 (max. 8388607)
- 3312 compressed objects within 34 object streams
- 828 named destinations out of 1000 (max. 500000)
- 785 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4015 PDF objects out of 4296 (max. 8388607)
+ 3344 compressed objects within 34 object streams
+ 849 named destinations out of 1000 (max. 500000)
+ 790 words of extra memory for PDF output out of 10000 (max. 10000000)
 

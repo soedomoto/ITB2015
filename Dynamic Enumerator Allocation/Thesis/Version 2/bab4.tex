@@ -30,7 +30,7 @@ Untuk menggambarkan bagaimana MTSP dapat digunakan untuk mengatasi masalah ini, 
 Data lokasi pencacahan yang digunakan sebanyak 182 lokasi, yang diambil dari lokasi nagari/kelurahan di Kab. Pesisir Selatan, Sumatera Barat. Masing-masing lokasi dilengkapi atribut ID, sumbu lintang dan sumbu bujur, sebagaimana contoh data yang yang terdapat pada Tabel \ref{tbl:enumeration_locations}. Adapun data lokasi secara lengkap terdapat pada Lampiran \ref{tbl:enumeration_locations_full}.
 
 
-\begin{table*}
+\begin{table*}[!]
 	\centering
 	\ra{1.3}
 	\caption{Lokasi Pencacahan}
@@ -63,7 +63,7 @@ Data lokasi pencacahan yang digunakan sebanyak 182 lokasi, yang diambil dari lok
 Pada konsep MTSP, pencacah berperan sebagai \textit{salesman} yang harus berpindah dari satu lokasi ke lokasi lain secara berurutan. Pencacah, selain dilengkapi dengan ID, juga dilengkapi dengan \textit{depot}, yaitu lokasi dimana pencacah harus memulai dan mengakhiri kunjungan. Dalam eksperimen ini digunakan 15 pencacah dengan lokasi \textit{depot} yang bervariasi, sebagaimana terdapat pada Tabel \ref{tbl:enumerator} dan Lampiran \ref{tbl:enumerator_full} untuk versi lengkapnya.
 
 
-\begin{table*}[h]
+\begin{table*}[!]
 	\centering
 	\ra{1.3}
 	\caption{Pencacah}
@@ -93,7 +93,7 @@ Pada konsep MTSP, pencacah berperan sebagai \textit{salesman} yang harus berpind
 Jarak dan waktu tempuh antar node digunakan sebagai penimbang dalam penentuan rekomendasi lokasi. Penghitungan jarak dan waktu tempuh, selain dapat dilakukan secara manual (berdasarkan hasil survei atau perkiraan \textit{subject matter}), dapat juga didekati dengan menggunakan Google Directions API \citep{google_google_2016}. Keuntungan dengan menggunakan Google Direction API adalah jarak dan waktu yang dihitung telah memperhitungkan rute tercepat, kondisi geografis, kemacetan lalu-lintas, dan moda yang digunakan. Adapun kekurangan dari Google Direction API adalah jumlah \textit{requests} yang dapat dikirimkah sangat terbatas, hanya 1.000 \textit{requests} per hari per akun, sementara jumlah waktu dan jarak yang harus dihitung sejumlah $ nx(n-1) = 182x187 = 32.942 $. Listing \ref{lst:google_direction_api_request} memuat contoh \textit{requests URL} dengan Google Direction API. \textit{request URL} ini dapat dieksekusi dengan aplikasi eksternal, misalnya \textit{CURL}, atau dapat di-\textit{embed} kedalam aplikasi dan dieksekusi dengan menggunakan \textit{Http Client}. Contoh \textit{response} Google Direction API dapat dilihat pada Gambar \ref{fig:google_direction_api_response}.
 
 
-\begin{listing}
+\begin{listing}[!]
 	\caption{Google Direction API Request}
 	\label{lst:google_direction_api_request}
 	\begin{minted}[showspaces=false, breaklines=true]{http}
@@ -104,7 +104,7 @@ traffic_model=best_guess&key=API_KEY
 \end{listing}
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=\textwidth]{../../Resources/Images/google_direction_api_response}
 	\caption{Google Direction API Response}
@@ -115,7 +115,7 @@ traffic_model=best_guess&key=API_KEY
 Contoh matrix jarak dan waktu tempuh dapat dilihat pada Tabel \ref{tbl:distance_duration_matrix}, sementara data secara lengkap dapat dilihat pada Lampiran \ref{tbl:distance_duration_matrix_full}. Sebagai catatan, jika lokasi \textit{depot} dari pencacah bukan salah satu dari lokasi pencacahan, maka lokasi \textit{depot} juga harus disertakan dalam matriks jarak dan waktu tempuh.
 
 
-\begin{table}
+\begin{table}[!]
 	\centering
 	\ra{1.3}
 	\caption{Matriks Jarak dan Waktu Tempuh}
@@ -152,7 +152,7 @@ Jsprit merupakan sebuah library berbasis java yang dapat digunakan untuk menyele
 Pendefinisian masalah dengan library Jsprit terdiri dari 3 (tiga) tahapan: definisi lokasi pencacahan, definisi pencacah, dan definisi matriks jarak dan waktu tempuh. Data yang digunakan pada pendefinisian masalah seperti yang telah dijelaskan pada Section \ref{ssec:mtsp_dataset}. Tahap pertama, pendefinisian lokasi pencacahan, dapat dilihat pada Kode \ref{lst:jsprit_define_locations}. Sementara tahap kedua, pendefinisian pencacah, dapat dilihat pada Kode \ref{lst:jsprit_define_enumerators}, dan tahap terakhir, pendefinisan jarak dan waktu tempuh dapat dilihat pada Kode \ref{lst:jsprit_define_route_weights}. Setelah seluruh data dimasukkan, selanjutnya masalah dapat di-\textit{build}, sebagaimana dalam Kode \ref{lst:jsprit_build_problem}.
 
 
-\begin{listing}
+\begin{listing}[!]
 	\caption{Definisi Lokasi Pencacahan}
 	\label{lst:jsprit_define_locations}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
@@ -173,7 +173,7 @@ vrpBuilder.addJob(node);
 \end{listing}
 
 
-\begin{listing}
+\begin{listing}[!]
 	\caption{Definisi Pencacah dari File .csv}
 	\label{lst:jsprit_define_enumerators}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
@@ -202,7 +202,7 @@ vrpBuilder.addVehicle(vehicle);
 \end{listing}
 
 
-\begin{listing}
+\begin{listing}[!]
 	\caption{Definisi Penimbang Jarak dan Waktu Tempuh dari File .csv}
 	\label{lst:jsprit_define_route_weights}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
@@ -225,7 +225,7 @@ vrpBuilder.setRoutingCost(costMatrix);
 \end{listing}
 
 
-\begin{listing}
+\begin{listing}[!]
 	\caption{Build Problem}
 	\label{lst:jsprit_build_problem}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
@@ -242,7 +242,7 @@ VehicleRoutingProblem problem = vrpBuilder.build();
 Setelah masalah di-\textit{build}, selanjutnya Jsprit akan membuat algoritma dari masalah yang telah didefinisikan sebelumnya secara \textit{out-of-the-box}. Pada tahap ini juga dapat ditentukan berapa jumlah iterasi yang akan digunakan, dan thread yang akan digunakan dalam pencarian solusi. Kode \ref{lst:jsprit_create_algorithm} menunjukkan bagaimana Jsprit menciptakan algoritma.
 
 
-\begin{listing}
+\begin{listing}[!]
 	\caption{Penentuan Algoritma}
 	\label{lst:jsprit_create_algorithm}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
@@ -259,7 +259,7 @@ algorithm.setMaxIterations(iterations);
 Setelah algoritma dibuat, selanjutnya proses pencarian solusi dapat dilakukan. Pada tahapan ini, akan ditemukan lebih dari satu solusi terbaik, sehingga perlu dipilih solusi terbaik dari sejumlah solusi tersebut. Kode \ref{lst:jsprit_search_solution} menunjukkan bagaimana pencarian solusi oleh Jsprit dilakukan.
 
 
-\begin{listing}
+\begin{listing}[!]
 	\caption{Pencarian Solusi}
 	\label{lst:jsprit_search_solution}
 	\begin{minted}[showspaces=false,breaklines=true]{java}
@@ -277,7 +277,7 @@ $$ \mu = 82.24 jam $$
 $$ \sigma = 88.95 jam $$
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=\textwidth]{../../Resources/Images/analysis_mtsp_no_time_windows}
 	\caption{Grafik Rekomendasi dengan MTSP}
@@ -285,7 +285,7 @@ $$ \sigma = 88.95 jam $$
 \end{figure}
 
 
-\begin{listing}[h]
+\begin{listing}[!]
 	\caption{Rekomendasi dengan MTSP}
 	\label{lst:analysis_mtsp_recommendation}
 	\begin{minted}[showspaces=false,breaklines=true, escapeinside=||]{text}
@@ -308,7 +308,7 @@ $$ \sigma = 88.95 jam $$
 \end{listing}
 
 
-\begin{table}
+\begin{table}[!]
 	\centering
 	\ra{1.3}
 	\caption{Total Waktu Setiap Pencacah dengan MTSP}
@@ -358,7 +358,7 @@ Sebagaimana disampaikan sebelumnya, kekurangan algoritma MDVRP ketika digunakan 
 Pada penelitian ini digunakan mekanisme \textit{publish/subscribe}, karena \textit{publish/subscribe} memiliki karakteristik \textit{loose coupling}. Terlebih lagi mekanisme \textit{publish/subscribe} juga cocok digunakan pada sistem yang bersifat \textit{information-driven} \citep{muhl_large-scale_2002}. Karena karakteristiknya ini, \textit{publish/subscribe} dapat bekerja secara \textit{synchronous}, dimana \textit{request} dan \textit{reply} tidak harus diproses secara berurutan. \textit{Publisher} dapat melakukan \textit{publish} dalam kondisi \textit{offline}, begitu juga \textit{subscriber} dapat melakukan \textit{subscribe} ketika offline.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=\textwidth]{../../Resources/Images/system-overview}
 	\caption{Garis Besar Sistem}
@@ -366,17 +366,96 @@ Pada penelitian ini digunakan mekanisme \textit{publish/subscribe}, karena \text
 \end{figure}
 
 
-Gambar \ref{fig:system-overview} menunjukkan garis besar sistem yang terdiri dari 3 (tiga) komponen utama, yaitu: \textit{publisher}, \textit{subscriber}, dan \textit{message broker}. Komunikasi yang terjadi antara \textit{publisher} dan \textit{subscriber} disusun atas dasar kesamaan \textit{event} atau \textit{topic}. Pada penelitian ini, topi yang digunakan sebagai dasar komunikasi antara \textit{publisher} dan \textit{subscriber} adalah \textit{current location} dari masing-masing \textit{subscriber}.
+Gambar \ref{fig:system-overview} menunjukkan garis besar sistem yang terdiri dari 3 (tiga) komponen utama, yaitu: \textit{publisher}, \textit{subscriber}, dan \textit{message broker} \citep{banavar_efficient_1999}. Komunikasi yang terjadi antara \textit{publisher} dan \textit{subscriber} disusun atas dasar kesamaan \textit{event} atau \textit{topic}. \textit{Subscriber} dalam konteks sistem rekomendasi lokasi pencacahan adalah setiap pencacah yang menginginkan informasi tentang suatu topik. Pada penelitian ini, topik yang digunakan sebagai dasar komunikasi antara \textit{publisher} dan \textit{subscriber} adalah \textit{current location} dari masing-masing \textit{subscriber}. Pemilihan "\textit{current location}" sebagai topik karena "\textit{current location}" bersifat \textit{unique}, dimana satu lokasi pencacahan hanya dikunjungi oleh satu pencacah, sehingga sebuah topik hanya akan mempunyai satu \textit{subscriber}.
 
 
-Paradigma \textit{publish/subscribe} secara umum tersusun dari 3 (tiga) komponen: \textit{subscriber}, \textit{message broker}, dan \textit{publisher} \citep{banavar_efficient_1999}. \textit{Subscriber} dalam konteks sistem rekomendasi lokasi pencacahan adalah setiap pencacah yang menginginkan informasi tentang suatu topik. Topik dalam konteks ini adalah "lokasi pencacahan saat ini" dari setiap pencacah. Pemilihan "lokasi pencacahan saat ini" sebagai topik karena "lokasi pencacahan saat ini" bersifat \textit{unique}, dimana satu lokasi pencacahan hanya dikunjungi oleh satu pencacah, sehingga sebuah topik hanya akan mempunyai satu \textit{subscriber}.
-
-
-Sementara \textit{publisher} adalah satu atau lebih sistem yang mem-\textit{publish} informasi tentang lokasi pencacahan selanjutnya dari setiap topik. Dan \textit{message broker} bertanggung jawab mengakomodir seluruh topik yang di-\textit{subscribe}, dan menyebarluaskan setiap informasi yang di-\textit{publish} kepada client yang men-\textit{subscribe}-nya. Gambar \ref{fig:system-overview} menggambarkan garis besar sistem rekomendasi lokasi berbasis \textit{publish/subscribe}.
+Sementara \textit{publisher} merupakan satu atau lebih \textit{worker} yang mem-\textit{publish} informasi tentang \textit{next location} dari setiap topik. Pada sisi \textit{publisher}, lokasi pencacahan berikutnya akan dikalkulasi. Hasil kalkulasi akan menghasilkan sejumlah rute. Rute yang dihasilkan kemudian di-\textit{publish} kepada sejumlah \textit{subscriber}. Sementara itu, \textit{message broker} bertanggung jawab untuk meneruskan pesan antara \textit{publisher} dan \textit{subscriber} dan meng\textit{handle} seluruh topik.
 
 
 %-----------------------------------------------------------------------------%
-\subsection{\textit{TSP Solver}}
+\subsection{\textit{Recommendation Publisher}}
+%-----------------------------------------------------------------------------%
+
+
+Sebagaimana disampaikan sebelumnya, ada penelitian ini, topik yang digunakan sebagai dasar komunikasi antara \textit{publisher} dan \textit{subscriber} adalah \textit{current location} dari masing-masing \textit{subscriber}. Oleh karena itu, diperlukan pengecekan secara periodik untuk mendeteksi adanya topik baru, yang berarti terdapat lokasi baru yang di\textit{request}. Untuk itu sebuah thread (\autoref{alg:topic-watcher}) perlu disiapkan untuk melakukan pengecekan terhadap topik yang baru.
+
+
+\begin{algorithm}[!]
+	\caption{TopicWatcher}
+	\label{alg:topic-watcher}
+	\begin{algorithmic}[1]
+		\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+		\renewcommand{\algorithmicensure}{\textbf{Output:}}
+		\REQUIRE $C$
+		\ENSURE  $T$
+		\FOR {$i = 1$ to $len(C)$}
+			\FOR {$j = 1$ to $N$}
+				\IF {($C_i == E_j$)}
+					\STATE $T_j = Thread(C_i, V_1...V_M, (unassigned) E_1...E_N)$
+				\ENDIF
+			\ENDFOR
+		\ENDFOR
+		\RETURN $T$
+	\end{algorithmic}
+\end{algorithm}
+
+
+Setiap kali sebuah topik baru muncul, sebuah \textit{thread} baru akan disiapkan, dan topik tersebut akan dijadikan sebagai ID dari \textit{thread}. Setiap \textit{thread} yang terbentuk akan terkadung sebuah \textit{VRP solver procedure} (\autoref{alg:vrp-worker}) yang akan melakukan pencarian solusi/rute. Untuk memanage seluruh \textit{thread} dari topik, maka disiapkan sebuah \textit{threadpool} yang akan menampung \textit{thread} berdasarkan waktu kedatangan. Karena setiap \textit{thread} menggunakan topik sebagai ID, maka jumlah \textit{thread} akan sama dengan seluruh topik, atau seluruh lokasi pencacahan.
+
+
+Setiap thread dalam threadpool akan dieksekusi secara berurutan sesuai urutan kedatangan, setiap thread dalam satu session. Setiap thread yang dijalankan, akan melakukan pencarian solusi dengan menggunakan \textit{VRPSolver procedure}, sebagaimana terdapat pada \autoref{ssec:vrp-solver}, dengan menyertakan seluruh $M$ kendaraan dan $(unassigned) N$ lokasi. Hal ini dikarenakan \textit{VRPSolver} menggunakan \textit{total route costs} sebagai \textit{fitness value}, sehingga berpotensi terjadi \textit{local best solution}. Maksud dari \textit{local best solution} adalah solusi yang dihasilkan adalah solusi terbaik bagi seorang pencacah saja, yang sebenarnya akan lebih baik jika \textit{lokasi} pada solusi tersebut di\textit{assign} kepada pencacah lain.
+
+
+\begin{algorithm}[!]
+	\caption{VRPWorker}
+	\label{alg:vrp-worker}
+	\begin{algorithmic}[1]
+		\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+		\renewcommand{\algorithmicensure}{\textbf{Output:}}
+		\REQUIRE $T$
+		\ENSURE  $R$
+		\FOR {$i = 1$ to $len(T)$}
+			\STATE $R$ = VRPSolver($T_i$)
+			\FOR {$j = 1$ to $len(R)$}
+				\STATE $r$ = publish($C_{R_j}$, $R_j$)
+				\IF {($r > 0$)}
+					\STATE cancelSolver($T_j$)
+				\ELSIF {($C_{T_i} \notin C_{R_j}$)}
+					\STATE $T_i = Thread(C_{T_i}, V_m, (unassigned) E_1...E_N)$
+				\ENDIF
+			\ENDFOR
+		\ENDFOR
+		\RETURN $R$
+	\end{algorithmic}
+\end{algorithm}
+
+
+Proses yang terjadi pada \textit{procedure} \textit{VRPSolver} akan menghasilkan paling tidak sebuah rute, dan paling banyak $M$ (sama dengan jumlah kendaraan). Setiap rute $R_i$ yang dihasilkan oleh \textit{VRPSolver} kemudian akan di\textit{publish} kepada seluruh \textit{subscriber} pada topik $C_i$. Setelah solusi diteruskan kepada \textit{subscriber}, \textit{message broker} akan memberikan informasi tentang jumlah \textit{subscriber} yang menerima pesan kepada \textit{publisher}, tetapi identitas dari penerima tetap tidak diketahui. Jika setiap rute $R_i$ terdapat satu atau lebih penerima pesan, maka \textit{thread} yang memiliki ID $C_{R_i}$ akan dibatalkan. Pembatalan pencarian solusi ini bertujuan untuk mencegah solusi/rute yang telah diterima oleh \textit{subscriber} dikalkulasi ulang.
+
+
+Terkadang, terdapat sebuah kondisi dimana \textit{VRPSolver} yang tersemat ID $C_i$ menghasilkan satu set rute yang tidak mengandung solusi/rute untuk topik $C_i$. Pada kondisi demikian, topik $C_i$ akan diantrikan kembali dengan mengikutsertakan $(unassigned) N$ lokasi dan sebuah kendaraan saja (kendaraan yang mensubscribe topik $C_i$). Dengan demikian, terdapat kepastian terdapat solusi/rute untuk topik $C_i$.
+
+
+Sebagaimana telah disebutkan, keuntungan dari mekanisme \textit{publish/subscribe} adalah karakteristik \textit{loose coupling} yang membuatnya fleksibel. Akan tetapi, keunggulan ini juga menjadi salah satu kelemahan dari mekanisme ini. Ketidaktahuan \textit{publisher} terhadap identitas \textit{subscriber} menyebabkan \textit{current location} dari setiap \textit{subscriber} tidak dapat diketahui. Untuk itu, diperlukan sebuah mekanisme yang dapat digunakan untuk pertukaran informasi antara \textit{publisher} dan \textit{subscriber}. Pada penelitian ini akan digunakan \textit{shared-memory} yang akan digunakan untuk menyimpan informasi \textit{current location} dari seluruh \textit{subscriber}, dan \textit{publisher} dapat mengaksesnya untuk mengetahui \textit{current location} dari setiap \textit{subscriber}.
+
+
+Arsitektur \textit{publish/subscribe} merupakan sebuah arsitektur yang bersifat \textit{loose coopling}, dimana antara \textit{publisher} dan \textit{subscriber} tidak saling mengetahui \citep{muhl_large-scale_2002}. Salah satu konsekuensinya, ketika seorang pencacah melakukan \textit{subscribe}, pada saat solusi diperoleh pencacah tersebut sudah terputus dari \textit{broker}. Untuk itu diperlukan mekanisme \textit{caching}, sehingga pada saat pencacah terkoneksi kembali dengan \textit{broker}, maka solusi yang terdapat pada \textit{cache} dapat langsung di\textit{pusblish}.
+
+
+Proses di atas akan terus berulang sampai seluruh lokasi telah di\textit{assign} kepada \textit{subscriber}. \autoref{fig:publisher-algorithm} mengilustrasikan \textit{workflow} dari algoritma yang digunakan pada \textit{recommendation publisher}.
+
+
+\begin{figure}[!]
+	\centering
+	\includegraphics[width=12cm]{Resources/Images/publisher-algorithm}
+	\caption{Publisher Workflow}
+	\label{fig:publisher-algorithm}
+\end{figure}
+
+
+%-----------------------------------------------------------------------------%
+\subsection{\textit{VRP Solver}}
+\label{ssec:vrp-solver}
 %-----------------------------------------------------------------------------%
 Terdapat beberapa algoritma yang dapat digunakan untuk menyelesaikan permasalahan TSP, atau lebih spesifik MDVRP, seperti: tabu search (CGL) \citep{cordeau_tabu_1997}, adaptive large neighborhood search (ALNS) \citep{pisinger_general_2007}, fuzzy logic guided genetic algorithm (FLGA) \citep{lau_application_2010}, paralel iterated tabu search (ITS) \citep{cordeau_parallel_2012}, hybrid algorithm combining Iterated Local Search and Set Partitioning (ILS-RVND-SP) \citep{subramanian_hybrid_2013}, hybrid genetic algorithm with adaptive diversity control (HGSADC+) \citep{vidal_implicit_2014}, hybrid Granular Tabu Search (ELTG) \citep{escobar_hybrid_2014}, dan cooperative coevolutionary strategies (CoES) \citep{de_oliveira_cooperative_2016}. Dalam kasus ini akan digunakan algoritma CoES, karena CoES menghasilkan \textit{mean solution values} yang competitive dengan \textit{CPU time} yang relatif lebih rendah.
 
@@ -384,7 +463,7 @@ Terdapat beberapa algoritma yang dapat digunakan untuk menyelesaikan permasalaha
 Pada \textit{cooperative coevolutionary algorithm}, \citep{engelbrecht_coevolution_2007}, masalah dapat dipecah menjadi beberapa masalah yang lebih kecil (\textit{sub-problem}). Setiap populasi berkembang pada masing-masing \textit{sub-problem}. Setelah melalui sejumlah generasi, individu pada populasi-populasi tersebut bergabung membentuk solusi yang lengkap. Melalui proses ini, maka dimungkinkan untuk menghitung \textit{fitness} dari solusi lengkap. Sejumlah informasi kemudian dikembalikan kepada setiap populasi, seperti solusi terbaik yang ditemukan sejauh ini, dan \textit{update} untuk individu dalam populasi. Gambar \ref{fig:coes_overview} memberikan gambaran umum tentang cara kerja dari \textit{cooperative coevolutionary algorithm} \citep{de_oliveira_cooperative_2016}.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=10cm]{../../Resources/Images/coes_overview}
 	\caption{\textit{Cooperative coevolutionary} algorithm dengan \textit{problem decomposition}}
@@ -403,7 +482,7 @@ Langkah pertama pada \textit{cooperative coevolutionary algorithm} adalah dekomp
 Jika kedua aturan tersebut menghasilkan \textit{depot} yang berbeda, maka konflik harus diselesaikan dengan cara tertentu. Gambar \ref{fig:coes_problem_decomposition} mengilustrasikan bagaimana kedua rule tersebut diimplementasikan.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=7cm]{../../Resources/Images/coes_problem_decomposition}
 	\caption{\textit{Problem decomposition}: alokasi \textit{customer} ke \textit{depot}}
@@ -420,7 +499,7 @@ Setelah \textit{problem} didekomposisi menjadi \textit{sub-problem}, kemudian po
 Langkah selanjutnya adalah dengan menjalankan \textit{paralel module and coordination} sampai dengan \textit{stop condition} tercapai. Terdapat 3 (tiga) \textit{module} yang harus dijalankan, yaitu: \textit{Population Evolve} (PE), \textit{Complete Solution Evaluation} (CSE), dan \textit{Elite Group} (EG). Gambar \ref{fig:coes_paralel_modules} menggambarkan arsitektur pada \textit{paralel module}.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=7cm]{../../Resources/Images/coes_paralel_modules}
 	\caption{Arsitektur \textit{paralel module} di CoES}
@@ -434,7 +513,7 @@ Masing-masing \textit{module}, PE, CSE, dan EG dijalankan dalam \textit{thread} 
 \textit{Population Evolve} module adalah module yang memanage evolusi dari setiap populasi berdasarkan \textit{ES (evolution strategies)}. Gambar \ref{fig:coes_pe_module} menggabarkan arsitektur dari \textit{PE module}.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=7.5cm]{../../Resources/Images/coes_pe_module}
 	\caption{Arsitektur \textit{Population Evolve module} di CoES}
@@ -448,7 +527,7 @@ Masing-masing \textit{module}, PE, CSE, dan EG dijalankan dalam \textit{thread} 
 Solusi lengkap yang terbentuk masih memungkinkan adanya duplikasi \textit{customer} maupun \textit{missing customer}, untuk itu diperlukan adanya \textit{repair procedure}. Pada \textit{repair procedure} digunakan \textit{least additional cost heuristics} \citep{raff_routing_1983}, baik untuk menghilangkan duplikasi \textit{customer} maupun menambahkan \textit{missing customer}. Ilustrasi dari \textit{CSE module} dapat dilihat pada Gambar \ref{fig:coes_cse_module}.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=\textwidth]{../../Resources/Images/coes_cse_module}
 	\caption{Arsitektur \textit{Complete Solution Evaluation module} di CoES}
@@ -459,7 +538,7 @@ Solusi lengkap yang terbentuk masih memungkinkan adanya duplikasi \textit{custom
 Sementara itu \textit{Elite Group module} mengelola sebuah set berisi $\tau$ dari solusi lengkap, termasuk didalamnya solusi lengkap \textit{global}, yang dikirimkan oleh modul CSE. Jika set berisi kurang dari $\tau$ solusi lengkap, maka solusi yang baru dapat secara langsung dimasukkan ke dalam set. Sebaliknya, jika set telah berisi sejumlah $\tau$ solusi lengkap, maka solusi yang baru hanya dapat dimasukkan jika lebih baik dari solusi terburuk yang ada didalam set. Ilustrasi dari \textit{EG module} dapat dilihat pada Gambar \ref{fig:coes_eg_module}.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=5cm]{../../Resources/Images/coes_eg_module}
 	\caption{Arsitektur \textit{Elite Group module} di CoES}
@@ -468,61 +547,12 @@ Sementara itu \textit{Elite Group module} mengelola sebuah set berisi $\tau$ dar
 
 
 %-----------------------------------------------------------------------------%
-\subsection{\textit{Publisher}}
-%-----------------------------------------------------------------------------%
-
-
-Setiap \textit{publisher} dalam sistem mengimplementasikan \textit{Travelling Salesman Problem (TSP) solver}. Setiap \textit{problem} yang diproses oleh setiap \textit{instance} dari \textit{TSP solver} mengikutsertakan seluruh pencacah (dinotasikan dengan $M$) sebagai \textit{salesman} dan seluruh blok sensus yang belum di\textit{assign} sebagai \textit{customer} (dinotasikan dengan $N$). Hal ini dikarenakan \textit{TSP solver} menggunakan \textit{total route costs} sebagai \textit{fitness value}, sehingga berpotensi terjadi \textit{local best solution}. Maksud dari \textit{local best solution} adalah solusi yang dihasilkan adalah solusi terbaik bagi seorang pencacah saja, yang sebenarnya akan lebih baik jika \textit{lokasi} pada solusi tersebut di\textit{assign} kepada pencacah lain.
-
-
-Setiap \textit{subscribe} akan diproses dalam satu \textit{session}. Solusi terbaik yang diperoleh akan berisi minimum satu rute, dan maksimum berisi $M$ rute. Jika pada solusi terbaik yang dihasilkan oleh sebuah \textit{session} tidak terdapat alokasi rute untuk \textit{subscriber} dari \textit{session} tersebut, maka \textit{session} tersebut akan diproses ulang tanpa melibatkan pencacah yang lain. Mekanisme ini dimaksudkan untuk memastikan setiap \textit{session subscriber} mendapatkan alokasi rute. Prosedur yang diusulkan pada publisher seperti pada Algoritma \ref{lst:proposed_solver_thread_algorithm} dan Algoritma \ref{lst:proposed_publisher_algorithm}.
-
-
-\begin{listing}
-	\caption{Algoritma TSPSolver Thread}
-	\label{lst:proposed_solver_thread_algorithm}
-	\begin{minted}[showspaces=false,breaklines=true,escapeinside=||]{python}
-createSolverThread(|$C_{i}$|, |$E_{1}$|...|$E_{M}$|, |$L_{1}$|...|$L_{unsolved(N)}$|)
-	|$S_{C_{i}}$| <- TspSolver(|$C_{i}$|, |$E_{1}$|...|$E_{M}$|, |$L_{1}$|...|$L_{unsolved(N)}$|)
-	for |$c$| <- 1 to |$len(S_{C_{i}})$| do
-		rec <- publish(|$S_{c}$|, |$S_{R_{1}}$|);
-		if rec > 0 do
-			cancelThread(|$S_{c}$|)
-		end if
-	end for
-	if |$C_{i}$| not in |$S_{C_{i}}$| do
-		createSolverThread(|$E_{C_{i}}$|, |$E_{1}$|...|$E_{M}$|, |$L_{1}$|...|$L_{unsolved(N)}$|)
-	end if
-	cancelThread(|$T_{i}$|)
-end
-	\end{minted}
-\end{listing}
-
-
-\begin{listing}
-	\caption{Algoritma Publisher}
-	\label{lst:proposed_publisher_algorithm}
-	\begin{minted}[showspaces=false,breaklines=true,escapeinside=||]{python}
-|$C$| <- readChannels()
-for |$i$| <- 1 to |$len(C)$| do
-	if |$C_{i}$| not in |$T$| do
-		|$T_{i}$| <- createSolverThread(|$C_{i}$|, |$E_{1}$|...|$E_{M}$|, |$L_{1}$|...|$L_{unsolved(N)}$|);
-	end if
-end for
-	\end{minted}
-\end{listing}
-
-
-Arsitektur \textit{publish/subscribe} merupakan sebuah arsitektur yang bersifat \textit{loose coopling}, dimana antara \textit{publisher} dan \textit{subscriber} tidak saling mengetahui \citep{muhl_large-scale_2002}. Salah satu konsekuensinya, ketika seorang pencacah melakukan \textit{subscribe}, pada saat solusi diperoleh pencacah tersebut sudah terputus dari \textit{broker}. Untuk itu diperlukan mekanisme \textit{caching}, sehingga pada saat pencacah terkoneksi kembali dengan \textit{broker}, maka solusi yang terdapat pada \textit{cache} dapat langsung di\textit{pusblish}.
-
-
-%-----------------------------------------------------------------------------%
 \subsection{\textit{Message Broker}}
 %-----------------------------------------------------------------------------%
 \textit{Message broker} adalah sebuah komponen yang bertanggung jawab dalam menyalurkan (\textit{routing}) pesan dari \textit{publisher} ke \textit{subscriber} sesuai dengan topik yang di\textit{subscribe} \citep{banavar_efficient_1999}. Suatu sistem \textit{publish/subscribe} dapat memiliki \textit{single broker} maupun \textit{multi broker}. Pada arsitektur \textit{single broker}, seluruh \textit{subscriber} dan \textit{publisher} terkoneksi pada satu \textit{broker}, sementara pada \textit{multi broker}, setiap \textit{subscriber} maupun \textit{publisher} dapat terkoneksi pada broker terdekat. Arsitektur \textit{multi depot} ini juga disebut dengan \textit{distributed pub/sub system} \citep{muhl_large-scale_2002}, seperti ilustrasi pada Gambar \ref{fig:pub_sub_distributed_ilustration}. Adapun rancangan yang diusulkan akan menerapkan arsitektur terdistribusi, dikarenakan lokasi pencacahan secara geografis tersebar.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=9cm]{../../Resources/Images/pub_sub_distributed_ilustration}
 	\caption{Arsitektur \textit{Publish-Subscribe} terdistribusi}
@@ -634,7 +664,7 @@ Alur kerja perancangan dimulai dengan dengan mengidentifikasi blok sensus yang a
 Selanjutnya, setiap pencacah akan dialokasikan kepada blok sensus yang akan dicacah dengan menggunakan metode MTSP, sebagaimana diformulasikan oleh \citep{bektas_multiple_2006}, dengan ketentuan setiap pencacah dapat memulai dan mengakhiri pada \textit{depot} yang berbeda-beda. Setelah model diperoleh, setiap pencacah akan mengunjungi lokasi pertama dari rekomendasi. Setelah selesai kunjungan, lokasi akan disimpan dalam \textit{tabu list} dengan menggunakan metode pub-sub \citep{chen_efficient_2003}. Model baru akan digenerate setiap kali terdapat \textit{request} dari salah satu pencacah. Setiap kali model di-\textit{generate}, \textit{tabu search} \citep{glover_tabu_1989, glover_tabu_1990} yang memanfaatkan \textit{tabu list} akan digunakan untuk memastikan tidak terdapat \textit{conflict}. Setelah model baru selesai di-\textit{generate}, maka mudel akan di-\textit{publish} kepada setiap pencacah yang telah men-\textit{subscribe}.
 
 
-\begin{figure}[h]
+\begin{figure}[!]
     \centering
     \includegraphics[width=\textwidth]{../../Resources/Images/design_overview}
     \caption{Garis Besar Sistem Usulan}
@@ -729,7 +759,7 @@ Tabel \textit{cost-matrix}, selain dapat didefinisikan secara manual (berdasarka
 %Gambar \ref{fig:mtsp_solution_example} berikut menunjukkan hasil rekomendasi dengan MTSP.
 %
 %
-%\begin{figure}[h]
+%\begin{figure}[!]
 %    \centering
 %    \includegraphics[width=\textwidth]{../../Resources/Images/mtsp_solution_example}
 %    \caption{Contoh Hasil Rekomendasi}

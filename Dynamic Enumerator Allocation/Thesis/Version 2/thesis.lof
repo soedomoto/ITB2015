@@ -17,17 +17,18 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Google Direction API Response\relax }}{29}{figure.caption.26}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Grafik Rekomendasi dengan MTSP\relax }}{32}{figure.caption.28}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Garis Besar Sistem\relax }}{34}{figure.caption.30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Cooperative coevolutionary} algorithm dengan \textit {problem decomposition}\relax }}{35}{figure.caption.31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces \textit {Problem decomposition}: alokasi \textit {customer} ke \textit {depot}\relax }}{36}{figure.caption.32}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Arsitektur \textit {paralel module} di CoES\relax }}{36}{figure.caption.33}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Arsitektur \textit {Population Evolve module} di CoES\relax }}{37}{figure.caption.34}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Arsitektur \textit {Complete Solution Evaluation module} di CoES\relax }}{38}{figure.caption.35}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Arsitektur \textit {Elite Group module} di CoES\relax }}{38}{figure.caption.36}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Arsitektur \textit {Publish-Subscribe} terdistribusi\relax }}{39}{figure.caption.37}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Garis Besar Sistem\relax }}{35}{figure.caption.30}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Publisher Workflow\relax }}{38}{figure.caption.31}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \textit {Cooperative coevolutionary} algorithm dengan \textit {problem decomposition}\relax }}{39}{figure.caption.32}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \textit {Problem decomposition}: alokasi \textit {customer} ke \textit {depot}\relax }}{40}{figure.caption.33}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Arsitektur \textit {paralel module} di CoES\relax }}{41}{figure.caption.34}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Arsitektur \textit {Population Evolve module} di CoES\relax }}{41}{figure.caption.35}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Arsitektur \textit {Complete Solution Evaluation module} di CoES\relax }}{42}{figure.caption.36}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Arsitektur \textit {Elite Group module} di CoES\relax }}{42}{figure.caption.37}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Arsitektur \textit {Publish-Subscribe} terdistribusi\relax }}{43}{figure.caption.38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Normal (Cordeau)\relax }}{46}{figure.caption.38}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Normal (Lapangan)\relax }}{47}{figure.caption.39}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi \textit {Unstable Connection}\relax }}{54}{figure.caption.40}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Pencacah Berhenti\relax }}{55}{figure.caption.41}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Normal (Cordeau)\relax }}{48}{figure.caption.39}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Normal (Lapangan)\relax }}{49}{figure.caption.40}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi \textit {Unstable Connection}\relax }}{56}{figure.caption.41}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \textit {Flowchart} pada \textit {Client Simulator} Kondisi Pencacah Berhenti\relax }}{57}{figure.caption.42}
 \addvspace {10\p@ }
