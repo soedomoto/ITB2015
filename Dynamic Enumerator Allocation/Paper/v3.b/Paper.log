@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  22 MAR 2017 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  25 MAR 2017 18:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -897,21 +897,21 @@ LaTeX Info: Redefining \nameref on input line 366.
 ABD: EveryShipout initializing macros
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 484.
+               Default added (so using `!tbp') on input line 481.
 
 <Resources/Images/mdvrp-illustration.png, id=9, 629.35126pt x 333.245pt>
 File: Resources/Images/mdvrp-illustration.png Graphic file (type png)
 
 <use Resources/Images/mdvrp-illustration.png>
 Package pdftex.def Info: Resources/Images/mdvrp-illustration.png used on input 
-line 486.
+line 483.
 (pdftex.def)             Requested size: 227.62204pt x 120.52744pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 492.
+LaTeX Font Info:    Try loading font information for U+msa on input line 491.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 492.
+LaTeX Font Info:    Try loading font information for U+msb on input line 491.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -932,122 +932,139 @@ s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.493 
-       <./Resources/Images/mdvrp-illustration.png>]
+l.494 	\item T
+              he demand of each customer is $d_i$ (there is no demand at the...
+ <./Resources/Images/mdvrp-illustration.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 592--593
+[]\OT1/ptm/m/n/10 The pub-lish/subscribe in-ter-ac-tion is a com-mu-ni-ca-tion
+ []
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 592.
+               Default added (so using `!tbp') on input line 596.
 
-<Resources/Images/pub-sub-general.png, id=52, 624.3325pt x 303.1325pt>
+<Resources/Images/pub-sub-general.png, id=55, 624.3325pt x 303.1325pt>
 File: Resources/Images/pub-sub-general.png Graphic file (type png)
 
 <use Resources/Images/pub-sub-general.png>
 Package pdftex.def Info: Resources/Images/pub-sub-general.png used on input lin
-e 594.
+e 598.
 (pdftex.def)             Requested size: 227.62204pt x 110.51524pt.
- [2pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.601 
-       <./Resources/Images/pub-sub-general.png>]
+ [2]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 622.
+               Default added (so using `!tbp') on input line 625.
 
-<Resources/Images/system-overview.png, id=81, 643.40375pt x 302.12875pt>
+<Resources/Images/system-overview.png, id=88, 643.40375pt x 302.12875pt>
 File: Resources/Images/system-overview.png Graphic file (type png)
 
 <use Resources/Images/system-overview.png>
 Package pdftex.def Info: Resources/Images/system-overview.png used on input lin
-e 624.
+e 627.
 (pdftex.def)             Requested size: 227.62204pt x 106.88533pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 645.
+               Default added (so using `!htbp') on input line 648.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 646.
+put line 649.
 
-Overfull \hbox (5.5976pt too wide) in paragraph at lines 656--657
+Overfull \hbox (5.5976pt too wide) in paragraph at lines 659--660
 [] []$\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Thread\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 C[]; V[]:::V[]; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 unassi
 gned\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 E[]:::E[]\OT1/cmr/m/n/10 )$ 
  []
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 671.
-
-
-Underfull \hbox (badness 3792) in paragraph at lines 695--696
-[]\OT1/ptm/m/n/10 As men-tioned be-fore, the ad-van-tage of us-ing pub-
- []
-
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.696 
-       <./Resources/Images/system-overview.png>]
+l.672 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.672 
+       <./Resources/Images/pub-sub-general.png> <./Resources/Images/system-over
+view.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 701.
+               Default added (so using `!htbp') on input line 674.
 
-<Resources/Images/publisher-algorithm.png, id=111, 564.1075pt x 875.27pt>
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 703.
+
+<Resources/Images/publisher-algorithm.png, id=119, 564.1075pt x 875.27pt>
 File: Resources/Images/publisher-algorithm.png Graphic file (type png)
 
 <use Resources/Images/publisher-algorithm.png>
 Package pdftex.def Info: Resources/Images/publisher-algorithm.png used on input
- line 703.
+ line 705.
 (pdftex.def)             Requested size: 227.62204pt x 353.17357pt.
+
+Underfull \hbox (badness 2401) in paragraph at lines 715--716
+[]\OT1/ptm/m/n/10 VRP solver is a mod-ule used for find-ing the best
+ []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 727.
+               Default added (so using `!htbp') on input line 729.
 
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.762 
+l.764 
        <./Resources/Images/publisher-algorithm.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 764.
+               Default added (so using `!tbp') on input line 766.
 
 
-<Resources/Images/pub_sub_distributed_ilustration.png, id=171, 644.4075pt x 403
+<Resources/Images/pub_sub_distributed_ilustration.png, id=166, 644.4075pt x 403
 .5075pt>
 File: Resources/Images/pub_sub_distributed_ilustration.png Graphic file (type p
 ng)
  <use Resources/Images/pub_sub_distributed_ilustration.png>
 Package pdftex.def Info: Resources/Images/pub_sub_distributed_ilustration.png u
-sed on input line 766.
+sed on input line 768.
 (pdftex.def)             Requested size: 199.16928pt x 124.71045pt.
  [5pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.845 \end{enumerate}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{table.1}) has been already used, duplicate ignored
+l.845 \item C
+             oEAs algorithm outputs a more efficient route based on the tota...
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.845 \end{enumerate}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{table.2}) has been already used, duplicate ignored
+l.845 \item C
+             oEAs algorithm outputs a more efficient route based on the tota...
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.845 \end{enumerate}
-                      <./Resources/Images/pub_sub_distributed_ilustration.png>]
+l.845 \item C
+             oEAs algorithm outputs a more efficient route based on the tota...
+ <./Resources/Images/pub_sub_distributed_ilustration.png>]
+Underfull \hbox (badness 2512) in paragraph at lines 847--848
+[]\OT1/ptm/m/n/10 The use of a real-time mech-a-nism such as Pub-
+ []
+
 (./Paper.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ³ in font ptmr7t!
@@ -1100,21 +1117,21 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 992.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 992.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 995.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 995.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 992.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 992.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 992.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 995.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 995.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 995.
  ) 
 Here is how much of TeX's memory you used:
- 19823 strings out of 493029
- 367369 string characters out of 6136234
- 484547 words of memory out of 5000000
+ 19831 strings out of 493029
+ 367425 string characters out of 6136234
+ 483696 words of memory out of 5000000
  22896 multiletter control sequences out of 15000+600000
  42496 words of font info for 88 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 54i,10n,73p,1083b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,10n,73p,1093b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -1128,10 +1145,10 @@ y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 live/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Paper.pdf (6 pages, 323763 bytes).
+Output written on Paper.pdf (6 pages, 317611 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 113 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

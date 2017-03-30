@@ -224,11 +224,11 @@
 
 
 % *** SUBFIGURE PACKAGES ***
-\ifCLASSOPTIONcompsoc
-  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-\else
-  \usepackage[caption=false,font=footnotesize]{subfig}
-\fi
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
 % subfig.sty, written by Steven Douglas Cochran, is the modern replacement
 % for subfigure.sty, the latter of which is no longer maintained and is
 % incompatible with some LaTeX packages including fixltx2e. However,
@@ -245,6 +245,7 @@
 %
 % The latest version and documentation of subfig.sty can be obtained at:
 % http://www.ctan.org/pkg/subfig
+\usepackage{subcaption}
 
 
 
@@ -428,7 +429,7 @@ Email: baskara@stei.itb.ac.id}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-Field data collection is one of the main activities performed by the national statistical agencies in every country. Data collection activities have a similiar workflow with Multi Depot Vehicle Routing Problem (MDVRP). The use of MDVRP to generate pre-calculated routes resulted in a total route costs with high standard deviation. Real-time mechanism by utilizing the publish/subscribe paradigm combined with Cooperative Coevolution Algorithms (CoEAs) is proposed to reduce the inequality (large variation) of the completion time. The test results show that the routes produced by publish/subscribe paradigm combined with CoEAs are more prevalent in total route times among enumerators compared with pre-calculated routes produced by only CoEAs.
+Field data collection is one of the main activities performed by national statistical agencies in every country. Data collection activities have a similar workflow with Multi-Depot Vehicle Routing Problem (MDVRP). The use of MDVRP to generate pre-calculated routes resulted in total route costs with high standard deviation. The real-time mechanism by utilizing the publish/subscribe paradigm combined with MDVRP based on Cooperative Coevolution Algorithms (CoEAs) is proposed to reduce the inequality (large variation) of the completion time. The test results show that routes produced by the combination of publish/subscribe paradigm and CoEAs are more prevalent in enumerator's total route times compared with the pre-calculated routes produced by MDVRP based on CoEAs only.
 \end{abstract}
 
 % no keywords
@@ -453,33 +454,30 @@ Field data collection is one of the main activities performed by the national st
 \section{Introduction}
 \label{sec:introduction}
 %-----------------------------------------------------------------------------%
-Data collection is one of the main duties of the statistical agency in every country. There are two data collection methods that are generally used: primary data collection and secondary data collection. In the primary data collection, the enumerators directly meet and interview the respondents, while in the secondary data collection, the statistical institution only compiles the data collected by other agencies. The primary data collection method requires the enumerators to be allocated to several census/survey areas that have been specified before. The allocation is usually made by assigning an equal number of locations on each enumerator.
-
+Data collection is one of the main duties of a statistical agency in every country. There are two data collection methods that are generally used: primary and secondary data collection. The primary data collection requires a direct interview with the respondents, while the secondary data collection only compiles the data collected by other agencies. Related to this, the primary data collection involves an activity of allocating the enumerators to several census/survey areas. The allocation is usually conducted by assigning an equal number of locations to each enumerator.
 
 The workflow of the data collection performs as follows: 
 \begin{enumerate}
-	\item The enumeration will start on a particular point. It could be the statistical office or the enumerator's house. 
+	\item Each enumerator gets a list of census/survey locations to visit. 
+	\item The enumeration starts on one particular point. It could be the statistical office or the enumerator's house. 
 	\item The enumerator moves to the first census/survey location and visits all respondents in that location. 
 	\item After finishing the first census/survey area, the enumerator moves to the second census/survey location and continue doing so until all locations have been visited successfully.
 \end{enumerate}
+This workflow is significantly similar to the Vehicle Routing Problem (VRP), specifically, the Multi-Depot Vehicle Routing Problem (MDVRP). The enumerators are analogous to vehicles, census/survey locations are comparable with customers, and the enumeration's starting point is corresponding with the depot. 
 
-
-This workflow is significantly similar to the Vehicle Routing Problem (VRP), or more specifically, the Multi Depot Vehicle Routing Problem (MDVRP).
-
-
-However, although the data collection shares similar workflow with MDVRP, the rough implementation of the MDVRP algorithm is not feasible to solve the allocation problems. This is because one important variables needed in the algorithm, the service time, is not available until after the enumerator finish visiting the census/survey location. Therefore, this research aims to propose an integration of MDVRP with pub/sub mechanism to create a location recommendation system for field data collection that can be used in real time. 
+Although sharing similar workflow with MDVRP, the rough implementation of the MDVRP algorithm is not feasible for solving the allocation problems. This is because MDVRP needs the variable \textit{service time}, which will not be available until after the enumerator finishes visiting the census/survey location. Therefore, this research aims to propose an integration of MDVRP with publish/subscribe mechanism to create a real-time location recommendation system for field data collection. 
 
 
 %-----------------------------------------------------------------------------%
 \section{Related Works}
 \label{sec:related-works}
 %-----------------------------------------------------------------------------%
-%-----------------------------------------------------------------------------%
-\subsection{Multi-Depot Vehicle Routing Problem}
-\label{ssec:mdvrp}
-%-----------------------------------------------------------------------------%
-Multi-Depot Vehicle Routing Problem (MDVRP) is one of classic  Vehicle Routing Problem (VRP) variance, where there are more than one depot that can be used  \cite{montoya-torres_literature_2015}. \autoref{fig:mdvrp-illustration} shows an example of the solution for VRP problem that uses two depot and two vehicle routes which associated with each depot. Basically, a solution to this problem is a set of vehicle routes such that: (i) each vehicle route starts and ends at the same depot, (ii) each customer is served exactly once by one vehicle, (iii) the total demand on each route does not exceed vehicle capacity (iv) the maximum route time is satisfied and (v) the total cost is minimized.
 
+%-----------------------------------------------------------------------------%
+\subsection{MDVRP based on Coevolution Algorithms (CoEAs)}
+\label{ssec:evolution-algorithms}
+%-----------------------------------------------------------------------------%
+VRP is an optimization problem that focused on the query: \textit{`given a set of vehicles and a starting point (depot), find the best route to visit all customers'}. In cases there is more than one depot, VRP is known as MDVRP \cite{montoya-torres_literature_2015}. \autoref{fig:mdvrp-illustration} shows an example of an MDVRP solution that uses two depots and two routes associated with each depot. Basically, a solution for MDVRP is a set of routes such that: (i) each route starts and ends at the same depot, (ii) each customer is only served once by one vehicle, (iii) the total demand on each route does not exceed vehicle's capacity, (iv) the maximum route time is satisfied, and (v) the total cost is minimized.
 
 \begin{figure}[!]
 	\centering
@@ -488,158 +486,57 @@ Multi-Depot Vehicle Routing Problem (MDVRP) is one of classic  Vehicle Routing P
 	\label{fig:mdvrp-illustration}
 \end{figure}
 
+Coevolutionary algorithms (CoEAs) is one of many algorithms \cite{cordeau_tabu_1997} \cite{pisinger_general_2007} \cite{lau_application_2010} \cite{cordeau_parallel_2012} \cite{subramanian_hybrid_2013} \cite{vidal_implicit_2014} \cite{escobar_hybrid_2014} \cite{de_oliveira_cooperative_2016} that can be used to solve MDVRP. CoEAs realize that in natural evolution the physical environment is influenced by other independently-acting biological populations \cite{engelbrecht_coevolution_2007}. Based on the interaction of each species, CoEAs can be distinguished into two categories: competitive and cooperative \cite{engelbrecht_coevolution_2007}. In the competitive coevolution, each individual competes with other individuals in the same group. Meanwhile, the cooperative coevolution has its species mutually interacted or, at least, not harming each other.
 
-According to Renaud et al \cite{renaud_tabu_1996}, the MDVRP can be formally described as follows. Let $G = (V, A)$ be a complete graph, where $V$ is the set of nodes and $A$ is the set of arcs. The nodes are partitioned into two subsets: the customers to be served, $V_C$ = \{1,..., $N$\}, and the multiple depots $V_D$ = \{$N$+1,..., $N+M$\}, with $V_C \cup V_D$ = $V$ and $V_C \cap V_D$ = $\oslash$. There is a non-negative cost $c_{ij}$ associated with each arc $(i, j) \in A$. The demand of each customer is $d_i$ (there is no demand at the depot nodes). There is also a fleet of $K$ identical vehicles, each with capacity $Q$. The service time at each customer $i$ is $t_i$ while the maximum route duration time is set to $T$. $A$ conversion factor $w_{ij}$ might be needed to transform the cost $c_{ij}$ into time units. In the classical MDVRP, however, the cost is the same as the time and distance units, so $w_{ij}$ = $1$.
-
-
-In the mathematical formulation \cite{kulkarni_integer_1985}, binary variables $x_{ijk}$ are equal to $1$ when vehicle $k$ visits node $j$ immediately after node $i$. Auxiliary variables $y_i$ are also used in the subtour elimination constraints.
+The use of CoEAs for solving MDVRP has been studied by several researchers, one of which is de Oliveira et al. \cite{de_oliveira_cooperative_2016}. De Oliveira's algorithm consists of 2 (two) stages: initiation and evolution. In initiation stage, the population is built using Nearest Insertion Heuristic (NIH) and NIH-based semi-greedy. Then, in the evolution stage, this population will be evolved using a parallel module, which consists of 3 submodules: Population Evolve (PE), Complete Solution Evaluation (CSE), and Elite Group (EG) submodules. This stage is controlled by a monitor module to ensure that all processes run well. \autoref{fig:coes_paralel_modules} shows the parallel architecture proposed by de Oliveira.
 
 
-Minimize
-\begin{flalign}
-\label{eq:1}
-\sum_{i=1}^{N+M}\sum_{j=1}^{N+M}\sum_{k=1}^{K}c_{ij}x_{ijk};
-\end{flalign}
-
-
-Subject to:
-\begin{flalign}
-\label{eq:2}
-\sum_{i=1}^{N+M}\sum_{k=1}^{K}x_{ijk} = 1  (j=1,..., N);
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:3}
-\sum_{j=1}^{N+M}\sum_{k=1}^{K}x_{ijk} = 1  (j=1,..., N);
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:4}
-&\sum_{i=1}^{N+M}x_{ihk} - \sum_{j=1}^{N+M}x_{hjk} = 0 \\
-\nonumber
-&(k=1,...,K; h=1,...,N+M);
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:5}
-\sum_{i=1}^{N+M} \sum_{j=1}^{N+M} d_ix_{ijk} \leq Q (k=1,...,K);
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:6}
-\sum_{i=1}^{N+M} \sum_{j=1}^{N+M} (c_{ij}w_{ij} + t_i) x_{ijk} \leq T (k=1,...,K);
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:7}
-\sum_{i=N+1}^{N+M} \sum_{j=1}^{N} x_{ijk} \leq 1 (k=1,...,K);
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:8}
-\sum_{j=N+1}^{N+M} \sum_{i=1}^{N} x_{ijk} \leq 1 (k=1,...,K);
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:9}
-&y_i - y_j + (M + N)x_{ijk} \leq N + M - 1; \\
-\nonumber
-&for 1 \leq i \neq j \leq N and 1 \leq k \leq K;
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:10}
-x_{ijk} \in \{0, 1\} \forall i,j,k;
-\end{flalign}
-
-
-\begin{flalign}
-\label{eq:11}
-y_i \in \{0,1\} \forall i;
-\end{flalign}
-
-
-The objective \ref{eq:1} minimizes the total cost. Constraints \ref{eq:2} and \ref{eq:3} guarantee that each customer is served by exactly one vehicle. Flow conservation is guaranteed through constraint \ref{eq:4}. Vehicle capacity and route duration constraints are found in \ref{eq:5} and \ref{eq:6}, respectively. Constraints \ref{eq:7} and \ref{eq:8} check vehicle availability. Subtour elimination constraints are in \ref{eq:9}. Finally, \ref{eq:10} and \ref{eq:11} define x and y as binary variables.
-
-
-%-----------------------------------------------------------------------------%
-\subsection{Evolution Algorithms}
-\label{ssec:evolution-algorithms}
-%-----------------------------------------------------------------------------%
-Evolution Algorithms (EAs) is one of the optimization algorithm families that are inspired by nature. In the evolution algorithm, there are selection and reproduction processes to purify the population from the solution candidates. According to Engelbreacht \cite{engelbrecht_coevolution_2007}, in general, the EAs lifecycle begins with randomly configuring the initial population. Afterwards, for each iteration, every individual in the population is evaluated using an objective function. Then, each solution candidate will be labeled with a fitness value based on their evaluation result. These solution candidates will then commit a reproduction and create the next generation. The whole process will be repeated using the new-generation individuals. These iterations will stop once it hits a certain time limit, which is 60 seconds. 
-
-
-Coevolutionary algorithms (CoEAs) is a development of EAs. In standard EAs, evolution is usually viewed as the population attempts to adapt in a fixed physical environment. In contrast, coevolutionary algorithms (CoEAs) realize that in natural evolution the physical environment is influenced by other independently-acting biological populations \cite{engelbrecht_coevolution_2007}. Based on the interaction of each species, CoEAs can be distinguished into two categories: competitive and cooperative \cite{engelbrecht_coevolution_2007}. In the competitive coevolution, each individual competees with other individuals in the same group. Meanwhile, in cooperative coevolution, the interaction between species is mutualistic, or at least, not harming each other. 
+\begin{figure}[!]
+	\centering
+	\includegraphics[width=6cm]{Resources/Images/coes_paralel_modules}
+	\caption{Architecture of Parallel Modules \cite{de_oliveira_cooperative_2016}}
+	\label{fig:coes_paralel_modules}
+\end{figure}
 
 
 %-----------------------------------------------------------------------------%
 \subsection{Publish/Subscribe Paradigm}
 \label{ssec:pub-sub}
 %-----------------------------------------------------------------------------%
-Publish/subscribe interaction is one of the communication methods between client and server. The interaction paradigm in publish/subscribe is the presence of subscribers that have an interest in a certain event or the pattern of an event. These subscribers will be notified by the publisher about the event they are interested in \cite{eugster_many_2003}. 
+The publish/subscribe interaction is a communication pattern between publisher (server) and subscribers (clients). The subscribers are the parties who have interests in a certain event/topic and will get a notification about the event/topic they are interested in \cite{eugster_many_2003}. One of the benefits of using publish/subscribe mechanism is the \textit{loose coupling} characteristic \cite{eugster_many_2003} between the publisher and the subscriber.
 
-
-The basic model of the publish/subscribe system, as can be seen in \autoref{fig:pub-sub-general}, depends on the event notification service that provides storage and management of subscription. This event service acts as a mediator between the publisher, who acts as the events producer, and the subscriber who acts as the event consumer. 
-
-\begin{figure}[!]
-	\centering
-	\includegraphics[width=8cm]{Resources/Images/pub-sub-general}
-	\caption{Basic architecture in Pub/Sub \cite{eugster_many_2003}}
-	\label{fig:pub-sub-general}
-\end{figure}
-
-
-One of the benefits of publish/subscribe mechanism is the loose coupling characteristic \cite{eugster_many_2003} between the publisher and the subscriber. The separation of information (decoupling) between publisher and subscriber can be divided into 3 (three) dimension, which are:
-
-\begin{enumerate}
-	\item Space decoupling. \\
-	In doing the interaction, both publisher and subscriber do not need to know each other. The publisher sends an event and subscriber indirectly receive the event through the event service. The publisher does not hold any reference regarding the subscriber and vice versa. 
-	\item Time decoupling. \\
-	The parties who are involved in the interactions do not have to interact in the same time. The publisher can send the event even though he is in a disconnected state. Similarly, the subscriber can still receive the event, albeit disconnected. 
-	\item Synchronizing decoupling. \\
-	Publisher will not be blocked when producing the event. The subscriber can still obtain information despite, at the same time, working on other tasks. Publisher and subscriber are not in the main flow, hence are not interacting synchronously. 
-\end{enumerate}
+The basic model of the publish/subscribe system relies on the event notification service that provides storage and management of subscription. This service acts as a mediator between the publisher (the event's producer) and the subscriber (the event's consumer).
 
 
 %-----------------------------------------------------------------------------%
 \section{Proposed Solution}
 \label{sec:proposed-solution}
 %-----------------------------------------------------------------------------%
-The drawback of using MDVRP for location recommendation in field data collection is the absence of time service data, which is very important in the recommendation calculation. Thus, MDVRP needs to be integrated with the real-time mechanism. There are several mechanisms that can be adopted in a real-time system such as Web Service, Remote Procedure Call (RPC), message passing, and publish/service \cite{eugster_many_2003}.
+Using pure MDVRP for location recommendation comes with one major drawback: the absence of time service data which is very important for computing the recommendation. Thus, MDVRP needs to be integrated with a real-time mechanism such as Web Service, Remote Procedure Call (RPC), message passing, and publish/subscribe mechanism \cite{eugster_many_2003}.
 
-
-The publish/subscribe mechanism is used in this research because it has the \textit{loose coupling} characteristic. Furthermore, publish/subscribe mechanism is also suitable for an information-driven system \cite{muhl_large-scale_2002}. Because of this characteristic, the publish/subscribe mechanism can work asynchronously, where request and reply do not have to be processed in sequence. The publisher and subscriber can conduct an offline publish and offline subscribe, respectively. 
+In this research, the publish/subscribe mechanism is chosen because, in addition to its loose coupling characteristic, it is also suitable for an information-driven system \cite{muhl_large-scale_2002}. \textit{Loose coupling} allows the publish/subscribe mechanism to work asynchronously, meaning the request and the reply do not have to be processed in sequence. Publishing and subscribing activities can be done offline. 
 
 
 \begin{figure}[!]
 	\centering
 	\includegraphics[width=8cm]{Resources/Images/system-overview}
-	\caption{The system outline}
+	\caption{The outline of the proposed system}
 	\label{fig:system-overview}
 \end{figure}
 
 
-\autoref{fig:system-overview} shows the system outline that consists of 3 (three) main components: the publisher, the subscriber, and the message broker. The communication between publisher and subscriber is built upon a similarity in either event or topic. In this research, the topic that is used as the basis for the communication between publisher and subscriber is the \textit{current location} of each subscriber. 
+\autoref{fig:system-overview} shows the outline for the proposed system that consists of 3 (three) main components: the publisher, the subscriber, and the message broker. The communication between publisher and subscriber is built upon their similarity in either event or topic. In this research, the subscriber's current location is chosen as the communication topic. 
 
 
 %-----------------------------------------------------------------------------%
-\subsection{Recommendation Publisher}
+\subsection{The Recommendation Publisher}
 \label{ssec:recommendation-publisher}
 %-----------------------------------------------------------------------------%
-VRP solver is implemented on the publisher's side, who will search for solution/route and then publish it to the subscriber via the message broker. The subscriber's current location is used as a topic. Afterward, a thread  (\autoref{alg:topic-watcher}) is prepared that will periodically check if there is any new topic at message broker. 
+The publisher uses subscriber's current location as a topic to find the best solution/route. This route will be published to the subscriber via the message broker. The message broker plays a role in forwarding the message from publisher to subscriber and vice versa. Afterward, a new thread (\autoref{alg:topic-watcher}) is prepared to regularly check if there is any new topic at message broker. 
 
-Each time a new topic emerge, a new thread will be created and that new topic will be used as an ID for that thread. Each thread contains VRP solver procedure (\autoref{alg:vrp-worker}) that will do the solution/route finding. Accordingly, a threadpool is provided to contain all threads from each topic in order of arrival time. Since topic is used as a thread ID, the threadpool size is equal to the number of census/survey location. 
+Every time a new topic (subscriber’s current location) emerges, a new thread will be created using that new topic as an ID. Accordingly, a thread pool is provided to accommodate all threads from each topic in an arrival order. By the time all locations has been assigned to each enumerator, the thread pool size will be equal to the number of topics (census/survey locations). 
 
-
-Each thread in thread pool will be run in order, one session for each thread. Every running thread, with a topic as an ID, will find the solution by embroiling all $M$ vehicles and $(unassigned) N$ locations. The solution finding is done using VRP solver procedure which is explained in more detail in \autoref{ssec:vrp-solver}.
+Each thread will be running consecutively, one session for each thread. The current running thread calls a global VRP solver procedure (\autoref{alg:vrp-worker}) that acts as a solution/route finder. VRP solver procedure takes into account all $M$ vehicles and $(unassigned) N$ locations, which is explained in more detail in \autoref{ssec:vrp-solver}.
 
 
 \begin{algorithm}[!]
@@ -662,10 +559,13 @@ Each thread in thread pool will be run in order, one session for each thread. Ev
 \end{algorithm}
 
 
-The process in VRP solver procedure in each thread will produce at least $1$ route and at most $M$ routes. Every route $R_i$ that is produced will be published with topic $C_i$. After being published, the message broker will inform the publisher about the number of subscribers that receive the message. The identity of the subscribers that receive the message will remain unknown to the publisher. 
+The VRP solver procedure in each thread will produce at least $1$ route and at most $M$ routes. Every generated route $R_i$ will be published and coupled with a topic $C_i$. The message broker will inform the publisher the number of subscribers receiving the message. The subscribers' identities will remain unknown to the publisher. 
 
 
-If a route $R_i$ has more than one message receiver, the thread with ID $C_{R_i}$ will be cancelled. This annulment is aimed to prevent a solution/route that has been received by subscribers from being recomputed. There is a condition when the running VRP solver with ID $C_i$ does not produce the solution for topic $C_i$. In this kind of situation, the topic $C_i$ will be requeued with only including the subscriber as the enumerator. By doing this, there is a guarantee that the topic $C_i$  will obtain a solution/route. 
+If a route $R_i$ has at least one subscriber, the thread with ID $C_{R_i}$ will be canceled. This annulment is aimed to prevent a solution/route that has been received by a subscriber from being recomputed. 
+
+
+It could happen that the running VRP solver with ID $C_i$ fails to produce the solution for topic $C_i$. In this situation, the topic $C_i$ will be re-queued in the thread pool by involving only the subscriber (vehicle) of that particular topic. This mechanism guarantees that every topic $C_i$ will have a solution/route. 
 
 
 \begin{algorithm}[!]
@@ -692,16 +592,15 @@ If a route $R_i$ has more than one message receiver, the thread with ID $C_{R_i}
 \end{algorithm}
 
 
-As mentioned before, the advantage of using publish/subscribe mechanism is its loose coupling characteristic that makes it flexible. But this benefit could also be deemed as a shortcoming. The publisher's unawareness towards subscribers' identities has caused the current location of all subscribers cannot be identified. Hence, we need a mechanism that can support information exchanging between publisher and subscribers. The idea is to use a shared memory contains the current location data of all subscribers. By accessing this shared memory, the publisher will be able to determine the subscribers' current locations. 
+Despite the flexibility, the loose coupling characteristic also brings a shortcoming to publish/subscribe mechanism. The publisher's unawareness towards subscribers' identities caused the subscribers' location cannot be identified. Hence, a technique that can support information exchange between publisher and subscribers is needed. The idea is to use a shared memory contains subscribers' current location data that can be accessed by the publisher. 
 
-
-The process above will keep repeating until all enumeration locations have been assigned to the subscribers (enumerators). \autoref{fig:publisher-algorithm} illustrates the workflow of the algorithm used in recommendation publisher.
+The whole processes described above, from detecting a new topic to obtaining the solution, will keep being repeated until all customers are already assigned to each vehicle. In terms of data collection, the entire iterative processes will stop once all census/survey locations have been assigned to each enumerator. \autoref{fig:publisher-algorithm} illustrates the workflow of the algorithm used in recommendation publisher.
 
 
 \begin{figure}[!]
 	\centering
 	\includegraphics[width=8cm]{Resources/Images/publisher-algorithm}
-	\caption{Publisher Workflow}
+	\caption{The Publisher Workflow}
 	\label{fig:publisher-algorithm}
 \end{figure} 
 
@@ -710,17 +609,17 @@ The process above will keep repeating until all enumeration locations have been 
 \subsection{VRP Solver}
 \label{ssec:vrp-solver}
 %-----------------------------------------------------------------------------%
-VRP solver is a module used for finding a solution or route that will be visited. VRP solver is called in each thread in the thread pool (\autoref{alg:vrp-worker}). There are several algorithms that can be used in finding a solution in a MDVRP problem such as tabu search \cite{cordeau_tabu_1997}, adaptive large neighborhood search  \cite{pisinger_general_2007}, fuzzy logic guided genetic algorithm \cite{lau_application_2010}, paralel iterated tabu search \cite{cordeau_parallel_2012}, hybrid algorithm combining iterated local search and set partitioning \cite{subramanian_hybrid_2013}, hybrid genetic algorithm with adaptive diversity control \cite{vidal_implicit_2014}, hybrid granular tabu search \cite{escobar_hybrid_2014}, and cooperative coevolution algorithms (CoEAs) \cite{de_oliveira_cooperative_2016}. In this research, we will use coevolutionary algorithms (CoEAs) since CoEAs generates a competitive \textit{mean solution values} with relatively low CPU time compared to other algorithms \cite{de_oliveira_cooperative_2016}. 
+VRP solver is a module used for finding the best route/solution to visit all customers (census/survey locations). VRP solver is implemented on the publisher's side and called in each thread in the thread pool (\autoref{alg:vrp-worker}). In this research, VRP solver utilizes CoEAs which generates a competitive \textit{mean solution values} with relatively low CPU time compared to other algorithms \cite{de_oliveira_cooperative_2016}. 
 
 
-The steps that are used in VRP solver that adopts CoEAs algorithm are as follows:
+The VRP solver works as follows:
 \begin{enumerate}
-	\item Create problem \\
-	MDVRP problem that is designed consists of a number of vehicles $V$ and edges $E$ that are assigned to each thread. 
-	\item Decompose problem \\
-	MDVRP problem is decomposed into several subproblems. 
-	\item Evolve. \\
-	Each individual in every subproblem will be evolved. At the end of every evolution, new indivuals will be evaluated. If the new generated individuals are better than the previous ones, the solution is accepted and the best individuals will be updated. The evolution will keep happening until it reach the time limit of 60 seconds, or 40 seconds without any changes on the best individuals. 
+	\item Problem creation \\
+	Create a MDVRP instance that consists of $M$ vehicles (enumerators) and $N$ customers (locations).
+	\item Problem decomposition \\
+	Decompose the MDVRP into several subproblems using Nearest Insertion Heuristic (NIH) and Semi-greedy algorithm, which are parts of CoEAs. 
+	\item Individual evolution. \\
+	Before each evolution, each individual in every subproblem is evaluated to find the current best individual (CBI) of all subproblems. Then, each individual is evolved to generate new individuals. These new individuals will be evaluated to find the new best individual (NBI). If NBI is better than CBI, update CBI with NBI value. Otherwise, leave the CBI as it is. Repeat the evolution process until it reaches a particular time limit of 60 seconds or 40 seconds if there is no change happens to the CBI.    
 \end{enumerate}
 
 
@@ -758,7 +657,7 @@ The steps that are used in VRP solver that adopts CoEAs algorithm are as follows
 \subsection{Message Broker}
 \label{ssec:message-broker}
 %-----------------------------------------------------------------------------%
-A message broker is a component responsible for distributing the message routing from publisher to subscriber based on the topic that is subscribed \cite{banavar_efficient_1999}. A publish/subscribe system can have a single broker or multi-broker. In single broker architecture, all subscribers and publishers are connected to one single broker, while in multi-broker architecture, every subscriber or publisher can connect to the nearest broker. This multi-broker architecture is also called distributed pub/sub system \cite{muhl_large-scale_2002} as depicted in \autoref{fig:pub_sub_distributed_ilustration}. In this research, the proposed design will implement distributed architecture since the census/survey locations are geographically scattered. 
+A message broker is a component responsible for routing the message from publisher to subscriber based on the subscribed topic \cite{banavar_efficient_1999}. A publish/subscribe system can have a single broker or multi-broker. In single broker architecture, all subscribers and publishers are connected to one single broker, while in multi-broker architecture, every subscriber or publisher can connect to any nearest broker. This multi-broker architecture is also called distributed publish/subscribe system \cite{muhl_large-scale_2002} as depicted in \autoref{fig:pub_sub_distributed_ilustration}. In this research, the proposed design will implement distributed architecture as the census/survey locations are geographically scattered. 
 
 
 \begin{figure}[!]
@@ -770,82 +669,138 @@ A message broker is a component responsible for distributing the message routing
 
 
 %-----------------------------------------------------------------------------%
-\section{Testing}
+\section{Result}
 \label{sec:testing}
 %-----------------------------------------------------------------------------%
-The performance of the proposed system was assessed through a number of experiments. This experiment uses 2 (two) types of data: Cordeau and field data. The service time for these two data types will be randomly generated by following the normal distribution. 
+Each component in this proposed system is implemented differently. Recommendation publisher is written in \verb!Java! and compiled with \verb!Java Compiler 1.8.0_121!. On the other hand, VRP Solver with the CoEAs algorithm is coded using \verb!C++! and compiled with \verb!C++ compiler 5.4.0 20160609!. Furthermore, the message broker is developed using \verb|Redis Cluster 3.2.6| with 6 nodes: 3 nodes for masters and the other 3 nodes for the slaves. 
 
+The system testing is conducted on Elementary OS Loki 64bit operating system and Quad-Core Intel® Core™ i3-4030U CPU @ 1.90GHz with 4 GB DDR3 RAM. Each Redis node is executed as a \verb|Docker| container on Debian Jessie 64bit operating system and Quad-Core Intel® Core™ i3-4030U CPU @ 1.90GHz with 4 GB RAM. 
+
+A client application is designed to simulate the real condition, which is performed as follows:
+\begin{enumerate}
+	\item Client makes a subscription using current location as a topic. 
+	\item Client waits until the server (publisher) provides a response that is the next-visited location. 
+	\item Client travels to the next location. 
+	\item Client conducts the enumeration.
+	\item Client stores its current location in shared memory. 
+\end{enumerate}
+\autoref{fig:client-algorithm-nornal-global} represents the flowchart for client simulation. 
+
+
+This experiment is conducted using 2 (two) input data: 
 
 \begin{enumerate}
-	\item Data from Cordeau \cite{cordeau_tabu_1997}, consists of 50 customers and 4 vehicles. The distance between locations are computed using euclidean formula. 
-	\item Data from real field condition, which is consists of 182 customers and 15 vehicles. The distance and the time needed to travel between locations are measured using Google Maps Direction API \cite{google_google_2016}. 
+	\item The Cordeau's data \cite{cordeau_tabu_1997}, which consists of 50 customers (locations) and 4 vehicles (enumerators). The distances between locations are computed using euclidean formula. 
+	\item The real administrative data, which consists of 182 customers (locations) and 15 vehicles (enumerators). The distances and the time needed to travel between locations are measured using Google Maps Direction API \cite{google_google_2016}. 
 \end{enumerate}
+The service time for these two data is randomly generated based on Sudman \cite{sudman_time_1965} by following the normal distribution. 
 
+\begin{figure}[!]
+	\centering
+	\includegraphics[width=8cm]{Resources/Images/client-algorithm-nornal-global}
+	\caption{The flowchart of client application}
+	\label{fig:client-algorithm-nornal-global}
+\end{figure}
 
-These two data are tested using the proposed program, which is based on Pub/Sub and CoEAs. The output from this test is compared with another output from the benchmark program that uses CoEAs algorithms without Pub/Sub mechanism. From both program, we will obtain outputs in the form of the routes for each vehicle that can be illustrated as follows:
+The output from the proposed program (Publish/Subscribe mechanism + MDVRP based on CoEAs) is compared against the output from the benchmark program that uses CoEAs algorithms only. Both programs result in the routes for each vehicle which can be illustrated as follows:
 
 \begin{itemize}
 \item \textit{Vehicle} A = Loc1 $\rightarrow$ Loc5 $\rightarrow$ Loc15 $\rightarrow$ Loc6
-\item \textit{Vehicle} B = Loc 6 $\rightarrow$ Loc2 $\rightarrow$ Loc16 $\rightarrow$ Loc3
+\item \textit{Vehicle} B = Loc6 $\rightarrow$ Loc2 $\rightarrow$ Loc16 $\rightarrow$ Loc3
 \item \textit{Vehicle} C = Loc4 $\rightarrow$ Loc8 $\rightarrow$ Loc14 $\rightarrow$ Loc 7
 \item \textit{Vehicle} D = Loc9 $\rightarrow$ Loc10 $\rightarrow$ Loc11 $\rightarrow$ Loc12
 \end{itemize}
+where Loc is the location to visit. 
 
+The total time for each route is calculated by summing up the service time and the transport time of all locations in that route. Standard deviation is used to compare the accuracy of output from both proposed and benchmark program. Standard deviation is chosen as the metric because it gives the insight about the output's diversity, whether it is close to the average or spread out over a wide range. The idea is the smaller variance of total time between each enumerator, the more equal and fairer the enumeration. Therefore, a better program will have a smaller standard deviation.
 
-The total cost for each route is calculated by adding up the service time and the travel time from all locations in that route. The standard deviation of all routes in each program (the proposed program and the benchmark program) is used as a metric for comparing the outputs. A better program will result in a smaller standard deviation. Standard deviation is chosen as the metric because it represents the real field condition. If the time variance between each enumerator is smaller, the enumeration completion will be equal and fair. 
+(\autoref{fig:test_result_normal_cordeau_coes_paper}) and (\autoref{fig:test_result_normal_cordeau_pubsub_coes_paper}) show the routes generated by the benchmark and proposed program, respectively, using Cordeau's data in normal condition. The test result, as can be seen in \autoref{tbl:test_result_normal_cordeau_comparison}, shows that the pre-calculated routes generated by benchmark program yield an insignificant 0.029\% lower total time (905,018.39 seconds) compared with that of the proposed program (905,281.55 seconds). However, the benchmark program has a standard deviation of 49,715.99 seconds, which is more than 3 (three) times higher than that of the proposed program (15,496.22 seconds). 
 
-
-From the test using Cordeau data in normal condition, we obtain a result that the pre-calculated routes generated by CoEAs algorithm yield a smaller total time of 1,165,513.28 seconds compared with the result from Pub/Sub + CoEAs of 1,165,706.84 seconds. However, the standard deviation of the output from the CoEAs algorithm is bigger than that of Pub/Sub + CoEAs algorithm, which are 98,268.51 seconds and 12997.91 seconds (\autoref{tbl:test_result_normal_cordeau_comparison}), respectively. Similarly, the test using real field data in normal condition give the result that pre-calculated routes using CoEAs algorithm yield a smaller total time, yet a higher standard deviation compared with that of Pub/Sub + CoEAs. The CoEAs algorithm yield a total time of 4,448,989.67 seconds and standard deviation of 119720.84 seconds, while the Pub/Sub + CoEAs algorithm gives a total of 4,559,658.67 seconds and standard deviation of 34472.12 seconds (\autoref{tbl:test_result_normal_field_comparison}).
-
-
-\begin{table}
+\begin{table}[!]
 	\centering
 	\ra{1.3}
 	\caption{The comparison between CoEAs algorithm and Pub/Sub + CoEAs algorithm for the Cordeau data}
 	\label{tbl:test_result_normal_cordeau_comparison}
 	\begin{tabular}{lrr}
 		\toprule
-			Units & CoEAs & CoEAs + Pub/Sub\\ 
+		Units & CoEAs & CoEAs + Pub/Sub\\ 
 		\midrule
-			Total time (s) & 1165513.28 & 1165706.84\\
-			Mean of time (s) & 291378.32 & 291426.71\\
-			Std. Dev of time (s) & 98268.51 & 12997.91\\
+		Total time (s) & \textbf{905,018.39} & 905,281.55\\
+		Mean of time (s) & \textbf{226,254.60} & 226,320.39\\
+		Std. Dev of time (s) & 49,715.99 & \textbf{15,496.22}\\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
+Similarly, the test using real administrative data in normal condition, as can be seen in \autoref{tbl:test_result_normal_field_comparison}, shows that pre-calculated routes from benchmark program return a smaller total time, yet a higher standard deviation compared with that of the proposed program. The benchmark program outputs a total time of 3,373,390.19 seconds and standard deviation of 91,123.23 seconds, while the proposed program gives a total time of 3,676,718.19 seconds and standard deviation of 37,261.85 seconds. The proposed program returns an output with a 0.52\% higher total time, yet a 59.1\% lower standard deviation, which is almost 3 (three) times lower than that of the benchmark program. (\autoref{fig:test_result_normal_field_coes_paper}) and (\autoref{fig:test_result_normal_field_pubsub_coes_paper}) show the routes generated by the benchmark and proposed program, respectively, using real administrative data in normal condition. 
 
-\begin{table}
+
+\begin{table}[!]
 	\centering
 	\ra{1.3}
 	\caption{The comparison between CoEAs algorithm and Pub/Sub + CoEAs algorithm for the real field data}
 	\label{tbl:test_result_normal_field_comparison}
 	\begin{tabular}{lrr}
 		\toprule
-			Units & CoEAs & CoEAs + Pub/Sub\\ 
+		Units & CoEAs & CoEAs + Pub/Sub\\ 
 		\midrule
-			Total time (s) & 4448989.67 & 4559658.67\\
-			Mean of time (s) & 296599.31 & 303977.24\\
-			Std. Dev of time (s) & 119720.84 & 34472.12\\
+		Total time (s) & \textbf{3,373,390.19} & 3,676,718.19\\
+		Mean of time (s) & \textbf{224,892.68} & 245,114.55\\
+		Std. Dev of time (s) & 91,123.23 & \textbf{37,261.85}\\
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+\begin{figure*}[h!]
+	\centering
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_cordeau_coes_paper}
+		\caption{MDVRP based on CoEAS}
+		\label{fig:test_result_normal_cordeau_coes_paper}
+	\end{subfigure}%
+	~ 
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_cordeau_pubsub_coes_paper}
+		\caption{Publish/Subscribe + MDVRP based on CoEAS}
+		\label{fig:test_result_normal_cordeau_pubsub_coes_paper}
+	\end{subfigure}
+	\caption{The comparison of routes between MDVRP based on CoEAS and publish/subscribe + MDVRP based on CoEAS for Cordeau data}
+	\label{fig:test_result_normal_cordeau_comparison}
+\end{figure*}
+
+\begin{figure*}[h!]
+	\centering
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_field_coes_paper}
+		\caption{MDVRP based on CoEAS}
+		\label{fig:test_result_normal_field_coes_paper}
+	\end{subfigure}%
+	~ 
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_field_pubsub_coes_paper}
+		\caption{Publish/Subscribe + MDVRP based on CoEAS}
+		\label{fig:test_result_normal_field_pubsub_coes_paper}
+	\end{subfigure}
+	\caption{The comparison of routes between MDVRP based on CoEAS and publish/subscribe + MDVRP based on CoEAS for real administrative data}
+	\label{fig:test_result_normal_field_comparison}
+\end{figure*}
 
 
 %-----------------------------------------------------------------------------%
 \section{Conclusion and Future Works}
 \label{sec:conclusion-future-works}
 %-----------------------------------------------------------------------------%
-This paper proposes the use of Cooperative Coevolutionary Algorithm (CoES) that is combined with Publish/Subscribe mechanism to solve the real-time location recommendation problem in field data collection. Based on the test results, it is concluded that: 
-
-\begin{enumerate}
-\item CoEAs algorithm outputs a more efficient route from total cost standpoint, but, 
-\item The CoEAs algorithm cannot be directly used in census/survey location recommendation because there is a huge standard deviation of the total cost for each route, thus, 
-\item The use of a real-time mechanism such as Pub/Sub mechanism is feasible to overcome the inequality problem between each route. It means the tasks and locations are more evenly distributed and every enumerator has equal workloads.
-\end{enumerate}
+This paper is aimed to solve the problem found in MDVRP based on CoEAS when used for generating a recommendation for enumeration locations. The proposed solution is to combine MDVRP based on CoEAS with publish/subscribe mechanism. The proposed system architecture consists of 2 main components: the publisher and the message broker. The publisher contains a VRP solver which utilizes CoEAs algorithm. 
 
 
-Pub/Sub mechanism is not the only mechanism that can be used as a real-time mechanism. Further studies using other mechanisms, such as: Push/Pull mechanism, Req/Rep mechanism is needed as a comparison. Research on how the performance of each of these mechanisms in varying network conditions are also required to simulate actual field conditions.
+The proposed system is tested using Cordeau's data and real administrative data, which shows that routes generated by proposed program are more prevalent in total route times compared with the pre-calculated routes produced by the benchmark program.
+
+
+Publish/subscribe mechanism is not the only option that can be used to develop a real-time system. Further studies using other mechanisms such as Push/Pull and Request/Reply mechanism is required for comparison. A research on analyzing the performance of each mechanism in varying network conditions are also necessary to create a simulation of real field conditions.
 
 
 % An example of a floating figure using the graphicx package.
