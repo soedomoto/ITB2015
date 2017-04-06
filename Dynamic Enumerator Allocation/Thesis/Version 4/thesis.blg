@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: apalike.bst
+A level-1 auxiliary file: sampul.aux
+A level-1 auxiliary file: judul_dalam.aux
+A level-1 auxiliary file: pengesahan.aux
+A level-1 auxiliary file: orisinal.aux
+A level-1 auxiliary file: pengesahan_sidang.aux
+A level-1 auxiliary file: pengantar.aux
+A level-1 auxiliary file: persetujuan_publikasi.aux
+A level-1 auxiliary file: abstrak.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: bab1.aux
+A level-1 auxiliary file: bab2.aux
+A level-1 auxiliary file: bab3.aux
+A level-1 auxiliary file: bab4.aux
+A level-1 auxiliary file: bab5.aux
+A level-1 auxiliary file: kesimpulan.aux
+A level-1 auxiliary file: pustaka.aux
+A level-1 auxiliary file: markLampiran.aux
+A level-1 auxiliary file: lampiran_5.aux
+A level-1 auxiliary file: lampiran_6.aux
+Database file #1: Resources/Bib/Reference.bib
+Warning--empty publisher in diaz_vrp_2012
+Warning--empty journal in holland_echo:_1990
+Warning--empty journal in rechenberg_cybernetic_1965
+You've used 88 entries,
+            1935 wiz_defined-function locations,
+            970 strings with 19384 characters,
+and the built_in function-call counts, 36751 in all, are:
+= -- 3712
+> -- 1384
+< -- 71
++ -- 517
+- -- 457
+* -- 3060
+:= -- 6195
+add.period$ -- 270
+call.type$ -- 88
+change.case$ -- 661
+chr.to.int$ -- 84
+cite$ -- 91
+duplicate$ -- 1438
+empty$ -- 2612
+format.name$ -- 595
+if$ -- 7300
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 85
+newline$ -- 435
+num.names$ -- 266
+pop$ -- 598
+preamble$ -- 1
+purify$ -- 668
+quote$ -- 0
+skip$ -- 1099
+stack$ -- 0
+substring$ -- 2812
+swap$ -- 245
+text.length$ -- 22
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 514
+warning$ -- 3
+while$ -- 331
+width$ -- 0
+write$ -- 1132
+(There were 3 warnings)

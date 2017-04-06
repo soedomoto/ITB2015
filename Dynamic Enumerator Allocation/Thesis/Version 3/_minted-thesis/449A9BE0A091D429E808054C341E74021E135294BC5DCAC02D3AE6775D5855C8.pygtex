@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{VehicleRoutingProblem}\PYG{o}{.}\PYG{n+na}{Builder} \PYG{n}{vrpBuilder} \PYG{o}{=} \PYG{n}{VehicleRoutingProblem}\PYG{o}{.}\PYG{n+na}{Builder}\PYG{o}{.}\PYG{n+na}{newInstance}\PYG{o}{();}
-\PYG{n}{vrpBuilder}\PYG{o}{.}\PYG{n+na}{setFleetSize}\PYG{o}{(}\PYG{n}{VehicleRoutingProblem}\PYG{o}{.}\PYG{n+na}{FleetSize}\PYG{o}{.}\PYG{n+na}{FINITE}\PYG{o}{);}
-\PYG{n}{VehicleRoutingProblem} \PYG{n}{problem} \PYG{o}{=} \PYG{n}{vrpBuilder}\PYG{o}{.}\PYG{n+na}{build}\PYG{o}{();}
-\end{Verbatim}

@@ -218,6 +218,9 @@
                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
                                   {2.3ex \@plus.2ex}%
                                   {\large\bfseries}}
+
+\renewcommand{\ALG@name}{Algoritma}
+
 \makeatother
 
 \setcounter{secnumdepth}{3}
@@ -332,6 +335,12 @@
   \addcontentsline{toc}{chapter}{DAFTAR KODE}%
   \listof{listing}{Daftar Kode}%
 }
+%
+%
+\renewcommand{\listofalgorithms}{%
+  \addcontentsline{toc}{chapter}{DAFTAR ALGORITMA}%
+  \listof{algorithm}{Daftar Algoritma}%
+}
 % 
 % 
 \renewcommand{\chaptername}{BAB}
@@ -345,6 +354,9 @@
 %
 \renewcommand{\listingscaption}{\bo{Kode}}
 \counterwithin{listing}{chapter}
+%
+%
+\counterwithin{algorithm}{chapter}
 % 
 % 
 \newcommand{\pic}{Gambar}

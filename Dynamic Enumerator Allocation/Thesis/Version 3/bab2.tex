@@ -12,7 +12,7 @@
 
 \begin{figure}[!]
 	\centering
-	\includegraphics[width=\textwidth]{../../Resources/Images/literature-map}
+	\includegraphics[width=\textwidth]{Resources/Images/literature-map}
 	\caption{\textit{Literature Map} Penelitian}
 	\label{fig:literature-map}
 \end{figure}
@@ -241,25 +241,25 @@ Berdasarkan \citep{renaud_tabu_1996}, MDVRP dapat diformulasikan sebagai berikut
 Dalam formula matematika, berdasarkan \citep{kulkarni_integer_1985}, variabel biner $x_{ijk}$ sama dengan $1$ ketika kendaraan $k$ mengunjungi \textit{node} $j$ tepat setelah \textit{node} $i$. Variabel tambahan $y_i$ juga digunakan untuk mengeliminasi \textit{subtour}. Persamaan \ref{eq:1} meminimalisasi \textit{total cost}. Persamaan \ref{eq:2} dan \ref{eq:3} menjamin bahwa setiap \textit{customer} hanya dilayani tepat satu kali oleh satu kendaraan. Alur kendaraan dijamin dengan persamaan \ref{eq:4}. Kapasitas kendaraan dan batasan durasi untuk setiap rute terdapat pada persamaan \ref{eq:5} and \ref{eq:6}. Persamaan \ref{eq:7} dan \ref{eq:8} mengecek keberadaan kendaraan. Eliminasi \textit{subtour} terdapat pada persamaan \ref{eq:9}. Terakhir, persamaan \ref{eq:10} dan \ref{eq:11} mendefinisikan $x$ dan $y$ sebagai variabel biner.
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:1}
 &\sum_{i=1}^{N+M}\sum_{j=1}^{N+M}\sum_{k=1}^{K}c_{ij}x_{ijk};
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:2}
 \sum_{i=1}^{N+M}\sum_{k=1}^{K}x_{ijk} = 1  (j=1,..., N);
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:3}
 \sum_{j=1}^{N+M}\sum_{k=1}^{K}x_{ijk} = 1  (j=1,..., N);
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:4}
 &\sum_{i=1}^{N+M}x_{ihk} - \sum_{j=1}^{N+M}x_{hjk} = 0 \\
 \nonumber
@@ -267,31 +267,31 @@ Dalam formula matematika, berdasarkan \citep{kulkarni_integer_1985}, variabel bi
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:5}
 \sum_{i=1}^{N+M} \sum_{j=1}^{N+M} d_ix_{ijk} \leq Q (k=1,...,K);
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:6}
 \sum_{i=1}^{N+M} \sum_{j=1}^{N+M} (c_{ij}w_{ij} + t_i) x_{ijk} \leq T (k=1,...,K);
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:7}
 \sum_{i=N+1}^{N+M} \sum_{j=1}^{N} x_{ijk} \leq 1 (k=1,...,K);
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:8}
 \sum_{j=N+1}^{N+M} \sum_{i=1}^{N} x_{ijk} \leq 1 (k=1,...,K);
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:9}
 &y_i - y_j + (M + N)x_{ijk} \leq N + M - 1; \\
 \nonumber
@@ -299,13 +299,13 @@ Dalam formula matematika, berdasarkan \citep{kulkarni_integer_1985}, variabel bi
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:10}
 x_{ijk} \in \{0, 1\} \forall i,j,k;
 \end{flalign}
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \label{eq:11}
 y_i \in \{0,1\} \forall i;
 \end{flalign}
@@ -333,7 +333,7 @@ Selain tabu search, terdapat juga beberapa algoritma yang dapat digunakan untuk 
 ESs merepresentasikan individu sebagai sebuah \textit{tuple}, yang terdiri dari \textit{decision vector} $x$ yang akan dioptimalisasi, dan vector parameter strategi $\sigma$ yang merepresentasikan jumlah mutasi dari setiap dimensi.
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \chi(t) = (x(t), \sigma(t))
 \end{flalign}
 
@@ -341,7 +341,7 @@ ESs merepresentasikan individu sebagai sebuah \textit{tuple}, yang terdiri dari 
 Berdasarkan observasi biologi, keturunan (\textit{offspring}) harus mempunyai kesamaan dengan induknya, 
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \chi'(t) = (x'(t), \sigma'(t))
 \end{flalign}
 
@@ -349,7 +349,7 @@ Berdasarkan observasi biologi, keturunan (\textit{offspring}) harus mempunyai ke
 Operator seleksi kemudian akan menentukan yang terbaik antara induk dan keturunannnya. Asumsi yang digunakan adalah, 
 
 
-\begin{flalign}[!]
+\begin{flalign}
 x(t+1) = \left\{\begin{matrix}x'(t) &f(x'(t)) < f(x(t)) \\ 
 x(t) &otherwise\end{matrix}\right.
 \end{flalign}
@@ -358,7 +358,7 @@ x(t) &otherwise\end{matrix}\right.
 dan 
 
 
-\begin{flalign}[!]
+\begin{flalign}
 \sigma(t+1) = \left\{\begin{matrix}\sigma'(t) &f(x'(t)) < f(x(t)) \\ 
 \sigma(t) &otherwise\end{matrix}\right.
 \end{flalign}

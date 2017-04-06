@@ -1,0 +1,39 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces \textit {Creative Common License 1.0 Generic}\relax }}{vi}{figure.caption.8}
+\contentsline {figure}{\numberline {2}{\ignorespaces Dokumen Dibuat dengan PDFLatex\relax }}{vi}{figure.caption.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Pembagian Blok Sensus dalam Desa/Kelurahan\relax }}{1}{figure.caption.13}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Ilustrasi \textit {Multi Depot Vehicle Routing Problem}\relax }}{2}{figure.caption.14}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces \textit {Timeline} Sebelum dan Setelah Dikunjungi\relax }}{4}{figure.caption.15}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces \textit {Timeline} Solusi Bertahap\relax }}{4}{figure.caption.16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textit {Literature Map} Penelitian\relax }}{8}{figure.caption.17}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Kategori dari \textit {Context}\relax }}{11}{figure.caption.18}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ilustrasi \textit {Vehicle Routing Problem (VRP)}\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Hierarki variasi dari VRP \citep {weise_solving_2009}\relax }}{17}{figure.caption.20}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ilustrasi \textit {Multi Depot} VRP\relax }}{17}{figure.caption.21}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \textit {Lifecycle} pada \textit {Cooperative Coevolution} \citep {de_oliveira_cooperative_2016}\relax }}{23}{figure.caption.22}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Arsitektur dasar pada Pub/Sub \citep {eugster_many_2003}\relax }}{25}{figure.caption.23}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Pemisahan informasi pada Pub/Sub \citep {eugster_many_2003}\relax }}{26}{figure.caption.24}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Tahapan \textit {Design Science Research Methods and Patterns}\relax }}{27}{figure.caption.25}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Google Direction API Response\relax }}{32}{figure.caption.28}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Grafik Rekomendasi dengan MDVRP\relax }}{36}{figure.caption.30}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ilustrasi \textit {timeline} Rute yang Dikalkulasi Tanpa Melibatkan \textit {Service Time}\relax }}{38}{figure.caption.32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ilustrasi \textit {timeline} Penerapan MDVRP Secara \textit {Real Time}\relax }}{40}{figure.caption.33}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Garis Besar Sistem Usulan\relax }}{41}{figure.caption.34}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \textit {\textit {Flowchart} Topic Watcher}\relax }}{42}{figure.caption.35}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ilustrasi \textit {Global Best Solution}\relax }}{44}{figure.caption.36}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \textit {Flowchart recommendation publisher}\relax }}{45}{figure.caption.37}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Ilustrasi \textit {Timeline} Proses Pencarian Solusi Berdasarkan\relax }}{46}{figure.caption.38}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Ilustrasi \textit {Publish-Subscribe} terdistribusi\relax }}{48}{figure.caption.39}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Ilustrasi Rute yang Dihasilkan\relax }}{53}{figure.caption.40}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \textit {Flowchart} Subsistem pada Pengujian\relax }}{57}{figure.caption.41}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Perbandingan Waktu Total dari 10 \textit {Instance} Cordeau\relax }}{59}{figure.caption.42}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Perbandingan Standar Deviasi Waktu dari 10 \textit {Instance} Cordeau\relax }}{59}{figure.caption.43}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Perbandingan Waktu Total Pengujian Kondisi Normal Pada Data Lapangan Dengan \textit {Service Time}\relax }}{63}{figure.caption.44}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Perbandingan Standar Deviasi Waktu Pengujian Kondisi Normal Pada Data Lapangan Dengan \textit {Service Time}\relax }}{63}{figure.caption.45}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Perbandingan Waktu Total dari 7 \textit {Instance}\relax }}{67}{figure.caption.46}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Perbandingan Standar Deviasi Waktu dari 7 \textit {Instance}\relax }}{67}{figure.caption.47}
+\addvspace {10\p@ }

@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Usage: mdvrp\PYGZhy{}redis\PYGZhy{}producer \PYG{o}{[}options\PYG{o}{]}
+
+Run location recommendation server
+
+Options:
+\PYGZhy{}h, \PYGZhy{}\PYGZhy{}help            show this \PYG{n+nb}{help} message and \PYG{n+nb}{exit}
+\PYGZhy{}b BIN, \PYGZhy{}\PYGZhy{}coes\PYGZhy{}bin\PYG{o}{=}BIN
+Binary of CoES MDVRP library
+\PYGZhy{}D D, \PYGZhy{}\PYGZhy{}data\PYG{o}{=}D        Data problem file
+\PYGZhy{}C C, \PYGZhy{}\PYGZhy{}cost\PYGZhy{}file\PYG{o}{=}C   Cost matrix file
+\PYGZhy{}O O, \PYGZhy{}\PYGZhy{}output\PYGZhy{}dir\PYG{o}{=}O  Output directory
+\PYGZhy{}t, \PYGZhy{}\PYGZhy{}use\PYGZhy{}timestamp   Append timestamp to output directory
+\PYGZhy{}B B, \PYGZhy{}\PYGZhy{}broker\PYGZhy{}url\PYG{o}{=}B  Redis broker URL
+\PYGZhy{}X X, \PYGZhy{}\PYGZhy{}solver\PYGZhy{}execution\PYGZhy{}time\PYG{o}{=}X
+VRP Solver execution \PYG{n+nb}{time}
+\end{Verbatim}

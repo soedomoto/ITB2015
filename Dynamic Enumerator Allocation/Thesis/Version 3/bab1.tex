@@ -2,113 +2,179 @@
 \chapter{\babSatu}
 %-----------------------------------------------------------------------------%
 
-\section{Latar Belakang}
 
+%-----------------------------------------------------------------------------%
+\section{Latar Belakang}
+%-----------------------------------------------------------------------------%
 Badan Pusat Statistik (BPS) merupakan suatu lembaga pemerintah non-departemen yang bertanggung jawab dalam penyediaan statistik dasar \citep{bps_badan_2016}. Dalam peranannya sebagai penyedia data, BPS melakukan pengumpulan data dengan 2 (dua) metode, yaitu primer dan sekunder. Pengumpulan data primer adalah pengumpulan data dengan menggunakan metode wawancara langsung dengan responden, baik responden individu, rumah tangga, maupun perusahaan. Sementara pengumpulan data sekunder adalah pengumpulan data dengan memanfaatkan data yang telah dikumpulkan oleh pihak lain.
 
 
-Pada pengumpulan data primer oleh BPS, selanjutnya disebut dengan pencacahan, suatu wilayah administratif dibagi dalam beberapa Blok Sensus (BS). Blok sensus merupakan wilayah kerja dari seorang pencacah \citep{bps_sistem_2016}. Setiap petugas pengumpulan data, disebut dengan pencacah, akan dialokasikan dalam beberapa blok sensus yang akan menjadi tanggung jawabnya. Pencacah kemudian akan mendatangi blok sensus tersebut dan mengunjugi setiap rumah tangga yang menjadi sampel pencacahan.
+Pada pengumpulan data primer oleh BPS, selanjutnya disebut dengan pencacahan, suatu wilayah administratif dibagi dalam beberapa Blok Sensus (BS), dimana setiap Blok Sensus merupakan wilayah kerja dari seorang pencacah \citep{bps_sistem_2016}. Setiap pencacah dapat memiliki wilayah kerja lebih dari satu Blok Sensus. Setiap Blok Sensus akan dikunjungi oleh seorang pencacah yang akan melakukan pencacahan terhadap rumah tangga didalamnya yang menjadi sampel pencacahan.
 
 
 \begin{figure}[!]
     \centering
-    \includegraphics[width=10cm]{../../Resources/Images/peta_kelurahan_per_bs}
+    \includegraphics[width=10cm]{Resources/Images/peta_kelurahan_per_bs}
     \caption{Pembagian Blok Sensus dalam Desa/Kelurahan}
     \label{fig:capi-ilustration}
 \end{figure}
 
 
-Pengalokasian pencacah terhadap blok sensus terkadang menjadi sesuatu yang sulit, karena terkait dengan waktu dan biaya. \textit{Subject matter} yang menangani kegiatan harus mempertimbangkan beberapa hal, salah satunya adalah jarak antar blok sensus yang menjadi wilayah kerja seorang pencacah. Kesalahan dalam pengalokasian blok sensus menyebabkan waktu pencacahan menjadi lama, yang dapat mempengaruhi kegiatan pencacahan secara keseluruhan.
+Pembagian wilayah kerja pada pencacah terkang bisa menjadi sesuatu yang tidak mudah. Subject matter dalam melakukan pembagian wilayah kerja harus mempertimbangkan berbagai hal, antara lain:
+\begin{enumerate}
+	\item Total waktu dan total biaya harus minimal, 
+	\item Setiap pencacah harus dialokasikan ke wilayah yang relatif dekat dengan domisili atau kantor.
+\end{enumerate}
+Kesalahan dalam pengalokasian wilayah kerja dapat berakibat pada total waktu penyelesaian untuk masing-masing pencacah menjadi tidak merata. Kondisi ini dapat berakibat pada keterlambatan kegiatan pencacahan secara keseluruhan.
 
 
-Selain jarak antar blok sensus, faktor yang juga perlu diperhatikan adalah lamanya pencacahan dalam sebuah blok sensus. Lama pencacahan dalam blok sensus secara umum dipengaruhi oleh 2 (dua) faktor, jarak antar rumah tangga dalam suatu blok sensus dan lama wawancara dalam rumah tangga. \citep{sudman_time_1965}, dalam penelitiannya menyatakan bahwa mengunjungi sebuah segmen dapat menghabiskan 21 persen dari keseluruhan waktu, 15 persen untuk mengunjungi rumah tangga dalam sebuah segmen, 37 persen untuk wawancara, dan sisanya untuk kegiatan lain, seperti \textit{editing}, \textit{study}, dan \textit{clerical}.
+Terdapat 2 (dua) faktor yang menyusun total waktu pencacahan, yaitu lama tempuh antar wilayah kerja dan lama pencacahan dari seluruh wilayah kerja. Lama pencacahan dalam sebuah wilayah kerja tersusun atas lama perpindahan antar rumah tangga dan lama wawancara pada seluruh rumah tangga di wilayah kerja. Berdasarkan \citep{sudman_time_1965}, waktu yang dihabiskan oleh seorang pencacah tersusun atas: 21 persen untuk berpindah antar wilayah kerja, 15 persen untuk berpindah antar rumah tangga, 15 persen untuk keseluruhan wawancara, dan sisanya untuk kegiatan lain seperti pengenalan wilayah dan perbaikan data.
 
 
-Faktor-faktor yang terkait dengan alokasi blok sensus dan petugas tersebut diatas, seperti: jarak antar blok sensus, jarak antar rumah tangga, dan lama wawancara tidaklah selalu tersedia. Andaikan tersedia, datanya-pun bersifat relatif, seperti lama wawancara yang sangat tergantung pada kemampuan pencacah dalam bertanya dan menggali jawaban, tingkat pendidikan responden, dan banyaknya anggota rumah tangga yang harus didata. Oleh karena itu diperlukan suatu cara atau metode yang memungkinkan pengalokasian petugas terhadap blok sensus secara dinamis sesuai dengan context.
-
-
-Dalam sistem komputer tidak terdapat definisi \textit{context} yang tunggal. Meskipun demikian, sebagian besar definisi sepakat bahwasannya \textit{context} adalah sesuatu yang harus dilakukan terkait interaksi pengguna dan sistem komputer \citep{chen_survey_2000}. \citep{schilit_context-aware_1994}, misalnya, membagi \textit{context} menjadi 4 (empat): \textit{computing context}, \textit{user context}, \textit{physical context}, dan \textit{time context}. \textit{Computing context} meliputi: \textit{network connectivity}, \textit{communication cost}, \textit{communication bandwidth}, dan \textit{nearby resource}; \textit{user context} meliputi: \textit{user profile}, \textit{location}, dan \textit{social situation}; \textit{physical context} meliputi: \textit{lighting}, \textit{noise}, \textit{traffic condition}, dan \textit{temperature}; serta \textit{time context} meliputi: \textit{time of a day}, \textit{week}, \textit{month} and \textit{season of the year}. Senada dengan \citep{schilit_context-aware_1994}, \citep{schmidt_there_1999} mendefinisikan \textit{context} sebagai pengetahuan tentang \textit{state} dari \textit{user} dan \textit{IT device}, termasuk lingkungan, situasi, dan lokasi. Sementara \citep{abowd_towards_1999} mendefinisikan \textit{context} sebagai segala informasi yang dapat digunakan untuk mengkarakterisasi kondisi dari suatu entitas. Entitas yang dimaksud dapat berupa manusia, tempat atau obyek yang relevan dengan aplikasi dan pengguna, termasuk aplikasi dan pengguna itu sendiri. 
-
-
-\begin{figure}[!]
-    \centering
-    \includegraphics[width=\textwidth]{../../Resources/Images/context}
-    \caption{Context Hierarchy \citep{kofod-petersen_case-based_2003}}
-    \label{fig:capi-ilustration}
-\end{figure}
-
-
-\textit{Context-aware application} telah banyak digunakan di berbagai bidang. \citep{tsai_context-aware_2016} misalnya, menggunakan \textit{context} untuk menciptakan \textit{smart home environment}. \citep{magara_mplist:_2016} menggabungkan beberapa \textit{context} seperti: lokasi dan aktivitas pengguna, preferensi, label, dan \textit{tags} untuk membuat rekomendasi musik yang akan diputar. Sementara \citep{said_introduction_2013} menciptakan rekomendasi film berdasarkan \textit{time}, \textit{mood}, dan \textit{social recommendation}.
-
-
-Pada aplikasi yang bersifat \textit{mobile}, \textit{context} biasanya diperoleh dengan menggunakan sensor yang tersemat dalam \textit{mobile device} tersebut. Sekarang ini, telah banyak ditemui \textit{mobile device}, terutama \textit{programmable smartphone}, yang telah dilengkapi dengan berbagai sensor \citep{cao_mobile_2015}. \citep{do_groupus:_2011}, misalnya mem-\textit{propose} GroupUs, framework yang mengelompokkan pengguna berdasarkan aktifitas sehari-hari yang dikumpulkan dengan menggunakan \textit{proximity sensor}. \citep{dai_mobile_2010} menciptakan \textit{drunk driving detection} dengan memanfaatkan sensor \textit{accelerometer} yang tersemat dalam \textit{smartphone}. Sementara \citep{zou_context-aware_2016}, memanfaatkan sensor \textit{Global Posisioning System} (GPS) dan \textit{Micro-Electro-Mechanical System} (MEMS) untuk membuat rekomendasi transportasi. Begitu pula sensor-sensor yang lain juga telah dimanfaatkan dalam berbagai penelitian \citep{dai_perfalld:_2010, lu_soundsense:_2009, bao_movi:_2010, rubel_toward_2005, atzmueller_towards_2013}.
-
-
-Di sisi yang lain, \textit{location recommendation} merupakan sebuah bahasan yang juga banyak diteliti. Metode yang banyak digunakan untuk menentukan rekomendasi lokasi adalah \textit{Location-based Social Network} (LBSN). Cara kerja LBSN pada dasarnya adalah dengan memanfaatkan lokasi dan \textit{point of interest} yang dibagikan oleh pengguna \citep{yuan_location_2016}. Beberapa peneliti juga mencoba meningkatkan akurasi prediksi dengan menggabungkannya dengan berbagai metode. Misalnya \citep{koren_collaborative_2010}, menggunakan \textit{temporal factorization model} yang memberikan hasil lebih baik dibanding dengan \textit{non-temporal factorization model}. Sementara  \citep{pragarauskas_temporal_2010} mengadopsi \textit{bayesian probabilistic tensor factorization} untuk mewujudkan \textit{temporal collaborative filtering}. Akan tetapi, metode LBSN tidak sesuai digunakan untuk membuat rekomendasi lokasi pencacahan. Hal ini dikarenakan metode LBSN menggunakan \textit{logs} yang telah dikumpulkan sebelumnya, baik \textit{location logs} maupun \textit{user preference logs}, untuk menentukan rekomendasi, sementara lokasi pencacahan bukan merupakan \textit{point of interest} yang dikunjungi oleh banyak orang.
-
-
-Metode lain yang juga banyak digunakan adalah \textit{Travelling Salesman Problem} (TSP). TSP adalah sebuah algoritma klasik \citep{biggs_graph_1976} yang telah banyak diadopsi dan dimodifikasi. Masalah yang umumnya mejadi dasar modifikasi adalah penggunaan \textit{multiple salesman}, yang disebut dengan \textit{Multiple Travelling Salesman Problem} (MTSP) \citep{bektas_multiple_2006}. Variasi dari MTSP juga telah banyak diteliti, yang umumnya mencakup: \textit{single or multiple depots} (\textit{start and stop point}), jumlah \textit{salesman}, \textit{fixed charges} (jika jumlah \textit{salesman} tidak tetap), lama kunjungan (\textit{time window}), dan \textit{special restrictions} \citep{bektas_multiple_2006}. Berbagai aplikasi untuk menyelesaikan permasalahan nyata (\textit{real-life problem}) juga telah dikembangkan dengan menggunakan MTSP. Misalnya, \textit{print press scheduling} oleh \citep{gorenstein_printing_1970}, \textit{crew scheduling} oleh \citep{svestka_computational_1973}, \textit{school bus routing problem} oleh \citep{angel_computer-assisted_1972}, \textit{interview scheduling} oleh \citep{gilbert_new_1992}, \textit{mission planning} oleh \citep{brumitt_dynamic_1996}, \textit{hot rolling scheduling} oleh \citep{tang_multiple_2000}, dan \textit{global navigation satellite system surveying networks} oleh \citep{saleh_design_2004}.
+Kondisi yang terjadi dalam permasalahan pembagian wilayah kerja pencacahan memiliki kesamaan dengan permasalahan VRP (Vehicle Routing Problem) atau lebih spesifiknya MDVRP (Multi Depot Vehicle Routing Problem). VRP merupakan suatu permasalahan yang bertujuan untuk menentukan rute terbaik yang harus ditempuh oleh beberapa kendaraan kurir untuk mengirimkan barang kepada konsumen \citep{dantzig_truck_1959}. Sementara MDVRP adalah variasi dari VRP dimana terdapat lebih dari satu depot yang digunakan, dimana depot merupakan lokasi dimana kendaraan memulai dan mengakhiri perjalanan.
 
 
 \begin{figure}[!]
     \centering
-    \includegraphics[width=10cm]{../../Resources/Images/mtsp}
-    \caption{Ilustrasi \textit{Multiple Travelling Salesman Problem}}
+    \includegraphics[width=12cm]{Resources/Images/mdvrp-illustration}
+    \caption{Ilustrasi \textit{Multi Depot Vehicle Routing Problem}}
     \label{fig:mtsp-ilustration}
 \end{figure}
 
 
-Asumsi yang digunakan dalam pendekatan MTSP adalah semua informasi telah tersedia pada saat perancangan, sehingga rekomendasi \textit{path} telah diperoleh sebelum kunjungan pertama. Sementara dalam pencacahan, informasi tidak selalu tersedia. Misalnya \textit{service-time}, yang tersusun atas jarak antar rumah tangga dan lama wawancara, merupakan variabel yang bersifat dinamis. Jarak antar rumah tangga sangat tergantung dari sampel yang terpilih, sementara lama wawancara sangat tergantung dari beberapa faktor, seperti: kemampuan pencacah dalam bertanya dan menggali jawaban, kemampuan responden dalam mencerna pertanyaan pencacah, dan banyaknya anggota rumah tangga yang harus didata. Untuk itu, diperlukan suatu metode agar implementasi MTSP untuk rekomendasi lokasi pencacahan dapat mengakomodir \textit{service-time} secara dinamis.
+Penyelesaian permasalahan MDVRP bertujuan untuk mendapatkan solusi dengan total biaya terkecil. Solusi yang dihasilkan terdiri dari sejumlah rute, dimana setiap rute terdiri dari sejumlah konsumen yang harus dikunjungi oleh sebuah kendaraan. Penyelesaian permasalahan MDVRP harus mengikuti beberapa aturan, yaitu:
+
+\begin{enumerate}
+	\item Setiap konsumen dikunjungi hanya sekali dan oleh satu kendaraan, 
+	\item Semua kendaraan memulai dan mengakhiri perjalanan pada sebuah depot yang sama, 
+	\item Total \textit{demand} dari seluruh konsumen pada setiap rute tidak melebihi kapasitas dari kendaraan, 
+\end{enumerate}
 
 
-Solusi yang ditawarkan adalah dengan mengabaikan \textit{service-time}, kemudian meng-\textit{generate} rekomendasi baru setiap kali pencacah telah menyelesaikan pencacahan pada suatu blok sensus. Untuk itu, pendekatan MTSP ini akan digabung dengan metode \textit{Publish/Subsribe}. Publish/Subsribe atau pub/sub adalah paradigma dimana \textit{user} mengekspresikan ketertarikan-nya (\textit{subscriptions}), dan agen menerbitkan beberapa penawaran-nya (\textit{event}) \citep{fabret_filtering_2001}. Metode pub/sub yang akan digunakan adalah pub/sub \textit{location-based tracking service}, sebagaimana diusulkan oleh \citep{chen_efficient_2003}.
+Karena mempunyai kesamaan tujuan dan aturan, permasalahan pembagian wilayah kerja dapat dianggap sebagai permasalahan terkait MDVRP. Pada permasalahan pembagian wilayah kerja, pencacah dapat dianalogikan dengan kendaraan, wilayah kerja dapat dianalogikan dengan konsumen, dan lokasi dimana pencacahan memulai perjalanan (rumah atau kantor) dapat dianalogikan dengan depot.
 
 
+Pada permasalahan MDVRP terdapat 2 (dua) variabel yang dapat mempengaruhi solusi atau rute yang dihasilkan, yaitu biaya tempuh antar konsumen dan lama pelayanan pada setiap konsumen. Biaya tempuh biasanya didefinisikan dalam satuan waktu, sehingga biaya tempuh dapat didekati dengan lama tempuh. Kedua variabel ini identik dengan lama tempuh antar wilayah kerja dan lama pencacahan dari setiap wilayah kerja pada permasalahan pembagian wilayah kerja. 
+
+
+Terdapat beberapa pendekatan yang dapat digunakan untuk mengestimasi lama tempuh antar wilayah kerja, seperti melalui perkiraan, survei, dan menggunakan service seperti Google Direction API. Akan tetapi, lama pelayanan pada setiap wilayah kerja tidak dapat diketahui, sampai dengan wilayah kerja tersebut selesai dicacah. Hal ini berpotensi menyebabkan rute-rute yang dihasilkan memiliki standar deviasi yang tinggi. \autoref{fig:illustration-timeline-mdvrp} memberikan ilustrasi potensi masalah ini:
+
+\begin{enumerate}
+	\item Solusi yang diperoleh dengan menggunakan estimasi lama pelayanan pada setiap wilayah kerja menghasilkan rute terbaik yang relatif \textit{equal} dari segi total waktu (\autoref{fig:illustration-timeline-mdvrp-timeservice-estimation}), 
+	\item Setelah semua wilayah kerja dikunjungi, ternyata lama pelayanan pada masing-masing wilayah kerja bervariasi, sehingga variasi total waktu pencacahan menjadi besar (\autoref{fig:illustration-timeline-mdvrp-timeservice-real}).
+\end{enumerate}
+
+
+\begin{figure}[!]
+	\centering
+	\begin{subfigure}[t]{12.5cm}
+		\centering
+		\includegraphics[width=\textwidth]{Resources/Images/illustration-timeline-mdvrp-timeservice-estimation}
+		\caption{\textit{Timeline} Dengan Estimasi Waktu Pelayanan}
+		\label{fig:illustration-timeline-mdvrp-timeservice-estimation}
+	\end{subfigure}%
+	
+	\begin{subfigure}[t]{\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Resources/Images/illustration-timeline-mdvrp-timeservice-real}
+		\caption{\textit{Timeline} Setelah Dikunjungi}
+		\label{fig:illustration-timeline-mdvrp-timeservice-real}
+	\end{subfigure}%
+	\caption{\textit{Timeline} Sebelum dan Setelah Dikunjungi}
+	\label{fig:illustration-timeline-mdvrp}
+\end{figure}
+
+
+Agar rute yang dihasilkan lebih \textit{equal} dari sisi total waktu pencacahan, solusi yang ditawarkan adalah dengan menggunakan mekanisme pencarian solusi secara bertahap, seperti digambarkan pada \autoref{fig:illustration-timeline-mdvrp-gradual-solution}. Setiap tahap pencarian solusi tidak dimaksudkan untuk mendapatkan rute secara keseluruhan, tetapi hanya digunakan untuk menentukan wilayah kerja yang akan dikunjungi berikutnya.
+
+
+\begin{figure}[!]
+	\centering
+	\includegraphics[width=\textwidth]{Resources/Images/illustration-timeline-mdvrp-gradual-solution}
+	\caption{\textit{Timeline} Solusi Bertahap}
+	\label{fig:illustration-timeline-mdvrp-gradual-solution}
+\end{figure}
+
+
+Agar 'wilayah kerja berikutnya' yang dihasilkan lebih akurat, maka pencarian solusi harus dilakukan secara tersentral dengan melibatkan \textit{context} dari seluruh pencacah. Dalam sistem komputer tidak terdapat definisi \textit{context} yang tunggal. Sebagian besar definisi sepakat bahwasannya \textit{context} adalah sesuatu yang harus dilakukan terkait interaksi pengguna dan sistem komputer \citep{chen_survey_2000}. \citep{schilit_context-aware_1994} dan  \citep{schmidt_there_1999}, misalnya, mendefinisikan \textit{context} sebagai pengetahuan tentang \textit{state} dari \textit{user} dan \textit{IT device}, termasuk lingkungan, situasi, dan lokasi. Sementara \citep{abowd_towards_1999} mendefinisikan \textit{context} sebagai segala informasi yang dapat digunakan untuk mengkarakterisasi kondisi dari suatu entitas.
+
+
+Pencarian solusi secara tersentral membutuhkan mekanisme komunikasi antara \textit{client} yang merupakan pencacah yang melakukan \textit{request} 'wilayah kerja berikutnya' dan \textit{server} dimana \textit{request} diproses dan 'wilayah kerja berikutnya' dicari. Terdapat berbagai alternatif mekanisme komunikasi \textit{client-server} yang dapat digunakan, seperti \textit{Web service}, \textit{Request/Reply}, dan \textit{Publish/Subscribe}. Mekanisme yang tepat diperlukan agar komunikasi antara \textit{client} dan \textit{server} dapat dilakukan dalam berbagai kondisi jaringan komunikasi.
+
+
+Dengan adanya permasalahan yang telah dijabarkan sebelumnya, maka penelitian ini akan merancang sebuah sistem yang dapat digunakan untuk membuat rekomendasi lokasi pencacahan. Peneliti mengusulkan penggunaan mekanisme pencarian solusi secara bertahap dengan melibatkan \textit{context} dari pencacah.
+
+
+%-----------------------------------------------------------------------------%
 \section{Rumusan Masalah}
-
-Berdasarkan latar belakang permasalahan yang telah diuraikan sebelumnya, dan didasari motivasi untuk menciptakan rekomendasi alokasi pencacah dan blok sensus secara dinamis, maka dapat dirumuskan masalah dalam penelitian ini adalah bagaimana merancang sebuah sistem rekomendasi lokasi pencacahan dengan memanfaatkan \textit{context} dari pencacah.
+%-----------------------------------------------------------------------------%
+Berdasarkan latar belakang permasalahan yang telah diuraikan sebelumnya, maka dapat dirumuskan masalah dalam penelitian ini adalah bagaimana merancang sebuah sistem rekomendasi lokasi pencacahan sesuai dengan \textit{context} dari pencacah.
 
 
 Adapun detail dari permasalahan yang akan dikaji adalah sebagai berikut:
 
 \begin{itemize}
-\item Bagaimana menentukan \textit{topik} dalam arsitektur publish/subscribe yang digunakan dalam kasus ini.
-\item Bagaimana membuat rekomendasi lokasi pencacahan pada kondisi \textit{time windows} sangat berpengaruh, tetapi data tidak tersedia.
-\item Bagaimana membuat \textit{conflict resolution}, agar system tidak merekomendasikan lokasi yang sama pada dua atau lebih pencacah.
+\item Bagaimana menentukan \textit{context} dari pencacah yang sesuai digunakan dalam kasus rekomendasi lokasi pencacahan?
+\item Bagaimana menyusun algoritma pencarian rekomendasi lokasi dengan memanfaatkan \textit{context} dari pencacah?
+\item Bagaimana menyusun mekanisme \textit{conflict resolution}, agar system tidak merekomendasikan lokasi yang sama pada dua atau lebih pencacah?
+\item Apa mekanisme \textit{real-time} yang sesuai digunakan dalam berbagai kondisi jaringan komunikasi yang bervariasi?
 \end{itemize}
 
 
+%-----------------------------------------------------------------------------%
 \section{Tujuan Penelitian}
-
-Berdasarkan rumusan masalah diatas, maka dapat ditentukan tujuan utama dari penelitian ini adalah untuk menciptakan sebuah sistem rekomendasi lokasi pencacahan secara dinamis. 
+%-----------------------------------------------------------------------------%
+Berdasarkan rumusan masalah diatas, maka dapat ditentukan tujuan utama dari penelitian ini adalah untuk merancang sebuah arsitektur sistem rekomendasi lokasi pencacahan secara dinamis dan \textit{real-time}. 
 
 Adapun tujuan khusus dari penelitian ini adalah:
 
 \begin{itemize}
-\item Mengidentifikasi \textit{context} yang terkait dengan penentuan lokasi pencacahan.
-\item Menyusun algoritma rekomendasi.
-\item Menyusun algoritma \textit{location conflict}.
-% \item Mengimplementasikan algoritma usulan dalam \textit{mobile application}.
-\item Melakukan ujicoba algoritma dan aplikasi usulan.
+\item Menentukan \textit{context} yang sesuai dengan kasus rekomendasi lokasi pencacahan.
+\item Menyusun algoritma rekomendasi lokasi sehingga sistem memberikan rekomendasi terbaik secara global.
+\item Menyusun algoritma \textit{location conflict} sehingga sistem tidak memberikan duplikasi rekomendasi.
+\item Menganalisis dan mengimplementasikan mekanisme komunikasi yang tepat digunakan pada sitem.
 \end{itemize}
 
 
+%-----------------------------------------------------------------------------%
 \section{Batasan Masalah}
-
+%-----------------------------------------------------------------------------%
 Masalah dalam penelitian ini memiliki batasan sebagai berikut:
 
 \begin{itemize}
 \item Lokasi pencacahan yang menjadi rujukan adalah Blok Sensus (BS) yang dikeluarkan oleh Badan Pusat Statistik (BPS).
-\item \textit{Device} yang digunakan adalah \textit{smartphone} berbasis Android yang umum dijual dipasaran.
-\item Tidak mempertimbangkan lingkungan yang tidak terkoneksi dengan jaringan komunikasi.
+\item Penelitian tidak berfokus pada algoritma MDVRP, sehingga pengujian hanya dilakukan dengan membandingkan dengan salah satu algoritma MDVRP.
 \end{itemize}
 
 
-% \section{Implikasi}
-% 
-% Manfaat yang dapat diperoleh dari penelitian ini antara lain:
+%-----------------------------------------------------------------------------%
+\section{Manfaat dan Kontribusi}
+%-----------------------------------------------------------------------------%
+Hasil penelitian ini diharapkan dapat memberikan kontribusi kepada BPS khususnya, yaitu memudahkan \textit{subject matter} dalam melakukan alokasi petugas pencacahan. Ketepatan alokasi petugas memiliki implikasi pada meratanya beban setiap pencacah serta meratanya waktu penyelesaian pencacahan.
 
 
+Selain itu, penelitian ini juga memberikan implikasi dalam bidang akademis, yaitu sistem tidak hanya dapat digunakan secara spesifik untuk kasus pengumpulan data, tetapi juga dapat digunakan pada kasus yang terkait dengan \textit{Vehicle Routing Problem}.
+
+
+%-----------------------------------------------------------------------------%
 \section{Sistematika Penulisan}
-
+%-----------------------------------------------------------------------------%
 Sistematika penulisan tesis ini terdiri atas enam bab dengan perincian sebagai berikut:
+
+
+BAB I PENDAHULUAN. Pada bab ini dijelaskan fenomena dan masalah yang diangkat dalam penelitian ini. Selain itu dipaparkan pula mengenai rumusan masalah, tujuan penelitian, dan kontribusi penelitian.
+
+
+BAB II STUDI LITERATUR. Bab ini menjelaskan landasan teori yang digunakan dalam penelitian, teknologi pendukung, serta penelitian terkait dengan penelitian yang dilakukan.
+
+
+BAB III METODOLOGI PENELITIAN. Pada bagian ini dijelaskan metode penelitian yaitu alur dan langkah-langkah dalam melakukan penelitian.
+
+
+BAB IV ANALISIS DAN PERANCANGAN. Bab ini memaparkan analisis terhadap permasalahan yang dihadapi, serta kriteria yang dibutuhkan pada algoritma yang dirancang. Dari analisis permasalahan, diuraikan pendekatan yang dibuat yang merupakan solusi atas permasalahan yang dikemukakan.
+
+
+BAB V IMPLEMENTASI DAN PENGUJIAN. Proses dan hasil implementasi rancangan dijelaskan dalam bab ini. Proses pengujian diuraikan mulai dari skenario pengujian hingga hasil pengujian.
+
+
+BAB VI KESIMPULAN DAN SARAN. Bab ini memaparkan kesimpulan yang diperoleh dari penelitian ini, serta saran untuk pihak terkait dan penelitian selanjutnya yang berkaitan dengan topik penelitian ini

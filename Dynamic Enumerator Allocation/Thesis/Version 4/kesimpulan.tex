@@ -1,0 +1,30 @@
+%---------------------------------------------------------------
+\chapter{\kesimpulan}
+%---------------------------------------------------------------
+%\todo{Tambahkan kesimpulan dan saran terkait dengan perkerjaan 
+%	yang dilakukan.}
+
+
+%---------------------------------------------------------------
+\section{Kesimpulan}
+%---------------------------------------------------------------
+Berdasarkan hasil pengujian, diperoleh kesimpulan sebagai berikut:
+
+\begin{enumerate}
+	\item Pada permasalahan MDVRP yang tidak mempertimbangkan \textit{service time}, diperoleh hasil bahwasannya sistem usulan yang menggunakan algoritma MDVRP berbasis CoEAs yang dikombinasikan dengan mekanisme Publish/Subscribe menghasilkan total waktu 80 persen lebih buruk dari program pembanding yang menggunakan algoritma MDVRP berbasis CoEAs tanpa mekanisme Publish/Subscribe. Sementara dari sisi \textit{standar deviasi}, sistem usulan menghasilkan 80 persen lebih baik dari aplikasi pembanding. Dengan demikian dapat disimpulkan algoritma MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe menghasilkan total waktu yang lebih merata antar rute yang dihasilkan, sementara algoritma MDVRP berbasis CoEAs tanpa mekanisme Publish/Subscribe menghasilkan total waktu yang lebih efisien.
+	\item Pada permasalahan MDVRP yang mempertimbangkan \textit{service time}, dengan menggunakan data Cordeau PO1 diperoleh hasil total waktu yang dihasilkan dari sistem usulan 6,25 persen lebih buruk dari aplikasi pembanding, tetapi 68,83 persen lebih baik dari sisi standar deviasi. Sementara pada pengujian dengan menggunakan data lapangan, sistem usulan lebih buruk 8,25 persen dibandingkan program pembanding, tetapi 59,11 persen dari sisi standar deviasi. Pada pengujian kondisi normal, dapat disimpulkan algoritma MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe lebih sesuai digunakan pada permasalahan rekomendasi lokasi pencacahan karena menghasilkan total waktu yang lebih merata antar pencacah.
+	\item Pada permasalahan MDVRP yang mempertimbangkan \textit{service time} dan terdapat \textit{delay} dalam jaringan, pada pengujian dengan menggunakan data lapangan diperoleh hasil bahwasannya sistem usulan 4,83 persen lebih buruk dari sisi total waktu, tetapi 3,62 persen lebih baik dari sisi standar deviasi. Pada pengujian kondisi dimana terdapat \textit{delay} pada koneksi, dapat disimpulkan bahwa meskipun memiliki perbedaan yang tipis, algoritma MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe masih lebih sesuai digunakan pada permasalahan rekomendasi lokasi pencacahan karena menghasilkan total waktu yang lebih merata antar pencacah.
+	\item Pada permasalahan MDVRP yang mempertimbangkan \textit{service time} dan terdapat \textit{packet loss} dalam jaringan, pada pengujian dengan menggunakan data lapangan diperoleh hasil bahwasannya sistem usulan 12,79 persen lebih buruk dari sisi total waktu, tetapi 36,14 persen lebih baik dari sisi standar deviasi. Pada pengujian kondisi dimana terdapat \textit{packet loss} pada koneksi, dapat disimpulkan bahwa algoritma MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe lebih sesuai digunakan pada permasalahan rekomendasi lokasi pencacahan karena menghasilkan total waktu yang lebih merata antar pencacah.
+\end{enumerate}
+
+
+%---------------------------------------------------------------
+\section{Saran}
+%---------------------------------------------------------------
+Dari penelitian ini, saran yang diberikan untuk penelitian selanjutnya sebagai berikut:
+
+\begin{enumerate}
+	\item Mengkaji mekanisme komunikasi yang digunakan, misalnya dengan membandingkan dengan mekanisme Request/Reply dan Push/Pull untuk mendapatkan mekanisme komunikasi yang paling tepat.
+	\item Mengkaji parameter yang dapat digunakan dalam VRP Solver yaitu lama waktu eksekusi dan lama waktu dimana tidak ada perubahan solusi terbaik, sehingga diperoleh waktu eksekusi yang paling optimal.
+	\item Mengkasi penggunaan algoritma MDVRP yang lain, misalnya Tabu Search, Particle Swarm Optimization, dan lain lain, sehingga diperoleh algoritma MDVRP yang paling sesuai.
+\end{enumerate}

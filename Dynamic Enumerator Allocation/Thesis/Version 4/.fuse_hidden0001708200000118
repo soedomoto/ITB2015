@@ -1,0 +1,84 @@
+\contentsline {chapter}{HALAMAN JUDUL}{i}{section*.2}
+\contentsline {chapter}{LEMBAR PERSETUJUAN}{ii}{section*.4}
+\contentsline {chapter}{LEMBAR PERNYATAAN ORISINALITAS}{iii}{section*.5}
+\contentsline {chapter}{LEMBAR PENGESAHAN}{iv}{section*.6}
+\contentsline {chapter}{KATA PENGANTAR}{v}{section*.7}
+\contentsline {chapter}{LEMBAR PERSETUJUAN PUBLIKASI ILMIAH}{vii}{section*.10}
+\contentsline {chapter}{ABSTRAK}{viii}{section*.11}
+\contentsline {chapter}{ABSTRACT}{ix}{section*.12}
+\contentsline {chapter}{DAFTAR ISI}{x}{section*.12}
+\contentsline {chapter}{DAFTAR GAMBAR}{xi}{section*.12}
+\contentsline {chapter}{DAFTAR TABEL}{xii}{section*.12}
+\contentsline {chapter}{DAFTAR ALGORITMA}{xiii}{section*.12}
+\contentsline {chapter}{DAFTAR KODE}{xiv}{section*.12}
+\contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Tujuan Penelitian}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Batasan Masalah}{6}{section.1.4}
+\contentsline {section}{\numberline {1.5}Manfaat dan Kontribusi}{6}{section.1.5}
+\contentsline {section}{\numberline {1.6}Sistematika Penulisan}{6}{section.1.6}
+\contentsline {chapter}{\numberline {2}\uppercase {Studi Literatur}}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}\textit {Literature Map}}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Badan Pusat Statistik}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}\textit {Context-aware Computing}}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Definisi \textit {Context}}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Kategori \textit {Context}}{10}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}\textit {Individuality Context}}{10}{subsubsection.2.3.2.1}
+\contentsline {subsubsection}{\numberline {2.3.2.2}\textit {Time Context}}{11}{subsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.2.3}\textit {Location Context}}{11}{subsubsection.2.3.2.3}
+\contentsline {subsubsection}{\numberline {2.3.2.4}\textit {Activity Context}}{12}{subsubsection.2.3.2.4}
+\contentsline {subsubsection}{\numberline {2.3.2.5}\textit {Relations Context}}{12}{subsubsection.2.3.2.5}
+\contentsline {subsection}{\numberline {2.3.3}\textit {Context-aware Computing}}{12}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}\textit {Location Routing}}{13}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}\textit {Vehicle Routing Problem}}{15}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}\textit {Multi-Depot Vehicle Routing Problem}}{16}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}\textit {Cooperative Evolution Strategy}}{20}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Messaging Solution}{23}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Mekanisme \textit {Publish/Subscribe}}{23}{subsection.2.5.1}
+\contentsline {chapter}{\numberline {3}\uppercase {Metodologi}}{26}{chapter.3}
+\contentsline {section}{\numberline {3.1}\textit {Awareness of Problem}}{27}{section.3.1}
+\contentsline {section}{\numberline {3.2}\textit {Suggestion}}{27}{section.3.2}
+\contentsline {section}{\numberline {3.3}\textit {Development}}{27}{section.3.3}
+\contentsline {section}{\numberline {3.4}\textit {Evaluation}}{27}{section.3.4}
+\contentsline {section}{\numberline {3.5}\textit {Conclusion}}{27}{section.3.5}
+\contentsline {chapter}{\numberline {4}\uppercase {Analisis dan Perancangan}}{28}{chapter.4}
+\contentsline {section}{\numberline {4.1}Analisis}{28}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Dataset}{29}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Lokasi Pencacahan}{29}{subsubsection.4.1.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Petugas Pencacahan}{29}{subsubsection.4.1.1.2}
+\contentsline {subsubsection}{\numberline {4.1.1.3}Jarak dan Waktu Tempuh}{30}{subsubsection.4.1.1.3}
+\contentsline {subsection}{\numberline {4.1.2}Algoritma dan Implementasi}{32}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Definisi Masalah}{32}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}Definisi Algoritma}{32}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}Pencarian Solusi dan Penentuan Solusi Terbaik}{34}{subsubsection.4.1.2.3}
+\contentsline {subsection}{\numberline {4.1.3}Hasil dan Analisis}{34}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Perancangan Solusi}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Garis Besar Sistem Usulan}{39}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}\textit {Recommendation Publisher}}{40}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}\textit {VRPSolver Procedure}}{45}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}\textit {Message Broker}}{46}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}\uppercase {Implementasi dan Pengujian}}{48}{chapter.5}
+\contentsline {section}{\numberline {5.1}Implementasi}{48}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}\textit {VRP Solver}}{48}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}\textit {Publisher}}{48}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Pengujian}{49}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Lingkungan Pengujian}{49}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}\textit {Dataset} dan \textit {Metric}}{49}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}\textit {Dataset}}{49}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}\textit {Metric}}{51}{subsubsection.5.2.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Skenario dan Hasil Pengujian}{52}{subsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3.1}\textit {Message Broker Setup}}{52}{subsubsection.5.2.3.1}
+\contentsline {subsubsection}{\numberline {5.2.3.2}\textit {Publisher Setup}}{53}{subsubsection.5.2.3.2}
+\contentsline {subsubsection}{\numberline {5.2.3.3}\textit {Subscriber Setup}}{53}{subsubsection.5.2.3.3}
+\contentsline {subsubsection}{\numberline {5.2.3.4}Pengujian Tanpa \textit {Service Time}}{55}{subsubsection.5.2.3.4}
+\contentsline {subsubsection}{\numberline {5.2.3.5}Pengujian Kondisi Normal dengan \textit {Service Time}}{58}{subsubsection.5.2.3.5}
+\contentsline {subsubsection}{\numberline {5.2.3.6}Pengujian Kondisi \textit {Delay} dengan \textit {Service Time}}{65}{subsubsection.5.2.3.6}
+\contentsline {chapter}{\numberline {6}\uppercase {Kesimpulan dan Saran}}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{69}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{70}{section.6.2}
+\contentsline {chapter}{DAFTAR PUSTAKA}{71}{Item.102}
+\contentsline {chapter}{DAFTAR PUSTAKA}{71}{Item.102}
+\contentsline {chapter}{LAMPIRAN}{1}{section*.49}
+\contentsline {chapter}{LAMPIRAN 1}{1}{section*.50}
+\contentsline {chapter}{LAMPIRAN 2}{11}{section*.61}

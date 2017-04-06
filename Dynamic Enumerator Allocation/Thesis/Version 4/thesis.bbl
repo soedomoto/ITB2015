@@ -1,0 +1,511 @@
+\begin{thebibliography}{}
+
+\bibitem[Abowd et~al., 1999]{abowd_towards_1999}
+Abowd, G.~D., Dey, A.~K., Brown, P.~J., Davies, N., Smith, M., and Steggles, P.
+  (1999).
+\newblock Towards a better understanding of context and context-awareness.
+\newblock In {\em International {Symposium} on {Handheld} and {Ubiquitous}
+  {Computing}}, pages 304--307. Springer.
+
+\bibitem[Atzmueller and Hilgenberg, 2013]{atzmueller_towards_2013}
+Atzmueller, M. and Hilgenberg, K. (2013).
+\newblock Towards {Capturing} {Social} {Interactions} with {SDCF}: {An}
+  {Extensible} {Framework} for {Mobile} {Sensing} and {Ubiquitous} {Data}
+  {Collection}.
+\newblock In {\em Proceedings of the 4th {International} {Workshop} on
+  {Modeling} {Social} {Media}}, {MSM} '13, pages 6:1--6:4, New York, NY, USA.
+  ACM.
+
+\bibitem[Averbakh and Berman, 1994]{averbakh_technical_1994}
+Averbakh, I. and Berman, O. (1994).
+\newblock Technical {Note}—{Routing} and {Location}-{Routing} p-{Delivery}
+  {Men} {Problems} on a {Path}.
+\newblock {\em Transportation Science}, 28(2):162--166.
+
+\bibitem[Averbakh and Berman, 1995]{averbakh_probabilistic_1995}
+Averbakh, I. and Berman, O. (1995).
+\newblock Probabilistic {Sales}-{Delivery} {Man} and {Sales}-{Delivery}
+  {Facility} {Location} {Problems} on a {Tree}.
+\newblock {\em Transportation Science}, 29(2):184--197.
+
+\bibitem[Balakrishnan et~al., 1987]{balakrishnan_integrated_1987}
+Balakrishnan, A., Ward, J.~E., and Wong, R.~T. (1987).
+\newblock Integrated {Facility} {Location} and {Vehicle} {Routing} {Models}:
+  {Recent} {Work} and {Future} {Prospects}.
+\newblock {\em American Journal of Mathematical and Management Sciences},
+  7(1-2):35--61.
+
+\bibitem[Baldacci et~al., 2010]{baldacci_exact_2010}
+Baldacci, R., Toth, P., and Vigo, D. (2010).
+\newblock Exact algorithms for routing problems under vehicle capacity
+  constraints.
+\newblock {\em Annals of Operations Research}, 175(1):213--245.
+
+\bibitem[Banavar et~al., 1999]{banavar_efficient_1999}
+Banavar, G., Chandra, T., Mukherjee, B., Nagarajarao, J., Strom, R.~E., and
+  Sturman, D.~C. (1999).
+\newblock An efficient multicast protocol for content-based publish-subscribe
+  systems.
+\newblock In {\em Distributed {Computing} {Systems}, 1999. {Proceedings}. 19th
+  {IEEE} {International} {Conference} on}, pages 262--272. IEEE.
+
+\bibitem[Bao and Roy~Choudhury, 2010]{bao_movi:_2010}
+Bao, X. and Roy~Choudhury, R. (2010).
+\newblock Movi: mobile phone based video highlights via collaborative sensing.
+\newblock In {\em Proceedings of the 8th international conference on {Mobile}
+  systems, applications, and services}, pages 357--370. ACM.
+
+\bibitem[Bookbinder and Reece, 1988]{bookbinder_vehicle_1988}
+Bookbinder, J.~H. and Reece, K.~E. (1988).
+\newblock Vehicle routing considerations in distribution system design.
+\newblock {\em European Journal of Operational Research}, 37(2):204--213.
+
+\bibitem[BPS, 2016a]{bps_badan_2016}
+BPS, B. (2016a).
+\newblock Badan {Pusat} {Statistik} - {Tugas}, {Fungsi}, dan {Kewenangan}.
+
+\bibitem[BPS, 2016b]{bps_sistem_2016}
+BPS, B. (2016b).
+\newblock Sistem {Rujukan} {Statistik} {BPS} {RI} - {Blok} {Sensus}.
+
+\bibitem[Branco and Coelho, 1990]{branco_hamiltonian_1990}
+Branco, I.~M. and Coelho, J.~D. (1990).
+\newblock The hamiltonian p-median problem.
+\newblock {\em European Journal of Operational Research}, 47(1):86--95.
+
+\bibitem[Brown, 1995]{brown_stick-e_1995}
+Brown, P.~J. (1995).
+\newblock The stick-e document: a framework for creating context-aware
+  applications.
+\newblock {\em Electronic Publishing-Chichester-}, 8:259--272.
+
+\bibitem[Brown et~al., 1997]{brown_context-aware_1997}
+Brown, P.~J., Bovey, J.~D., and Chen, X. (1997).
+\newblock Context-aware applications: from the laboratory to the marketplace.
+\newblock {\em IEEE personal communications}, 4(5):58--64.
+
+\bibitem[Bruns, 1998]{bruns_zweistufige_1998}
+Bruns, A. (1998).
+\newblock {\em Zweistufige {Standortplanung} unter {Beru}¨cksichtigung von
+  {Tourenplanungsaspekten} – {Primale} {Heuristiken} und {Lokale}
+  {Suchverfahren}}.
+\newblock {PhD} {Thesis}, Sankt Gallen University.
+
+\bibitem[Cao et~al., 2015]{cao_mobile_2015}
+Cao, P.~Y., Li, G., Chen, G., and Chen, B. (2015).
+\newblock Mobile {Data} {Collection} {Frameworks}: {A} {Survey}.
+\newblock In {\em Proceedings of the 2015 {Workshop} on {Mobile} {Big} {Data}},
+  Mobidata '15, pages 25--30, New York, NY, USA. ACM.
+
+\bibitem[Chao et~al., 1993]{chao_new_1993}
+Chao, I.-M., Golden, B.~L., and Wasil, E. (1993).
+\newblock A {New} {Heuristic} for the {Multi}-{Depot} {Vehicle} {Routing}
+  {Problem} that {Improves} upon {Best}-{Known} {Solutions}.
+\newblock {\em American Journal of Mathematical and Management Sciences},
+  13(3-4):371--406.
+
+\bibitem[Chen et~al., 2000]{chen_survey_2000}
+Chen, G., Kotz, D., and {others} (2000).
+\newblock A survey of context-aware mobile computing research.
+\newblock Technical report, Technical Report TR2000-381, Dept. of Computer
+  Science, Dartmouth College.
+
+\bibitem[Chen et~al., 2003]{chen_intelligent_2003}
+Chen, H., Finin, T., and Joshi, A. (2003).
+\newblock An intelligent broker architecture for context-aware systems.
+\newblock {\em PhD proposal in computer science, University of Maryland,
+  Baltimore, USA}.
+
+\bibitem[Cordeau et~al., 1997]{cordeau_tabu_1997}
+Cordeau, J.-F., Gendreau, M., and Laporte, G. (1997).
+\newblock A tabu search heuristic for periodic and multi-depot vehicle routing
+  problems.
+\newblock {\em Networks}, 30(2):105--119.
+
+\bibitem[Cordeau et~al., 2007]{cordeau_chapter_2007}
+Cordeau, J.-F., Laporte, G., Savelsbergh, M. W.~P., and Vigo, D. (2007).
+\newblock Chapter 6 {Vehicle} {Routing}.
+\newblock In Laporte, C. B. a.~G., editor, {\em Handbooks in {Operations}
+  {Research} and {Management} {Science}}, volume~14 of {\em Transportation},
+  pages 367--428. Elsevier.
+\newblock DOI: 10.1016/S0927-0507(06)14006-2.
+
+\bibitem[Cordeau and Maischberger, 2012]{cordeau_parallel_2012}
+Cordeau, J.-F. and Maischberger, M. (2012).
+\newblock A parallel iterated tabu search heuristic for vehicle routing
+  problems.
+\newblock {\em Computers \& Operations Research}, 39(9):2033--2050.
+
+\bibitem[Creswell, 2013]{creswell_research_2013}
+Creswell, J.~W. (2013).
+\newblock {\em Research design: {Qualitative}, quantitative, and mixed methods
+  approaches}.
+\newblock Sage publications.
+
+\bibitem[Dai et~al., 2010a]{dai_perfalld:_2010}
+Dai, J., Bai, X., Yang, Z., Shen, Z., and Xuan, D. (2010a).
+\newblock {PerFallD}: {A} pervasive fall detection system using mobile phones.
+\newblock In {\em Pervasive {Computing} and {Communications} {Workshops}
+  ({PERCOM} {Workshops}), 2010 8th {IEEE} {International} {Conference} on},
+  pages 292--297. IEEE.
+
+\bibitem[Dai et~al., 2010b]{dai_mobile_2010}
+Dai, J., Teng, J., Bai, X., Shen, Z., and Xuan, D. (2010b).
+\newblock Mobile phone based drunk driving detection.
+\newblock In {\em 2010 4th {International} {Conference} on {Pervasive}
+  {Computing} {Technologies} for {Healthcare}}, pages 1--8. IEEE.
+
+\bibitem[Dantzig and Ramser, 1959]{dantzig_truck_1959}
+Dantzig, G.~B. and Ramser, J.~H. (1959).
+\newblock The {Truck} {Dispatching} {Problem}.
+\newblock {\em Management Science}, 6(1):80--91.
+
+\bibitem[de~Oliveira et~al., 2016]{de_oliveira_cooperative_2016}
+de~Oliveira, F.~B., Enayatifar, R., Sadaei, H.~J., Guimarães, F.~G., and
+  Potvin, J.-Y. (2016).
+\newblock A cooperative coevolutionary algorithm for the {Multi}-{Depot}
+  {Vehicle} {Routing} {Problem}.
+\newblock {\em Expert Systems with Applications}, 43:117--130.
+
+\bibitem[Dey, 2001]{dey_understanding_2001}
+Dey, A.~K. (2001).
+\newblock Understanding and using context.
+\newblock {\em Personal and ubiquitous computing}, 5(1):4--7.
+
+\bibitem[Diaz, 2012]{diaz_vrp_2012}
+Diaz, B.~D. (2012).
+\newblock {\em Vrp web}.
+
+\bibitem[Do and Gatica-Perez, 2011]{do_groupus:_2011}
+Do, T. M.~T. and Gatica-Perez, D. (2011).
+\newblock Groupus: {Smartphone} proximity data and human interaction type
+  mining.
+\newblock In {\em 2011 15th {Annual} {International} {Symposium} on {Wearable}
+  {Computers}}, pages 21--28. IEEE.
+
+\bibitem[Dueck, 1993]{dueck_new_1993}
+Dueck, G. (1993).
+\newblock New optimization heuristics: {The} great deluge algorithm and the
+  record-to-record travel.
+\newblock {\em Journal of Computational physics}, 104(1):86--92.
+
+\bibitem[Escobar et~al., 2014]{escobar_hybrid_2014}
+Escobar, J.~W., Linfati, R., Toth, P., and Baldoquin, M.~G. (2014).
+\newblock A hybrid {Granular} {Tabu} {Search} algorithm for the {Multi}-{Depot}
+  {Vehicle} {Routing} {Problem}.
+\newblock {\em Journal of Heuristics}, 20(5):483--509.
+
+\bibitem[Eugster et~al., 2003]{eugster_many_2003}
+Eugster, P.~T., Felber, P.~A., Guerraoui, R., and Kermarrec, A.-M. (2003).
+\newblock The many faces of publish/subscribe.
+\newblock {\em ACM computing surveys (CSUR)}, 35(2):114--131.
+
+\bibitem[Garey and Johnson, 2002]{garey_computers_2002}
+Garey, M.~R. and Johnson, D.~S. (2002).
+\newblock {\em Computers and intractability}, volume~29.
+\newblock wh freeman New York.
+
+\bibitem[Gendreau et~al., 1992]{gendreau_new_1992}
+Gendreau, M., Hertz, A., and Laporte, G. (1992).
+\newblock New insertion and postoptimization procedures for the traveling
+  salesman problem.
+\newblock {\em Operations Research}, 40(6):1086--1094.
+
+\bibitem[Gillett and Johnson, 1976]{gillett_multi-terminal_1976}
+Gillett, B.~E. and Johnson, J.~G. (1976).
+\newblock Multi-terminal vehicle-dispatch algorithm.
+\newblock {\em Omega}, 4(6):711--718.
+
+\bibitem[Golden et~al., 1977]{golden_implementing_1977}
+Golden, B.~L., Magnanti, T.~L., and Nguyen, H.~Q. (1977).
+\newblock Implementing vehicle routing algorithms.
+\newblock {\em Networks}, 7(2):113--148.
+
+\bibitem[Google, 2016]{google_google_2016}
+Google, G. (2016).
+\newblock Google {Maps} {Directions} {API}.
+
+\bibitem[Gross and Specht, 2001]{gross_awareness_2001}
+Gross, T. and Specht, M. (2001).
+\newblock Awareness in context-aware information systems.
+\newblock In {\em Mensch \& {Computer} 2001}, pages 173--182. Springer.
+
+\bibitem[Holland and {others}, 1990]{holland_echo:_1990}
+Holland, J.~H. and {others} (1990).
+\newblock Echo: {Explorations} of evolution in a minature world.
+
+\bibitem[Hull et~al., 1997]{hull_towards_1997}
+Hull, R., Neaves, P., and Bedford-Roberts, J. (1997).
+\newblock Towards situated computing.
+\newblock In {\em Digest of {Papers}. {First} {International} {Symposium} on
+  {Wearable} {Computers}}, pages 146--153.
+
+\bibitem[Huning et~al., 1976]{huning_evolutionsstrategie._1976}
+Huning, A., Rechenberg, I., and Eigen, M. (1976).
+\newblock {\em Evolutionsstrategie. {Optimierung} technischer {Systeme} nach
+  {Prinzipien} der biologischen {Evolution}}.
+\newblock JSTOR.
+
+\bibitem[jsprit, 2014]{jsprit_jsprit_2014}
+jsprit (2014).
+\newblock jsprit {\textbar} java toolkit for rich {VRPs} and {TSPs}.
+
+\bibitem[Kulkarni and Bhave, 1985]{kulkarni_integer_1985}
+Kulkarni, R.~V. and Bhave, P.~R. (1985).
+\newblock Integer programming formulations of vehicle routing problems.
+\newblock {\em European Journal of Operational Research}, 20(1):58--67.
+
+\bibitem[Laporte, 1992]{laporte_vehicle_1992}
+Laporte, G. (1992).
+\newblock The vehicle routing problem: {An} overview of exact and approximate
+  algorithms.
+\newblock {\em European journal of operational research}, 59(3):345--358.
+
+\bibitem[Laporte and Nobert, 1981]{laporte_exact_1981}
+Laporte, G. and Nobert, Y. (1981).
+\newblock An exact algorithm for minimizing routing and operating costs in
+  depot location.
+\newblock {\em European Journal of Operational Research}, 6(2):224--226.
+
+\bibitem[Laporte et~al., 1984]{laporte_optimal_1984}
+Laporte, G., Nobert, Y., and Arpin, D. (1984).
+\newblock {\em Optimal solutions to capacitated multidepot vehicle routing
+  problems}.
+\newblock Université de Montréal, Centre de recherche sur les transports.
+
+\bibitem[Laporte et~al., 1988]{laporte_solving_1988}
+Laporte, G., Nobert, Y., and Taillefer, S. (1988).
+\newblock Solving a {Family} of {Multi}-{Depot} {Vehicle} {Routing} and
+  {Location}-{Routing} {Problems}.
+\newblock {\em Transportation Science}, 22(3):161--172.
+
+\bibitem[Lau et~al., 2010]{lau_application_2010}
+Lau, H. C.~W., Chan, T.~M., Tsui, W.~T., and Pang, W.~K. (2010).
+\newblock Application of {Genetic} {Algorithms} to {Solve} the {Multidepot}
+  {Vehicle} {Routing} {Problem}.
+\newblock {\em IEEE Transactions on Automation Science and Engineering},
+  7(2):383--392.
+
+\bibitem[Lin, 1965]{lin_computer_1965}
+Lin, S. (1965).
+\newblock Computer solutions of the traveling salesman problem.
+\newblock {\em The Bell System Technical Journal}, 44(10):2245--2269.
+
+\bibitem[Lu et~al., 2009]{lu_soundsense:_2009}
+Lu, H., Pan, W., Lane, N.~D., Choudhury, T., and Campbell, A.~T. (2009).
+\newblock {SoundSense}: scalable sound sensing for people-centric applications
+  on mobile phones.
+\newblock In {\em Proceedings of the 7th international conference on {Mobile}
+  systems, applications, and services}, pages 165--178. ACM.
+
+\bibitem[Magara et~al., 2016]{magara_mplist:_2016}
+Magara, M.~B., Ojo, S., Ngwira, S., and Zuva, T. (2016).
+\newblock {MPlist}: {Context} aware music playlist.
+\newblock In {\em 2016 {IEEE} {International} {Conference} on {Emerging}
+  {Technologies} and {Innovative} {Business} {Practices} for the
+  {Transformation} of {Societies} ({EmergiTech})}, pages 309--316.
+
+\bibitem[Maranzana, 1964]{maranzana_location_1964}
+Maranzana, F.~E. (1964).
+\newblock On the {Location} of {Supply} {Points} to {Minimize} {Transport}
+  {Costs}.
+\newblock {\em OR}, 15(3):261--270.
+
+\bibitem[Mühl, 2002]{muhl_large-scale_2002}
+Mühl, G. (2002).
+\newblock {\em Large-scale content-based publish-subscribe systems}.
+\newblock PhD thesis, TU Darmstadt.
+
+\bibitem[Nagy and Salhi, 2007]{nagy_location-routing:_2007}
+Nagy, G. and Salhi, S. (2007).
+\newblock Location-routing: {Issues}, models and methods.
+\newblock {\em European Journal of Operational Research}, 177(2):649--672.
+
+\bibitem[OptaPlanner, 2016]{optaplanner_constraint_2016}
+OptaPlanner (2016).
+\newblock Constraint satisfaction solver ({Java}™, {Open} {Source}).
+
+\bibitem[Pisinger and Ropke, 2007]{pisinger_general_2007}
+Pisinger, D. and Ropke, S. (2007).
+\newblock A general heuristic for vehicle routing problems.
+\newblock {\em Computers \& Operations Research}, 34(8):2403--2435.
+
+\bibitem[Psaraftis, 1995]{psaraftis_dynamic_1995}
+Psaraftis, H.~N. (1995).
+\newblock Dynamic vehicle routing: {Status} and prospects.
+\newblock {\em Annals of operations research}, 61(1):143--164.
+
+\bibitem[Raft, 1982]{raft_modular_1982}
+Raft, O.~M. (1982).
+\newblock A modular algorithm for an extended vehicle scheduling problem.
+\newblock {\em European Journal of Operational Research}, 11(1):67--76.
+
+\bibitem[Rechenberg, 1965]{rechenberg_cybernetic_1965}
+Rechenberg, I. (1965).
+\newblock Cybernetic solution path of an experimental problem.
+
+\bibitem[redis, 2017a]{redis_clients_2017}
+redis (2017a).
+\newblock Clients - {Redis}.
+
+\bibitem[redis, 2017b]{redis_introduction_2017}
+redis (2017b).
+\newblock Introduction to {Redis} – {Redis}.
+
+\bibitem[Renaud et~al., 1996a]{renaud_improved_1996}
+Renaud, J., Boctor, F.~F., and Laporte, G. (1996a).
+\newblock An improved petal heuristic for the vehicle routeing problem.
+\newblock {\em Journal of the operational Research Society}, 47(2):329--336.
+
+\bibitem[Renaud et~al., 1996b]{renaud_tabu_1996}
+Renaud, J., Laporte, G., and Boctor, F.~F. (1996b).
+\newblock A tabu search heuristic for the multi-depot vehicle routing problem.
+\newblock {\em Computers \& Operations Research}, 23(3):229--235.
+
+\bibitem[Rubel et~al., 2005]{rubel_toward_2005}
+Rubel, P., Fayn, J., Nollo, G., Assanelli, D., Li, B., Restier, L., Adami, S.,
+  Arod, S., Atoui, H., Ohlsson, M., and {others} (2005).
+\newblock Toward personal {eHealth} in cardiology. {Results} from the
+  {EPI}-{MEDICS} telemedicine project.
+\newblock {\em Journal of electrocardiology}, 38(4):100--106.
+
+\bibitem[Ryan et~al., 1999]{ryan_enhanced_1999}
+Ryan, N., Pascoe, J., and Morse, D. (1999).
+\newblock Enhanced reality fieldwork: the context aware archaeological
+  assistant.
+\newblock {\em Bar International Series}, 750:269--274.
+
+\bibitem[Said et~al., 2013]{said_introduction_2013}
+Said, A., Berkovsky, S., and De~Luca, E.~W. (2013).
+\newblock Introduction to {Special} {Section} on {CAMRa}2010: {Movie}
+  {Recommendation} in {Context}.
+\newblock {\em ACM Trans. Intell. Syst. Technol.}, 4(1):13:1--13:9.
+
+\bibitem[Salhi and Fraser, 1996]{salhi_intergrated_1996}
+Salhi, S. and Fraser, M. (1996).
+\newblock An {Intergrated} {Heuristic} {Approach} for the {Combined} {Location}
+  {Vehicle} {Fleet} {Mix} {Problem}.
+\newblock {\em Studies in Locational Analysis}, 8:3--22.
+
+\bibitem[Sarmenta et~al., 2002]{sarmenta_bayanihan_2002}
+Sarmenta, L.~F., Chua, S.~J., Echevarria, P., Mendoza, J.~M., Santos, R.-R.,
+  Tan, S., and Lozada, R. (2002).
+\newblock Bayanihan {Computing}. {NET}: {Grid} {Computing} with {XML} {Web}
+  {Services}.
+\newblock In {\em ccgrid}, pages 434--435.
+
+\bibitem[Schilit et~al., 1994]{schilit_context-aware_1994}
+Schilit, B., Adams, N., and Want, R. (1994).
+\newblock Context-aware computing applications.
+\newblock In {\em Mobile {Computing} {Systems} and {Applications}, 1994.
+  {WMCSA} 1994. {First} {Workshop} on}, pages 85--90. IEEE.
+
+\bibitem[Schmidt et~al., 1999]{schmidt_there_1999}
+Schmidt, A., Beigl, M., and Gellersen, H.-W. (1999).
+\newblock There is more to context than location.
+\newblock {\em Computers \& Graphics}, 23(6):893--901.
+
+\bibitem[Schwefel, 1975]{schwefel_evolutionsstrategie_1975}
+Schwefel, H.-P. (1975).
+\newblock {\em Evolutionsstrategie und numerische {Optimierung}}.
+\newblock Technische Universität Berlin.
+
+\bibitem[Sengoku and Yoshihara, 1998]{sengoku_fast_1998}
+Sengoku, H. and Yoshihara, I. (1998).
+\newblock A fast {TSP} solver using {GA} on {JAVA}.
+\newblock In {\em Third {International} {Symposium} on {Artificial} {Life}, and
+  {Robotics} ({AROB} {III}’98)}, pages 283--288.
+
+\bibitem[Simchi-Levi, 1991]{simchi-levi_capacitated_1991}
+Simchi-Levi, D. (1991).
+\newblock The {Capacitated} {Traveling} {Salesman} {Location} {Problem}.
+\newblock {\em Transportation Science}, 25(1):9--18.
+
+\bibitem[Solomon and Desrosiers, 1988]{solomon_survey_1988}
+Solomon, M.~M. and Desrosiers, J. (1988).
+\newblock Survey paper—time window constrained routing and scheduling
+  problems.
+\newblock {\em Transportation science}, 22(1):1--13.
+
+\bibitem[Subramanian et~al., 2013]{subramanian_hybrid_2013}
+Subramanian, A., Uchoa, E., and Ochi, L.~S. (2013).
+\newblock A hybrid algorithm for a class of vehicle routing problems.
+\newblock {\em Computers \& Operations Research}, 40(10):2519--2531.
+
+\bibitem[Sudman, 1965]{sudman_time_1965}
+Sudman, S. (1965).
+\newblock Time {Allocation} in {Survey} {Interviewing} and in {Other} {Field}
+  {Occupations}.
+\newblock {\em The Public Opinion Quarterly}, 29(4):638--648.
+
+\bibitem[Tillman, 1969]{tillman_multiple_1969}
+Tillman, F.~A. (1969).
+\newblock The multiple terminal delivery problem with probabilistic demands.
+\newblock {\em Transportation Science}, 3(3):192--204.
+
+\bibitem[Tillman and Cain, 1972]{tillman_upperbound_1972}
+Tillman, F.~A. and Cain, T.~M. (1972).
+\newblock An upperbound algorithm for the single and multiple terminal delivery
+  problem.
+\newblock {\em Management Science}, 18(11):664--682.
+
+\bibitem[Tillman and Hering, 1971]{tillman_study_1971}
+Tillman, F.~A. and Hering, R.~W. (1971).
+\newblock A study of a look-ahead procedure for solving the multiterminal
+  delivery problem.
+\newblock {\em Transportation Research}, 5(3):225--229.
+
+\bibitem[Toth and Vigo, 2002]{toth_vehicle_2002}
+Toth, P. and Vigo, D. (2002).
+\newblock The vehicle routing problem, volume 9 of {SIAM} {Monographs} on
+  {Discrete} {Mathematics} and {Applications}.
+\newblock {\em SIAM, Philadelphia, PA}.
+
+\bibitem[Tsai et~al., 2016]{tsai_context-aware_2016}
+Tsai, M.~J., Wu, C.~L., Pradhan, S.~K., Xie, Y., Li, T.~Y., Fu, L.~C., and
+  Zeng, Y.~C. (2016).
+\newblock Context-aware activity prediction using human behavior pattern in
+  real smart home environments.
+\newblock In {\em 2016 {IEEE} {International} {Conference} on {Automation}
+  {Science} and {Engineering} ({CASE})}, pages 168--173.
+
+\bibitem[Vaishnavi and Kuechler, 2007]{vaishnavi_design_2007}
+Vaishnavi, V. and Kuechler, W. (2007).
+\newblock {\em Design {Science} {Research} {Methods} and {Patterns}:
+  {Innovating} {Information} and {Communication} {Technology}}.
+\newblock Auerbach Publications.
+\newblock DOI: 10.1201/9781420059335.
+
+\bibitem[Vidal et~al., 2014]{vidal_implicit_2014}
+Vidal, T., Crainic, T.~G., Gendreau, M., and Prins, C. (2014).
+\newblock Implicit depot assignments and rotations in vehicle routing
+  heuristics.
+\newblock {\em European Journal of Operational Research}, 237(1):15--28.
+
+\bibitem[Weise et~al., 2009]{weise_solving_2009}
+Weise, T., Podlich, A., and Gorldt, C. (2009).
+\newblock Solving real-world vehicle routing problems with evolutionary
+  algorithms.
+\newblock In {\em Natural intelligence for scheduling, planning and packing
+  problems}, pages 29--53. Springer.
+
+\bibitem[Wren and Holliday, 1972]{wren_computer_1972}
+Wren, A. and Holliday, A. (1972).
+\newblock Computer scheduling of vehicles from one or more depots to a number
+  of delivery points.
+\newblock {\em Journal of the Operational Research Society}, 23(3):333--344.
+
+\bibitem[Zimmermann et~al., 2007]{zimmermann_operational_2007}
+Zimmermann, A., Lorenz, A., and Oppermann, R. (2007).
+\newblock An operational definition of context.
+\newblock In {\em International and {Interdisciplinary} {Conference} on
+  {Modeling} and {Using} {Context}}, pages 558--571. Springer.
+
+\bibitem[Zou et~al., 2016]{zou_context-aware_2016}
+Zou, X., Gonzales, M., and Saeedi, S. (2016).
+\newblock A {Context}-aware {Recommendation} {System} using smartphone sensors.
+\newblock In {\em 2016 {IEEE} 7th {Annual} {Information} {Technology},
+  {Electronics} and {Mobile} {Communication} {Conference} ({IEMCON})}, pages
+  1--6.
+
+\end{thebibliography}
