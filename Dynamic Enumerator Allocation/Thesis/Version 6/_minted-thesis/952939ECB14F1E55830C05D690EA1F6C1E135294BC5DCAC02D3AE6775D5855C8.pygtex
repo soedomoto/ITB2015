@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{cluster}\PYG{o}{\PYGZhy{}}\PYG{n}{enabled} \PYG{n}{yes}
+\PYG{n}{cluster}\PYG{o}{\PYGZhy{}}\PYG{n}{node}\PYG{o}{\PYGZhy{}}\PYG{n}{timeout} \PYG{l+m+mi}{5000}
+\PYG{n}{cluster}\PYG{o}{\PYGZhy{}}\PYG{n}{config}\PYG{o}{\PYGZhy{}}\PYG{n}{file} \PYG{n}{nodes}\PYG{o}{.}\PYG{n+na}{conf}
+\PYG{n}{appendonly} \PYG{n}{yes}
+\PYG{n}{dir} \PYG{o}{/}\PYG{n}{data}
+\end{Verbatim}

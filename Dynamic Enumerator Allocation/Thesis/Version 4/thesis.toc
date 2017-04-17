@@ -9,8 +9,8 @@
 \contentsline {chapter}{DAFTAR ISI}{x}{section*.12}
 \contentsline {chapter}{DAFTAR GAMBAR}{xiii}{section*.12}
 \contentsline {chapter}{DAFTAR TABEL}{xv}{section*.12}
-\contentsline {chapter}{DAFTAR ALGORITMA}{xvi}{section*.12}
-\contentsline {chapter}{DAFTAR KODE}{xvii}{section*.12}
+\contentsline {chapter}{DAFTAR ALGORITMA}{xx}{section*.12}
+\contentsline {chapter}{DAFTAR KODE}{xxi}{section*.12}
 \contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Rumusan Masalah}{5}{section.1.2}
@@ -56,28 +56,30 @@
 \contentsline {section}{\numberline {4.2}Perancangan Solusi}{39}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Garis Besar Sistem Usulan}{40}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}\textit {Recommendation Publisher}}{41}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}\textit {VRPSolver Procedure}}{46}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}\textit {Message Broker}}{47}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}\uppercase {Implementasi dan Pengujian}}{49}{chapter.5}
-\contentsline {section}{\numberline {5.1}Implementasi}{49}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}\textit {VRP Solver}}{49}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}\textit {Publisher}}{49}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Pengujian}{50}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Lingkungan Pengujian}{50}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}\textit {Dataset} dan \textit {Metric}}{50}{subsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.2.1}\textit {Dataset}}{50}{subsubsection.5.2.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2.2}\textit {Metric}}{52}{subsubsection.5.2.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Skenario dan Hasil Pengujian}{53}{subsection.5.2.3}
-\contentsline {subsubsection}{\numberline {5.2.3.1}\textit {Message Broker Setup}}{53}{subsubsection.5.2.3.1}
-\contentsline {subsubsection}{\numberline {5.2.3.2}\textit {Publisher Setup}}{54}{subsubsection.5.2.3.2}
-\contentsline {subsubsection}{\numberline {5.2.3.3}\textit {Subscriber Setup}}{54}{subsubsection.5.2.3.3}
-\contentsline {subsubsection}{\numberline {5.2.3.4}Pengujian Tanpa \textit {Service Time}}{56}{subsubsection.5.2.3.4}
-\contentsline {subsubsection}{\numberline {5.2.3.5}Pengujian Kondisi Normal dengan \textit {Service Time}}{59}{subsubsection.5.2.3.5}
-\contentsline {subsubsection}{\numberline {5.2.3.6}Pengujian Kondisi \textit {Delay} dengan \textit {Service Time}}{63}{subsubsection.5.2.3.6}
-\contentsline {subsubsection}{\numberline {5.2.3.7}Pengujian Kondisi Pencacah Berhenti dengan \textit {Service Time}}{67}{subsubsection.5.2.3.7}
-\contentsline {chapter}{\numberline {6}\uppercase {Kesimpulan dan Saran}}{69}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{69}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{70}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{71}{Item.126}
-\contentsline {chapter}{DAFTAR PUSTAKA}{71}{Item.126}
-\contentsline {chapter}{LAMPIRAN}{1}{section*.48}
+\contentsline {subsection}{\numberline {4.2.3}\textit {VRPSolver Procedure}}{45}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}\textit {Message Broker}}{46}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}\uppercase {Implementasi dan Pengujian}}{50}{chapter.5}
+\contentsline {section}{\numberline {5.1}Implementasi}{50}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}\textit {VRPSolver Procedure}}{50}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}\textit {Publisher}}{50}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Pengujian}{51}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Lingkungan Pengujian}{51}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}\textit {Dataset} dan \textit {Metric}}{51}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}\textit {Dataset}}{51}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}\textit {Metric}}{53}{subsubsection.5.2.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Skenario dan Hasil Pengujian}{54}{subsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3.1}\textit {Message Broker Setup}}{55}{subsubsection.5.2.3.1}
+\contentsline {subsubsection}{\numberline {5.2.3.2}\textit {Publisher Setup}}{56}{subsubsection.5.2.3.2}
+\contentsline {subsubsection}{\numberline {5.2.3.3}\textit {Subscriber Setup}}{56}{subsubsection.5.2.3.3}
+\contentsline {subsubsection}{\numberline {5.2.3.4}Pengujian Tanpa \textit {Service Time}}{58}{subsubsection.5.2.3.4}
+\contentsline {subsubsection}{\numberline {5.2.3.5}Pengujian Kondisi Normal dengan \textit {Service Time}}{67}{subsubsection.5.2.3.5}
+\contentsline {subsubsection}{\numberline {5.2.3.6}Pengujian Kondisi \textit {Delay} dengan \textit {Service Time}}{81}{subsubsection.5.2.3.6}
+\contentsline {chapter}{\numberline {6}\uppercase {Kesimpulan dan Saran}}{90}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{90}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{91}{section.6.2}
+\contentsline {chapter}{DAFTAR PUSTAKA}{92}{Item.132}
+\contentsline {chapter}{DAFTAR PUSTAKA}{92}{Item.132}
+\contentsline {chapter}{LAMPIRAN}{1}{section*.51}
+\contentsline {chapter}{LAMPIRAN 1}{1}{section*.52}
+\contentsline {chapter}{LAMPIRAN 2}{44}{section*.96}
+\contentsline {chapter}{LAMPIRAN 4}{87}{section*.140}

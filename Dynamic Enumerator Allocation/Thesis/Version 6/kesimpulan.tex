@@ -1,0 +1,33 @@
+%---------------------------------------------------------------
+\chapter{\kesimpulan}
+%---------------------------------------------------------------
+%\todo{Tambahkan kesimpulan dan saran terkait dengan perkerjaan 
+%	yang dilakukan.}
+
+
+%---------------------------------------------------------------
+\section{Kesimpulan}
+%---------------------------------------------------------------
+Berdasarkan hasil pengujian, diperoleh kesimpulan sebagai berikut:
+
+\begin{enumerate}
+	\item Pada permasalahan MDVRP yang mempertimbangkan lama waktu pencacahan, dari pengujian dengan menggunakan data Cordeau dengan 7 (tujuh) buah \textit{instance}, diperoleh hasil bahwa sistem usulan, yaitu MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe, memberikan hasil yang lebih baik pada seluruh \textit{instance}, baik dari segi rata-rata hari pencacahan maupun standar deviasi dari total hari pencacahan untuk tiap-tiap pencacah. Selain itu, waktu tunggu sampai seluruh pencacah menyelesaikan pencacahan juga lebih rendah dibandingkan program usulan, yaitu MDVRP berbasis CoEAs tanpa mekanisme Publish/Subscribe. Hal ini menunjukkan sistem usulan lebih efisien digunakan pada pencacahan kondisi normal.
+	
+	\item Pada permasalahan MDVRP yang mempertimbangkan lama waktu pencacahan, dari pengujian dengan menggunakan data lapangan dengan 4 (empat) buah \textit{instance}, diperoleh hasil bahwa sistem usulan, yaitu MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe, memberikan hasil yang lebih baik pada seluruh \textit{instance}, baik dari segi rata-rata hari pencacahan maupun standar deviasi dari total hari pencacahan untuk tiap-tiap pencacah. Selain itu, waktu tunggu sampai seluruh pencacah menyelesaikan pencacahan juga lebih rendah dibandingkan program usulan, yaitu MDVRP berbasis CoEAs tanpa mekanisme Publish/Subscribe. Hal ini menunjukkan sistem usulan lebih efisien digunakan pada pencacahan kondisi normal.
+	
+	\item Pada permasalahan MDVRP yang mempertimbangkan lama waktu pencacahan dan \textit{delay}, dari pengujian dengan menggunakan data lapangan dengan 7 (tujuh) buah \textit{instance}, diperoleh hasil bahwa sistem usulan menghasilkan hari pencacahan yang lebih lama secara rata-rata pada seluruh \textit{instance}. Akan tetapi, sistem usulan menghasilkan standar deviasi hari pencacahan yang lebih rendah, yang artinya penyelesaian pencacahan lebih merata dengan sistem usulan. Sementara itu, dari segi waktu tunggu sampai seluruh pencacah menyelesaikan pencacahan, sistem usulan lebih baik pada 3 (tiga) \textit{instance} yang memiliki delay relatif rendah, tetapi lebih buruk pada 4 (empat) \textit{instance} yang memiliki delay tinggi. Hal ini menunjukkan pada kondisi terdapat delay yang cukup lama, sistem usulan tidak lebih baik jika dibandingkan dengan sistem pembanding.
+	
+	\item Dari seluruh pengujian dengan data dan skenario yang bervariasi, dapat disimpulkan bahwa algoritma MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe memberikan hasil yang \textbf{lebih merata} antar petugas dibandingkan dengan algoritma MDVRP berbasis CoEAs tanpa mekanisme Publish/Subscribe. Sementara dari segi waktu tunggu yang diperlukan sampai dengan seluruh pencacah menyelesaikan pencacahannya, algoritma MDVRP berbasis CoEAs dengan mekanisme Publish/Subscribe memberikan hasil lebih baik pada kondisi tidak terdapat delay atau terdapat delay yang rendah. Sebaliknya, pada kondisi terdapat delay yang tinggi, \textit{pre-calculated routes} yang dihasilkan oleh algoritma MDVRP berbasis CoEAs tanpa mekanisme Publish/Subscribe memberikan waktu tunggu yang lebih rendah.
+\end{enumerate}
+
+
+%---------------------------------------------------------------
+\section{Saran}
+%---------------------------------------------------------------
+Dari penelitian ini, saran yang diberikan untuk penelitian selanjutnya sebagai berikut:
+
+\begin{enumerate}
+	\item Mengkaji mekanisme komunikasi yang digunakan, misalnya dengan membandingkan dengan mekanisme Request/Reply dan Push/Pull untuk mendapatkan mekanisme komunikasi yang paling tepat.
+	\item Mengkaji parameter yang dapat digunakan dalam VRP Solver yaitu lama waktu eksekusi dan lama waktu dimana tidak ada perubahan solusi terbaik, sehingga diperoleh waktu eksekusi yang paling optimal.
+	\item Mengkasi penggunaan algoritma MDVRP yang lain, misalnya Tabu Search, Particle Swarm Optimization, dan lain lain, sehingga diperoleh algoritma MDVRP yang paling sesuai.
+\end{enumerate}

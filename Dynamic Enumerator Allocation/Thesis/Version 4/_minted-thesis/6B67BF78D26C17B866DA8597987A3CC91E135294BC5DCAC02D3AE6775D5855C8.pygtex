@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{Creating} \PYG{n}{cluster}
+	\PYG{n}{Performing} \PYG{n}{hash} \PYG{n}{slots} \PYG{n}{allocation} \PYG{n}{on} \PYG{l+m+mi}{6} \PYG{n}{nodes}\PYG{o}{...}
+	\PYG{n}{Using} \PYG{l+m+mi}{3} \PYG{n}{masters}\PYG{o}{:}
+	\PYG{l+m+mf}{172.17.0.3}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{l+m+mf}{172.17.0.4}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{l+m+mf}{172.17.0.5}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{Adding} \PYG{n}{replica} \PYG{l+m+mf}{172.17.0.6}\PYG{o}{:}\PYG{l+m+mi}{6379} \PYG{n}{to} \PYG{l+m+mf}{172.17.0.3}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{Adding} \PYG{n}{replica} \PYG{l+m+mf}{172.17.0.7}\PYG{o}{:}\PYG{l+m+mi}{6379} \PYG{n}{to} \PYG{l+m+mf}{172.17.0.4}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{Adding} \PYG{n}{replica} \PYG{l+m+mf}{172.17.0.8}\PYG{o}{:}\PYG{l+m+mi}{6379} \PYG{n}{to} \PYG{l+m+mf}{172.17.0.5}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{M}\PYG{o}{:} \PYG{l+m+mf}{2f}\PYG{l+m+mi}{0}\PYG{n}{c681921fe52900a6774fb2cc808a8c4e69216} \PYG{l+m+mf}{172.17.0.3}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:}\PYG{l+m+mi}{0}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5460} \PYG{o}{(}\PYG{l+m+mi}{5461} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{master}
+	\PYG{n}{M}\PYG{o}{:} \PYG{l+m+mi}{41}\PYG{n}{a343142847138301ceeb710206284a50bb44a0} \PYG{l+m+mf}{172.17.0.4}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:}\PYG{l+m+mi}{5461}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10922} \PYG{o}{(}\PYG{l+m+mi}{5462} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{master}
+	\PYG{n}{M}\PYG{o}{:} \PYG{l+m+mi}{88}\PYG{n}{ae20b9e75dd5aa58973f13aa89479f52cedfd3} \PYG{l+m+mf}{172.17.0.5}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:}\PYG{l+m+mi}{10923}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{16383} \PYG{o}{(}\PYG{l+m+mi}{5461} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{master}
+	\PYG{n}{S}\PYG{o}{:} \PYG{n}{c5f6764d82ed10793c0c81e54830b4f68b1eacd7} \PYG{l+m+mf}{172.17.0.6}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{replicates} \PYG{l+m+mf}{2f}\PYG{l+m+mi}{0}\PYG{n}{c681921fe52900a6774fb2cc808a8c4e69216}
+	\PYG{n}{S}\PYG{o}{:} \PYG{l+m+mi}{5906}\PYG{n}{f61963d4a5a45478736d976b79db4280b3c7} \PYG{l+m+mf}{172.17.0.7}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{replicates} \PYG{l+m+mi}{41}\PYG{n}{a343142847138301ceeb710206284a50bb44a0}
+	\PYG{n}{S}\PYG{o}{:} \PYG{l+m+mi}{635}\PYG{n}{ed817b134b5d14bffd61fe9089867037fee8c} \PYG{l+m+mf}{172.17.0.8}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{replicates} \PYG{l+m+mi}{88}\PYG{n}{ae20b9e75dd5aa58973f13aa89479f52cedfd3}
+	\PYG{n}{Can} \PYG{n}{I} \PYG{n}{set} \PYG{n}{the} \PYG{n}{above} \PYG{n}{configuration}\PYG{o}{?} \PYG{o}{(}\PYG{n}{type} \PYG{err}{\PYGZsq{}}\PYG{n}{yes}\PYG{err}{\PYGZsq{}} \PYG{n}{to} \PYG{n}{accept}\PYG{o}{):} \PYG{n}{yes}
+	\PYG{n}{Nodes} \PYG{n}{configuration} \PYG{n}{updated}
+	\PYG{n}{Assign} \PYG{n}{a} \PYG{n}{different} \PYG{n}{config} \PYG{n}{epoch} \PYG{n}{to} \PYG{n}{each} \PYG{n}{node}
+	\PYG{n}{Sending} \PYG{n}{CLUSTER} \PYG{n}{MEET} \PYG{n}{messages} \PYG{n}{to} \PYG{n}{join} \PYG{n}{the} \PYG{n}{cluster}
+	\PYG{n}{Waiting} \PYG{k}{for} \PYG{n}{the} \PYG{n}{cluster} \PYG{n}{to} \PYG{n}{join}\PYG{o}{...}
+	\PYG{n}{Performing} \PYG{n}{Cluster} \PYG{n+nf}{Check} \PYG{o}{(}\PYG{n}{using} \PYG{n}{node} \PYG{l+m+mf}{172.17.0.3}\PYG{o}{:}\PYG{l+m+mi}{6379}\PYG{o}{)}
+	\PYG{n}{M}\PYG{o}{:} \PYG{l+m+mf}{2f}\PYG{l+m+mi}{0}\PYG{n}{c681921fe52900a6774fb2cc808a8c4e69216} \PYG{l+m+mf}{172.17.0.3}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:}\PYG{l+m+mi}{0}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5460} \PYG{o}{(}\PYG{l+m+mi}{5461} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{master}
+	\PYG{l+m+mi}{1} \PYG{n}{additional} \PYG{n+nf}{replica}\PYG{o}{(}\PYG{n}{s}\PYG{o}{)}
+	\PYG{n}{M}\PYG{o}{:} \PYG{l+m+mi}{88}\PYG{n}{ae20b9e75dd5aa58973f13aa89479f52cedfd3} \PYG{l+m+mf}{172.17.0.5}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:}\PYG{l+m+mi}{10923}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{16383} \PYG{o}{(}\PYG{l+m+mi}{5461} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{master}
+	\PYG{l+m+mi}{1} \PYG{n}{additional} \PYG{n+nf}{replica}\PYG{o}{(}\PYG{n}{s}\PYG{o}{)}
+	\PYG{n}{S}\PYG{o}{:} \PYG{n}{c5f6764d82ed10793c0c81e54830b4f68b1eacd7} \PYG{l+m+mf}{172.17.0.6}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:} \PYG{o}{(}\PYG{l+m+mi}{0} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{slave}
+	\PYG{n}{replicates} \PYG{l+m+mf}{2f}\PYG{l+m+mi}{0}\PYG{n}{c681921fe52900a6774fb2cc808a8c4e69216}
+	\PYG{n}{M}\PYG{o}{:} \PYG{l+m+mi}{41}\PYG{n}{a343142847138301ceeb710206284a50bb44a0} \PYG{l+m+mf}{172.17.0.4}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:}\PYG{l+m+mi}{5461}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10922} \PYG{o}{(}\PYG{l+m+mi}{5462} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{master}
+	\PYG{l+m+mi}{1} \PYG{n}{additional} \PYG{n+nf}{replica}\PYG{o}{(}\PYG{n}{s}\PYG{o}{)}
+	\PYG{n}{S}\PYG{o}{:} \PYG{l+m+mi}{635}\PYG{n}{ed817b134b5d14bffd61fe9089867037fee8c} \PYG{l+m+mf}{172.17.0.8}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:} \PYG{o}{(}\PYG{l+m+mi}{0} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{slave}
+	\PYG{n}{replicates} \PYG{l+m+mi}{88}\PYG{n}{ae20b9e75dd5aa58973f13aa89479f52cedfd3}
+	\PYG{n}{S}\PYG{o}{:} \PYG{l+m+mi}{5906}\PYG{n}{f61963d4a5a45478736d976b79db4280b3c7} \PYG{l+m+mf}{172.17.0.7}\PYG{o}{:}\PYG{l+m+mi}{6379}
+	\PYG{n}{slots}\PYG{o}{:} \PYG{o}{(}\PYG{l+m+mi}{0} \PYG{n}{slots}\PYG{o}{)} \PYG{n}{slave}
+	\PYG{n}{replicates} \PYG{l+m+mi}{41}\PYG{n}{a343142847138301ceeb710206284a50bb44a0}
+	\PYG{o}{[}\PYG{n}{OK}\PYG{o}{]} \PYG{n}{All} \PYG{n}{nodes} \PYG{n}{agree} \PYG{n}{about} \PYG{n}{slots} \PYG{n}{configuration}\PYG{o}{.}
+	\PYG{n}{Check} \PYG{k}{for} \PYG{n}{open} \PYG{n}{slots}\PYG{o}{...}
+	\PYG{n}{Check} \PYG{n}{slots} \PYG{n}{coverage}\PYG{o}{...}
+	\PYG{o}{[}\PYG{n}{OK}\PYG{o}{]} \PYG{n}{All} \PYG{l+m+mi}{16384} \PYG{n}{slots} \PYG{n}{covered}\PYG{o}{.}
+\end{Verbatim}

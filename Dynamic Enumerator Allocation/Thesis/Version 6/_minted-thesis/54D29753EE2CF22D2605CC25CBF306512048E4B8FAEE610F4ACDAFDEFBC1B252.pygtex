@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{err}{https://maps.googleapis.com/maps/api/directions/json?origin=|\PYGZbs{}textbf\PYGZob{}origin\PYGZus{}lat\PYGZcb{}|,}
+\PYG{err}{|\PYGZbs{}textbf\PYGZob{}origin\PYGZus{}lon\PYGZcb{}|\PYGZam{}destination=|\PYGZbs{}textbf\PYGZob{}dest\PYGZus{}lat\PYGZcb{}|,|\PYGZbs{}textbf\PYGZob{}dest\PYGZus{}lon\PYGZcb{}|\PYGZam{}departure\PYGZus{}time=|\PYGZbs{}textbf\PYGZob{}timestamp\PYGZcb{}|\PYGZam{}}
+\PYG{err}{traffic\PYGZus{}model=best\PYGZus{}guess\PYGZam{}key=|\PYGZbs{}textbf\PYGZob{}API\PYGZus{}KEY\PYGZcb{}|}
+\end{Verbatim}

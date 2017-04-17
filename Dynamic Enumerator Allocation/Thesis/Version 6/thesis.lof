@@ -1,0 +1,43 @@
+\contentsline {figure}{\numberline {.1}{\ignorespaces \textit {Creative Common License 1.0 Generic}\relax }}{vi}{figure.caption.7}
+\contentsline {figure}{\numberline {.2}{\ignorespaces Dokumen Dibuat dengan PDFLatex\relax }}{vi}{figure.caption.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {I.1}{\ignorespaces Pembagian Blok Sensus dalam Desa/Kelurahan\relax }}{1}{figure.caption.12}
+\contentsline {figure}{\numberline {I.2}{\ignorespaces Ilustrasi \textit {Multi Depot Vehicle Routing Problem}\relax }}{2}{figure.caption.13}
+\contentsline {figure}{\numberline {I.3}{\ignorespaces \textit {Timeline} Sebelum dan Setelah Dikunjungi\relax }}{4}{figure.caption.14}
+\contentsline {figure}{\numberline {I.4}{\ignorespaces \textit {Timeline} Solusi Bertahap\relax }}{4}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {II.1}{\ignorespaces \textit {Literature Map} Penelitian\relax }}{8}{figure.caption.16}
+\contentsline {figure}{\numberline {II.2}{\ignorespaces Kategori dari \textit {Context}\relax }}{11}{figure.caption.17}
+\contentsline {figure}{\numberline {II.3}{\ignorespaces Ilustrasi \textit {Vehicle Routing Problem (VRP)}\relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {II.4}{\ignorespaces Hierarki variasi dari VRP \citep {weise_solving_2009}\relax }}{17}{figure.caption.19}
+\contentsline {figure}{\numberline {II.5}{\ignorespaces Ilustrasi \textit {Multi Depot} VRP\relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {II.6}{\ignorespaces \textit {Lifecycle} pada \textit {Cooperative Coevolution} \citep {de_oliveira_cooperative_2016}\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {II.7}{\ignorespaces Arsitektur dasar pada Pub/Sub \citep {eugster_many_2003}\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {II.8}{\ignorespaces Pemisahan informasi pada Pub/Sub \citep {eugster_many_2003}\relax }}{26}{figure.caption.23}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {III.1}{\ignorespaces Tahapan \textit {Design Science Research Methods and Patterns}\relax }}{27}{figure.caption.24}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {IV.1}{\ignorespaces \textit {Google Direction API Response}\relax }}{32}{figure.caption.27}
+\contentsline {figure}{\numberline {IV.2}{\ignorespaces Rute yang dihasilkan oleh JSprit\relax }}{36}{figure.caption.29}
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces Ilustrasi \textit {Timeline} Rute yang Dikalkulasi Tanpa Melibatkan Waktu Pencacahan\relax }}{39}{figure.caption.31}
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces Ilustrasi \textit {Timeline} Penerapan MDVRP Secara \textit {Real Time}\relax }}{41}{figure.caption.32}
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces Garis Besar Sistem Usulan\relax }}{41}{figure.caption.33}
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces \textit {\textit {Flowchart} Topic Watcher}\relax }}{43}{figure.caption.34}
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces Ilustrasi \textit {Global Best Solution}\relax }}{44}{figure.caption.35}
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces \textit {Flowchart recommendation publisher}\relax }}{48}{figure.caption.36}
+\contentsline {figure}{\numberline {IV.9}{\ignorespaces Ilustrasi \textit {Timeline} Proses Pencarian Solusi Berdasarkan\relax }}{49}{figure.caption.37}
+\contentsline {figure}{\numberline {IV.10}{\ignorespaces Ilustrasi \textit {Publish-Subscribe} terdistribusi\relax }}{49}{figure.caption.38}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {V.1}{\ignorespaces Ilustrasi Rute yang Dihasilkan\relax }}{54}{figure.caption.39}
+\contentsline {figure}{\numberline {V.2}{\ignorespaces Interaksi antar komponen dalam pengujian\relax }}{55}{figure.caption.40}
+\contentsline {figure}{\numberline {V.3}{\ignorespaces \textit {Flowchart} Subsistem pada Pengujian\relax }}{59}{figure.caption.41}
+\contentsline {figure}{\numberline {V.4}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Cordeau\relax }}{61}{figure.caption.42}
+\contentsline {figure}{\numberline {V.5}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Cordeau\relax }}{62}{figure.caption.43}
+\contentsline {figure}{\numberline {V.6}{\ignorespaces Maksimum Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Cordeau\relax }}{63}{figure.caption.44}
+\contentsline {figure}{\numberline {V.7}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{65}{figure.caption.45}
+\contentsline {figure}{\numberline {V.8}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{65}{figure.caption.46}
+\contentsline {figure}{\numberline {V.9}{\ignorespaces Maksimum Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{66}{figure.caption.47}
+\contentsline {figure}{\numberline {V.10}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{71}{figure.caption.48}
+\contentsline {figure}{\numberline {V.11}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{71}{figure.caption.49}
+\contentsline {figure}{\numberline {V.12}{\ignorespaces Maksimum Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Delay dengan Waktu Pencacahan pada Data Lapangan\relax }}{72}{figure.caption.50}
+\addvspace {10\p@ }

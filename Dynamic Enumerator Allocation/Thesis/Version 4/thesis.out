@@ -60,7 +60,7 @@
 \BOOKMARK [2][-]{subsection.4.2.4}{4.2.4 Message Broker}{section.4.2}% 60
 \BOOKMARK [0][-]{chapter.5}{5 Implementasi dan Pengujian}{}% 61
 \BOOKMARK [1][-]{section.5.1}{5.1 Implementasi}{chapter.5}% 62
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 VRP Solver}{section.5.1}% 63
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 VRPSolver Procedure}{section.5.1}% 63
 \BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Publisher}{section.5.1}% 64
 \BOOKMARK [1][-]{section.5.2}{5.2 Pengujian}{chapter.5}% 65
 \BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Lingkungan Pengujian}{section.5.2}% 66
@@ -74,10 +74,12 @@
 \BOOKMARK [3][-]{subsubsection.5.2.3.4}{5.2.3.4 Pengujian Tanpa Service Time}{subsection.5.2.3}% 74
 \BOOKMARK [3][-]{subsubsection.5.2.3.5}{5.2.3.5 Pengujian Kondisi Normal dengan Service Time}{subsection.5.2.3}% 75
 \BOOKMARK [3][-]{subsubsection.5.2.3.6}{5.2.3.6 Pengujian Kondisi Delay dengan Service Time}{subsection.5.2.3}% 76
-\BOOKMARK [3][-]{subsubsection.5.2.3.7}{5.2.3.7 Pengujian Kondisi Pencacah Berhenti dengan Service Time}{subsection.5.2.3}% 77
-\BOOKMARK [0][-]{chapter.6}{6 Kesimpulan dan Saran}{}% 78
-\BOOKMARK [1][-]{section.6.1}{6.1 Kesimpulan}{chapter.6}% 79
-\BOOKMARK [1][-]{section.6.2}{6.2 Saran}{chapter.6}% 80
-\BOOKMARK [0][-]{Item.126}{DAFTAR PUSTAKA}{}% 81
-\BOOKMARK [0][-]{Item.126}{DAFTAR PUSTAKA}{}% 82
-\BOOKMARK [0][-]{section*.48}{LAMPIRAN}{}% 83
+\BOOKMARK [0][-]{chapter.6}{6 Kesimpulan dan Saran}{}% 77
+\BOOKMARK [1][-]{section.6.1}{6.1 Kesimpulan}{chapter.6}% 78
+\BOOKMARK [1][-]{section.6.2}{6.2 Saran}{chapter.6}% 79
+\BOOKMARK [0][-]{Item.132}{DAFTAR PUSTAKA}{}% 80
+\BOOKMARK [0][-]{Item.132}{DAFTAR PUSTAKA}{}% 81
+\BOOKMARK [0][-]{section*.51}{LAMPIRAN}{}% 82
+\BOOKMARK [0][-]{section*.52}{LAMPIRAN 1}{}% 83
+\BOOKMARK [0][-]{section*.96}{LAMPIRAN 2}{}% 84
+\BOOKMARK [0][-]{section*.140}{LAMPIRAN 4}{}% 85

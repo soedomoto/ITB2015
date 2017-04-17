@@ -6,7 +6,7 @@
 \contentsline {listing}{\numberline {4.6}{\ignorespaces Penentuan Algoritma\relax }}{35}{listing.4.6}
 \contentsline {listing}{\numberline {4.7}{\ignorespaces Pencarian Solusi\relax }}{35}{listing.4.7}
 \contentsline {listing}{\numberline {4.8}{\ignorespaces Rekomendasi dengan MDVRP\relax }}{37}{listing.4.8}
-\contentsline {listing}{\numberline {5.1}{\ignorespaces Konfigurasi Redis Cluster\relax }}{54}{listing.5.1}
-\contentsline {listing}{\numberline {5.2}{\ignorespaces Pembuatan Redis Cluster\relax }}{54}{listing.5.2}
-\contentsline {listing}{\numberline {5.3}{\ignorespaces Respon Pembuatan Redis Cluster\relax }}{55}{listing.5.3}
-\contentsline {listing}{\numberline {5.4}{\ignorespaces Format penggunaan Publisher\relax }}{56}{listing.5.4}
+\contentsline {listing}{\numberline {5.1}{\ignorespaces Konfigurasi Redis Cluster\relax }}{56}{listing.5.1}
+\contentsline {listing}{\numberline {5.2}{\ignorespaces Pembuatan Redis Cluster\relax }}{56}{listing.5.2}
+\contentsline {listing}{\numberline {5.3}{\ignorespaces Respon Pembuatan Redis Cluster\relax }}{57}{listing.5.3}
+\contentsline {listing}{\numberline {5.4}{\ignorespaces Format penggunaan Publisher\relax }}{58}{listing.5.4}

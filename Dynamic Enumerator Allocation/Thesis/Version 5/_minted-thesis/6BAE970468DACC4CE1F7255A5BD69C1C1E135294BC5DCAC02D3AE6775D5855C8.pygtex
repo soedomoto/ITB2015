@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{Collection}\PYG{o}{\PYGZlt{}}\PYG{n}{VehicleRoutingProblemSolution}\PYG{o}{\PYGZgt{}} \PYG{n}{solutions} \PYG{o}{=} \PYG{n}{algorithm}\PYG{o}{.}\PYG{n+na}{searchSolutions}\PYG{o}{();}
+	\PYG{n}{VehicleRoutingProblemSolution} \PYG{n}{bestSolution} \PYG{o}{=} \PYG{n}{Solutions}\PYG{o}{.}\PYG{n+na}{bestOf}\PYG{o}{(}\PYG{n}{solutions}\PYG{o}{);}
+\end{Verbatim}
