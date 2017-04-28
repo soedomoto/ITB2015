@@ -372,7 +372,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{An Architecture for Real-Time Location Recommendation for Field Data Collection}
+\title{Real-Time Location Recommendation System for Field Data Collection}
 
 
 % author names and affiliations
@@ -465,7 +465,9 @@ The workflow of the data collection performs as follows:
 \end{enumerate}
 This workflow is significantly similar to the Vehicle Routing Problem (VRP), specifically, the Multi-Depot Vehicle Routing Problem (MDVRP). The enumerators are analogous to vehicles, census/survey locations are comparable with customers, and the enumeration's starting point is corresponding with the depot. 
 
-Although sharing similar workflow with MDVRP, the rough implementation of the MDVRP algorithm is not feasible for solving the allocation problems. This is because MDVRP needs the variable \textit{service time}, which will not be available until after the enumerator finishes visiting the census/survey location. Therefore, this research aims to propose an integration of MDVRP with publish/subscribe mechanism to create a real-time location recommendation system for field data collection. 
+Although sharing similar workflow with MDVRP, the rough implementation of the MDVRP algorithm is not feasible for solving the allocation problems. Solutions or routes obtained using the MDVRP algorithm often result in uneven time of completion. This is because the MDVRP algorithm when used in the search solution uses the assumption that service time at each location is evenly distributed, whereas the facts vary greatly.
+
+The inclusion of service time variables that match the field conditions in the search for a solution is not possible, because variable service time will not be available until after the enumerator finishes visiting the census/survey location. Therefore the MDVRP algorithm needs to be integrated with a communication mechanism to create a real-time location recommendation system for field data collection. This study aims to propose a system that integrates the MDVRP algorithm based on CoEAs and publish/subscribe mechanism. 
 
 
 %-----------------------------------------------------------------------------%
@@ -486,7 +488,7 @@ VRP is an optimization problem that focused on the query: \textit{`given a set o
 	\label{fig:mdvrp-illustration}
 \end{figure}
 
-Coevolutionary algorithms (CoEAs) is one of many algorithms \cite{cordeau_tabu_1997} \cite{pisinger_general_2007} \cite{lau_application_2010} \cite{cordeau_parallel_2012} \cite{subramanian_hybrid_2013} \cite{vidal_implicit_2014} \cite{escobar_hybrid_2014} \cite{de_oliveira_cooperative_2016} that can be used to solve MDVRP. CoEAs realize that in natural evolution the physical environment is influenced by other independently-acting biological populations \cite{engelbrecht_coevolution_2007}. Based on the interaction of each species, CoEAs can be distinguished into two categories: competitive and cooperative \cite{engelbrecht_coevolution_2007}. In the competitive coevolution, each individual competes with other individuals in the same group. Meanwhile, the cooperative coevolution has its species mutually interacted or, at least, not harming each other.
+Coevolutionary algorithms (CoEAs) is one of many algorithms \cite{cordeau_tabu_1997, pisinger_general_2007, lau_application_2010, cordeau_parallel_2012, subramanian_hybrid_2013, vidal_implicit_2014, escobar_hybrid_2014, de_oliveira_cooperative_2016} that can be used to solve MDVRP. CoEAs realize that in natural evolution the physical environment is influenced by other independently-acting biological populations \cite{engelbrecht_coevolution_2007}. Based on the interaction of each species, CoEAs can be distinguished into two categories: competitive and cooperative \cite{engelbrecht_coevolution_2007}. In the competitive coevolution, each individual competes with other individuals in the same group. Meanwhile, the cooperative coevolution has its species mutually interacted or, at least, not harming each other.
 
 The use of CoEAs for solving MDVRP has been studied by several researchers, one of which is de Oliveira et al. \cite{de_oliveira_cooperative_2016}. De Oliveira's algorithm consists of 2 (two) stages: initiation and evolution. In initiation stage, the population is built using Nearest Insertion Heuristic (NIH) and NIH-based semi-greedy. Then, in the evolution stage, this population will be evolved using a parallel module, which consists of 3 submodules: Population Evolve (PE), Complete Solution Evaluation (CSE), and Elite Group (EG) submodules. This stage is controlled by a monitor module to ensure that all processes run well. \autoref{fig:coes_paralel_modules} shows the parallel architecture proposed by de Oliveira.
 
@@ -512,14 +514,14 @@ The basic model of the publish/subscribe system relies on the event notification
 \section{Proposed Solution}
 \label{sec:proposed-solution}
 %-----------------------------------------------------------------------------%
-Using pure MDVRP for location recommendation comes with one major drawback: the absence of time service data which is very important for computing the recommendation. Thus, MDVRP needs to be integrated with a real-time mechanism such as Web Service, Remote Procedure Call (RPC), message passing, and publish/subscribe mechanism \cite{eugster_many_2003}.
+Using pure MDVRP algorithm for location recommendation comes with one major drawback: the absence of service time data that match the field conditions which is very important for computing the recommendation. Thus, MDVRP algorithm needs to be integrated with a communication mechanism such as Web Service, Remote Procedure Call (RPC), message passing, and publish/subscribe mechanism \cite{eugster_many_2003}.
 
-In this research, the publish/subscribe mechanism is chosen because, in addition to its loose coupling characteristic, it is also suitable for an information-driven system \cite{muhl_large-scale_2002}. \textit{Loose coupling} allows the publish/subscribe mechanism to work asynchronously, meaning the request and the reply do not have to be processed in sequence. Publishing and subscribing activities can be done offline. 
+In this research, the publish/subscribe mechanism is chosen because, in addition to its loose coupling characteristic \cite{eugster_many_2003}, it is also suitable for an information-driven system \cite{muhl_large-scale_2002}. \textit{Loose coupling} allows the publish/subscribe mechanism to work asynchronously, meaning the request and the reply do not have to be processed in sequence. Publishing and subscribing activities can still be done even if one party is offline. 
 
 
 \begin{figure}[!]
 	\centering
-	\includegraphics[width=8cm]{Resources/Images/system-overview}
+	\includegraphics[width=8.7cm]{Resources/Images/system-overview}
 	\caption{The outline of the proposed system}
 	\label{fig:system-overview}
 \end{figure}
@@ -532,85 +534,92 @@ In this research, the publish/subscribe mechanism is chosen because, in addition
 \subsection{The Recommendation Publisher}
 \label{ssec:recommendation-publisher}
 %-----------------------------------------------------------------------------%
-The publisher uses subscriber's current location as a topic to find the best solution/route. This route will be published to the subscriber via the message broker. The message broker plays a role in forwarding the message from publisher to subscriber and vice versa. Afterward, a new thread (\autoref{alg:topic-watcher}) is prepared to regularly check if there is any new topic at message broker. 
-
-Every time a new topic (subscriber’s current location) emerges, a new thread will be created using that new topic as an ID. Accordingly, a thread pool is provided to accommodate all threads from each topic in an arrival order. By the time all locations has been assigned to each enumerator, the thread pool size will be equal to the number of topics (census/survey locations). 
-
-Each thread will be running consecutively, one session for each thread. The current running thread calls a global VRP solver procedure (\autoref{alg:vrp-worker}) that acts as a solution/route finder. VRP solver procedure takes into account all $M$ vehicles and $(unassigned) N$ locations, which is explained in more detail in \autoref{ssec:vrp-solver}.
-
+Communication between publishers and subscribers uses a topic as a basis. This communication is done indirectly through a message broker. Unfortunately, the publish/subscribe mechanism makes it impossible for brokers to notify when new topics are subscribed. Therefore, it is necessary to check regularly by using a topic watcher to find out new topics that are subscribed. \autoref{alg:topic-watcher} shows the referred algorithm.
 
 \begin{algorithm}[!]
-	\caption{TopicWatcher}
+	\caption{Topic Watcher}
 	\label{alg:topic-watcher}
 	\begin{algorithmic}[1]
 		\renewcommand{\algorithmicrequire}{\textbf{Input:}}
 		\renewcommand{\algorithmicensure}{\textbf{Output:}}
-		\REQUIRE $C$
-		\ENSURE  $T$
-		\FOR {$i = 1$ to $len(C)$}
-			\FOR {$j = 1$ to $N$}
-				\IF {($C_i == E_j$)}
-					\STATE $T_j = Thread(C_i, V_1...V_M, (unassigned) E_1...E_N)$
-				\ENDIF
-			\ENDFOR
+		\REQUIRE $None$
+		\ENSURE  $None$
+		\\ $TP$ = Threadpool
+		\\ $N$ = Number of locations
+		\\ $M$ = Number of enumerators
+		\WHILE {true}
+		\STATE $C \leftarrow readAvailableTopicFromBroker()$	// channel
+		\FOR {$m = 1$ to $len(C)$}
+		\FOR {$n = 1$ to $N$}
+		\IF {($C_m == L_n$)}
+		\STATE $T_n = Thread(C_m, E_1...E_M, (unassigned) L_1...L_N)$		// E = enumerator
+		\STATE submitThreadToThreadpool($T_n$, $TP$)
+		\ENDIF
 		\ENDFOR
-		\RETURN $T$
+		\ENDFOR
+		\ENDWHILE
 	\end{algorithmic}
 \end{algorithm}
 
+Every time a new topic (subscriber’s current location) emerges, a new thread will be created using that new topic as an ID. Accordingly, a thread pool is provided to accommodate all threads in an arrival order. By the time all locations has been assigned to each enumerator, the thread pool size will be equal to the number of topics (census/survey locations). 
 
-The VRP solver procedure in each thread will produce at least $1$ route and at most $M$ routes. Every generated route $R_i$ will be published and coupled with a topic $C_i$. The message broker will inform the publisher the number of subscribers receiving the message. The subscribers' identities will remain unknown to the publisher. 
+Each thread will be running consecutively, one session for each thread. The reason why only one thread is executed is to avoid the recommended location conflict as illustrated in \autoref{fig:conflict-illustration}. The current running thread calls a global VRP solver procedure that acts as a solution/route finder. VRP solver procedure takes into account all $M$ enumerators and $(unassigned) N$ locations. This aims to prevent a local best solution, where 'next location' is the best location from one vehicle perspective only.
 
+\begin{figure}[!]
+	\centering
+	\includegraphics[width=8cm]{Resources/Images/conflict-illustration}
+	\caption{The illustration of recommendation conflict}
+	\label{fig:conflict-illustration}
+\end{figure} 
 
-If a route $R_i$ has at least one subscriber, the thread with ID $C_{R_i}$ will be canceled. This annulment is aimed to prevent a solution/route that has been received by a subscriber from being recomputed. 
-
-
-It could happen that the running VRP solver with ID $C_i$ fails to produce the solution for topic $C_i$. In this situation, the topic $C_i$ will be re-queued in the thread pool by involving only the subscriber (vehicle) of that particular topic. This mechanism guarantees that every topic $C_i$ will have a solution/route. 
-
+The VRP solver procedure in each thread will produce at least $1$ route and at most $M$ routes. Every generated route $R_i$ will be published and coupled with a topic $C_i$. The message broker will inform the publisher the number of subscribers receiving the message. If a route $R_i$ has at least one subscriber, the thread with ID $C_{R_i}$ will be canceled. This annulment is aimed to prevent a solution/route that has been received by a subscriber from being recomputed. The above steps are listed on \autoref{alg:vrp-worker}.
 
 \begin{algorithm}[!]
-	\caption{VRPWorker}
+	\caption{Recommendation Publisher}
 	\label{alg:vrp-worker}
 	\begin{algorithmic}[1]
 		\renewcommand{\algorithmicrequire}{\textbf{Input:}}
 		\renewcommand{\algorithmicensure}{\textbf{Output:}}
-		\REQUIRE $T$
-		\ENSURE  $R$
-		\FOR {$i = 1$ to $len(T)$}
-			\STATE $R$ = VRPSolver($T_i$)
-			\FOR {$j = 1$ to $len(R)$}
-				\STATE $r$ = publish($C_{R_j}$, $R_j$)
-				\IF {($r > 0$)}
-					\STATE cancelSolver($T_j$)
-				\ELSIF {($C_{T_i} \notin C_{R_j}$)}
-					\STATE $T_i = Thread(C_{T_i}, V_m, (unassigned) E_1...E_N)$
-				\ENDIF
-			\ENDFOR
+		\REQUIRE $TP$		// threadpool
+		\ENSURE  $None$
+		
+		\WHILE {true}
+		\STATE $T$ = popFirstThreadOrWaitNewThreadFromThreadpool()
+		\STATE $R$ = VRPSolver($T$)
+		\FOR {$j = 1$ to $len(R)$}
+		\STATE $r$ = publish($C_{R_j}$, $R_j$)
+		\IF {($r > 0$)}
+		\STATE cancelSolver($T_j$)
+		\ELSIF {($C_{T_i} \notin C_{R_j}$)}
+		\STATE $T_i = Thread(C_{T_i}, V_m, (unassigned) E_1...E_N)$
+		\ENDIF
 		\ENDFOR
-		\RETURN $R$
+		\ENDWHILE	
 	\end{algorithmic}
 \end{algorithm}
 
+It could happen that the running VRP solver with ID $C_i$ fails to produce the solution for topic $C_i$. In this situation, the topic $C_i$ will be re-queued in the thread pool by involving only the subscriber of that particular topic. This mechanism guarantees that every topic $C_i$ will have a solution/route. 
 
 Despite the flexibility, the loose coupling characteristic also brings a shortcoming to publish/subscribe mechanism. The publisher's unawareness towards subscribers' identities caused the subscribers' location cannot be identified. Hence, a technique that can support information exchange between publisher and subscribers is needed. The idea is to use a shared memory contains subscribers' current location data that can be accessed by the publisher. 
 
-The whole processes described above, from detecting a new topic to obtaining the solution, will keep being repeated until all customers are already assigned to each vehicle. In terms of data collection, the entire iterative processes will stop once all census/survey locations have been assigned to each enumerator. \autoref{fig:publisher-algorithm} illustrates the workflow of the algorithm used in recommendation publisher.
+The whole processes described above, from detecting a new topic to obtaining the solution, will keep being repeated until all customers are already assigned to each vehicle. In terms of data collection, the entire iterative processes will stop once all census/survey locations have been assigned to each enumerator. 
+
+% \autoref{fig:publisher-algorithm} illustrates the workflow of the algorithm used in recommendation publisher.
 
 
-\begin{figure}[!]
-	\centering
-	\includegraphics[width=8cm]{Resources/Images/publisher-algorithm}
-	\caption{The Publisher Workflow}
-	\label{fig:publisher-algorithm}
-\end{figure} 
+%\begin{figure}[!]
+%	\centering
+%	\includegraphics[width=8cm]{Resources/Images/publisher-algorithm}
+%	\caption{The Publisher Workflow}
+%	\label{fig:publisher-algorithm}
+%\end{figure} 
 
 
 %-----------------------------------------------------------------------------%
 \subsection{VRP Solver}
 \label{ssec:vrp-solver}
 %-----------------------------------------------------------------------------%
-VRP solver is a module used for finding the best route/solution to visit all customers (census/survey locations). VRP solver is implemented on the publisher's side and called in each thread in the thread pool (\autoref{alg:vrp-worker}). In this research, VRP solver utilizes CoEAs which generates a competitive \textit{mean solution values} with relatively low CPU time compared to other algorithms \cite{de_oliveira_cooperative_2016}. 
-
+VRP solver is a module used for finding the best route/solution to visit all customers (census/survey locations). VRP solver is implemented on the publisher's side and called in each thread in the thread pool. In this research, VRP solver utilizes CoEAs which generates a competitive \textit{mean solution values} with relatively low CPU time compared to other algorithms \cite{de_oliveira_cooperative_2016}. 
 
 The VRP solver works as follows:
 \begin{enumerate}
@@ -622,37 +631,6 @@ The VRP solver works as follows:
 	Before each evolution, each individual in every subproblem is evaluated to find the current best individual (CBI) of all subproblems. Then, each individual is evolved to generate new individuals. These new individuals will be evaluated to find the new best individual (NBI). If NBI is better than CBI, update CBI with NBI value. Otherwise, leave the CBI as it is. Repeat the evolution process until it reaches a particular time limit of 60 seconds or 40 seconds if there is no change happens to the CBI.    
 \end{enumerate}
 
-
-\begin{algorithm}[!]
-	\caption{VRPSolver}
-	\label{alg:vrp-solver}
-	\begin{algorithmic}[1]
-		\renewcommand{\algorithmicrequire}{\textbf{Input:}}
-		\renewcommand{\algorithmicensure}{\textbf{Output:}}
-		\REQUIRE $T_i$
-		\ENSURE  $R$
-		\STATE P $\leftarrow$ createProblem($V_1...V_{T_i}$, $E_1...E_{T_i}$)
-		\\ \textit{Decompose problem into S subproblem}
-		\STATE SP $\leftarrow$ decomposeProblem(P)
-		\WHILE {stopCriteriaUnmet}
-			\FOR {$i=1$ to $len(SP)$}
-				\STATE I $\leftarrow$ $SP_i \rightarrow individuals$
-				\FOR {$j$ to $len(I)$}
-					%\\ \textit{Foreach individu in subpopulation, do evolve}
-					\STATE $O_j$ $\leftarrow$ $I_j \rightarrow evolve()$
-				\ENDFOR
-				\STATE shrink($I$, $O$)
-			\ENDFOR
-			%\\ \textit{Every iteration, update best individuals}
-			\STATE updateBestIndividuals()
-		\ENDWHILE
-		\STATE $B \leftarrow getBestIndividuals()$ 
-		\STATE $R \leftarrow convert(B)$ 
-		\RETURN $R$
-	\end{algorithmic}
-\end{algorithm}
-
-
 %-----------------------------------------------------------------------------%
 \subsection{Message Broker}
 \label{ssec:message-broker}
@@ -663,7 +641,7 @@ A message broker is a component responsible for routing the message from publish
 \begin{figure}[!]
 	\centering
 	\includegraphics[width=7cm]{Resources/Images/pub_sub_distributed_ilustration}
-	\caption{The architecture of distributed publish-subscribe}
+	\caption{The illustration of distributed publish-subscribe architecture}
 	\label{fig:pub_sub_distributed_ilustration}
 \end{figure}
 
@@ -672,133 +650,98 @@ A message broker is a component responsible for routing the message from publish
 \section{Result}
 \label{sec:testing}
 %-----------------------------------------------------------------------------%
-Each component in this proposed system is implemented differently. Recommendation publisher is written in \verb!Java! and compiled with \verb!Java Compiler 1.8.0_121!. On the other hand, VRP Solver with the CoEAs algorithm is coded using \verb!C++! and compiled with \verb!C++ compiler 5.4.0 20160609!. Furthermore, the message broker is developed using \verb|Redis Cluster 3.2.6| with 6 nodes: 3 nodes for masters and the other 3 nodes for the slaves. 
 
-The system testing is conducted on Elementary OS Loki 64bit operating system and Quad-Core Intel® Core™ i3-4030U CPU @ 1.90GHz with 4 GB DDR3 RAM. Each Redis node is executed as a \verb|Docker| container on Debian Jessie 64bit operating system and Quad-Core Intel® Core™ i3-4030U CPU @ 1.90GHz with 4 GB RAM. 
+%-----------------------------------------------------------------------------%
+\subsection{Experimental Setup}
+\label{ssec:experimental-setup}
+%-----------------------------------------------------------------------------%
 
-A client application is designed to simulate the real condition, which is performed as follows:
-\begin{enumerate}
-	\item Client makes a subscription using current location as a topic. 
-	\item Client waits until the server (publisher) provides a response that is the next-visited location. 
-	\item Client travels to the next location. 
-	\item Client conducts the enumeration.
-	\item Client stores its current location in shared memory. 
-\end{enumerate}
-\autoref{fig:client-algorithm-nornal-global} represents the flowchart for client simulation. 
+\textbf{Implementation.} Each component in this proposed system is implemented differently. Recommendation publisher is implemented in \verb!Python 2.7!. On the other hand, VRP Solver with the CoEAs algorithm is coded using \verb!C++! and compiled with \verb!C++ compiler 5.4.0 20160609!. Furthermore, the message broker is developed using \verb|Redis Cluster 3.2.6| with 6 nodes: 3 nodes for masters and the other 3 nodes for the slaves.
 
+\textbf{Environment.} The experiment is conducted on Elementary OS Loki 64bit operating system and Quad-Core Intel® Core™ i3-4030U CPU @ 1.90GHz with 4 GB DDR3 RAM. Each Redis node is executed as a \verb|Docker| container on Debian Jessie 64bit operating system and Quad-Core Intel® Core™ i3-4030U CPU @ 1.90GHz with 4 GB RAM.
 
-This experiment is conducted using 2 (two) input data: 
+\textbf{Dataset.} This experiment is conducted using real administrative data, which consists of 182 locations and 15 enumerators. The distances and the time needed to travel between locations are measured using Google Maps Direction API \cite{google_google_2016}. While the service time for these two data is randomly generated based on Sudman \cite{sudman_time_1965} by following the normal distribution.
 
-\begin{enumerate}
-	\item The Cordeau's data \cite{cordeau_tabu_1997}, which consists of 50 customers (locations) and 4 vehicles (enumerators). The distances between locations are computed using euclidean formula. 
-	\item The real administrative data, which consists of 182 customers (locations) and 15 vehicles (enumerators). The distances and the time needed to travel between locations are measured using Google Maps Direction API \cite{google_google_2016}. 
-\end{enumerate}
-The service time for these two data is randomly generated based on Sudman \cite{sudman_time_1965} by following the normal distribution. 
+\textbf{Scenario.} The test will be run using 2 (two) scenarios: scenario of normal condition and delay condition. The dataset for testing in normal condition is generated by 4 (four) instances, where each instance has a different service time. While the dataset for testing in delay conditions is generated by 7 (seven) instances, where each instance has a different service time and also has varying delay.
 
-\begin{figure}[!]
-	\centering
-	\includegraphics[width=8cm]{Resources/Images/client-algorithm-nornal-global}
-	\caption{The flowchart of client application}
-	\label{fig:client-algorithm-nornal-global}
-\end{figure}
-
-The output from the proposed program (Publish/Subscribe mechanism + MDVRP based on CoEAs) is compared against the output from the benchmark program that uses CoEAs algorithms only. Both programs result in the routes for each vehicle which can be illustrated as follows:
+\textbf{Metric.} The output from the proposed program (MDVRP algorithm based on CoEAs with publish/pubscribe mechanism) is compared against the output from the benchmark program that uses MDVRP algorithm based on CoEAs only. Both programs result in the routes for each vehicle which can be illustrated as follows:
 
 \begin{itemize}
-\item \textit{Vehicle} A = Loc1 $\rightarrow$ Loc5 $\rightarrow$ Loc15 $\rightarrow$ Loc6
-\item \textit{Vehicle} B = Loc6 $\rightarrow$ Loc2 $\rightarrow$ Loc16 $\rightarrow$ Loc3
-\item \textit{Vehicle} C = Loc4 $\rightarrow$ Loc8 $\rightarrow$ Loc14 $\rightarrow$ Loc 7
-\item \textit{Vehicle} D = Loc9 $\rightarrow$ Loc10 $\rightarrow$ Loc11 $\rightarrow$ Loc12
+\item \textit{Enumerator} A = Loc1 $\rightarrow$ Loc5 $\rightarrow$ Loc15 $\rightarrow$ Loc6
+\item \textit{Enumerator} B = Loc6 $\rightarrow$ Loc2 $\rightarrow$ Loc16 $\rightarrow$ Loc3
+\item \textit{Enumerator} C = Loc4 $\rightarrow$ Loc8 $\rightarrow$ Loc14 $\rightarrow$ Loc 7
+\item \textit{Enumerator} D = Loc9 $\rightarrow$ Loc10 $\rightarrow$ Loc11 $\rightarrow$ Loc12
 \end{itemize}
 where Loc is the location to visit. 
 
-The total time for each route is calculated by summing up the service time and the transport time of all locations in that route. Standard deviation is used to compare the accuracy of output from both proposed and benchmark program. Standard deviation is chosen as the metric because it gives the insight about the output's diversity, whether it is close to the average or spread out over a wide range. The idea is the smaller variance of total time between each enumerator, the more equal and fairer the enumeration. Therefore, a better program will have a smaller standard deviation.
+The total days spent for each enumerator route is calculated by summing up the service time and the transport time of all locations in that route, which every day is limited by 8 (eight) work hours. After that, the total days and standard deviation from all enumerators can be calculated.
 
-(\autoref{fig:test_result_normal_cordeau_coes_paper}) and (\autoref{fig:test_result_normal_cordeau_pubsub_coes_paper}) show the routes generated by the benchmark and proposed program, respectively, using Cordeau's data in normal condition. The test result, as can be seen in \autoref{tbl:test_result_normal_cordeau_comparison}, shows that the pre-calculated routes generated by benchmark program yield an insignificant 0.029\% lower total time (905,018.39 seconds) compared with that of the proposed program (905,281.55 seconds). However, the benchmark program has a standard deviation of 49,715.99 seconds, which is more than 3 (three) times higher than that of the proposed program (15,496.22 seconds). 
+Standard deviation is chosen as a metric because it represents the actual condition, where the low standard deviation means the total number of days spent more evenly for all enumerators. Therefore, a better program will have a smaller standard deviation.
 
-\begin{table}[!]
+%-----------------------------------------------------------------------------%
+\subsection{Experimental Result}
+\label{ssec:experimental-result}
+%-----------------------------------------------------------------------------%
+
+\textbf{Normal scenario.} In the testing process, each dataset instance is executed 100 times to prove that the results obtained during the test have a low standard error. Based on the test result using field data and using the assumption of normal condition, where there are no obstacles in enumeration, all tested instances resulted that the average of enumeration day between the proposed system and the comparison program are the same, that is 13 days for each enumerator, as depicted in  \autoref{fig:test_result_real_tw_mean_of_total_time}. In terms of standard deviation, however, it shows that the proposed system yields a lower standard deviation on all instances, as depicted in \autoref{fig:test_result_real_tw_stdev_of_total_time}.
+
+In line with the average number of enumeration days and standard deviation, using the proposed system, the amount of time spent waiting until all enumerators complete their enumeration is lower than the comparison program, as figured in \autoref{fig:test_result_real_tw_mean_stdev_of_total_time}. So it can be concluded the proposed system is more efficient than the comparison system.
+
+Based on the testing of normal conditions, it can be concluded that the proposed system can provide better recommendations. It means, the variation of the day of enumeration using the proposed system is lower, so the time required to wait for all enumerators to complete the enumeration is lower than the proposed program.
+
+\begin{figure}[!]
 	\centering
-	\ra{1.3}
-	\caption{The comparison between CoEAs algorithm and Pub/Sub + CoEAs algorithm for the Cordeau data}
-	\label{tbl:test_result_normal_cordeau_comparison}
-	\begin{tabular}{lrr}
-		\toprule
-		Units & CoEAs & CoEAs + Pub/Sub\\ 
-		\midrule
-		Total time (s) & \textbf{905,018.39} & 905,281.55\\
-		Mean of time (s) & \textbf{226,254.60} & 226,320.39\\
-		Std. Dev of time (s) & 49,715.99 & \textbf{15,496.22}\\
-		\bottomrule
-	\end{tabular}
-\end{table}
+	\includegraphics[width=8.7cm]{Resources/Images/test_result_real_tw_mean_of_total_time_en}
+	\caption{The average days spent by each enumerator from 100 tests normal condition on field dataset}
+	\label{fig:test_result_real_tw_mean_of_total_time}
+\end{figure}
 
-Similarly, the test using real administrative data in normal condition, as can be seen in \autoref{tbl:test_result_normal_field_comparison}, shows that pre-calculated routes from benchmark program return a smaller total time, yet a higher standard deviation compared with that of the proposed program. The benchmark program outputs a total time of 3,373,390.19 seconds and standard deviation of 91,123.23 seconds, while the proposed program gives a total time of 3,676,718.19 seconds and standard deviation of 37,261.85 seconds. The proposed program returns an output with a 0.52\% higher total time, yet a 59.1\% lower standard deviation, which is almost 3 (three) times lower than that of the benchmark program. (\autoref{fig:test_result_normal_field_coes_paper}) and (\autoref{fig:test_result_normal_field_pubsub_coes_paper}) show the routes generated by the benchmark and proposed program, respectively, using real administrative data in normal condition. 
-
-
-\begin{table}[!]
+\begin{figure}[!]
 	\centering
-	\ra{1.3}
-	\caption{The comparison between CoEAs algorithm and Pub/Sub + CoEAs algorithm for the real field data}
-	\label{tbl:test_result_normal_field_comparison}
-	\begin{tabular}{lrr}
-		\toprule
-		Units & CoEAs & CoEAs + Pub/Sub\\ 
-		\midrule
-		Total time (s) & \textbf{3,373,390.19} & 3,676,718.19\\
-		Mean of time (s) & \textbf{224,892.68} & 245,114.55\\
-		Std. Dev of time (s) & 91,123.23 & \textbf{37,261.85}\\
-		\bottomrule
-	\end{tabular}
-\end{table}
+	\includegraphics[width=8.7cm]{Resources/Images/test_result_real_tw_stdev_of_total_time_en}
+	\caption{The standard deviation days spent by each enumerator from 100 tests normal condition on field dataset}
+	\label{fig:test_result_real_tw_stdev_of_total_time}
+\end{figure}
 
-\begin{figure*}[h!]
+\begin{figure}[!]
 	\centering
-	\begin{subfigure}[t]{0.5\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_cordeau_coes_paper}
-		\caption{MDVRP based on CoEAS}
-		\label{fig:test_result_normal_cordeau_coes_paper}
-	\end{subfigure}%
-	~ 
-	\begin{subfigure}[t]{0.5\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_cordeau_pubsub_coes_paper}
-		\caption{Publish/Subscribe + MDVRP based on CoEAS}
-		\label{fig:test_result_normal_cordeau_pubsub_coes_paper}
-	\end{subfigure}
-	\caption{The comparison of routes between MDVRP based on CoEAS and publish/subscribe + MDVRP based on CoEAS for Cordeau data}
-	\label{fig:test_result_normal_cordeau_comparison}
-\end{figure*}
+	\includegraphics[width=8.7cm]{Resources/Images/test_result_real_tw_mean_stdev_of_total_time_en}
+	\caption{The maximum days spent by each enumerator from 100 tests normal condition on field dataset}
+	\label{fig:test_result_real_tw_mean_stdev_of_total_time}
+\end{figure}
 
-\begin{figure*}[h!]
+\textbf{Delay scenario.} Similar to testing in a normal scenario, testing on a delay scenario is also executed 100 times each instance . Contrast with the results of the tests in the normal scenario, the results obtained in the test with the delay scenario show that the average day spent by an enumerator in the proposed system is longer than the benchmark program in all instances, as figured in \autoref{fig:test_result_delay_real_tw_mean_of_total_time}. However, the standard deviation of the proposed system is lower than that of the benchmark program, as depicted in \autoref{fig:test_result_delay_real_tw_stdev_of_total_time}, so the proposed system is more evenly distributed in term of day of the enumeration.
+
+Although the average number of enumeration days using the proposed system takes longer time, the proposed system is still more efficient when applied to relatively low delay. \autoref{fig:test_result_delay_real_tw_mean_stdev_of_total_time} shows that using the proposed system, the total number of days required to wait until all enumerators completed their enumeration is lower in the instance with the relatively low delay, which are d01, d02, and d04. While in the instance with high delay, which are d03, d05, and d06, the benchmark program gives more efficient results.
+
+\begin{figure}[!]
 	\centering
-	\begin{subfigure}[t]{0.5\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_field_coes_paper}
-		\caption{MDVRP based on CoEAS}
-		\label{fig:test_result_normal_field_coes_paper}
-	\end{subfigure}%
-	~ 
-	\begin{subfigure}[t]{0.5\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Resources/Images/test_result_normal_field_pubsub_coes_paper}
-		\caption{Publish/Subscribe + MDVRP based on CoEAS}
-		\label{fig:test_result_normal_field_pubsub_coes_paper}
-	\end{subfigure}
-	\caption{The comparison of routes between MDVRP based on CoEAS and publish/subscribe + MDVRP based on CoEAS for real administrative data}
-	\label{fig:test_result_normal_field_comparison}
-\end{figure*}
+	\includegraphics[width=8.7cm]{Resources/Images/test_result_delay_real_tw_mean_of_total_time_en}
+	\caption{The average days spent by each enumerator from 100 tests delay condition on field dataset}
+	\label{fig:test_result_delay_real_tw_mean_of_total_time}
+\end{figure}
 
+\begin{figure}[!]
+	\centering
+	\includegraphics[width=8.7cm]{Resources/Images/test_result_delay_real_tw_stdev_of_total_time_en}
+	\caption{The standard deviation days spent by each enumerator from 100 tests delay condition on field dataset}
+	\label{fig:test_result_delay_real_tw_stdev_of_total_time}
+\end{figure}
+
+\begin{figure}[!]
+	\centering
+	\includegraphics[width=8.7cm]{Resources/Images/test_result_delay_real_tw_mean_stdev_of_total_time_en}
+	\caption{The maximum days spent by each enumerator from 100 tests delay condition on field dataset}
+	\label{fig:test_result_delay_real_tw_mean_stdev_of_total_time}
+\end{figure}
 
 %-----------------------------------------------------------------------------%
 \section{Conclusion and Future Works}
 \label{sec:conclusion-future-works}
 %-----------------------------------------------------------------------------%
-This paper is aimed to solve the problem found in MDVRP based on CoEAS when used for generating a recommendation for enumeration locations. The proposed solution is to combine MDVRP based on CoEAS with publish/subscribe mechanism. The proposed system architecture consists of 2 main components: the publisher and the message broker. The publisher contains a VRP solver which utilizes CoEAs algorithm. 
+This paper is aimed to solve the problem found in MDVRP based on CoEAS when used for generating a recommendation for enumeration locations. The proposed solution is to combine MDVRP based on CoEAS with publish/subscribe mechanism. The proposed system consists of 2 main components: the publisher and the message broker. The publisher contains a VRP solver which utilizes CoEAs algorithm.
 
-
-The proposed system is tested using Cordeau's data and real administrative data, which shows that routes generated by proposed program are more prevalent in total route times compared with the pre-calculated routes produced by the benchmark program.
-
+Based on the results of the test using field data, the results show that the proposed system provides better results than the benchmark program on a scenario with no delay and a low delay scenario. While in scenarios with high delay, benchmark programs provide better results than proposed systems.
 
 Publish/subscribe mechanism is not the only option that can be used to develop a real-time system. Further studies using other mechanisms such as Push/Pull and Request/Reply mechanism is required for comparison. A research on analyzing the performance of each mechanism in varying network conditions are also necessary to create a simulation of real field conditions.
 

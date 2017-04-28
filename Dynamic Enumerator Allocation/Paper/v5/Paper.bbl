@@ -30,38 +30,6 @@ J.~R. Montoya-Torres, J.~López~Franco, S.~Nieto~Isaza, H.~Felizzola~Jiménez,
   \url{http://www.sciencedirect.com/science/article/pii/S036083521400360X}
 \BIBentrySTDinterwordspacing
 
-\bibitem{renaud_tabu_1996}
-\BIBentryALTinterwordspacing
-J.~Renaud, G.~Laporte, and F.~F. Boctor, ``A tabu search heuristic for the
-  multi-depot vehicle routing problem,'' \emph{Computers \& Operations
-  Research}, vol.~23, no.~3, pp. 229--235, Mar. 1996. [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/0305054895O0026P}
-\BIBentrySTDinterwordspacing
-
-\bibitem{engelbrecht_coevolution_2007}
-\BIBentryALTinterwordspacing
-A.~P. Engelbrecht, ``\BIBforeignlanguage{en}{Coevolution},'' in
-  \emph{\BIBforeignlanguage{en}{Computational {Intelligence}}}.\hskip 1em plus
-  0.5em minus 0.4em\relax John Wiley \& Sons, Ltd, 2007, pp. 275--283, dOI:
-  10.1002/9780470512517.ch15. [Online]. Available:
-  \url{http://onlinelibrary.wiley.com.proxy.lib.odu.edu/doi/10.1002/9780470512517.ch15/summary}
-\BIBentrySTDinterwordspacing
-
-\bibitem{eugster_many_2003}
-\BIBentryALTinterwordspacing
-P.~T. Eugster, P.~A. Felber, R.~Guerraoui, and A.-M. Kermarrec, ``The many
-  faces of publish/subscribe,'' \emph{ACM computing surveys (CSUR)}, vol.~35,
-  no.~2, pp. 114--131, 2003. [Online]. Available:
-  \url{http://dl.acm.org/citation.cfm?id=857078}
-\BIBentrySTDinterwordspacing
-
-\bibitem{muhl_large-scale_2002}
-\BIBentryALTinterwordspacing
-G.~Mühl, ``Large-scale content-based publish-subscribe systems,'' Ph.D.
-  dissertation, TU Darmstadt, 2002. [Online]. Available:
-  \url{http://tuprints.ulb.tu-darmstadt.de/274}
-\BIBentrySTDinterwordspacing
-
 \bibitem{cordeau_tabu_1997}
 \BIBentryALTinterwordspacing
 J.-F. Cordeau, M.~Gendreau, and G.~Laporte, ``\BIBforeignlanguage{en}{A tabu
@@ -129,6 +97,30 @@ F.~B. de~Oliveira, R.~Enayatifar, H.~J. Sadaei, F.~G. Guimarães, and J.-Y.
   \url{http://www.sciencedirect.com/science/article/pii/S0957417415005771}
 \BIBentrySTDinterwordspacing
 
+\bibitem{engelbrecht_coevolution_2007}
+\BIBentryALTinterwordspacing
+A.~P. Engelbrecht, ``\BIBforeignlanguage{en}{Coevolution},'' in
+  \emph{\BIBforeignlanguage{en}{Computational {Intelligence}}}.\hskip 1em plus
+  0.5em minus 0.4em\relax John Wiley \& Sons, Ltd, 2007, pp. 275--283, dOI:
+  10.1002/9780470512517.ch15. [Online]. Available:
+  \url{http://onlinelibrary.wiley.com.proxy.lib.odu.edu/doi/10.1002/9780470512517.ch15/summary}
+\BIBentrySTDinterwordspacing
+
+\bibitem{eugster_many_2003}
+\BIBentryALTinterwordspacing
+P.~T. Eugster, P.~A. Felber, R.~Guerraoui, and A.-M. Kermarrec, ``The many
+  faces of publish/subscribe,'' \emph{ACM computing surveys (CSUR)}, vol.~35,
+  no.~2, pp. 114--131, 2003. [Online]. Available:
+  \url{http://dl.acm.org/citation.cfm?id=857078}
+\BIBentrySTDinterwordspacing
+
+\bibitem{muhl_large-scale_2002}
+\BIBentryALTinterwordspacing
+G.~Mühl, ``Large-scale content-based publish-subscribe systems,'' Ph.D.
+  dissertation, TU Darmstadt, 2002. [Online]. Available:
+  \url{http://tuprints.ulb.tu-darmstadt.de/274}
+\BIBentrySTDinterwordspacing
+
 \bibitem{banavar_efficient_1999}
 \BIBentryALTinterwordspacing
 G.~Banavar, T.~Chandra, B.~Mukherjee, J.~Nagarajarao, R.~E. Strom, and D.~C.
@@ -139,18 +131,18 @@ G.~Banavar, T.~Chandra, B.~Mukherjee, J.~Nagarajarao, R.~E. Strom, and D.~C.
   \url{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=776528}
 \BIBentrySTDinterwordspacing
 
+\bibitem{google_google_2016}
+\BIBentryALTinterwordspacing
+G.~Google, ``Google {Maps} {Directions} {API},'' 2016. [Online]. Available:
+  \url{https://developers.google.com/maps/documentation/directions/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{sudman_time_1965}
 \BIBentryALTinterwordspacing
 S.~Sudman, ``Time {Allocation} in {Survey} {Interviewing} and in {Other}
   {Field} {Occupations},'' \emph{The Public Opinion Quarterly}, vol.~29, no.~4,
   pp. 638--648, 1965. [Online]. Available:
   \url{http://www.jstor.org.proxy.lib.odu.edu/stable/2747041}
-\BIBentrySTDinterwordspacing
-
-\bibitem{google_google_2016}
-\BIBentryALTinterwordspacing
-G.~Google, ``Google {Maps} {Directions} {API},'' 2016. [Online]. Available:
-  \url{https://developers.google.com/maps/documentation/directions/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
