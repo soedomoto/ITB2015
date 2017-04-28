@@ -6,6 +6,8 @@
 %-----------------------------------------------------------------------------%
 \section{Latar Belakang}
 %-----------------------------------------------------------------------------%
+
+
 Badan Pusat Statistik (BPS) merupakan suatu lembaga pemerintah non-departemen yang bertanggung jawab dalam penyediaan statistik dasar di Indonesia \citep{bps_badan_2016}. Sebagai penyedia data, BPS melakukan pengumpulan data dengan menggunakan 2 (dua) metode, yaitu primer dan sekunder. Pengumpulan data primer dilakukan melalui wawancara langsung terhadap responden, baik responden individu, rumah tangga, maupun perusahaan. Di sisi lain, pengumpulan data sekunder dilakukan dengan melakukan kompilasi data yang telah dikumpulkan oleh pihak lain, tanpa adanya proses wawancara. 
 
 
@@ -52,7 +54,7 @@ Penyelesaian MDVRP bertujuan untuk mendapatkan solusi dengan total biaya terkeci
 	\item Total permintaan/\textit{demand} dari seluruh konsumen pada setiap rute tidak melebihi kapasitas dari kendaraan.
 \end{enumerate}
 
-Terdapat 2 (dua) variabel yang dapat mempengaruhi solusi atau rute yang dihasilkan, yaitu waktu tempuh antar konsumen dan lama pelayanan pada setiap konsumen. Kedua variabel ini analog dengan waktu tempuh antar wilayah kerja dan lama pencacahan dari setiap wilayah kerja pada permasalahan alokasi wilayah kerja. Lebih jauh lagi, terkait dengan terminologi yang digunakan, pencacah dapat dianalogikan sebagai kendaraan, wilayah kerja dimisalkan sebagai konsumen, dan lokasi dimana pencacah memulai perjalanan (rumah atau kantor) dapat diibaratkan sebagai depot.
+Terdapat 2 (dua) variabel yang dapat mempengaruhi solusi atau rute yang dihasilkan, yaitu waktu tempuh antar konsumen dan lama pelayanan pada setiap konsumen. Kedua variabel ini analog dengan waktu tempuh antar wilayah kerja dan lama pencacahan dari setiap wilayah kerja pada permasalahan alokasi wilayah kerja. Lebih jauh lagi, terkait dengan terminologi yang digunakan, pencacah dapat dianalogikan sebagai kendaraan, wilayah kerja dimisalkan sebagai konsumen, dan lokasi di mana pencacah memulai perjalanan (rumah atau kantor) dapat diibaratkan sebagai depot.
 
 Lama tempuh antar wilayah kerja dapat diestimasi dengan beberapa pendekatan, seperti melalui perkiraan, survei lokasi, atau menggunakan \textit{service} seperti Google Direction API \citep{google_google_2016}. Akan tetapi, lama pelayanan pada setiap wilayah kerja tidak dapat diketahui hingga wilayah kerja tersebut selesai dicacah. Hal ini menyebabkan rute-rute yang dihasilkan berpotensi memiliki standar deviasi dan bias yang tinggi. \autoref{fig:illustration-timeline-mdvrp} memberikan ilustrasi untuk potensi masalah ini yang dijabarkan sebagai berikut:
 

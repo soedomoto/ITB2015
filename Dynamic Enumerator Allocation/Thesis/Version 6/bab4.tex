@@ -15,8 +15,8 @@ Pada kondisi saat ini (sistem berjalan), lokasi pencacahan sudah ditentukan seja
 Untuk mengatasi masalah ini, algoritma MDVRP dipilih karena memiliki karakteristik yang serupa dengan permasalahan alokasi petugas, yakni: 
 
 \begin{enumerate}
-	\item Terdapat lebih dari satu kendaraan, dimana masing-masing kendaraan memiliki depot yang berbeda. Hal ini analog dengan permasalahan alokasi petugas, dimana ada lebih dari satu pencacah dan tiap-tiap pencacah memiliki titik mulai pencacahan yang berbeda. 
-	\item Terdapat biaya yang harus dikeluarkan untuk melakukan perjalanan dari satu pelanggan ke pelanggan yang lain. Ini sejalan dengan konsep dalam pencacahan dimana terdapat biaya untuk mengunjungi satu responden ke responden lainnya. 
+	\item Terdapat lebih dari satu kendaraan. Tiap-tiap kendaraan memiliki depot yang berbeda. Hal ini analog dengan permasalahan alokasi petugas yang melibatkan lebih dari satu pencacah dan tiap-tiap pencacah memiliki titik mulai pencacahan yang berbeda. 
+	\item Terdapat biaya yang harus dikeluarkan untuk melakukan perjalanan dari satu pelanggan ke pelanggan yang lain. Ini sejalan dengan konsep dalam pencacahan, yaitu terdapat biaya untuk mengunjungi satu responden ke responden lainnya. 
 \end{enumerate}
 
 Pada proses pencacahan, biaya dapat berupa waktu tempuh, jarak tempuh, atau biaya perjalanan. Dalam penelitian ini, waktu tempuh dipilih sebagai representasi dari biaya karena waktu tempuh menggambarkan tingkat kesulitan akses dalam mengunjungi tiap-tiap wilayah kerja. Semakin sulit akses ke suatu wilayah, semakin lama waktu tempuh yang diperlukan. 
@@ -69,7 +69,7 @@ Merujuk kepada konsep MDVRP, lokasi pencacahan dapat dianalogikan sebagai pelang
 %-----------------------------------------------------------------------------%
 \subsubsection{Petugas Pencacahan}
 %-----------------------------------------------------------------------------%
-Berdasarkan konsep MDVRP, petugas pencacahan diibaratkan sebagai kendaraan yang harus berpindah dari satu lokasi ke lokasi lain secara berurutan. Selain memiliki atribut ID, masing-masing pencacah juga dilengkapi dengan atribut depot, yaitu lokasi dimana pencacah harus memulai dan mengakhiri kunjungan. Eksperimen ini menggunakan 15 pencacah dengan lokasi depot yang bervariasi, seperti contoh yang tercantum pada \autoref{tbl:enumerator}.
+Berdasarkan konsep MDVRP, petugas pencacahan diibaratkan sebagai kendaraan yang harus berpindah dari satu lokasi ke lokasi lain secara berurutan. Selain memiliki atribut ID, masing-masing pencacah juga dilengkapi dengan atribut depot, yaitu lokasi di mana pencacah harus memulai dan mengakhiri kunjungan. Eksperimen ini menggunakan 15 pencacah dengan lokasi depot yang bervariasi, seperti contoh yang tercantum pada \autoref{tbl:enumerator}.
 
 
 \begin{table*}[!]
@@ -369,14 +369,14 @@ $$ \sigma = 88,95 jam $$
 
 Nilai standar deviasi yang tinggi menunjukkan terjadinya ketidakmerataan beban kerja antar pencacah. Ini sekaligus menunjukkan bahwa algoritma MDVRP murni kurang ideal untuk digunakan dalam penentuan rekomendasi. Hal ini terjadi karena algoritma MDVRP memproduksi solusi berupa \textit{precalculated routes} (rute yang harus dikunjungi dari awal hingga akhir tugas pencacahan) tanpa memperhitungkan faktor lamanya waktu kunjungan pada satu lokasi pencacahan. Variabel lama waktu pencacahan hanya akan tersedia jika suatu lokasi sudah selesai dikunjungi sehingga tidak bisa diikutsertakan dalam kalkulasi rekomendasi. \autoref{fig:illustration-timeline-mdvrp-no-service-time} menunjukkan ilustrasi ketidaksesuaian penggunaan algoritma MDVRP murni pada permasalahan alokasi petugas pencacahan yang dapat dijabarkan sebagai berikut:
 \begin{enumerate}
-	\item Terdapat 10 lokasi pencacahan yang harus dikunjungi. algoritma MDVRP menciptakan solusi berupa \textit{precalculated routes} untuk petugas A dan B, dimana masing-masing mendapatkan jumlah beban tugas yang sama besar, yakni 5 lokasi. Pada tahap ini, petugas A dan B sama-sama sudah mengetahui urutan lokasi yang akan mereka kunjungi dari awal hingga akhir kegiatan pencacahan. 
+	\item Terdapat 10 lokasi pencacahan yang harus dikunjungi. Algoritma MDVRP menciptakan solusi berupa \textit{precalculated routes} untuk petugas A dan B. Tiap-tiap petugas mendapatkan jumlah beban tugas yang sama besar, yakni 5 lokasi. Pada tahap ini, petugas A dan B sama-sama sudah mengetahui urutan lokasi yang akan mereka kunjungi dari awal hingga akhir kegiatan pencacahan. 
 	\item Petugas pencacahan A dan B sama-sama memulai tugas pada waktu $t_{s}$ (\textit{time start}) yang digambarkan sebagai segmen berwarna hijau.
 	\item Petugas A dan B mengunjungi lokasi pencacahan masing-masing (lokasi \textit{i}) yang memakan waktu selama $t_{i}$ (segmen berwarna putih). Perlu diingat bahwa lokasi $i$ yang dituju oleh petugas A berbeda dengan lokasi $i$ yang dituju oleh petugas B.
 	\item Pada setiap lokasi $i$, baik petugas A maupun petugas B memerlukan waktu sebesar $t_{i.1}$ untuk menyelesaikan tugas pencacahan (segmen berwarna biru).  
 	\item Petugas A dan B menyelesaikan tugas pada waktu $t_{f}$ (\textit{time finish}) yang digambarkan sebagai segmen berwarna merah muda. 
 \end{enumerate}
 
-Dari \autoref{fig:illustration-timeline-mdvrp-no-service-time}, terlihat bahwa kalkulasi rekomendasi rute tanpa melibatkan lama pencacahan mengakibatkan $t_{i}$ dan $t_{i.1}$ yang tidak setara antara petugas A dan B. Hal ini terlihat dari posisi $t_{f}$ petugas A yang jauh berbeda dengan posisi $t_{f}$ petugas B pada \textit{timeline} masing-masing. Petugas A mendapatkan rute dengan rata-rata \textit{service time} ($t_{i.1}$) yang lebih panjang sehingga $t_{f}$ petugas A menjadi lebih besar dibandingkan $t_{f}$ petugas B. Perbedaan yang paling signifikan terlihat pada lokasi pencacahan kedua ($i = 2$) dimana petugas A memiliki $t_{2.1}$ yang hampir 3 (tiga) kali lebih besar dari $t_{2.1}$ petugas B. Sebagai dampaknya, terjadi ketimpangan dalam total waktu penyelesaian pencacahan antar petugas, dimana beban tugas petugas A menjadi jauh lebih berat dibandingkan petugas B. 
+Dari \autoref{fig:illustration-timeline-mdvrp-no-service-time}, terlihat bahwa kalkulasi rekomendasi rute tanpa melibatkan lama pencacahan mengakibatkan $t_{i}$ dan $t_{i.1}$ yang tidak setara antara petugas A dan B. Hal ini terlihat dari posisi $t_{f}$ petugas A yang jauh berbeda dengan posisi $t_{f}$ petugas B pada \textit{timeline} masing-masing. Petugas A mendapatkan rute dengan rata-rata \textit{service time} ($t_{i.1}$) yang lebih panjang sehingga $t_{f}$ petugas A menjadi lebih besar dibandingkan $t_{f}$ petugas B. Perbedaan yang paling signifikan terlihat pada lokasi pencacahan kedua ($i = 2$), ketika petugas A memiliki $t_{2.1}$ yang hampir 3 (tiga) kali lebih besar dari $t_{2.1}$ petugas B. Sebagai dampaknya, terjadi ketimpangan dalam total waktu penyelesaian pencacahan antar petugas. Beban tugas petugas A menjadi jauh lebih berat dibandingkan petugas B. 
 
 \begin{figure}[!]
 	\centering
@@ -402,12 +402,12 @@ Hasil eksperimen pada \autoref{ssec:hasil-analisis} menunjukkan bahwa mekanisme 
 	\item A dan B berjalan menuju lokasi pencacahan masing-masing (lokasi \textit{i}) yang memerlukan waktu tempuh sebesar $t_{i.1}$ (segmen berwarna putih). Lokasi $i$ yang dituju oleh petugas A berbeda dengan lokasi $i$ yang dituju oleh petugas B.
 	\item A dan B menyelesaikan tugas pencacahan di lokasi pertama yang menghabiskan waktu sebesar $t_{i.2}$ (segmen berwarna biru).
 	\item Setelah menyelesaikan tugas di lokasi pertama, A dan B mengirimkan \textit{request} ke server untuk mengetahui lokasi berikutnya yang harus dikunjungi. Server kemudian melakukan rekalkulasi rute dengan melakukan pengecekan terhadap 8 lokasi yang belum dikunjungi dan mencocokkannya dengan `lokasi terkini' dari petugas. Lokasi pencacahan berikutnya yang merupakan lokasi terbaik jika dihitung dari `lokasi terkini', akan dikirimkan sebagai balasan terhadap permintaan yang telah dikirimkan oleh petugas. 
-	\item A dan B melanjutkan tugas pencacahan ke lokasi berikutnya (lokasi $i = 2$), dimana setiap lokasi memerlukan waktu tempuh sebesar $t_{i.1}$ dan waktu penyelesaian pencacahan (\textit{service time}) sebesar $t_{i.2}$. Proses pada poin 2 hingga 6 akan terus berulang hingga seluruh lokasi target pencacahan selesai dikunjungi. 
+	\item A dan B melanjutkan tugas pencacahan ke lokasi berikutnya (lokasi $i = 2$). Setiap lokasi memerlukan waktu tempuh sebesar $t_{i.1}$ dan waktu penyelesaian pencacahan (\textit{service time}) sebesar $t_{i.2}$. Proses pada poin 2 hingga 6 akan terus berulang hingga seluruh lokasi target pencacahan selesai dikunjungi. 
 	\item Petugas A dan B menyelesaikan tugas pada waktu $t_{f}$ (segmen berwarna merah muda) yang hampir sama. Dari \autoref{fig:illustration-timeline-realtime-mdvrp} terlihat bahwa jumlah lokasi yang dikunjungi oleh petugas A lebih sedikit dibandingkan petugas B. Hal ini dikarenakan petugas A memerlukan waktu yang lebih lama untuk melakukan perjalanan ke lokasi serta menyelesaikan tugas pencacahan di lokasi tersebut. 
 \end{enumerate}
 
 
-Mayoritas \textit{real time system} diimplementasikan dengan menggunakan \textit{Web service}. Namun, sistem kerjanya yang \textit{synchronous} (\textit{request} dan \textit{reply} harus diproses secara berurutan) menyebabkan \textit{web service} tidak cocok digunakan untuk aplikasi yang bersifat \textit{information driven} \citep{muhl_large-scale_2002}. Sebagai alternatif, mekanisme \textit{publish/subscribe} dipilih karena memungkinkan terjadinya komunikasi yang \textit{asynchronous} antara \textit{server (publisher)} dan \textit{client (subscriber)}, dimana komunikasi tetap dapat berjalan walaupun salah satu pihak sedang dalam kondisi \textit{offline}.
+Mayoritas \textit{real time system} diimplementasikan dengan menggunakan \textit{Web service}. Namun, sistem kerjanya yang \textit{synchronous} (\textit{request} dan \textit{reply} harus diproses secara berurutan) menyebabkan \textit{web service} tidak cocok digunakan untuk aplikasi yang bersifat \textit{information driven} \citep{muhl_large-scale_2002}. Sebagai alternatif, mekanisme \textit{publish/subscribe} dipilih karena memungkinkan terjadinya komunikasi yang \textit{asynchronous} antara \textit{server (publisher)} dan \textit{client (subscriber)}, yaitu komunikasi yang tetap dapat berjalan walaupun salah satu pihak sedang dalam kondisi \textit{offline}.
 
 
 \begin{figure}[!]
@@ -433,7 +433,7 @@ Sistem usulan untuk rekomendasi lokasi pencacahan dirancang berdasarkan arsitekt
 \end{figure}
 
 
-Komunikasi antara \textit{publisher} dan \textit{subscriber} terjadi atas dasar kesamaan topik (\textit{event}). Topik diperoleh dari konteks setiap pencacah yang dapat berupa jenis kelamin, tingkat pendidikan, umur, pengalaman, atau domisili/lokasi pencacah. Pada penelitian ini, `lokasi terkini' dari pencacah dipilih sebagai topik karena bersifat unik, dimana setiap lokasi pencacahan hanya akan dikunjungi oleh satu orang pencacah saja dan tidak akan ada lebih dari satu pencacah dengan `lokasi terkini' yang sama.
+Komunikasi antara \textit{publisher} dan \textit{subscriber} terjadi atas dasar kesamaan topik (\textit{event}). Topik diperoleh dari konteks setiap pencacah yang dapat berupa jenis kelamin, tingkat pendidikan, umur, pengalaman, atau domisili/lokasi pencacah. Pada penelitian ini, `lokasi terkini' dari pencacah dipilih sebagai topik karena bersifat unik, yaitu setiap lokasi pencacahan hanya akan dikunjungi oleh satu orang pencacah saja dan tidak akan ada lebih dari satu pencacah dengan `lokasi terkini' yang sama.
 
 
 %-----------------------------------------------------------------------------%
@@ -490,7 +490,7 @@ Untuk setiap permintaan yang diterima, \textit{publisher} akan menyiapkan sebuah
 	\item Petugas B menyelesaikan pekerjaannya lebih cepat dari petugas A dan segera mengirimkan permintaan `lokasi pencacahan berikutnya'. Sistem kemudian menghitung dan mengirimkan `lokasi berikutnya' berdasarkan `lokasi terkini' dari petugas B. 
 	\item Jika kalkulasi rute hanya melibatkan 1 petugas yang bersangkutan saja, maka \textit{VRPSolver procedure} akan merekomendasikan lokasi terdekat dari `lokasi terkini' petugas B, yakni lokasi 7. Namun, solusi yang dibuat berdasarkan sudut pandang lokal (\textit{local best solution}) seperti ini, dapat `merugikan' petugas lain yang tidak ikut dalam penghitungan. 
 	\item Sebagai gambaran, misalkan saat A selesai melakukan pencacahan dan mengirimkan permintaan `lokasi berikutnya', lokasi 7 sudah tidak tersedia lagi bagi A. Rekomendasi terbaik yang bisa diberikan oleh sistem adalah lokasi 1 yang memiliki jarak yang cukup jauh dari A. 
-	\item Rekomendasi yang lebih tepat dapat diperoleh jika kalkulasi rute mengikutsertakan seluruh pencacah. Pelibatan terhadap `lokasi terkini' dari seluruh petugas akan menghasilkan solusi yang terbaik dari sudut pandang seluruh pencacah (\textit{global best solution}) dimana petugas B akan mendapatkan lokasi 3 dan petugas A akan mendapatkan lokasi 7. 
+	\item Rekomendasi yang lebih tepat dapat diperoleh jika kalkulasi rute mengikutsertakan seluruh pencacah. Pelibatan terhadap `lokasi terkini' dari seluruh petugas akan menghasilkan solusi yang terbaik dari sudut pandang seluruh pencacah (\textit{global best solution}), sehingga petugas B akan mendapatkan lokasi 3 dan petugas A akan mendapatkan lokasi 7. 
 
 \end{enumerate}
 
@@ -532,7 +532,7 @@ Proses pencarian solusi akan berakhir ketika sudah tidak ada lagi lokasi pencaca
 \end{algorithm}
 
 
-Jumlah rute yang dihasilkan oleh \textit{VRPSolver} akan berkisar antara 1 (satu) hingga $M$ rute, dimana $M$ merujuk pada jumlah seluruh petugas pencacahan yang diikutsertakan dalam kalkulasi rute. Setiap rute $R_m$ $(1 \leq m \leq M)$ yang dihasilkan oleh \textit{VRPSolver} akan dikirimkan kepada petugas $m$ yang merupakan \textit{subscriber} topik (lokasi) $C_n$ $(1 \leq n \leq N)$. \textit{Message broker} kemudian akan melaporkan status pengiriman informasi kepada \textit{publisher} (\textit{`success'} atau \textit{`failed'}). Mekanisme kerja \textit{publisher} rekomendasi diilustrasikan dengan menggunakan \textit{flowchart} pada \autoref{fig:recommendation-publisher}.
+Jumlah rute yang dihasilkan oleh \textit{VRPSolver} akan berkisar antara 1 (satu) hingga $M$ rute. $M$ merujuk pada jumlah seluruh petugas pencacahan yang diikutsertakan dalam kalkulasi rute. Setiap rute $R_m$ $(1 \leq m \leq M)$ yang dihasilkan oleh \textit{VRPSolver} akan dikirimkan kepada petugas $m$ yang merupakan \textit{subscriber} topik (lokasi) $C_n$ $(1 \leq n \leq N)$. \textit{Message broker} kemudian akan melaporkan status pengiriman informasi kepada \textit{publisher} (\textit{`success'} atau \textit{`failed'}). Mekanisme kerja \textit{publisher} rekomendasi diilustrasikan dengan menggunakan \textit{flowchart} pada \autoref{fig:recommendation-publisher}.
 
 
 \begin{figure}[!]
@@ -558,10 +558,10 @@ Saat \textit{thread} B selesai diproses, \textit{thread} B tidak hanya menghasil
 \end{figure}
 
 
-Pada praktiknya, dapat terjadi suatu kondisi dimana \textit{VRPSolver procedure} gagal mendapatkan rute untuk petugas B. Pada kondisi demikian, \textit{thread} B akan diproses ulang dengan hanya melibatkan 1 (satu) petugas B saja dan sejumlah lokasi yang masih berstatus \textit{unassigned}. Ini dilakukan untuk memberikan jaminan bahwa akan selalu ada solusi/rute untuk setiap \textit{request}. 
+Pada praktiknya, dapat terjadi suatu kondisi ketika \textit{VRPSolver procedure} gagal mendapatkan rute untuk petugas B. Pada kondisi demikian, \textit{thread} B akan diproses ulang dengan hanya melibatkan 1 (satu) petugas B saja dan sejumlah lokasi yang masih berstatus \textit{unassigned}. Ini dilakukan untuk memberikan jaminan bahwa akan selalu ada solusi/rute untuk setiap \textit{request}. 
 
 
-Pada \autoref{ssec:pub-sub-mechanism} dijelaskan bahwa karakteristik \textit{loose coupling} pada mekanisme \textit{publish/subscribe} membuat \textit{publisher} dan \textit{subscriber} mampu berkomunikasi secara fleksibel, tanpa perlu mengetahui identitas masing-masing. Namun kondisi ini mengakibatkan informasi mengenai `lokasi terkini' dari \textit{subscriber} tidak dapat diperoleh. Untuk mengatasi hal ini, sistem dirancang dengan menyertakan \textit{shared memory}, dimana \textit{subscriber} dapat `menaruh' \textit{current location}-nya agar kemudian dapat  diakses oleh \textit{publisher}. 
+Pada \autoref{ssec:pub-sub-mechanism} dijelaskan bahwa karakteristik \textit{loose coupling} pada mekanisme \textit{publish/subscribe} membuat \textit{publisher} dan \textit{subscriber} mampu berkomunikasi secara fleksibel, tanpa perlu mengetahui identitas masing-masing. Namun kondisi ini mengakibatkan informasi mengenai `lokasi terkini' dari \textit{subscriber} tidak dapat diperoleh. Untuk mengatasi hal ini, sistem dirancang dengan menyertakan \textit{shared memory} yang dapat digunakan oleh \textit{subscriber} untuk menyimpan \textit{current location}-nya agar kemudian dapat  diakses oleh \textit{publisher}. 
 
 
 %Proses di atas akan terus berulang sampai seluruh lokasi telah di\textit{assign} kepada \textit{subscriber}. \autoref{fig:publisher-algorithm} mengilustrasikan \textit{workflow} dari algoritma yang digunakan pada \textit{recommendation publisher}.
@@ -585,7 +585,7 @@ Pada \autoref{ssec:pub-sub-mechanism} dijelaskan bahwa karakteristik \textit{loo
 Langkah-langkah yang digunakan dalam implementasi algoritma CoEAs pada \textit{VRPSolver} adalah sebagai berikut:
 \begin{enumerate}
 \item Definisi masalah \\
-Masalah didefinisikan sebagai kumpulan informasi tentang sejumlah $M$ petugas, $N$ lokasi pencacahan, dan $D$ \textit{initial location/depot}. Setiap lokasi $i$, dimana $i \in (D \cup N)$, dilengkapi dengan koordinat lokasi $(x_i, y_i)$. Setiap pasangan lokasi $i$ dan $j$, dimana $i, j \in (D \cup N)$, memiliki biaya sebesar $c_{ij}$ yang merepresentasikan waktu yang diperlukan untuk melakukan perjalanan dari $i$ ke $j$. 
+Masalah didefinisikan sebagai kumpulan informasi tentang sejumlah $M$ petugas, $N$ lokasi pencacahan, dan $D$ \textit{initial location/depot}. Setiap lokasi $i$, $i \in (D \cup N)$, dilengkapi dengan koordinat lokasi $(x_i, y_i)$. Setiap pasangan lokasi $i$ dan $j$, $i, j \in (D \cup N)$, memiliki biaya sebesar $c_{ij}$ yang merepresentasikan waktu yang diperlukan untuk melakukan perjalanan dari $i$ ke $j$. 
 
 \item Dekomposisi masalah \\
 Masalah yang telah didefinisikan sebelumnya akan didekomposisi (dipecah) menjadi beberapa \textit{chunk} submasalah agar proses kalkulasi rute dapat dilakukan secara paralel. 

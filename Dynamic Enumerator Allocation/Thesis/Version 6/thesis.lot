@@ -2,26 +2,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {IV.1}{\ignorespaces Lokasi Pencacahan\relax }}{30}{table.caption.25}
-\contentsline {table}{\numberline {IV.2}{\ignorespaces Pencacah\relax }}{31}{table.caption.26}
-\contentsline {table}{\numberline {IV.3}{\ignorespaces Data Jarak dan Waktu Tempuh\relax }}{32}{table.caption.28}
-\contentsline {table}{\numberline {IV.4}{\ignorespaces Waktu total dari setiap rute yang dihasilkan oleh JSprit\relax }}{36}{table.caption.30}
+\contentsline {table}{\numberline {1}{\ignorespaces Lokasi Pencacahan\relax }}{30}{table.caption.20}
+\contentsline {table}{\numberline {2}{\ignorespaces Pencacah\relax }}{31}{table.caption.21}
+\contentsline {table}{\numberline {3}{\ignorespaces Data Jarak dan Waktu Tempuh\relax }}{32}{table.caption.23}
+\contentsline {table}{\numberline {4}{\ignorespaces Waktu total dari setiap rute yang dihasilkan oleh JSprit\relax }}{36}{table.caption.25}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {V.1}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Cordeau\relax }}{61}{table.5.1}
-\contentsline {table}{\numberline {V.2}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Cordeau\relax }}{62}{table.5.2}
-\contentsline {table}{\numberline {V.3}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{64}{table.5.3}
-\contentsline {table}{\numberline {V.4}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{64}{table.5.4}
-\contentsline {table}{\numberline {V.5}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Delay dengan Waktu Pencacahan pada Data Lapangan\relax }}{69}{table.5.5}
-\contentsline {table}{\numberline {V.6}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Delay dengan Waktu Pencacahan pada Data Lapangan\relax }}{69}{table.5.6}
+\contentsline {table}{\numberline {1}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Cordeau\relax }}{61}{table.5.1}
+\contentsline {table}{\numberline {2}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Cordeau\relax }}{62}{table.5.2}
+\contentsline {table}{\numberline {3}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{64}{table.5.3}
+\contentsline {table}{\numberline {4}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Normal dengan Waktu Pencacahan pada Data Lapangan\relax }}{64}{table.5.4}
+\contentsline {table}{\numberline {5}{\ignorespaces Rata-rata Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Delay dengan Waktu Pencacahan pada Data Lapangan\relax }}{69}{table.5.5}
+\contentsline {table}{\numberline {6}{\ignorespaces Standar Deviasi Lama Pencacahan Masing-masing Petugas (Hari) Dari 100 Pengujian Kondisi Delay dengan Waktu Pencacahan pada Data Lapangan\relax }}{69}{table.5.6}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {.1}{\ignorespaces Hasil pengujian kondisi normal pada data lapangan \textit {instance} tw01 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{1}{table.0.1}
-\contentsline {table}{\numberline {.2}{\ignorespaces Hasil pengujian kondisi normal pada data lapangan \textit {instance} tw02 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{4}{table.0.2}
-\contentsline {table}{\numberline {.3}{\ignorespaces Hasil pengujian kondisi normal pada data lapangan \textit {instance} tw03 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{7}{table.0.3}
-\contentsline {table}{\numberline {.4}{\ignorespaces Hasil pengujian kondisi normal pada data lapangan \textit {instance} tw04 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{10}{table.0.4}
-\contentsline {table}{\numberline {.5}{\ignorespaces Hasil pengujian kondisi \textit {delay} pada data lapangan \textit {instance} d01 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{14}{table.0.5}
-\contentsline {table}{\numberline {.6}{\ignorespaces Hasil pengujian kondisi \textit {delay} pada data lapangan \textit {instance} d02 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{17}{table.0.6}
-\contentsline {table}{\numberline {.7}{\ignorespaces Hasil pengujian kondisi \textit {delay} pada data lapangan \textit {instance} d03 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{20}{table.0.7}
-\contentsline {table}{\numberline {.8}{\ignorespaces Hasil pengujian kondisi \textit {delay} pada data lapangan \textit {instance} d04 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{23}{table.0.8}
-\contentsline {table}{\numberline {.9}{\ignorespaces Hasil pengujian kondisi \textit {delay} pada data lapangan \textit {instance} d05 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{27}{table.0.9}
-\contentsline {table}{\numberline {.10}{\ignorespaces Hasil pengujian kondisi \textit {delay} pada data lapangan \textit {instance} d06 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{30}{table.0.10}
-\contentsline {table}{\numberline {.11}{\ignorespaces Hasil pengujian kondisi \textit {delay} pada data lapangan \textit {instance} d07 dengan menggunakan sistem usulan (algoritma MDVRP berbasis CoEAs dan mekanisme Publish/Subscribe)\relax }}{33}{table.0.11}

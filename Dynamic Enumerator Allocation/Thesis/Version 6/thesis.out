@@ -1,84 +1,79 @@
-\BOOKMARK [0][-]{section*.1}{HALAMAN JUDUL}{}% 1
-\BOOKMARK [0][-]{section*.3}{LEMBAR PERSETUJUAN}{}% 2
-\BOOKMARK [0][-]{section*.4}{LEMBAR PERNYATAAN ORISINALITAS}{}% 3
-\BOOKMARK [0][-]{section*.5}{LEMBAR PENGESAHAN}{}% 4
-\BOOKMARK [0][-]{section*.6}{KATA PENGANTAR}{}% 5
-\BOOKMARK [0][-]{section*.9}{LEMBAR PERSETUJUAN PUBLIKASI ILMIAH}{}% 6
-\BOOKMARK [0][-]{section*.10}{ABSTRAK}{}% 7
-\BOOKMARK [0][-]{section*.11}{ABSTRACT}{}% 8
-\BOOKMARK [0][-]{section*.11}{DAFTAR ISI}{}% 9
-\BOOKMARK [0][-]{section*.11}{DAFTAR GAMBAR}{}% 10
-\BOOKMARK [0][-]{section*.11}{DAFTAR TABEL}{}% 11
-\BOOKMARK [0][-]{section*.11}{DAFTAR ALGORITMA}{}% 12
-\BOOKMARK [0][-]{section*.11}{DAFTAR KODE}{}% 13
-\BOOKMARK [0][-]{chapter.1}{1 Pendahuluan}{}% 14
-\BOOKMARK [1][-]{section.1.1}{I.1 Latar Belakang}{chapter.1}% 15
-\BOOKMARK [1][-]{section.1.2}{I.2 Rumusan Masalah}{chapter.1}% 16
-\BOOKMARK [1][-]{section.1.3}{I.3 Tujuan Penelitian}{chapter.1}% 17
-\BOOKMARK [1][-]{section.1.4}{I.4 Batasan Masalah}{chapter.1}% 18
-\BOOKMARK [1][-]{section.1.5}{I.5 Manfaat dan Kontribusi}{chapter.1}% 19
-\BOOKMARK [1][-]{section.1.6}{I.6 Sistematika Penulisan}{chapter.1}% 20
-\BOOKMARK [0][-]{chapter.2}{2 Studi Literatur}{}% 21
-\BOOKMARK [1][-]{section.2.1}{II.1 Literature Map}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.2}{II.2 Badan Pusat Statistik}{chapter.2}% 23
-\BOOKMARK [1][-]{section.2.3}{II.3 Context-aware Computing}{chapter.2}% 24
-\BOOKMARK [2][-]{subsection.2.3.1}{II.3.1 Definisi Context}{section.2.3}% 25
-\BOOKMARK [2][-]{subsection.2.3.2}{II.3.2 Kategori Context}{section.2.3}% 26
-\BOOKMARK [3][-]{subsubsection.2.3.2.1}{II.3.2.1 Individuality Context}{subsection.2.3.2}% 27
-\BOOKMARK [3][-]{subsubsection.2.3.2.2}{II.3.2.2 Time Context}{subsection.2.3.2}% 28
-\BOOKMARK [3][-]{subsubsection.2.3.2.3}{II.3.2.3 Location Context}{subsection.2.3.2}% 29
-\BOOKMARK [3][-]{subsubsection.2.3.2.4}{II.3.2.4 Activity Context}{subsection.2.3.2}% 30
-\BOOKMARK [3][-]{subsubsection.2.3.2.5}{II.3.2.5 Relations Context}{subsection.2.3.2}% 31
-\BOOKMARK [2][-]{subsection.2.3.3}{II.3.3 Context-aware Computing}{section.2.3}% 32
-\BOOKMARK [1][-]{section.2.4}{II.4 Location Routing}{chapter.2}% 33
-\BOOKMARK [2][-]{subsection.2.4.1}{II.4.1 Vehicle Routing Problem}{section.2.4}% 34
-\BOOKMARK [2][-]{subsection.2.4.2}{II.4.2 Multi-Depot Vehicle Routing Problem}{section.2.4}% 35
-\BOOKMARK [2][-]{subsection.2.4.3}{II.4.3 Cooperative Evolution Strategy}{section.2.4}% 36
-\BOOKMARK [1][-]{section.2.5}{II.5 Messaging Solution}{chapter.2}% 37
-\BOOKMARK [2][-]{subsection.2.5.1}{II.5.1 Mekanisme Publish/Subscribe}{section.2.5}% 38
-\BOOKMARK [0][-]{chapter.3}{3 Metodologi}{}% 39
-\BOOKMARK [1][-]{section.3.1}{III.1 Awareness of Problem}{chapter.3}% 40
-\BOOKMARK [1][-]{section.3.2}{III.2 Suggestion}{chapter.3}% 41
-\BOOKMARK [1][-]{section.3.3}{III.3 Development}{chapter.3}% 42
-\BOOKMARK [1][-]{section.3.4}{III.4 Evaluation}{chapter.3}% 43
-\BOOKMARK [1][-]{section.3.5}{III.5 Conclusion}{chapter.3}% 44
-\BOOKMARK [0][-]{chapter.4}{4 Analisis dan Perancangan}{}% 45
-\BOOKMARK [1][-]{section.4.1}{IV.1 Analisis}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.1.1}{IV.1.1 Dataset}{section.4.1}% 47
-\BOOKMARK [3][-]{subsubsection.4.1.1.1}{IV.1.1.1 Lokasi Pencacahan}{subsection.4.1.1}% 48
-\BOOKMARK [3][-]{subsubsection.4.1.1.2}{IV.1.1.2 Petugas Pencacahan}{subsection.4.1.1}% 49
-\BOOKMARK [3][-]{subsubsection.4.1.1.3}{IV.1.1.3 Jarak dan Waktu Tempuh}{subsection.4.1.1}% 50
-\BOOKMARK [2][-]{subsection.4.1.2}{IV.1.2 Algoritma dan Implementasi}{section.4.1}% 51
-\BOOKMARK [3][-]{subsubsection.4.1.2.1}{IV.1.2.1 Definisi Masalah}{subsection.4.1.2}% 52
-\BOOKMARK [3][-]{subsubsection.4.1.2.2}{IV.1.2.2 Konfigurasi Algoritma}{subsection.4.1.2}% 53
-\BOOKMARK [3][-]{subsubsection.4.1.2.3}{IV.1.2.3 Pencarian Solusi dan Penentuan Solusi Terbaik}{subsection.4.1.2}% 54
-\BOOKMARK [2][-]{subsection.4.1.3}{IV.1.3 Hasil dan Analisis}{section.4.1}% 55
-\BOOKMARK [1][-]{section.4.2}{IV.2 Perancangan Solusi}{chapter.4}% 56
-\BOOKMARK [2][-]{subsection.4.2.1}{IV.2.1 Garis Besar Sistem Usulan}{section.4.2}% 57
-\BOOKMARK [2][-]{subsection.4.2.2}{IV.2.2 Publisher Rekomendasi}{section.4.2}% 58
-\BOOKMARK [2][-]{subsection.4.2.3}{IV.2.3 VRP Solver}{section.4.2}% 59
-\BOOKMARK [2][-]{subsection.4.2.4}{IV.2.4 Message Broker}{section.4.2}% 60
-\BOOKMARK [0][-]{chapter.5}{5 Implementasi dan Pengujian}{}% 61
-\BOOKMARK [1][-]{section.5.1}{V.1 Implementasi}{chapter.5}% 62
-\BOOKMARK [2][-]{subsection.5.1.1}{V.1.1 VRP Solver}{section.5.1}% 63
-\BOOKMARK [2][-]{subsection.5.1.2}{V.1.2 Publisher Rekomendasi}{section.5.1}% 64
-\BOOKMARK [1][-]{section.5.2}{V.2 Pengujian}{chapter.5}% 65
-\BOOKMARK [2][-]{subsection.5.2.1}{V.2.1 Lingkungan Pengujian}{section.5.2}% 66
-\BOOKMARK [2][-]{subsection.5.2.2}{V.2.2 Dataset dan Metric}{section.5.2}% 67
-\BOOKMARK [3][-]{subsubsection.5.2.2.1}{V.2.2.1 Dataset}{subsection.5.2.2}% 68
-\BOOKMARK [3][-]{subsubsection.5.2.2.2}{V.2.2.2 Metric}{subsection.5.2.2}% 69
-\BOOKMARK [2][-]{subsection.5.2.3}{V.2.3 Skenario dan Hasil Pengujian}{section.5.2}% 70
-\BOOKMARK [3][-]{subsubsection.5.2.3.1}{V.2.3.1 Message Broker Setup}{subsection.5.2.3}% 71
-\BOOKMARK [3][-]{subsubsection.5.2.3.2}{V.2.3.2 Publisher Setup}{subsection.5.2.3}% 72
-\BOOKMARK [3][-]{subsubsection.5.2.3.3}{V.2.3.3 Subscriber Setup}{subsection.5.2.3}% 73
-\BOOKMARK [3][-]{subsubsection.5.2.3.4}{V.2.3.4 Pengujian Kondisi Normal dengan Service Time pada Data Cordeau}{subsection.5.2.3}% 74
-\BOOKMARK [3][-]{subsubsection.5.2.3.5}{V.2.3.5 Pengujian Kondisi Normal dengan Service Time pada Data Lapangan}{subsection.5.2.3}% 75
-\BOOKMARK [3][-]{subsubsection.5.2.3.6}{V.2.3.6 Pengujian Kondisi Delay dengan Service Time pada Data Lapangan}{subsection.5.2.3}% 76
-\BOOKMARK [0][-]{chapter.6}{6 Kesimpulan dan Saran}{}% 77
-\BOOKMARK [1][-]{section.6.1}{VI.1 Kesimpulan}{chapter.6}% 78
-\BOOKMARK [1][-]{section.6.2}{VI.2 Saran}{chapter.6}% 79
-\BOOKMARK [0][-]{Item.121}{DAFTAR PUSTAKA}{}% 80
-\BOOKMARK [0][-]{Item.121}{DAFTAR PUSTAKA}{}% 81
-\BOOKMARK [0][-]{section*.51}{LAMPIRAN}{}% 82
-\BOOKMARK [0][-]{section*.52}{LAMPIRAN X}{}% 83
-\BOOKMARK [0][-]{section*.53}{LAMPIRAN X}{}% 84
+\BOOKMARK [0][-]{section*.1}{ABSTRAK}{}% 1
+\BOOKMARK [0][-]{section*.2}{ABSTRACT}{}% 2
+\BOOKMARK [0][-]{section*.3}{LEMBAR PENGESAHAN}{}% 3
+\BOOKMARK [0][-]{section*.4}{PEDOMAN PENGGUNAAN TESIS}{}% 4
+\BOOKMARK [0][-]{section*.5}{LEMBAR PERUNTUKAN}{}% 5
+\BOOKMARK [0][-]{section*.6}{KATA PENGANTAR}{}% 6
+\BOOKMARK [0][-]{Item.9}{DAFTAR ISI}{}% 7
+\BOOKMARK [0][-]{Item.9}{DAFTAR GAMBAR}{}% 8
+\BOOKMARK [0][-]{Item.9}{DAFTAR TABEL}{}% 9
+\BOOKMARK [0][-]{Item.9}{DAFTAR ALGORITMA}{}% 10
+\BOOKMARK [0][-]{Item.9}{DAFTAR KODE}{}% 11
+\BOOKMARK [0][-]{chapter.1}{1 Pendahuluan}{}% 12
+\BOOKMARK [1][-]{section.1.1}{I.1 Latar Belakang}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.2}{I.2 Rumusan Masalah}{chapter.1}% 14
+\BOOKMARK [1][-]{section.1.3}{I.3 Tujuan Penelitian}{chapter.1}% 15
+\BOOKMARK [1][-]{section.1.4}{I.4 Batasan Masalah}{chapter.1}% 16
+\BOOKMARK [1][-]{section.1.5}{I.5 Manfaat dan Kontribusi}{chapter.1}% 17
+\BOOKMARK [1][-]{section.1.6}{I.6 Sistematika Penulisan}{chapter.1}% 18
+\BOOKMARK [0][-]{chapter.2}{2 Studi Literatur}{}% 19
+\BOOKMARK [1][-]{section.2.1}{II.1 Literature Map}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.2}{II.2 Badan Pusat Statistik}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.3}{II.3 Context-aware Computing}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.3.1}{II.3.1 Definisi Context}{section.2.3}% 23
+\BOOKMARK [2][-]{subsection.2.3.2}{II.3.2 Kategori Context}{section.2.3}% 24
+\BOOKMARK [3][-]{subsubsection.2.3.2.1}{II.3.2.1 Individuality Context}{subsection.2.3.2}% 25
+\BOOKMARK [3][-]{subsubsection.2.3.2.2}{II.3.2.2 Time Context}{subsection.2.3.2}% 26
+\BOOKMARK [3][-]{subsubsection.2.3.2.3}{II.3.2.3 Location Context}{subsection.2.3.2}% 27
+\BOOKMARK [3][-]{subsubsection.2.3.2.4}{II.3.2.4 Activity Context}{subsection.2.3.2}% 28
+\BOOKMARK [3][-]{subsubsection.2.3.2.5}{II.3.2.5 Relations Context}{subsection.2.3.2}% 29
+\BOOKMARK [2][-]{subsection.2.3.3}{II.3.3 Context-aware Computing}{section.2.3}% 30
+\BOOKMARK [1][-]{section.2.4}{II.4 Location Routing}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.4.1}{II.4.1 Vehicle Routing Problem}{section.2.4}% 32
+\BOOKMARK [2][-]{subsection.2.4.2}{II.4.2 Multi-Depot Vehicle Routing Problem}{section.2.4}% 33
+\BOOKMARK [2][-]{subsection.2.4.3}{II.4.3 Cooperative Evolution Strategy}{section.2.4}% 34
+\BOOKMARK [1][-]{section.2.5}{II.5 Messaging Solution}{chapter.2}% 35
+\BOOKMARK [2][-]{subsection.2.5.1}{II.5.1 Mekanisme Publish/Subscribe}{section.2.5}% 36
+\BOOKMARK [0][-]{chapter.3}{3 Metodologi}{}% 37
+\BOOKMARK [1][-]{section.3.1}{III.1 Awareness of Problem}{chapter.3}% 38
+\BOOKMARK [1][-]{section.3.2}{III.2 Suggestion}{chapter.3}% 39
+\BOOKMARK [1][-]{section.3.3}{III.3 Development}{chapter.3}% 40
+\BOOKMARK [1][-]{section.3.4}{III.4 Evaluation}{chapter.3}% 41
+\BOOKMARK [1][-]{section.3.5}{III.5 Conclusion}{chapter.3}% 42
+\BOOKMARK [0][-]{chapter.4}{4 Analisis dan Perancangan}{}% 43
+\BOOKMARK [1][-]{section.4.1}{IV.1 Analisis}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.1.1}{IV.1.1 Dataset}{section.4.1}% 45
+\BOOKMARK [3][-]{subsubsection.4.1.1.1}{IV.1.1.1 Lokasi Pencacahan}{subsection.4.1.1}% 46
+\BOOKMARK [3][-]{subsubsection.4.1.1.2}{IV.1.1.2 Petugas Pencacahan}{subsection.4.1.1}% 47
+\BOOKMARK [3][-]{subsubsection.4.1.1.3}{IV.1.1.3 Jarak dan Waktu Tempuh}{subsection.4.1.1}% 48
+\BOOKMARK [2][-]{subsection.4.1.2}{IV.1.2 Algoritma dan Implementasi}{section.4.1}% 49
+\BOOKMARK [3][-]{subsubsection.4.1.2.1}{IV.1.2.1 Definisi Masalah}{subsection.4.1.2}% 50
+\BOOKMARK [3][-]{subsubsection.4.1.2.2}{IV.1.2.2 Konfigurasi Algoritma}{subsection.4.1.2}% 51
+\BOOKMARK [3][-]{subsubsection.4.1.2.3}{IV.1.2.3 Pencarian Solusi dan Penentuan Solusi Terbaik}{subsection.4.1.2}% 52
+\BOOKMARK [2][-]{subsection.4.1.3}{IV.1.3 Hasil dan Analisis}{section.4.1}% 53
+\BOOKMARK [1][-]{section.4.2}{IV.2 Perancangan Solusi}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.2.1}{IV.2.1 Garis Besar Sistem Usulan}{section.4.2}% 55
+\BOOKMARK [2][-]{subsection.4.2.2}{IV.2.2 Publisher Rekomendasi}{section.4.2}% 56
+\BOOKMARK [2][-]{subsection.4.2.3}{IV.2.3 VRP Solver}{section.4.2}% 57
+\BOOKMARK [2][-]{subsection.4.2.4}{IV.2.4 Message Broker}{section.4.2}% 58
+\BOOKMARK [0][-]{chapter.5}{5 Implementasi dan Pengujian}{}% 59
+\BOOKMARK [1][-]{section.5.1}{V.1 Implementasi}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.1.1}{V.1.1 VRP Solver}{section.5.1}% 61
+\BOOKMARK [2][-]{subsection.5.1.2}{V.1.2 Publisher Rekomendasi}{section.5.1}% 62
+\BOOKMARK [1][-]{section.5.2}{V.2 Pengujian}{chapter.5}% 63
+\BOOKMARK [2][-]{subsection.5.2.1}{V.2.1 Lingkungan Pengujian}{section.5.2}% 64
+\BOOKMARK [2][-]{subsection.5.2.2}{V.2.2 Dataset dan Metric}{section.5.2}% 65
+\BOOKMARK [3][-]{subsubsection.5.2.2.1}{V.2.2.1 Dataset}{subsection.5.2.2}% 66
+\BOOKMARK [3][-]{subsubsection.5.2.2.2}{V.2.2.2 Metric}{subsection.5.2.2}% 67
+\BOOKMARK [2][-]{subsection.5.2.3}{V.2.3 Skenario dan Hasil Pengujian}{section.5.2}% 68
+\BOOKMARK [3][-]{subsubsection.5.2.3.1}{V.2.3.1 Message Broker Setup}{subsection.5.2.3}% 69
+\BOOKMARK [3][-]{subsubsection.5.2.3.2}{V.2.3.2 Publisher Setup}{subsection.5.2.3}% 70
+\BOOKMARK [3][-]{subsubsection.5.2.3.3}{V.2.3.3 Subscriber Setup}{subsection.5.2.3}% 71
+\BOOKMARK [3][-]{subsubsection.5.2.3.4}{V.2.3.4 Pengujian Kondisi Normal dengan Service Time pada Data Cordeau}{subsection.5.2.3}% 72
+\BOOKMARK [3][-]{subsubsection.5.2.3.5}{V.2.3.5 Pengujian Kondisi Normal dengan Service Time pada Data Lapangan}{subsection.5.2.3}% 73
+\BOOKMARK [3][-]{subsubsection.5.2.3.6}{V.2.3.6 Pengujian Kondisi Delay dengan Service Time pada Data Lapangan}{subsection.5.2.3}% 74
+\BOOKMARK [0][-]{chapter.6}{6 Kesimpulan dan Saran}{}% 75
+\BOOKMARK [1][-]{section.6.1}{VI.1 Kesimpulan}{chapter.6}% 76
+\BOOKMARK [1][-]{section.6.2}{VI.2 Saran}{chapter.6}% 77
+\BOOKMARK [0][-]{Item.126}{DAFTAR PUSTAKA}{}% 78
+\BOOKMARK [0][-]{section*.46}{LAMPIRAN}{}% 79

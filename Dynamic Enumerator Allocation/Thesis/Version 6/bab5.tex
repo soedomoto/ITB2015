@@ -89,16 +89,16 @@ Berbagai variasi data digunakan untuk memastikan validitas pengujian. Pengujian 
 
 Pada penelitian ini, pengujian dilakukan dengan menggunakan dataset Cordeau tipe 2 (Multi-Depot VRP), dengan struktur format sebagai berikut:
 \begin{enumerate}
-	\item Baris pertama berformat \textbf{TYPE M N T}, dimana: \\
+	\item Baris pertama berformat \textbf{TYPE M N T}, dengan: \\
 	M = Jumlah kendaraan \\
 	N = Jumlah pelanggan \\
 	T = Jumlah \textit{depot}
 	
-	\item Baris kedua sampai T baris berikutnya berformat \textbf{D Q}, dimana: \\
+	\item Baris kedua sampai T baris berikutnya berformat \textbf{D Q}, dengan: \\
 	D = Durasi maksimum dari setiap rute \\
 	Q = Kapasitas maksumum dari setiap kendaraan
 	
-	\item Baris selanjutnya sampai M baris berikutnya berformat \textbf{i x y d q f a list e l}, dimana: \\
+	\item Baris selanjutnya sampai M baris berikutnya berformat \textbf{i x y d q f a list e l}, dengan: \\
 	i	= nomer pelanggan \\
 	x	= koordinat x \\
 	y	= koordinat y \\
@@ -110,13 +110,13 @@ Pada penelitian ini, pengujian dilakukan dengan menggunakan dataset Cordeau tipe
 	e	= jika ada, waktu dimulainya kunjungan \\
 	l	= jika ada, waktu selesainya kunjungan
 	
-	\item Baris selanjutnya sampai M baris berikutnya berformat \textbf{i x y}, dimana: \\
+	\item Baris selanjutnya sampai M baris berikutnya berformat \textbf{i x y}, dengan: \\
 	i	= nomer kendaraan \\
 	x	= koordinat depot x \\
 	y	= koordinat depot y \\
 \end{enumerate}
 
-Untuk menyimulasikan kondisi lapangan yang sebenarnya, sistem juga diuji dengan menggunakan data lapangan wilayah administratif di Kabupaten Pesisir Selatan, Provinsi Sumatera Barat. Data lapangan merepresentasikan kondisi pencacahan yang sebenarnya, dimana terdapat \textit{cost} berupa jarak dan waktu tempuh antar lokasi (\textit{node}). 
+Untuk menyimulasikan kondisi lapangan yang sebenarnya, sistem juga diuji dengan menggunakan data lapangan wilayah administratif di Kabupaten Pesisir Selatan, Provinsi Sumatera Barat. Data lapangan digunakan untuk merepresentasikan kondisi pencacahan yang sebenarnya, dengan antar lokasi terdapat \textit{cost} yang berupa jarak dan waktu tempuh.
 
 Data lapangan yang digunakan meliputi:
 \begin{itemize}
@@ -158,16 +158,16 @@ Biaya total untuk tiap-tiap rute kemudian dihitung dengan melakukan penjumlahan 
 	\item $TC_C$ = $C_{C-4}$ + $ST_4$ + $C_{4-8}$ + $ST_8$ + $C_{8-14}$ + $ST_14$ + $C_{14-7}$ + $ST_7$ + $C_{7-C}$
 	\item $TC_D$ = $C_{D-9}$ + $ST_9$ + $C_{9-10}$ + $ST_10$ + $C_{10-11}$ + $ST_11$ + $C_{11-12}$ + $ST_12$ + $C_{12-D}$
 \end{itemize}
-dimana TC adalah \textit{total cost}, C adalah \textit{transport cost} yang merupakan waktu tempuh, dan ST adalah \textit{service time}. Seluruh biaya direpresentasikan dalam satuan waktu.
+dengan TC adalah \textit{total cost}, C adalah \textit{transport cost} yang merupakan waktu tempuh, dan ST adalah \textit{service time}. Seluruh biaya direpresentasikan dalam satuan waktu.
 
 
-Setelah waktu total dari tiap-tiap rute diperoleh, kemudian waktu total untuk keseluruhan rute dan standar deviasi waktu total dari keseluruhan rute dapat dikalkulasi. \textbf{\textit{Metric}} yang digunakan untuk mengukur perbandingan antar pengujian adalah standar deviasi waktu total dari seluruh rute yang dihasilkan oleh sistem usulan maupun sistem pembanding. Standar deviasi dipilih sebagai \textit{metric} karena lebih merepresentasikan kondisi pencacahan yang sebenarnya, dimana semakin kecil variasi waktu antar petugas, semakin merata beban tugas yang berimbas pada waktu penyelesaian pencacahan secara keseluruhan akan lebih cepat. Sistem yang lebih baik akan menghasilkan standar deviasi yang lebih kecil.
+Setelah waktu total dari tiap-tiap rute diperoleh, kemudian waktu total untuk keseluruhan rute dan standar deviasi waktu total dari keseluruhan rute dapat dikalkulasi. \textbf{\textit{Metric}} yang digunakan untuk mengukur perbandingan antar pengujian adalah standar deviasi waktu total dari seluruh rute yang dihasilkan oleh sistem usulan maupun sistem pembanding. Standar deviasi dipilih sebagai \textit{metric} karena lebih merepresentasikan kondisi pencacahan yang sebenarnya. Semakin kecil variasi waktu antar petugas, semakin merata beban tugas antar petugas yang berimbas pada waktu penyelesaian pencacahan secara keseluruhan akan lebih cepat. Sistem yang lebih baik akan menghasilkan standar deviasi yang lebih kecil.
 
 
 %-----------------------------------------------------------------------------%
 \subsection{Skenario dan Hasil Pengujian}
 %-----------------------------------------------------------------------------%
-Pengujian dilakukan dengan beberapa skenario untuk memastikan bahwa program dapat bekerja dengan baik pada kondisi yang berbeda-beda. Skenario yang digunakan dalam pengujian dan hasilnya akan dijabarkan secara lebih detail pada \autoref{sssec:test-no-service-time} hingga \autoref{sssec:test-delay-service-time}.
+Pengujian dilakukan dengan beberapa skenario untuk memastikan bahwa program dapat bekerja dengan baik pada kondisi yang berbeda-beda. Skenario yang digunakan dalam pengujian dan hasilnya akan dijabarkan secara lebih detail pada \autoref{ssec:test-normal-service-time-cordeau} hingga \autoref{sssec:test-delay-service-time}.
 
 
 Komponen yang terlibat dalam pengujian terdiri dari pencacah, \textit{message broker}, \textit{publisher} rekomendasi, \textit{vrp solver}, dan \textit{shared memory}. \textit{Setup} dari tiap-tiap komponen dijelaskan pada \autoref{ssec:broker-setup} sampai \autoref{sssec:subscriber-setup}. Interaksi yang terjadi antar komponen, seperti digambarkan \autoref{fig:component-interaction}, adalah sebagai berikut:
@@ -201,7 +201,7 @@ Komponen yang terlibat dalam pengujian terdiri dari pencacah, \textit{message br
 Seluruh skenario dalam pengujian ini akan menggunakan Redis sebagai \textit{message broker}. Redis merupakan \textit{in-memory data structure store} yang dapat digunakan sebagai \textit{database}, \textit{cache}, dan \textit{message broker} \citep{redis_introduction_2017}. Redis mempunyai \textit{feature} Redis Cluster, sehingga dapat dengan mudah disusun menjadi \textit{distributed message broker}. Selain itu, Redis \textit{client} tersedia dalam sebagian besar bahasa pemrograman \citep{redis_clients_2017}, sehingga memungkinkan pemilihan bahasa pemrograman dalam implementasi sistem secara lebih fleksibel.
 
 
-Pada penelitian ini, Redis Cluster dikonfigurasi dengan menggunakan 6 (enam) buah \textit{nodes}, 3 (tiga) node digunakan sebagai \textit{master} dan sisanya sebagai \textit{slave}. Konfigurasi Redis Cluster pada setiap node diilustrasikan pada Kode \autoref{lst:redis_conf}. Dalam konteks Redis, master dapat dianggap sebagai partisi, dan slave dianggap sebagai replikasi dari master. Seluruh node, baik master maupun slave dapat digunakan sebagai \textit{entrypoint} dimana client terkoneksi.
+Pada penelitian ini, Redis Cluster dikonfigurasi dengan menggunakan 6 (enam) buah \textit{nodes}, 3 (tiga) node digunakan sebagai \textit{master} dan sisanya sebagai \textit{slave}. Konfigurasi Redis Cluster pada setiap node diilustrasikan pada Kode \autoref{lst:redis_conf}. Dalam konteks Redis, master dapat dianggap sebagai partisi, dan slave dianggap sebagai replikasi dari master. Seluruh node, baik master maupun slave dapat digunakan sebagai \textit{entrypoint} bagi \textit{client}.
 
 
 \begin{listing}[!]
@@ -369,7 +369,7 @@ Pengujian memerlukan sebuah program tambahan yang berperan sebagai pencacah/\tex
 \subsubsection{Pengujian Kondisi Normal dengan \textit{Service Time} pada Data Cordeau}
 \label{ssec:test-normal-service-time-cordeau}
 %-----------------------------------------------------------------------------%
-Skenario pengujian kondisi normal dimaksudkan untuk membandingkan sistem yang dijalankan pada kondisi normal, dimana tidak ada sesuatupun yang menyebabkan penundaaan. Pengujian kondisi ini dilakukan untuk tiap-tiap \textit{instance} Cordeau. \textit{Instance} Cordeau dianggap dapat digunakan dengan beberapa penyesuaian istilah, yaitu pelanggan dianalogikan dengan wilayah kerja dan kendaraan dianalogikan dengan pencacah. \textit{Instance} Cordeau yang digunakan dalam pengujian adalah \textit{instance} P01 sampai P07, karena masing-masing \textit{instance} mewakili kondisi acak, baik dari segi jumlah pelanggan, jumlah kendaraan, serta koordinat pelanggan dan depot kendaraan.
+Skenario pengujian kondisi normal dimaksudkan untuk membandingkan sistem yang dijalankan pada kondisi normal dan tidak ada sesuatupun yang menyebabkan penundaaan. Pengujian kondisi ini dilakukan untuk tiap-tiap \textit{instance} Cordeau. \textit{Instance} Cordeau dianggap dapat digunakan dengan beberapa penyesuaian istilah, yaitu pelanggan dianalogikan dengan wilayah kerja dan kendaraan dianalogikan dengan pencacah. \textit{Instance} Cordeau yang digunakan dalam pengujian adalah \textit{instance} P01 sampai P07, karena masing-masing \textit{instance} mewakili kondisi acak, baik dari segi jumlah pelanggan, jumlah kendaraan, serta koordinat pelanggan dan depot kendaraan.
 
 
 \textit{Instance} Cordeau tipe 2 tidak menyertakan lama waktu pencacahan pada tiap-tiap pelanggan. Agar mencerminkan kondisi pencacahan yang sebenarnya, data lama waktu pencacahan akan dibuat secara acak dengan mengikuti komposisi dari \citep{sudman_time_1965}, yaitu:
@@ -586,7 +586,7 @@ Berdasarkan hasil pengujian terhadap 4 (empat) buah \textit{instance} yang tiap-
 \subsubsection{Pengujian Kondisi \textit{Delay} dengan \textit{Service Time} pada Data Lapangan}
 \label{sssec:test-delay-service-time}
 %-----------------------------------------------------------------------------%
-Skenario pengujian kondisi \textit{delay} dimaksudkan untuk membandingkan program yang dijalankan pada kondisi terjadi hal-hal yang menghambat jalannya pencacahan. Pengujian ini digunakan sebagai cerminan kodisi lapangan dimana pada beberapa lokasi tidak terdapat koneksi yang stabil, sehingga untuk melakukan \textit{subscription} lokasi berikutnya perlu berpindah ke lokasi lain. Pengujian dilakukan sebanyak 7 (tujuh) kali yang pada tiap-tiap pengujian mencerminkan kondisi yang berbeda, yaitu:
+Skenario pengujian kondisi \textit{delay} dimaksudkan untuk membandingkan program yang dijalankan pada kondisi terjadi hal-hal yang menghambat jalannya pencacahan. Pengujian ini digunakan sebagai cerminan kodisi lapangan di mana pada beberapa lokasi tidak terdapat koneksi yang stabil, sehingga untuk melakukan \textit{subscription} lokasi berikutnya perlu berpindah ke lokasi lain. Pengujian dilakukan sebanyak 7 (tujuh) kali yang pada tiap-tiap pengujian mencerminkan kondisi yang berbeda, yaitu:
 
 \begin{enumerate}
 	\item Pengujian dengan kode \textit{instance} d01 menggambarkan kondisi normal. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
@@ -595,37 +595,37 @@ Skenario pengujian kondisi \textit{delay} dimaksudkan untuk membandingkan progra
 		\item Rata-rata wawancara pada setiap rumah tangga 27,58 menit dengan standar deviasi 12,13 menit.
 		\item Rata-rata waktu yang diperlukan untuk mendapatkan koneksi internet sebesar 5 menit dengan standar deviasi 3 menit.
 	\end{itemize}
-	\item Pengujian dengan kode \textit{instance} d02 menggambarkan kondisi dimana anggota rumah tangga sedikit dan relatif homogen, dengan koneksi internet relatif mudah didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
+	\item Pengujian dengan kode \textit{instance} d02 menggambarkan kondisi pencacahan dengan anggota rumah tangga sedikit dan relatif homogen, dengan koneksi internet relatif mudah didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
 	\begin{itemize}
 		\item Jumlah responden pada setiap segmen/blok sensus adalah 10 rumah tangga
 		\item Rata-rata wawancara pada setiap rumah tangga 27,58 menit dengan standar deviasi 4,16 menit.
 		\item Rata-rata waktu yang diperlukan untuk mendapatkan koneksi internet sebesar 5 menit dengan standar deviasi 3 menit.
 	\end{itemize}
-	\item Pengujian dengan kode \textit{instance} d03 menggambarkan kondisi dimana anggota rumah tangga sedikit dan relatif homogen, dengan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
+	\item Pengujian dengan kode \textit{instance} d03 menggambarkan kondisi pencacahan dengan anggota rumah tangga sedikit dan relatif homogen, dengan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
 	\begin{itemize}
 		\item Jumlah responden pada setiap segmen/blok sensus adalah 10 rumah tangga
 		\item Rata-rata wawancara pada setiap rumah tangga 27,58 menit dengan standar deviasi 4,16 menit.
 		\item Rata-rata waktu yang diperlukan untuk mendapatkan koneksi internet sebesar 60 menit dengan standar deviasi 3 menit.
 	\end{itemize}
-	\item Pengujian dengan kode \textit{instance} d04 menggambarkan kondisi dimana anggota rumah tangga banyak dan relatif homogen, dengan koneksi internet relatif mudah didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
+	\item Pengujian dengan kode \textit{instance} d04 menggambarkan kondisi pencacahan dengan anggota rumah tangga banyak dan relatif homogen, dengan koneksi internet relatif mudah didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
 	\begin{itemize}
 		\item Jumlah responden pada setiap segmen/blok sensus adalah 10 rumah tangga
 		\item Rata-rata wawancara pada setiap rumah tangga 71,58 menit dengan standar deviasi 12,16 menit.
 		\item Rata-rata waktu yang diperlukan untuk mendapatkan koneksi internet sebesar 5 menit dengan standar deviasi 3 menit.
 	\end{itemize}
-	\item Pengujian dengan kode \textit{instance} d05 menggambarkan kondisi dimana anggota rumah tangga banyak dan relatif homogen, dengan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
+	\item Pengujian dengan kode \textit{instance} d05 menggambarkan kondisi pencacahan dengan anggota rumah tangga banyak dan relatif homogen, dengan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
 	\begin{itemize}
 		\item Jumlah responden pada setiap segmen/blok sensus adalah 10 rumah tangga
 		\item Rata-rata wawancara pada setiap rumah tangga 71,58 menit dengan standar deviasi 12,16 menit.
 		\item Rata-rata waktu yang diperlukan untuk mendapatkan koneksi internet sebesar 60 menit dengan standar deviasi 3 menit.
 	\end{itemize}
-	\item Pengujian dengan kode \textit{instance} d06 menggambarkan kondisi dimana rata-rata anggota rumah tangga sedikit tetapi memiliki variasi tinggi, dengan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
+	\item Pengujian dengan kode \textit{instance} d06 menggambarkan kondisi pencacahan dengan rata-rata anggota rumah tangga sedikit tetapi memiliki variasi tinggi, dengan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
 	\begin{itemize}
 		\item Jumlah responden pada setiap segmen/blok sensus adalah 10 rumah tangga
 		\item Rata-rata wawancara pada setiap rumah tangga 27,58 menit dengan standar deviasi 25,16 menit.
 		\item Rata-rata waktu yang diperlukan untuk mendapatkan koneksi internet sebesar 60 menit dengan standar deviasi 3 menit.
 	\end{itemize}
-	\item Pengujian dengan kode \textit{instance} d07 menggambarkan kondisi dimana jarak antar rumah tangga jauh, rata-rata anggota rumah tangga banyak dan memiliki variasi tinggi, dan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
+	\item Pengujian dengan kode \textit{instance} d07 menggambarkan kondisi pencacahan dengan jarak antar rumah tangga jauh, rata-rata anggota rumah tangga banyak dan memiliki variasi tinggi, dan koneksi internet secara umum sulit didapatkan. Parameter yang digunakan pada \textit{instance} ini adalah sebagai berikut:
 	\begin{itemize}
 		\item Jumlah responden pada setiap segmen/blok sensus adalah 10 rumah tangga
 		\item Rata-rata wawancara pada setiap rumah tangga 71,58 menit dengan standar deviasi 25,65 menit.
@@ -729,370 +729,5 @@ Jika proses selanjutnya, seperti analisis data dan diseminasi, mengharuskan selu
 	\label{fig:test_result_delay_real_tw_mean_stdev_of_total_time}
 \end{figure}
 
-
-
-
-
-
-
-
-
-%Dari hasil simulasi, diperoleh rute untuk tiap-tiap \textit{instance} sebagaimana digambarkan pada \hyperref[ch:test_result_delay]{Lampiran 4}. Hasil pengujian seperti digambarkan pada \autoref{fig:test_result_delay_total_time} dan \autoref{fig:test_result_delay_standard_deviation}, dimana masing-masing menunjukkan perbandingan rata-rata waktu total keseluruhan rute dan standar deviasi waktu total dari masing-masing rute, menunjukkan hasil yang relatif sama dan sekaligus menegaskan kembali kesimpulan yang telah diperoleh pada skenario pengujian sebelumnya, yakni sistem usulan lebih efisien dibandingkan sistem pembanding.
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan total waktu seluruh rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D01 (detik)}
-%	\label{tbl:test_result_d01_tw_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 3.126.361,44 & 3.532.199,80 \\
-%	2  & 3.127.305,44 & 3.511.954,08 \\
-%	3  & 3.127.266,44 & 3.496.727,37 \\
-%	4  & 3.126.685,44 & 3.326.428,87 \\
-%	5  & 3.127.629,44 & 3.343.240,98 \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan total waktu seluruh rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D02 (detik)}
-%	\label{tbl:test_result_d02_tw_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 3.107.775,85 & 3.743.549,71 \\
-%	2  & 3.107.775,85 & 3.570.769,45 \\
-%	3  & 3.107.775,85 & 3.643.231,06 \\
-%	4  & 3.107.775,85 & 3.614.051,85 \\
-%	5  & 3.108.680,85 & 3.543.857,39 \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan total waktu seluruh rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D03 (detik)}
-%	\label{tbl:test_result_d03_tw_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 3.085.573,84 & 3.901.417,79 \\
-%	2  & 3.087.695,84 & 4.081.770,38 \\
-%	3  & 3.086.466,84 & 3.888.955,97 \\
-%	4  & 3.085.297,84 & 4.209.409,21 \\
-%	5  & 3.086.291,84 & 3.946.962,99 \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan total waktu seluruh rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D04 (detik)}
-%	\label{tbl:test_result_d04_tw_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 7.937.588,57 & 8.262.690,25 \\
-%	2  & 7.937.642,57 & 8.466.346,59 \\
-%	3  & 7.938.125,57 & 8.163.875,81 \\
-%	4  & 7.938.547,57 & 8.249.516,01 \\
-%	5  & 7.938.586,57 & 8.356.219,55 \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan total waktu seluruh rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D05 (detik)}
-%	\label{tbl:test_result_d05_tw_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 7.903.175,28 & 8.820.620,43 \\
-%	2  & 7.903.431,28 & 8.884.547,65 \\
-%	3  & 7.902.425,28 & 8.805.014,14 \\
-%	4  & 7.901.711,28 & 8.748.018,48 \\
-%	5  & 7.902.526,28 & 8.928.164,66 \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan total waktu seluruh rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D06 (detik)}
-%	\label{tbl:test_result_d06_tw_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 3.083.461,58 & 4.019.585,94 \\
-%	2  & 3.082.556,58 & 4.024.606,10 \\
-%	3  & 3.082.556,58 & 4.225.530,40 \\
-%	4  & 3.082.514,58 & 4.393.099,78 \\
-%	5  & 3.083.500,58 & 4.027.765,43 \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan total waktu seluruh rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D07 (detik)}
-%	\label{tbl:test_result_d07_tw_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 10.792.753,12 & 11.590.204,96 \\
-%	2  & 10.792.792,12 & 11.611.804,84 \\
-%	3  & 10.792.753,12 & 11.693.081,76 \\
-%	4  & 10.792.753,12 & 11.615.257,94 \\
-%	5  & 10.792.214,12 & 11.721.424,91 \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Rata-rata total waktu seluruh rute dari 5 kali pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan (detik)}
-%	\label{tbl:test_result_delay_tw_total_time}\\
-%	\toprule
-%	\textit{\textit{Instance}} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{\textit{Instance}} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	d01 & \textbf{3.127.049,64}  & 3.442.110,22  \\
-%	d02  & \textbf{3.107.956,85}  & 3.623.091,89  \\
-%	d03  & \textbf{3.086.265,24}  & 4.005.703,27  \\
-%	d04  & \textbf{7.938.098,17}  & 8.299.729,64  \\
-%	d05  & \textbf{7.902.653,88}  & 8.837.273,07  \\
-%	d06  & \textbf{3.082.917,98}  & 4.138.117,53  \\
-%	d07  & \textbf{10.792.653,12} & 11.646.354,88 \\
-%\end{longtable}
-%
-%
-%\begin{figure}[!]
-%	\centering
-%	\includegraphics[width=\textwidth]{Resources/Images/test_result_delay_total_time}
-%	\caption{Rata-rata total waktu seluruh rute dari 5 kali pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan}
-%	\label{fig:test_result_delay_total_time}
-%\end{figure}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan standar deviasi total waktu setiap rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D01 (detik)}
-%	\label{tbl:test_result_d01_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 85.427,10    & 16.565,69    \\
-%	2  & 82.688,33    & 14.113,11    \\
-%	3  & 85.488,25    & 17.278,57    \\
-%	4  & 82.605,08    & 17.754,52    \\
-%	5  & 85.461,84    & 16.838,26    \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan standar deviasi total waktu setiap rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D02 (detik)}
-%	\label{tbl:test_result_d02_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 84.873,08    & 13.445,49    \\
-%	2  & 84.873,08    & 17.693,49    \\
-%	3  & 84.873,08    & 20.187,86    \\
-%	4  & 84.873,08    & 18.494,98    \\
-%	5  & 84.946,37    & 17.371,24    \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan standar deviasi total waktu setiap rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D03 (detik)}
-%	\label{tbl:test_result_d03_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 83.869,48    & 21.175,88    \\
-%	2  & 83.877,63    & 20.015,83    \\
-%	3  & 81.057,92    & 19.325,37    \\
-%	4  & 83.395,96    & 23.602,58    \\
-%	5  & 81.101,89    & 14.452,49    \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan standar deviasi total waktu setiap rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D04 (detik)}
-%	\label{tbl:test_result_d04_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 204.164,67   & 21.147,45    \\
-%	2  & 210.888,75   & 23.488,72    \\
-%	3  & 204.299,39   & 22.320,04    \\
-%	4  & 210.962,19   & 25.688,13    \\
-%	5  & 204.198,44   & 19.839,10    \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan standar deviasi total waktu setiap rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D05 (detik)}
-%	\label{tbl:test_result_d05_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 210.500,85   & 26.542,12    \\
-%	2  & 210.487,04   & 28.747,53    \\
-%	3  & 202.428,69   & 33.102,26    \\
-%	4  & 210.496,14   & 17.095,74    \\
-%	5  & 210.420,26   & 27.118,97    \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan standar deviasi total waktu setiap rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D06 (detik)}
-%	\label{tbl:test_result_d06_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 84.959,86    & 22.071,07    \\
-%	2  & 84.891,74    & 23.581,69    \\
-%	3  & 84.891,74    & 12.973,02    \\
-%	4  & 84.893,54    & 19.175,80    \\
-%	5  & 82.317,07    & 19.675,74    \\
-%\end{longtable}
-%
-%\newpage
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Perbandingan standar deviasi total waktu setiap rute dari pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan D07 (detik)}
-%	\label{tbl:test_result_d07_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{Pengujian ke} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	1 & 280.996,99   & 29.048,13    \\
-%	2  & 270.931,93   & 34.795,38    \\
-%	3  & 280.996,99   & 29.539,87    \\
-%	4  & 280.996,99   & 37.706,62    \\
-%	5  & 280.902,98   & 24.210,62    \\
-%\end{longtable}
-%
-%
-%\begin{longtable}[!]{c|rrrr}
-%	\caption{Rata-rata standar deviasi total waktu setiap rute dari 5 kali pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan (detik)}
-%	\label{tbl:test_result_delay_tw_standard_deviation_of_total_time}\\
-%	\toprule
-%	\textit{\textit{Instance}} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endfirsthead
-%	\toprule
-%	\textit{\textit{Instance}} & \MyHead{4cm}{MDVRP berbasis CoEAs} & \MyHead{4cm}{MDVRP berbasis CoEAs dan Pub/Sub} \\ 
-%	\midrule
-%	\endhead
-%	\bottomrule
-%	\endfoot
-%	d01 & 84.334,12  & \textbf{16.510,03} \\
-%	d02  & 84.887,74  & \textbf{17.438,61} \\
-%	d03  & 82.660,58  & \textbf{19.714,43} \\
-%	d04  & 206.902,69 & \textbf{22.496,69} \\
-%	d05  & 208.866,60 & \textbf{26.521,32} \\
-%	d06  & 84.390,79  & \textbf{19.495,46} \\
-%	d07  & 278.965,18 & \textbf{31.060,12} \\
-%\end{longtable}
-%
-%
-%\begin{figure}[!]
-%	\centering
-%	\includegraphics[width=\textwidth]{Resources/Images/test_result_delay_standard_deviation}
-%	\caption{Rata-rata standar deviasi total waktu setiap rute dari 5 kali pengujian kondisi \textit{delay} dengan \textit{service time} pada data lapangan}
-%	\label{fig:test_result_delay_standard_deviation}
-%\end{figure}
 
 

@@ -1,16 +1,14 @@
-\contentsline {chapter}{HALAMAN JUDUL}{i}{section*.1}
-\contentsline {chapter}{LEMBAR PERSETUJUAN}{ii}{section*.3}
-\contentsline {chapter}{LEMBAR PERNYATAAN ORISINALITAS}{iii}{section*.4}
-\contentsline {chapter}{LEMBAR PENGESAHAN}{iv}{section*.5}
-\contentsline {chapter}{KATA PENGANTAR}{v}{section*.6}
-\contentsline {chapter}{LEMBAR PERSETUJUAN PUBLIKASI ILMIAH}{vii}{section*.9}
-\contentsline {chapter}{ABSTRAK}{viii}{section*.10}
-\contentsline {chapter}{ABSTRACT}{ix}{section*.11}
-\contentsline {chapter}{DAFTAR ISI}{x}{section*.11}
-\contentsline {chapter}{DAFTAR GAMBAR}{xiii}{section*.11}
-\contentsline {chapter}{DAFTAR TABEL}{xv}{section*.11}
-\contentsline {chapter}{DAFTAR ALGORITMA}{xvii}{section*.11}
-\contentsline {chapter}{DAFTAR KODE}{xviii}{section*.11}
+\contentsline {chapter}{ABSTRAK}{ii}{section*.1}
+\contentsline {chapter}{ABSTRACT}{iii}{section*.2}
+\contentsline {chapter}{LEMBAR PENGESAHAN}{iv}{section*.3}
+\contentsline {chapter}{PEDOMAN PENGGUNAAN TESIS}{v}{section*.4}
+\contentsline {chapter}{LEMBAR PERUNTUKAN}{vi}{section*.5}
+\contentsline {chapter}{KATA PENGANTAR}{vii}{section*.6}
+\contentsline {chapter}{DAFTAR ISI}{ix}{Item.9}
+\contentsline {chapter}{DAFTAR GAMBAR}{xii}{Item.9}
+\contentsline {chapter}{DAFTAR TABEL}{xiv}{Item.9}
+\contentsline {chapter}{DAFTAR ALGORITMA}{xv}{Item.9}
+\contentsline {chapter}{DAFTAR KODE}{xvi}{Item.9}
 \contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}
 \contentsline {section}{\numberline {I.1}Latar Belakang}{1}{section.1.1}
 \contentsline {section}{\numberline {I.2}Rumusan Masalah}{5}{section.1.2}
@@ -32,7 +30,7 @@
 \contentsline {subsection}{\numberline {II.3.3}\textit {Context-aware Computing}}{12}{subsection.2.3.3}
 \contentsline {section}{\numberline {II.4}\textit {Location Routing}}{13}{section.2.4}
 \contentsline {subsection}{\numberline {II.4.1}\textit {Vehicle Routing Problem}}{15}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {II.4.2}\textit {Multi-Depot Vehicle Routing Problem}}{16}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {II.4.2}\textit {Multi-Depot Vehicle Routing Problem}}{17}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {II.4.3}\textit {Cooperative Evolution Strategy}}{21}{subsection.2.4.3}
 \contentsline {section}{\numberline {II.5}Messaging Solution}{23}{section.2.5}
 \contentsline {subsection}{\numberline {II.5.1}Mekanisme \textit {Publish/Subscribe}}{24}{subsection.2.5.1}
@@ -54,7 +52,7 @@
 \contentsline {subsubsection}{\numberline {IV.1.2.3}Pencarian Solusi dan Penentuan Solusi Terbaik}{35}{subsubsection.4.1.2.3}
 \contentsline {subsection}{\numberline {IV.1.3}Hasil dan Analisis}{35}{subsection.4.1.3}
 \contentsline {section}{\numberline {IV.2}Perancangan Solusi}{39}{section.4.2}
-\contentsline {subsection}{\numberline {IV.2.1}Garis Besar Sistem Usulan}{40}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {IV.2.1}Garis Besar Sistem Usulan}{41}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {IV.2.2}\textit {Publisher} Rekomendasi}{41}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {IV.2.3}\textit {VRP Solver}}{46}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {IV.2.4}\textit {Message Broker}}{47}{subsection.4.2.4}
@@ -77,8 +75,5 @@
 \contentsline {chapter}{\numberline {6}\uppercase {Kesimpulan dan Saran}}{73}{chapter.6}
 \contentsline {section}{\numberline {VI.1}Kesimpulan}{73}{section.6.1}
 \contentsline {section}{\numberline {VI.2}Saran}{74}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{75}{Item.121}
-\contentsline {chapter}{DAFTAR PUSTAKA}{75}{Item.121}
-\contentsline {chapter}{LAMPIRAN}{1}{section*.51}
-\contentsline {chapter}{LAMPIRAN X}{1}{section*.52}
-\contentsline {chapter}{LAMPIRAN X}{14}{section*.53}
+\contentsline {chapter}{DAFTAR PUSTAKA}{76}{Item.126}
+\contentsline {chapter}{LAMPIRAN}{83}{section*.46}

@@ -178,6 +178,12 @@
 \usepackage{algorithmic}
 
 %
+%
+%
+\usepackage[toc]{appendix}
+\usepackage{xpatch}
+
+%
 % Digunakan untuk membuat daftar pustaka dan citasi
 %
 \usepackage[round, authoryear]{natbib}
@@ -252,6 +258,33 @@
 \renewcommand{\ALG@name}{Algoritma}
 
 \makeatother
+
+
+\makeatletter
+\newcommand\listofappendixname{Table of \appendixname}
+\newcommand\listofappendices{%
+	\if@twocolumn
+	\@restonecoltrue\onecolumn
+	\else
+	\@restonecolfalse
+	\fi
+	\chapter*{\listofappendixname
+		\@mkboth{%
+			\MakeUppercase\listofappendixname}{\MakeUppercase\listofappendixname}}%
+	\@starttoc{toa}%
+	\if@restonecol\twocolumn\fi
+}
+\g@addto@macro\appendix{%
+	\addcontentsline{toc}{chapter}{\appendixname}%
+	\xpatchcmd{\@part}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+	\xpatchcmd{\@part}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+	\xpatchcmd{\@chapter}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+	\xpatchcmd{\@chapter}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+	\xpatchcmd{\@sect}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+	\xpatchcmd{\@sect}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+}
+\makeatother
+
 
 \setcounter{secnumdepth}{3}
 
@@ -389,13 +422,17 @@
 \renewcommand{\chaptername}{BAB}
 % 
 % 
-\renewcommand{\figurename}{\bo{Gambar}}
+\renewcommand{\figurename}{Gambar}
 % 
 % 
-\renewcommand{\tablename}{\bo{Tabel}}
+\renewcommand{\tablename}{Tabel}
 %
 %
-\renewcommand{\listingscaption}{\bo{Kode}}
+\newcommand{\algorithmname}{Algoritma}
+%
+%
+\newcommand{\listingsname}{Kode}
+\renewcommand{\listingscaption}{\listingsname}
 \counterwithin{listing}{chapter}
 %
 %
@@ -409,6 +446,15 @@
 % 
 % 
 \newcommand{\equ}{Persamaan}
+%
+%
+\renewcommand\appendixtocname{LAMPIRAN}
+\renewcommand\appendixpagename{LAMPIRAN}
+%
+%
+\renewcommand\appendixname{Lampiran}
+\renewcommand\listofappendixname{Daftar \appendixname}
+
 
 \renewcommand{\tableautorefname}{Tabel.\negthinspace}
 \renewcommand{\figureautorefname}{Gambar.\negthinspace} 

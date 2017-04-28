@@ -3,14 +3,12 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
 A level-1 auxiliary file: sampul.aux
-A level-1 auxiliary file: judul_dalam.aux
-A level-1 auxiliary file: pengesahan.aux
-A level-1 auxiliary file: orisinal.aux
-A level-1 auxiliary file: pengesahan_sidang.aux
-A level-1 auxiliary file: pengantar.aux
-A level-1 auxiliary file: persetujuan_publikasi.aux
 A level-1 auxiliary file: abstrak.aux
 A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: pengesahan_sidang.aux
+A level-1 auxiliary file: pedoman_penggunaan.aux
+A level-1 auxiliary file: peruntukan.aux
+A level-1 auxiliary file: pengantar.aux
 A level-1 auxiliary file: bab1.aux
 A level-1 auxiliary file: bab2.aux
 A level-1 auxiliary file: bab3.aux
@@ -19,15 +17,15 @@ A level-1 auxiliary file: bab5.aux
 A level-1 auxiliary file: kesimpulan.aux
 A level-1 auxiliary file: pustaka.aux
 A level-1 auxiliary file: markLampiran.aux
-A level-1 auxiliary file: lampiran_5.aux
-A level-1 auxiliary file: lampiran_6.aux
+A level-1 auxiliary file: lampiran_hasil_pengujian_lapangan_kondisi_normal.aux
+A level-1 auxiliary file: lampiran_hasil_pengujian_kondisi_delay.aux
 Database file #1: Resources/Bib/Reference.bib
 Warning--empty publisher in diaz_vrp_2012
 Warning--empty journal in holland_echo:_1990
 Warning--empty journal in rechenberg_cybernetic_1965
 You've used 88 entries,
             1935 wiz_defined-function locations,
-            970 strings with 19384 characters,
+            968 strings with 19420 characters,
 and the built_in function-call counts, 36751 in all, are:
 = -- 3712
 > -- 1384

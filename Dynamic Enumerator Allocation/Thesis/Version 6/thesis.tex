@@ -29,8 +29,7 @@
 % Awal bagian penulisan laporan
 \begin{document}
 	
-	
-%\bstctlcite{IEEEexample:BSTcontrol}
+
 %
 % Sampul Laporan
 \include{sampul}
@@ -39,57 +38,88 @@
 % Gunakan penomeran romawi
 \pagenumbering{roman}
 
-%
-% load halaman judul dalam
-\addChapter{HALAMAN JUDUL}
-\include{judul_dalam}
+%%
+%% load halaman judul dalam
+%\addChapter{HALAMAN JUDUL}
+%\include{judul_dalam}
 
 %
 % setelah bagian ini, halaman dihitung sebagai halaman ke 2
 \setcounter{page}{2}
 
-%
-% load halaman pengesahan
-\addChapter{LEMBAR PERSETUJUAN}
-\include{pengesahan}
-%
-% load halaman orisinalitas 
-\addChapter{LEMBAR PERNYATAAN ORISINALITAS}
-\include{orisinal}
-%
-%
-\addChapter{LEMBAR PENGESAHAN}
-\include{pengesahan_sidang}
-%
-%
-\addChapter{KATA PENGANTAR}
-\include{pengantar}
-%
-%
-\addChapter{LEMBAR PERSETUJUAN PUBLIKASI ILMIAH}
-\include{persetujuan_publikasi}
+%%
+%% load halaman pengesahan
+%\addChapter{LEMBAR PERSETUJUAN}
+%\include{pengesahan}
+%%
+%% load halaman orisinalitas 
+%\addChapter{LEMBAR PERNYATAAN ORISINALITAS}
+%\include{orisinal}
+
+
 %
 % 
 \addChapter{ABSTRAK}
 \include{abstrak}
+
 %
 %
 \addChapter{ABSTRACT}
 \include{abstract}
 
 %
+%
+\addChapter{LEMBAR PENGESAHAN}
+\include{pengesahan_sidang}
+
+%
+%
+\addChapter{PEDOMAN PENGGUNAAN TESIS}
+\include{pedoman_penggunaan}
+
+%
+%
+\addChapter{LEMBAR PERUNTUKAN}
+\include{peruntukan}
+
+%
+%
+\addChapter{KATA PENGANTAR}
+\include{pengantar}
+
+%
 % Daftar isi, gambar, dan tabel
 %
+\singlespacing
 \tableofcontents
 \clearpage
-\listoffigures
+%\listofappendices
+%\clearpage
+{%
+	\let\oldnumberline\numberline%
+	\renewcommand{\numberline}{\figurename~\oldnumberline}%
+	\listoffigures%
+}
 \clearpage
-\listoftables
+{%
+	\let\oldnumberline\numberline%
+	\renewcommand{\numberline}{\tablename~\oldnumberline}%
+	\listoftables%
+}
 \clearpage
-\listofalgorithms
+{%
+	\let\oldnumberline\numberline%
+	\renewcommand{\numberline}{\algorithmname~\oldnumberline}%
+	\listofalgorithms%
+}
 \clearpage
-\listoflistings
+{%
+	\let\oldnumberline\numberline%
+	\renewcommand{\numberline}{\listingsname~\oldnumberline}%
+	\listoflistings%
+}
 \clearpage
+\onehalfspacing
 
 %
 % Gunakan penomeran Arab (1, 2, 3, ...) setelah bagian ini.
@@ -113,19 +143,19 @@
 %
 % Lampiran 
 %
-\begin{appendix}
+
+%\appendix
+%
+%\include{markLampiran}
+%\include{lampiran_hasil_pengujian_lapangan_kondisi_normal}
+%\include{lampiran_hasil_pengujian_kondisi_delay}
+
+
+\begin{appendices}
 	\include{markLampiran}
 	
 	\include{lampiran_hasil_pengujian_lapangan_kondisi_normal}
 	\include{lampiran_hasil_pengujian_kondisi_delay}
-	
-	
-	
-%	\setcounter{page}{2}
-%	\include{lampiran_cordeau_no_tw}
-%	\include{lampiran_cordeau_tw}	
-%	
-%	\include{lampiran_real_delay}
-\end{appendix}
+\end{appendices}
 
 \end{document}

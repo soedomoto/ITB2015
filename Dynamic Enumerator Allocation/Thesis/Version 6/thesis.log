@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  17 APR 2017 10:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  27 APR 2017 07:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -875,18 +875,330 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip78
 \algorithmicindent=\skip79
 )
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count183
+\c@@ppsavesec=\count184
+\c@@ppsaveapp=\count185
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2016/01/19 v6377 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/01/01 v6339 L3 Bootstrap code
+L3 Module: l3names 2015/12/21 v6328 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
+L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
+L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
+L3 Module: l3str 2016/01/03 v6357 L3 Strings
+L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
+L3 Module: l3int 2016/01/05 v6366 L3 Integers
+\c_max_int=\count186
+\l_tmpa_int=\count187
+\l_tmpb_int=\count188
+\g_tmpa_int=\count189
+\g_tmpb_int=\count190
+L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count191
+L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
+L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
+L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
+L3 Module: l3msg 2015/09/28 v6113 L3 Messages
+L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
+\l_iow_line_count_int=\count192
+\l__iow_target_count_int=\count193
+\l__iow_current_line_int=\count194
+\l__iow_current_word_int=\count195
+\l__iow_current_indentation_int=\count196
+L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
+\c_zero_dim=\dimen281
+\c_max_dim=\dimen282
+\l_tmpa_dim=\dimen283
+\l_tmpb_dim=\dimen284
+\g_tmpa_dim=\dimen285
+\g_tmpb_dim=\dimen286
+\c_zero_skip=\skip80
+\c_max_skip=\skip81
+\l_tmpa_skip=\skip82
+\l_tmpb_skip=\skip83
+\g_tmpa_skip=\skip84
+\g_tmpb_skip=\skip85
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count197
+\l_keys_choice_int=\count198
+L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
+\c__fp_leading_shift_int=\count199
+\c__fp_middle_shift_int=\count266
+\c__fp_trailing_shift_int=\count267
+\c__fp_big_leading_shift_int=\count268
+\c__fp_big_middle_shift_int=\count269
+\c__fp_big_trailing_shift_int=\count270
+\c__fp_Bigg_leading_shift_int=\count271
+\c__fp_Bigg_middle_shift_int=\count272
+\c__fp_Bigg_trailing_shift_int=\count273
+L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
+\c_empty_box=\box85
+\l_tmpa_box=\box86
+\l_tmpb_box=\box87
+\g_tmpa_box=\box88
+\g_tmpb_box=\box89
+L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
+\l__coffin_internal_box=\box90
+\l__coffin_internal_dim=\dimen287
+\l__coffin_offset_x_dim=\dimen288
+\l__coffin_offset_y_dim=\dimen289
+\l__coffin_x_dim=\dimen290
+\l__coffin_y_dim=\dimen291
+\l__coffin_x_prime_dim=\dimen292
+\l__coffin_y_prime_dim=\dimen293
+\c_empty_coffin=\box91
+\l__coffin_aligned_coffin=\box92
+\l__coffin_aligned_internal_coffin=\box93
+\l_tmpa_coffin=\box94
+\l_tmpb_coffin=\box95
+\l__coffin_display_coffin=\box96
+\l__coffin_display_coord_coffin=\box97
+\l__coffin_display_pole_coffin=\box98
+\l__coffin_display_offset_dim=\dimen294
+\l__coffin_display_x_dim=\dimen295
+\l__coffin_display_y_dim=\dimen296
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
+L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen297
+\l__box_bottom_dim=\dimen298
+\l__box_left_dim=\dimen299
+\l__box_right_dim=\dimen300
+\l__box_top_new_dim=\dimen301
+\l__box_bottom_new_dim=\dimen302
+\l__box_left_new_dim=\dimen303
+\l__box_right_new_dim=\dimen304
+\l__box_internal_box=\box99
+\l__coffin_bounding_shift_dim=\dimen305
+\l__coffin_left_corner_dim=\dimen306
+\l__coffin_right_corner_dim=\dimen307
+\l__coffin_bottom_corner_dim=\dimen308
+\l__coffin_top_corner_dim=\dimen309
+\l__coffin_scaled_total_height_dim=\dimen310
+\l__coffin_scaled_width_dim=\dimen311
+L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2015/11/11 v6250 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count274
+))
+Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2016/01/19 v6377 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count275
+\l__xparse_m_args_int=\count276
+\l__xparse_mandatory_args_int=\count277
+\l__xparse_processor_int=\count278
+\l__xparse_v_nesting_int=\count279
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchcmd with sig. '' on line 125.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretocmd with sig. '' on line 126.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptocmd with sig. '' on line 127.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowcmd with sig. '' on line 128.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibmacro with sig. 'm' on line 131.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibmacro with sig. 'm' on line 133.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibmacro with sig. 'm' on line 135.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibmacro with sig. 'm' on line 137.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchfieldformat with sig. 'O{*}m' on line 139.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretofieldformat with sig. 'O{*}m' on line 141.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptofieldformat with sig. 'O{*}m' on line 143.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowfieldformat with sig. 'O{*}m' on line 145.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchnameformat with sig. 'O{*}m' on line 147.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretonameformat with sig. 'O{*}m' on line 149.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptonameformat with sig. 'O{*}m' on line 151.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshownameformat with sig. 'O{*}m' on line 153.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchlistformat with sig. 'O{*}m' on line 155.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretolistformat with sig. 'O{*}m' on line 157.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptolistformat with sig. 'O{*}m' on line 159.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowlistformat with sig. 'O{*}m' on line 161.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexfieldformat with sig. 'O{*}m' on line 163.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexfieldformat with sig. 'O{*}m' on line 165.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexfieldformat with sig. 'O{*}m' on line 167.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexfieldformat with sig. 'O{*}m' on line 169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexnameformat with sig. 'O{*}m' on line 171.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexnameformat with sig. 'O{*}m' on line 173.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexnameformat with sig. 'O{*}m' on line 175.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexnameformat with sig. 'O{*}m' on line 177.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexlistformat with sig. 'O{*}m' on line 179.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexlistformat with sig. 'O{*}m' on line 181.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xappindextolistformat with sig. 'O{*}m' on line 183.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexlistformat with sig. 'O{*}m' on line 185.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibdriver with sig. 'm' on line 187.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibdriver with sig. 'm' on line 189.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibdriver with sig. 'm' on line 191.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibdriver with sig. 'm' on line 193.
+.................................................
+)
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip80
-\bibsep=\skip81
+\bibhang=\skip86
+\bibsep=\skip87
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count183
+\c@NAT@ctr=\count280
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 \AP@output=\toks43
-\AP@partial=\box85
-\AP@footins=\box86
+\AP@partial=\box100
+\AP@footins=\box101
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
@@ -895,10 +1207,10 @@ LaTeX Info: Redefining \_ on input line 43.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
 Package: paralist 2015/12/30 v2.5 Extended list environments
-\pltopsep=\skip82
-\plpartopsep=\skip83
-\plitemsep=\skip84
-\plparsep=\skip85
+\pltopsep=\skip88
+\plpartopsep=\skip89
+\plitemsep=\skip90
+\plparsep=\skip91
 \pl@lab=\toks44
 ))
 (./laporan_setting.tex)
@@ -911,11 +1223,11 @@ runsystem(which "pygmentize" && touch "thesis.aex")...executed.
 runsystem(rm "thesis.aex")...executed.
 
  (./thesis.aux (./sampul.aux)
-(./judul_dalam.aux) (./pengesahan.aux) (./orisinal.aux)
-(./pengesahan_sidang.aux) (./pengantar.aux) (./persetujuan_publikasi.aux)
-(./abstrak.aux) (./abstract.aux) (./bab1.aux) (./bab2.aux) (./bab3.aux)
-(./bab4.aux) (./bab5.aux) (./kesimpulan.aux) (./pustaka.aux)
-(./markLampiran.aux) (./lampiran_hasil_pengujian_lapangan_kondisi_normal.aux)
+(./abstrak.aux) (./abstract.aux) (./pengesahan_sidang.aux)
+(./pedoman_penggunaan.aux) (./peruntukan.aux) (./pengantar.aux) (./bab1.aux)
+(./bab2.aux) (./bab3.aux) (./bab4.aux) (./bab5.aux) (./kesimpulan.aux)
+(./pustaka.aux) (./markLampiran.aux)
+(./lampiran_hasil_pengujian_lapangan_kondisi_normal.aux)
 (./lampiran_hasil_pengujian_kondisi_delay.aux))
 \openout1 = `thesis.aux'.
 
@@ -939,7 +1251,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
-\AtBeginShipoutBox=\box87
+\AtBeginShipoutBox=\box102
 Package hyperref Info: Link coloring OFF on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -948,7 +1260,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count184
+\c@section@level=\count281
 )
 LaTeX Info: Redefining \ref on input line 30.
 LaTeX Info: Redefining \pageref on input line 30.
@@ -961,16 +1273,16 @@ LaTeX Info: Redefining \nameref on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count185
-\scratchdimen=\dimen281
-\scratchbox=\box88
-\nofMPsegments=\count186
-\nofMParguments=\count187
+\scratchcounter=\count282
+\scratchdimen=\dimen312
+\scratchbox=\box103
+\nofMPsegments=\count283
+\nofMParguments=\count284
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count188
-\MPscratchDim=\dimen282
-\MPnumerator=\count189
-\makeMPintoPDFobject=\count190
+\MPscratchCnt=\count285
+\MPscratchDim=\dimen313
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
 \everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1030,7 +1342,7 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count191
+\c@lstlisting=\count288
 
 (./_minted-thesis/default-pyg-prefix.pygstyle)
 ABD: EveryShipout initializing macros
@@ -1046,7 +1358,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 
-<Resources/Images/itb.png, id=338, 401.5pt x 539.01375pt>
+<Resources/Images/itb.png, id=320, 401.5pt x 539.01375pt>
 File: Resources/Images/itb.png Graphic file (type png)
 
 <use Resources/Images/itb.png>
@@ -1059,48 +1371,30 @@ Package pdftex.def Info: Resources/Images/itb.png used on input line 39.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Resources/Images/itb.png
 >])
-\openout2 = `judul_dalam.aux'.
+\openout2 = `abstrak.aux'.
 
- (./judul_dalam.tex
-File: Resources/Images/itb.png Graphic file (type png)
-
-<use Resources/Images/itb.png>
-Package pdftex.def Info: Resources/Images/itb.png used on input line 12.
-(pdftex.def)             Requested size: 71.13188pt x 95.4885pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 22.
- [1
+ (./abstrak.tex
+Underfull \hbox (badness 1558) in paragraph at lines 22--23
+\OT1/ptm/m/n/12 dim-i-liki oleh in-sti-tusi statis-tik se-buah ne-gara, tidak t
+erke-cuali Badan Pusat
+ []
 
 
-])
-\openout2 = `pengesahan.aux'.
+Underfull \hbox (badness 1571) in paragraph at lines 22--23
+\OT1/ptm/m/n/12 meru-pakan wilayah kerja dari se-o-rang petu-gas pen-cac-a-han.
+ Pen-ga-lokasian
+ []
 
- (./pengesahan.tex
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 14
-.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
-File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 14
-.
+Underfull \hbox (badness 1895) in paragraph at lines 22--23
+\OT1/ptm/m/n/12 wilayah kerja ser-ingkali di-lakukan se-cara sub-yek-tif, se-hi
+ngga menim-bulkan
+ []
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
-File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 14
-.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
-File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--19
-
+Underfull \hbox (badness 2035) in paragraph at lines 22--23
+\OT1/ptm/m/n/12 menye-babkan keter-lam-batan kegiatan pengumpu-lan data se-cara
+ ke-selu-ruhan.
  []
 
 
@@ -1108,168 +1402,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[2
 
-
-
-])
-\openout2 = `orisinal.aux'.
-
- (./orisinal.tex [3
-
-
-
-])
-\openout2 = `pengesahan_sidang.aux'.
-
- (./pengesahan_sidang.tex
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-[]|\OT1/ptm/m/n/12 Perancangan Sis-tem Rekomen-dasi Lokasi
+Underfull \hbox (badness 3138) in paragraph at lines 24--25
+\OT1/ptm/m/n/12 Pada peneli-tian ini diusulkan se-buah sis-tem yang da-pat di-g
+u-nakan un-tuk
  []
 
 
-Overfull \hbox (12.06679pt too wide) in paragraph at lines 13--21
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--21
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--45
-
- []
-
-
-Overfull \hbox (16.19841pt too wide) in paragraph at lines 46--47
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
-[4
-
-
-
-])
-\openout2 = `pengantar.aux'.
-
- (./pengantar.tex
-Underfull \hbox (badness 4132) in paragraph at lines 4--8
-\OT1/ptm/m/n/12 Template ini dise-di-akan un-tuk orang-orang yang beren-cana me
-ng-gu-nakan
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 13--15
-[]\OT1/ptm/m/n/12 Adanya au-toma-tis dalam penomoran cap-tion, bab, sub-bab, su
-b-sub-bab,
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 17--20
-[]\OT1/ptm/m/n/12 Adanya ke-mu-da-han dalam mem-berikan ref-er-ensi dalam tulis
-an de-ngan
- []
-
-<pics/creative_common.png, id=365, 759.83875pt x 645.41125pt>
-File: pics/creative_common.png Graphic file (type png)
-
-<use pics/creative_common.png>
-Package pdftex.def Info: pics/creative_common.png used on input line 28.
-(pdftex.def)             Requested size: 294.77274pt x 250.37987pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 1048) in paragraph at lines 33--42
-\OT1/ptm/m/n/12 en[]CA$[]. Jika in-gin men-gen-tahui lebih lengkap me-nge-nai \
-OT1/ptm/m/it/12 Cre-ative Com-mon
- []
-
-<pics/mark.png, id=370, 336.25626pt x 66.2475pt>
-File: pics/mark.png Graphic file (type png)
- <use pics/mark.png>
-Package pdftex.def Info: pics/mark.png used on input line 61.
-(pdftex.def)             Requested size: 215.10016pt x 42.37802pt.
- [5
-
-
-
-]
-Underfull \hbox (badness 1762) in paragraph at lines 66--72
-[]\OT1/ptm/m/n/12 Semoga tem-plate ini da-pat mem-bantu orang-orang yang in-gin
- men-coba
- []
-
-) [6 <./pics/creative_common.png (PNG copy)> <./pics/mark.png (PNG copy)>]
-\openout2 = `persetujuan_publikasi.aux'.
-
-
-(./persetujuan_publikasi.tex
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-[]|\OT1/ptm/m/n/12 Sekolah Teknik Elek-tro dan
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--36
-\OT1/ptm/m/n/12 beserta perangkat yang ada (jika diper-lukan). De-ngan Hak Be-b
-as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--36
-\OT1/ptm/m/n/12 Roy-alti Non-eks-klu-sif ini Uni-ver-si-tas In-done-sia berhak 
-meny-im-pan,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--36
-
- []
-
-[7
-
-
-
-])
-\openout2 = `abstrak.aux'.
-
- (./abstrak.tex
-Underfull \hbox (badness 1558) in paragraph at lines 24--25
-\OT1/ptm/m/n/12 dim-i-liki oleh in-sti-tusi statis-tik se-buah ne-gara, tidak t
-erke-cuali Badan Pusat
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 24--25
-\OT1/ptm/m/n/12 meru-pakan wilayah kerja dari se-o-rang petu-gas pen-cac-a-han.
- Pen-ga-lokasian
- []
-
-
-Underfull \hbox (badness 1895) in paragraph at lines 24--25
-\OT1/ptm/m/n/12 wilayah kerja ser-ingkali di-lakukan se-cara sub-yek-tif, se-hi
-ngga menim-bulkan
- []
-
-
-Underfull \hbox (badness 2035) in paragraph at lines 24--25
-\OT1/ptm/m/n/12 menye-babkan keter-lam-batan kegiatan pengumpu-lan data se-cara
- ke-selu-ruhan.
+Underfull \hbox (badness 1642) in paragraph at lines 24--25
+\OT1/ptm/m/n/12 de-ngan meng-gabungkan al-go-ritma penye-le-sa-ian MD-VRP de-ng
+an mekanisme
  []
 
 
@@ -1278,15 +1420,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
  []
 
 
-Underfull \hbox (badness 3138) in paragraph at lines 26--27
-\OT1/ptm/m/n/12 Pada peneli-tian ini diusulkan se-buah sis-tem yang da-pat di-g
-u-nakan un-tuk
+Underfull \hbox (badness 1371) in paragraph at lines 26--27
+\OT1/ptm/m/n/12 Pengujian di-lakukan de-ngan mem-band-ingkan sis-tem usu-lan de
+-ngan pro-gram
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 26--27
-\OT1/ptm/m/n/12 de-ngan meng-gabungkan al-go-ritma penye-le-sa-ian MD-VRP de-ng
-an mekanisme
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+\OT1/ptm/m/n/12 pem-band-ing, yaitu al-go-ritma MD-VRP tanpa meng-gu-nakan meka
+nisme
  []
 
 
@@ -1295,28 +1437,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 28--29
-\OT1/ptm/m/n/12 Pengujian di-lakukan de-ngan mem-band-ingkan sis-tem usu-lan de
--ngan pro-gram
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\OT1/ptm/m/n/12 pem-band-ing, yaitu al-go-ritma MD-VRP tanpa meng-gu-nakan meka
-nisme
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
-[8
+[2
 
 
 
@@ -1324,65 +1449,219 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 \openout2 = `abstract.aux'.
 
  (./abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 25--26
+Underfull \hbox (badness 2027) in paragraph at lines 24--25
 \OT1/ptm/m/n/12 of lo-ca-tion is pro-posed. This sys-tem aims to pro-vide a mor
 e eq-ui-table
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 26--27
 \OT1/ptm/m/n/12 Experiment was con-ducted by com-par-ing pro-posed sys-tem and 
 bench-mark
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-[9
+[3
 
 
 
-]) (./thesis.toc [10
+])
+\openout2 = `pengesahan_sidang.aux'.
+
+ (./pengesahan_sidang.tex [4
 
 
-] [11])
+])
+\openout2 = `pedoman_penggunaan.aux'.
+
+ (./pedoman_penggunaan.tex
+Underfull \hbox (badness 1803) in paragraph at lines 9--10
+\OT1/ptm/m/n/12 cipta ada pada pen-garang de-ngan mengikuti at-u-ran HaKI yang 
+berlaku di
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 17--18
+\OT1/ptm/m/it/12 Se-cara Real Time Berba-sis Kon-teks\OT1/ptm/m/n/12 , Tesis Pr
+o-gram Mag-is-ter, In-sti-tut
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+[5
+
+
+
+])
+\openout2 = `peruntukan.aux'.
+
+ (./peruntukan.tex) [6
+
+
+]
+\openout2 = `pengantar.aux'.
+
+ (./pengantar.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
+
+ []
+
+
+Underfull \hbox (badness 7704) in paragraph at lines 17--18
+[]\OT1/ptm/m/n/12 Teman-teman seper-juan-gan yang se-lalu mem-berikan dukun-gan
+ dan
+ []
+
+[7
+
+
+
+]
+Underfull \hbox (badness 4913) in paragraph at lines 21--22
+\OT1/ptm/m/n/12 Penulis menyadari bahwa tesis ini masih banyak keku-ran-gan dan
+ perlu
+ []
+
+) [8] (./thesis.toc
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 13
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 13
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 13
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
+ [9
+
+
+] [10])
 \tf@toc=\write10
 \openout10 = `thesis.toc'.
 
- [12] (./thesis.lof [13
+ [11]
+(./thesis.lof
+Underfull \hbox (badness 4429) in paragraph at lines 33--33
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi Nor-mal de-ngan Waktu 
+ []
 
 
-])
+Underfull \hbox (badness 4429) in paragraph at lines 34--34
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi Nor-mal de-ngan Waktu 
+ []
+
+[12
+
+
+]
+Underfull \hbox (badness 4429) in paragraph at lines 36--36
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi Nor-mal de-ngan Waktu 
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 37--37
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi Nor-mal de-ngan Waktu 
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 39--39
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi Nor-mal de-ngan Waktu 
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 40--40
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi De-lay de-ngan Waktu 
+ []
+
+)
 \tf@lof=\write11
 \openout11 = `thesis.lof'.
 
- [14] (./thesis.lot
-[15
+ [13] (./thesis.lot
+Underfull \hbox (badness 4429) in paragraph at lines 11--11
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi Nor-mal de-ngan Waktu 
+ []
 
 
-])
+Underfull \hbox (badness 4429) in paragraph at lines 13--13
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi Nor-mal de-ngan Waktu 
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 15--15
+ \OT1/ptm/m/n/12 (Hari) Dari 100 Pen-gu-jian Kon-disi De-lay de-ngan Waktu 
+ []
+
+)
 \tf@lot=\write12
 \openout12 = `thesis.lot'.
 
- [16] (./thesis.loa)
+ [14
+
+
+] (./thesis.loa)
 \tf@loa=\write13
 \openout13 = `thesis.loa'.
 
- [17
+ [15
 
 
 ] (./thesis.lol)
 \tf@lol=\write14
 \openout14 = `thesis.lol'.
 
- [18
+ [16
 
 
 ]
@@ -1396,24 +1675,26 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 15.
+               Default added (so using `!h') on input line 17.
 
 
-<Resources/Images/peta_kelurahan_per_bs.png, id=901, 756.8275pt x 434.62375pt>
+<Resources/Images/peta_kelurahan_per_bs.png, id=793, 756.8275pt x 434.62375pt>
 File: Resources/Images/peta_kelurahan_per_bs.png Graphic file (type png)
 
 <use Resources/Images/peta_kelurahan_per_bs.png>
 Package pdftex.def Info: Resources/Images/peta_kelurahan_per_bs.png used on inp
-ut line 17.
+ut line 19.
 (pdftex.def)             Requested size: 284.52756pt x 163.39467pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 
-Underfull \hbox (badness 1043) in paragraph at lines 29--30
+Underfull \hbox (badness 1043) in paragraph at lines 31--32
 \OT1/ptm/m/n/12 Pengalokasian BS da-pat men-jadi su-atu hal yang prob-lematik k
 arena alokasi
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 29--30
+Underfull \hbox (badness 2245) in paragraph at lines 31--32
 \OT1/ptm/m/n/12 penye-le-sa-ian pen-cac-a-han an-tar petu-gas. Kon-disi ini da-
 pat men-gak-i-batkan
  []
@@ -1422,82 +1703,82 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 
+l.32 
       [1
 
 
 
  <./Resources/Images/peta_kelurahan_per_bs.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 []\OT1/ptm/m/n/12 Permasalahan alokasi wilayah kerja pen-cac-a-han memi-liki ke
 -samaan
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 35--36
+Underfull \hbox (badness 3895) in paragraph at lines 37--38
 \OT1/ptm/m/it/12 Ve-hi-cle Rout-ing Prob-lem \OT1/ptm/m/n/12 (MD-VRP). VRP meru
 -pakan su-atu per-ma-sa-lahan
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 38.
+               Default added (so using `!h') on input line 40.
 
-<Resources/Images/mdvrp-illustration.png, id=916, 629.35126pt x 403.5075pt>
+<Resources/Images/mdvrp-illustration.png, id=808, 629.35126pt x 403.5075pt>
 File: Resources/Images/mdvrp-illustration.png Graphic file (type png)
 
 <use Resources/Images/mdvrp-illustration.png>
 Package pdftex.def Info: Resources/Images/mdvrp-illustration.png used on input 
-line 40.
+line 42.
 (pdftex.def)             Requested size: 341.43306pt x 218.90671pt.
 
-Underfull \hbox (badness 1540) in paragraph at lines 47--48
+Underfull \hbox (badness 1540) in paragraph at lines 49--50
 \OT1/ptm/m/n/12 terke-cil. So-lusi yang di-hasilkan berupa sekumpu-lan rute de-
 ngan se-jum-lah
  []
 
 [2 <./Resources/Images/mdvrp-illustration.png>]
-Underfull \hbox (badness 1796) in paragraph at lines 50--51
+Underfull \hbox (badness 1796) in paragraph at lines 52--53
 []\OT1/ptm/m/n/12 Setiap kon-sumen hanya da-pat dikun-jungi sekali dan hanya ol
 eh satu
  []
 
 
-Underfull \hbox (badness 3907) in paragraph at lines 61--62
+Underfull \hbox (badness 3907) in paragraph at lines 63--64
 []\OT1/ptm/m/n/12 Selanjutnya, sete-lah se-mua wilayah kerja dikun-jungi, terny
 -ata lama
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 65.
+               Default added (so using `!h') on input line 67.
 
 
-<Resources/Images/illustration-timeline-mdvrp-timeservice-estimation.png, id=92
-9, 655.44875pt x 243.91125pt>
+<Resources/Images/illustration-timeline-mdvrp-timeservice-estimation.png, id=82
+1, 655.44875pt x 243.91125pt>
 File: Resources/Images/illustration-timeline-mdvrp-timeservice-estimation.png G
 raphic file (type png)
 
 <use Resources/Images/illustration-timeline-mdvrp-timeservice-estimation.png>
 Package pdftex.def Info: Resources/Images/illustration-timeline-mdvrp-timeservi
-ce-estimation.png used on input line 69.
+ce-estimation.png used on input line 71.
 (pdftex.def)             Requested size: 355.65944pt x 132.35025pt.
 
-<Resources/Images/illustration-timeline-mdvrp-timeservice-real.png, id=930, 759
+<Resources/Images/illustration-timeline-mdvrp-timeservice-real.png, id=822, 759
 .83875pt x 243.91125pt>
 File: Resources/Images/illustration-timeline-mdvrp-timeservice-real.png Graphic
  file (type png)
 
 <use Resources/Images/illustration-timeline-mdvrp-timeservice-real.png>
 Package pdftex.def Info: Resources/Images/illustration-timeline-mdvrp-timeservi
-ce-real.png used on input line 76.
+ce-real.png used on input line 78.
 (pdftex.def)             Requested size: 398.3386pt x 127.86923pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 86--87
+Underfull \hbox (badness 1681) in paragraph at lines 88--89
 []\OT1/ptm/m/n/12 Solusi yang ditawarkan agar rute yang di-hasilkan memi-liki t
 o-tal waktu
  []
@@ -1505,17 +1786,17 @@ o-tal waktu
 [3]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 89.
+               Default added (so using `!h') on input line 91.
 
 
-<Resources/Images/illustration-timeline-mdvrp-gradual-solution.png, id=942, 816
+<Resources/Images/illustration-timeline-mdvrp-gradual-solution.png, id=835, 816
 .04875pt x 152.57pt>
 File: Resources/Images/illustration-timeline-mdvrp-gradual-solution.png Graphic
  file (type png)
 
 <use Resources/Images/illustration-timeline-mdvrp-gradual-solution.png>
 Package pdftex.def Info: Resources/Images/illustration-timeline-mdvrp-gradual-s
-olution.png used on input line 91.
+olution.png used on input line 93.
 (pdftex.def)             Requested size: 398.3386pt x 74.4736pt.
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
@@ -1523,64 +1804,64 @@ Missing character: There is no ¼ in font ptmr7t!
 [4 <./Resources/Images/illustration-timeline-mdvrp-timeservice-estimation.png> 
 <./Resources/Images/illustration-timeline-mdvrp-timeservice-real.png> <./Resour
 ces/Images/illustration-timeline-mdvrp-gradual-solution.png>]
-Underfull \hbox (badness 1248) in paragraph at lines 104--105
+Underfull \hbox (badness 1248) in paragraph at lines 106--107
 \OT1/ptm/m/n/12 se-buah sis-tem yang da-pat di-gu-nakan dalam menen-tukan rekom
 en-dasi lokasi
  []
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 113.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 115.
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 114--115
+Underfull \hbox (badness 2310) in paragraph at lines 116--117
 []\OT1/ptm/m/n/12 Bagaimana menyusun al-go-ritma pen-ca-rian rekomen-dasi lokas
 i de-ngan
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 115--116
+Underfull \hbox (badness 1028) in paragraph at lines 117--118
 []\OT1/ptm/m/n/12 Bagaimana menyusun mekanisme \OT1/ptm/m/it/12 con-flict res-o
 -lu-tion\OT1/ptm/m/n/12 , agar sis-tem tidak
  []
 
 
-Underfull \hbox (badness 2057) in paragraph at lines 123--124
+Underfull \hbox (badness 2057) in paragraph at lines 125--126
 \OT1/ptm/m/n/12 Berdasarkan ru-mu-san masalah di-atas, maka da-pat di-ten-tukan
  tu-juan utama
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 129--130
+Underfull \hbox (badness 2443) in paragraph at lines 131--132
 []\OT1/ptm/m/n/12 Menyusun al-go-ritma rekomen-dasi lokasi se-hingga sis-tem me
 m-berikan
  []
 
 [5]
-Underfull \hbox (badness 2205) in paragraph at lines 130--131
+Underfull \hbox (badness 2205) in paragraph at lines 132--133
 []\OT1/ptm/m/n/12 Menyusun al-go-ritma \OT1/ptm/m/it/12 lo-ca-tion con-flict \O
 T1/ptm/m/n/12 se-hingga tidak ter-jadi du-p-likasi
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 151--152
+Underfull \hbox (badness 1292) in paragraph at lines 153--154
 \OT1/ptm/m/n/12 se-cara spe-si-fik un-tuk ka-sus pengumpu-lan data, tetapi juga
  da-pat di-gu-nakan
  []
 
 
-Underfull \hbox (badness 3312) in paragraph at lines 151--152
+Underfull \hbox (badness 3312) in paragraph at lines 153--154
 \OT1/ptm/m/n/12 pada ka-sus lain terkait de-ngan \OT1/ptm/m/it/12 Ve-hi-cle Rou
 t-ing Prob-lem\OT1/ptm/m/n/12 . Dit-in-jau dari
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 162--163
+Underfull \hbox (badness 1342) in paragraph at lines 164--165
 []\OT1/ptm/m/n/12 BAB II STUDI LIT-ER-ATUR. Bab ini men-je-laskan lan-dasan teo
 ri yang
  []
 
 [6]
-Underfull \hbox (badness 2310) in paragraph at lines 168--169
+Underfull \hbox (badness 2310) in paragraph at lines 170--171
 \OT1/ptm/m/n/12 ter-hadap per-ma-sa-lahan yang di-hadapi, serta kri-te-ria yang
  dibu-tuhkan pada
  []
@@ -1604,7 +1885,7 @@ si yang memuat \OT1/ptm/m/it/12 sum-mary
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 12.
 
-<Resources/Images/literature-map.png, id=990, 783.92876pt x 415.5525pt>
+<Resources/Images/literature-map.png, id=883, 783.92876pt x 415.5525pt>
 File: Resources/Images/literature-map.png Graphic file (type png)
 
 <use Resources/Images/literature-map.png>
@@ -1656,7 +1937,7 @@ Underfull \hbox (badness 1675) in paragraph at lines 55--56
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 68.
 
-<Resources/Images/context-categories.png, id=1033, 518.93875pt x 498.86375pt>
+<Resources/Images/context-categories.png, id=926, 518.93875pt x 498.86375pt>
 File: Resources/Images/context-categories.png Graphic file (type png)
 
 <use Resources/Images/context-categories.png>
@@ -1667,6 +1948,8 @@ line 70.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 78.
 [10]
 Underfull \hbox (badness 1436) in paragraph at lines 91--92
 \OT1/ptm/m/n/12 yang berisi his-tori dari in-for-masi terkait \OT1/ptm/m/it/12 
@@ -1691,133 +1974,119 @@ Underfull \hbox (badness 2875) in paragraph at lines 122--123
 T1/ptm/m/it/12 context-aware \OT1/ptm/m/n/12 jika dia
  []
 
-
-Underfull \hbox (badness 1845) in paragraph at lines 122--123
-\OT1/ptm/m/n/12 kepada peng-guna, di-mana rel-e-vansinya ter-gan-tung dari apa 
-yang peng-guna
- []
-
 [12]
-Underfull \hbox (badness 2781) in paragraph at lines 128--129
+Underfull \hbox (badness 2781) in paragraph at lines 125--126
 []\OT1/ptm/m/n/12 Pada apli-kasi yang bersi-fat \OT1/ptm/m/it/12 mo-bile\OT1/pt
 m/m/n/12 , \OT1/ptm/m/it/12 con-text \OT1/ptm/m/n/12 bi-asanya diper-oleh de-ng
 an
  []
 
 
-Underfull \hbox (badness 3039) in paragraph at lines 128--129
+Underfull \hbox (badness 3039) in paragraph at lines 125--126
 \OT1/ptm/m/n/12 yang telah dilengkapi de-ngan berba-gai sen-sor ([]Cao et al.[]
 , []2015[]). ([]Do
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 128--129
+Underfull \hbox (badness 1360) in paragraph at lines 125--126
 \OT1/ptm/m/n/12 and Gatica-Perez[], []2011[]), mis-al-nya mem-\OT1/ptm/m/it/12 
 propose \OT1/ptm/m/n/12 Grou-pUs, frame-work yang
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 128--129
+Underfull \hbox (badness 1418) in paragraph at lines 125--126
 \OT1/ptm/m/it/12 driv-ing de-tec-tion \OT1/ptm/m/n/12 de-ngan me-man-faatkan se
 n-sor \OT1/ptm/m/it/12 ac-celerom-e-ter \OT1/ptm/m/n/12 yang terse-mat
  []
 
 [13] [14]
-Underfull \hbox (badness 1533) in paragraph at lines 175--177
-\OT1/ptm/m/n/12 Berdasarkan jum-lah \OT1/ptm/m/it/12 de-pot \OT1/ptm/m/n/12 yan
-g di-gu-nakan, ter-da-pat \OT1/ptm/m/it/12 sin-gle de-pot \OT1/ptm/m/n/12 dan
+Underfull \hbox (badness 1558) in paragraph at lines 172--174
+\OT1/ptm/m/n/12 Berdasarkan jum-lah de-pot yang di-gu-nakan, ter-da-pat \OT1/pt
+m/m/it/12 sin-gle de-pot \OT1/ptm/m/n/12 dan
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 175--177
+Underfull \hbox (badness 1038) in paragraph at lines 172--174
 \OT1/ptm/m/it/12 multi de-pot \OT1/ptm/m/n/12 LRP. Se-ba-gian be-sar peneli-tia
 n meng-gu-nakan \OT1/ptm/m/it/12 multi de-pot\OT1/ptm/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 175--177
+Underfull \hbox (badness 1342) in paragraph at lines 172--174
 \OT1/ptm/m/n/12 meskipun ada be-be-rapa ka-sus yang ter-batas hanya pada \OT1/p
 tm/m/it/12 sin-gle de-pot\OT1/ptm/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 188--189
-\OT1/ptm/m/n/12 memi-liki pe-ran yang pent-ing dalam dalam dis-tribusi lo-gis-t
-ik. Pada VRP
- []
-
-
-Underfull \hbox (badness 1178) in paragraph at lines 188--189
-\OT1/ptm/m/n/12 se-jum-lah \OT1/ptm/m/it/12 cus-tomer\OT1/ptm/m/n/12 , dan kem-
-bali lagi ke de-pot asal, di-mana masing-masing
+Underfull \hbox (badness 1728) in paragraph at lines 185--186
+\OT1/ptm/m/n/12 atau pelang-gan (pelang-gan) yang terse-bar se-cara ge-ografis 
+([]La-porte[], []1992[]).
  []
 
 [15]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 203.
+               Default added (so using `!h') on input line 200.
 
-<Resources/Images/vrp-ilustration.png, id=1174, 503.8825pt x 403.5075pt>
+<Resources/Images/vrp-ilustration.png, id=1068, 503.8825pt x 403.5075pt>
 File: Resources/Images/vrp-ilustration.png Graphic file (type png)
 
 <use Resources/Images/vrp-ilustration.png>
 Package pdftex.def Info: Resources/Images/vrp-ilustration.png used on input lin
-e 205.
+e 202.
 (pdftex.def)             Requested size: 256.0748pt x 205.06573pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+ [16 <./Resources/Images/vrp-ilustration.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 215.
+               Default added (so using `!h') on input line 212.
 
-<Resources/Images/vrp-variants.png, id=1186, 532.99126pt x 585.18625pt>
+<Resources/Images/vrp-variants.png, id=1094, 532.99126pt x 585.18625pt>
 File: Resources/Images/vrp-variants.png Graphic file (type png)
 
 <use Resources/Images/vrp-variants.png>
 Package pdftex.def Info: Resources/Images/vrp-variants.png used on input line 2
-17.
+14.
 (pdftex.def)             Requested size: 227.62204pt x 249.91077pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[16]
-
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 231.
+               Default added (so using `!h') on input line 228.
 
 File: Resources/Images/mdvrp-illustration.png Graphic file (type png)
 <use Resources/Images/mdvrp-illustration.png>
 Package pdftex.def Info: Resources/Images/mdvrp-illustration.png used on input 
-line 233.
+line 230.
 (pdftex.def)             Requested size: 312.9803pt x 200.66345pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17 <./Resources/Images/vrp-ilustration.png> <./Resources/Images/vrp-variants.p
-ng>] [18]
-Underfull \hbox (badness 1460) in paragraph at lines 316--317
+[17 <./Resources/Images/vrp-variants.png>] [18]
+Underfull \hbox (badness 1460) in paragraph at lines 313--314
 []\OT1/ptm/m/n/12 Terdapat be-be-rapa al-go-ritma yang da-pat di-gu-nakan un-tu
 k menye-le-saikan
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 316--317
+Underfull \hbox (badness 2990) in paragraph at lines 313--314
 \OT1/ptm/m/n/12 per-ma-sa-lahan MD-VRP. ([]La-porte et al.[], []1984[]) dan ([]
 La-porte et al.[], []1988[])
  []
 
-[19] [20]
-Underfull \hbox (badness 2213) in paragraph at lines 335--336
+[19]
+Underfull \hbox (badness 1796) in paragraph at lines 316--317
+[]\OT1/ptm/m/n/12 Penelitian yang lain, ([]Re-naud et al.[], []1996b[]) meng-gu
+-nakan \OT1/ptm/m/it/12 tabu search
+ []
+
+[20]
+Underfull \hbox (badness 2213) in paragraph at lines 332--333
 []\OT1/ptm/m/n/12 ESs merep-re-sen-tasikan in-di-vidu se-ba-gai se-buah \OT1/pt
 m/m/it/12 tu-ple\OT1/ptm/m/n/12 , yang ter-diri dari
  []
 
 
-Underfull \hbox (badness 4242) in paragraph at lines 343--344
+Underfull \hbox (badness 4242) in paragraph at lines 340--341
 []\OT1/ptm/m/n/12 Berdasarkan ob-ser-vasi bi-ologi, ke-tu-runan (\OT1/ptm/m/it/
 12 off-spring\OT1/ptm/m/n/12 ) harus mem-pun-yai
  []
@@ -1825,50 +2094,50 @@ Underfull \hbox (badness 4242) in paragraph at lines 343--344
 [21]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!htbp') on input line 380.
+               Default added (so using `!htbp') on input line 377.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 382.
+put line 379.
 
-Underfull \hbox (badness 1990) in paragraph at lines 405--406
+Underfull \hbox (badness 1990) in paragraph at lines 402--403
 []\OT1/ptm/m/n/12 Jika \OT1/ptm/m/it/12 evo-lu-tion al-go-rithm \OT1/ptm/m/n/12
  (EA) me-man-dang evo-lusi hanya se-ba-gai su-atu
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 408--409
-\OT1/ptm/m/n/12 oleh pop-u-lasi yang lain. Perbe-daan lain yang cukup sig-nifik
-an adalah EA
+Underfull \hbox (badness 1371) in paragraph at lines 405--406
+\OT1/ptm/m/n/12 so-lusi op-ti-mal melalui fungsi \OT1/ptm/m/it/12 fit-ness \OT1
+/ptm/m/n/12 yang bersi-fat ab-so-lut yang men-dorong
  []
 
 [22]
-Underfull \hbox (badness 1735) in paragraph at lines 411--412
+Underfull \hbox (badness 1735) in paragraph at lines 408--409
 []\OT1/ptm/m/n/12 Terdapat dua macam pen-dekatan berba-sis \OT1/ptm/m/it/12 co-
 evo-lu-tion\OT1/ptm/m/n/12 , yaitu \OT1/ptm/m/it/12 com-pet-i-tive
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 411--412
-\OT1/ptm/m/n/12 dua: 1) \OT1/ptm/b/n/12 Com-pe-ti-tion\OT1/ptm/m/n/12 , di-mana
- satu atau lebih pop-u-lasi sal-ing meng-ham-bat.
+Underfull \hbox (badness 1400) in paragraph at lines 408--409
+\OT1/ptm/m/n/12 dua: 1) \OT1/ptm/b/n/12 Com-pe-ti-tion\OT1/ptm/m/n/12 , yaitu k
+on-disi ketika satu atau lebih pop-u-lasi sal-ing
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 414--415
+Underfull \hbox (badness 1838) in paragraph at lines 411--412
 \OT1/ptm/m/n/12 masalah MD-VRP, salah sat-unya di-lakukan oleh ([]de Oliveira e
 t al.[], []2016[]).
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 417.
+               Default added (so using `!h') on input line 414.
 
-<Resources/Images/coes_overview.png, id=1383, 523.9575pt x 511.9125pt>
+<Resources/Images/coes_overview.png, id=1275, 523.9575pt x 511.9125pt>
 File: Resources/Images/coes_overview.png Graphic file (type png)
 
 <use Resources/Images/coes_overview.png>
 Package pdftex.def Info: Resources/Images/coes_overview.png used on input line 
-419.
+416.
 (pdftex.def)             Requested size: 284.52756pt x 277.99086pt.
 
 
@@ -1876,26 +2145,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
-
-Underfull \hbox (badness 2302) in paragraph at lines 435--436
-[]\OT1/ptm/m/n/12 Dari be-ragam metode in-ter-aksi an-tara \OT1/ptm/m/it/12 cli
-ent \OT1/ptm/m/n/12 de-ngan \OT1/ptm/m/it/12 server\OT1/ptm/m/n/12 , cara yang
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 435--436
-\OT1/ptm/m/n/12 beru-ru-tan, se-hingga tidak sesuai un-tuk di-im-ple-men-tasika
-n pada sis-tem yang
- []
-
 [23]
-Underfull \hbox (badness 1107) in paragraph at lines 445--446
+Underfull \hbox (badness 1107) in paragraph at lines 442--443
 []\OT1/ptm/m/n/12 Model dasar dari sis-tem berba-sis \OT1/ptm/m/it/12 pub-lish/
 -sub-scribe\OT1/ptm/m/n/12 , seperti Gam-bar []II.7[],
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 448--449
+Underfull \hbox (badness 2205) in paragraph at lines 445--446
 []\OT1/ptm/m/it/12 Subscriber \OT1/ptm/m/n/12 mendaf-tarkan keter-tarikan-nya p
 ada se-buah \OT1/ptm/m/it/12 event \OT1/ptm/m/n/12 tanpa perlu
  []
@@ -1903,61 +2160,61 @@ ada se-buah \OT1/ptm/m/it/12 event \OT1/ptm/m/n/12 tanpa perlu
 [24 <./Resources/Images/coes_overview.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 451.
+               Default added (so using `!h') on input line 448.
 
-<Resources/Images/pub-sub-general.png, id=1412, 624.3325pt x 303.1325pt>
+<Resources/Images/pub-sub-general.png, id=1303, 624.3325pt x 303.1325pt>
 File: Resources/Images/pub-sub-general.png Graphic file (type png)
 
 <use Resources/Images/pub-sub-general.png>
 Package pdftex.def Info: Resources/Images/pub-sub-general.png used on input lin
-e 453.
+e 450.
 (pdftex.def)             Requested size: 312.9803pt x 151.96365pt.
 
-Underfull \hbox (badness 2134) in paragraph at lines 460--461
+Underfull \hbox (badness 2134) in paragraph at lines 457--458
 []\OT1/ptm/m/n/12 Paradigma \OT1/ptm/m/it/12 pub-lish/-sub-scribe \OT1/ptm/m/n/
 12 memi-liki sifat \OT1/ptm/m/it/12 loose cou-pling\OT1/ptm/m/n/12 . Pemisa-han
 
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 460--461
+Underfull \hbox (badness 2818) in paragraph at lines 457--458
 \OT1/ptm/m/n/12 (\OT1/ptm/m/it/12 de-cou-pling\OT1/ptm/m/n/12 ) in-for-masi yan
 g ter-jadi an-tara \OT1/ptm/m/it/12 sub-scriber \OT1/ptm/m/n/12 dan \OT1/ptm/m/
 it/12 pub-lisher \OT1/ptm/m/n/12 da-pat
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 467--469
+Underfull \hbox (badness 2205) in paragraph at lines 464--466
 \OT1/ptm/m/n/12 berin-ter-aksi se-cara \OT1/ptm/m/it/12 syn-chronous\OT1/ptm/m/
 n/12 . \OT1/ptm/m/it/12 Pub-lisher \OT1/ptm/m/n/12 tetap da-pat me-ngi-rim-kan
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!h') on input line 472.
+               Default added (so using `!h') on input line 469.
 
-<Resources/Images/space-decoupling.png, id=1418, 523.9575pt x 222.8325pt>
+<Resources/Images/space-decoupling.png, id=1309, 523.9575pt x 222.8325pt>
 File: Resources/Images/space-decoupling.png Graphic file (type png)
 
 <use Resources/Images/space-decoupling.png>
 Package pdftex.def Info: Resources/Images/space-decoupling.png used on input li
-ne 476.
+ne 473.
 (pdftex.def)             Requested size: 256.0748pt x 108.90666pt.
 
-<Resources/Images/time-decoupling.png, id=1419, 589.20125pt x 162.6075pt>
+<Resources/Images/time-decoupling.png, id=1310, 589.20125pt x 162.6075pt>
 File: Resources/Images/time-decoupling.png Graphic file (type png)
 
 <use Resources/Images/time-decoupling.png>
 Package pdftex.def Info: Resources/Images/time-decoupling.png used on input lin
-e 483.
+e 480.
 (pdftex.def)             Requested size: 284.52756pt x 78.52461pt.
 
-<Resources/Images/sync-decoupling.png, id=1420, 523.9575pt x 170.6375pt>
+<Resources/Images/sync-decoupling.png, id=1311, 523.9575pt x 170.6375pt>
 File: Resources/Images/sync-decoupling.png Graphic file (type png)
 
 <use Resources/Images/sync-decoupling.png>
 Package pdftex.def Info: Resources/Images/sync-decoupling.png used on input lin
-e 490.
+e 487.
 (pdftex.def)             Requested size: 256.0748pt x 83.39699pt.
 
 
@@ -1981,7 +2238,7 @@ n ini adalah
  []
 
 
-<Resources/Images/design-science-research-methodology.png, id=1443, 102.3825pt 
+<Resources/Images/design-science-research-methodology.png, id=1334, 102.3825pt 
 x 463.7325pt>
 File: Resources/Images/design-science-research-methodology.png Graphic file (ty
 pe png)
@@ -2027,12 +2284,6 @@ Underfull \hbox (badness 3019) in paragraph at lines 13--14
 a se-jum-lah lokasi
  []
 
-
-Underfull \hbox (badness 1783) in paragraph at lines 18--19
-[]\OT1/ptm/m/n/12 Terdapat lebih dari satu kendaraan, di-mana masing-masing ken
-daraan
- []
-
 [29
 
 
@@ -2064,7 +2315,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 127.
 
 
-<Resources/Images/google_direction_api_response.png, id=1481, 685.56125pt x 334
+<Resources/Images/google_direction_api_response.png, id=1372, 685.56125pt x 334
 .24875pt>
 File: Resources/Images/google_direction_api_response.png Graphic file (type png
 )
@@ -2175,7 +2426,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 307.
 
 
-<Resources/Images/analysis_mtsp_no_time_windows.png, id=1511, 1003.75pt x 602.2
+<Resources/Images/analysis_mtsp_no_time_windows.png, id=1403, 1003.75pt x 602.2
 5pt>
 File: Resources/Images/analysis_mtsp_no_time_windows.png Graphic file (type png
 )
@@ -2224,7 +2475,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 381.
 
 
-<Resources/Images/illustration-timeline-mdvrp.png, id=1528, 989.6975pt x 263.98
+<Resources/Images/illustration-timeline-mdvrp.png, id=1419, 989.6975pt x 263.98
 625pt>
 File: Resources/Images/illustration-timeline-mdvrp.png Graphic file (type png)
  <use Resources/Images/illustration-timeline-mdvrp.png>
@@ -2257,11 +2508,18 @@ Underfull \hbox (badness 1092) in paragraph at lines 410--411
  []
 
 
+Underfull \hbox (badness 2384) in paragraph at lines 410--411
+\OT1/ptm/m/n/12 yang \OT1/ptm/m/it/12 asyn-chronous \OT1/ptm/m/n/12 an-tara \OT
+1/ptm/m/it/12 server (pub-lisher) \OT1/ptm/m/n/12 dan \OT1/ptm/m/it/12 client (
+sub-scriber)\OT1/ptm/m/n/12 , yaitu
+ []
+
+
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 413.
 
 
-<Resources/Images/illustration-timeline-realtime-mdvrp.png, id=1552, 983.675pt 
+<Resources/Images/illustration-timeline-realtime-mdvrp.png, id=1444, 983.675pt 
 x 304.13625pt>
 File: Resources/Images/illustration-timeline-realtime-mdvrp.png Graphic file (t
 ype png)
@@ -2269,10 +2527,6 @@ ype png)
 Package pdftex.def Info: Resources/Images/illustration-timeline-realtime-mdvrp.
 png used on input line 415.
 (pdftex.def)             Requested size: 398.3386pt x 123.16057pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 Underfull \hbox (badness 2119) in paragraph at lines 424--425
 \OT1/ptm/m/n/12 Sistem usu-lan un-tuk rekomen-dasi lokasi pen-cac-a-han di-ran-
@@ -2286,11 +2540,12 @@ eran se-ba-gai penerus pe-san (\OT1/ptm/m/it/12 mes-sage router\OT1/ptm/m/n/12
 ).
  []
 
+[40 <./Resources/Images/illustration-timeline-realtime-mdvrp.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 427.
 
-<Resources/Images/system-overview.png, id=1554, 684.5575pt x 378.41376pt>
+<Resources/Images/system-overview.png, id=1455, 684.5575pt x 378.41376pt>
 File: Resources/Images/system-overview.png Graphic file (type png)
 
 <use Resources/Images/system-overview.png>
@@ -2298,17 +2553,12 @@ Package pdftex.def Info: Resources/Images/system-overview.png used on input lin
 e 429.
 (pdftex.def)             Requested size: 398.3386pt x 220.20189pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[40]
 Underfull \hbox (badness 10000) in paragraph at lines 443--444
 \OT1/ptm/m/n/12 Berdasarkan kon-sep dasar mekanisme \OT1/ptm/m/it/12 pub-lish/-
 sub-scribe\OT1/ptm/m/n/12 , \OT1/ptm/m/it/12 pub-lisher \OT1/ptm/m/n/12 akan
  []
 
-[41 <./Resources/Images/illustration-timeline-realtime-mdvrp.png> <./Resources/
-Images/system-overview.png>]
+[41 <./Resources/Images/system-overview.png>]
 Underfull \hbox (badness 1215) in paragraph at lines 445--446
 []\OT1/ptm/m/n/12 Pada saat se-o-rang petu-gas pen-cac-a-han yang berperan se-b
 a-gai \OT1/ptm/m/it/12 sub-scriber
@@ -2322,7 +2572,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 475.
 
-<Resources/Images/topic-watcher.png, id=1571, 290.08376pt x 594.22pt>
+<Resources/Images/topic-watcher.png, id=1464, 290.08376pt x 594.22pt>
 File: Resources/Images/topic-watcher.png Graphic file (type png)
 
 <use Resources/Images/topic-watcher.png>
@@ -2344,7 +2594,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 500.
 
 
-<Resources/Images/global-best-greedy-solution.png, id=1600, 539.01375pt x 243.9
+<Resources/Images/global-best-greedy-solution.png, id=1491, 539.01375pt x 243.9
 1125pt>
 File: Resources/Images/global-best-greedy-solution.png Graphic file (type png)
  <use Resources/Images/global-best-greedy-solution.png>
@@ -2356,12 +2606,13 @@ on input line 502.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!htbp') on input line 509.
 
+[44 <./Resources/Images/global-best-greedy-solution.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 538.
 
 
-<Resources/Images/recommendation-publisher.png, id=1602, 375.4025pt x 1094.0875
+<Resources/Images/recommendation-publisher.png, id=1512, 375.4025pt x 1094.0875
 pt>
 File: Resources/Images/recommendation-publisher.png Graphic file (type png)
  <use Resources/Images/recommendation-publisher.png>
@@ -2387,12 +2638,11 @@ Underfull \hbox (badness 1442) in paragraph at lines 547--548
 Se-ba-gai kon-sekuensinya, ketika petu-gas A
  []
 
-[44 <./Resources/Images/global-best-greedy-solution.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 552.
 
-<Resources/Images/timeline-illustration.png, id=1612, 701.62125pt x 513.92pt>
+<Resources/Images/timeline-illustration.png, id=1515, 701.62125pt x 513.92pt>
 File: Resources/Images/timeline-illustration.png Graphic file (type png)
 
 <use Resources/Images/timeline-illustration.png>
@@ -2437,7 +2687,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 605.
 
 
-<Resources/Images/pub_sub_distributed_ilustration.png, id=1659, 614.295pt x 368
+<Resources/Images/pub_sub_distributed_ilustration.png, id=1551, 614.295pt x 368
 .37625pt>
 File: Resources/Images/pub_sub_distributed_ilustration.png Graphic file (type p
 ng)
@@ -2527,6 +2777,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--117
  []
 
 [52]
+Underfull \hbox (badness 3019) in paragraph at lines 119--120
+[]\OT1/ptm/m/n/12 Untuk meny-im-u-lasikan kon-disi la-pan-gan yang sebe-narnya,
+ sis-tem juga
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 119--120
+\OT1/ptm/m/n/12 Pe-sisir Se-la-tan, Provinsi Su-mat-era Barat. Data la-pan-gan 
+di-gu-nakan un-tuk
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 119--120
+\OT1/ptm/m/n/12 merep-re-sen-tasikan kon-disi pen-cac-a-han yang sebe-narnya, d
+e-ngan an-tar lokasi
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 134--135
 \OT1/ptm/m/n/12 Sistem usu-lan yang meng-gu-nakan al-go-ritma MD-VRP berba-sis 
 Co-EAs
@@ -2543,7 +2811,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 144.
 
 
-<Resources/Images/result-mdvrp-illustration.png, id=1709, 649.42625pt x 444.661
+<Resources/Images/result-mdvrp-illustration.png, id=1601, 649.42625pt x 444.661
 25pt>
 File: Resources/Images/result-mdvrp-illustration.png Graphic file (type png)
  <use Resources/Images/result-mdvrp-illustration.png>
@@ -2560,12 +2828,7 @@ Underfull \hbox (badness 3449) in paragraph at lines 153--154
 gan melakukan
  []
 
-[53]
-
-LaTeX Warning: Reference `sssec:test-no-service-time' on page 54 undefined on i
-nput line 170.
-
-[54 <./Resources/Images/result-mdvrp-illustration.png>]
+[53] [54 <./Resources/Images/result-mdvrp-illustration.png>]
 Underfull \hbox (badness 1077) in paragraph at lines 177--178
 []\OT1/ptm/m/n/12 Pencacah melakukan \OT1/ptm/m/it/12 sub-scrip-tion \OT1/ptm/m
 /n/12 de-ngan meng-gu-nakan 'lokasi terkini'
@@ -2582,7 +2845,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 188.
 
 
-<Resources/Images/component-interaction.png, id=1726, 645.41125pt x 213.79875pt
+<Resources/Images/component-interaction.png, id=1618, 645.41125pt x 213.79875pt
 >
 File: Resources/Images/component-interaction.png Graphic file (type png)
  <use Resources/Images/component-interaction.png>
@@ -2662,7 +2925,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 340.
 
 
-<Resources/Images/test-flowchart-normal-global-broker.png, id=1763, 196.735pt x
+<Resources/Images/test-flowchart-normal-global-broker.png, id=1656, 196.735pt x
  754.82pt>
 File: Resources/Images/test-flowchart-normal-global-broker.png Graphic file (ty
 pe png)
@@ -2676,7 +2939,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--345
  []
 
 
-<Resources/Images/test-flowchart-normal-global-publisher.png, id=1764, 261.9787
+<Resources/Images/test-flowchart-normal-global-publisher.png, id=1657, 261.9787
 4pt x 774.895pt>
 File: Resources/Images/test-flowchart-normal-global-publisher.png Graphic file 
 (type png)
@@ -2686,7 +2949,7 @@ Package pdftex.def Info: Resources/Images/test-flowchart-normal-global-publishe
 r.png used on input line 351.
 (pdftex.def)             Requested size: 155.3518pt x 459.51341pt.
 
-<Resources/Images/test-flowchart-normal-global-subscriber.png, id=1765, 216.81p
+<Resources/Images/test-flowchart-normal-global-subscriber.png, id=1658, 216.81p
 t x 895.345pt>
 File: Resources/Images/test-flowchart-normal-global-subscriber.png Graphic file
  (type png)
@@ -2703,24 +2966,6 @@ Overfull \hbox (9.1201pt too wide) in paragraph at lines 342--363
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 2781) in paragraph at lines 372--373
-\OT1/ptm/m/n/12 yang di-jalankan pada kon-disi nor-mal, di-mana tidak ada sesu-
-atupun yang
- []
-
-
-Underfull \hbox (badness 1424) in paragraph at lines 372--373
-\OT1/ptm/m/n/12 menye-babkan pe-nun-daaan. Pen-gu-jian kon-disi ini di-lakukan 
-un-tuk tiap-tiap
- []
-
-
-Underfull \hbox (badness 1178) in paragraph at lines 372--373
-\OT1/ptm/m/n/12 penye-sua-ian is-ti-lah, yaitu pelang-gan di-analogikan de-ngan
- wilayah kerja dan
- []
-
 [58] [59 <./Resources/Images/test-flowchart-normal-global-broker.png> <./Resour
 ces/Images/test-flowchart-normal-global-publisher.png> <./Resources/Images/test
 -flowchart-normal-global-subscriber.png>] [60]
@@ -2729,7 +2974,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 430.
 
 
-<Resources/Images/test_result_cordeau_tw_mean_of_total_time.png, id=1803, 1108.
+<Resources/Images/test_result_cordeau_tw_mean_of_total_time.png, id=1695, 1108.
 14pt x 599.23875pt>
 File: Resources/Images/test_result_cordeau_tw_mean_of_total_time.png Graphic fi
 le (type png)
@@ -2744,7 +2989,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 465.
 
 
-<Resources/Images/test_result_cordeau_tw_stdev_of_total_time.png, id=1809, 1107
+<Resources/Images/test_result_cordeau_tw_stdev_of_total_time.png, id=1701, 1107
 .13625pt x 597.23125pt>
 File: Resources/Images/test_result_cordeau_tw_stdev_of_total_time.png Graphic f
 ile (type png)
@@ -2765,7 +3010,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 477.
 
 
-<Resources/Images/test_result_cordeau_tw_mean_stdev_of_total_time.png, id=1818,
+<Resources/Images/test_result_cordeau_tw_mean_stdev_of_total_time.png, id=1710,
  1703.36375pt x 753.81625pt>
 File: Resources/Images/test_result_cordeau_tw_mean_stdev_of_total_time.png Grap
 hic file (type png)
@@ -2798,7 +3043,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 532.
 
 
-<Resources/Images/test_result_real_tw_mean_of_total_time.png, id=1830, 1108.14p
+<Resources/Images/test_result_real_tw_mean_of_total_time.png, id=1723, 1108.14p
 t x 599.23875pt>
 File: Resources/Images/test_result_real_tw_mean_of_total_time.png Graphic file 
 (type png)
@@ -2816,7 +3061,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 564.
 
 
-<Resources/Images/test_result_real_tw_stdev_of_total_time.png, id=1831, 1108.14
+<Resources/Images/test_result_real_tw_stdev_of_total_time.png, id=1724, 1108.14
 pt x 597.23125pt>
 File: Resources/Images/test_result_real_tw_stdev_of_total_time.png Graphic file
  (type png)
@@ -2834,7 +3079,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 573.
 
 
-<Resources/Images/test_result_real_tw_mean_stdev_of_total_time.png, id=1832, 10
+<Resources/Images/test_result_real_tw_mean_stdev_of_total_time.png, id=1725, 10
 06.76125pt x 599.23875pt>
 File: Resources/Images/test_result_real_tw_mean_stdev_of_total_time.png Graphic
  file (type png)
@@ -2867,42 +3112,13 @@ n/12 d01 menggam-barkan kon-disi nor-mal.
  []
 
 [66 <./Resources/Images/test_result_real_tw_mean_stdev_of_total_time.png>]
-Underfull \hbox (badness 1910) in paragraph at lines 598--600
-[]\OT1/ptm/m/n/12 Pengujian de-ngan kode \OT1/ptm/m/it/12 in-stance \OT1/ptm/m/
-n/12 d02 menggam-barkan kon-disi di-mana
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 604--606
-[]\OT1/ptm/m/n/12 Pengujian de-ngan kode \OT1/ptm/m/it/12 in-stance \OT1/ptm/m/
-n/12 d03 menggam-barkan kon-disi di-mana
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 610--612
-[]\OT1/ptm/m/n/12 Pengujian de-ngan kode \OT1/ptm/m/it/12 in-stance \OT1/ptm/m/
-n/12 d04 menggam-barkan kon-disi di-mana
- []
-
-[67]
-Underfull \hbox (badness 1910) in paragraph at lines 616--618
-[]\OT1/ptm/m/n/12 Pengujian de-ngan kode \OT1/ptm/m/it/12 in-stance \OT1/ptm/m/
-n/12 d05 menggam-barkan kon-disi di-mana
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 622--624
-[]\OT1/ptm/m/n/12 Pengujian de-ngan kode \OT1/ptm/m/it/12 in-stance \OT1/ptm/m/
-n/12 d06 menggam-barkan kon-disi di-mana
- []
-
-[68]
+[67] [68]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 674.
 
 
-<Resources/Images/test_result_delay_real_tw_mean_of_total_time.png, id=1868, 11
+<Resources/Images/test_result_delay_real_tw_mean_of_total_time.png, id=1760, 11
 08.14pt x 599.23875pt>
 File: Resources/Images/test_result_delay_real_tw_mean_of_total_time.png Graphic
  file (type png)
@@ -2921,7 +3137,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 709.
 
 
-<Resources/Images/test_result_delay_real_tw_stdev_of_total_time.png, id=1873, 1
+<Resources/Images/test_result_delay_real_tw_stdev_of_total_time.png, id=1766, 1
 107.13625pt x 597.23125pt>
 File: Resources/Images/test_result_delay_real_tw_stdev_of_total_time.png Graphi
 c file (type png)
@@ -2974,8 +3190,8 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!h') on input line 724.
 
 
-<Resources/Images/test_result_delay_real_tw_mean_stdev_of_total_time.png, id=18
-77, 1703.36375pt x 753.81625pt>
+<Resources/Images/test_result_delay_real_tw_mean_stdev_of_total_time.png, id=17
+70, 1703.36375pt x 753.81625pt>
 File: Resources/Images/test_result_delay_real_tw_mean_stdev_of_total_time.png G
 raphic file (type png)
 
@@ -3006,9 +3222,27 @@ tu
  []
 
 
+Underfull \hbox (badness 4805) in paragraph at lines 14--15
+\OT1/ptm/m/n/12 berba-sis Co-EAs de-ngan mekanisme Pub-lish/-Sub-scribe, meng-h
+asilkan
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 14--15
+\OT1/ptm/m/n/12 `rata-rata hari yang diper-lukan tiap-tiap pen-cacah' yang sama
+ de-ngan
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 []\OT1/ptm/m/n/12 Pada per-ma-sa-lahan MD-VRP yang mem-per-tim-bangkan lama wak
 tu
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 16--17
+\OT1/ptm/m/n/12 yang sama diband-ingkan de-ngan pro-gram pem-band-ing, yaitu MD
+-VRP
  []
 
 
@@ -3028,357 +3262,187 @@ Underfull \hbox (badness 1533) in paragraph at lines 18--19
 
 
 ]
-Underfull \hbox (badness 1748) in paragraph at lines 20--21
-\OT1/ptm/m/n/12 Pub-lish/-Sub-scribe mem-berikan hasil yang \OT1/ptm/b/n/12 leb
-ih mer-ata \OT1/ptm/m/n/12 an-tar petu-gas
+Underfull \hbox (badness 2753) in paragraph at lines 20--21
+\OT1/ptm/m/n/12 Pub-lish/-Sub-scribe mem-berikan hasil yang lebih mer-ata an-ta
+r petu-gas
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 30--31
-[]\OT1/ptm/m/n/12 Mengkaji mekanisme ko-mu-nikasi yang di-gu-nakan, mis-al-nya 
-de-ngan
+Underfull \hbox (badness 1052) in paragraph at lines 30--31
+\OT1/ptm/m/n/12 al-ter-natif dari mekanisme Pub-lish/-Sub-scribe, seperti Re-qu
+est/Re-ply dan
  []
 
-) [74]
+[74]
+Underfull \hbox (badness 4378) in paragraph at lines 32--33
+\OT1/ptm/m/n/12 per-ma-sa-lahan terkait MD-VRP, seperti Tabu Search, Par-ti-cle
+ Swarm
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 33--34
+[]\OT1/ptm/m/n/12 Penerapan sis-tem dalam skala global, mis-al-nya un-tuk selu-
+ruh wilayah
+ []
+
+) [75]
 \openout2 = `pustaka.aux'.
 
  (./pustaka.tex (./thesis.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-
-Underfull \hbox (badness 4872) in paragraph at lines 45--51
-\OT1/ptm/m/n/12 publish-subscribe sys-tems.  In \OT1/ptm/m/it/12 Dis-tributed C
-om-put-ing Sys-tems, 1999.
- []
-
-[75
-
-
-
-]
 Missing character: There is no Â in font ptmri7t!
 Missing character: There is no ¨ in font ptmri7t!
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no “ in font ptmri7t!
+ [76
 
-Underfull \hbox (badness 1038) in paragraph at lines 101--106
-[]\OT1/ptm/m/n/12 Chao, I.-M., Golden, B. L., and Wasil, E. (1993).  A New Heur
-is-tic for
+
+
+]
+Underfull \hbox (badness 1454) in paragraph at lines 118--124
+\OT1/ptm/m/it/12 and Man-age-ment Sci-ence\OT1/ptm/m/n/12 , vol-ume 14 of \OT1/
+ptm/m/it/12 Trans-porta-tion\OT1/ptm/m/n/12 , pages 367--428.
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 126--132
-[]\OT1/ptm/m/n/12 Cordeau, J.-F., La-porte, G., Savels-bergh, M. W. P., and Vig
-o, D. (2007).
- []
-
-[76]
-Underfull \hbox (badness 2197) in paragraph at lines 146--151
+Underfull \hbox (badness 2197) in paragraph at lines 138--143
 \OT1/ptm/m/it/12 and Com-mu-ni-ca-tions Work-shops (PER-COM Work-shops), 2010 8
 th IEEE
  []
 
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no £ in font ptmr7t!
-
-Underfull \hbox (badness 2452) in paragraph at lines 209--213
-[]\OT1/ptm/m/n/12 Gendreau, M., Hertz, A., and La-porte, G. (1992).  New in-ser
+[77]
+Underfull \hbox (badness 1888) in paragraph at lines 201--205
+[]\OT1/ptm/m/n/12 Gendreau, M., Hertz, A., and La-porte, G. (1992):  New in-ser
 -tion and
  []
 
-[77]
-Underfull \hbox (badness 2088) in paragraph at lines 244--248
-[]\OT1/ptm/m/n/12 Huning, A., Rechen-berg, I., and Eigen, M. (1976).  \OT1/ptm/
+
+Underfull \hbox (badness 1122) in paragraph at lines 226--230
+\OT1/ptm/m/it/12 Di-gest of Pa-pers. First In-ter-na-tional Sym-po-sium on Wear
+-able Com-put-ers\OT1/ptm/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 232--236
+[]\OT1/ptm/m/n/12 Huning, A., Rechen-berg, I., and Eigen, M. (1976):  \OT1/ptm/
 m/it/12 Evo-lu-tion-sstrate-gie.
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 259--263
-[]\OT1/ptm/m/n/12 Laporte, G. (1992).  The ve-hi-cle rout-ing prob-lem: An over
-view of ex-act
- []
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 259--263
-\OT1/ptm/m/n/12 and ap-prox-i-mate al-go-rithms.  \OT1/ptm/m/it/12 Eu-ro-pean j
+Underfull \hbox (badness 1412) in paragraph at lines 243--247
+\OT1/ptm/m/n/12 and ap-prox-i-mate al-go-rithms,  \OT1/ptm/m/it/12 Eu-ro-pean j
 our-nal of op-er-a-tional re-search\OT1/ptm/m/n/12 ,
  []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
 [78]
-Underfull \hbox (badness 1048) in paragraph at lines 302--307
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+
+Underfull \hbox (badness 1048) in paragraph at lines 286--291
 \OT1/ptm/m/it/12 Tech-nolo-gies and In-no-va-tive Busi-ness Prac-tices for the 
 Trans-for-ma-tion of
  []
 
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no „ in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
 [79]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
+Underfull \hbox (badness 1242) in paragraph at lines 370--374
+[]\OT1/ptm/m/n/12 Schilit, B., Adams, N., and Want, R. (1994):  Context-aware c
+om-put-ing
+ []
+
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 
-Underfull \hbox (badness 2134) in paragraph at lines 409--412
-[]\OT1/ptm/m/n/12 Schwefel, H.-P. (1975).  \OT1/ptm/m/it/12 Evo-lu-tion-sstrate
--gie und nu-merische Op-ti-mierung\OT1/ptm/m/n/12 .
+Underfull \hbox (badness 1412) in paragraph at lines 381--384
+[]\OT1/ptm/m/n/12 Schwefel, H.-P. (1975):  \OT1/ptm/m/it/12 Evo-lu-tion-sstrate
+-gie und nu-merische Op-ti-mierung\OT1/ptm/m/n/12 ,
  []
 
-[80]
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [81])) [82]
+[80]
+Underfull \hbox (badness 1661) in paragraph at lines 477--482
+\OT1/ptm/m/n/12 Sys-tem us-ing smart-phone sen-sors,  \OT1/ptm/m/it/12 2016 IEE
+E 7th An-nual In-for-ma-tion
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 484--487
+[]\OT1/ptm/m/n/12 Badan Pusat Statis-tik - Tu-gas, Fungsi, dan Kewe-nan-gan,  d
+ata diper-oleh
+ []
+
+[81]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no „ in font ptmr7t!
+Missing character: There is no ¢ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+)) [82]
 \openout2 = `markLampiran.aux'.
 
- (./markLampiran.texpdfTeX warning (ext4): destination with the same identifier
- (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.13 \end{titlepage}
-                     [1
+ (./markLampiran.tex) [83
 
 
-])
+
+]
 \openout2 = `lampiran_hasil_pengujian_lapangan_kondisi_normal.aux'.
 
 
-(./lampiran_hasil_pengujian_lapangan_kondisi_normal.texpdfTeX warning (ext4): d
-estination with the same identifier (name{page.1}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.81 	6
-       1	& 197	& 13	& 1	\\ [1
+(./lampiran_hasil_pengujian_lapangan_kondisi_normal.tex [84
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.121 \end
-          {longtable} [2]pdfTeX warning (ext4): destination with the same ident
-ifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.121 \end{longtable}
-                      [3]pdfTeX warning (ext4): destination with the same ident
-ifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.177 	4
-        1	& 197	& 13	& 0	\\ [4]pdfTeX warning (ext4): destination with the same
- identifier (name{page.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.217 	8
-        1	& 197	& 13	& 0	\\ [5]pdfTeX warning (ext4): destination with the same
- identifier (name{page.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.237 \end{longtable}
-                      [6]pdfTeX warning (ext4): destination with the same ident
-ifier (name{page.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.293 	4
-        1	& 197	& 13	& 1	\\ [7]pdfTeX warning (ext4): destination with the same
- identifier (name{page.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.333 	8
-        1	& 197	& 13	& 1	\\ [8]pdfTeX warning (ext4): destination with the same
- identifier (name{page.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.353 \end
-          {longtable} [9]pdfTeX warning (ext4): destination with the same ident
-ifier (name{page.10}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.409 	4
-        1	& 197	& 13	& 0	\\ [10]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.11}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.429 	6
-        1	& 197	& 13	& 0	\\ [11]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.469 \end
-          {longtable} [12])pdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.119 ..._hasil_pengujian_lapangan_kondisi_normal}
-                                                   [13]
+] [85] [86] [87]
+[88] [89] [90] [91] [92] [93] [94] [95]) [96]
 \openout2 = `lampiran_hasil_pengujian_kondisi_delay.aux'.
 
 
-(./lampiran_hasil_pengujian_kondisi_delay.texpdfTeX warning (ext4): destination
- with the same identifier (name{page.14}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.81 	6
-       1	& 221	& 14	& 1	\\ [14
+(./lampiran_hasil_pengujian_kondisi_delay.tex [97
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.15}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.121 \end
-          {longtable} [15]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.16}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.121 \end{longtable}
-                      [16]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.17}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.177 	4
-        1	& 226	& 15	& 1	\\ [17]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.18}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.217 	8
-        1	& 227	& 15	& 1	\\ [18]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.19}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.237 \end{longtable}
-                      [19]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.20}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.293 	4
-        1	& 364	& 24	& 1	\\ [20]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.21}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.333 	8
-        1	& 364	& 24	& 1	\\ [21]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.22}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.353 \end
-          {longtable} [22]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.23}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.409 	4
-        1	& 229	& 15	& 1	\\ [23]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.24}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.429 	6
-        1	& 227	& 15	& 1	\\ [24]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.25}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.469 \end
-          {longtable} [25]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.26}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.505 	2
-        1	& 364	& 24	& 1	\\ [26]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.27}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.545 	6
-        1	& 364	& 24	& 1	\\ [27]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.28}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.585 \end
-          {longtable} [28]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.29}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.585 \end{longtable}
-                      [29]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.30}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.661 	6
-        1	& 364	& 24	& 2	\\ [30]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.31}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.681 	8
-        1	& 364	& 24	& 1	\\ [31]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.32}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.701 \end{longtable}
-                      [32]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.33}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.757 	4
-        1	& 364	& 24	& 2	\\ [33]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.34}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.797 	8
-        1	& 364	& 24	& 1	\\ [34]pdfTeX warning (ext4): destination with the sam
-e identifier (name{page.35}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.817 \end{longtable}
-                      [35])pdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.36}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.120 ...e{lampiran_hasil_pengujian_kondisi_delay}
-                                                   [36]
+] [98] [99] [100] [101]
+[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
+[114] [115] [116] [117] [118]) [119]
 runsystem(rm "thesis.pyg")...executed.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
- (./thesis.aux
-(./sampul.aux) (./judul_dalam.aux) (./pengesahan.aux) (./orisinal.aux)
-(./pengesahan_sidang.aux) (./pengantar.aux) (./persetujuan_publikasi.aux)
-(./abstrak.aux) (./abstract.aux) (./bab1.aux) (./bab2.aux) (./bab3.aux)
-(./bab4.aux) (./bab5.aux) (./kesimpulan.aux) (./pustaka.aux)
-(./markLampiran.aux) (./lampiran_hasil_pengujian_lapangan_kondisi_normal.aux)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+ (./thesis.aux (./sampul.aux)
+(./abstrak.aux) (./abstract.aux) (./pengesahan_sidang.aux)
+(./pedoman_penggunaan.aux) (./peruntukan.aux) (./pengantar.aux) (./bab1.aux)
+(./bab2.aux) (./bab3.aux) (./bab4.aux) (./bab5.aux) (./kesimpulan.aux)
+(./pustaka.aux) (./markLampiran.aux)
+(./lampiran_hasil_pengujian_lapangan_kondisi_normal.aux)
 (./lampiran_hasil_pengujian_kondisi_delay.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 025A023CDBB10D6340C720B632D6BD13;6110.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
+(rerunfilecheck)             Checksum: 4FC8958A3ADBBA3721D49BCB20837F55;5809.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 23750 strings out of 493029
- 435904 string characters out of 6136234
- 577394 words of memory out of 5000000
- 26030 multiletter control sequences out of 15000+600000
- 55066 words of font info for 105 fonts, out of 8000000 for 9000
+ 30818 strings out of 493029
+ 579712 string characters out of 6136234
+ 680616 words of memory out of 5000000
+ 33057 multiletter control sequences out of 15000+600000
+ 54052 words of font info for 103 fonts, out of 8000000 for 9000
  1210 hyphenation exceptions out of 8191
- 61i,15n,75p,2035b,902s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,15n,75p,10383b,902s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -3390,10 +3454,10 @@ share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (138 pages, 2387122 bytes).
+Output written on thesis.pdf (135 pages, 2478976 bytes).
 PDF statistics:
- 2211 PDF objects out of 2487 (max. 8388607)
- 1951 compressed objects within 20 object streams
- 515 named destinations out of 1000 (max. 500000)
- 895 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2171 PDF objects out of 2487 (max. 8388607)
+ 1916 compressed objects within 20 object streams
+ 547 named destinations out of 1000 (max. 500000)
+ 845 words of extra memory for PDF output out of 10000 (max. 10000000)
 
