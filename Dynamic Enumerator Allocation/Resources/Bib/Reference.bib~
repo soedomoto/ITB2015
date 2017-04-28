@@ -2102,12 +2102,9 @@
 @misc{redis_redis_2017,
 	title = {Redis},
 	url = {https://redis.io/},
-	howpublished = {https://redis.io/},
 	urldate = {2017-02-13},
-	lastchecked = {2017-02-13}, 
 	author = {redis},
 	year = {2017},
-	note = {Last accessed on Feb 13, 2017},
 	file = {Redis:/media/soedomoto/DATA/BIBLIOGRAPHY/storage/UGGPUC3Z/redis.io.html:text/html}
 }
 
